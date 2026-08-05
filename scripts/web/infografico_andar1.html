@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Andar 1 — Infográfico</title>
+<style>
+  :root{
+    --bg:#0c0906;
+    --bg-panel:#171008;
+    --bg-panel-raised:#1f160c;
+    --line:#3a2c1a;
+    --line-soft:#2a2013;
+    --gold:#d8ab5c;
+    --gold-dim:#8a6d3d;
+    --ink:#ede3d0;
+    --ink-dim:#a89b82;
+    --red:#e0524a;
+    --font-display: Georgia, "Palatino Linotype", "Times New Roman", serif;
+    --font-ui: -apple-system, "Segoe UI", system-ui, sans-serif;
+    --font-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+    --c-npc:#57d9ff; --c-monstro:#ff5f5f; --c-recurso:#8fd694; --c-segredo:#ffb454;
+    --c-comerciante:#c98fff; --c-dungeon:#a05fff; --c-puzzle:#ffd85c; --c-chefe:#ff2e2e; --c-cidade:#57d9ff;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(ellipse 1400px 800px at 50% -10%, #241a0d 0%, transparent 60%),
+      var(--bg);
+    color:var(--ink); font-family:var(--font-ui);
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--gold);}
+  img{max-width:100%; display:block;}
+  .wrap{ max-width:1400px; margin:0 auto; padding:24px 20px 60px; }
+
+  /* ---------- header ---------- */
+  .masthead{
+    display:flex; align-items:flex-end; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    border-bottom:2px solid var(--gold-dim); padding-bottom:16px; margin-bottom:18px;
+  }
+  .masthead h1{
+    font-family:var(--font-display); font-size:clamp(30px,4.4vw,48px); margin:0; color:var(--gold);
+    letter-spacing:0.04em; text-wrap:balance;
+  }
+  .masthead .eyebrow{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.22em; color:var(--gold-dim); text-transform:uppercase; }
+  .masthead .tagline{ font-family:var(--font-display); font-style:italic; font-size:15px; color:var(--ink-dim); margin-top:2px; }
+  .masthead nav{ display:flex; gap:10px; font-family:var(--font-mono); font-size:12px; }
+  .masthead nav a{ color:var(--ink-dim); text-decoration:none; border:1px solid var(--line); padding:7px 12px; border-radius:3px; }
+  .masthead nav a:hover{ color:var(--gold); border-color:var(--gold-dim); }
+
+  /* ---------- panel primitive ---------- */
+  .panel{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:6px; padding:16px 18px;
+  }
+  .panel-title{
+    font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.14em; text-transform:uppercase;
+    color:var(--gold); border-bottom:1px solid var(--line-soft); padding-bottom:8px; margin-bottom:12px;
+  }
+  .panel p{ font-size:13px; line-height:1.6; color:var(--ink-dim); margin:0 0 10px; }
+  .panel p:last-child{ margin-bottom:0; }
+
+  /* ---------- top layout: 3 columns ---------- */
+  .layout{ display:grid; grid-template-columns:250px 1fr 250px; gap:16px; align-items:start; }
+  @media (max-width:1000px){ .layout{ grid-template-columns:1fr; } }
+  .col{ display:flex; flex-direction:column; gap:14px; }
+
+  .stat-list{ list-style:none; margin:0; padding:0; font-size:12.5px; }
+  .stat-list li{ display:flex; justify-content:space-between; gap:10px; padding:5px 0; border-bottom:1px dashed var(--line-soft); color:var(--ink-dim); }
+  .stat-list li:last-child{ border-bottom:none; }
+  .stat-list b{ color:var(--ink); font-weight:600; }
+  .stars{ color:var(--gold); letter-spacing:1px; }
+
+  .num-list{ list-style:none; margin:0; padding:0; counter-reset:n; font-size:12.5px; }
+  .num-list li{ display:flex; align-items:center; gap:9px; padding:5px 0; color:var(--ink-dim); }
+  .num-list li b{ color:var(--ink); font-weight:600; }
+  .num-badge{
+    flex:0 0 auto; width:20px; height:20px; border-radius:50%; background:var(--gold-dim); color:#241a0d;
+    display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:10.5px; font-weight:700;
+  }
+
+  .legend-list{ list-style:none; margin:0; padding:0; font-size:12.5px; display:grid; gap:7px; }
+  .legend-list li{ display:flex; align-items:center; gap:9px; color:var(--ink-dim); }
+  .dot{ flex:0 0 auto; width:13px; height:13px; border-radius:50%; box-shadow:0 0 0 1px rgba(0,0,0,0.4) inset; }
+
+  .quest-types{ list-style:none; margin:0; padding:0; font-size:12.5px; display:grid; grid-template-columns:1fr 1fr; gap:7px; }
+  .quest-types li{ display:flex; align-items:center; gap:7px; color:var(--ink-dim); }
+  .quest-types .ic{ color:var(--gold); font-family:var(--font-mono); }
+
+  table.areas{ width:100%; border-collapse:collapse; font-size:12px; }
+  table.areas th{ text-align:left; font-family:var(--font-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold-dim); padding:4px 6px 6px; border-bottom:1px solid var(--line-soft); }
+  table.areas td{ padding:6px 6px; border-bottom:1px dashed var(--line-soft); color:var(--ink-dim); vertical-align:top; }
+  table.areas tr:last-child td{ border-bottom:none; }
+  table.areas td.nome{ color:var(--ink); font-weight:600; }
+  .tier{ font-family:var(--font-mono); font-size:10.5px; padding:2px 6px; border-radius:3px; white-space:nowrap; }
+  .tier.facil{ background:rgba(143,214,148,0.15); color:#8fd694; }
+  .tier.medio{ background:rgba(255,180,84,0.15); color:#ffb454; }
+  .tier.dificil{ background:rgba(255,95,95,0.15); color:#ff5f5f; }
+  .tier.muitodificil{ background:rgba(255,46,46,0.18); color:#ff2e2e; }
+
+  /* ---------- central map ---------- */
+  .map-panel{ padding:0; overflow:hidden; }
+  .map-frame{ position:relative; width:100%; }
+  .map-frame img{ width:100%; display:block; }
+  .map-svg{ position:absolute; inset:0; width:100%; height:100%; }
+  .compass{ position:absolute; top:14px; right:14px; width:46px; height:46px; opacity:0.85; }
+
+  .marco{ cursor:default; }
+  .marco circle.ring{ fill:var(--gold); stroke:#241a0d; stroke-width:2; }
+  .marco text{ font-family:var(--font-mono); font-weight:700; fill:#241a0d; font-size:13px; text-anchor:middle; dominant-baseline:central; }
+  .marco .label-bg{ fill:rgba(12,9,6,0.82); stroke:var(--gold-dim); stroke-width:1; rx:4; }
+  .marco .label-txt{ font-family:var(--font-ui); font-size:12px; fill:var(--gold); text-anchor:middle; font-weight:600; }
+
+  .glyph circle{ stroke:#0c0906; stroke-width:1.2; }
+  .glyph text{ font-size:9px; text-anchor:middle; dominant-baseline:central; fill:#0c0906; font-weight:700; }
+
+  .map-caption{
+    display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    font-family:var(--font-mono); font-size:10.5px; color:var(--ink-dim); padding:10px 16px; border-top:1px solid var(--line);
+  }
+
+  /* ---------- lower row ---------- */
+  .lower-grid{ display:grid; grid-template-columns:1fr 1.6fr 1fr; gap:16px; margin-top:16px; align-items:start; }
+  @media (max-width:1000px){ .lower-grid{ grid-template-columns:1fr; } }
+
+  /* town sub-map */
+  .town-map{ position:relative; width:100%; aspect-ratio:1/1; border-radius:50%; overflow:hidden; border:2px solid var(--gold-dim); background:radial-gradient(circle at 50% 50%, #2a2013 0%, #171008 75%); }
+  .town-map svg{ width:100%; height:100%; }
+  .town-ring{ fill:none; stroke:var(--line); stroke-width:1; }
+  .town-node circle{ fill:var(--gold); stroke:#0c0906; stroke-width:1.5; }
+  .town-node text{ font-family:var(--font-mono); font-size:8px; fill:#0c0906; text-anchor:middle; dominant-baseline:central; font-weight:700; }
+  .town-legend{ margin-top:10px; }
+
+  /* dungeon diagram */
+  .dungeon-strip{ display:grid; grid-template-columns:repeat(5,1fr); gap:8px; }
+  .floor-card{ background:var(--bg-panel-raised); border:1px solid var(--line); border-radius:5px; padding:8px; }
+  .floor-card .floor-label{ font-family:var(--font-mono); font-size:9.5px; text-align:center; color:var(--gold-dim); letter-spacing:0.06em; margin-bottom:6px; }
+  .floor-grid{ display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); gap:3px; aspect-ratio:1/1; }
+  .room{ background:var(--bg-panel); border:1px solid var(--line-soft); border-radius:2px; display:flex; align-items:center; justify-content:center; font-size:11px; position:relative; }
+  .room.corridor{ background:transparent; border:none; }
+  .room.filled{ background:#241a0d; }
+  .diff-arrow{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:10px; font-family:var(--font-mono); font-size:10px; color:var(--gold-dim); letter-spacing:0.1em; }
+  .diff-arrow .bar{ flex:1; height:2px; background:linear-gradient(90deg, var(--c-recurso), var(--c-segredo), var(--red)); }
+
+  .boss-card{ }
+  .boss-portrait{ width:100%; aspect-ratio:3/4; border-radius:5px; overflow:hidden; border:1px solid var(--line); margin-bottom:12px; background:var(--bg-panel-raised); }
+  .boss-portrait img{ width:100%; height:100%; object-fit:cover; }
+  .boss-name{ font-family:var(--font-display); font-size:19px; color:var(--red); margin:0 0 2px; }
+  .boss-sub{ font-family:var(--font-mono); font-size:10.5px; color:var(--ink-dim); text-transform:uppercase; letter-spacing:0.08em; margin-bottom:10px; }
+  .boss-rewards{ margin-top:10px; padding-top:10px; border-top:1px dashed var(--line-soft); }
+  .boss-rewards .panel-title{ color:var(--red); }
+  .boss-rewards ul{ margin:0; padding-left:18px; font-size:12.5px; color:var(--ink-dim); line-height:1.7; }
+
+  .icon-key{ display:flex; gap:14px; flex-wrap:wrap; font-family:var(--font-mono); font-size:10.5px; color:var(--ink-dim); margin-top:10px; }
+  .icon-key span{ display:inline-flex; align-items:center; gap:5px; }
+  .icon-key i{ width:14px; height:14px; border-radius:3px; display:inline-block; }
+
+  .notes-row{ margin-top:16px; }
+  .notes-row ul{ margin:0; padding-left:20px; font-size:13px; line-height:1.7; color:var(--ink-dim); }
+
+  .foot{ margin-top:20px; text-align:center; font-family:var(--font-mono); font-size:10.5px; color:var(--line); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="masthead">
+    <div>
+      <div class="eyebrow">Sword Art Online — The Perfect Chaos</div>
+      <h1>Aincrad · Andar 1</h1>
+      <div class="tagline">"O Começo da Jornada" — dia 10 depois do anúncio de Kayaba</div>
+    </div>
+    <nav>
+      <a href="mapa_exploracao_andar1.html">Mapa interativo (ficha por jogador) →</a>
+    </nav>
+  </div>
+
+  <div class="layout">
+    <!-- LEFT COLUMN -->
+    <div class="col">
+      <div class="panel">
+        <div class="panel-title">Informações do Andar</div>
+        <ul class="stat-list">
+          <li>Recomendado <b>Personagens iniciais</b></li>
+          <li>Chefão <b>Illfang the Kobold Lord</b></li>
+          <li>Terreno <b>Campos, floresta, lago, montanhas</b></li>
+          <li>Clima <b>Temperado</b></li>
+          <li>Zonas seguras <b>Cidade do Início, Tolbana</b></li>
+          <li>Dificuldade <b class="stars">★★☆☆☆</b></li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Cristais de Teleporte</div>
+        <p style="font-size:11.5px;">Só funcionam entre pontos já registrados — só as duas cidades do andar têm portão de teleporte.</p>
+        <ol class="num-list">
+          <li><span class="num-badge">1</span><b>Cidade do Início</b> — Praça do Portão</li>
+          <li><span class="num-badge">2</span><b>Tolbana</b> — Praça de Tolbana</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Áreas e Dificuldade</div>
+        <table class="areas">
+          <tr><th>Região</th><th>Nível</th></tr>
+          <tr><td class="nome">Cidade do Início / Tolbana</td><td><span class="tier facil">Segura</span></td></tr>
+          <tr><td class="nome">Planície de Verrun</td><td><span class="tier facil">Fácil</span></td></tr>
+          <tr><td class="nome">Estepes de Kaldan</td><td><span class="tier medio">Médio</span></td></tr>
+          <tr><td class="nome">Floresta de Horunka</td><td><span class="tier medio">Médio</span></td></tr>
+          <tr><td class="nome">Lago Sylvaine</td><td><span class="tier dificil">Difícil</span></td></tr>
+          <tr><td class="nome">Montanhas de Grauvenn</td><td><span class="tier muitodificil">Muito difícil</span></td></tr>
+          <tr><td class="nome">Labirinto (raid)</td><td><span class="tier muitodificil">Grupo grande</span></td></tr>
+        </table>
+      </div>
+    </div>
+
+    <!-- CENTER MAP -->
+    <div class="panel map-panel">
+      <div class="map-frame">
+        <img src="../../mapas/andar_1_mapa_arte.png" alt="Mapa do Andar 1" />
+        <svg class="map-svg" viewBox="0 0 1536 1024" id="mapSvg"></svg>
+      </div>
+      <div class="map-caption">
+        <span>MARCADORES NUMERADOS = LOCAIS PRINCIPAIS · ÍCONES = PONTOS DE ATIVIDADE (VER LEGENDA)</span>
+        <span>FICHA COMPLETA E RASTREIO POR JOGADOR → mapa interativo</span>
+      </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="col">
+      <div class="panel">
+        <div class="panel-title">Legenda</div>
+        <ul class="legend-list">
+          <li><span class="dot" style="background:var(--c-npc)"></span>NPC</li>
+          <li><span class="dot" style="background:var(--c-monstro)"></span>Monstro / caça</li>
+          <li><span class="dot" style="background:var(--c-recurso)"></span>Recurso / coleta</li>
+          <li><span class="dot" style="background:var(--c-comerciante)"></span>Comerciante</li>
+          <li><span class="dot" style="background:var(--c-segredo)"></span>Segredo</li>
+          <li><span class="dot" style="background:var(--c-puzzle)"></span>Puzzle</li>
+          <li><span class="dot" style="background:var(--c-dungeon)"></span>Dungeon</li>
+          <li><span class="dot" style="background:var(--c-chefe)"></span>Chefe / miniboss</li>
+          <li><span class="dot" style="background:var(--gold)"></span>Local numerado (marco)</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Cidade do Início</div>
+        <ol class="num-list">
+          <li><span class="num-badge">1</span><b>Praça do Portão</b></li>
+          <li><span class="num-badge">2</span>Loja de Armas</li>
+          <li><span class="num-badge">3</span>Forja do Ferreiro</li>
+          <li><span class="num-badge">4</span>Ateliê do Costureiro</li>
+          <li><span class="num-badge">5</span>Mercado Negro</li>
+          <li><span class="num-badge">6</span>Centro de Treinamento</li>
+          <li><span class="num-badge">7</span>Taverna</li>
+          <li><span class="num-badge">8</span>Hospedaria</li>
+          <li><span class="num-badge">9</span>Memorial dos Caídos</li>
+          <li><span class="num-badge">10</span>Igreja</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <div class="panel-title">Tipos de Missão</div>
+        <ul class="quest-types">
+          <li><span class="ic">⚔</span>Eliminação</li>
+          <li><span class="ic">✦</span>Coleta</li>
+          <li><span class="ic">➤</span>Escolta</li>
+          <li><span class="ic">?</span>Investigação</li>
+          <li><span class="ic">◈</span>Diplomacia</li>
+          <li><span class="ic">◉</span>Doma</li>
+          <li><span class="ic">▦</span>Puzzle</li>
+          <li><span class="ic">§</span>Resolução</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- LOWER ROW -->
+  <div class="lower-grid">
+    <div class="panel">
+      <div class="panel-title">Cidade do Início — mapa detalhado</div>
+      <div class="town-map">
+        <svg viewBox="0 0 300 300">
+          <circle class="town-ring" cx="150" cy="150" r="130" />
+          <circle class="town-ring" cx="150" cy="150" r="85" />
+          <circle class="town-ring" cx="150" cy="150" r="35" />
+          <g class="town-node"><circle cx="150" cy="150" r="16" /><text x="150" y="150">1</text></g>
+          <g class="town-node"><circle cx="150" cy="55" r="12" /><text x="150" y="55">10</text></g>
+          <g class="town-node"><circle cx="230" cy="100" r="12" /><text x="230" y="100">9</text></g>
+          <g class="town-node"><circle cx="245" cy="180" r="12" /><text x="245" y="180">5</text></g>
+          <g class="town-node"><circle cx="200" cy="245" r="12" /><text x="200" y="245">8</text></g>
+          <g class="town-node"><circle cx="100" cy="245" r="12" /><text x="100" y="245">7</text></g>
+          <g class="town-node"><circle cx="55" cy="180" r="12" /><text x="55" y="180">6</text></g>
+          <g class="town-node"><circle cx="70" cy="100" r="12" /><text x="70" y="100">3</text></g>
+          <g class="town-node"><circle cx="150" cy="230" r="12" /><text x="150" y="230">2</text></g>
+          <g class="town-node"><circle cx="215" cy="215" r="12" /><text x="215" y="215">4</text></g>
+        </svg>
+      </div>
+      <p class="town-legend" style="font-size:11px;">Anéis concêntricos: muralha externa → distrito comercial → Praça do Portão. Numeração corresponde à lista "Cidade do Início" ao lado.</p>
+    </div>
+
+    <div class="panel">
+      <div class="panel-title">Labirinto do Andar 1 — estrutura da dungeon</div>
+      <p style="font-size:11.5px;">20 sub-níveis reais (ver <code>mapas/andar_1.md</code>); representados aqui em 5 trechos crescentes até a sala do chefe.</p>
+      <div class="dungeon-strip">
+        <div class="floor-card">
+          <div class="floor-label">TRECHO 1–4</div>
+          <div class="floor-grid">
+            <div class="room filled">🚪</div><div class="room corridor"></div><div class="room">👹</div>
+            <div class="room corridor"></div><div class="room filled"></div><div class="room corridor"></div>
+            <div class="room">💰</div><div class="room corridor"></div><div class="room">🛏</div>
+          </div>
+        </div>
+        <div class="floor-card">
+          <div class="floor-label">TRECHO 5–8</div>
+          <div class="floor-grid">
+            <div class="room">👹</div><div class="room corridor"></div><div class="room">👹</div>
+            <div class="room corridor"></div><div class="room filled"></div><div class="room corridor"></div>
+            <div class="room">⚠</div><div class="room corridor"></div><div class="room">💰</div>
+          </div>
+        </div>
+        <div class="floor-card">
+          <div class="floor-label">TRECHO 9–12</div>
+          <div class="floor-grid">
+            <div class="room">💰</div><div class="room corridor"></div><div class="room">⚠</div>
+            <div class="room corridor"></div><div class="room filled"></div><div class="room corridor"></div>
+            <div class="room">👹</div><div class="room corridor"></div><div class="room">👹</div>
+          </div>
+        </div>
+        <div class="floor-card">
+          <div class="floor-label">TRECHO 13–16</div>
+          <div class="floor-grid">
+            <div class="room">👹</div><div class="room corridor"></div><div class="room">🛏</div>
+            <div class="room corridor"></div><div class="room filled"></div><div class="room corridor"></div>
+            <div class="room">⚠</div><div class="room corridor"></div><div class="room">👺</div>
+          </div>
+        </div>
+        <div class="floor-card">
+          <div class="floor-label">TRECHO 17–20</div>
+          <div class="floor-grid">
+            <div class="room">👺</div><div class="room corridor"></div><div class="room">👹</div>
+            <div class="room corridor"></div><div class="room filled"></div><div class="room corridor"></div>
+            <div class="room">💰</div><div class="room corridor"></div><div class="room">🚪</div>
+          </div>
+        </div>
+      </div>
+      <div class="diff-arrow"><span>FÁCIL</span><div class="bar"></div><span>SALA DO CHEFE</span></div>
+      <div class="icon-key">
+        <span><i style="background:transparent;border:1px solid var(--line-soft);">🚪</i>Entrada/Saída</span>
+        <span>👹 Patrulha Kobold</span>
+        <span>👺 Miniboss (Sentinel)</span>
+        <span>💰 Tesouro/recurso</span>
+        <span>⚠ Armadilha</span>
+        <span>🛏 Descanso seguro</span>
+      </div>
+    </div>
+
+    <div class="panel boss-card">
+      <div class="panel-title" style="color:var(--red);">Chefão do Andar 1</div>
+      <div class="boss-portrait"><img src="../../imagens/monstro_illfang_the_kobold_lord.png" alt="Illfang the Kobold Lord" /></div>
+      <div class="boss-name">Illfang the Kobold Lord</div>
+      <div class="boss-sub">Humanoide · 4 barras de HP (6–8 golpes cada)</div>
+      <p style="font-size:12.5px;">Fase 1: machado + escudo, dano curto alcance. Fase 2 (1/3 HP): descarta escudo, usa nodachi com skills de katana. Convoca 3 Ruin Kobold Sentinel no início e +3 a cada barra perdida (até 12 no total).</p>
+      <div class="boss-rewards">
+        <div class="panel-title" style="border:none; padding:0; margin-bottom:6px;">Recompensas</div>
+        <ul>
+          <li>XP muito alto + Col alto pro grupo inteiro</li>
+          <li>Equipamento de drop, raridade Raro+</li>
+          <li>Last Attack Bonus: item "Cristal de Ascensão" — gatilho real do andar 2 (guardado pelo mestre)</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel notes-row">
+    <div class="panel-title">Notas importantes</div>
+    <ul>
+      <li>Este é o mapa de referência rápida — pra rastrear exploração por personagem (fog of war individual), use o <a href="mapa_exploracao_andar1.html">mapa interativo</a>, que também tem as fichas completas de NPCs, bestiário, armas e mercado.</li>
+      <li>Illfang não deve ser enfrentado por um grupo pequeno recém-formado — é conteúdo de raid organizado (ver cadeia de quests "Preparativos do Raid" em <code>cenas/quests_andar1.md</code>).</li>
+      <li>O andar 2 não abre automaticamente com a morte do chefe — ver <code>docs/misterio_andar2.md</code> (documento do mestre).</li>
+      <li>60 quests completas, 33 criaturas no bestiário, 22 tipos de arma e as 16 profissões estão todas documentadas e ligadas ao mapa — este pôster mostra só os marcos principais.</li>
+    </ul>
+  </div>
+
+  <div class="foot">Sword Art Online: The Perfect Chaos — Andar 1 — gerado a partir de scripts/web/dados_mapa.js</div>
+</div>
+
+<script src="dados_mapa.js"></script>
+<script>
+(function(){
+  "use strict";
+
+  // Marcos numerados (grandes, com rótulo) -- os 10 locais mais importantes do andar.
+  var MARCOS = [
+    {n:1, id:"cidade_inicio", label:"Cidade do Início"},
+    {n:2, id:"tolbana", label:"Tolbana"},
+    {n:3, id:"floresta_horunka", label:"Floresta de Horunka"},
+    {n:4, id:"lago", label:"Lago Sylvaine"},
+    {n:5, id:"vale_moinhos", label:"Vale de Molwyn"},
+    {n:6, id:"campo_batalha", label:"Campo de Ruyn"},
+    {n:7, id:"castelo_ferro_negro", label:"Castelo de Ferro Negro"},
+    {n:8, id:"montanhas", label:"Montanhas de Grauvenn"},
+    {n:9, id:"labirinto_entrada", label:"Limiar do Labirinto"},
+    {n:10, id:"sala_chefe", label:"Covil de Illfang"}
+  ];
+
+  var regPorId = {};
+  REGIOES.forEach(function(r){ regPorId[r.id] = r; });
+
+  var svg = document.getElementById("mapSvg");
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs){
+    var e = document.createElementNS(NS, tag);
+    for(var k in attrs) e.setAttribute(k, attrs[k]);
+    return e;
+  }
+
+  // conta pontos por regiao/categoria pra desenhar "glifos" pequenos representativos
+  var contagemPorRegiaoCategoria = {};
+  PONTOS.forEach(function(p){
+    var key = p.regiao + "|" + p.categoria;
+    contagemPorRegiaoCategoria[key] = (contagemPorRegiaoCategoria[key] || 0) + 1;
+  });
+
+  var CORES = {npc:"#57d9ff", monstro:"#ff5f5f", recurso:"#8fd694", segredo:"#ffb454",
+    comerciante:"#c98fff", dungeon:"#a05fff", puzzle:"#ffd85c", chefe:"#ff2e2e", cidade:"#57d9ff"};
+
+  // desenha ate 3 glifos de categoria mais comuns por regiao, num pequeno arco ao redor do centro da regiao
+  REGIOES.forEach(function(r){
+    var cats = Object.keys(CORES).filter(function(c){ return contagemPorRegiaoCategoria[r.id+"|"+c] > 0; });
+    // ordena por contagem desc, pega ate 4
+    cats.sort(function(a,b){ return (contagemPorRegiaoCategoria[r.id+"|"+b]||0) - (contagemPorRegiaoCategoria[r.id+"|"+a]||0); });
+    cats = cats.slice(0,4);
+    var raio = 46;
+    cats.forEach(function(cat, i){
+      var ang = (i / Math.max(cats.length,1)) * Math.PI * 2 - Math.PI/2;
+      var gx = r.x + Math.cos(ang) * raio;
+      var gy = r.y + Math.sin(ang) * raio;
+      var g = el("g", {class:"glyph"});
+      g.appendChild(el("circle", {cx:gx, cy:gy, r:9, fill:CORES[cat]}));
+      var t = el("title", {}); t.textContent = (cat.charAt(0).toUpperCase()+cat.slice(1)) + " em " + r.nome;
+      g.appendChild(t);
+      svg.appendChild(g);
+    });
+  });
+
+  // marcos grandes numerados por cima dos glifos
+  MARCOS.forEach(function(m){
+    var r = regPorId[m.id];
+    if(!r){ console.error("marco sem regiao:", m.id); return; }
+    var g = el("g", {class:"marco"});
+    g.appendChild(el("circle", {class:"ring", cx:r.x, cy:r.y, r:15}));
+    var t = el("text", {x:r.x, y:r.y}); t.textContent = m.n;
+    g.appendChild(t);
+
+    var labelW = Math.max(60, m.label.length * 6.4);
+    var lx = r.x - labelW/2, ly = r.y + 20;
+    g.appendChild(el("rect", {class:"label-bg", x:lx, y:ly, width:labelW, height:16}));
+    var lt = el("text", {class:"label-txt", x:r.x, y:ly+11}); lt.textContent = m.label;
+    g.appendChild(lt);
+
+    svg.appendChild(g);
+  });
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+# mídia pesada — adicionar depois via Git LFS ou host separado se quiser
+imagens/
+musicas/
+efeitos_sonoros/
+
+# gerados/temporários
+__pycache__/
+*.pyc
+*.bak
+*.anterior
+
+# SO
+.DS_Store
+Thumbs.db

@@ -1,0 +1,613 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Andar 1 — Mapa Limpo</title>
+<style>
+:root{
+  --bg:#0a0806; --panel:#15100a; --line:#3d2e1a; --gold:#d9ad5e; --gold-dim:#8c6f3e;
+  --gold-bright:#f2d18a; --ink:#efe5d2; --ink-dim:#a89a80; --ink-faint:#6f6450;
+  --f-disp:"Palatino Linotype",Palatino,Georgia,serif;
+  --f-ui:-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);font-family:var(--f-ui)}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+.wrap{max-width:1640px;margin:0 auto;padding:14px}
+.bar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:10px 12px;
+  border:1px solid var(--line);border-radius:4px;background:var(--panel);margin-bottom:12px}
+.bar h1{font-family:var(--f-disp);font-size:19px;margin:0 14px 0 0;color:var(--gold-bright);
+  letter-spacing:.04em}
+.bar button{font-family:var(--f-mono);font-size:11.5px;border:1px solid var(--line);
+  padding:7px 11px;border-radius:3px;color:var(--ink-dim)}
+.bar button:hover{border-color:var(--gold-dim);color:var(--gold)}
+.bar button.on{color:var(--gold);border-color:var(--gold-dim);background:#1d150c}
+.bar .grow{flex:1}
+.bar select{font-family:var(--f-mono);font-size:11.5px;border:1px solid var(--line);
+  padding:7px 9px;border-radius:3px;color:var(--ink-dim);background:#0f0c08}
+.bar .nota{font-family:var(--f-mono);font-size:10.5px;color:var(--ink-faint)}
+.palco{border:1px solid var(--line);border-radius:4px;overflow:hidden;background:#070502}
+svg{display:block;width:100%;height:auto}
+.ajuda{margin-top:12px;border:1px solid var(--line);border-radius:4px;background:var(--panel);
+  padding:14px 16px;font-size:13px;line-height:1.65;color:var(--ink-dim)}
+.ajuda h2{font-family:var(--f-disp);font-size:16px;color:var(--gold-bright);margin:0 0 8px}
+.ajuda h3{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--gold);margin:16px 0 6px}
+.ajuda code{font-family:var(--f-mono);font-size:11.5px;background:#241a0f;padding:1px 5px;
+  border-radius:3px;color:var(--gold)}
+.ajuda ol{margin:0;padding-left:20px} .ajuda li{margin:5px 0}
+#prompt{width:100%;min-height:160px;margin-top:8px;background:#0f0c08;color:var(--ink-dim);
+  border:1px solid var(--line);border-radius:3px;padding:10px;font-family:var(--f-mono);
+  font-size:11.5px;line-height:1.55;resize:vertical}
+
+/* terreno */
+.t-rot{font-family:var(--f-disp);font-style:italic;text-anchor:middle;paint-order:stroke;
+  stroke:#0a0806;stroke-width:3.4px;letter-spacing:.14em;opacity:.95;font-size:15px}
+.t-rot.agua{fill:#7cc0e2}.t-rot.mata{fill:#8cbb7c}.t-rot.pedra{fill:#b3a992}.t-rot.campo{fill:#a8b07a}
+.nome-regiao{font-family:var(--f-disp);font-size:17px;fill:#f2d18a;text-anchor:middle;
+  paint-order:stroke;stroke:#0a0806;stroke-width:4px;letter-spacing:.1em}
+.nome-marco{font-family:var(--f-disp);font-size:15px;fill:#ffd9a0;text-anchor:middle;
+  paint-order:stroke;stroke:#0a0806;stroke-width:4px;letter-spacing:.06em;font-weight:600}
+.ponto-marco{fill:#d9ad5e;stroke:#1a1207;stroke-width:1.6}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="bar">
+    <h1>Aincrad · Andar 1 — mapa limpo</h1>
+    <button id="bNomes" class="on">Nomes: ligados</button>
+    <button id="bMarcos" class="on">Marcos: ligados</button>
+    <button id="bModo">Modo: arte</button>
+    <button id="bIA" style="color:var(--gold);border-color:var(--gold-dim)">Preparar pra IA</button>
+    <span class="grow"></span>
+    <select id="tam" title="Largura do PNG">
+      <option value="2048">2048 px</option>
+      <option value="4096">4096 px</option>
+      <option value="6144">6144 px</option>
+      <option value="8192" selected>8192 px</option>
+      <option value="12288">12288 px (máximo)</option>
+    </select>
+    <button id="bPng">Baixar PNG</button>
+    <button id="bSvg">Baixar SVG (vetor, sem limite)</button>
+    <span class="nota" id="nota">proporção 3:2</span>
+  </div>
+
+  <div class="palco">
+    <svg id="mapa" viewBox="0 0 1536 1024" xmlns="http://www.w3.org/2000/svg">
+      <rect width="1536" height="1024" fill="#070502"/>
+      <g id="gTerreno"></g>
+      <g id="gNomes"></g>
+    </svg>
+  </div>
+
+  <div class="ajuda">
+    <h2>Pra que serve esta página</h2>
+    <p>Mapa <b>sem os 241 pontos</b> — só o terreno e os nomes dos lugares. A ideia é levar
+      isto pro Nano Banana (ou qualquer gerador de imagem), pedir uma versão bonita, e depois
+      voltar com a arte pro Compêndio, que desenha os marcadores por cima.</p>
+
+    <p style="border-left:3px solid #c0483c;padding:8px 12px;margin:10px 0;background:#1a0f0c">
+      <b style="color:#e2837a">Antes de exportar, clique em “Preparar pra IA”.</b>
+      Ele desliga os nomes e os marcos e vai pro modo referência. Se você exportar
+      com os nomes ligados, o gerador <b>copia o texto</b> — e escreve errado
+      (“Tolbang”, “Terruços de Solveig”, “Mantanhas de Grudecan”). Os nomes na tela
+      são só pra <i>você</i> se localizar; quem desenha o texto no fim é o Compêndio.</p>
+
+    <h3>Como usar</h3>
+    <ol>
+      <li>Escolha o <b>Modo</b>. <code>arte</code> é o desenho vetorial completo;
+        <code>referência</code> é a versão chapada, em blocos de cor — é o que funciona melhor
+        como imagem de entrada em <i>img2img</i> ou ControlNet, porque a IA lê a composição sem
+        se distrair com detalhe.</li>
+      <li><b>Baixe o PNG</b> no tamanho que quiser — <b>8192 px</b> é o recomendado,
+        <b>12288 px</b> é o máximo que o navegador aguenta. Se travar, use o <b>SVG</b>:
+        é vetor, não tem limite de tamanho, e qualquer editor converte.</li>
+      <li>Suba a imagem no Nano Banana junto com o prompt abaixo, pedindo pra
+        <b>repintar mantendo a geografia e a proporção</b>.</li>
+      <li>Salve o resultado como <code>mapas\andar_1_placa.png</code>. A proporção
+        <b>3:2</b> é obrigatória — se mudar, os 241 marcadores desalinham.</li>
+      <li>Abra o Compêndio e clique em <b>Fundo: vetor</b> pra alternar pra <b>arte</b>.
+        Os 241 marcadores caem exatamente no lugar, porque as coordenadas são as mesmas.</li>
+    </ol>
+
+    <h3>O que NÃO pedir pra IA</h3>
+    <p>Nada de texto, legenda, moldura, rosa dos ventos ou marcador. Modelo de imagem não
+      escreve — vira rabisco. <b>Todo o texto e todos os pontos são desenhados por cima</b>,
+      em vetor, pelo Compêndio. Peça só a pintura do terreno.</p>
+
+    <h3>Prompt pronto (copie junto com a imagem)</h3>
+    <p style="margin:0 0 4px">Mais variantes — correção de rumo, versão sem imagem de
+      referência, negativo pro SDXL e quatro climas diferentes — em
+      <code>mapas\PROMPT_MAPA.md</code>.</p>
+    <button id="bCopiar" style="margin-top:4px">Copiar prompt</button>
+    <textarea id="prompt" readonly></textarea>
+  </div>
+</div>
+
+<script src="dados_mapa.js"></script>
+<script src="dados_terreno.js"></script>
+<script>
+(function(){
+"use strict";
+var NS="http://www.w3.org/2000/svg";
+function el(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+var gTerreno=document.getElementById("gTerreno"),gNomes=document.getElementById("gNomes");
+var svg=document.getElementById("mapa");
+
+/* ---------- geometria (mesma do Compêndio: as coordenadas têm que bater) ---------- */
+function rnd(seed){var x=Math.sin(seed*9301+49297)*233280;return x-Math.floor(x);}
+function fechada(p){
+  var n=p.length,d="M"+p[0][0].toFixed(1)+" "+p[0][1].toFixed(1),i;
+  for(i=0;i<n;i++){
+    var p0=p[(i-1+n)%n],p1=p[i],p2=p[(i+1)%n],p3=p[(i+2)%n];
+    d+="C"+(p1[0]+(p2[0]-p0[0])/6).toFixed(1)+" "+(p1[1]+(p2[1]-p0[1])/6).toFixed(1)+
+       ","+(p2[0]-(p3[0]-p1[0])/6).toFixed(1)+" "+(p2[1]-(p3[1]-p1[1])/6).toFixed(1)+
+       ","+p2[0].toFixed(1)+" "+p2[1].toFixed(1);
+  }
+  return d+"Z";
+}
+function aberta(p){
+  if(p.length<2)return "";
+  var d="M"+p[0][0]+" "+p[0][1],i;
+  for(i=0;i<p.length-1;i++){
+    var p0=p[Math.max(0,i-1)],p1=p[i],p2=p[i+1],p3=p[Math.min(p.length-1,i+2)];
+    d+="C"+(p1[0]+(p2[0]-p0[0])/6).toFixed(1)+" "+(p1[1]+(p2[1]-p0[1])/6).toFixed(1)+
+       ","+(p2[0]-(p3[0]-p1[0])/6).toFixed(1)+" "+(p2[1]-(p3[1]-p1[1])/6).toFixed(1)+
+       ","+p2[0].toFixed(1)+" "+p2[1].toFixed(1);
+  }
+  return d;
+}
+function blob(cx,cy,rx,ry,seed,irr,lados){
+  lados=lados||16;irr=irr==null?0.14:irr;
+  var pts=[],i,ang,r1,r2;
+  for(i=0;i<lados;i++){
+    ang=(i/lados)*Math.PI*2;
+    r1=rx*(1-irr+rnd(seed+i)*irr*2); r2=ry*(1-irr+rnd(seed+i+99)*irr*2);
+    pts.push([cx+Math.cos(ang)*r1, cy+Math.sin(ang)*r2]);
+  }
+  return fechada(pts);
+}
+var _cache={};
+function contornoDoAndar(f,encolher){
+  var chave=(encolher||1).toFixed(3);
+  if(_cache[chave])return _cache[chave];
+  var pts=PONTOS.map(function(p){return [p.x,p.y];});
+  TERRENO.forEach(function(t){
+    if(t.cx!=null&&t.rx!=null&&t.tipo!=="massa")
+      [[t.cx-t.rx,t.cy],[t.cx+t.rx,t.cy],[t.cx,t.cy-t.ry],[t.cx,t.cy+t.ry]]
+        .forEach(function(q){pts.push(q);});
+    if(t.pontos)t.pontos.forEach(function(q){pts.push(q);});
+    if(t.x1!=null)pts.push([t.x1,t.y],[t.x2,t.y]);
+  });
+  pts.sort(function(a,b){return a[0]-b[0]||a[1]-b[1];});
+  function cross(o,a,b){return (a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);}
+  var baixo=[],alto=[],i;
+  for(i=0;i<pts.length;i++){
+    while(baixo.length>=2&&cross(baixo[baixo.length-2],baixo[baixo.length-1],pts[i])<=0)baixo.pop();
+    baixo.push(pts[i]);
+  }
+  for(i=pts.length-1;i>=0;i--){
+    while(alto.length>=2&&cross(alto[alto.length-2],alto[alto.length-1],pts[i])<=0)alto.pop();
+    alto.push(pts[i]);
+  }
+  var casco=baixo.slice(0,-1).concat(alto.slice(0,-1)),cx=0,cy=0;
+  casco.forEach(function(q){cx+=q[0];cy+=q[1];});
+  cx/=casco.length;cy/=casco.length;
+  var margem=34*(encolher||1);
+  var exp=casco.map(function(q,k){
+    var dx=q[0]-cx,dy=q[1]-cy,len=Math.sqrt(dx*dx+dy*dy)||1;
+    var extra=margem*(0.82+rnd((f.seed||7)+k*3)*0.42),e=(encolher||1);
+    return [Math.max(10,Math.min(1526,cx+dx*e+dx/len*extra)),
+            Math.max(10,Math.min(1014,cy+dy*e+dy/len*extra))];
+  });
+  var alvo=30,denso=[];
+  for(i=0;i<alvo;i++){
+    var t2=i/alvo*exp.length,a=exp[Math.floor(t2)%exp.length],b=exp[(Math.floor(t2)+1)%exp.length];
+    var fr=t2-Math.floor(t2);
+    denso.push([a[0]+(b[0]-a[0])*fr, a[1]+(b[1]-a[1])*fr]);
+  }
+  return (_cache[chave]=fechada(denso));
+}
+function add(tag,attrs,pai){var e=el(tag,attrs);(pai||gTerreno).appendChild(e);return e;}
+
+/* ---------- paletas: arte x referência ---------- */
+var MODO="arte";
+var P={
+  arte:{terra:"#2c3a25",terraGrad:true,costa:"#4f6240",campo:"#2f3d26",campoSeco:"#3a3d24",
+    campoFlor:"#3d4526",mata:"#1f3320",matales:["#1a2c16","#24391f","#2f4726"],
+    agua:"#265b7c",aguaFunda:"#16384e",brejo:"#2c4239",rocha:"#4a4740",neve:"#c3c0b1",
+    colina:"#3d452f",estrada:"#94805a",cidade:"#241c11",muro:"#8c6f3e",telhado:"#50331f",
+    ruina:"#4a463d",lavoura:"#3f4927",detalhe:true},
+  referencia:{terra:"#4a7c3f",terraGrad:false,costa:"#e8d9a0",campo:"#6faa4e",campoSeco:"#b8a94e",
+    campoFlor:"#8fc45e",mata:"#1f5e2a",matales:["#1f5e2a","#1f5e2a","#1f5e2a"],
+    agua:"#2f7fc4",aguaFunda:"#1d5a92",brejo:"#4a8f86",rocha:"#8e8a80",neve:"#ffffff",
+    colina:"#7a9b52",estrada:"#d9b96a",cidade:"#7a5a3a",muro:"#3a2a1a",telhado:"#a04f2f",
+    ruina:"#9a9186",lavoura:"#c2b45a",detalhe:false}
+};
+
+function desenhar(){
+  var c=P[MODO];
+  gTerreno.textContent="";_cache={};
+  var defs=add("defs",{});
+  if(c.terraGrad){
+    var g=el("radialGradient",{id:"gTerra",cx:"50%",cy:"36%",r:"74%"});
+    [["0%","#36462d"],["55%","#2c3a25"],["100%","#20291b"]].forEach(function(q){
+      g.appendChild(el("stop",{offset:q[0],"stop-color":q[1]}));});
+    defs.appendChild(g);
+  }
+
+  TERRENO.forEach(function(f){
+    if(f.tipo==="massa"){
+      var d=contornoDoAndar(f);
+      if(MODO==="arte"){
+        add("path",{d:d,fill:"none",stroke:"#080c08","stroke-width":38,opacity:.6});
+        add("path",{d:d,fill:"none",stroke:"#71845d","stroke-width":10,opacity:.25});
+      }
+      add("path",{d:d,fill:c.terraGrad?"url(#gTerra)":c.terra,stroke:c.costa,
+        "stroke-width":MODO==="arte"?2.5:14});
+      var cp=el("clipPath",{id:"clipIlha"});cp.appendChild(el("path",{d:d}));
+      defs.appendChild(cp);
+      gTerreno.setAttribute("clip-path","url(#clipIlha)");
+    }
+    else if(f.tipo==="campo"){
+      add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.17,14),
+        fill:f.flor?c.campoFlor:(f.seco?c.campoSeco:c.campo),opacity:MODO==="arte"?.92:1});
+      if(c.detalhe){
+        var tufos=Math.min(90,Math.round(f.rx*f.ry/700));
+        for(var i=0;i<tufos;i++){
+          var a=rnd(f.seed+i*2)*Math.PI*2,rr=Math.sqrt(rnd(f.seed+i*2+40));
+          var x=f.cx+Math.cos(a)*f.rx*rr*.88,y=f.cy+Math.sin(a)*f.ry*rr*.88;
+          add("path",{d:"M"+x.toFixed(1)+" "+y.toFixed(1)+"l-2.4 -4.6M"+x.toFixed(1)+" "+
+            y.toFixed(1)+"l2.2 -5.4",stroke:f.seco?"#565a33":"#445734","stroke-width":1,opacity:.55});
+        }
+      }
+    }
+    else if(f.tipo==="lavoura"){
+      var gg=add("g",{transform:"rotate("+f.ang+" "+f.cx+" "+f.cy+")"});
+      add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:6,fill:c.lavoura,
+        stroke:MODO==="arte"?"#5a6636":"#8a7a30","stroke-width":1.2},gg);
+      if(c.detalhe)for(var l=1;l<f.linhas;l++){
+        var yy=f.cy-f.h/2+(f.h/f.linhas)*l;
+        add("line",{x1:f.cx-f.w/2+5,y1:yy,x2:f.cx+f.w/2-5,y2:yy,stroke:"#616f3a",
+          "stroke-width":1.4,opacity:.9},gg);
+      }
+    }
+    else if(f.tipo==="agua"){
+      if(f.forma==="rio"){
+        add("path",{d:aberta(f.pontos),fill:"none",stroke:c.aguaFunda,
+          "stroke-width":f.largura+8,"stroke-linecap":"round"});
+        add("path",{d:aberta(f.pontos),fill:"none",stroke:c.agua,
+          "stroke-width":f.largura,"stroke-linecap":"round"});
+      }else if(f.forma==="brejo"){
+        add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.24,16),fill:c.brejo});
+        add("path",{d:blob(f.cx,f.cy,f.rx*.7,f.ry*.66,f.seed+9,0.3,14),fill:c.agua,opacity:.62});
+      }else{
+        add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.08,20),fill:c.aguaFunda,
+          stroke:c.agua,"stroke-width":5});
+        add("path",{d:blob(f.cx,f.cy,f.rx*.9,f.ry*.87,f.seed+4,0.09,20),fill:c.agua});
+      }
+    }
+    else if(f.tipo==="floresta"){
+      add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.19,16),
+        fill:f.palida&&MODO==="arte"?"#26372f":c.mata,opacity:.95});
+      if(c.detalhe)for(var t=0;t<f.densidade;t++){
+        var an=rnd(f.seed+t*3)*Math.PI*2,ra=Math.sqrt(rnd(f.seed+t*3+40));
+        var x2=f.cx+Math.cos(an)*f.rx*ra*.93,y2=f.cy+Math.sin(an)*f.ry*ra*.89;
+        var rr2=4.5+rnd(f.seed+t+9)*6;
+        add("circle",{cx:(x2+1.5).toFixed(1),cy:(y2+1.8).toFixed(1),r:rr2.toFixed(1),
+          fill:"#0d160b",opacity:.55});
+        add("circle",{cx:x2.toFixed(1),cy:y2.toFixed(1),r:rr2.toFixed(1),
+          fill:c.matales[t%3],stroke:"#0f1a0d","stroke-width":.7});
+      }
+    }
+    else if(f.tipo==="montanha"){
+      var larg=(f.x2-f.x1)/f.picos,base=[],b;
+      for(b=0;b<=f.picos;b++)base.push([f.x1+larg*b,f.y+f.altura*.5]);
+      add("path",{d:aberta(base)+"L"+f.x2+" "+(f.y+f.altura*.95)+"L"+f.x1+" "+
+        (f.y+f.altura*.95)+"Z",fill:MODO==="arte"?"#2a2823":c.rocha,opacity:.92});
+      for(var pk=0;pk<f.picos;pk++){
+        var px=f.x1+larg*pk+larg/2,hh=f.altura*(.62+rnd(f.seed+pk)*.72);
+        var yb=f.y+f.altura*.55;
+        add("path",{d:"M"+(px-larg*.68).toFixed(1)+" "+yb.toFixed(1)+"L"+px.toFixed(1)+" "+
+          (f.y-hh).toFixed(1)+"L"+(px+larg*.68).toFixed(1)+" "+yb.toFixed(1)+"Z",
+          fill:c.rocha,stroke:MODO==="arte"?"#726f63":"#5f5b52","stroke-width":1.1,
+          "stroke-linejoin":"round"});
+        if(c.detalhe)add("path",{d:"M"+px.toFixed(1)+" "+(f.y-hh).toFixed(1)+"L"+
+          (px+larg*.68).toFixed(1)+" "+yb.toFixed(1)+"L"+(px+larg*.1).toFixed(1)+" "+
+          yb.toFixed(1)+"Z",fill:"#201d17",opacity:.6});
+        add("path",{d:"M"+(px-larg*.2).toFixed(1)+" "+(f.y-hh*.58).toFixed(1)+
+          "l"+(larg*.1).toFixed(1)+" "+(hh*.11).toFixed(1)+"L"+px.toFixed(1)+" "+
+          (f.y-hh).toFixed(1)+"l"+(larg*.2).toFixed(1)+" "+(hh*.42).toFixed(1)+
+          "l-"+(larg*.11).toFixed(1)+" -"+(hh*.09).toFixed(1)+"Z",fill:c.neve,opacity:.88});
+      }
+    }
+    else if(f.tipo==="colina"){
+      var lg=(f.x2-f.x1)/f.lombadas;
+      for(var c2=0;c2<f.lombadas;c2++){
+        var cx2=f.x1+lg*c2+lg/2,h2=f.altura*(.7+rnd(cx2)*.6);
+        add("path",{d:"M"+(cx2-lg*.62).toFixed(1)+" "+f.y+"Q"+cx2+" "+(f.y-h2).toFixed(1)+
+          " "+(cx2+lg*.62).toFixed(1)+" "+f.y+"Z",fill:c.colina,
+          stroke:MODO==="arte"?"#5a6342":"#5f7a3e","stroke-width":1.1});
+      }
+    }
+    else if(f.tipo==="penhasco"){
+      add("path",{d:aberta(f.pontos),fill:"none",stroke:c.rocha,"stroke-width":8,
+        "stroke-linecap":"round"});
+      if(c.detalhe)for(var hc=0;hc<f.pontos.length-1;hc++){
+        var a1=f.pontos[hc],a2=f.pontos[hc+1];
+        for(var q2=0;q2<4;q2++){
+          var tq=(q2+.5)/4,hx=a1[0]+(a2[0]-a1[0])*tq,hy=a1[1]+(a2[1]-a1[1])*tq;
+          add("line",{x1:hx.toFixed(1),y1:hy.toFixed(1),x2:(hx-12).toFixed(1),
+            y2:(hy+8).toFixed(1),stroke:"#5d5a50","stroke-width":2,opacity:.85});
+        }
+      }
+    }
+    else if(f.tipo==="ruina"){
+      for(var b3=0;b3<f.blocos;b3++){
+        var bx=f.cx-f.w/2+rnd(b3*13+f.cx)*f.w,by=f.cy-f.h/2+rnd(b3*17+f.cy)*f.h;
+        var bw=9+rnd(b3*7)*16,bh=4+rnd(b3*11)*6,rot=(rnd(b3*3)*44-22).toFixed(1);
+        add("rect",{x:bx.toFixed(1),y:by.toFixed(1),width:bw.toFixed(1),height:bh.toFixed(1),
+          fill:c.ruina,stroke:MODO==="arte"?"#68624f":"#7a7168","stroke-width":.9,
+          transform:"rotate("+rot+" "+bx.toFixed(1)+" "+by.toFixed(1)+")"});
+      }
+    }
+    else if(f.tipo==="estrada"){
+      var dd=aberta(f.pontos);
+      if(MODO==="arte")add("path",{d:dd,fill:"none",stroke:"#1f190f","stroke-width":7,
+        "stroke-linecap":"round","stroke-dasharray":f.tracejada?"12 10":"",opacity:.85});
+      add("path",{d:dd,fill:"none",stroke:c.estrada,"stroke-width":MODO==="arte"?3.2:5,
+        "stroke-linecap":"round","stroke-dasharray":f.tracejada?"12 10":""});
+    }
+    else if(f.tipo==="cidade"){
+      add("circle",{cx:f.cx,cy:f.cy,r:f.r,fill:c.cidade,stroke:c.muro,"stroke-width":3});
+      if(c.detalhe){
+        for(var a3=1;a3<=f.aneis;a3++)
+          add("circle",{cx:f.cx,cy:f.cy,r:(f.r*(a3/(f.aneis+1))).toFixed(1),fill:"none",
+            stroke:"#433826","stroke-width":1});
+        for(var r4=0;r4<f.ruas;r4++){
+          var an4=(r4/f.ruas)*Math.PI*2;
+          add("line",{x1:(f.cx+Math.cos(an4)*f.r*.18).toFixed(1),
+            y1:(f.cy+Math.sin(an4)*f.r*.18).toFixed(1),
+            x2:(f.cx+Math.cos(an4)*f.r*.97).toFixed(1),
+            y2:(f.cy+Math.sin(an4)*f.r*.97).toFixed(1),stroke:"#584a31","stroke-width":1.1});
+        }
+        for(var t3=0;t3<f.ruas*3;t3++){
+          var at3=(t3/(f.ruas*3))*Math.PI*2+.11,rt3=f.r*(.34+rnd(t3*5+f.cx)*.56);
+          add("rect",{x:(f.cx+Math.cos(at3)*rt3-3.2).toFixed(1),
+            y:(f.cy+Math.sin(at3)*rt3-2.6).toFixed(1),width:6.4,height:5.2,rx:1,
+            fill:c.telhado,stroke:"#74492f","stroke-width":.6});
+        }
+      }
+      add("circle",{cx:f.cx,cy:f.cy,r:(f.r*.17).toFixed(1),fill:MODO==="arte"?"#2d2618":"#c8b47a",
+        stroke:c.muro,"stroke-width":1.4});
+    }
+    else if(f.tipo==="vila"){
+      for(var v=0;v<f.casas;v++){
+        var av=(v/f.casas)*Math.PI*2+rnd(v*3+f.cx)*.6,rv=f.raio*(.3+rnd(v*7+f.cy)*.7);
+        add("rect",{x:(f.cx+Math.cos(av)*rv-4.5).toFixed(1),
+          y:(f.cy+Math.sin(av)*rv-3.4).toFixed(1),width:9,height:6.8,rx:1.2,
+          fill:f.barracas?"#423927":c.telhado,stroke:"#74492f","stroke-width":.8});
+      }
+    }
+    else if(f.tipo==="castelo"){
+      add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:2,
+        fill:MODO==="arte"?"#100d0c":"#4a4038",stroke:c.muro,"stroke-width":2});
+      [-1,0,1].forEach(function(o){
+        add("rect",{x:(f.cx+o*f.w*.34-5.5).toFixed(1),y:(f.cy-f.h/2-18).toFixed(1),
+          width:11,height:20,rx:1.5,fill:MODO==="arte"?"#100d0c":"#4a4038",
+          stroke:c.muro,"stroke-width":1.5});
+      });
+    }
+    else if(f.tipo==="torre"){
+      if(f.tipoTorre==="labirinto"){
+        add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:3,
+          fill:MODO==="arte"?"#171021":"#5b4a70",stroke:"#a05fff","stroke-width":2.4});
+        add("rect",{x:f.cx-f.w*.17,y:f.cy-f.h/2-30,width:f.w*.34,height:32,rx:2,
+          fill:MODO==="arte"?"#171021":"#5b4a70",stroke:"#a05fff","stroke-width":2});
+      }else if(f.tipoTorre==="relogio"){
+        add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:2,
+          fill:MODO==="arte"?"#1c1712":"#6b5a48",stroke:c.muro,"stroke-width":1.8,
+          transform:f.inclinada?"rotate(-7 "+f.cx+" "+f.cy+")":""});
+      }else{
+        add("path",{d:"M"+(f.cx-f.w/2)+" "+(f.cy+f.h/2)+"q"+(f.w/2)+" "+(-f.h*1.7)+" "+f.w+" 0Z",
+          fill:MODO==="arte"?"#0d0b09":"#3a3630",stroke:"#7a776b","stroke-width":1.8});
+      }
+    }
+    else if(f.tipo==="ilha"){
+      add("path",{d:blob(f.cx,f.cy,f.r,f.r*.72,f.cx,.22,12),fill:c.terra,
+        stroke:c.costa,"stroke-width":MODO==="arte"?1.4:5});
+    }
+    else if(f.tipo==="rotulo"&&MODO==="arte"){
+      var yy2=f.y+(f.dy||0);
+      var t4=add("text",{class:"t-rot "+(f.classe||""),x:f.x,y:yy2,
+        "text-anchor":f.ancora||"middle"});
+      if(f.ang)t4.setAttribute("transform","rotate("+f.ang+" "+f.x+" "+yy2+")");
+      t4.textContent=f.txt;
+    }
+  });
+  desenharNomes();
+}
+
+/* ---------- nomes das localidades ---------- */
+/* marcos com nome próprio, posicionados à mão pra não colidir */
+var MARCOS=[
+  {x:790,y:340,dy:-92,txt:"Cidade do Início"},
+  {x:1230,y:230,dy:-60,txt:"Tolbana"},
+  {x:800,y:172,dy:-34,txt:"Castelo de Ferro Negro"},
+  {x:810,y:104,dy:-56,txt:"Labirinto do Andar 1"},
+  {x:500,y:352,dy:-38,txt:"Torre de Aldric"},
+  {x:252,y:700,dy:-50,txt:"Horunka"},
+  {x:130,y:380,dy:-42,txt:"Brenmoor"},
+  {x:655,y:620,dy:-38,txt:"Posto de Kaldrin"},
+  {x:100,y:205,dy:-34,txt:"Caverna de Mournhall"},
+  {x:1470,y:352,dy:-34,txt:"Gruta de Lumis"},
+  {x:900,y:702,dy:-32,txt:"Ilha de Pemberton"},
+  {x:1450,y:748,dy:-52,txt:"Pedreira de Dunhelm"},
+  {x:302,y:880,dy:-52,txt:"Necrópole de Voss"},
+  {x:1152,y:484,dy:-58,txt:"Vale de Molwyn"},
+  {x:1098,y:566,dy:44,txt:"Terraços de Solveig"},
+  {x:952,y:900,dy:-46,txt:"Trilha de Corvain"},
+  {x:856,y:858,dy:48,txt:"Charco de Grenna"},
+  {x:1262,y:170,dy:-46,txt:"Colinas de Braxhold"},
+  {x:1490,y:206,dy:44,txt:"Penhascos de Vaelor"},
+  {x:400,y:205,dy:-70,txt:"Jardim de Fenwyth"},
+  {x:615,y:470,dy:96,txt:"Planície de Verrun"},
+  {x:985,y:452,dy:-100,txt:"Estepes de Kaldan"},
+  {x:108,y:492,dy:-88,txt:"Bosque de Ashwen"},
+  {x:756,y:948,dy:54,txt:"Campo de Ruyn"}
+];
+var mostrarNomes=true,mostrarMarcos=true;
+function desenharNomes(){
+  gNomes.textContent="";
+  if(!mostrarNomes)return;
+  MARCOS.forEach(function(m){
+    if(mostrarMarcos)
+      gNomes.appendChild(el("circle",{class:"ponto-marco",cx:m.x,cy:m.y,r:5}));
+    var t=el("text",{class:"nome-marco",x:m.x,y:m.y+(m.dy||0)});
+    t.textContent=m.txt;gNomes.appendChild(t);
+  });
+}
+
+/* ---------- exportar ---------- */
+function svgTexto(){
+  var clone=svg.cloneNode(true);
+  clone.setAttribute("xmlns",NS);
+  clone.setAttribute("width",1536);clone.setAttribute("height",1024);
+  /* embutir o CSS necessário, senão o PNG sai sem estilo de texto */
+  var css=document.createElement("style");
+  css.textContent=[
+    ".t-rot{font-family:Georgia,serif;font-style:italic;text-anchor:middle;paint-order:stroke;stroke:#0a0806;stroke-width:3.4px;letter-spacing:.14em;font-size:15px}",
+    ".t-rot.agua{fill:#7cc0e2}.t-rot.mata{fill:#8cbb7c}.t-rot.pedra{fill:#b3a992}.t-rot.campo{fill:#a8b07a}",
+    ".nome-marco{font-family:Georgia,serif;font-size:15px;fill:#ffd9a0;text-anchor:middle;paint-order:stroke;stroke:#0a0806;stroke-width:4px;letter-spacing:.06em;font-weight:600}",
+    ".ponto-marco{fill:#d9ad5e;stroke:#1a1207;stroke-width:1.6}"
+  ].join("");
+  clone.insertBefore(css,clone.firstChild);
+  return '<?xml version="1.0" encoding="UTF-8"?>\n'+new XMLSerializer().serializeToString(clone);
+}
+function baixar(nome,url){
+  var a=document.createElement("a");a.href=url;a.download=nome;
+  document.body.appendChild(a);a.click();a.remove();
+}
+function baixarPng(largura){
+  var btn=document.getElementById("bPng"),antes=btn.textContent;
+  btn.textContent="Gerando "+largura+"px…";btn.disabled=true;
+  function fim(){btn.textContent=antes;btn.disabled=false;}
+  var txt=svgTexto();
+  var blob=new Blob([txt],{type:"image/svg+xml;charset=utf-8"});
+  var url=URL.createObjectURL(blob),img=new Image();
+  img.onload=function(){
+    var cv=document.createElement("canvas");
+    cv.width=largura;cv.height=Math.round(largura*1024/1536);
+    var ctx=cv.getContext("2d");
+    ctx.fillStyle="#070502";ctx.fillRect(0,0,cv.width,cv.height);
+    ctx.drawImage(img,0,0,cv.width,cv.height);
+    URL.revokeObjectURL(url);
+    try{
+      cv.toBlob(function(b){
+        if(!b){alert("O navegador não deu conta desse tamanho. Tente um menor, ou baixe o SVG.");fim();return;}
+        var u=URL.createObjectURL(b);
+        baixar("andar1_mapa_"+MODO+"_"+largura+".png",u);
+        setTimeout(function(){URL.revokeObjectURL(u);},4000);
+        fim();
+      },"image/png");
+    }catch(e){
+      alert("Tamanho grande demais pro navegador. Baixe o SVG — ele é vetor e não tem limite.");
+      fim();
+    }
+  };
+  img.onerror=function(){
+    alert("Não consegui converter pra PNG. Baixe o SVG e converta fora.");fim();
+  };
+  img.src=url;
+}
+
+/* ---------- prompt pronto ---------- */
+var PROMPT=[
+"Repaint this map of a floating fantasy island as a beautiful hand-painted RPG world map.",
+"KEEP THE EXACT GEOGRAPHY, SHAPES AND PROPORTIONS of the reference image — every landmass,",
+"coastline, lake, river, forest and mountain must stay in the same position and size.",
+"Aspect ratio 3:2, final size 1536x1024.",
+"",
+"CRITICAL: do NOT draw any text, letters, labels, legend, compass rose, border, frame,",
+"scale bar or map markers. No writing of any kind. The image must be pure painted terrain.",
+"All text and markers are drawn separately as vectors on top.",
+"",
+"Geography, from the reference (keep these positions):",
+"- CENTER: a large circular walled city with radial streets and a plaza.",
+"- Just NORTH of that city: a black stone castle, and above it an enormous rectangular",
+"  labyrinth tower at the top edge of the island.",
+"- NORTH RIM: a long snow-capped mountain range crossing most of the width.",
+"- NORTHEAST: rolling stone hills, and a cliff edge at the far corner.",
+"- EAST: a second smaller walled town on a plateau, terraced farmland, cultivated fields,",
+"  a glowing crystal cave mouth, a dark swamp and a flooded quarry.",
+"- SOUTHEAST: a large blue lake with one small wooded island, and shallow marshland.",
+"- SOUTH: an open plain scattered with ancient broken ruins and fallen stones.",
+"- SOUTHWEST: an old necropolis of grey headstones.",
+"- WEST: a winding river running top to bottom along the edge, a small riverside village.",
+"- NORTHWEST: a dense dark forest with a tiny village clearing, a pale misty grove,",
+"  and a cave mouth in the rock.",
+"- Dirt roads connect the central city to the town, the villages and the labyrinth.",
+"",
+"Style: hand-painted parchment RPG map, muted natural palette, deep greens, slate greys,",
+"warm ochre roads, soft painterly shading, gentle aerial haze, Ghibli-inspired background art,",
+"clean uncluttered composition, empty dark void around the island so it reads as floating.",
+"masterpiece, best quality, highly detailed."
+].join("\n");
+document.getElementById("prompt").value=PROMPT;
+document.getElementById("bCopiar").addEventListener("click",function(){
+  var ta=document.getElementById("prompt");
+  ta.select();ta.setSelectionRange(0,99999);
+  try{document.execCommand("copy");this.textContent="Copiado ✓";
+    var b=this;setTimeout(function(){b.textContent="Copiar prompt";},1600);}catch(e){}
+});
+
+/* ---------- controles ---------- */
+document.getElementById("bNomes").addEventListener("click",function(){
+  mostrarNomes=!mostrarNomes;this.textContent="Nomes: "+(mostrarNomes?"ligados":"desligados");
+  this.classList.toggle("on",mostrarNomes);desenharNomes();
+});
+document.getElementById("bMarcos").addEventListener("click",function(){
+  mostrarMarcos=!mostrarMarcos;this.textContent="Marcos: "+(mostrarMarcos?"ligados":"desligados");
+  this.classList.toggle("on",mostrarMarcos);desenharNomes();
+});
+function atualizaNota(){
+  var l=parseInt(document.getElementById("tam").value,10);
+  document.getElementById("nota").textContent=l+" × "+Math.round(l*1024/1536)+
+    (MODO==="referencia"?" · blocos chapados":"");
+}
+document.getElementById("tam").addEventListener("change",atualizaNota);
+
+document.getElementById("bIA").addEventListener("click",function(){
+  mostrarNomes=false;mostrarMarcos=false;MODO="referencia";
+  var bn=document.getElementById("bNomes"),bm=document.getElementById("bMarcos"),
+      bd=document.getElementById("bModo");
+  bn.textContent="Nomes: desligados";bn.classList.remove("on");
+  bm.textContent="Marcos: desligados";bm.classList.remove("on");
+  bd.textContent="Modo: referencia";bd.classList.add("on");
+  atualizaNota();desenhar();
+  this.textContent="Pronto — pode exportar";
+  var b=this;setTimeout(function(){b.textContent="Preparar pra IA";},2600);
+});
+document.getElementById("bModo").addEventListener("click",function(){
+  MODO=MODO==="arte"?"referencia":"arte";
+  this.textContent="Modo: "+MODO;this.classList.toggle("on",MODO==="referencia");
+  atualizaNota();
+  desenhar();
+});
+document.getElementById("bPng").addEventListener("click",function(){
+  baixarPng(parseInt(document.getElementById("tam").value,10));
+});
+document.getElementById("bSvg").addEventListener("click",function(){
+  baixar("andar1_mapa_"+MODO+".svg",
+    "data:image/svg+xml;charset=utf-8,"+encodeURIComponent(svgTexto()));
+});
+
+atualizaNota();
+desenhar();
+})();
+</script>
+</body>
+</html>

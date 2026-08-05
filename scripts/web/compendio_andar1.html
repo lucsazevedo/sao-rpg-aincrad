@@ -1,0 +1,3024 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Compêndio do Andar 1</title>
+<style>
+:root{
+  --bg:#0a0806; --panel:#15100a; --panel-2:#1d150c; --panel-3:#241a0f;
+  --line:#3d2e1a; --line-soft:#2a2013;
+  --gold:#d9ad5e; --gold-dim:#8c6f3e; --gold-bright:#f2d18a;
+  --ink:#efe5d2; --ink-dim:#a89a80; --ink-faint:#6f6450;
+  --red:#e0524a;
+  --f-disp: "Palatino Linotype", Palatino, Georgia, "Times New Roman", serif;
+  --f-ui: -apple-system, "Segoe UI", system-ui, sans-serif;
+  --f-mono: ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --c-npc:#57d9ff; --c-monstro:#ff5f5f; --c-recurso:#8fd694; --c-segredo:#ffb454;
+  --c-comerciante:#c98fff; --c-dungeon:#a05fff; --c-puzzle:#ffd85c;
+  --c-chefe:#ff2e2e; --c-cidade:#57d9ff;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:
+    radial-gradient(ellipse 1600px 900px at 50% -12%, #2a1e10 0%, transparent 62%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.012) 0 2px, transparent 2px 5px),
+    var(--bg);
+  color:var(--ink); font-family:var(--f-ui); -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+button{font:inherit;color:inherit;background:none;border:none;cursor:pointer}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:5px}
+::-webkit-scrollbar-track{background:transparent}
+
+/* ---------------- moldura de pôster ---------------- */
+.shell{max-width:1720px;margin:0 auto;padding:18px 16px 70px}
+.frame{
+  position:relative;border:2px solid var(--gold-dim);border-radius:4px;
+  background:linear-gradient(180deg, rgba(30,22,12,.75), rgba(12,9,6,.75));
+  padding:20px 20px 26px;
+  box-shadow:0 0 0 1px #0a0806 inset, 0 0 60px rgba(0,0,0,.6);
+}
+.frame::before,.frame::after{
+  content:"";position:absolute;left:8px;right:8px;height:1px;background:var(--line);
+}
+.frame::before{top:8px} .frame::after{bottom:8px}
+.corner{position:absolute;width:26px;height:26px;border:2px solid var(--gold);opacity:.85}
+.corner.tl{top:-2px;left:-2px;border-right:0;border-bottom:0}
+.corner.tr{top:-2px;right:-2px;border-left:0;border-bottom:0}
+.corner.bl{bottom:-2px;left:-2px;border-right:0;border-top:0}
+.corner.br{bottom:-2px;right:-2px;border-left:0;border-top:0}
+
+/* ---------------- masthead ---------------- */
+.masthead{display:flex;align-items:flex-end;justify-content:space-between;gap:22px;flex-wrap:wrap;
+  border-bottom:2px solid var(--gold-dim);padding-bottom:14px}
+.brand .eyebrow{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.28em;
+  text-transform:uppercase;color:var(--gold-dim)}
+.brand h1{font-family:var(--f-disp);font-size:clamp(28px,3.6vw,46px);margin:2px 0 0;
+  color:var(--gold-bright);letter-spacing:.06em;line-height:1}
+.brand .sub{font-family:var(--f-disp);font-style:italic;color:var(--ink-dim);font-size:15px;margin-top:4px}
+.who{display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:flex-end}
+.who input{background:var(--panel);border:1px solid var(--line);color:var(--ink);
+  padding:7px 10px;border-radius:3px;font-size:12.5px;width:170px}
+.who input:focus{outline:none;border-color:var(--gold-dim)}
+.pill{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);
+  padding:7px 11px;border-radius:3px;color:var(--ink-dim);white-space:nowrap}
+.pill:hover{border-color:var(--gold-dim);color:var(--gold)}
+.pill.on{color:var(--gold);border-color:var(--gold-dim);background:var(--panel-2)}
+
+/* ---------------- abas ---------------- */
+.tabs{display:flex;gap:5px;flex-wrap:wrap;margin:16px 0 0;border-bottom:1px solid var(--line)}
+.tab{font-family:var(--f-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--ink-faint);padding:9px 13px;border:1px solid transparent;border-bottom:none;border-radius:3px 3px 0 0}
+.tab:hover{color:var(--ink-dim)}
+.tab.active{color:var(--gold);border-color:var(--line);background:var(--panel-2);
+  position:relative;top:1px}
+.tab .n{color:var(--ink-faint);margin-left:5px}
+.view{display:none;padding-top:18px}
+.view.active{display:block}
+
+/* ---------------- painéis ---------------- */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:13px 14px}
+.panel + .panel{margin-top:12px}
+.panel-title{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--gold);border-bottom:1px solid var(--line-soft);padding-bottom:7px;margin-bottom:10px;
+  display:flex;justify-content:space-between;align-items:center;gap:8px}
+.panel-title .aux{color:var(--ink-faint);letter-spacing:.06em}
+.panel p{font-size:12.5px;line-height:1.62;color:var(--ink-dim);margin:0 0 8px}
+.panel p:last-child{margin-bottom:0}
+.kv{list-style:none;margin:0;padding:0;font-size:12.5px}
+.kv li{display:flex;justify-content:space-between;gap:10px;padding:5px 0;
+  border-bottom:1px dashed var(--line-soft);color:var(--ink-dim)}
+.kv li:last-child{border-bottom:none}
+.kv b{color:var(--ink);font-weight:600;text-align:right}
+.stars{color:var(--gold);letter-spacing:2px}
+.legend{list-style:none;margin:0;padding:0;display:grid;gap:6px;font-size:12.5px}
+.legend li{display:flex;align-items:center;gap:9px;color:var(--ink-dim);cursor:pointer;
+  padding:2px 4px;border-radius:3px}
+.legend li:hover{background:var(--panel-2);color:var(--ink)}
+.legend li.off{opacity:.34}
+.dot{flex:0 0 auto;width:12px;height:12px;border-radius:50%;box-shadow:0 0 0 1px rgba(0,0,0,.5) inset}
+.numlist{list-style:none;margin:0;padding:0;font-size:12.5px}
+.numlist li{display:flex;align-items:center;gap:9px;padding:4px 0;color:var(--ink-dim);cursor:pointer}
+.numlist li:hover b{color:var(--gold)}
+.numlist b{color:var(--ink);font-weight:600}
+.badge{flex:0 0 auto;width:19px;height:19px;border-radius:50%;background:var(--gold-dim);color:#1a1207;
+  display:flex;align-items:center;justify-content:center;font-family:var(--f-mono);font-size:10px;font-weight:700}
+table.tbl{width:100%;border-collapse:collapse;font-size:12px}
+table.tbl th{text-align:left;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.09em;
+  text-transform:uppercase;color:var(--gold-dim);padding:3px 5px 6px;border-bottom:1px solid var(--line-soft)}
+table.tbl td{padding:5px;border-bottom:1px dashed var(--line-soft);color:var(--ink-dim);vertical-align:top}
+table.tbl tr:last-child td{border-bottom:none}
+table.tbl td.nome{color:var(--ink);font-weight:600}
+.tier{font-family:var(--f-mono);font-size:10px;padding:2px 6px;border-radius:3px;white-space:nowrap}
+.tier.f{background:rgba(143,214,148,.14);color:#8fd694}
+.tier.m{background:rgba(255,180,84,.14);color:#ffb454}
+.tier.d{background:rgba(255,95,95,.14);color:#ff5f5f}
+.tier.md{background:rgba(255,46,46,.18);color:#ff2e2e}
+
+/* ---------------- layout do mapa ---------------- */
+.poster{display:grid;grid-template-columns:246px minmax(0,1fr) 246px;gap:14px;align-items:start}
+@media (max-width:1240px){.poster{grid-template-columns:1fr}}
+.stage{position:relative;border:1px solid var(--line);border-radius:4px;overflow:hidden;
+  background:#070502}
+.stage svg{display:block;width:100%;height:auto;touch-action:none;cursor:grab}
+.stage svg.dragging{cursor:grabbing}
+.mapbar{display:flex;gap:6px;align-items:center;flex-wrap:wrap;padding:9px 10px;
+  border-bottom:1px solid var(--line);background:var(--panel);font-size:11.5px}
+.mapbar .grow{flex:1}
+.mapbar button{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);
+  padding:5px 9px;border-radius:3px;color:var(--ink-dim)}
+.mapbar button:hover{border-color:var(--gold-dim);color:var(--gold)}
+.mapbar .prog{font-family:var(--f-mono);color:var(--gold);white-space:nowrap}
+.mapfoot{display:flex;gap:10px;justify-content:space-between;padding:8px 10px;
+  border-top:1px solid var(--line);background:var(--panel);font-size:11px;color:var(--ink-faint);flex-wrap:wrap}
+
+/* nós do mapa */
+.node{cursor:pointer}
+.node .halo{fill:transparent;stroke:none}
+.node circle.pin{stroke:#0a0806;stroke-width:1.6;opacity:.42}
+.node.disc circle.pin{opacity:1}
+.node.sel circle.pin{stroke:var(--gold-bright);stroke-width:2.6}
+.node text.gl{font-family:var(--f-mono);font-size:9px;text-anchor:middle;dominant-baseline:central;
+  fill:#0a0806;font-weight:700;pointer-events:none}
+.node:hover circle.pin{opacity:1;stroke:var(--gold-bright)}
+.node .lbl{font-family:var(--f-ui);font-size:11px;fill:var(--gold-bright);text-anchor:middle;
+  paint-order:stroke;stroke:#0a0806;stroke-width:3px;pointer-events:none;font-weight:600}
+.marco{cursor:pointer}
+.marco circle.ring{fill:var(--gold);stroke:#1a1207;stroke-width:2}
+.marco.sel circle.ring{stroke:var(--gold-bright);stroke-width:3.4}
+.marco text.num{font-family:var(--f-mono);font-weight:700;fill:#1a1207;font-size:12px;
+  text-anchor:middle;dominant-baseline:central;pointer-events:none}
+.marco .cap{font-family:var(--f-disp);font-size:13px;fill:var(--gold-bright);text-anchor:middle;
+  paint-order:stroke;stroke:#0a0806;stroke-width:3.4px;pointer-events:none;letter-spacing:.04em}
+.regionlbl{font-family:var(--f-disp);font-size:15px;fill:rgba(242,209,138,.78);text-anchor:middle;
+  paint-order:stroke;stroke:#0a0806;stroke-width:3.6px;pointer-events:none;letter-spacing:.09em}
+
+/* detalhe */
+.detail{font-size:12.5px}
+.detail .eyebrow{font-family:var(--f-mono);font-size:10px;letter-spacing:.15em;text-transform:uppercase;
+  color:var(--gold-dim);margin-bottom:5px}
+.detail h3{font-family:var(--f-disp);font-size:19px;margin:0 0 8px;color:var(--gold-bright);line-height:1.2}
+.detail p{color:var(--ink-dim);line-height:1.62;margin:0 0 9px}
+.detail .test{border-left:2px solid var(--gold-dim);padding:8px 0 8px 10px;margin:9px 0;
+  background:linear-gradient(90deg,rgba(217,173,94,.06),transparent)}
+.detail .test div{margin:3px 0;color:var(--ink-dim)}
+.detail .test b{font-family:var(--f-mono);color:var(--gold);margin-right:6px}
+.detail .quote{font-family:var(--f-disp);font-style:italic;color:var(--ink);
+  border-left:2px solid var(--line);padding-left:10px;margin:9px 0}
+.detail .act{display:flex;gap:6px;flex-wrap:wrap;margin-top:11px}
+.detail .act button{font-family:var(--f-mono);font-size:11px;border:1px solid var(--gold-dim);
+  color:var(--gold);padding:6px 11px;border-radius:3px}
+.detail .act button:hover{background:var(--panel-3)}
+.detail .act button.ghost{border-color:var(--line);color:var(--ink-faint)}
+.thumb{width:100%;border:1px solid var(--line);border-radius:3px;margin-bottom:10px}
+.tag{display:inline-block;font-family:var(--f-mono);font-size:10px;padding:2px 7px;border-radius:3px;
+  border:1px solid var(--line);color:var(--ink-dim);margin:0 4px 4px 0}
+.tag.gold{border-color:var(--gold-dim);color:var(--gold)}
+.tag.red{border-color:#5a2422;color:var(--red)}
+.tag.cy{border-color:#1f4b5c;color:var(--c-npc)}
+
+/* ---------------- grades de catálogo ---------------- */
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:14px}
+.toolbar input[type=search],.toolbar select{background:var(--panel);border:1px solid var(--line);
+  color:var(--ink);padding:8px 11px;border-radius:3px;font-size:12.5px;min-width:180px}
+.toolbar input:focus,.toolbar select:focus{outline:none;border-color:var(--gold-dim)}
+.chip{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);padding:6px 10px;
+  border-radius:14px;color:var(--ink-faint)}
+.chip.on{color:var(--gold);border-color:var(--gold-dim);background:var(--panel-2)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(268px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:12px;
+  display:flex;flex-direction:column;gap:7px}
+.card:hover{border-color:var(--gold-dim)}
+.card .ct{font-family:var(--f-disp);font-size:16px;color:var(--gold-bright);line-height:1.2}
+.card .cs{font-family:var(--f-mono);font-size:10px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.card p{font-size:12px;line-height:1.6;color:var(--ink-dim);margin:0}
+.card .cimg{width:100%;aspect-ratio:1/1;object-fit:cover;border:1px solid var(--line);border-radius:3px}
+.card .noimg{width:100%;aspect-ratio:3/2;border:1px dashed var(--line);border-radius:3px;
+  display:flex;align-items:center;justify-content:center;color:var(--ink-faint);
+  font-family:var(--f-mono);font-size:10px;text-align:center;padding:8px}
+.card .row{display:flex;gap:5px;flex-wrap:wrap}
+.rar{font-family:var(--f-mono);font-size:10px;padding:2px 7px;border-radius:3px}
+.rar.Comum{background:rgba(168,154,128,.14);color:var(--ink-dim)}
+.rar.Incomum{background:rgba(143,214,148,.14);color:#8fd694}
+.rar.Raro{background:rgba(87,217,255,.14);color:var(--c-npc)}
+.rar.Épico{background:rgba(201,143,255,.16);color:var(--c-comerciante)}
+.rar.Lendário{background:rgba(255,216,92,.18);color:var(--c-puzzle)}
+.empty{color:var(--ink-faint);font-size:13px;padding:26px;text-align:center;
+  border:1px dashed var(--line);border-radius:4px}
+.section-h{font-family:var(--f-disp);font-size:20px;color:var(--gold-bright);margin:22px 0 10px;
+  border-bottom:1px solid var(--line);padding-bottom:7px}
+.section-h:first-child{margin-top:0}
+.note{font-size:12px;color:var(--ink-faint);line-height:1.6;margin:0 0 14px}
+
+/* ---------------- dungeons ---------------- */
+.dgn-wrap{display:grid;grid-template-columns:minmax(0,1fr) 288px;gap:14px;align-items:start}
+@media (max-width:1100px){.dgn-wrap{grid-template-columns:1fr}}
+.dgn-svg{background:#070502;border:1px solid var(--line);border-radius:4px;display:block;width:100%;height:auto}
+.sala{cursor:pointer}
+.sala rect{stroke:#0a0806;stroke-width:1.5;rx:4}
+.sala text.nm{font-family:var(--f-ui);font-size:9.5px;fill:#efe5d2;text-anchor:middle;pointer-events:none}
+.sala text.ic{font-size:13px;text-anchor:middle;dominant-baseline:central;pointer-events:none;fill:#0a0806}
+.sala:hover rect{stroke:var(--gold-bright);stroke-width:2}
+.sala.sel rect{stroke:var(--gold-bright);stroke-width:2.6}
+.setor rect{fill:rgba(217,173,94,.035);stroke:var(--line);stroke-dasharray:4 4}
+.setor text{font-family:var(--f-mono);font-size:10px;fill:var(--gold-dim);letter-spacing:.1em;text-transform:uppercase}
+.aresta{stroke:#4a3a22;stroke-width:2;fill:none}
+
+/* ---------------- strip inferior ---------------- */
+.strip{display:grid;grid-template-columns:300px minmax(0,1fr) 300px;gap:14px;margin-top:14px}
+@media (max-width:1240px){.strip{grid-template-columns:1fr}}
+.boss{border:1px solid #5a2422;background:linear-gradient(180deg,#1d0f0d,#140b09)}
+.boss .panel-title{color:var(--red);border-color:#3a1d1a}
+.boss h4{font-family:var(--f-disp);font-size:19px;color:#f2b0a8;margin:0 0 6px}
+.vistas{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px}
+.vistas figure{margin:0}
+.vistas img{border:1px solid var(--line);border-radius:3px;aspect-ratio:3/2;object-fit:cover;width:100%}
+.vistas .ph{border:1px dashed var(--line);border-radius:3px;aspect-ratio:3/2;display:flex;
+  align-items:center;justify-content:center;color:var(--ink-faint);font-family:var(--f-mono);
+  font-size:10px;text-align:center;padding:8px}
+.vistas figcaption{font-family:var(--f-mono);font-size:9.5px;color:var(--ink-faint);
+  letter-spacing:.08em;text-transform:uppercase;margin-top:5px;text-align:center}
+.gm-only[hidden]{display:none!important}
+body.modo-jogador .gmbox,
+body.modo-jogador .warn,
+body.modo-jogador .tab[hidden]{display:none!important}
+body.modo-jogador .masthead{border-bottom-color:#3d5a2e}
+
+/* ---------------- terreno vetorial ---------------- */
+#gArt{display:none}
+#gArt.on{display:inline}
+#gTerreno{pointer-events:none}
+.t-massa{fill:#233021;stroke:#4a3f2b;stroke-width:2}
+.t-campo{fill:#2b3a25;opacity:.85}
+.t-campo-flor{fill:#3a4227}
+.t-agua{fill:#1e3d52;stroke:#3d7ca0;stroke-width:1.4}
+.t-agua-raso{fill:#24455c;opacity:.75}
+.t-rio{fill:none;stroke:#25506b;stroke-linecap:round;stroke-linejoin:round}
+.t-rio-luz{fill:none;stroke:#3d7ca0;stroke-linecap:round;opacity:.55}
+.t-copa{fill:#1f3320;stroke:#2b4527;stroke-width:.8}
+.t-copa-palida{fill:#2b3a33;stroke:#3d4f45}
+.t-monte{fill:#3f3f39;stroke:#6a675c;stroke-width:1.4;stroke-linejoin:round}
+.t-monte-neve{fill:#7d7b70}
+.t-colina{fill:#333a2c;stroke:#4d5340;stroke-width:1.2}
+.t-penhasco{fill:none;stroke:#6a675c;stroke-width:5;stroke-linecap:round}
+.t-lavoura{stroke:#4a5730;stroke-width:1.6;fill:none;opacity:.9}
+.t-lavoura-base{fill:#333d24;opacity:.9}
+.t-ruina{fill:#3a3730;stroke:#5b564a;stroke-width:.9}
+.t-estrada{fill:none;stroke:#6b5c40;stroke-width:3.2;stroke-linecap:round;stroke-linejoin:round;opacity:.85}
+.t-estrada-luz{fill:none;stroke:#8a7550;stroke-width:1.2;stroke-linecap:round;opacity:.7}
+.t-muralha{fill:#1d1a12;stroke:#8c6f3e;stroke-width:2.6}
+.t-anel{fill:none;stroke:#3f3524;stroke-width:1}
+.t-rua{stroke:#54462e;stroke-width:1;opacity:.9}
+.t-portao{fill:#d9ad5e}
+.t-praca{fill:#2a2317;stroke:#8c6f3e;stroke-width:1.4}
+.t-telhado{fill:#4a2f22;stroke:#6b4530;stroke-width:.8}
+.t-barraca{fill:#3e3524;stroke:#6b5c40;stroke-width:.8}
+.t-castelo{fill:#120f0d;stroke:#8c6f3e;stroke-width:2}
+.t-torre{fill:#171310;stroke:#8c6f3e;stroke-width:2}
+.t-torre-lab{fill:#140f14;stroke:#a05fff;stroke-width:2.4}
+.t-boca{fill:#0d0b09;stroke:#6a675c;stroke-width:1.6}
+.t-brilho{fill:#57d9ff;opacity:.5}
+.t-rot{font-family:var(--f-disp);font-style:italic;text-anchor:middle;
+  paint-order:stroke;stroke:#0a0806;stroke-width:3.4px;letter-spacing:.14em;opacity:.9}
+.t-rot.agua{fill:#7cc0e2} .t-rot.mata{fill:#8cbb7c} .t-rot.pedra{fill:#b3a992}
+.t-rot.campo{fill:#a8b07a}
+
+/* ---------------- modal de ficha completa ---------------- */
+.ovl{position:fixed;inset:0;background:rgba(6,4,3,.86);z-index:90;display:none;
+  padding:28px 18px;overflow-y:auto}
+.ovl.on{display:block}
+.sheet{max-width:900px;margin:0 auto;background:var(--panel);border:1px solid var(--gold-dim);
+  border-radius:5px;position:relative;box-shadow:0 24px 80px rgba(0,0,0,.7)}
+.sheet-head{position:sticky;top:0;background:linear-gradient(180deg,var(--panel-2),var(--panel));
+  border-bottom:1px solid var(--line);padding:16px 20px;display:flex;justify-content:space-between;
+  align-items:flex-start;gap:16px;z-index:2;border-radius:5px 5px 0 0}
+.sheet-head h2{font-family:var(--f-disp);font-size:26px;margin:2px 0 0;color:var(--gold-bright);
+  line-height:1.15}
+.sheet-head .eyebrow{font-family:var(--f-mono);font-size:10px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--gold-dim)}
+.sheet-close{font-family:var(--f-mono);font-size:12px;border:1px solid var(--line);
+  padding:7px 12px;border-radius:3px;color:var(--ink-dim);flex:0 0 auto}
+.sheet-close:hover{border-color:var(--gold-dim);color:var(--gold)}
+.sheet-body{padding:18px 22px 26px;font-size:13.5px;line-height:1.68;color:var(--ink-dim)}
+.sheet-body h1,.sheet-body h2,.sheet-body h3,.sheet-body h4{font-family:var(--f-disp);
+  color:var(--gold-bright);margin:20px 0 8px;line-height:1.25}
+.sheet-body h1{font-size:21px} .sheet-body h2{font-size:19px}
+.sheet-body h3{font-size:16.5px} .sheet-body h4{font-size:15px}
+.sheet-body h2,.sheet-body h3{border-bottom:1px solid var(--line-soft);padding-bottom:6px}
+.sheet-body p{margin:0 0 11px}
+.sheet-body b,.sheet-body strong{color:var(--ink)}
+.sheet-body code{font-family:var(--f-mono);font-size:11.5px;background:var(--panel-3);
+  padding:1px 5px;border-radius:3px;color:var(--gold)}
+.sheet-body ul{margin:0 0 12px;padding-left:20px}
+.sheet-body li{margin:3px 0}
+.sheet-body table{width:100%;border-collapse:collapse;font-size:12.5px;margin:0 0 14px}
+.sheet-body th{text-align:left;font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--gold-dim);padding:6px 8px;border-bottom:1px solid var(--line);
+  background:var(--panel-2)}
+.sheet-body td{padding:7px 8px;border-bottom:1px dashed var(--line-soft);vertical-align:top}
+.sheet-body blockquote,.readbox{border-left:3px solid var(--gold-dim);
+  background:linear-gradient(90deg,rgba(217,173,94,.09),transparent);
+  padding:13px 16px;margin:0 0 14px;font-family:var(--f-disp);font-size:15px;
+  line-height:1.7;color:var(--ink);font-style:italic}
+.readbox .rl{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.18em;text-transform:uppercase;
+  color:var(--gold-dim);font-style:normal;display:block;margin-bottom:7px}
+.sheet-body hr{border:none;border-top:1px solid var(--line);margin:20px 0}
+.sheet-body .gmbox{border:1px solid #5a4422;background:linear-gradient(180deg,#1e1509,#140f07);
+  border-radius:4px;padding:12px 15px;margin:0 0 14px}
+.sheet-body .gmbox .rl{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--gold);display:block;margin-bottom:7px}
+.linkrow{display:flex;gap:6px;flex-wrap:wrap;margin:0 0 14px}
+.linkrow button{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);
+  padding:5px 10px;border-radius:3px;color:var(--ink-dim)}
+.linkrow button:hover{border-color:var(--gold-dim);color:var(--gold)}
+.card.clickable{cursor:pointer}
+.card.clickable:hover{border-color:var(--gold-dim);background:var(--panel-2)}
+.warn{border-color:#5a4422;background:linear-gradient(180deg,#1e1509,#140f07)}
+.campaign-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:12px;margin-bottom:14px}
+.clock{border:1px solid var(--line);border-radius:5px;background:var(--panel-2);padding:12px}
+.clock h3{margin:0 0 5px;font-family:var(--f-disp);font-size:18px;color:var(--ink)}
+.clock p{margin:0 0 9px;font-size:12px;color:var(--ink-dim);min-height:32px}
+.clock-row{display:flex;align-items:center;gap:8px}.clock output{font-family:var(--f-mono);color:var(--gold);min-width:28px}
+.clock input{accent-color:var(--gold);width:100%}.session-form{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.session-form .wide{grid-column:1/-1}.session-form label{font-family:var(--f-mono);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim)}
+.session-form input,.session-form textarea{width:100%;box-sizing:border-box;margin-top:4px;border:1px solid var(--line);border-radius:3px;background:var(--panel-3);color:var(--ink);padding:8px;font:13px var(--f-body)}
+.session-form textarea{min-height:72px;resize:vertical}.session-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}.session-actions button{border:1px solid var(--line);border-radius:3px;padding:7px 10px;color:var(--ink-dim);font-family:var(--f-mono);font-size:11px}.session-actions button:hover{border-color:var(--gold-dim);color:var(--gold)}
+.log-entry{border-left:3px solid var(--gold-dim);padding:8px 10px;margin:8px 0;background:var(--panel-2)}.log-entry b{color:var(--gold)}
+</style>
+</head>
+<body>
+<div class="shell">
+<div class="frame">
+  <span class="corner tl"></span><span class="corner tr"></span>
+  <span class="corner bl"></span><span class="corner br"></span>
+
+  <header class="masthead">
+    <div class="brand">
+      <div class="eyebrow">Sword Art Online · The Perfect Chaos · Dia 10</div>
+      <h1>AINCRAD — 1º ANDAR</h1>
+      <div class="sub">O começo da jornada — compêndio completo de mesa</div>
+    </div>
+    <div class="who">
+      <span class="pill on">Escudo do Mestre</span>
+      <button class="pill" id="btnBusca">Buscar em tudo &nbsp;<b>/</b></button>
+    </div>
+  </header>
+
+  <nav class="tabs" id="tabs" role="tablist"></nav>
+
+  <main>
+    <!-- ============ MAPA ============ -->
+    <section class="view active" id="view-mapa">
+      <div class="poster">
+
+        <aside>
+          <div class="panel">
+            <div class="panel-title">Informações do Andar</div>
+            <ul class="kv">
+              <li><span>Nível recomendado</span><b>1 – 10</b></li>
+              <li><span>Chefe</span><b>Illfang, o Senhor dos Kobolds</b></li>
+              <li><span>Diâmetro</span><b>~10 km (~80 km²)</b></li>
+              <li><span>Clima</span><b>Temperado</b></li>
+              <li><span>Terreno</span><b>Misto — sem tema único</b></li>
+              <li><span>Regiões</span><b id="statRegioes">—</b></li>
+              <li><span>Pontos de interesse</span><b id="statPontos">—</b></li>
+              <li><span>Dificuldade</span><b class="stars">★★★☆☆</b></li>
+            </ul>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Teleportes e Marcos <span class="aux">clique</span></div>
+            <ul class="numlist" id="marcosList"></ul>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Áreas e Níveis</div>
+            <table class="tbl" id="areasTbl"></table>
+          </div>
+        </aside>
+
+        <div>
+          <div class="stage">
+            <div class="mapbar">
+              <button id="zin">＋</button><button id="zout">－</button><button id="zfit">Ajustar</button>
+              <button id="toggleLbl">Rótulos</button>
+              <button id="btnGuia">Guia da região</button>
+              <button id="btnFundo">Fundo: vetor</button>
+              <span class="grow"></span>
+              <span class="prog" id="prog">—</span>
+            </div>
+            <svg id="map" viewBox="0 0 1536 1024" preserveAspectRatio="xMidYMid meet"
+                 role="img" aria-label="Mapa interativo do Andar 1">
+              <defs>
+                <radialGradient id="vig" cx="50%" cy="50%" r="72%">
+                  <stop offset="60%" stop-color="#000" stop-opacity="0"/>
+                  <stop offset="100%" stop-color="#000" stop-opacity=".62"/>
+                </radialGradient>
+                <filter id="soft"><feGaussianBlur stdDeviation="2.2"/></filter>
+              </defs>
+              <g id="gArt" style="display:none">
+                <image id="art" x="0" y="0" width="1536" height="1024"
+                       preserveAspectRatio="xMidYMid slice"/>
+                <rect x="0" y="0" width="1536" height="1024" fill="url(#vig)" pointer-events="none"/>
+              </g>
+              <g id="gTerreno"></g>
+              <g id="gRegioes"></g>
+              <g id="gNodes"></g>
+              <g id="gMarcos"></g>
+            </svg>
+            <div class="mapfoot">
+              <span>Arraste para mover · roda do mouse para zoom · <b>1º clique</b> abre o resumo, <b>2º clique</b> abre a ficha inteira · anel dourado = ponto com ficha própria</span>
+              <span id="artNote"></span>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="panel">
+            <div class="panel-title">Legenda <span class="aux">filtra</span></div>
+            <ul class="legend" id="legend"></ul>
+          </div>
+          <div class="panel" id="detailPanel">
+            <div class="panel-title">Ficha do Ponto</div>
+            <div class="detail" id="detail">
+              <p>Clique num ponto do mapa para a ficha rápida, ou em <b>Guia da região</b>
+                 para abrir o roteiro completo daquela área: o que ler em voz alta, o que dá
+                 pra fazer com teste, o que só você sabe e o que acontece se demorarem.</p>
+            </div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Tipos de Missão</div>
+            <ul class="kv" id="tiposMissao"></ul>
+          </div>
+        </aside>
+      </div>
+
+      <div class="strip">
+        <div class="panel boss" id="bossCard"></div>
+        <div class="panel">
+          <div class="panel-title">Vistas do Andar</div>
+          <div class="vistas" id="vistas"></div>
+        </div>
+        <div class="panel warn">
+          <div class="panel-title">Notas importantes</div>
+          <p>· A entrada do Labirinto é guardada por um Field Boss — enquanto ele estiver de pé, a dungeon não abre.</p>
+          <p>· Matar Illfang <b>não</b> libera o Andar 2 sozinho. O gatilho real é outro, e só o mestre sabe.</p>
+          <p>· O mapa é o seu escudo: escolha na narração o que cada grupo descobre e quando.</p>
+          <p>· Cooperar é a única vantagem real que o andar oferece.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CIDADE ============ -->
+    <section class="view" id="view-cidade">
+      <div class="poster">
+        <aside>
+          <div class="panel">
+            <div class="panel-title">Cidade do Início</div>
+            <p>A maior cidade do andar e o ponto de chegada de todo mundo. No centro, a Praça do
+               Portão de Teletransporte — o primeiro lugar que qualquer jogador viu ao acordar
+               dentro de Sword Art Online.</p>
+            <p>Dia 10: metade dos jogadores não sai mais dos muros. A outra metade já formou
+               guildas e sai todo dia pros campos.</p>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Pontos da cidade</div>
+            <ul class="numlist" id="cidadeList"></ul>
+          </div>
+        </aside>
+        <div class="stage">
+          <div class="mapbar">
+            <button id="btnCityArt">Arte da planta</button>
+            <span class="grow"></span>
+            <span class="prog" id="cityProg">Planta esquemática — clique num ponto</span>
+          </div>
+          <svg id="cityMap" viewBox="0 0 900 900" role="img" aria-label="Planta da Cidade do Início">
+              <image id="cityArt" x="0" y="0" width="900" height="900"
+                     preserveAspectRatio="xMidYMid slice" style="display:none"/>
+          </svg>
+          <div class="mapfoot"><span>As ruas radiais e os anéis são esquemáticos; o que importa é a
+            posição relativa dos locais.</span></div>
+        </div>
+        <aside>
+          <div class="panel" id="cityDetailPanel">
+            <div class="panel-title">Ficha do Local</div>
+            <div class="detail" id="cityDetail"><p>Clique num ponto da planta.</p></div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ CLÃS ============ -->
+    <section class="view" id="view-clas">
+      <div class="toolbar">
+        <input type="search" id="qCla" placeholder="Buscar clã, força ou rival…" />
+      </div>
+      <p class="note">Seis clãs, nenhuma autoridade central. Regra de leitura rápida: se
+        estiver sem tempo entre transmissões, olhe só <b>rumor em circulação</b>,
+        <b>necessidade atual</b> e <b>quem está devendo o quê</b> — isso já basta pra manter
+        a campanha viva. Fonte completa: <code>docs/registro_clas_e_reputacao.md</code>.</p>
+      <div class="grid" id="gridClas" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))"></div>
+    </section>
+
+    <!-- ============ DUNGEONS ============ -->
+    <section class="view" id="view-dungeons">
+      <div class="toolbar" id="dgnTabs"></div>
+      <div class="dgn-wrap">
+        <div>
+          <div class="panel" style="margin-bottom:12px" id="dgnInfo"></div>
+          <svg id="dgnMap" viewBox="0 0 1000 520" role="img" aria-label="Planta da dungeon"></svg>
+        </div>
+        <div>
+          <div class="panel" id="dgnDetailPanel">
+            <div class="panel-title">Sala</div>
+            <div class="detail" id="dgnDetail"><p>Clique numa sala da planta.</p></div>
+          </div>
+          <div class="panel">
+            <div class="panel-title">Legenda de salas</div>
+            <ul class="legend" id="dgnLegend"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ catálogos ============ -->
+    <section class="view" id="view-npcs">
+      <div class="toolbar">
+        <input type="search" id="qNpc" placeholder="Buscar NPC, local ou profissão…" />
+        <span class="chip on" data-npcf="todos">Todos</span>
+      </div>
+      <div class="grid" id="gridNpcs"></div>
+    </section>
+
+    <section class="view" id="view-bestiario">
+      <div class="toolbar" id="barBest">
+        <input type="search" id="qMon" placeholder="Buscar monstro, bioma ou tipo…" />
+      </div>
+      <div class="grid" id="gridMon"></div>
+    </section>
+
+    <section class="view" id="view-armas">
+      <div class="toolbar" id="barArm">
+        <input type="search" id="qArm" placeholder="Buscar arma ou tipo…" />
+      </div>
+      <div class="grid" id="gridArm"></div>
+      <h3 class="section-h">Skills por tipo de arma</h3>
+      <p class="note">Provisórias — o capítulo de Skills do manual ainda não foi transcrito.
+        Uma Skill é declarada <i>antes</i> da rolagem: ela não muda o número, muda o que 10+ e 7-9 significam.</p>
+      <div class="panel"><table class="tbl" id="skillsTbl"></table></div>
+    </section>
+
+    <section class="view" id="view-equip">
+      <div class="toolbar" id="barEq">
+        <input type="search" id="qEq" placeholder="Buscar equipamento…" />
+      </div>
+      <p class="note" id="eqRegras"></p>
+      <div id="eqSlots"></div>
+    </section>
+
+    <section class="view" id="view-mercado">
+      <div class="toolbar">
+        <input type="search" id="qMerc" placeholder="Buscar item ou vendedor…" />
+      </div>
+      <div class="grid" id="gridMerc" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))"></div>
+      <h3 class="section-h">Quanto os NPCs pagam por material</h3>
+      <div class="panel"><table class="tbl" id="tblCompra"></table></div>
+    </section>
+
+    <section class="view" id="view-quests">
+      <div class="toolbar" id="barQ">
+        <input type="search" id="qQuest" placeholder="Buscar quest, região ou NPC…" />
+      </div>
+      <div id="questChains"></div>
+    </section>
+
+    <section class="view" id="view-cronicas">
+      <div class="toolbar" id="barCronica">
+        <input type="search" id="qCronica" placeholder="Buscar episódio, região, NPC ou arco…" />
+      </div>
+      <p class="note">50 one-shots da Temporada 1 — "Crônicas de Aincrad". Cada episódio funciona
+        sozinho; o <b>Arco B (Cardinal)</b> atravessa 17 deles como um mistério contínuo, sem nunca
+        contradizer o segredo real de <code>docs/misterio_andar2.md</code>. Veja
+        <code>cenas/cronicas_de_aincrad_indice.md</code> pra ordem sugerida do fio B.</p>
+      <div id="cronicaLista"></div>
+    </section>
+
+    <section class="view" id="view-guias">
+      <div class="toolbar">
+        <input type="search" id="qGuia" placeholder="Buscar região, bioma, local ou gancho…" />
+      </div>
+      <p class="note">Cada região é um roteiro fechado: caixa de leitura em voz alta, a cena por
+        trás dela, tabela de ações com teste, o que só o mestre sabe, o que acontece se o grupo
+        demorar, os locais um a um e tudo que está ligado ali. Clique para abrir inteiro.</p>
+      <div class="grid" id="gridGuias" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))"></div>
+    </section>
+
+    <section class="view" id="view-puzzles">
+      <div class="toolbar">
+        <input type="search" id="qPuz" placeholder="Buscar puzzle, região ou recompensa…" />
+      </div>
+      <p class="note">Sete quebra-cabeças montados como aventuras pequenas — entradas, etapas,
+        estados de falha, diálogos e recompensa nomeada. Nenhum resolve o mistério do andar 2;
+        todos param um passo antes.</p>
+      <div class="grid" id="gridPuz" style="grid-template-columns:repeat(auto-fill,minmax(330px,1fr))"></div>
+    </section>
+
+    <!-- ============ SISTEMA ============ -->
+    <section class="view" id="view-oficios">
+      <div class="toolbar" id="barOfi">
+        <input type="search" id="qOfi" placeholder="Buscar profissão, ação, produção ou local…" />
+      </div>
+      <p class="note">As 16 profissões com a <b>mesma estrutura</b>: 3 ações de ofício que
+        funcionam em qualquer lugar, 3 postos de trabalho no mapa, contato, gancho recorrente,
+        renda e item assinatura. <b>Regra da vez do ofício:</b> em toda sessão, cada personagem
+        tem direito a uma cena onde a profissão dele é a resposta.</p>
+      <div class="grid" id="gridOfi" style="grid-template-columns:repeat(auto-fill,minmax(320px,1fr))"></div>
+    </section>
+
+    <section class="view" id="view-sistema">
+      <div class="panel warn" style="margin-bottom:14px">
+        <div class="panel-title">Sistema de Campanha <span class="aux" id="systemVersion"></span></div>
+        <p>Referência de mesa para as regras que unem interpretação, risco e continuidade. O texto completo está em
+          <code>docs/regras_nucleares_campanha.md</code>. Quando houver Move de Arma ou Profissão aplicável, ele tem prioridade.</p>
+      </div>
+      <h3 class="section-h">Moves Núcleo</h3><div class="grid" id="coreMoves" style="grid-template-columns:repeat(auto-fill,minmax(300px,1fr))"></div>
+      <h3 class="section-h">Condições e risco</h3>
+      <div class="panel"><p><b>Três Condições distintas = Crítico.</b> O próximo perigo grave aciona <b>À Beira</b>: 10+ sobrevive com marca; 7-9 sobrevive pagando preço sério; 6- só torna morte possível quando o perigo letal já foi mostrado e não havia recuo razoável.</p>
+        <table class="tbl" id="condTable"></table></div>
+      <h3 class="section-h">Progressão por Marcos</h3>
+      <div class="campaign-grid"><div class="panel"><p>Ao fim de cada sessão, marque no máximo <b>2 Marcos</b>, um para cada frase verdadeira:</p><ul id="marcoList"></ul><p><b>Com 4 Marcos, escolha uma Evolução e zere os quatro.</b></p></div><div class="panel"><div class="panel-title">Evoluções</div><ul id="evolList"></ul></div></div>
+      <h3 class="section-h">Raid: créditos de preparação</h3>
+      <div class="grid" id="raidRules" style="grid-template-columns:repeat(auto-fill,minmax(230px,1fr))"></div>
+      <h3 class="section-h">Moves de Arma <span style="font-size:12px;color:var(--ink-faint)">— clique para abrir</span></h3>
+      <div class="grid" id="gridMovesArma" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr))"></div>
+      <h3 class="section-h">Moves de Profissão</h3>
+      <div class="grid" id="gridMovesProf" style="grid-template-columns:repeat(auto-fill,minmax(250px,1fr))"></div>
+      <div class="panel"><p><b>Regra de bônus:</b> máximo de +1 numérico externo por teste. Ajuda, posição e plano alteram efeito, informação ou custo; nunca somam outro modificador. Combates relevantes sempre têm um objetivo além de “zerar golpes”.</p></div>
+    </section>
+
+    <!-- ============ MESA ============ -->
+    <section class="view" id="view-mesa">
+      <div class="panel warn" style="margin-bottom:14px">
+        <div class="panel-title">Controle de Campanha</div>
+        <p>Estado salvo apenas neste navegador. Use no fim de cada transmissão para que a próxima mesa
+          comece com uma consequência real — não com uma recapitulação genérica.</p>
+      </div>
+      <div class="campaign-grid" id="clockGrid"></div>
+      <div class="campaign-grid">
+        <div class="panel"><div class="panel-title">Preparação de Raid <span class="aux" id="raidPrepValue">0/6</span></div><p>Marque um crédito para cada contribuição diferente. Em 6, o raid começa com rota segura, retirada conhecida ou fato confirmado sobre o chefe.</p><div id="raidPrepGrid"></div></div>
+        <div class="panel"><div class="panel-title">Favor e Suspeita</div><p>Escolha a relação em foco; de -3 (Bloqueado) a +3 (Protegido). Mude no máximo um ponto por relação em cada sessão.</p><label class="session-form">Relação<input id="repNome" placeholder="Ex.: Sindicato · Tolbana" /></label><div class="clock-row" style="margin-top:10px"><input id="repValor" aria-label="Valor de reputação" type="range" min="-3" max="3" value="0"><output id="repOut">0 · Neutro</output></div><div class="session-actions"><button id="salvarRep">Salvar relação</button></div><div id="repList"></div></div>
+      </div>
+      <div class="panel" style="margin-bottom:14px">
+        <div class="panel-title">Registro rápido de sessão</div>
+        <div class="session-form">
+          <label>Sessão / episódio<input id="sessaoTitulo" placeholder="Ex.: E03 — A carga que não podia chegar" /></label>
+          <label>Trio em cena<input id="sessaoTrio" placeholder="Nomes dos 3 jogadores" /></label>
+          <label class="wide">Fato que mudou o andar<textarea id="sessaoFato" placeholder="O que agora é verdade no mundo? Seja concreto."></textarea></label>
+          <label class="wide">Versão pública / rumor<textarea id="sessaoRumor" placeholder="O que Tolbana vai dizer sobre isso amanhã?"></textarea></label>
+          <label class="wide">Próxima pressão<textarea id="sessaoPressao" placeholder="Quem reage, e o que essa pessoa quer?"></textarea></label>
+        </div>
+        <div class="session-actions"><button id="salvarSessao">Salvar no registro</button><button id="limparSessao">Limpar campos</button><button id="apagarHistorico">Apagar histórico local</button></div>
+      </div>
+      <div class="panel">
+        <div class="panel-title">Últimos episódios <span class="aux">local</span></div>
+        <div id="sessionLog"><p class="note">Ainda não há sessão registrada neste navegador.</p></div>
+      </div>
+    </section>
+
+    <section class="view" id="view-segredos">
+      <div class="panel warn" style="margin-bottom:14px">
+        <div class="panel-title">Modo Mestre</div>
+        <p>Conteúdo de mestre. Se um jogador estiver olhando a tela, feche esta aba.</p>
+      </div>
+      <div id="segredosBox"></div>
+    </section>
+  </main>
+</div>
+</div>
+
+<div class="ovl" id="ovl" role="dialog" aria-modal="true">
+  <div class="sheet">
+    <div class="sheet-head">
+      <div><div class="eyebrow" id="shEyebrow"></div><h2 id="shTitle"></h2></div>
+      <button class="sheet-close" id="shClose">Fechar ✕</button>
+    </div>
+    <div class="sheet-body" id="shBody"></div>
+  </div>
+</div>
+
+<script src="dados_mapa.js"></script>
+<script src="dados_terreno.js"></script>
+<script src="dados_dungeons.js"></script>
+<script src="dados_conteudo.js"></script>
+<script src="dados_sistema.js"></script>
+<script src="dados_clas.js"></script>
+<script>
+(function(){
+"use strict";
+var NS="http://www.w3.org/2000/svg";
+var RAIZ="../../";                       // scripts/web/ -> raiz do projeto
+var STORAGE="sao_compendio_andar1_v2";
+
+function el(t,a){var e=document.createElementNS(NS,t);for(var k in a)e.setAttribute(k,a[k]);return e;}
+function h(t,a,txt){var e=document.createElement(t);if(a)for(var k in a){if(k==="class")e.className=a[k];else if(k==="html")e.innerHTML=a[k];else e.setAttribute(k,a[k]);}if(txt!=null)e.textContent=txt;return e;}
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+function norm(s){return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");}
+function cap(s){return s?s.charAt(0).toUpperCase()+s.slice(1):"";}
+
+/* ---------------- estado ----------------
+   Escudo do mestre: NÃO existe fog of war. Tudo é visível desde o primeiro
+   segundo — quem decide o que os jogadores sabem é o mestre, narrando, não o
+   app escondendo. O único estado guardado é a preferência de rótulos. */
+function loadState(){
+  try{var s=JSON.parse(localStorage.getItem(STORAGE));if(s)return s;}catch(e){}
+  return {rotulos:true};
+}
+/* Modo jogador: abra com ?jogador=1 pra esconder tudo que é de mestre.
+   Serve pra compartilhar o link com a mesa sem entregar segredo. */
+var MODO_JOGADOR=/[?&]jogador=1/.test(location.search);
+
+var state=loadState();
+if(state.rotulos===undefined||state.rotulos===true)state.rotulos="todos";
+if(state.rotulos===false)state.rotulos="nenhum";
+function save(){try{localStorage.setItem(STORAGE,JSON.stringify(state));}catch(e){}}
+
+/* ---------------- markdown mínimo ----------------
+   Só o que os .md do projeto usam: título, tabela, lista, citação, negrito,
+   itálico, código e linha. Suficiente pra renderizar ficha inteira sem
+   dependência externa (o app roda em file://, sem CDN). */
+function md(txt){
+  if(!txt)return "";
+  var linhas=String(txt).split("\n"), out=[], i=0;
+  function inline(t){
+    return esc(t)
+      .replace(/`([^`]+)`/g,"<code>$1</code>")
+      .replace(/\*\*([^*]+)\*\*/g,"<b>$1</b>")
+      .replace(/(^|[^*])\*([^*\n]+)\*/g,"$1<i>$2</i>");
+  }
+  while(i<linhas.length){
+    var l=linhas[i];
+    if(/^\s*$/.test(l)){i++;continue;}
+    if(/^---+\s*$/.test(l)){out.push("<hr/>");i++;continue;}
+    var mh=l.match(/^(#{1,4})\s+(.*)$/);
+    if(mh){var n=mh[1].length;out.push("<h"+n+">"+inline(mh[2])+"</h"+n+">");i++;continue;}
+    if(l.trim().indexOf("|")===0){
+      var bloco=[];
+      while(i<linhas.length&&linhas[i].trim().indexOf("|")===0){bloco.push(linhas[i]);i++;}
+      var linhasTab=bloco.map(function(x){
+        return x.trim().replace(/^\|/,"").replace(/\|$/,"").split("|").map(function(c){return c.trim();});
+      }).filter(function(c){return !(c.join("").replace(/[-: ]/g,"")==="");});
+      if(linhasTab.length){
+        var h="<table><tr>"+linhasTab[0].map(function(c){return "<th>"+inline(c)+"</th>";}).join("")+"</tr>";
+        for(var k=1;k<linhasTab.length;k++)
+          h+="<tr>"+linhasTab[k].map(function(c){return "<td>"+inline(c)+"</td>";}).join("")+"</tr>";
+        out.push(h+"</table>");
+      }
+      continue;
+    }
+    if(/^>\s?/.test(l)){
+      var q=[];
+      while(i<linhas.length&&/^>\s?/.test(linhas[i])){q.push(linhas[i].replace(/^>\s?/,""));i++;}
+      out.push('<div class="readbox"><span class="rl">Leia em voz alta</span>'+inline(q.join(" "))+"</div>");
+      continue;
+    }
+    if(/^\s*[-*]\s+/.test(l)){
+      var li=[];
+      while(i<linhas.length&&/^\s*[-*]\s+/.test(linhas[i])){li.push(linhas[i].replace(/^\s*[-*]\s+/,""));i++;}
+      out.push("<ul>"+li.map(function(x){return "<li>"+inline(x)+"</li>";}).join("")+"</ul>");
+      continue;
+    }
+    var par=[];
+    while(i<linhas.length&&!/^\s*$/.test(linhas[i])&&!/^[#>|]/.test(linhas[i])
+          &&!/^\s*[-*]\s+/.test(linhas[i])&&!/^---+\s*$/.test(linhas[i])){par.push(linhas[i]);i++;}
+    out.push("<p>"+inline(par.join(" "))+"</p>");
+  }
+  return out.join("\n");
+}
+
+/* ---------------- modal de ficha completa ---------------- */
+var ovl=document.getElementById("ovl"),shBody=document.getElementById("shBody"),
+    shTitle=document.getElementById("shTitle"),shEyebrow=document.getElementById("shEyebrow");
+function abrirFicha(eyebrow,titulo,html,links){
+  if(MODO_JOGADOR){
+    /* corta blocos de mestre: caixas .gmbox, seções "Só o mestre",
+       "A verdade", "Notas para o mestre" e tudo depois delas na seção */
+    html=String(html)
+      .replace(/<div class="gmbox">[\s\S]*?<\/div>/g,"")
+      .replace(/<h3>\s*(Só o mestre|A verdade[^<]*|Notas para o mestre|Aviso ao mestre)[\s\S]*?(?=<h3>|$)/gi,"");
+  }
+  shEyebrow.textContent=eyebrow||"";
+  shTitle.textContent=titulo||"";
+  shBody.innerHTML=(links||"")+html;
+  ovl.classList.add("on");
+  ovl.scrollTop=0;
+  document.body.style.overflow="hidden";
+  Array.prototype.forEach.call(shBody.querySelectorAll("[data-ir]"),function(b){
+    b.addEventListener("click",function(){irPraFicha(b.dataset.ir);});
+  });
+}
+function fecharFicha(){ovl.classList.remove("on");document.body.style.overflow="";}
+document.getElementById("shClose").addEventListener("click",fecharFicha);
+ovl.addEventListener("click",function(e){if(e.target===ovl)fecharFicha();});
+document.addEventListener("keydown",function(e){
+  if(e.key==="Escape")fecharFicha();
+  if(e.key==="/"&&!/input|textarea/i.test((document.activeElement||{}).tagName||"")){
+    e.preventDefault();var t=document.querySelector(".view.active input[type=search]");
+    if(t)t.focus();
+  }
+});
+function linksHtml(itens){
+  if(!itens||!itens.length)return "";
+  return '<div class="linkrow">'+itens.map(function(x){
+    return '<button data-ir="'+esc(x.k)+'">'+esc(x.t)+"</button>";
+  }).join("")+"</div>";
+}
+/* roteador simples de ficha: "tipo:id" */
+function irPraFicha(chave){
+  var parte=chave.split(":"),tipo=parte[0],id=parte.slice(1).join(":");
+  if(tipo==="guia")return fichaGuia(id);
+  if(tipo==="ponto")return fichaPonto(id);
+  if(tipo==="oficio")return fichaOficio(id);
+  if(tipo==="monstro")return fichaMonstro(id);
+  if(tipo==="npc")return fichaNpc(id);
+  if(tipo==="quest")return fichaQuest(id);
+  if(tipo==="puzzle")return fichaPuzzle(id);
+  if(tipo==="dungeon")return fichaSala(id);
+}
+
+/* ---------------- índices ---------------- */
+var pontosPorId={},regioesPorId={},monPorId={},npcPorId={};
+PONTOS.forEach(function(p){pontosPorId[p.id]=p;});
+REGIOES.forEach(function(r){regioesPorId[r.id]=r;});
+MONSTROS.forEach(function(m){monPorId[m.id]=m;});
+NPCS.forEach(function(n){npcPorId[n.id]=n;});
+
+/* alguns pontos do mapa apontam pra fichas por "ref" (id antigo, sem acento) */
+function acharFicha(ref){
+  if(!ref)return null;
+  var r=norm(ref).replace(/[^a-z0-9]+/g,"_");
+  if(monPorId[r])return {tipo:"monstro",d:monPorId[r]};
+  if(npcPorId[r])return {tipo:"npc",d:npcPorId[r]};
+  var achado=null;
+  MONSTROS.concat().forEach(function(m){if(!achado&&norm(m.id).indexOf(r)===0)achado={tipo:"monstro",d:m};});
+  if(achado)return achado;
+  NPCS.forEach(function(n){if(!achado&&(norm(n.id).indexOf(r)===0||r.indexOf(norm(n.id))===0))achado={tipo:"npc",d:n};});
+  return achado;
+}
+
+/* ---------------- construtores de ficha completa ---------------- */
+var guiaPorId={},puzzlePorN={};
+GUIAS.forEach(function(g){guiaPorId[g.id]=g;});
+PUZZLES.forEach(function(p){puzzlePorN[String(p.n)]=p;});
+
+/* Alguns pontos foram renomeados no mapa e não batem mais com o nome do
+   vendedor em docs/mercado_andar1.md. Este apelido resolve na mão. */
+var APELIDO_VENDEDOR={
+  cidade_ferreiro:"Forja do Ferreiro",
+  "cidade_ateliê":"Ateliê do Costureiro",
+  cidade_atelie:"Ateliê do Costureiro",
+  cidade_mercado_negro:"Mercado Negro",
+  cidade_lynx:"Loja de Armaduras — Lynx",
+  cidade_praca:"Comerciante da Praça (importados)",
+  cidade_quadro:"Comerciante da Praça (importados)",
+  tolbana_praca:"Mercado de Tolbana",
+  tolbana_corretores:"Mercado de Tolbana",
+  campos_acampamento:"Acampamento de Caçadores — Erik",
+  horunka_pousada:"Pousada de Horunka",
+  vila_rib_doca:"Doca da Vila — Barqueiro",
+  trilha_ponto_encontro:"Trilha de Corvain — contato sem nome"
+};
+
+/* Acha o vendedor do Mercado correspondente a um ponto ou NPC. */
+function vendedorDe(p){
+  if(typeof MERCADO==="undefined"||!p)return null;
+  if(APELIDO_VENDEDOR[p.id]){
+    var alvoApelido=null;
+    MERCADO.forEach(function(v){if(v.nome===APELIDO_VENDEDOR[p.id])alvoApelido=v;});
+    if(alvoApelido)return alvoApelido;
+  }
+  var alvo=norm(p.nome).replace(/[()]/g,""), achado=null;
+  var refNome=p.ref&&npcPorId[p.ref]?norm(npcPorId[p.ref].nome):"";
+  MERCADO.forEach(function(v){
+    if(achado)return;
+    var vn=norm(v.nome).replace(/[()]/g,"");
+    if(vn===alvo||alvo.indexOf(vn)>=0||vn.indexOf(alvo)>=0){achado=v;return;}
+    if(refNome&&vn.indexOf(refNome)>=0){achado=v;}
+  });
+  return achado;
+}
+
+/* Ficha de ponto: funciona pra TODO marcador do mapa. Se existir arquivo
+   próprio em guias/pontos/, usa ele; se não, monta a ficha com o que
+   dados_mapa.js tem + ficha ligada + mercado + guia da região. */
+function fichaPonto(id){
+  var p=pontosPorId[id];
+  if(!p)return;
+  var d=(typeof PONTOS_DETALHE!=="undefined")?PONTOS_DETALHE[id]:null;
+  if(!d)return fichaPontoSimples(p);
+  var reg=regioesPorId[d.regiao],cat=p?(CATEGORIAS[p.categoria]||{}):{};
+  var h="";
+  if(d.leitura)h+='<div class="readbox"><span class="rl">Leia em voz alta</span>'+esc(d.leitura)+"</div>";
+  if(d.oque)h+="<p>"+md(d.oque).replace(/^<p>|<\/p>$/g,"")+"</p>";
+  if(d.acoes&&d.acoes.length){
+    h+="<h3>O que dá pra fazer aqui</h3><table><tr><th>Ação</th><th>Teste</th><th>10+</th><th>7-9</th><th>6-</th></tr>";
+    d.acoes.forEach(function(a){
+      h+="<tr><td><b>"+esc(a.acao)+"</b></td><td>"+esc(a.teste)+"</td><td>"+esc(a.sucesso)+
+         "</td><td>"+esc(a.parcial)+"</td><td>"+esc(a.falha)+"</td></tr>";
+    });
+    h+="</table>";
+  }
+  if(d.mestre)h+='<div class="gmbox"><span class="rl">Só o mestre</span><p>'+esc(d.mestre)+"</p></div>";
+  if(p){
+    var extra=[];
+    if(p.vende)extra.push("<b>Vende:</b> "+esc(p.vende));
+    if(p.obs)extra.push("<b>Obs:</b> "+esc(p.obs));
+    if(p.recompensa)extra.push("<b>Recompensa:</b> "+esc(p.recompensa));
+    if(p.respawnHoras)extra.push("<b>Respawn:</b> ~"+esc(p.respawnHoras)+"h");
+    if(extra.length)h+="<p>"+extra.join("<br/>")+"</p>";
+  }
+  h+=blocoOficios(id);
+  h+=blocoMercado(vendedorDe(p));
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Fonte: <code>'+esc(d.arquivo)+"</code></p>";
+
+  var links=[];
+  (d.atalhos||[]).forEach(function(a){
+    if(a.tipo==="npc"&&npcPorId[a.id])links.push({k:"npc:"+a.id,t:"◆ "+npcPorId[a.id].nome});
+    else if(a.tipo==="monstro"&&monPorId[a.id])links.push({k:"monstro:"+a.id,t:"☠ "+monPorId[a.id].nome});
+    else if(a.tipo==="regiao"&&guiaPorId[a.id])links.push({k:"guia:"+a.id,t:"▤ "+guiaPorId[a.id].nome});
+    else if(a.tipo==="puzzle")links.push({k:"puzzle:"+a.id,t:"✲ Puzzle "+a.id});
+    else if(a.tipo==="quest")links.push({k:"quest:"+a.id,t:"❯ "+a.id});
+  });
+  atalhosDoPonto(p).forEach(function(a){
+    var repetido=false;
+    links.forEach(function(b){if(b.k===a.k)repetido=true;});
+    if(!repetido)links.push(a);
+  });
+  abrirFicha((cat.label||"Local")+(reg?" · "+reg.nome:""),d.nome,h,linksHtml(links));
+}
+
+function blocoMercado(v){
+  if(!v||!v.itens||!v.itens.length)return "";
+  var h="<h3>O que vende</h3>";
+  if(v.desc)h+="<p>"+esc(v.desc)+"</p>";
+  if(v.desconto)h+="<p><b>Desconto:</b> "+esc(v.desconto)+"</p>";
+  h+="<table><tr><th>Item</th><th>Col</th><th>Obs</th></tr>";
+  v.itens.forEach(function(i){
+    h+="<tr><td><b>"+esc(i.item)+"</b></td><td>"+esc(i.col)+"</td><td>"+esc(i.obs||"")+"</td></tr>";
+  });
+  return h+"</table>";
+}
+
+/* atalhos que todo ponto ganha de graça */
+function oficiosNoPonto(id){
+  if(typeof OFICIOS==="undefined")return [];
+  var r=[];
+  OFICIOS.forEach(function(o){
+    o.postos.forEach(function(x){if(x.ponto===id)r.push({o:o,txt:x.txt});});
+  });
+  return r;
+}
+function blocoOficios(id){
+  var l=oficiosNoPonto(id);
+  if(!l.length)return "";
+  var h="<h3>Ofícios que trabalham aqui</h3>";
+  l.forEach(function(x){
+    h+="<p><b>"+esc(x.o.nome)+"</b> ("+esc(x.o.atributo)+") — "+esc(x.txt)+"</p>";
+  });
+  return h;
+}
+
+function atalhosDoPonto(p){
+  var links=[];
+  oficiosNoPonto(p.id).forEach(function(x){
+    links.push({k:"oficio:"+x.o.nome,t:"⚒ "+x.o.nome});
+  });
+  var f=acharFicha(p.ref);
+  if(f)links.push({k:(f.tipo==="monstro"?"monstro:":"npc:")+f.d.id,
+    t:(f.tipo==="monstro"?"☠ ":"◆ ")+f.d.nome});
+  if(guiaPorId[p.regiao])links.push({k:"guia:"+p.regiao,t:"▤ "+guiaPorId[p.regiao].nome});
+  /* outros pontos da mesma região que tenham ficha própria */
+  var irmaos=PONTOS.filter(function(o){
+    return o.regiao===p.regiao&&o.id!==p.id&&
+      (typeof PONTOS_DETALHE!=="undefined")&&PONTOS_DETALHE[o.id];
+  }).slice(0,6);
+  irmaos.forEach(function(o){links.push({k:"ponto:"+o.id,t:"• "+o.nome});});
+  return links;
+}
+
+function fichaPontoSimples(p){
+  var reg=regioesPorId[p.regiao],cat=CATEGORIAS[p.categoria]||{label:p.categoria};
+  var h="";
+  var f=acharFicha(p.ref);
+  if(f&&f.d.img)h+='<img class="thumb" style="max-width:300px" src="'+RAIZ+esc(f.d.img)+'" alt=""/>';
+  if(p.desc)h+='<div class="readbox"><span class="rl">Na chegada</span>'+esc(p.desc)+"</div>";
+  if(p.fala)h+='<div class="readbox"><span class="rl">Fala</span>'+esc(p.fala)+"</div>";
+  if(p.oferece)h+="<p><b>Oferece:</b> "+esc(p.oferece)+"</p>";
+  if(p.ameaca){
+    h+='<p><span class="tag red">'+esc(p.ameaca)+"</span> "+
+      (p.golpes?'<span class="tag">'+esc(p.golpes)+" golpes</span> ":"")+
+      (p.atributoFraqueza?'<span class="tag gold">fraqueza: '+esc(p.atributoFraqueza)+"</span>":"")+"</p>";
+  }
+  if(p.teste){
+    h+="<h3>O que dá pra fazer aqui</h3><table><tr><th>Ação</th><th>Teste</th><th>10+</th><th>7-9</th><th>6-</th></tr>"+
+      "<tr><td><b>"+esc(p.nome)+"</b></td><td>2d6+"+esc(p.teste.atributo)+"</td><td>"+
+      esc(p.teste.sucesso)+"</td><td>"+esc(p.teste.parcial)+"</td><td>"+esc(p.teste.falha)+"</td></tr></table>";
+  }
+  var extra=[];
+  if(p.recompensa)extra.push("<b>Recompensa:</b> "+esc(p.recompensa));
+  if(p.respawnHoras)extra.push("<b>Respawn:</b> ~"+esc(p.respawnHoras)+"h");
+  if(p.obs)extra.push("<b>Obs:</b> "+esc(p.obs));
+  if(extra.length)h+="<p>"+extra.join("<br/>")+"</p>";
+  /* mesma caixa de mestre da ficha completa; .gmbox some no modo jogador */
+  if(p.mestre)h+='<div class="gmbox"><span class="rl">Só o mestre</span><p>'+esc(p.mestre)+"</p></div>";
+  h+=blocoOficios(p.id);
+  h+=blocoMercado(vendedorDe(p));
+  if(f&&f.tipo==="monstro"){
+    var m=f.d;
+    h+="<h3>"+esc(m.nome)+"</h3><p>"+esc(m.resumo||"")+"</p>";
+    if(m.fraqueza)h+="<p><b>Ponto fraco:</b> "+esc(m.fraqueza)+"</p>";
+    if(m.drops&&m.drops.length)h+="<p><b>Drop:</b> "+m.drops.map(function(x){
+      return esc(x.item)+" <i>"+esc(x.chance)+"</i>";}).join(" · ")+"</p>";
+    if(m.domavel==="sim")h+="<p><b>Doma:</b> "+esc(m.domaSucessos)+" sucessos · "+esc(m.domaRequisito||"")+"</p>";
+  }else if(f){
+    h+="<h3>"+esc(f.d.nome)+"</h3><p>"+esc(f.d.resumo||"")+"</p>";
+    if(f.d.gancho)h+="<p><b>Gancho:</b> "+esc(f.d.gancho)+"</p>";
+  }
+  if(p.categoria==="comerciante"&&!vendedorDe(p)&&!p.vende)
+    h+="<p><b>Loja sem estoque cadastrado.</b> Adicione este vendedor em "+
+       "<code>docs/mercado_andar1.md</code> (ou aponte o apelido em "+
+       "<code>APELIDO_VENDEDOR</code>) e o preço aparece aqui.</p>";
+  if(!p.desc&&!p.teste&&!f&&!p.ameaca)
+    h+="<p>Ponto ainda sem ficha própria. O guia da região cobre o que acontece aqui — "+
+       "e este local entra na próxima leva de <code>guias/pontos/</code>.</p>";
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Região: <b>'+esc(reg?reg.nome:"—")+
+     "</b> · id <code>"+esc(p.id)+"</code></p>";
+  abrirFicha((cat.label||"Local")+(reg?" · "+reg.nome:""),p.nome,h,linksHtml(atalhosDoPonto(p)));
+}
+
+function fichaGuia(id){
+  var g=guiaPorId[id];if(!g)return;
+  var h="";
+  h+='<p><b>'+esc(g.bioma)+'</b> · Nível '+esc(g.nivel)+(g.chegada?' · '+esc(g.chegada):"")+"</p>";
+  if(g.leitura)h+='<div class="readbox"><span class="rl">Leia em voz alta</span>'+esc(g.leitura)+"</div>";
+  if(g.cena)h+="<h3>A cena</h3>"+md(g.cena);
+  if(g.acoes&&g.acoes.length){
+    h+="<h3>O que dá pra fazer aqui</h3><table><tr><th>Ação</th><th>Teste</th><th>10+</th><th>7-9</th><th>6-</th></tr>";
+    g.acoes.forEach(function(a){
+      h+="<tr><td><b>"+esc(a.acao)+"</b></td><td>"+esc(a.teste)+"</td><td>"+esc(a.sucesso)+
+         "</td><td>"+esc(a.parcial)+"</td><td>"+esc(a.falha)+"</td></tr>";
+    });
+    h+="</table>";
+  }
+  if(g.mestre)h+='<div class="gmbox"><span class="rl">Só o mestre</span>'+md(g.mestre)+"</div>";
+  if(g.demora)h+="<h3>Se o grupo demorar</h3>"+md(g.demora);
+  if(g.evento)h+='<h3>Evento vivo</h3><div class="readbox"><span class="rl">Acontece sozinho na cena</span>'+
+    esc(g.evento.replace(/\s+/g," ").trim())+"</div>";
+  if(g.locais&&g.locais.length){
+    h+="<h3>Locais</h3>";
+    g.locais.forEach(function(l){h+="<p><b>"+esc(l.nome)+"</b> — "+esc(l.txt)+"</p>";});
+  }
+  if(g.ligado&&g.ligado.length)h+="<h3>Ligado a</h3><ul>"+g.ligado.map(function(x){
+    return "<li>"+esc(x)+"</li>";}).join("")+"</ul>";
+  var daRegiao=PONTOS.filter(function(x){return x.regiao===g.id;});
+  if(daRegiao.length){
+    h+="<h3>Pontos no mapa ("+daRegiao.length+")</h3><p>";
+    h+=daRegiao.map(function(x){
+      var temD=(typeof PONTOS_DETALHE!=="undefined")&&PONTOS_DETALHE[x.id];
+      return '<span class="tag'+(temD?" gold":"")+'">'+esc(x.nome)+"</span>";
+    }).join(" ");
+    h+="</p>";
+  }
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Fonte: <code>'+esc(g.arquivo)+"</code></p>";
+  var links=[];
+  daRegiao.filter(function(x){
+    return (typeof PONTOS_DETALHE!=="undefined")&&PONTOS_DETALHE[x.id];
+  }).slice(0,8).forEach(function(x){links.push({k:"ponto:"+x.id,t:"⌖ "+x.nome});});
+  (g.ligado||[]).forEach(function(x){
+    var m=x.match(/^monstro:\s*(.+)$/);
+    if(m)m[1].split(",").forEach(function(id){
+      id=id.trim(); var alvo=monPorId[id]||(acharFicha(id)||{}).d;
+      if(alvo)links.push({k:"monstro:"+alvo.id,t:"☠ "+alvo.nome});
+    });
+    var n=x.match(/^npc:\s*(.+)$/);
+    if(n)n[1].split(",").forEach(function(id){
+      id=id.trim(); var f=npcPorId[id]?{d:npcPorId[id]}:acharFicha(id);
+      if(f&&f.d)links.push({k:"npc:"+f.d.id,t:"◆ "+f.d.nome});
+    });
+  });
+  abrirFicha("Guia de região · "+esc(g.bioma),g.nome,h,linksHtml(links));
+}
+
+function fichaMonstro(id){
+  var m=monPorId[id];if(!m)return;
+  var h="";
+  /* a carta do bestiario, quando existe, vale mais que o retrato */
+  if(m.carta)h+='<img class="thumb" style="max-width:520px;width:100%" src="'+RAIZ+esc(m.carta)+'" alt="'+esc(m.nome)+'"/>';
+  else if(m.img)h+='<img class="thumb" style="max-width:340px" src="'+RAIZ+esc(m.img)+'" alt="'+esc(m.nome)+'"/>';
+  if(m.epiteto)h+='<p style="font-family:var(--f-disp);color:var(--gold);margin:2px 0 6px">'+esc(m.epiteto)+"</p>";
+  h+="<p>"+(m.nivelRecomendado?'<span class="tag gold">nível '+esc(m.nivelRecomendado)+"</span> ":"")+
+     '<span class="tag red">'+esc(m.ameaca)+'</span> <span class="tag">'+esc(m.golpes)+
+     ' golpes</span> <span class="tag">'+esc(cap(m.tipo))+'</span> <span class="tag cy">'+esc(m.local)+"</span>"+
+     (m.zona?' <span class="tag">'+esc(m.zona)+"</span>":"")+
+     (m.domavel==="sim"?' <span class="tag gold">domável · '+esc(m.domaSucessos)+" sucessos</span>":"")+"</p>";
+  if(m.elementoFraqueza||m.elementoResistencia){
+    h+="<p>"+(m.elementoFraqueza?'<span class="tag red">fraco a '+esc(m.elementoFraqueza)+"</span> ":"")+
+       (m.elementoResistencia?'<span class="tag cy">resiste a '+esc(m.elementoResistencia)+"</span>":"")+"</p>";
+  }
+  if(m.drops&&m.drops.length&&m.drops[0].raridade){
+    h+="<h3>Drops</h3><table><tr><th>Item</th><th>Raridade</th><th>Qtd</th><th>Chance</th><th>Serve pra</th></tr>";
+    m.drops.forEach(function(d){
+      h+="<tr><td><b>"+esc(d.item)+"</b></td><td>"+esc(d.raridade)+"</td><td>"+esc(d.qtd)+
+         "</td><td>"+esc(d.chance)+"</td><td>"+esc(d.serve)+"</td></tr>";
+    });
+    h+="</table>";
+  }
+  h+=md(m.corpo||"");
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Fonte: <code>'+esc(m.arquivo)+"</code></p>";
+  var regs={},lk=[];
+  PONTOS.forEach(function(x){
+    var f=acharFicha(x.ref);
+    if(f&&f.tipo==="monstro"&&f.d.id===m.id)regs[x.regiao]=x.id;
+  });
+  Object.keys(regs).forEach(function(rid){
+    if(guiaPorId[rid])lk.push({k:"guia:"+rid,t:"▤ "+guiaPorId[rid].nome});
+  });
+  if(!lk.length&&m.local)GUIAS.forEach(function(g){
+    if(norm(g.bioma).indexOf(norm(m.local))>=0)lk.push({k:"guia:"+g.id,t:"▤ "+g.nome});
+  });
+  abrirFicha("Bestiário"+(m.canonico==="sim"?" · canônico":""),m.nome,h,linksHtml(lk.slice(0,8)));
+}
+
+function fichaNpc(id){
+  var n=npcPorId[id];if(!n)return;
+  var h="";
+  if(n.img)h+='<img class="thumb" style="max-width:340px" src="'+RAIZ+esc(n.img)+'" alt="'+esc(n.nome)+'"/>';
+  h+="<p>"+(n.papel?'<span class="tag">'+esc(n.papel)+"</span> ":"")+
+     (n.profissao?'<span class="tag cy">'+esc(n.profissao)+"</span> ":"")+
+     (n.arma?'<span class="tag">'+esc(n.arma)+"</span> ":"")+
+     (n.local?'<span class="tag gold">'+esc(n.local)+"</span>":"")+"</p>";
+  var atr=Object.keys(n.atributos||{});
+  if(atr.length)h+="<p>"+atr.map(function(k){
+    return "<b>"+esc(k)+"</b> "+esc(n.atributos[k]);}).join(" · ")+"</p>";
+  h+=md(n.corpo||"");
+  var pontoNpc=null;
+  PONTOS.forEach(function(x){
+    if(!pontoNpc&&x.ref&&acharFicha(x.ref)&&acharFicha(x.ref).d.id===n.id)pontoNpc=x;
+  });
+  h+=blocoMercado(pontoNpc?vendedorDe(pontoNpc):null);
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Fonte: <code>'+esc(n.arquivo)+"</code></p>";
+  var lk=[];
+  if(pontoNpc){
+    lk.push({k:"ponto:"+pontoNpc.id,t:"⌖ "+pontoNpc.nome});
+    if(guiaPorId[pontoNpc.regiao])lk.push({k:"guia:"+pontoNpc.regiao,t:"▤ "+guiaPorId[pontoNpc.regiao].nome});
+  }
+  abrirFicha("NPC"+(n.canonico==="sim"?" · canônico":""),n.nome,h,linksHtml(lk));
+}
+
+function fichaCla(nome){
+  var c=null;(typeof CLAS!=="undefined"?CLAS:[]).forEach(function(x){if(x.nome===nome)c=x;});
+  if(!c)return;
+  var h='<p><span class="tag gold">'+esc(c.forca)+"</span></p>";
+  h+="<p>"+esc(c.bons)+"</p>";
+  h+="<h3>O que estão precisando</h3><p>"+esc(c.precisa)+"</p>";
+  h+="<h3>O que não admitem em voz alta</h3><p>"+esc(c.naoAdmitem)+"</p>";
+  h+="<h3>Quem está próximo</h3><p>"+esc(c.proximo)+"</p>";
+  h+="<h3>Quem está atravessado</h3><p>"+esc(c.atravessado)+"</p>";
+  h+="<h3>Que tipo de quest combina com eles</h3><p>"+esc(c.quests)+"</p>";
+  h+="<h3>Como aparecem em cena</h3><p>"+esc(c.aparecem)+"</p>";
+  if(c.reputacao&&c.reputacao.length){
+    h+="<h3>Reputação atual</h3><table class=\"tbl\"><thead><tr><th>Frente</th><th>Estado</th></tr></thead><tbody>"+
+      c.reputacao.map(function(r){return "<tr><td class=\"nome\">"+esc(r.frente)+"</td><td>"+esc(r.estado)+"</td></tr>";}).join("")+
+      "</tbody></table>";
+  }
+  if(c.simbolo){
+    h+="<h3>Símbolo</h3><p>"+esc(c.simbolo)+"</p>";
+  }
+  if(c.ganchos&&c.ganchos.length){
+    h+='<div class="gmbox"><h3>Ganchos prontos</h3><ul class="kv">'+
+      c.ganchos.map(function(g){return "<li><span>"+esc(g.tipo)+"</span><b>"+esc(g.texto)+"</b></li>";}).join("")+
+      "</ul></div>";
+  }
+  abrirFicha("Clã"+(c.destaque?" · em foco":""),c.nome,h,"");
+}
+
+function fichaQuest(id){
+  var q=null;QUESTS.forEach(function(x){if(x.id===id)q=x;});
+  if(!q)return;
+  var h='<p><span class="tier '+classeDificuldade(q.dificuldade)+'">'+esc(q.dificuldade||"—")+"</span> "+
+    (q.tipo?'<span class="tag">'+esc(q.tipo)+"</span> ":"")+
+    (q.regiao?'<span class="tag cy">'+esc(q.regiao)+"</span> ":"")+
+    (q.npc?'<span class="tag gold">'+esc(q.npc)+"</span>":"")+"</p>";
+  h+=md(q.corpo||q.resumo||"");
+  var links=[];
+  function achaQuest(id){var r=null;QUESTS.forEach(function(x){if(x.id===id)r=x;});return r;}
+  (q.requer||[]).forEach(function(id){
+    var alvo=achaQuest(id);
+    if(alvo)links.push({k:"quest:"+id,t:"◀ requer: "+alvo.titulo});
+  });
+  (q.desbloqueia||[]).forEach(function(id){
+    var alvo=achaQuest(id);
+    if(alvo)links.push({k:"quest:"+id,t:"▶ abre: "+alvo.titulo});
+  });
+  GUIAS.forEach(function(g){
+    if(q.regiao&&norm(q.regiao).indexOf(norm(g.nome))>=0)links.push({k:"guia:"+g.id,t:"▤ "+g.nome});
+  });
+  abrirFicha("Quest · "+esc(q.cadeia||""),q.titulo,h,linksHtml(links));
+}
+
+function fichaCronica(id){
+  var lista=(typeof CRONICAS!=="undefined"?CRONICAS:[]);
+  var x=null;lista.forEach(function(o){if(o.id===id)x=o;});
+  if(!x)return;
+  var h='<p><span class="tier '+classeDificuldade(x.dificuldade)+'">'+esc(x.dificuldade||"—")+"</span> "+
+    (x.tipo?'<span class="tag">'+esc(x.tipo)+"</span> ":"")+
+    (x.regiao?'<span class="tag cy">'+esc(x.regiao)+"</span> ":"")+
+    (x.conexoes?'<span class="tag gold">'+esc(x.conexoes)+"</span>":"")+"</p>";
+  if(x.elenco)h+='<p style="font-size:12px"><b>Elenco / monstros:</b> '+esc(x.elenco)+"</p>";
+  h+=md(x.corpo||x.resumo||"");
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Fonte: <code>'+esc(x.arquivo)+"</code></p>";
+  abrirFicha("Crônica · "+esc(x.epRotulo||""),x.titulo,h);
+}
+
+function fichaPuzzle(n){
+  var p=puzzlePorN[String(n)];if(!p)return;
+  var h='<p><span class="tag gold">'+esc(p.tipo)+'</span> <span class="tag cy">'+esc(p.regiao)+"</span>"+
+    (p.cadeia?' <span class="tag">'+esc(p.cadeia)+"</span>":"")+
+    (p.duracao?' <span class="tag">'+esc(p.duracao)+"</span>":"")+"</p>";
+  h+=md(p.corpo||"");
+  var links=[];
+  GUIAS.forEach(function(g){
+    if(p.regiao&&norm(p.regiao).indexOf(norm(g.nome))>=0)links.push({k:"guia:"+g.id,t:"▤ "+g.nome});
+  });
+  abrirFicha("Puzzle "+p.n,p.nome,h,linksHtml(links));
+}
+
+function fichaSala(chave){
+  var d=SALAS_DUNGEON[chave];if(!d)return;
+  var h="";
+  if(d.leitura)h+='<div class="readbox"><span class="rl">Leia em voz alta</span>'+esc(d.leitura)+"</div>";
+  h+=md(d.corpo||"");
+  abrirFicha("Sala "+chave.replace(/^([A-Z]+)(\d+)$/,"$1-$2")+" · "+(TIPOS_SALA[d.tipo]||{}).label,d.nome,h);
+}
+
+function fichaItem(it,tipoLabel){
+  var h='<p><span class="rar '+esc(it.raridade)+'">'+esc(it.raridade)+"</span> "+
+    (it.slot?'<span class="tag">'+esc(it.slot)+"</span> ":"")+
+    (it.tipo?'<span class="tag">'+esc(it.tipo)+"</span> ":"")+
+    (it.atributo?'<span class="tag cy">'+esc(it.atributo)+"</span> ":"")+
+    (it.precoTxt?'<span class="tag gold">'+esc(it.precoTxt)+"</span> ":"")+
+    (it.requisito&&it.requisito!=="—"?'<span class="tag">'+esc(it.requisito)+"</span>":"")+"</p>";
+  if(it.img)h+='<img class="thumb" style="max-width:320px" src="'+RAIZ+esc(it.img)+'" alt=""/>';
+  if(it.resumo)h+="<p>"+esc(it.resumo)+"</p>";
+  if(it.efeito)h+='<div class="gmbox"><span class="rl">Efeito</span><p>'+esc(it.efeito)+"</p></div>";
+  if(it.skills&&it.skills.length)h+="<h3>Skills do tipo</h3><ul>"+it.skills.map(function(x){
+    return "<li>"+esc(x)+"</li>";}).join("")+"</ul>";
+  if(it.tipo){
+    var mv=null;MOVES_ARMA.forEach(function(x){if(x.nome===it.tipo)mv=x;});
+    if(mv)h+=blocoMove(mv,"Move de "+mv.nome);
+  }
+  if(it.obter)h+="<h3>Como obter</h3><p>"+esc(it.obter)+"</p>";
+  if(typeof MERCADO!=="undefined"){
+    var vend=[];
+    MERCADO.forEach(function(v){
+      v.itens.forEach(function(i){
+        if(norm(i.item).indexOf(norm(it.nome))>=0)
+          vend.push("<tr><td><b>"+esc(v.nome)+"</b></td><td>"+esc(v.regiao)+"</td><td>"+esc(i.col)+"</td></tr>");
+      });
+    });
+    if(vend.length)h+="<h3>Quem vende</h3><table><tr><th>Vendedor</th><th>Onde</th><th>Col</th></tr>"+
+      vend.join("")+"</table>";
+  }
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Fonte: <code>'+esc(it.arquivo||"")+"</code></p>";
+  abrirFicha(tipoLabel,it.nome,h);
+}
+
+function blocoMove(mv,titulo){
+  if(!mv)return "";
+  var h="<h3>"+esc(titulo||mv.nome)+' <span style="color:var(--ink-faint);font-family:var(--f-mono);font-size:11px">'+
+    esc(mv.atributo)+"</span></h3>";
+  if(mv.marca)h+='<p><b>Marca:</b> '+esc(mv.marca)+"</p>";
+  [mv.moveA,mv.moveB].forEach(function(m){
+    if(!m||!m.txt)return;
+    h+='<div class="gmbox"><span class="rl">'+esc(m.rotulo)+(m.titulo?" · "+esc(m.titulo):"")+
+       "</span><p>"+esc(m.txt)+"</p></div>";
+  });
+  return h;
+}
+
+function classeDificuldade(d){
+  if(/Muito/i.test(d||""))return "md";
+  if(/Difícil/i.test(d||""))return "d";
+  if(/Médio/i.test(d||""))return "m";
+  return "f";
+}
+
+/* ---------------- abas ---------------- */
+var ABAS=[
+  {id:"mapa",  nome:"Mapa"},
+  {id:"cidade",nome:"Cidade do Início"},
+  {id:"clas", nome:"Clãs",    n:function(){return CLAS.length;}},
+  {id:"dungeons",nome:"Dungeons",n:function(){return DUNGEONS.length;}},
+  {id:"guias", nome:"Guia das Regiões",n:function(){return GUIAS.length;}},
+  {id:"puzzles",nome:"Puzzles",   n:function(){return PUZZLES.length;}},
+  {id:"oficios",nome:"Ofícios",   n:function(){return (typeof OFICIOS!=="undefined")?OFICIOS.length:0;}},
+  {id:"sistema",nome:"Sistema"},
+  {id:"mesa", nome:"Mesa"},
+  {id:"npcs",  nome:"NPCs",       n:function(){return NPCS.length;}},
+  {id:"bestiario",nome:"Bestiário",n:function(){return MONSTROS.length;}},
+  {id:"armas", nome:"Armas",      n:function(){return ARMAS.length;}},
+  {id:"equip", nome:"Equipamentos",n:function(){return EQUIPAMENTOS.length;}},
+  {id:"mercado",nome:"Mercado",   n:function(){return MERCADO.length;}},
+  {id:"quests",nome:"Quests",     n:function(){return QUESTS.length;}},
+  {id:"cronicas",nome:"Crônicas", n:function(){return (typeof CRONICAS!=="undefined")?CRONICAS.length:0;}},
+  {id:"segredos",nome:"Só o Mestre"}
+];
+var tabsBox=document.getElementById("tabs");
+ABAS.forEach(function(a,i){
+  var b=h("button",{class:"tab"+(i===0?" active":""),role:"tab"});
+  b.appendChild(document.createTextNode(a.nome));
+  if(a.n)b.appendChild(h("span",{class:"n"},"("+a.n()+")"));
+  if(a.gm){b.classList.add("gm-only");b.hidden=true;}
+  b.addEventListener("click",function(){
+    Array.prototype.forEach.call(tabsBox.children,function(t){t.classList.remove("active");});
+    b.classList.add("active");
+    Array.prototype.forEach.call(document.querySelectorAll(".view"),function(v){v.classList.remove("active");});
+    document.getElementById("view-"+a.id).classList.add("active");
+    if(a.id==="mapa")ajustar();
+  });
+  tabsBox.appendChild(b);
+});
+
+/* ---------------- arte de fundo (placa nova > arte antiga) ---------------- */
+var artEl=document.getElementById("art"),artNote=document.getElementById("artNote");
+(function(){
+  var candidatos=[RAIZ+"mapas/andar_1_placa.png",RAIZ+"mapas/andar_1_mapa_arte.png"];
+  var i=0;
+  function tenta(){
+    if(i>=candidatos.length){artNote.textContent="Sem placa de arte — rode scripts/gerar_mapa_arte.py";return;}
+    var img=new Image();
+    img.onload=function(){
+      artEl.setAttribute("href",candidatos[i]);
+      artEl.style.display="";
+      arteDisponivel=true;
+      artNote.textContent=(i===0?"Placa: andar_1_placa.png":"Arte antiga — gere a nova com scripts/gerar_mapa_arte.py andar");
+      aplicaFundo();
+    };
+    img.onerror=function(){i++;tenta();};
+    img.src=candidatos[i];
+  }
+  tenta();
+})();
+
+
+/* ---------------- terreno vetorial ----------------
+   Geometria pura: nenhuma imagem, então nunca sai de lugar em relação aos
+   marcadores. Contornos são bezier suave (Catmull-Rom), não polígono — é o
+   que separa "mancha de cor" de "mapa". */
+var gTerreno=document.getElementById("gTerreno");
+
+function rnd(seed){var x=Math.sin(seed*9301+49297)*233280;return x-Math.floor(x);}
+
+function fechada(p){
+  var n=p.length,d="M"+p[0][0].toFixed(1)+" "+p[0][1].toFixed(1),i;
+  for(i=0;i<n;i++){
+    var p0=p[(i-1+n)%n],p1=p[i],p2=p[(i+1)%n],p3=p[(i+2)%n];
+    d+="C"+(p1[0]+(p2[0]-p0[0])/6).toFixed(1)+" "+(p1[1]+(p2[1]-p0[1])/6).toFixed(1)+
+       ","+(p2[0]-(p3[0]-p1[0])/6).toFixed(1)+" "+(p2[1]-(p3[1]-p1[1])/6).toFixed(1)+
+       ","+p2[0].toFixed(1)+" "+p2[1].toFixed(1);
+  }
+  return d+"Z";
+}
+function aberta(p){
+  if(p.length<2)return "";
+  var d="M"+p[0][0]+" "+p[0][1],i;
+  for(i=0;i<p.length-1;i++){
+    var p0=p[Math.max(0,i-1)],p1=p[i],p2=p[i+1],p3=p[Math.min(p.length-1,i+2)];
+    d+="C"+(p1[0]+(p2[0]-p0[0])/6).toFixed(1)+" "+(p1[1]+(p2[1]-p0[1])/6).toFixed(1)+
+       ","+(p2[0]-(p3[0]-p1[0])/6).toFixed(1)+" "+(p2[1]-(p3[1]-p1[1])/6).toFixed(1)+
+       ","+p2[0].toFixed(1)+" "+p2[1].toFixed(1);
+  }
+  return d;
+}
+function blob(cx,cy,rx,ry,seed,irregular,lados){
+  lados=lados||16;irregular=irregular==null?0.14:irregular;
+  var pts=[],i,ang,r1,r2;
+  for(i=0;i<lados;i++){
+    ang=(i/lados)*Math.PI*2;
+    r1=rx*(1-irregular+rnd(seed+i)*irregular*2);
+    r2=ry*(1-irregular+rnd(seed+i+99)*irregular*2);
+    pts.push([cx+Math.cos(ang)*r1, cy+Math.sin(ang)*r2]);
+  }
+  return fechada(pts);
+}
+function add(tag,attrs,pai){var e=el(tag,attrs);(pai||gTerreno).appendChild(e);return e;}
+
+/* O contorno da ilha nasce dos PRÓPRIOS pontos do mapa: pega o casco convexo
+   de todos os 241, empurra pra fora com margem e suaviza. Assim é impossível
+   sobrar marcador fora da terra. */
+var _contornoCache={};
+function contornoDoAndar(f,encolher){
+  var chave=(encolher||1).toFixed(3);
+  if(_contornoCache[chave])return _contornoCache[chave];
+  var pts=PONTOS.map(function(p){return [p.x,p.y];});
+  TERRENO.forEach(function(t){                       /* o terreno também conta */
+    if(t.cx!=null&&t.rx!=null&&t.tipo!=="massa")
+      [[t.cx-t.rx,t.cy],[t.cx+t.rx,t.cy],[t.cx,t.cy-t.ry],[t.cx,t.cy+t.ry]]
+        .forEach(function(q){pts.push(q);});
+    if(t.pontos)t.pontos.forEach(function(q){pts.push(q);});
+    if(t.x1!=null)pts.push([t.x1,t.y],[t.x2,t.y]);
+  });
+  /* casco convexo (monotone chain) */
+  pts.sort(function(a,b){return a[0]-b[0]||a[1]-b[1];});
+  function cross(o,a,b){return (a[0]-o[0])*(b[1]-o[1])-(a[1]-o[1])*(b[0]-o[0]);}
+  var baixo=[],alto=[],i;
+  for(i=0;i<pts.length;i++){
+    while(baixo.length>=2&&cross(baixo[baixo.length-2],baixo[baixo.length-1],pts[i])<=0)baixo.pop();
+    baixo.push(pts[i]);
+  }
+  for(i=pts.length-1;i>=0;i--){
+    while(alto.length>=2&&cross(alto[alto.length-2],alto[alto.length-1],pts[i])<=0)alto.pop();
+    alto.push(pts[i]);
+  }
+  var casco=baixo.slice(0,-1).concat(alto.slice(0,-1));
+  /* centro e expansão com margem + irregularidade orgânica */
+  var cx=0,cy=0;
+  casco.forEach(function(q){cx+=q[0];cy+=q[1];});
+  cx/=casco.length;cy/=casco.length;
+  var margem=34*(encolher||1);
+  var expandido=casco.map(function(q,k){
+    var dx=q[0]-cx,dy=q[1]-cy,len=Math.sqrt(dx*dx+dy*dy)||1;
+    var extra=margem*(0.82+rnd(f.seed+k*3)*0.42);
+    var e=(encolher||1);
+    /* preso dentro da moldura: a ilha inteira fica visível, e como o ponto
+       mais externo está em 20..1516 x 20..1004, nada escapa da terra */
+    return [Math.max(10,Math.min(1526, cx+dx*e+dx/len*extra)),
+            Math.max(10,Math.min(1014, cy+dy*e+dy/len*extra))];
+  });
+  /* reamostra pra ter vértices bem distribuídos (curva mais macia) */
+  var alvo=30,denso=[];
+  for(i=0;i<alvo;i++){
+    var t2=i/alvo*expandido.length;
+    var a=expandido[Math.floor(t2)%expandido.length];
+    var b=expandido[(Math.floor(t2)+1)%expandido.length];
+    var fr=t2-Math.floor(t2);
+    denso.push([a[0]+(b[0]-a[0])*fr, a[1]+(b[1]-a[1])*fr]);
+  }
+  var d=fechada(denso);
+  _contornoCache[chave]=d;
+  return d;
+}
+
+function desenharTerreno(){
+  _contornoCache={};
+  gTerreno.textContent="";
+  gTerreno.removeAttribute("clip-path");
+  var defs=add("defs",{});
+  function grad(id,paradas,radial){
+    var g=el(radial?"radialGradient":"linearGradient",
+      radial?{id:id,cx:"50%",cy:"36%",r:"74%"}:{id:id,x1:"0%",y1:"0%",x2:"0%",y2:"100%"});
+    paradas.forEach(function(q){g.appendChild(el("stop",{offset:q[0],"stop-color":q[1]}));});
+    defs.appendChild(g);
+  }
+  grad("gTerra",[["0%","#36462d"],["55%","#2c3a25"],["100%","#20291b"]],true);
+  grad("gMata",[["0%","#24391f"],["100%","#15230f"]]);
+  grad("gRocha",[["0%","#5b584d"],["100%","#32302a"]]);
+
+  TERRENO.forEach(function(f){
+    if(f.tipo==="massa"){
+      var d=contornoDoAndar(f);
+      add("path",{d:d,fill:"none",stroke:"#080c08","stroke-width":38,opacity:.6});
+      add("path",{d:d,fill:"none",stroke:"#71845d","stroke-width":10,opacity:.25});
+      add("path",{d:d,fill:"url(#gTerra)",stroke:"#4d5f3e","stroke-width":2.5});
+      add("path",{d:contornoDoAndar(f,0.965),
+        fill:"none",stroke:"#4f6240","stroke-width":6,opacity:.5});
+      var cp=el("clipPath",{id:"clipIlha"});
+      cp.appendChild(el("path",{d:d}));
+      defs.appendChild(cp);
+      gTerreno.setAttribute("clip-path","url(#clipIlha)");
+    }
+    else if(f.tipo==="campo"){
+      var cor=f.flor?"#3d4526":(f.seco?"#3a3d24":"#2f3d26");
+      add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.17,14),fill:cor,opacity:.92});
+      var tufos=Math.min(90,Math.round(f.rx*f.ry/700));
+      for(var i=0;i<tufos;i++){
+        var a=rnd(f.seed+i*2)*Math.PI*2, rr=Math.sqrt(rnd(f.seed+i*2+40));
+        var x=f.cx+Math.cos(a)*f.rx*rr*0.88, y=f.cy+Math.sin(a)*f.ry*rr*0.88;
+        add("path",{d:"M"+x.toFixed(1)+" "+y.toFixed(1)+"l-2.4 -4.6M"+x.toFixed(1)+" "+
+          y.toFixed(1)+"l2.2 -5.4",stroke:f.seco?"#565a33":"#445734",
+          "stroke-width":1,opacity:.55});
+      }
+      if(f.flor)for(var j=0;j<32;j++){
+        var b=rnd(f.seed+j)*Math.PI*2,rb=rnd(f.seed+j+50);
+        add("circle",{cx:(f.cx+Math.cos(b)*f.rx*rb).toFixed(1),
+          cy:(f.cy+Math.sin(b)*f.ry*rb).toFixed(1),r:2,
+          fill:["#c98fff","#ffd85c","#ff9db1","#8fd694"][j%4],opacity:.8});
+      }
+    }
+    else if(f.tipo==="lavoura"){
+      var g=add("g",{transform:"rotate("+f.ang+" "+f.cx+" "+f.cy+")"});
+      add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:6,
+        fill:"#3f4927",stroke:"#5a6636","stroke-width":1.2},g);
+      for(var l=1;l<f.linhas;l++){
+        var yy=f.cy-f.h/2+(f.h/f.linhas)*l;
+        add("line",{x1:f.cx-f.w/2+5,y1:yy,x2:f.cx+f.w/2-5,y2:yy,
+          stroke:"#616f3a","stroke-width":1.4,opacity:.9},g);
+      }
+    }
+    else if(f.tipo==="agua"){
+      if(f.forma==="rio"){
+        add("path",{d:aberta(f.pontos),fill:"none",stroke:"#132a38",
+          "stroke-width":f.largura+8,"stroke-linecap":"round"});
+        add("path",{d:aberta(f.pontos),fill:"none",stroke:"#27556f",
+          "stroke-width":f.largura,"stroke-linecap":"round"});
+        add("path",{d:aberta(f.pontos),fill:"none",stroke:"#57a0c4",
+          "stroke-width":Math.max(2,f.largura*0.26),"stroke-linecap":"round",opacity:.5});
+      }else if(f.forma==="brejo"){
+        add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.24,16),fill:"#2c4239"});
+        add("path",{d:blob(f.cx,f.cy,f.rx*0.7,f.ry*0.66,f.seed+9,0.3,14),
+          fill:"#265b7c",opacity:.62});
+        for(var k=0;k<20;k++){
+          var c=rnd(f.seed+k)*Math.PI*2,rc=0.32+rnd(f.seed+k+70)*0.62;
+          var jx=f.cx+Math.cos(c)*f.rx*rc, jy=f.cy+Math.sin(c)*f.ry*rc;
+          add("path",{d:"M"+jx.toFixed(1)+" "+jy.toFixed(1)+"l-3 -9M"+jx.toFixed(1)+" "+
+            jy.toFixed(1)+"l0 -11.5M"+jx.toFixed(1)+" "+jy.toFixed(1)+"l3 -9",
+            stroke:"#547a44","stroke-width":1.2,opacity:.85});
+        }
+      }else{
+        add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.08,20),
+          fill:"#16384e",stroke:"#1f4c6a","stroke-width":5});
+        add("path",{d:blob(f.cx,f.cy,f.rx*0.9,f.ry*0.87,f.seed+4,0.09,20),fill:"#265b7c"});
+        add("path",{d:blob(f.cx,f.cy,f.rx*0.6,f.ry*0.56,f.seed+8,0.12,18),
+          fill:"#31749a",opacity:.7});
+        for(var w=0;w<5;w++){
+          var wy=f.cy-f.ry*0.42+w*(f.ry*0.84/5), ww=f.rx*(0.3+rnd(f.seed+w)*0.42);
+          add("path",{d:"M"+(f.cx-ww/2).toFixed(1)+" "+wy.toFixed(1)+
+            "q"+(ww/4).toFixed(1)+" -4.5 "+(ww/2).toFixed(1)+" 0 t"+(ww/2).toFixed(1)+" 0",
+            fill:"none",stroke:"#7cc0e2","stroke-width":1.1,opacity:.32});
+        }
+      }
+    }
+    else if(f.tipo==="floresta"){
+      add("path",{d:blob(f.cx,f.cy,f.rx,f.ry,f.seed,0.19,16),
+        fill:f.palida?"#26372f":"url(#gMata)",opacity:.94});
+      var tons=f.palida?["#2c4038","#374b42","#43584c"]:["#1a2c16","#24391f","#2f4726"];
+      for(var t=0;t<f.densidade;t++){
+        var an=rnd(f.seed+t*3)*Math.PI*2, ra=Math.sqrt(rnd(f.seed+t*3+40));
+        var x2=f.cx+Math.cos(an)*f.rx*ra*0.93, y2=f.cy+Math.sin(an)*f.ry*ra*0.89;
+        var rr2=4.5+rnd(f.seed+t+9)*6;
+        add("circle",{cx:(x2+1.5).toFixed(1),cy:(y2+1.8).toFixed(1),r:rr2.toFixed(1),
+          fill:"#0d160b",opacity:.55});
+        add("circle",{cx:x2.toFixed(1),cy:y2.toFixed(1),r:rr2.toFixed(1),
+          fill:tons[t%3],stroke:"#0f1a0d","stroke-width":.7});
+      }
+    }
+    else if(f.tipo==="montanha"){
+      var larg=(f.x2-f.x1)/f.picos, base=[],b;
+      for(b=0;b<=f.picos;b++)base.push([f.x1+larg*b,f.y+f.altura*0.5]);
+      add("path",{d:aberta(base)+"L"+f.x2+" "+(f.y+f.altura*0.95)+"L"+f.x1+" "+
+        (f.y+f.altura*0.95)+"Z",fill:"#2a2823",opacity:.92});
+      for(var pk=0;pk<f.picos;pk++){
+        var px=f.x1+larg*pk+larg/2, hh=f.altura*(0.62+rnd(f.seed+pk)*0.72);
+        var ybase=f.y+f.altura*0.55, pe=px+larg*0.68, pw=px-larg*0.68;
+        add("path",{d:"M"+pw.toFixed(1)+" "+ybase.toFixed(1)+"L"+px.toFixed(1)+" "+
+          (f.y-hh).toFixed(1)+"L"+pe.toFixed(1)+" "+ybase.toFixed(1)+"Z",
+          fill:"url(#gRocha)",stroke:"#726f63","stroke-width":1.1,"stroke-linejoin":"round"});
+        add("path",{d:"M"+px.toFixed(1)+" "+(f.y-hh).toFixed(1)+"L"+pe.toFixed(1)+" "+
+          ybase.toFixed(1)+"L"+(px+larg*0.1).toFixed(1)+" "+ybase.toFixed(1)+"Z",
+          fill:"#201d17",opacity:.6});
+        add("path",{d:"M"+(px-larg*0.2).toFixed(1)+" "+(f.y-hh*0.58).toFixed(1)+
+          "l"+(larg*0.1).toFixed(1)+" "+(hh*0.11).toFixed(1)+
+          "L"+px.toFixed(1)+" "+(f.y-hh).toFixed(1)+
+          "l"+(larg*0.2).toFixed(1)+" "+(hh*0.42).toFixed(1)+
+          "l-"+(larg*0.11).toFixed(1)+" -"+(hh*0.09).toFixed(1)+"Z",
+          fill:"#c3c0b1",opacity:.88});
+      }
+    }
+    else if(f.tipo==="colina"){
+      var lg=(f.x2-f.x1)/f.lombadas;
+      for(var c2=0;c2<f.lombadas;c2++){
+        var cx2=f.x1+lg*c2+lg/2, h2=f.altura*(0.7+rnd(cx2)*0.6);
+        add("path",{d:"M"+(cx2-lg*0.62).toFixed(1)+" "+f.y+"Q"+cx2+" "+(f.y-h2).toFixed(1)+
+          " "+(cx2+lg*0.62).toFixed(1)+" "+f.y+"Z",
+          fill:"#3d452f",stroke:"#5a6342","stroke-width":1.1});
+        add("path",{d:"M"+cx2+" "+(f.y-h2*0.6).toFixed(1)+"q"+(lg*0.2).toFixed(1)+" "+
+          (h2*0.3).toFixed(1)+" "+(lg*0.34).toFixed(1)+" "+(h2*0.6).toFixed(1),
+          fill:"none",stroke:"#2b3223","stroke-width":1.4,opacity:.7});
+      }
+    }
+    else if(f.tipo==="penhasco"){
+      add("path",{d:aberta(f.pontos),fill:"none",stroke:"#78756a","stroke-width":7,
+        "stroke-linecap":"round"});
+      for(var hc=0;hc<f.pontos.length-1;hc++){
+        var a1=f.pontos[hc],a2=f.pontos[hc+1];
+        for(var q=0;q<4;q++){
+          var tq=(q+0.5)/4, hx=a1[0]+(a2[0]-a1[0])*tq, hy=a1[1]+(a2[1]-a1[1])*tq;
+          add("line",{x1:hx.toFixed(1),y1:hy.toFixed(1),x2:(hx-12).toFixed(1),
+            y2:(hy+8).toFixed(1),stroke:"#5d5a50","stroke-width":2,opacity:.85});
+        }
+      }
+    }
+    else if(f.tipo==="ruina"){
+      for(var b3=0;b3<f.blocos;b3++){
+        var bx=f.cx-f.w/2+rnd(b3*13+f.cx)*f.w, by=f.cy-f.h/2+rnd(b3*17+f.cy)*f.h;
+        var bw=9+rnd(b3*7)*16, bh=4+rnd(b3*11)*6;
+        var rot=(rnd(b3*3)*44-22).toFixed(1);
+        add("rect",{x:(bx+1).toFixed(1),y:(by+1.6).toFixed(1),width:bw.toFixed(1),
+          height:bh.toFixed(1),fill:"#12100c",opacity:.6,
+          transform:"rotate("+rot+" "+bx.toFixed(1)+" "+by.toFixed(1)+")"});
+        add("rect",{x:bx.toFixed(1),y:by.toFixed(1),width:bw.toFixed(1),
+          height:bh.toFixed(1),fill:"#4a463d",stroke:"#68624f","stroke-width":.9,
+          transform:"rotate("+rot+" "+bx.toFixed(1)+" "+by.toFixed(1)+")"});
+      }
+    }
+    else if(f.tipo==="estrada"){
+      var dd=aberta(f.pontos);
+      add("path",{d:dd,fill:"none",stroke:"#1f190f","stroke-width":7,
+        "stroke-linecap":"round","stroke-dasharray":f.tracejada?"12 10":"",opacity:.85});
+      add("path",{d:dd,fill:"none",stroke:f.tracejada?"#61573f":"#94805a",
+        "stroke-width":3.2,"stroke-linecap":"round",
+        "stroke-dasharray":f.tracejada?"12 10":""});
+    }
+    else if(f.tipo==="cidade"){
+      add("circle",{cx:f.cx,cy:f.cy,r:f.r+11,fill:"#1b1b12",opacity:.7});
+      add("circle",{cx:f.cx,cy:f.cy,r:f.r,fill:"#241c11",stroke:"#8c6f3e","stroke-width":3});
+      for(var a3=1;a3<=f.aneis;a3++)
+        add("circle",{cx:f.cx,cy:f.cy,r:(f.r*(a3/(f.aneis+1))).toFixed(1),fill:"none",
+          stroke:"#433826","stroke-width":1});
+      for(var r4=0;r4<f.ruas;r4++){
+        var ang4=(r4/f.ruas)*Math.PI*2;
+        add("line",{x1:(f.cx+Math.cos(ang4)*f.r*0.18).toFixed(1),
+          y1:(f.cy+Math.sin(ang4)*f.r*0.18).toFixed(1),
+          x2:(f.cx+Math.cos(ang4)*f.r*0.97).toFixed(1),
+          y2:(f.cy+Math.sin(ang4)*f.r*0.97).toFixed(1),
+          stroke:"#584a31","stroke-width":1.1});
+      }
+      for(var t3=0;t3<f.ruas*3;t3++){
+        var at3=(t3/(f.ruas*3))*Math.PI*2+0.11;
+        var rt3=f.r*(0.34+rnd(t3*5+f.cx)*0.56);
+        add("rect",{x:(f.cx+Math.cos(at3)*rt3-3.2).toFixed(1),
+          y:(f.cy+Math.sin(at3)*rt3-2.6).toFixed(1),width:6.4,height:5.2,rx:1,
+          fill:"#50331f",stroke:"#74492f","stroke-width":.6});
+      }
+      add("circle",{cx:f.cx,cy:f.cy,r:(f.r*0.17).toFixed(1),fill:"#2d2618",
+        stroke:"#8c6f3e","stroke-width":1.4});
+      for(var pg=0;pg<f.portoes;pg++){
+        var ap=(pg/f.portoes)*Math.PI*2-Math.PI/2;
+        add("circle",{cx:(f.cx+Math.cos(ap)*f.r).toFixed(1),
+          cy:(f.cy+Math.sin(ap)*f.r).toFixed(1),r:4,fill:"#d9ad5e",
+          stroke:"#1a1207","stroke-width":1.2});
+      }
+    }
+    else if(f.tipo==="vila"){
+      add("circle",{cx:f.cx,cy:f.cy,r:f.raio+9,fill:"#241e13",opacity:.55});
+      for(var v=0;v<f.casas;v++){
+        var av=(v/f.casas)*Math.PI*2+rnd(v*3+f.cx)*0.6;
+        var rv=f.raio*(0.3+rnd(v*7+f.cy)*0.7);
+        var vx=f.cx+Math.cos(av)*rv, vy=f.cy+Math.sin(av)*rv;
+        add("rect",{x:(vx-4.5).toFixed(1),y:(vy-3.4).toFixed(1),width:9,height:6.8,rx:1.2,
+          fill:f.barracas?"#423927":"#50331f",stroke:f.barracas?"#6f6044":"#74492f",
+          "stroke-width":.8});
+      }
+    }
+    else if(f.tipo==="castelo"){
+      add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:2,
+        fill:"#100d0c",stroke:"#8c6f3e","stroke-width":2});
+      [-1,0,1].forEach(function(o){
+        add("rect",{x:(f.cx+o*f.w*0.34-5.5).toFixed(1),y:(f.cy-f.h/2-18).toFixed(1),
+          width:11,height:20,rx:1.5,fill:"#100d0c",stroke:"#8c6f3e","stroke-width":1.5});
+      });
+    }
+    else if(f.tipo==="torre"){
+      if(f.tipoTorre==="labirinto"){
+        add("rect",{x:f.cx-f.w/2-5,y:f.cy-f.h/2-5,width:f.w+10,height:f.h+10,rx:4,
+          fill:"#0c0910",opacity:.85});
+        add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:3,
+          fill:"#171021",stroke:"#a05fff","stroke-width":2.4});
+        add("rect",{x:f.cx-f.w*0.17,y:f.cy-f.h/2-30,width:f.w*0.34,height:32,rx:2,
+          fill:"#171021",stroke:"#a05fff","stroke-width":2});
+        for(var vw=0;vw<4;vw++)
+          add("rect",{x:(f.cx-f.w/2+11+vw*(f.w-22)/3.4).toFixed(1),
+            y:(f.cy-f.h/2+15).toFixed(1),width:5,height:12,fill:"#a05fff",opacity:.35});
+        add("path",{d:"M"+(f.cx-12)+" "+(f.cy+f.h/2)+"v-19a12 12 0 0 1 24 0v19Z",
+          fill:"#0a080d",stroke:"#a05fff","stroke-width":1.6});
+      }else if(f.tipoTorre==="relogio"){
+        var gt=add("g",{transform:f.inclinada?"rotate(-7 "+f.cx+" "+f.cy+")":""});
+        add("rect",{x:f.cx-f.w/2,y:f.cy-f.h/2,width:f.w,height:f.h,rx:2,
+          fill:"#1c1712",stroke:"#8c6f3e","stroke-width":1.8},gt);
+        add("circle",{cx:f.cx,cy:f.cy-f.h*0.2,r:7,fill:"#0f0d0a",stroke:"#8c6f3e",
+          "stroke-width":1.4},gt);
+      }else{
+        add("path",{d:"M"+(f.cx-f.w/2)+" "+(f.cy+f.h/2)+"q"+(f.w/2)+" "+(-f.h*1.7)+" "+
+          f.w+" 0Z",fill:"#0d0b09",stroke:"#7a776b","stroke-width":1.8});
+        if(f.brilho){
+          add("circle",{cx:f.cx,cy:f.cy+2,r:11,fill:"#57d9ff",opacity:.2});
+          add("circle",{cx:f.cx,cy:f.cy+2,r:5,fill:"#8fe6ff",opacity:.55});
+        }
+      }
+    }
+    else if(f.tipo==="ilha"){
+      add("path",{d:blob(f.cx,f.cy,f.r,f.r*0.72,f.cx,0.22,12),fill:"#36462d",
+        stroke:"#4f6240","stroke-width":1.4});
+      add("circle",{cx:f.cx-6,cy:f.cy-3,r:5.5,fill:"#24391f"});
+      add("circle",{cx:f.cx+6,cy:f.cy+2,r:6.5,fill:"#1a2c16"});
+      add("rect",{x:f.cx-1.5,y:f.cy-11,width:3,height:13,rx:1,fill:"#6f6044"});
+    }
+    else if(f.tipo==="rotulo"){
+      var yy2=f.y+(f.dy||0);
+      var t4=add("text",{class:"t-rot "+(f.classe||""),x:f.x,y:yy2,
+        "text-anchor":f.ancora||"middle","data-y0":yy2,"data-dy":0});
+      if(f.ang)t4.setAttribute("transform","rotate("+f.ang+" "+f.x+" "+yy2+")");
+      t4.textContent=f.txt;
+    }
+  });
+}
+
+/* ---------------- mapa: zoom e pan ---------------- */
+var svg=document.getElementById("map");
+var VB={x:0,y:0,w:1536,h:1024};
+var redesenhoPendente=null;
+function aplicaVB(){
+  svg.setAttribute("viewBox",VB.x+" "+VB.y+" "+VB.w+" "+VB.h);
+  escalaRotulos();
+  clearTimeout(redesenhoPendente);
+  redesenhoPendente=setTimeout(function(){if(!arrastando)desenharMapa();},140);
+}
+function ajustar(){VB={x:0,y:0,w:1536,h:1024};aplicaVB();}
+function zoom(fator,cx,cy){
+  var nw=Math.max(190,Math.min(1536,VB.w*fator)),nh=nw*(1024/1536);
+  if(cx==null){cx=VB.x+VB.w/2;cy=VB.y+VB.h/2;}
+  var rx=(cx-VB.x)/VB.w, ry=(cy-VB.y)/VB.h;
+  VB.x=cx-nw*rx; VB.y=cy-nh*ry; VB.w=nw; VB.h=nh; limita(); aplicaVB();
+}
+function limita(){
+  VB.x=Math.max(-120,Math.min(1536-VB.w+120,VB.x));
+  VB.y=Math.max(-120,Math.min(1024-VB.h+120,VB.y));
+}
+function ponteiro(ev){
+  var r=svg.getBoundingClientRect();
+  return {x:VB.x+(ev.clientX-r.left)/r.width*VB.w, y:VB.y+(ev.clientY-r.top)/r.height*VB.h};
+}
+svg.addEventListener("wheel",function(ev){
+  ev.preventDefault();var p=ponteiro(ev);zoom(ev.deltaY>0?1.16:0.86,p.x,p.y);
+},{passive:false});
+var arrastando=false,ini=null,suprimirClique=false,pxArrastado=0,resolvidoNoPointerUp=false;
+svg.addEventListener("pointerdown",function(ev){
+  arrastando=true;suprimirClique=false;pxArrastado=0;
+  ini={p:ponteiro(ev),cx:ev.clientX,cy:ev.clientY,id:ev.pointerId,capturado:false};
+  svg.classList.add("dragging");
+});
+svg.addEventListener("pointermove",function(ev){
+  if(!arrastando)return;
+  pxArrastado+=Math.abs(ev.clientX-ini.cx)+Math.abs(ev.clientY-ini.cy);
+  ini.cx=ev.clientX;ini.cy=ev.clientY;
+  var r=svg.getBoundingClientRect();
+  var dx=(ev.clientX-(r.left+(ini.p.x-VB.x)/VB.w*r.width))/r.width*VB.w;
+  var dy=(ev.clientY-(r.top+(ini.p.y-VB.y)/VB.h*r.height))/r.height*VB.h;
+  if(pxArrastado>7&&!suprimirClique){
+    suprimirClique=true;
+    /* só agora vale capturar: o arraste começou pra valer */
+    try{svg.setPointerCapture(ini.id);ini.capturado=true;}catch(e){}
+  }
+  if(!suprimirClique)return;                 /* clique parado não move o mapa */
+  VB.x-=dx;VB.y-=dy;limita();aplicaVB();
+});
+svg.addEventListener("pointerup",function(ev){
+  if(suprimirClique)return;
+  if(!document.elementFromPoint)return;      /* jsdom e navegadores antigos */
+  var alvo=document.elementFromPoint(ev.clientX,ev.clientY);
+  var no=alvo&&alvo.closest?(alvo.closest(".node")||alvo.closest(".marco")):null;
+  if(!no||!no.dataset||!no.dataset.id)return;
+  var id=no.dataset.id;
+  resolvidoNoPointerUp=true;
+  setTimeout(function(){resolvidoNoPointerUp=false;},0);
+  if(selecionado===id)fichaPonto(id); else selecionar(id);
+});
+["pointerup","pointercancel","pointerleave"].forEach(function(e){
+  svg.addEventListener(e,function(){
+    if(!arrastando)return;
+    arrastando=false;svg.classList.remove("dragging");
+    if(ini&&ini.capturado){try{svg.releasePointerCapture(ini.id);}catch(e){}}
+    if(suprimirClique)setTimeout(function(){suprimirClique=false;},0);
+  });
+});
+document.getElementById("zin").onclick=function(){zoom(0.8);};
+document.getElementById("zout").onclick=function(){zoom(1.25);};
+document.getElementById("zfit").onclick=ajustar;
+document.getElementById("toggleLbl").onclick=function(){
+  var ciclo=["todos","marcos","nenhum"];
+  var i=ciclo.indexOf(state.rotulos);
+  state.rotulos=ciclo[(i+1)%3];save();rotuloBotao();desenharMapa();
+};
+function aplicarModoJogador(){
+  document.body.classList.add("modo-jogador");
+  /* some com as abas que são só do mestre */
+  var esconder=["segredos","sistema","mesa","puzzles","dungeons"];
+  Array.prototype.forEach.call(document.querySelectorAll("#tabs .tab"),function(t,i){
+    var a=ABAS[i];
+    if(a&&esconder.indexOf(a.id)>=0)t.hidden=true;
+  });
+  /* aviso no cabeçalho */
+  var q=document.querySelector(".who");
+  if(q)q.innerHTML='<span class="pill on">Modo jogador</span>';
+  var sub=document.querySelector(".brand .sub");
+  if(sub)sub.textContent="Guia do andar — visão de jogador";
+}
+
+function rotuloBotao(){
+  document.getElementById("toggleLbl").textContent="Rótulos: "+state.rotulos;
+}
+
+/* Tudo dentro do SVG é desenhado em unidades de mapa, então dar zoom aumentaria
+   texto e marcador junto com o terreno. Aqui a gente compensa: texto e pino
+   encolhem na mesma proporção do zoom, mantendo o tamanho aparente na tela. */
+var BASE_FONTE={lbl:11,cap:13,regionlbl:15,gl:9,num:12,nm:9.5,"t-rot":13};
+function escalaRotulos(){
+  var k=Math.max(0.30,Math.sqrt(VB.w/1536));   // 1 = zoom out total
+  Object.keys(BASE_FONTE).forEach(function(cls){
+    Array.prototype.forEach.call(svg.querySelectorAll("."+cls),function(t){
+      /* inline style, não atributo: a folha de estilo venceria o atributo */
+      t.style.fontSize=(BASE_FONTE[cls]*k).toFixed(2)+"px";
+      if(cls==="lbl"||cls==="cap"||cls==="regionlbl")
+        t.style.strokeWidth=(3.2*k).toFixed(2)+"px";
+    });
+  });
+  Array.prototype.forEach.call(svg.querySelectorAll("[data-r]"),function(c){
+    var base=parseFloat(c.getAttribute("data-r"));
+    c.setAttribute("r",(base*k).toFixed(2));
+  });
+  Array.prototype.forEach.call(svg.querySelectorAll("[data-dy]"),function(t){
+    var d=parseFloat(t.getAttribute("data-dy")),y=parseFloat(t.getAttribute("data-y0"));
+    t.setAttribute("y",(y+d*k).toFixed(2));
+  });
+  /* rótulos de região só atrapalham quando o zoom está fechado num canto */
+  document.getElementById("gRegioes").style.opacity=(VB.w<520?0:1);
+}
+
+/* ---------------- marcos numerados (teleportes) ---------------- */
+var MARCOS=[
+  {id:"cidade_praca",  nome:"Praça do Teleporte"},
+  {id:"horunka_vila",  nome:"Horunka"},
+  {id:"tolbana_praca", nome:"Tolbana"},
+  {id:"castelo_patio", nome:"Castelo de Ferro Negro"},
+  {id:"labirinto_entrada_pt", nome:"Limiar do Labirinto"},
+  {id:"sala_chefe_pt", nome:"Covil de Illfang"}
+];
+/* alguns marcos usam a região quando não há ponto com esse id */
+function posMarco(m){
+  var p=pontosPorId[m.id];
+  if(p)return {x:p.x,y:p.y,ponto:p};
+  var chaves={labirinto_entrada_pt:"labirinto_entrada",sala_chefe_pt:"sala_chefe",tolbana_praca:"tolbana"};
+  var r=regioesPorId[chaves[m.id]||m.id];
+  if(r){
+    var dentro=PONTOS.filter(function(pp){return pp.regiao===r.id;});
+    var alvo=dentro[0];
+    return {x:(alvo?alvo.x:r.x),y:(alvo?alvo.y:r.y),ponto:alvo||null};
+  }
+  return null;
+}
+
+/* ---------------- filtros ---------------- */
+var filtros={};Object.keys(CATEGORIAS).forEach(function(c){filtros[c]=true;});
+var legendBox=document.getElementById("legend");
+Object.keys(CATEGORIAS).forEach(function(c){
+  var info=CATEGORIAS[c];
+  var li=h("li",{});
+  li.appendChild(h("span",{class:"dot"}));
+  li.lastChild.style.background=info.cor;
+  li.appendChild(document.createTextNode(info.label));
+  var n=h("span",{class:"aux"},"");n.style.marginLeft="auto";n.style.color="var(--ink-faint)";
+  n.style.fontFamily="var(--f-mono)";n.style.fontSize="10px";
+  n.textContent=PONTOS.filter(function(p){return p.categoria===c;}).length;
+  li.appendChild(n);
+  li.addEventListener("click",function(){
+    filtros[c]=!filtros[c];li.classList.toggle("off",!filtros[c]);desenharMapa();
+  });
+  legendBox.appendChild(li);
+});
+
+/* ---------------- desenho do mapa ---------------- */
+var gNodes=document.getElementById("gNodes"),gMarcos=document.getElementById("gMarcos"),
+    gRegioes=document.getElementById("gRegioes");
+var selecionado=null;
+
+/* sem fog of war: tudo visível, tudo "descoberto" */
+function descoberto(){return true;}
+function visivel(){return true;}
+/* Nomes de região reservam espaço ANTES dos rótulos de ponto (mesma lista
+   caixasRotulo, ver rotuloVisivel) -- por isso roda dentro de desenharMapa(),
+   não mais uma vez só no carregamento. Sem isso, duas regiões próximas
+   (ex: Montanhas de Grauvenn / Colinas de Braxhold, Torre de Aldric perto de
+   um ponto) sempre desenhavam por cima uma da outra, virando sopa de letra
+   no zoom afastado -- achado numa varredura visual do mapa. */
+function desenharRegioes(){
+  gRegioes.textContent="";
+  if(state.rotulos==="nenhum")return;
+  var k=VB.w/1536;
+  REGIOES.forEach(function(r){
+    var nome=r.nome.toUpperCase();
+    var larg=Math.max(40,nome.length*6.6)*Math.max(0.4,Math.sqrt(k));
+    var alt=15*Math.max(0.4,Math.sqrt(k));
+    var x1=r.x-larg/2, y1=r.y-16-alt, x2=r.x+larg/2, y2=r.y-16+3;
+    var colide=false;
+    for(var i=0;i<caixasRotulo.length;i++){
+      var c=caixasRotulo[i];
+      if(x1<c[2]&&x2>c[0]&&y1<c[3]&&y2>c[1]){colide=true;break;}
+    }
+    if(colide)return;
+    caixasRotulo.push([x1,y1,x2,y2]);
+    var t=el("text",{class:"regionlbl",x:r.x,y:r.y-16});
+    t.textContent=nome;
+    gRegioes.appendChild(t);
+  });
+}
+/* Rótulos: TODO ponto tem nome. Pra não virar sopa de letra, o mapa decide o
+   que cabe: prioridade por categoria, e uma varredura que descarta rótulo que
+   colidiria com outro já desenhado no zoom atual. */
+var PRIORIDADE={chefe:0,cidade:1,dungeon:2,puzzle:3,comerciante:4,npc:5,segredo:6,monstro:7,recurso:8};
+var caixasRotulo=[];
+function rotuloVisivel(p,r){
+  if(state.rotulos==="nenhum")return false;
+  var k=VB.w/1536;                                  /* 1 = mapa inteiro */
+  if(state.rotulos==="marcos"&&PRIORIDADE[p.categoria]>3)return false;
+  /* no zoom fechado cabe tudo; aberto, só o que é mais importante */
+  var limite = k>0.8 ? 5 : (k>0.55 ? 6 : (k>0.3 ? 7 : 9));
+  if(PRIORIDADE[p.categoria]>limite)return false;
+  /* colisão: caixa aproximada do texto em unidades de mapa */
+  var larg=Math.max(26,p.nome.length*4.9)*Math.max(0.4,Math.sqrt(k));
+  var alt=13*Math.max(0.4,Math.sqrt(k));
+  var x1=p.x-larg/2, y1=p.y-r-6-alt, x2=p.x+larg/2, y2=p.y-r-4;
+  for(var i=0;i<caixasRotulo.length;i++){
+    var c=caixasRotulo[i];
+    if(x1<c[2]&&x2>c[0]&&y1<c[3]&&y2>c[1])return false;
+  }
+  caixasRotulo.push([x1,y1,x2,y2]);
+  return true;
+}
+
+function desenharMapa(){
+  gNodes.textContent="";
+  caixasRotulo=[];
+  desenharRegioes();
+  PONTOS.filter(function(p){return filtros[p.categoria]!==false && visivel(p);})
+    .slice().sort(function(a,b){
+      return (PRIORIDADE[a.categoria]||9)-(PRIORIDADE[b.categoria]||9);
+    }).forEach(function(p){
+    var disc=true;
+    var cor=(CATEGORIAS[p.categoria]||{}).cor||"#57d9ff";
+    var g=el("g",{class:"node"+(disc?" disc":"")+(selecionado===p.id?" sel":""),tabindex:"0",
+      role:"button","aria-label":p.nome});
+    g.dataset.id=p.id;
+    var r=p.categoria==="chefe"?12:(p.categoria==="cidade"||p.categoria==="dungeon"?9:7.5);
+    g.appendChild(el("circle",{class:"halo",cx:p.x,cy:p.y,r:r+9,"data-r":r+9}));
+    var c=el("circle",{class:"pin",cx:p.x,cy:p.y,r:r,"data-r":r});
+    c.setAttribute("fill",disc?cor:"#2b2519");
+    if(typeof PONTOS_DETALHE!=="undefined"&&PONTOS_DETALHE[p.id])
+      g.appendChild(el("circle",{class:"anelDetalhe",cx:p.x,cy:p.y,r:r+3.5,"data-r":r+3.5,
+        fill:"none",stroke:"#d9ad5e","stroke-width":1.3,opacity:.9}));
+    g.appendChild(c);
+    if(!disc){var q=el("text",{class:"gl",x:p.x,y:p.y});q.textContent="?";q.setAttribute("fill","#7a6b4e");g.appendChild(q);}
+    var tt=el("title",{});tt.textContent=disc?p.nome:"Não explorado";g.appendChild(tt);
+    if(rotuloVisivel(p,r)){
+      var lb=el("text",{class:"lbl",x:p.x,y:p.y-r-6,"data-y0":p.y,"data-dy":-(r+6)});
+      lb.textContent=p.nome;g.appendChild(lb);
+    }
+    /* backup: se o pointerup não resolveu (navegador antigo, toque), o click
+       do próprio nó ainda funciona. O pointerup marca pra não repetir. */
+    g.addEventListener("click",function(){
+      if(suprimirClique||resolvidoNoPointerUp)return;
+      var jaSel=(selecionado===p.id);
+      selecionar(p.id);
+      if(jaSel)fichaPonto(p.id);
+    });
+    g.addEventListener("keypress",function(ev){
+      if(ev.key==="Enter")fichaPonto(p.id);
+    });
+    g.addEventListener("keypress",function(ev){if(ev.key==="Enter")selecionar(p.id);});
+    gNodes.appendChild(g);
+  });
+  desenharMarcos();
+  escalaRotulos();
+  var visiveis=PONTOS.filter(function(p){return filtros[p.categoria]!==false;}).length;
+  document.getElementById("prog").textContent=visiveis+" de "+PONTOS.length+" pontos · "+REGIOES.length+" regiões";
+}
+function desenharMarcos(){
+  gMarcos.textContent="";
+  MARCOS.forEach(function(m,i){
+    var pos=posMarco(m);if(!pos)return;
+    var g=el("g",{class:"marco",tabindex:"0",role:"button","aria-label":m.nome});
+    if(pos.ponto)g.dataset.id=pos.ponto.id;
+    g.appendChild(el("circle",{class:"ring",cx:pos.x,cy:pos.y,r:13,"data-r":13}));
+    var n=el("text",{class:"num",x:pos.x,y:pos.y});n.textContent=String(i+1);g.appendChild(n);
+    var cp=el("text",{class:"cap",x:pos.x,y:pos.y+27,"data-y0":pos.y,"data-dy":27});
+    cp.textContent=m.nome;g.appendChild(cp);
+    g.addEventListener("click",function(){
+      if(suprimirClique||resolvidoNoPointerUp)return;
+      if(!pos.ponto){irPara(pos.x,pos.y);return;}
+      if(selecionado===pos.ponto.id)fichaPonto(pos.ponto.id);
+      else {selecionar(pos.ponto.id);irPara(pos.x,pos.y);}
+    });
+    gMarcos.appendChild(g);
+  });
+}
+function irPara(x,y){
+  var w=Math.min(VB.w,620),hh=w*(1024/1536);
+  VB={x:x-w/2,y:y-hh/2,w:w,h:hh};limita();aplicaVB();
+}
+function selecionar(id){
+  selecionado=id;
+  /* só troca o destaque, sem recriar os 241 nós — recriar fazia o elemento
+     sumir debaixo do cursor e o 2º clique se perder */
+  Array.prototype.forEach.call(svg.querySelectorAll(".node,.marco"),function(g){
+    g.classList.toggle("sel",g.dataset.id===id);
+  });
+  renderDetalhe();
+}
+
+/* ---------------- ficha do ponto ---------------- */
+function renderDetalhe(){
+  var box=document.getElementById("detail");
+  if(!selecionado){box.innerHTML="<p>Selecione um ponto no mapa.</p>";return;}
+  var p=pontosPorId[selecionado],disc=true,reg=regioesPorId[p.regiao];
+  var cat=CATEGORIAS[p.categoria]||{label:p.categoria};
+  var det=(typeof PONTOS_DETALHE!=="undefined")?PONTOS_DETALHE[p.id]:null;
+  var html='<div class="eyebrow">'+esc(cat.label)+(reg?" · "+esc(reg.nome):"")+'</div><h3>'+esc(p.nome)+'</h3>';
+  var ficha=acharFicha(p.ref);
+  if(det&&det.leitura)html+='<div class="quote">'+esc(det.leitura.slice(0,190))+
+    (det.leitura.length>190?"…":"")+"</div>";
+  if(det&&det.oque)html+="<p>"+esc(det.oque)+"</p>";
+  var vend=vendedorDe(p);
+  if(vend)html+="<p><b>Loja:</b> "+vend.itens.length+" itens à venda"+
+    (vend.desconto?" · desconto: "+esc(vend.desconto.slice(0,60)):"")+"</p>";
+  if(ficha&&ficha.d.img)html+='<img class="thumb" src="'+RAIZ+esc(ficha.d.img)+'" alt="'+esc(ficha.d.nome)+'"/>';
+  if(p.desc)html+="<p>"+esc(p.desc)+"</p>";
+  if(p.fala)html+='<div class="quote">'+esc(p.fala)+"</div>";
+  if(p.oferece)html+="<p><b>Oferece:</b> "+esc(p.oferece)+"</p>";
+  if(p.vende)html+="<p><b>Vende:</b> "+esc(p.vende)+"</p>";
+  if(p.obs)html+="<p><b>Obs:</b> "+esc(p.obs)+"</p>";
+  if(p.ameaca)html+='<div class="row"><span class="tag red">Ameaça: '+esc(p.ameaca)+'</span>'+
+    (p.golpes?'<span class="tag">'+esc(p.golpes)+" golpes</span>":"")+
+    (p.atributoFraqueza?'<span class="tag gold">Fraqueza: '+esc(p.atributoFraqueza)+"</span>":"")+"</div>";
+  if(p.teste){
+    html+='<div class="test"><div><b>2d6+'+esc(p.teste.atributo)+'</b></div>'+
+      '<div><b>10+</b>'+esc(p.teste.sucesso)+"</div>"+
+      '<div><b>7-9</b>'+esc(p.teste.parcial)+"</div>"+
+      '<div><b>6-</b>'+esc(p.teste.falha)+"</div></div>";
+  }
+  if(p.recompensa)html+="<p><b>Recompensa:</b> "+esc(p.recompensa)+"</p>";
+  if(p.respawnHoras)html+='<span class="tag">Respawn ~'+esc(p.respawnHoras)+"h</span>";
+  if(ficha){
+    var d=ficha.d;
+    html+='<div class="test" style="border-color:var(--line)"><div><b>'+esc(d.nome)+"</b></div>";
+    if(ficha.tipo==="monstro"){
+      html+="<div>"+esc(d.resumo||"")+"</div>";
+      if(d.fraqueza)html+="<div><b>Fraco a</b>"+esc(d.fraqueza)+"</div>";
+      if(d.domavel==="sim")html+="<div><b>Doma</b>"+esc(d.domaSucessos)+" sucessos · "+esc(d.domaRequisito||"")+"</div>";
+    }else{
+      html+="<div>"+esc(d.resumo||"")+"</div>";
+      if(d.profissao)html+="<div><b>Profissão</b>"+esc(d.profissao)+"</div>";
+    }
+    html+="</div>";
+  }
+  html+='<div class="act">'+
+    '<button data-act="local">Ficha do local</button>'+
+    (guiaPorId[p.regiao]?'<button class="ghost" data-act="guia">Guia da região</button>':"")+
+    (ficha?'<button data-act="ficha">Ficha completa</button>':"")+
+    '<button class="ghost" data-act="centrar">Centralizar</button></div>';
+  box.innerHTML=html;
+  ligarAcoes(p);
+}
+function ligarAcoes(p){
+  var ficha=acharFicha(p.ref);
+  Array.prototype.forEach.call(document.querySelectorAll("#detail [data-act]"),function(b){
+    b.addEventListener("click",function(){
+      var a=b.dataset.act;
+      if(a==="local")fichaPonto(p.id);
+      else if(a==="guia")fichaGuia(p.regiao);
+      else if(a==="ficha"&&ficha){
+        if(ficha.tipo==="monstro")fichaMonstro(ficha.d.id);else fichaNpc(ficha.d.id);
+      }
+      else if(a==="centrar")irPara(p.x,p.y);
+    });
+  });
+}
+
+/* ---------------- painéis laterais do mapa ---------------- */
+document.getElementById("statRegioes").textContent=REGIOES.length;
+document.getElementById("statPontos").textContent=PONTOS.length;
+
+var marcosList=document.getElementById("marcosList");
+MARCOS.forEach(function(m,i){
+  var li=h("li",{});
+  li.appendChild(h("span",{class:"badge"},String(i+1)));
+  li.appendChild(h("b",null,m.nome));
+  li.addEventListener("click",function(){
+    var pos=posMarco(m);if(!pos)return;
+    if(pos.ponto)selecionar(pos.ponto.id);
+    irPara(pos.x,pos.y);
+    document.querySelector('#tabs .tab').click();
+  });
+  marcosList.appendChild(li);
+});
+
+var AREAS=[
+  ["Cidade do Início","1 – 2","f"],["Tolbana","1 – 2","f"],
+  ["Vila de Brenmoor","1 – 2","f"],["Planície de Verrun","1 – 3","f"],
+  ["Estepes de Kaldan","2 – 4","f"],["Jardim de Fenwyth","1 – 3","f"],
+  ["Vale de Molwyn","1 – 3","f"],["Posto de Kaldrin","2 – 4","f"],
+  ["Estrada de Ombric","2 – 4","f"],["Floresta de Horunka","3 – 5","m"],
+  ["Lago Sylvaine","3 – 5","m"],["Terraços de Solveig","3 – 5","m"],
+  ["Rio Coluber","3 – 5","m"],["Ilha de Pemberton","4 – 6","m"],
+  ["Torre de Aldric","4 – 6","m"],["Colinas de Braxhold","4 – 6","m"],
+  ["Charco de Grenna","4 – 6","m"],["Bosque de Ashwen","5 – 7","m"],
+  ["Campo de Ruyn","5 – 7","m"],["Necrópole de Voss","5 – 7","m"],
+  ["Gruta de Lumis","5 – 7","m"],["Trilha de Corvain","5 – 7","m"],
+  ["Pedreira de Dunhelm","5 – 7","m"],["Castelo de Ferro Negro","5 – 8","d"],
+  ["Pântano de Kavir","6 – 8","d"],["Caverna de Mournhall","7 – 9","d"],
+  ["Montanhas de Grauvenn","7 – 9","d"],["Penhascos de Vaelor","8 – 9","d"],
+  ["Labirinto (Trechos I-III)","7 – 9","d"],["Labirinto (Trechos IV-V)","9 – 10","md"],
+  ["Covil de Illfang","10","md"],["Dungeon Oculta","fora da escala","md"]
+];
+(function(){
+  var t=document.getElementById("areasTbl");
+  t.innerHTML="<tr><th>Área</th><th>Nível</th></tr>";
+  AREAS.forEach(function(a){
+    var tr=h("tr");tr.appendChild(h("td",{class:"nome"},a[0]));
+    var td=h("td");td.appendChild(h("span",{class:"tier "+a[2]},a[1]));tr.appendChild(td);
+    t.appendChild(tr);
+  });
+})();
+(function(){
+  var t=document.getElementById("tiposMissao");
+  [["Eliminação","Caçar um alvo nomeado"],["Coleta","Trazer material específico"],
+   ["Entrega","Levar algo de A a B"],["Escolta","Manter alguém vivo no caminho"],
+   ["Investigação","Descobrir o que aconteceu"],["Doma","Vínculo, não combate"],
+   ["Puzzle","Não se resolve com arma"],["Raid","Várias equipes de uma vez"]
+  ].forEach(function(x){
+    var li=h("li");li.appendChild(h("span",null,x[0]));li.appendChild(h("b",null,x[1]));t.appendChild(li);
+  });
+})();
+(function(){
+  var ill=monPorId["illfang_the_kobold_lord"];
+  var box=document.getElementById("bossCard");
+  var drops=ill&&ill.drops?ill.drops.map(function(d){return "· "+d.item+" ("+d.chance+")";}).join("<br/>"):"";
+  box.innerHTML='<div class="panel-title">Chefe do Andar</div>'+
+    (ill&&ill.img?'<img class="thumb" src="'+RAIZ+ill.img+'" alt="Illfang"/>':"")+
+    "<h4>"+(ill?esc(ill.nome):"Illfang the Kobold Lord")+"</h4>"+
+    '<ul class="kv"><li><span>Tipo</span><b>Chefe de andar</b></li>'+
+    "<li><span>Golpes</span><b>"+(ill?esc(ill.golpes):"4 barras x 6-8")+"</b></li>"+
+    "<li><span>Local</span><b>Sala do Chefe, 20º sub-nível</b></li></ul>"+
+    "<p><b>Fase 2:</b> na última barra ele larga o talwar e o broquel e saca o nodachi — e perde o bônus de defesa do escudo.</p>"+
+    (drops?"<p><b>Recompensa:</b><br/>"+drops+"</p>":"");
+})();
+(function(){
+  var vistas=[["vista_cidade_do_inicio","Cidade do Início"],["vista_campos_abertos","Campos"],
+              ["vista_floresta_horunka","Floresta de Horunka"],["vista_lago_sylvaine","Lago Sylvaine"],
+              ["vista_labirinto_interior","Labirinto"]];
+  var box=document.getElementById("vistas");
+  vistas.forEach(function(v){
+    var fig=h("figure");
+    var img=new Image();
+    img.onload=function(){fig.insertBefore(img,fig.firstChild);};
+    img.onerror=function(){fig.insertBefore(h("div",{class:"ph"},"gerar_mapa_arte.py "+v[0].replace("vista_","vista_")),fig.firstChild);};
+    img.src=RAIZ+"imagens/"+v[0]+".png";img.alt=v[1];
+    fig.appendChild(h("figcaption",null,v[1]));
+    box.appendChild(fig);
+  });
+})();
+
+/* ---------------- planta da Cidade do Início ----------------
+   A planta NÃO é decorativa: usa as coordenadas reais dos pontos em
+   dados_mapa.js, normalizadas. Se um ponto se move no mapa do andar, ele se
+   move aqui junto — nunca desalinha. */
+(function(){
+  var svgc=document.getElementById("cityMap"),lista=document.getElementById("cidadeList");
+  if(!svgc)return;
+  var pts=PONTOS.filter(function(p){return p.regiao==="cidade_inicio";});
+  if(!pts.length)return;
+  var det=(typeof PONTOS_DETALHE!=="undefined")?PONTOS_DETALHE:{};
+
+  var xs=pts.map(function(p){return p.x;}),ys=pts.map(function(p){return p.y;});
+  var minX=Math.min.apply(null,xs),maxX=Math.max.apply(null,xs);
+  var minY=Math.min.apply(null,ys),maxY=Math.max.apply(null,ys);
+  var cxReal=(minX+maxX)/2, cyReal=(minY+maxY)/2;
+  var span=Math.max(maxX-minX,maxY-minY)||1;
+  var CX=450, CY=470, R=330, K=(R*0.74)/(span/2);
+  function px(p){return CX+(p.x-cxReal)*K;}
+  function py(p){return CY+(p.y-cyReal)*K;}
+  function e(tag,a){var x=el(tag,a);svgc.appendChild(x);return x;}
+
+  /* arte opcional: mapas/cidade_do_inicio_planta.png (gerar_mapa_arte.py cidade) */
+  var artEl2=document.getElementById("cityArt"),btnArt=document.getElementById("btnCityArt");
+  var temArte=false;
+  (function(){
+    var img=new Image();
+    img.onload=function(){
+      temArte=true;artEl2.setAttribute("href",RAIZ+"mapas/cidade_do_inicio_planta.png");
+      btnArt.textContent="Arte da planta: ligada";artEl2.style.display="";
+      document.getElementById("cityProg").textContent="Arte + esquema — clique num ponto";
+    };
+    img.onerror=function(){
+      btnArt.textContent="Sem arte (rode gerar_mapa_arte.py cidade)";
+      btnArt.style.opacity=".55";
+    };
+    img.src=RAIZ+"mapas/cidade_do_inicio_planta.png";
+  })();
+  btnArt.addEventListener("click",function(){
+    if(!temArte)return;
+    var lig=artEl2.style.display!=="none";
+    artEl2.style.display=lig?"none":"";
+    btnArt.textContent="Arte da planta: "+(lig?"desligada":"ligada");
+  });
+
+  e("circle",{cx:CX,cy:CY,r:R+9,fill:"#0e0b07",stroke:"#241a0f","stroke-width":"12"});
+  e("circle",{cx:CX,cy:CY,r:R,fill:"#171208",stroke:"#8c6f3e","stroke-width":"3"});
+  [0.78,0.56,0.34].forEach(function(f){
+    e("circle",{cx:CX,cy:CY,r:(R*f).toFixed(1),fill:"none",stroke:"#2f2617","stroke-width":"1.3"});
+  });
+  for(var a=0;a<16;a++){
+    var ang=a*Math.PI/8;
+    e("line",{x1:(CX+Math.cos(ang)*R*0.20).toFixed(1),y1:(CY+Math.sin(ang)*R*0.20).toFixed(1),
+      x2:(CX+Math.cos(ang)*R).toFixed(1),y2:(CY+Math.sin(ang)*R).toFixed(1),
+      stroke:"#2a2013","stroke-width":"1.1"});
+  }
+  for(var t=0;t<64;t++){
+    var at=(t/64)*Math.PI*2+0.09, rt=R*(0.26+((t*37)%100)/100*0.62);
+    e("rect",{x:(CX+Math.cos(at)*rt-5).toFixed(1),y:(CY+Math.sin(at)*rt-4).toFixed(1),
+      width:10,height:8,rx:1.5,fill:"#3b2519",stroke:"#5a3826","stroke-width":".8"});
+  }
+  e("circle",{cx:CX,cy:CY,r:R*0.19,fill:"#211a10",stroke:"#8c6f3e","stroke-width":"2"});
+  e("circle",{cx:CX,cy:CY,r:R*0.055,fill:"#57d9ff",opacity:.55});
+  e("circle",{cx:CX,cy:CY,r:R*0.10,fill:"none",stroke:"#3d7ca0","stroke-width":"1","stroke-dasharray":"3 4"});
+
+  e("rect",{x:CX-58,y:CY-R*0.94,width:116,height:70,fill:"#100d0b",stroke:"#8c6f3e","stroke-width":"2",rx:3});
+  [-40,0,40].forEach(function(o){
+    e("rect",{x:CX+o-8,y:CY-R*0.94-20,width:16,height:22,fill:"#100d0b",stroke:"#8c6f3e","stroke-width":"1.6",rx:2});
+  });
+  var ct=e("text",{x:CX,y:CY-R*0.94+42,"text-anchor":"middle",fill:"#d9ad5e",
+    "font-family":"var(--f-disp)","font-size":"13"});
+  ct.textContent="Castelo de Ferro Negro";
+
+  var pl=pts.filter(function(p){return p.id==="cidade_lago";})[0];
+  if(pl)e("ellipse",{cx:px(pl),cy:py(pl),rx:46,ry:30,fill:"#1e3d52",stroke:"#3d7ca0","stroke-width":"1.4"});
+
+  [["N",0,-1],["L",1,0],["S",0,1],["O",-1,0]].forEach(function(g){
+    var gx=CX+g[1]*R, gy=CY+g[2]*R;
+    e("circle",{cx:gx,cy:gy,r:7,fill:"#d9ad5e",stroke:"#1a1207","stroke-width":"1.5"});
+    var tg=e("text",{x:gx+g[1]*22,y:gy+g[2]*22+4,"text-anchor":"middle",fill:"#8c6f3e",
+      "font-family":"var(--f-mono)","font-size":"12"});
+    tg.textContent=g[0];
+  });
+
+  lista.textContent="";
+  pts.forEach(function(p,i){
+    var x=px(p),y=py(p);
+    var cor=(CATEGORIAS[p.categoria]||{}).cor||"#57d9ff";
+    var temDet=!!det[p.id];
+    var g=el("g",{class:"node disc",tabindex:"0",role:"button","aria-label":p.nome});
+    if(temDet)g.appendChild(el("circle",{cx:x,cy:y,r:15,fill:"none",stroke:"#d9ad5e",
+      "stroke-width":1.3,opacity:.9}));
+    var c=el("circle",{class:"pin",cx:x,cy:y,r:11});c.setAttribute("fill",cor);g.appendChild(c);
+    var num=el("text",{class:"gl",x:x,y:y});num.textContent=String(i+1);g.appendChild(num);
+    var tt=el("title");tt.textContent=p.nome;g.appendChild(tt);
+    var lb=el("text",{class:"lbl",x:x,y:y-18});lb.textContent=p.nome;g.appendChild(lb);
+    g.addEventListener("click",function(){cityDetalhe(p);});
+    svgc.appendChild(g);
+
+    var li=h("li");li.appendChild(h("span",{class:"badge"},String(i+1)));
+    li.appendChild(h("b",null,p.nome));
+    if(temDet){var tg2=h("span",{class:"tag gold"},"ficha");tg2.style.marginLeft="auto";li.appendChild(tg2);}
+    li.addEventListener("click",function(){cityDetalhe(p);});
+    lista.appendChild(li);
+  });
+
+  function cityDetalhe(p){
+    var box=document.getElementById("cityDetail");
+    var d=det[p.id];
+    var cat=CATEGORIAS[p.categoria]||{label:p.categoria};
+    var html='<div class="eyebrow">'+esc(cat.label)+'</div><h3>'+esc(p.nome)+"</h3>";
+    if(d&&d.leitura)html+='<div class="quote">'+esc(d.leitura.slice(0,200))+
+      (d.leitura.length>200?"…":"")+"</div>";
+    if(d&&d.oque)html+="<p>"+esc(d.oque)+"</p>";
+    else if(p.desc)html+="<p>"+esc(p.desc)+"</p>";
+    if(p.vende)html+="<p><b>Vende:</b> "+esc(p.vende)+"</p>";
+    if(d&&d.acoes&&d.acoes.length)
+      html+="<p><b>"+d.acoes.length+" ações com teste</b> na ficha completa.</p>";
+    var f=acharFicha(p.ref);
+    html+='<div class="act">'+
+      (d?'<button data-c="local">Ficha do local</button>':"")+
+      (f?'<button class="ghost" data-c="ref">'+esc(f.d.nome)+"</button>":"")+"</div>";
+    box.innerHTML=html;
+    Array.prototype.forEach.call(box.querySelectorAll("[data-c]"),function(b){
+      b.addEventListener("click",function(){
+        if(b.dataset.c==="local")fichaPonto(p.id);
+        else if(f){if(f.tipo==="monstro")fichaMonstro(f.d.id);else fichaNpc(f.d.id);}
+      });
+    });
+  }
+  cityDetalhe(pts[0]);
+})();
+
+/* ---------------- dungeons ---------------- */
+(function(){
+  var atual=DUNGEONS[0],salaSel=null;
+  var tabs=document.getElementById("dgnTabs"),svgd=document.getElementById("dgnMap");
+  DUNGEONS.forEach(function(d,i){
+    var b=h("span",{class:"chip"+(i===0?" on":"")},d.nome);
+    b.addEventListener("click",function(){
+      Array.prototype.forEach.call(tabs.children,function(c){c.classList.remove("on");});
+      b.classList.add("on");atual=d;salaSel=null;desenhar();
+    });
+    tabs.appendChild(b);
+  });
+  var leg=document.getElementById("dgnLegend");
+  Object.keys(TIPOS_SALA).forEach(function(k){
+    var t=TIPOS_SALA[k],li=h("li");
+    var d=h("span",{class:"dot"});d.style.background=t.cor;li.appendChild(d);
+    li.appendChild(document.createTextNode(t.icone+"  "+t.label));
+    leg.appendChild(li);
+  });
+  function desenhar(){
+    document.getElementById("dgnInfo").innerHTML=
+      '<div class="panel-title">'+esc(atual.nome)+'<span class="aux">'+esc(atual.nivel)+"</span></div>"+
+      "<p><b>"+esc(atual.regiao)+"</b> — "+esc(atual.perfil)+"</p><p>"+esc(atual.nota)+"</p>";
+    svgd.textContent="";
+    var largura=atual.setores.length>1?1000:1000;
+    svgd.setAttribute("viewBox","0 0 "+largura+" 520");
+    atual.setores.forEach(function(s,i){
+      var salas=atual.salas.filter(function(x){return x.setor===s.id;});
+      if(!salas.length)return;
+      var minx=Math.min.apply(null,salas.map(function(x){return x.x;}))-58;
+      var maxx=Math.max.apply(null,salas.map(function(x){return x.x;}))+58;
+      var g=el("g",{class:"setor"});
+      g.appendChild(el("rect",{x:minx,y:26,width:maxx-minx,height:478,rx:"6"}));
+      var t=el("text",{x:minx+8,y:18});t.textContent=s.nome+" · "+s.subtitulo;g.appendChild(t);
+      svgd.appendChild(g);
+    });
+    var pos={};atual.salas.forEach(function(s){pos[s.id]=s;});
+    atual.ligacoes.forEach(function(l){
+      var a=pos[l[0]],b=pos[l[1]];if(!a||!b)return;
+      svgd.appendChild(el("path",{class:"aresta",d:"M"+a.x+" "+a.y+" L"+b.x+" "+b.y}));
+    });
+    atual.salas.forEach(function(s){
+      var t=TIPOS_SALA[s.tipo]||{cor:"#888",icone:"·"};
+      var g=el("g",{class:"sala"+(salaSel===s.id?" sel":""),tabindex:"0",role:"button"});
+      var r=el("rect",{x:s.x-46,y:s.y-19,width:92,height:38});r.setAttribute("fill",t.cor);
+      r.setAttribute("fill-opacity",".22");r.setAttribute("stroke",t.cor);g.appendChild(r);
+      var ic=el("text",{class:"ic",x:s.x-32,y:s.y});ic.setAttribute("fill",t.cor);ic.textContent=t.icone;g.appendChild(ic);
+      var nm=el("text",{class:"nm",x:s.x+8,y:s.y+3.5});
+      nm.textContent=s.nome.length>17?s.nome.slice(0,16)+"…":s.nome;g.appendChild(nm);
+      var tt=el("title");tt.textContent=s.nome;g.appendChild(tt);
+      g.addEventListener("click",function(){salaSel=s.id;desenhar();detalheSala(s);fichaSala(s.id);});
+      svgd.appendChild(g);
+    });
+    if(salaSel){var s=pos[salaSel];if(s)detalheSala(s);}
+  }
+  function detalheSala(s){
+    var t=TIPOS_SALA[s.tipo]||{label:s.tipo},d=SALAS_DUNGEON[s.id];
+    var h='<div class="eyebrow">'+esc(t.label)+" · "+esc(atual.nome)+'</div><h3>'+esc(s.nome)+"</h3>";
+    if(d&&d.leitura)h+='<div class="quote">'+esc(d.leitura.slice(0,220))+(d.leitura.length>220?"…":"")+"</div>";
+    h+="<p>"+esc(s.txt)+"</p>";
+    h+='<div class="act"><button data-sala="'+esc(s.id)+'">Ficha completa da sala</button></div>';
+    var box=document.getElementById("dgnDetail");box.innerHTML=h;
+    var b=box.querySelector("[data-sala]");
+    if(b)b.addEventListener("click",function(){fichaSala(s.id);});
+  }
+  desenhar();
+})();
+
+/* ---------------- catálogos ---------------- */
+function cardImg(src,alt,fallbackTxt){
+  if(src)return '<img class="cimg" src="'+RAIZ+esc(src)+'" alt="'+esc(alt)+'" loading="lazy"/>';
+  return '<div class="noimg">'+esc(fallbackTxt||"sem imagem gerada")+"</div>";
+}
+function filtraTxt(lista,q,campos){
+  q=norm(q).trim();if(!q)return lista;
+  return lista.filter(function(x){
+    return campos.some(function(c){return norm(x[c]||"").indexOf(q)>=0;});
+  });
+}
+function pintaGrid(alvo,itens,fn,vazio,onClick){
+  alvo.textContent="";
+  if(!itens.length){alvo.appendChild(h("div",{class:"empty"},vazio||"Nada encontrado."));return;}
+  itens.forEach(function(it){
+    var c=h("div",{class:"card"+(onClick?" clickable":""),html:fn(it)});
+    if(onClick){c.tabIndex=0;c.setAttribute("role","button");
+      c.addEventListener("click",function(){onClick(it);});
+      c.addEventListener("keypress",function(e){if(e.key==="Enter")onClick(it);});}
+    alvo.appendChild(c);
+  });
+}
+
+/* NPCs */
+(function(){
+  var alvo=document.getElementById("gridNpcs"),q=document.getElementById("qNpc");
+  function render(){
+    pintaGrid(alvo,filtraTxt(NPCS,q.value,["nome","local","profissao","papel","resumo"]),function(n){
+      return cardImg(n.img,n.nome,"npc_"+n.id+".png — gerar com gerar_imagem.py")+
+        '<div class="ct">'+esc(n.nome)+"</div>"+
+        '<div class="cs">'+esc(n.papel||"—")+" · "+esc(n.local||"—")+"</div>"+
+        "<p>"+esc(n.resumo)+"</p>"+
+        '<div class="row">'+(n.profissao?'<span class="tag cy">'+esc(n.profissao)+"</span>":"")+
+        (n.arma?'<span class="tag">'+esc(n.arma)+"</span>":"")+
+        (n.canonico==="sim"?'<span class="tag gold">canônico</span>':"")+"</div>"+
+        (n.falas&&n.falas.length?'<div class="quote" style="font-size:12px">'+esc(n.falas[0])+"</div>":"")+
+        (n.gancho?"<p><b>Gancho:</b> "+esc(n.gancho)+"</p>":"")+
+        '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para a ficha completa →</p>';
+    },null,function(n){fichaNpc(n.id);});
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Bestiário */
+(function(){
+  var alvo=document.getElementById("gridMon"),q=document.getElementById("qMon"),bar=document.getElementById("barBest");
+  var f="todos";
+  [["todos","Todos"],["fraco","Fraco"],["comum","Comum"],["forte","Forte"],["elite","Elite"],
+   ["chefe","Chefe"],["domavel","Domáveis"]].forEach(function(x){
+    var c=h("span",{class:"chip"+(x[0]==="todos"?" on":"")},x[1]);
+    c.addEventListener("click",function(){
+      Array.prototype.forEach.call(bar.querySelectorAll(".chip"),function(o){o.classList.remove("on");});
+      c.classList.add("on");f=x[0];render();
+    });
+    bar.appendChild(c);
+  });
+  function render(){
+    var lista=filtraTxt(MONSTROS,q.value,["nome","tipo","local","resumo","ameaca","fraqueza","domaRequisito","notas"]);
+    if(f==="domavel")lista=lista.filter(function(m){return m.domavel==="sim";});
+    else if(f!=="todos")lista=lista.filter(function(m){return m.ameaca===f;});
+    pintaGrid(alvo,lista,function(m){
+      var drops=(m.drops||[]).map(function(d){return esc(d.item)+" <i>"+esc(d.chance)+"</i>";}).join(" · ");
+      return cardImg(m.img,m.nome,"monstro_"+m.id+".png — gerar com --prompt-bruto")+
+        '<div class="ct">'+esc(m.nome)+"</div>"+
+        '<div class="cs">'+esc(cap(m.tipo))+" · "+esc(m.local)+"</div>"+
+        "<p>"+esc(m.resumo)+"</p>"+
+        '<div class="row"><span class="tag red">'+esc(m.ameaca)+"</span>"+
+        '<span class="tag">'+esc(m.golpes)+" golpes</span>"+
+        (m.domavel==="sim"?'<span class="tag cy">domável · '+esc(m.domaSucessos)+"</span>":"")+
+        (m.canonico==="sim"?'<span class="tag gold">canônico</span>':"")+"</div>"+
+        (m.fraqueza?"<p><b>Ponto fraco:</b> "+esc(m.fraqueza)+"</p>":"")+
+        (drops?'<p style="font-size:11.5px"><b>Drop:</b> '+drops+"</p>":"")+
+        '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para a ficha completa →</p>';
+    },null,function(m){fichaMonstro(m.id);});
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Armas */
+(function(){
+  var alvo=document.getElementById("gridArm"),q=document.getElementById("qArm"),bar=document.getElementById("barArm");
+  var f="todas";
+  [["todas","Todas"],["Comum","Comum"],["Incomum","Incomum"],["Raro","Raro"]].forEach(function(x){
+    var c=h("span",{class:"chip"+(x[0]==="todas"?" on":"")},x[1]);
+    c.addEventListener("click",function(){
+      Array.prototype.forEach.call(bar.querySelectorAll(".chip"),function(o){o.classList.remove("on");});
+      c.classList.add("on");f=x[0];render();
+    });
+    bar.appendChild(c);
+  });
+  function render(){
+    var lista=filtraTxt(ARMAS,q.value,["nome","tipo","atributo","resumo","obter"]);
+    if(f!=="todas")lista=lista.filter(function(a){return a.raridade===f;});
+    lista=lista.slice().sort(function(a,b){
+      return (a.tipo||"").localeCompare(b.tipo||"")||(a.raridade||"").localeCompare(b.raridade||"");
+    });
+    pintaGrid(alvo,lista,function(a){
+      return (a.img?cardImg(a.img,a.nome):"")+
+        '<div class="ct">'+esc(a.nome)+"</div>"+
+        '<div class="cs">'+esc(a.tipo)+(a.atributo?" · "+esc(a.atributo):"")+"</div>"+
+        '<div class="row"><span class="rar '+esc(a.raridade)+'">'+esc(a.raridade)+"</span>"+
+        (a.precoTxt?'<span class="tag">'+esc(a.precoTxt)+"</span>":"")+
+        (a.requisito?'<span class="tag">'+esc(a.requisito)+"</span>":"")+"</div>"+
+        "<p>"+esc(a.resumo)+"</p>"+
+        (a.efeito?"<p><b>Efeito:</b> "+esc(a.efeito)+"</p>":"")+
+        (a.obter?'<p style="font-size:11.5px"><b>Como obter:</b> '+esc(a.obter)+"</p>":"")+
+        (a.skills&&a.skills.length?'<div class="row">'+a.skills.map(function(s){
+          return '<span class="tag gold">'+esc(s)+"</span>";}).join("")+"</div>":"");
+    },null,function(a){fichaItem(a,"Arma");});
+  }
+  q.addEventListener("input",render);render();
+  var t=document.getElementById("skillsTbl");
+  t.innerHTML="<tr><th>Arma</th><th>Atr.</th><th>Move de Combate</th><th>Move Utilitário</th></tr>";
+  MOVES_ARMA.forEach(function(m){
+    var tr=h("tr");
+    tr.appendChild(h("td",{class:"nome"},m.nome));
+    tr.appendChild(h("td",null,m.atributo));
+    tr.appendChild(h("td",null,(m.moveA.titulo||"—")));
+    tr.appendChild(h("td",null,(m.moveB.titulo||"—")));
+    tr.tabIndex=0;tr.style.cursor="pointer";
+    tr.addEventListener("click",function(){
+      abrirFicha("Move de Arma",m.nome,blocoMove(m,m.nome));
+    });
+    t.appendChild(tr);
+  });
+})();
+
+/* Equipamentos */
+(function(){
+  var alvo=document.getElementById("eqSlots"),q=document.getElementById("qEq"),bar=document.getElementById("barEq");
+  var f="todos";
+  document.getElementById("eqRegras").innerHTML=
+    "<b>Teto de bônus:</b> um mesmo teste nunca recebe mais de +1 de equipamento — vale o maior, "+
+    "bônus iguais não somam. Efeitos não-numéricos (usos por sessão, imunidades) empilham normalmente. "+
+    "Regras completas em <code>equipamentos/00_indice.md</code>.";
+  var slots=[];EQUIPAMENTOS.forEach(function(e){if(slots.indexOf(e.slot)<0)slots.push(e.slot);});
+  [["todos","Todos"]].concat(slots.map(function(s){return [s,s];})).forEach(function(x){
+    var c=h("span",{class:"chip"+(x[0]==="todos"?" on":"")},x[1]);
+    c.addEventListener("click",function(){
+      Array.prototype.forEach.call(bar.querySelectorAll(".chip"),function(o){o.classList.remove("on");});
+      c.classList.add("on");f=x[0];render();
+    });
+    bar.appendChild(c);
+  });
+  function render(){
+    alvo.textContent="";
+    var lista=filtraTxt(EQUIPAMENTOS,q.value,["nome","slot","resumo","efeito","obter","raridade"]);
+    var mostrar=f==="todos"?slots:[f];
+    var achou=false;
+    mostrar.forEach(function(s){
+      var itens=lista.filter(function(e){return e.slot===s;});
+      if(!itens.length)return;
+      achou=true;
+      alvo.appendChild(h("h3",{class:"section-h"},s+" ("+itens.length+")"));
+      var g=h("div",{class:"grid"});
+      itens.forEach(function(e){
+        var card=h("div",{class:"card clickable",html:
+          (e.img?cardImg(e.img,e.nome):"")+
+          '<div class="ct">'+esc(e.nome)+"</div>"+
+          '<div class="row"><span class="rar '+esc(e.raridade)+'">'+esc(e.raridade)+"</span>"+
+          '<span class="tag">'+esc(e.precoTxt)+"</span>"+
+          (e.requisito&&e.requisito!=="—"?'<span class="tag">'+esc(e.requisito)+"</span>":"")+
+          (e.conjunto?'<span class="tag gold">conjunto</span>':"")+"</div>"+
+          "<p>"+esc(e.resumo)+"</p>"+
+          (e.efeito?"<p><b>Efeito:</b> "+esc(e.efeito)+"</p>":"")+
+          (e.obter?'<p style="font-size:11.5px"><b>Como obter:</b> '+esc(e.obter)+"</p>":"")
+        });
+        card.tabIndex=0;card.setAttribute("role","button");
+        card.addEventListener("click",function(){fichaItem(e,"Equipamento · "+e.slot);});
+        g.appendChild(card);
+      });
+      alvo.appendChild(g);
+    });
+    if(!achou)alvo.appendChild(h("div",{class:"empty"},"Nada encontrado."));
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Mercado */
+(function(){
+  var alvo=document.getElementById("gridMerc"),q=document.getElementById("qMerc");
+  function render(){
+    var termo=norm(q.value).trim();
+    var lista=MERCADO.filter(function(v){
+      if(!termo)return true;
+      if(norm(v.nome).indexOf(termo)>=0||norm(v.regiao).indexOf(termo)>=0)return true;
+      return v.itens.some(function(i){return norm(i.item).indexOf(termo)>=0;});
+    });
+    pintaGrid(alvo,lista,function(v){
+      var linhas=v.itens.map(function(i){
+        return "<tr><td class='nome'>"+esc(i.item)+"</td><td>"+esc(i.col)+"</td><td>"+esc(i.obs)+"</td></tr>";
+      }).join("");
+      return '<div class="ct">'+esc(v.nome)+"</div>"+
+        '<div class="cs">'+esc(v.regiao)+"</div>"+
+        (v.desc?"<p>"+esc(v.desc)+"</p>":"")+
+        (v.desconto?'<p><b>Desconto:</b> '+esc(v.desconto)+"</p>":"")+
+        '<table class="tbl"><tr><th>Item</th><th>Col</th><th>Obs</th></tr>'+linhas+"</table>";
+    });
+  }
+  q.addEventListener("input",render);render();
+  var t=document.getElementById("tblCompra");
+  t.innerHTML="<tr><th>Material</th><th>NPC paga</th><th>Quem quer comprar</th></tr>";
+  COMPRA_MATERIAIS.forEach(function(c){
+    var tr=h("tr");tr.appendChild(h("td",{class:"nome"},c.material));
+    tr.appendChild(h("td",null,c.col));tr.appendChild(h("td",null,c.quem));t.appendChild(tr);
+  });
+})();
+
+/* Quests */
+(function(){
+  var alvo=document.getElementById("questChains"),q=document.getElementById("qQuest"),bar=document.getElementById("barQ");
+  var f="todas";
+  var TIERS=["Fácil","Médio","Difícil","Muito Difícil"];
+  [["todas","Todas"],["Fácil","Fácil"],["Médio","Médio"],["Difícil","Difícil"],
+   ["Muito Difícil","Muito Difícil"],["especiais","Fora da escala"]]
+  .forEach(function(x){
+    var c=h("span",{class:"chip"+(x[0]==="todas"?" on":"")},x[1]);
+    c.addEventListener("click",function(){
+      Array.prototype.forEach.call(bar.querySelectorAll(".chip"),function(o){o.classList.remove("on");});
+      c.classList.add("on");f=x[0];render();
+    });
+    bar.appendChild(c);
+  });
+  var classeDif=classeDificuldade;
+  function render(){
+    alvo.textContent="";
+    var lista=filtraTxt(QUESTS,q.value,["titulo","id","regiao","npc","cadeia","resumo","tipo"]);
+    if(f==="especiais")lista=lista.filter(function(x){return TIERS.indexOf(x.dificuldade||"")<0;});
+    else if(f!=="todas")lista=lista.filter(function(x){return (x.dificuldade||"")===f;});
+    var cadeias=[];lista.forEach(function(x){if(cadeias.indexOf(x.cadeia)<0)cadeias.push(x.cadeia);});
+    if(!lista.length){alvo.appendChild(h("div",{class:"empty"},"Nada encontrado."));return;}
+    cadeias.forEach(function(cd){
+      var itens=lista.filter(function(x){return x.cadeia===cd;});
+      alvo.appendChild(h("h3",{class:"section-h"},(cd||"Sem cadeia")+" ("+itens.length+")"));
+      var g=h("div",{class:"grid"});
+      itens.forEach(function(x){
+        var card=h("div",{class:"card clickable",html:
+          '<div class="ct">'+esc(x.titulo)+"</div>"+
+          '<div class="cs">'+esc(x.id)+"</div>"+
+          '<div class="row"><span class="tier '+classeDif(x.dificuldade)+'">'+esc(x.dificuldade||"—")+"</span>"+
+          (x.tipo?'<span class="tag">'+esc(x.tipo)+"</span>":"")+
+          (x.regiao?'<span class="tag cy">'+esc(x.regiao)+"</span>":"")+"</div>"+
+          "<p>"+esc(x.resumo)+"</p>"+
+          (x.npc?'<p style="font-size:11.5px"><b>NPC:</b> '+esc(x.npc)+"</p>":"")+
+          '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para a quest inteira →</p>'
+        });
+        card.tabIndex=0;card.setAttribute("role","button");
+        card.addEventListener("click",function(){fichaQuest(x.id);});
+        g.appendChild(card);
+      });
+      alvo.appendChild(g);
+    });
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Crônicas de Aincrad — 50 one-shots (Temporada 1) */
+(function(){
+  var alvo=document.getElementById("cronicaLista"),q=document.getElementById("qCronica"),bar=document.getElementById("barCronica");
+  if(!alvo)return;
+  var f="todas";
+  [["todas","Todas"],["A","Arco A"],["B","Arco B (Cardinal)"]]
+  .forEach(function(x){
+    var c=h("span",{class:"chip"+(x[0]==="todas"?" on":"")},x[1]);
+    c.addEventListener("click",function(){
+      Array.prototype.forEach.call(bar.querySelectorAll(".chip"),function(o){o.classList.remove("on");});
+      c.classList.add("on");f=x[0];render();
+    });
+    bar.appendChild(c);
+  });
+  function arcoDe(x){return /Arco B/.test(x.conexoes||"")?"B":"A";}
+  function render(){
+    alvo.textContent="";
+    var lista=(typeof CRONICAS!=="undefined"?CRONICAS:[]);
+    lista=filtraTxt(lista,q.value,["titulo","id","epRotulo","regiao","conexoes","elenco","resumo","tipo"]);
+    if(f!=="todas")lista=lista.filter(function(x){return arcoDe(x)===f;});
+    if(!lista.length){alvo.appendChild(h("div",{class:"empty"},"Nada encontrado."));return;}
+    var g=h("div",{class:"grid"});
+    lista.forEach(function(x){
+      var card=h("div",{class:"card clickable",html:
+        '<div class="ct">'+esc(x.epRotulo)+" — "+esc(x.titulo)+"</div>"+
+        '<div class="row"><span class="tier '+classeDificuldade(x.dificuldade)+'">'+esc(x.dificuldade||"—")+"</span>"+
+        (x.tipo?'<span class="tag">'+esc(x.tipo)+"</span>":"")+
+        (x.regiao?'<span class="tag cy">'+esc(x.regiao)+"</span>":"")+
+        '<span class="tag gold">Arco '+arcoDe(x)+"</span></div>"+
+        "<p>"+esc(x.resumo)+"</p>"+
+        (x.elenco?'<p style="font-size:11.5px"><b>Elenco:</b> '+esc(x.elenco)+"</p>":"")+
+        '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para o episódio inteiro →</p>'
+      });
+      card.tabIndex=0;card.setAttribute("role","button");
+      card.addEventListener("click",function(){fichaCronica(x.id);});
+      g.appendChild(card);
+    });
+    alvo.appendChild(g);
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Moves de Arma e Profissão (aba Sistema) */
+(function(){
+  function pinta(alvoId,lista,rotulo){
+    var alvo=document.getElementById(alvoId);
+    if(!alvo)return;
+    pintaGrid(alvo,lista,function(m){
+      return '<div class="ct">'+esc(m.nome)+"</div>"+
+        '<div class="cs">'+esc(m.atributo)+"</div>"+
+        "<p>"+esc((m.marca||"").slice(0,150))+((m.marca||"").length>150?"…":"")+"</p>"+
+        '<div class="row"><span class="tag gold">'+esc(m.moveA.titulo||"—")+"</span>"+
+        '<span class="tag cy">'+esc(m.moveB.titulo||"—")+"</span></div>";
+    },"Nada aqui.",function(m){abrirFicha(rotulo,m.nome,blocoMove(m,m.nome));});
+  }
+  pinta("gridMovesArma",MOVES_ARMA,"Move de Arma");
+  pinta("gridMovesProf",MOVES_PROFISSAO,"Move de Profissão");
+})();
+
+/* Ofícios */
+function fichaOficio(nome){
+  var o=null;(typeof OFICIOS!=="undefined"?OFICIOS:[]).forEach(function(x){if(x.nome===nome)o=x;});
+  if(!o)return;
+  var h='<p><span class="tag cy">'+esc(o.atributo)+"</span></p>";
+  if(o.marca)h+="<p><b>Marca:</b> "+esc(o.marca)+"</p>";
+  if(o.acoes.length){
+    h+="<h3>Ações de Ofício</h3><p style=\"font-size:12px;color:var(--ink-faint)\">Funcionam "+
+       "em qualquer lugar onde a ficção permitir. Não precisa de preparo do mestre.</p>"+
+       "<table><tr><th>Ação</th><th>Teste</th><th>10+</th><th>7-9</th><th>6-</th></tr>";
+    o.acoes.forEach(function(a){
+      h+="<tr><td><b>"+esc(a.acao)+"</b></td><td>"+esc(a.teste)+"</td><td>"+esc(a.sucesso)+
+         "</td><td>"+esc(a.parcial)+"</td><td>"+esc(a.falha)+"</td></tr>";
+    });
+    h+="</table>";
+  }
+  if(o.postos.length){
+    h+="<h3>Postos de trabalho</h3>";
+    o.postos.forEach(function(x){
+      var pt=pontosPorId[x.ponto];
+      h+="<p><b>"+esc(pt?pt.nome:x.ponto)+"</b> — "+esc(x.txt)+"</p>";
+    });
+  }
+  var pr=(typeof PRODUCAO!=="undefined")?PRODUCAO[o.nome]:null;
+  if(pr&&pr.itens.length){
+    h+="<h3>Produção <span style=\"font-family:var(--f-mono);font-size:11px;"+
+       "color:var(--ink-faint)\">moeda: "+esc(pr.moeda)+"</span></h3>";
+    h+='<p style="font-size:12px;color:var(--ink-faint)">Serviço e conhecimento são '+
+       "vendáveis igual a item: um mapa, uma escolta ou um diagnóstico têm preço em Col.</p>";
+    h+="<table><tr><th>Produz</th><th>Precisa de</th><th>Teste</th><th>10+</th><th>7-9</th></tr>";
+    pr.itens.forEach(function(x){
+      h+="<tr><td><b>"+esc(x.produz)+"</b></td><td>"+esc(x.precisa)+"</td><td>"+esc(x.teste)+
+         "</td><td>"+esc(x.sucesso)+"</td><td>"+esc(x.parcial)+"</td></tr>";
+    });
+    h+="</table>";
+    if(pr.vale)h+="<p><b>Vale:</b> "+esc(pr.vale)+"</p>";
+  }
+  if(o.contato)h+="<h3>Contato</h3><p>"+esc(o.contato)+"</p>";
+  if(o.gancho)h+='<div class="gmbox"><span class="rl">Gancho recorrente</span><p>'+esc(o.gancho)+"</p></div>";
+  if(o.renda)h+="<p><b>Renda:</b> "+esc(o.renda)+"</p>";
+  if(o.item)h+="<p><b>Item assinatura:</b> "+esc(o.item)+"</p>";
+  h+='<p style="color:var(--ink-faint);font-size:11.5px">Fonte: <code>'+esc(o.arquivo)+"</code></p>";
+  var lk=[];
+  o.postos.forEach(function(x){
+    if(pontosPorId[x.ponto])lk.push({k:"ponto:"+x.ponto,t:"⌖ "+pontosPorId[x.ponto].nome});
+  });
+  var mv=null;(typeof MOVES_PROFISSAO!=="undefined"?MOVES_PROFISSAO:[]).forEach(function(x){
+    if(x.nome===o.nome)mv=x;});
+  if(mv)h+=blocoMove(mv,"Move de "+mv.nome);
+  abrirFicha("Ofício · "+o.atributo,o.nome,h,linksHtml(lk));
+}
+
+(function(){
+  var alvo=document.getElementById("gridOfi"),q=document.getElementById("qOfi"),
+      bar=document.getElementById("barOfi");
+  if(!alvo||typeof OFICIOS==="undefined")return;
+  var moeda="todas";
+  [["todas","Todas"],["Matéria","Matéria"],["Serviço","Serviço"],["Conhecimento","Conhecimento"]]
+  .forEach(function(x){
+    var c=h("span",{class:"chip"+(x[0]==="todas"?" on":"")},x[1]);
+    c.addEventListener("click",function(){
+      Array.prototype.forEach.call(bar.querySelectorAll(".chip"),function(o){o.classList.remove("on");});
+      c.classList.add("on");moeda=x[0];render();
+    });
+    bar.appendChild(c);
+  });
+  function render(){
+    var termo=norm(q.value).trim();
+    var lista=OFICIOS.filter(function(o){
+      if(moeda!=="todas"){
+        var pr=(typeof PRODUCAO!=="undefined")?PRODUCAO[o.nome]:null;
+        if(!pr||pr.moeda!==moeda)return false;
+      }
+      if(!termo)return true;
+      var pr2=(typeof PRODUCAO!=="undefined")?PRODUCAO[o.nome]:null;
+      var txt=o.nome+o.atributo+o.marca+o.contato+o.gancho+o.renda+o.item+
+        (pr2?pr2.moeda+pr2.vale+pr2.itens.map(function(x){return x.produz+x.precisa;}).join(" "):"")+
+        o.acoes.map(function(a){return a.acao+a.sucesso;}).join(" ")+
+        o.postos.map(function(x){var pt=pontosPorId[x.ponto];return (pt?pt.nome:"")+x.txt;}).join(" ");
+      return norm(txt).indexOf(termo)>=0;
+    });
+    pintaGrid(alvo,lista,function(o){
+      return '<div class="ct">'+esc(o.nome)+"</div>"+
+        '<div class="cs">'+esc(o.atributo)+
+          ((typeof PRODUCAO!=="undefined"&&PRODUCAO[o.nome])
+            ? " · produz "+esc(PRODUCAO[o.nome].moeda) : "")+"</div>"+
+        "<p>"+esc(o.marca)+"</p>"+
+        '<div class="row"><span class="tag gold">'+o.acoes.length+" ações</span>"+
+        '<span class="tag cy">'+o.postos.length+" postos</span>"+
+        (o.item?'<span class="tag">'+esc(o.item.replace(/`/g,""))+"</span>":"")+"</div>"+
+        '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para o ofício inteiro →</p>';
+    },"Nada encontrado.",function(o){fichaOficio(o.nome);});
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Clãs */
+(function(){
+  var alvo=document.getElementById("gridClas"),q=document.getElementById("qCla");
+  if(!alvo||typeof CLAS==="undefined")return;
+  function render(){
+    var lista=filtraTxt(CLAS,q.value,["nome","forca","necessidade","rival","rumor","resumo","bons"]);
+    pintaGrid(alvo,lista,function(c){
+      return '<div class="ct">'+esc(c.nome)+(c.destaque?' <span class="tag gold">em foco</span>':"")+"</div>"+
+        '<div class="cs">'+esc(c.forca)+"</div>"+
+        "<p>"+esc(c.resumo)+"</p>"+
+        '<div class="row"><span class="tag cy">rival: '+esc(c.rival)+"</span>"+
+        '<span class="tag">'+esc(c.status)+"</span></div>"+
+        '<div class="quote" style="font-size:12px">"'+esc(c.rumor)+'"</div>'+
+        '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para a ficha completa →</p>';
+    },"Nada encontrado.",function(c){fichaCla(c.nome);});
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Guia das Regiões */
+(function(){
+  var alvo=document.getElementById("gridGuias"),q=document.getElementById("qGuia");
+  function render(){
+    var lista=filtraTxt(GUIAS,q.value,["nome","bioma","nivel","cena","mestre","leitura","chegada"]);
+    var termo=norm(q.value).trim();
+    if(termo)lista=GUIAS.filter(function(g){
+      if(norm(g.nome+" "+g.bioma+" "+g.cena+" "+g.mestre+" "+g.leitura).indexOf(termo)>=0)return true;
+      return (g.locais||[]).some(function(l){return norm(l.nome+" "+l.txt).indexOf(termo)>=0;});
+    });
+    pintaGrid(alvo,lista,function(g){
+      return '<div class="ct">'+esc(g.nome)+"</div>"+
+        '<div class="cs">'+esc(g.bioma)+" · nível "+esc(g.nivel)+"</div>"+
+        '<div class="readbox" style="font-size:12.5px;margin:4px 0 8px">'+
+          esc((g.leitura||"").slice(0,190))+(g.leitura.length>190?"…":"")+"</div>"+
+        '<div class="row"><span class="tag gold">'+(g.acoes||[]).length+" ações</span>"+
+        '<span class="tag">'+(g.locais||[]).length+" locais</span>"+
+        '<span class="tag cy">'+(g.ligado||[]).length+" ligações</span>"+
+        (g.evento?'<span class="tag gold">evento vivo</span>':"")+"</div>"+
+        '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para o roteiro completo →</p>';
+    },"Nenhuma região encontrada.",function(g){fichaGuia(g.id);});
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* Puzzles */
+(function(){
+  var alvo=document.getElementById("gridPuz"),q=document.getElementById("qPuz");
+  function render(){
+    var lista=filtraTxt(PUZZLES,q.value,["nome","regiao","tipo","verdade","recompensa","corpo"]);
+    pintaGrid(alvo,lista,function(p){
+      return '<div class="ct">'+p.n+". "+esc(p.nome)+"</div>"+
+        '<div class="cs">'+esc(p.regiao)+"</div>"+
+        '<div class="row"><span class="tag gold">'+esc(p.tipo)+"</span>"+
+        (p.duracao?'<span class="tag">'+esc(p.duracao)+"</span>":"")+"</div>"+
+        "<p>"+esc((p.verdade||"").replace(/\n/g," ").slice(0,220))+"…</p>"+
+        '<p style="color:var(--gold-dim);font-family:var(--f-mono);font-size:10px">Clique para o puzzle inteiro →</p>';
+    },"Nenhum puzzle encontrado.",function(p){fichaPuzzle(p.n);});
+  }
+  q.addEventListener("input",render);render();
+})();
+
+/* ---------------- sistema: consulta rápida ---------------- */
+(function(){
+  document.getElementById("systemVersion").textContent=SISTEMA_NUCLEO.versao;
+  var moves=document.getElementById("coreMoves");
+  SISTEMA_NUCLEO.moves.forEach(function(m){
+    moves.appendChild(h("div",{class:"card",html:
+      '<div class="ct">'+esc(m.nome)+'</div><div class="cs">2d6+'+esc(m.atributo)+'</div>'+
+      '<p><b>Quando:</b> '+esc(m.quando)+'</p><p><b>10+:</b> '+esc(m.dez)+'</p>'+
+      '<p><b>7-9:</b> '+esc(m.sete)+'</p><p><b>6-:</b> '+esc(m.seis)+'</p>'
+    }));
+  });
+  var ct=document.getElementById("condTable");ct.innerHTML="<tr><th>Condição</th><th>O que muda</th></tr>";
+  SISTEMA_NUCLEO.condicoes.forEach(function(c){ct.appendChild(h("tr",{html:"<td class='nome'>"+esc(c.nome)+"</td><td>"+esc(c.efeito)+"</td>"}));});
+  [["marcoList",SISTEMA_NUCLEO.progresso],["evolList",SISTEMA_NUCLEO.evolucoes]].forEach(function(x){
+    var ul=document.getElementById(x[0]);x[1].forEach(function(v){ul.appendChild(h("li",null,v));});
+  });
+  var rr=document.getElementById("raidRules");
+  SISTEMA_NUCLEO.raid.forEach(function(r){rr.appendChild(h("div",{class:"card",html:'<div class="ct">'+esc(r.nome)+'</div><p>'+esc(r.uso)+'</p>'}));});
+})();
+
+/* ---------------- mesa: estado local da campanha ---------------- */
+(function(){
+  var CHAVE="aincrad-andar1-mesa-v1";
+  var relogios=[
+    {id:"raid",nome:"Pressão do Raid",desc:"Rumor → abastecimento → formação → convocação."},
+    {id:"mercado",nome:"Mercado de Guerra",desc:"Escassez → especulação → favores cobrados."},
+    {id:"mistério",nome:"Verdade do Andar",desc:"Sinais → conexões → interpretação pública perigosa."},
+    {id:"clas",nome:"Tensão entre Clãs",desc:"Crédito → boicote → aliança ou ruptura."},
+    {id:"memorial",nome:"Memorial",desc:"Ausência → nome → luto que muda decisões."}
+  ];
+  var estado={relogios:{},historico:[],raid:{},reputacoes:{}};
+  try{var salvo=JSON.parse(localStorage.getItem(CHAVE)||"null");if(salvo)estado=salvo;}catch(e){}
+  if(!estado.relogios)estado.relogios={};if(!estado.historico)estado.historico=[];
+  if(!estado.raid)estado.raid={};if(!estado.reputacoes)estado.reputacoes={};
+  function salvar(){localStorage.setItem(CHAVE,JSON.stringify(estado));}
+  function escMesa(v){return esc(String(v||""));}
+  var grid=document.getElementById("clockGrid"),log=document.getElementById("sessionLog");
+  function renderRelogios(){
+    grid.textContent="";
+    relogios.forEach(function(r){
+      var valor=Math.max(0,Math.min(6,Number(estado.relogios[r.id]||0)));
+      var box=h("div",{class:"clock"});
+      box.innerHTML="<h3>"+escMesa(r.nome)+"</h3><p>"+escMesa(r.desc)+"</p>"+
+        '<div class="clock-row"><input aria-label="'+escMesa(r.nome)+'" type="range" min="0" max="6" value="'+valor+'"><output>'+valor+'/6</output></div>';
+      var inp=box.querySelector("input"),out=box.querySelector("output");
+      inp.addEventListener("input",function(){estado.relogios[r.id]=Number(inp.value);out.textContent=inp.value+"/6";salvar();});
+      grid.appendChild(box);
+    });
+  }
+  function renderHistorico(){
+    if(!estado.historico.length){log.innerHTML='<p class="note">Ainda não há sessão registrada neste navegador.</p>';return;}
+    log.innerHTML=estado.historico.slice(0,12).map(function(s){
+      return '<div class="log-entry"><b>'+escMesa(s.titulo||"Sessão sem título")+'</b>'+
+        (s.trio?' <span class="aux">· '+escMesa(s.trio)+"</span>":"")+
+        (s.fato?"<p><b>Fato:</b> "+escMesa(s.fato)+"</p>":"")+
+        (s.rumor?"<p><b>Rumor:</b> "+escMesa(s.rumor)+"</p>":"")+
+        (s.pressao?"<p><b>Próxima pressão:</b> "+escMesa(s.pressao)+"</p>":"")+"</div>";
+    }).join("");
+  }
+  function renderRaid(){
+    var box=document.getElementById("raidPrepGrid");box.textContent="";
+    var total=0;
+    SISTEMA_NUCLEO.raid.forEach(function(r){
+      var marcado=!!estado.raid[r.nome];if(marcado)total++;
+      var linha=h("label",{class:"clock-row",style:"margin:7px 0;cursor:pointer"});
+      var cb=h("input",{type:"checkbox"});cb.checked=marcado;
+      linha.appendChild(cb);linha.appendChild(document.createTextNode(r.nome+" — "+r.uso));
+      cb.addEventListener("change",function(){estado.raid[r.nome]=cb.checked;salvar();renderRaid();});box.appendChild(linha);
+    });
+    document.getElementById("raidPrepValue").textContent=total+"/6";
+  }
+  function statusRep(v){return v>=3?"Protegido":v>=1?"Favor":v<=-3?"Bloqueado":v<=-1?"Suspeita":"Neutro";}
+  function renderRep(){
+    var box=document.getElementById("repList"),pares=Object.keys(estado.reputacoes).sort();box.textContent="";
+    if(!pares.length){box.appendChild(h("p",{class:"note"},"Nenhuma relação salva."));return;}
+    pares.forEach(function(nome){var v=Number(estado.reputacoes[nome]);var l=h("div",{class:"log-entry",html:"<b>"+esc(nome)+"</b> <span class='aux'>"+v+" · "+statusRep(v)+"</span>"});var b=h("button",null,"Remover");b.style.marginLeft="8px";b.addEventListener("click",function(){delete estado.reputacoes[nome];salvar();renderRep();});l.appendChild(b);box.appendChild(l);});
+  }
+  function campo(id){return document.getElementById(id);}
+  function limpar(){["sessaoTitulo","sessaoTrio","sessaoFato","sessaoRumor","sessaoPressao"].forEach(function(id){campo(id).value="";});}
+  document.getElementById("salvarSessao").addEventListener("click",function(){
+    var titulo=campo("sessaoTitulo").value.trim();
+    var fato=campo("sessaoFato").value.trim();
+    if(!titulo&&!fato){campo("sessaoTitulo").focus();return;}
+    estado.historico.unshift({titulo:titulo,trio:campo("sessaoTrio").value.trim(),fato:fato,rumor:campo("sessaoRumor").value.trim(),pressao:campo("sessaoPressao").value.trim(),em:new Date().toISOString()});
+    salvar();limpar();renderHistorico();
+  });
+  document.getElementById("limparSessao").addEventListener("click",limpar);
+  document.getElementById("apagarHistorico").addEventListener("click",function(){
+    if(!window.confirm("Apagar o histórico de episódios salvo neste navegador?"))return;
+    estado.historico=[];salvar();renderHistorico();
+  });
+  var repValor=document.getElementById("repValor"),repOut=document.getElementById("repOut");
+  repValor.addEventListener("input",function(){repOut.textContent=repValor.value+" · "+statusRep(Number(repValor.value));});
+  document.getElementById("salvarRep").addEventListener("click",function(){var n=document.getElementById("repNome").value.trim();if(!n){document.getElementById("repNome").focus();return;}estado.reputacoes[n]=Number(repValor.value);salvar();document.getElementById("repNome").value="";repValor.value=0;repOut.textContent="0 · Neutro";renderRep();});
+  renderRelogios();renderHistorico();renderRaid();renderRep();
+})();
+
+/* Segredos (só o mestre) */
+(function(){
+  var box=document.getElementById("segredosBox");
+  var segredos=PONTOS.filter(function(p){return p.categoria==="segredo"||p.categoria==="puzzle";});
+  box.appendChild(h("h3",{class:"section-h"},"Segredos e puzzles no mapa ("+segredos.length+")"));
+  var g=h("div",{class:"grid"});
+  segredos.forEach(function(p){
+    var reg=regioesPorId[p.regiao];
+    var t=p.teste?'<div class="test"><div><b>2d6+'+esc(p.teste.atributo)+"</b></div>"+
+      "<div><b>10+</b>"+esc(p.teste.sucesso)+"</div><div><b>7-9</b>"+esc(p.teste.parcial)+
+      "</div><div><b>6-</b>"+esc(p.teste.falha)+"</div></div>":"";
+    g.appendChild(h("div",{class:"card",html:
+      '<div class="ct">'+esc(p.nome)+'</div><div class="cs">'+esc(reg?reg.nome:"")+"</div>"+
+      "<p>"+esc(p.desc||"")+"</p>"+t+
+      (p.recompensa?"<p><b>Recompensa:</b> "+esc(p.recompensa)+"</p>":"")}));
+  });
+  box.appendChild(g);
+
+  box.appendChild(h("h3",{class:"section-h"},"Raros do andar — não estão à venda"));
+  var g2=h("div",{class:"grid"});
+  EQUIPAMENTOS.concat(ARMAS).filter(function(x){return x.raridade==="Raro";}).forEach(function(x){
+    g2.appendChild(h("div",{class:"card",html:
+      '<div class="ct">'+esc(x.nome)+'</div><div class="cs">'+esc(x.slot||x.tipo||"")+"</div>"+
+      (x.efeito?"<p>"+esc(x.efeito)+"</p>":"")+
+      (x.obter?'<p style="font-size:11.5px"><b>Fonte:</b> '+esc(x.obter)+"</p>":"")}));
+  });
+  box.appendChild(g2);
+})();
+
+/* ---------------- controles globais ---------------- */
+var btnFundo=document.getElementById("btnFundo");
+btnFundo.addEventListener("click",function(){
+  state.fundoArte=!state.fundoArte;save();aplicaFundo();
+});
+var arteDisponivel=false;
+function aplicaFundo(){
+  var g=document.getElementById("gArt");
+  g.style.display=(state.fundoArte&&arteDisponivel)?"":"none";
+  g.classList.toggle("on",!!(state.fundoArte&&arteDisponivel));
+  /* Com a arte ligada o vetor NAO entra: ele duplicaria cidades, cavernas e
+     rotulos que ja estao pintados, e qualquer diferenca de posicao vira fantasma. */
+  var arteNoAr=!!(state.fundoArte&&arteDisponivel);
+  gTerreno.style.display=arteNoAr?"none":"";
+  gTerreno.style.opacity=1;
+  btnFundo.textContent=arteDisponivel
+    ? ("Fundo: "+(state.fundoArte?"arte":"vetor"))
+    : "Sem placa de arte (vetor)";
+  btnFundo.style.opacity=arteDisponivel?"":"0.55";
+}
+
+document.getElementById("btnGuia").addEventListener("click",function(){
+  var p=selecionado?pontosPorId[selecionado]:null;
+  fichaGuia(p?p.regiao:"cidade_inicio");
+});
+document.getElementById("btnBusca").addEventListener("click",function(){
+  var t=document.querySelector(".view.active input[type=search]");
+  if(t){t.focus();return;}
+  document.querySelectorAll("#tabs .tab")[4].click();
+  setTimeout(function(){var q=document.getElementById("qGuia");if(q)q.focus();},30);
+});
+
+rotuloBotao();if(MODO_JOGADOR)aplicarModoJogador();
+desenharTerreno();aplicaFundo();desenharMapa();ajustar();
+})();
+</script>
+</body>
+</html>

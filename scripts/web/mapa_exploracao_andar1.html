@@ -1,0 +1,1008 @@
+<title>Andar 1 — Mapa e Compêndio</title>
+<script src="dados_mapa.js"></script>
+<style>
+  :root{
+    --bg:#05070c;
+    --bg-panel:#0c131e;
+    --bg-panel-raised:#101a29;
+    --bg-card:#0d1522;
+    --line:#1c2b3d;
+    --cyan:#57d9ff;
+    --cyan-dim:#1f4a5c;
+    --ink:#d9edf7;
+    --ink-dim:#5f7c8f;
+    --amber:#ffb454;
+    --red:#ff5f5f;
+    --font-ui: -apple-system, "Segoe UI", "Yu Gothic UI", system-ui, sans-serif;
+    --font-mono: ui-monospace, "Cascadia Mono", Consolas, "SFMono-Regular", monospace;
+  }
+
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(ellipse 1200px 700px at 50% -10%, #0d1c2c 0%, transparent 60%),
+      var(--bg);
+    color:var(--ink);
+    font-family:var(--font-ui);
+    min-height:100vh;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.001ms !important; animation-iteration-count:1 !important; transition-duration:0.001ms !important;}
+  }
+
+  a{color:var(--cyan);}
+  img{max-width:100%; display:block;}
+
+  .frame{ max-width:1180px; margin:0 auto; padding:28px 20px 60px; }
+
+  /* ---------- header ---------- */
+  .crumb{ font-family:var(--font-mono); font-size:12px; letter-spacing:0.14em; color:var(--cyan-dim); text-transform:uppercase; }
+  .crumb b{color:var(--cyan); font-weight:600;}
+
+  .title-row{
+    display:flex; align-items:baseline; justify-content:space-between; gap:20px; flex-wrap:wrap;
+    margin-top:6px; border-bottom:1px solid var(--line); padding-bottom:18px;
+  }
+  h1{ font-size:clamp(28px, 4vw, 40px); font-weight:700; letter-spacing:0.02em; margin:0; text-wrap:balance; }
+  .sub{ font-size:14px; color:var(--ink-dim); margin-top:4px; }
+
+  .player-field{ display:flex; align-items:center; gap:8px; font-family:var(--font-mono); font-size:12px; color:var(--ink-dim); }
+  .player-field input{
+    background:var(--bg-panel); border:1px solid var(--line); color:var(--cyan);
+    font-family:var(--font-mono); font-size:13px; padding:7px 10px; border-radius:3px; width:160px;
+  }
+  .player-field input:focus-visible{ outline:2px solid var(--cyan); outline-offset:1px; }
+
+  /* ---------- nav tabs ---------- */
+  .tabs{ display:flex; gap:6px; margin-top:22px; flex-wrap:wrap; }
+  .tab{
+    font-family:var(--font-mono); font-size:12.5px; letter-spacing:0.06em; text-transform:uppercase;
+    background:var(--bg-panel); border:1px solid var(--line); color:var(--ink-dim);
+    padding:9px 16px; border-radius:4px 4px 0 0; cursor:pointer;
+  }
+  .tab.active{ color:var(--cyan); border-color:var(--cyan-dim); background:var(--bg-panel-raised); border-bottom-color:var(--bg-panel-raised); }
+  .tab:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
+  .tab .count{ color:var(--ink-dim); margin-left:4px; }
+  .tab.active .count{ color:var(--cyan-dim); }
+
+  .view{ display:none; }
+  .view.active{ display:block; }
+
+  /* ---------- progress (mapa view) ---------- */
+  .progress-row{
+    display:flex; align-items:center; gap:14px; margin-top:20px;
+    font-family:var(--font-mono); font-size:12px; color:var(--ink-dim);
+  }
+  .progress-track{ flex:1; height:6px; background:var(--bg-panel); border:1px solid var(--line); border-radius:4px; overflow:hidden; }
+  .progress-fill{ height:100%; background:linear-gradient(90deg, var(--cyan-dim), var(--cyan)); transition:width 0.5s ease; }
+  .progress-count{ font-variant-numeric:tabular-nums; color:var(--cyan); white-space:nowrap; }
+
+  /* ---------- layout: map + panel ---------- */
+  .board{ display:grid; grid-template-columns:1fr 360px; gap:22px; margin-top:20px; }
+  @media (max-width:860px){ .board{grid-template-columns:1fr;} }
+
+  .cat-filters{ display:flex; gap:6px; flex-wrap:wrap; margin-top:14px; }
+  .cat-chip{
+    font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.05em; text-transform:uppercase;
+    background:var(--bg-panel); border:1px solid var(--line); color:var(--ink-dim);
+    padding:6px 11px; border-radius:20px; cursor:pointer; display:flex; align-items:center; gap:6px;
+  }
+  .cat-chip .dot{ width:8px; height:8px; border-radius:50%; }
+  .cat-chip.off{ opacity:0.35; }
+  .cat-chip:focus-visible{ outline:2px solid var(--cyan); outline-offset:1px; }
+
+  .map-wrap{ position:relative; background:var(--bg-panel); border:1px solid var(--line); border-radius:6px; overflow:hidden; }
+  .map-bg{ display:block; width:100%; height:auto; }
+  .map-svg{ display:block; width:100%; height:auto; position:absolute; inset:0; }
+
+  .node{cursor:pointer;}
+  .node circle.ring{ stroke:#04070c; stroke-width:2; filter:drop-shadow(0 1px 3px rgba(0,0,0,0.7)); }
+  .node:not(.discovered) circle.ring{ opacity:0.55; }
+  .node.discovered circle.ring{ opacity:1; stroke:#fff; stroke-width:2; }
+  .node.selected circle.ring{ stroke:#fff; stroke-width:3.5; }
+  .node.hidden-cat{ display:none; }
+  .node:hover circle.ring{ opacity:1; }
+
+  .node:not(.discovered) circle.pulse{
+    fill:none; stroke:#fff; stroke-width:1.5; opacity:0.5;
+    animation:pulse 2.6s ease-out infinite; transform-origin:center;
+  }
+  @keyframes pulse{ 0%{ r:10; opacity:0.5; } 100%{ r:22; opacity:0; } }
+  .node:focus-visible circle.ring{ outline:2px solid #fff; outline-offset:2px; }
+
+  .node-tooltip{ pointer-events:none; }
+  .node-tooltip rect{ fill:#04070c; opacity:0.9; }
+  .node-tooltip text{ font-family:var(--font-mono); font-size:9px; fill:#fff; }
+
+  .hint{ position:absolute; left:14px; bottom:12px; font-family:var(--font-mono); font-size:11px; color:var(--ink-dim); letter-spacing:0.04em; text-shadow:0 1px 3px #000; }
+
+  /* ---------- detail panel ---------- */
+  .panel{ background:var(--bg-panel); border:1px solid var(--line); border-radius:6px; padding:20px; align-self:start; min-height:220px; }
+  .panel-empty{ color:var(--ink-dim); font-size:13px; line-height:1.6; padding-top:8px; }
+  .panel-eyebrow{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan-dim); }
+  .panel h2{ font-size:21px; margin:4px 0 10px; text-wrap:balance; }
+  .panel .desc{ font-size:13.5px; line-height:1.6; color:var(--ink-dim); margin-bottom:16px; }
+
+  .pt{ border-top:1px solid var(--line); padding:12px 0; display:flex; gap:12px; }
+  .pt-thumb{ width:56px; height:56px; border-radius:4px; object-fit:cover; border:1px solid var(--line); flex:none; background:var(--bg-card); }
+  .pt-thumb.placeholder{ display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); color:var(--ink-dim); font-size:18px; }
+  .pt-body{ flex:1; min-width:0; }
+  .pt-top{ display:flex; justify-content:space-between; align-items:baseline; gap:10px; }
+  .pt-name{ font-size:14px; font-weight:600; }
+  .pill{
+    font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.06em; text-transform:uppercase;
+    padding:3px 8px; border-radius:20px; white-space:nowrap;
+  }
+  .pill.ok{ background:rgba(87,217,255,0.12); color:var(--cyan); border:1px solid var(--cyan-dim); }
+  .pill.done{ background:rgba(120,140,150,0.1); color:var(--ink-dim); border:1px solid var(--line); }
+  .pill.locked{ background:rgba(255,95,95,0.08); color:var(--red); border:1px solid rgba(255,95,95,0.35); }
+  .pill.cooldown{ background:rgba(255,180,84,0.1); color:var(--amber); border:1px solid rgba(255,180,84,0.35); }
+
+  .pt-desc{ font-size:12.5px; color:var(--ink-dim); margin-top:6px; line-height:1.55; }
+  .pt-action{
+    margin-top:8px; font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.03em;
+    background:transparent; border:1px solid var(--cyan-dim); color:var(--cyan); padding:6px 12px; border-radius:3px; cursor:pointer;
+  }
+  .pt-action:hover{ background:rgba(87,217,255,0.08); }
+  .pt-action:focus-visible{ outline:2px solid var(--cyan); outline-offset:2px; }
+  .pt-action:disabled{ opacity:0.4; cursor:default; }
+
+  .explore-cta{
+    margin-top:14px; width:100%;
+    background:linear-gradient(180deg, rgba(87,217,255,0.14), rgba(87,217,255,0.04));
+    border:1px solid var(--cyan); color:var(--cyan); font-family:var(--font-mono); font-size:13px;
+    letter-spacing:0.06em; text-transform:uppercase; padding:10px; border-radius:4px; cursor:pointer;
+  }
+  .explore-cta:hover{ background:rgba(87,217,255,0.18); }
+  .explore-cta:focus-visible{ outline:2px solid #fff; outline-offset:2px; }
+
+  .chegada{
+    border:1px solid var(--amber); border-radius:5px; padding:12px 14px; margin-bottom:16px;
+    background:rgba(255,180,84,0.06);
+  }
+  .chegada-eyebrow{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.1em; text-transform:uppercase; color:var(--amber); margin-bottom:5px; }
+  .chegada-titulo{ font-size:14px; font-weight:600; font-style:italic; margin-bottom:6px; }
+  .chegada-texto{ font-size:12.5px; line-height:1.55; color:var(--ink-dim); }
+  .chegada.usada{ opacity:0.55; border-color:var(--line); background:transparent; }
+  .chegada.usada .chegada-eyebrow{ color:var(--ink-dim); }
+
+  .teste-box{ border:1px solid var(--line); border-radius:5px; padding:11px 13px; margin-bottom:12px; background:var(--bg-panel-raised); }
+  .teste-titulo{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.08em; text-transform:uppercase; color:var(--cyan); margin-bottom:8px; }
+  .teste-linha{ display:flex; gap:8px; font-size:12.5px; line-height:1.5; padding:3px 0; color:var(--ink-dim); }
+  .teste-tag{ font-family:var(--font-mono); font-size:10.5px; font-weight:700; flex:0 0 46px; }
+  .teste-tag.s{ color:var(--cyan); } .teste-tag.p{ color:var(--amber); } .teste-tag.f{ color:var(--red); }
+  .recompensa-box{ display:flex; gap:8px; align-items:baseline; font-size:12.5px; margin-bottom:14px; padding:8px 12px; border:1px dashed var(--line); border-radius:5px; background:rgba(87,217,255,0.04); }
+  .recompensa-label{ font-family:var(--font-mono); font-size:10px; letter-spacing:0.08em; text-transform:uppercase; color:var(--ink-dim); flex:0 0 auto; }
+  .fala-box{ border-left:2px solid var(--cyan-dim); padding:4px 0 4px 12px; margin-bottom:12px; font-size:13px; font-style:italic; color:var(--ink); line-height:1.55; }
+  .oferece-box{ font-size:12.5px; color:var(--ink-dim); line-height:1.55; margin-bottom:14px; }
+  .oferece-box b{ color:var(--ink); font-style:normal; }
+  .vende-box{ border:1px solid var(--line); border-radius:5px; padding:11px 13px; margin-bottom:12px; }
+  .vende-box .lbl{ font-family:var(--font-mono); font-size:10.5px; letter-spacing:0.08em; text-transform:uppercase; color:var(--amber); margin-bottom:5px; }
+  .vende-box .txt{ font-size:12.5px; color:var(--ink-dim); line-height:1.55; }
+  .flow-hint{ font-size:11.5px; color:var(--cyan-dim); margin-top:10px; padding-top:10px; border-top:1px dashed var(--line); }
+  .flow-hint b{ color:var(--cyan); }
+  .monstro-mini{ display:flex; gap:10px; font-size:12.5px; margin-bottom:14px; }
+  .monstro-mini span{ padding:3px 8px; border:1px solid var(--line); border-radius:3px; color:var(--ink-dim); }
+
+  /* ---------- compendium ---------- */
+  .compendium-controls{ display:flex; gap:10px; margin-top:20px; flex-wrap:wrap; align-items:center; }
+  .search{
+    background:var(--bg-panel); border:1px solid var(--line); color:var(--ink);
+    font-family:var(--font-ui); font-size:13px; padding:9px 12px; border-radius:4px; flex:1; min-width:180px;
+  }
+  .search:focus-visible{ outline:2px solid var(--cyan); outline-offset:1px; }
+  .filter-chip{
+    font-family:var(--font-mono); font-size:11.5px; letter-spacing:0.04em; text-transform:uppercase;
+    background:var(--bg-panel); border:1px solid var(--line); color:var(--ink-dim);
+    padding:7px 12px; border-radius:20px; cursor:pointer;
+  }
+  .filter-chip.active{ color:var(--cyan); border-color:var(--cyan-dim); background:rgba(87,217,255,0.08); }
+  .filter-chip:focus-visible{ outline:2px solid var(--cyan); outline-offset:1px; }
+
+  .grid{ display:grid; grid-template-columns:repeat(auto-fill, minmax(230px, 1fr)); gap:16px; margin-top:20px; }
+  .card{
+    background:var(--bg-panel); border:1px solid var(--line); border-radius:6px; overflow:hidden;
+    cursor:pointer; transition:border-color 0.15s ease;
+  }
+  .card:hover, .card:focus-visible{ border-color:var(--cyan-dim); outline:none; }
+  .card-img{ width:100%; aspect-ratio:3/4; object-fit:cover; background:var(--bg-card); }
+  .card-img.placeholder{
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--font-mono); font-size:34px; color:var(--cyan-dim);
+  }
+  .card-body{ padding:12px 14px 14px; }
+  .card-name{ font-size:14.5px; font-weight:600; margin-bottom:4px; }
+  .card-meta{ font-family:var(--font-mono); font-size:11px; color:var(--ink-dim); display:flex; gap:8px; flex-wrap:wrap; }
+  .tag{
+    font-family:var(--font-mono); font-size:10px; letter-spacing:0.05em; text-transform:uppercase;
+    padding:2px 7px; border-radius:3px; border:1px solid var(--line); color:var(--ink-dim);
+  }
+  .tag.threat-fraco{ color:#8fd694; border-color:#2c4a30; }
+  .tag.threat-comum{ color:var(--cyan); border-color:var(--cyan-dim); }
+  .tag.threat-forte{ color:var(--amber); border-color:#5c4520; }
+  .tag.threat-elite, .tag.threat-chefe{ color:var(--red); border-color:#5c2020; }
+
+  .card-empty{ color:var(--ink-dim); font-size:13px; grid-column:1/-1; padding:30px 0; text-align:center; }
+
+  /* ---------- detail modal ---------- */
+  .modal-overlay{
+    position:fixed; inset:0; background:rgba(2,4,8,0.75); backdrop-filter:blur(2px);
+    display:none; align-items:flex-start; justify-content:center; padding:5vh 16px; z-index:10; overflow-y:auto;
+  }
+  .modal-overlay.open{ display:flex; }
+  .modal{
+    background:var(--bg-panel); border:1px solid var(--cyan-dim); border-radius:8px;
+    max-width:640px; width:100%; padding:0; overflow:hidden;
+  }
+  .modal-head{ display:grid; grid-template-columns:180px 1fr; gap:0; }
+  .modal-img{ width:100%; height:100%; object-fit:cover; background:var(--bg-card); }
+  .modal-img.placeholder{ display:flex; align-items:center; justify-content:center; font-family:var(--font-mono); font-size:44px; color:var(--cyan-dim); min-height:180px; }
+  .modal-head-body{ padding:18px 20px; }
+  .modal-eyebrow{ font-family:var(--font-mono); font-size:11px; letter-spacing:0.12em; text-transform:uppercase; color:var(--cyan-dim); }
+  .modal h2{ font-size:22px; margin:4px 0 10px; text-wrap:balance; }
+  .modal-tags{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:6px; }
+  .modal-body{ padding:4px 20px 22px; font-size:13.5px; line-height:1.65; color:var(--ink-dim); }
+  .modal-body dl{ display:grid; grid-template-columns:auto 1fr; gap:6px 14px; margin:10px 0; font-size:12.5px; }
+  .modal-body dt{ font-family:var(--font-mono); color:var(--cyan-dim); text-transform:uppercase; letter-spacing:0.04em; }
+  .modal-body dd{ margin:0; color:var(--ink); }
+  .modal-close{
+    position:absolute; top:14px; right:14px;
+    background:var(--bg-panel-raised); border:1px solid var(--line); color:var(--ink-dim);
+    width:30px; height:30px; border-radius:50%; cursor:pointer; font-size:15px; line-height:1;
+  }
+  .modal-close:hover{ color:var(--ink); border-color:var(--cyan-dim); }
+  .modal-close:focus-visible{ outline:2px solid var(--cyan); }
+  .modal{ position:relative; }
+  @media (max-width:520px){ .modal-head{ grid-template-columns:1fr; } .modal-img, .modal-img.placeholder{ aspect-ratio:16/9; min-height:0; } }
+
+  /* ---------- footer ---------- */
+  .foot{
+    margin-top:26px; display:flex; justify-content:space-between; align-items:center; gap:16px; flex-wrap:wrap;
+    font-size:11.5px; color:var(--ink-dim); font-family:var(--font-mono);
+  }
+  .reset-btn{
+    background:transparent; border:1px solid var(--line); color:var(--ink-dim);
+    font-family:var(--font-mono); font-size:11px; padding:6px 10px; border-radius:3px; cursor:pointer;
+  }
+  .reset-btn:hover{ border-color:var(--red); color:var(--red); }
+</style>
+
+<div class="frame">
+  <div class="crumb">AINCRAD / <b>ANDAR 1</b> / CIDADE DO INÍCIO</div>
+  <div class="title-row">
+    <div>
+      <h1>Mapa e Compêndio</h1>
+      <div class="sub">Sword Art Online: The Perfect Chaos — dia 10, andar 1</div>
+    </div>
+    <div class="player-field">
+      <label for="playerName">JOGADOR</label>
+      <input id="playerName" type="text" placeholder="seu nome" maxlength="24" autocomplete="off" />
+      <button class="filter-chip" id="gmToggle" style="margin-left:6px;" aria-pressed="false">Modo Mestre</button>
+    </div>
+  </div>
+
+  <div class="tabs" role="tablist">
+    <button class="tab active" data-view="mapa" role="tab" aria-selected="true">Mapa</button>
+    <button class="tab" data-view="npcs" role="tab" aria-selected="false">NPCs <span class="count">(4)</span></button>
+    <button class="tab" data-view="monstros" role="tab" aria-selected="false">Bestiário <span class="count">(7)</span></button>
+    <button class="tab" data-view="armas" role="tab" aria-selected="false">Armas <span class="count">(6)</span></button>
+    <button class="tab" data-view="mercado" role="tab" aria-selected="false">Mercado</button>
+    <button class="tab gm-only" data-view="segredos" role="tab" aria-selected="false" hidden>Segredos 🔒</button>
+  </div>
+
+  <!-- ===== MAPA ===== -->
+  <div class="view active" id="view-mapa">
+    <div class="progress-row">
+      <span>PONTOS DESCOBERTOS</span>
+      <div class="progress-track"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+      <span class="progress-count" id="progressCount">0/0</span>
+    </div>
+
+    <div class="cat-filters" id="catFilters"></div>
+
+    <div class="board">
+      <div class="map-wrap">
+        <img class="map-bg" src="../../mapas/andar_1_mapa_arte.png" alt="Mapa ilustrado do andar 1" />
+        <svg class="map-svg" viewBox="0 0 1536 1024" role="img" aria-label="Mapa do andar 1 de Aincrad">
+          <g id="nodes"></g>
+        </svg>
+        <div class="hint">CLIQUE EM UM PONTO NÃO EXPLORADO PARA REVELAR · USE OS FILTROS PRA FOCAR UMA CATEGORIA</div>
+      </div>
+
+      <div class="panel" id="panel">
+        <div class="panel-empty">Selecione um ponto no mapa para ver os detalhes. Pontos apagados ainda não foram explorados por este personagem.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== NPCS ===== -->
+  <div class="view" id="view-npcs">
+    <div class="compendium-controls">
+      <input class="search" id="searchNpcs" type="text" placeholder="Buscar NPC..." />
+    </div>
+    <div class="grid" id="gridNpcs"></div>
+  </div>
+
+  <!-- ===== MONSTROS ===== -->
+  <div class="view" id="view-monstros">
+    <div class="compendium-controls">
+      <input class="search" id="searchMonstros" type="text" placeholder="Buscar monstro..." />
+      <button class="filter-chip active" data-threat="todos">Todos</button>
+      <button class="filter-chip" data-threat="fraco">Fraco</button>
+      <button class="filter-chip" data-threat="comum">Comum</button>
+      <button class="filter-chip" data-threat="forte">Forte</button>
+      <button class="filter-chip" data-threat="chefe">Chefe</button>
+    </div>
+    <div class="grid" id="gridMonstros"></div>
+  </div>
+
+  <!-- ===== ARMAS ===== -->
+  <div class="view" id="view-armas">
+    <div class="compendium-controls">
+      <input class="search" id="searchArmas" type="text" placeholder="Buscar arma..." />
+    </div>
+    <div class="grid" id="gridArmas"></div>
+  </div>
+
+  <!-- ===== MERCADO ===== -->
+  <div class="view" id="view-mercado">
+    <p class="sub" style="margin:20px 0 0;">Nenhuma profissão é autossuficiente — toda receita cruza pelo menos duas fontes. Ver <code>docs/economia_profissoes.md</code>.</p>
+    <h2 style="font-size:17px; margin:26px 0 10px;">Materiais por zona</h2>
+    <div class="grid" id="gridMateriais"></div>
+    <h2 style="font-size:17px; margin:30px 0 10px;">Receitas</h2>
+    <div class="grid" id="gridReceitas"></div>
+  </div>
+
+  <!-- ===== SEGREDOS (só Modo Mestre) ===== -->
+  <div class="view" id="view-segredos">
+    <div class="panel" style="margin-top:20px;">
+      <div class="panel-eyebrow">DOCUMENTO DO MESTRE — NÃO MOSTRAR PROS JOGADORES</div>
+      <h2>O Mistério do Andar 2</h2>
+      <div class="desc" style="margin-bottom:4px;">
+        Matar Illfang não abre o andar 2 sozinho. O gatilho real é o <b>Last Attack Bonus</b> —
+        quem desfere o golpe final recebe o <b>Cristal de Ascensão</b>, e usá-lo junto ao corpo
+        do chefe abre o caminho. Ninguém sabe disso ainda (dia 10, nenhum chefe de andar foi
+        derrotado em Aincrad). Ver <code>docs/misterio_andar2.md</code> pra fontes de pista,
+        red herrings e como liberar aos poucos.
+      </div>
+      <h2 style="font-size:17px; margin-top:24px;">Segredo — Entrada Oculta do Castelo de Ferro Negro</h2>
+      <div class="desc">
+        Mural com 5 encaixes de cristal (Teleporte/Cura/Antídoto/Luz/Barreira) no pátio do
+        castelo. A ordem certa está escondida numa cantiga de um Músico busker ou rabiscada na
+        Dungeon Oculta. Reunir os 5 tipos exige troca entre jogadores. Recompensa: acesso a uma
+        câmara com a primeira pista real do mistério do andar 2 — sem enfrentar o Scavenge Toad.
+        Ver <code>docs/interacoes_e_segredos.md</code>.
+      </div>
+      <h2 style="font-size:17px; margin-top:24px;">Segredo — O Código da Floresta (Horunka)</h2>
+      <div class="desc">
+        Marcas entalhadas em troncos pela Floresta de Horunka são um código informal de
+        caçadores pré-dia-1. O Eremita da Floresta (NPC) conhece a "gramática" e só ensina a
+        quem provar respeito de verdade. Junta as marcas já vistas + o código = aponta pro
+        esconderijo abandonado do próprio Eremita. Recompensa: diário de caçador (lore pessoal,
+        não conspiração) + kit Incomum antigo. Ver <code>docs/interacoes_e_segredos.md</code>.
+      </div>
+      <h2 style="font-size:17px; margin-top:24px;">Segredo — O Nome Apagado (Necrópole de Voss)</h2>
+      <div class="desc">
+        Uma lápide teve o nome raspado a pedido de alguém que ainda visita, anônimo, em
+        horários variados — motivo pessoal (vergonha/culpa/proteção), não sinistro. O Zelador do
+        Memorial só conta se convencido de que o grupo não vai humilhar ninguém. Resolução é
+        decisão de roleplay, sem item de recompensa. Ver <code>docs/interacoes_e_segredos.md</code>.
+      </div>
+      <h2 style="font-size:17px; margin-top:24px;">Segredo — O Que o Redemoinho Esconde (Lago Sylvaine)</h2>
+      <div class="desc">
+        O redemoinho estranho no lago só aparece em certas condições (entardecer, ou depois de
+        outra quest perturbar a água — critério do mestre). Não é hostil — é uma peça real, mas
+        incompleta, do quebra-cabeça do andar 2 (mesmo princípio de fragmento parcial que as
+        outras fontes já usam). O Barqueiro confirma se convencido. Ver
+        <code>docs/interacoes_e_segredos.md</code>.
+      </div>
+      <h2 style="font-size:17px; margin-top:24px;">Registro completo de quests</h2>
+      <div class="desc">
+        Além das 4 quests da primeira aventura (<code>cenas/00_indice_primeira_aventura.md</code>),
+        existem mais 56 em <code>cenas/quests_andar1.md</code>, organizadas em 8 cadeias com
+        <code>requer</code>/<code>desbloqueia</code> entre si — 60 no total.
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Progresso de exploração salvo só neste navegador. Não sincroniza com o mestre.</span>
+    <button class="reset-btn" id="resetBtn">reiniciar progresso</button>
+  </div>
+</div>
+
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal" id="modal"></div>
+</div>
+
+<script>
+(function(){
+  "use strict";
+
+  var STORAGE_KEY = "sao_rpg_andar1_exploracao_v2";
+  var IMG = "../../imagens/";
+
+  /* =================== DADOS =================== */
+  /* REGIOES, CATEGORIAS e PONTOS vem de dados_mapa.js (carregado antes deste
+     script) -- separado pra crescer sem virar um arquivo unico gigante. */
+
+  var CHEGADAS = {
+    "cidade_praca": {titulo:"\"Você tem um minuto?\"", texto:"Sempre que o grupo passa pela praça, um NPC (ou a Mulher Aflita, se ainda não tiver pedido nada) se aproxima com um pedido pequeno e imediato — não uma quest formal, só 2-3 falas. Se ignorado, ela tenta de novo na próxima vez."},
+    "horunka_vila": {titulo:"\"Vocês não são daqui\"", texto:"Primeira vez que o grupo entra em Horunka, o dono da pousada os encara com desconfiança educada. Resposta sincera relaxa ele e rende uma dica; resposta evasiva/hostil encarece os preços."},
+    "tolbana_corretores": {titulo:"\"Informação tem preço\"", texto:"Um corretor de informação aborda o grupo direto: \"Vocês são do andar 1? Novidade sobre o Labirinto sai por Col fixo — quer ouvir?\" Gancho pro mistério do andar 2 — mas vem misturado com teoria falsa."},
+    "labirinto_marco": {titulo:"\"Vocês viram o Marco?\"", texto:"Um jogador solitário está sentado perto da entrada, abalado, esperando um grupo que nunca voltou. Não pede ajuda diretamente — só está ali. Liga com o Memorial dos Caídos."}
+  };
+
+  var NPCS = [
+    { id:"lynx", nome:"Lynx", img:IMG+"npc_lynx_comerciante_armaduras.png", papel:"Vendedora",
+      profissao:"Comerciante", arma:"Nenhuma", local:"Cidade do Início",
+      resumo:"Loja de armaduras da Cidade do Início. Prática e sem rodeios — aponta o caminho até Tolbana quando perguntada sobre o Labirinto.",
+      atributos:{Corpo:-1,Reflexo:0,Conhecimento:1,Espírito:0,Técnica:0} },
+    { id:"mulher_aflita", nome:"Mulher Aflita", img:IMG+"npc_mulher_aflita.png", papel:"Vendedora / quest giver",
+      profissao:"Alquimista", arma:"Nenhuma", local:"Cidade do Início",
+      resumo:"Não sai mais dos muros desde as primeiras mortes do grupo dela. Paga por materiais coletados no campo (missão de Coleta).",
+      atributos:{Corpo:-1,Reflexo:-1,Conhecimento:1,Espírito:0,Técnica:0} },
+    { id:"garota_do_arco", nome:"Garota do Arco", img:IMG+"npc_garota_do_arco.png", papel:"Aliada em potencial",
+      profissao:"Caçadora", arma:"Arco e Flecha", local:"Cidade do Início",
+      resumo:"Aprendeu sozinha a atirar treinando em Frenzy Boar. Topa expedições de campo em grupo, mas evita ir sozinha longe demais.",
+      atributos:{Corpo:-1,Reflexo:0,Conhecimento:-1,Espírito:-1,Técnica:0} },
+    { id:"erik", nome:"Erik", img:IMG+"npc_erik.png", papel:"Neutro",
+      profissao:"Caçador", arma:"Arco e Flecha", local:"Campos",
+      resumo:"Caçador solitário e desconfiado de guildas. Vive nos limites da cidade, fornecendo suprimentos pra quem o procura.",
+      atributos:{Corpo:-2,Reflexo:0,Conhecimento:-1,Espírito:-1,Técnica:-1} },
+    { id:"eremita_da_floresta", nome:"Eremita da Floresta", img:IMG+"npc_eremita_da_floresta.png", papel:"Aliado",
+      profissao:"Caçador (aposentado)", arma:"Arco e Flecha", local:"Floresta de Horunka",
+      resumo:"Ex-caçador de Horunka que se isolou no dia 2. Conhece o código de marcas da floresta e só o ensina a quem prova respeito de verdade.",
+      atributos:{Corpo:-1,Reflexo:1,Conhecimento:1,Espírito:2,Técnica:0} },
+    { id:"zelador_do_memorial", nome:"Zelador do Memorial", img:IMG+"npc_zelador_do_memorial.png", papel:"Neutro",
+      profissao:"Coveiro", arma:"Nenhuma", local:"Necrópole de Voss",
+      resumo:"Cuida das lápides da Necrópole de Voss e guarda a história por trás do nome apagado de uma delas.",
+      atributos:{Corpo:-1,Reflexo:-1,Conhecimento:0,Espírito:2,Técnica:0} },
+    { id:"barqueiro", nome:"Barqueiro", img:IMG+"npc_barqueiro.png", papel:"Neutro",
+      profissao:"Nenhuma", arma:"Remo (não-combate)", local:"Rio Coluber",
+      resumo:"Atravessa jogadores de um lado a outro do rio por pouco Col. Conhece um trecho do rio que se comporta de um jeito que não sabe explicar.",
+      atributos:{Corpo:0,Reflexo:0,Conhecimento:1,Espírito:1,Técnica:0} },
+    { id:"guarda_insone", nome:"Guarda Insone", img:IMG+"npc_guarda_insone.png", papel:"Neutro",
+      profissao:"Mercenário", arma:"Escudo e Espada", local:"Castelo de Ferro Negro",
+      resumo:"Vigia sozinho o mesmo posto, mesmo fora do turno. Viu algo relacionado ao mural dos 5 cristais.",
+      atributos:{Corpo:1,Reflexo:0,Conhecimento:0,Espírito:1,Técnica:-1} },
+    { id:"contador_de_historias", nome:"Contador de Histórias", img:IMG+"npc_contador_de_historias.png", papel:"Neutro",
+      profissao:"Nenhuma", arma:"Nenhuma", local:"Tolbana",
+      resumo:"Solta rumores e teorias na praça à noite, cobra em bebida. Nem tudo que conta é verdade, mas quase sempre é interessante.",
+      atributos:{Corpo:-1,Reflexo:-1,Conhecimento:2,Espírito:1,Técnica:-1} },
+    { id:"fazendeiro_local", nome:"Fazendeiro Local", img:IMG+"npc_fazendeiro_local.png", papel:"Aliado",
+      profissao:"Nenhuma", arma:"Pá", local:"Vale de Molwyn",
+      resumo:"Trabalha os Terraços de Solveig e contrata ajuda contra pragas/monstros de campo em troca de comida preparada.",
+      atributos:{Corpo:1,Reflexo:-1,Conhecimento:0,Espírito:1,Técnica:0} },
+    { id:"estudioso_obcecado", nome:"Estudioso Obcecado", img:IMG+"npc_estudioso_obcecado.png", papel:"Neutro",
+      profissao:"Bibliotecário", arma:"Nenhuma", local:"Torre de Aldric",
+      resumo:"Obcecado pela origem da Torre de Aldric, que ele acha anterior ao resto do design do jogo. Compartilha teorias — nem todas corretas.",
+      atributos:{Corpo:-2,Reflexo:-1,Conhecimento:2,Espírito:0,Técnica:0} },
+    { id:"pescador_veterano", nome:"Pescador Veterano", img:IMG+"npc_pescador_veterano.png", papel:"Aliado",
+      profissao:"Caçador", arma:"Besta", local:"Vila de Brenmoor",
+      resumo:"Conhece o rio e o lago melhor que qualquer mapa comprado. Ajuda quem trata a água com respeito.",
+      atributos:{Corpo:0,Reflexo:1,Conhecimento:1,Espírito:0,Técnica:0} }
+  ];
+
+  var MONSTROS = [
+    { id:"frenzy_boar", nome:"Frenzy Boar", img:IMG+"monstro_frenzy_boar.png", tipo:"Besta", ameaca:"fraco",
+      golpes:"1 (2 se errar a nuca)", local:"Campos",
+      resumo:"O monstro mais fraco do jogo. Passivo — só ataca se provocado. Ponto fraco: golpe preciso na nuca.",
+      fonte:"https://swordartonline.fandom.com/wiki/Frenzy_Boar" },
+    { id:"stabbing_wasp", nome:"Stabbing Wasp", img:IMG+"monstro_stabbing_wasp.png", tipo:"Besta", ameaca:"comum",
+      golpes:"2", local:"Campos",
+      resumo:"Vespa com ferrão perfurante, voo errático. Testes de Reflexo valem mais que Corpo pra acertar.",
+      fonte:"https://saointegralfactor.fandom.com/wiki/Stabbing_Wasp" },
+    { id:"little_nepenthes", nome:"Little Nepenthes", img:IMG+"monstro_little_nepenthes.png", tipo:"Planta", ameaca:"comum",
+      golpes:"3", local:"Floresta / Horunka",
+      resumo:"Planta predadora com vinhas tipo adaga e spray corrosivo até 5m — cuidado com a durabilidade do equipamento.",
+      fonte:"https://swordartonline.fandom.com/wiki/Little_Nepenthes" },
+    { id:"lacustre_vagador", nome:"Lacustre Vagador", img:IMG+"monstro_lacustre_vagador.png", tipo:"Besta", ameaca:"comum",
+      golpes:"4", local:"Lago",
+      resumo:"Criatura aquática (homebrew) que fica oculta nas profundezas até ser provocada. Vulnerável a fogo e luz intensa.",
+      fonte:"" },
+    { id:"ruin_kobold_trooper", nome:"Ruin Kobold Trooper", img:IMG+"monstro_ruin_kobold_trooper.png", tipo:"Humanoide", ameaca:"comum",
+      golpes:"3", local:"Labirinto (corredores)",
+      resumo:"Sem armadura, machado rústico. O \"mob comum\" da masmorra — respawna com frequência.",
+      fonte:"https://swordartonline.fandom.com/wiki/Ruin_Kobold_Trooper" },
+    { id:"ruin_kobold_sentinel", nome:"Ruin Kobold Sentinel", img:IMG+"monstro_ruin_kobold_sentinel.png", tipo:"Humanoide", ameaca:"forte",
+      golpes:"6", local:"Sala do Chefe",
+      resumo:"Armadura pesada, só a garganta é ponto fraco. Reforça Illfang: 3 no início da luta + 3 a cada barra de HP perdida.",
+      fonte:"https://swordartonline.fandom.com/wiki/Ruin_Kobold_Sentinel" },
+    { id:"illfang_the_kobold_lord", nome:"Illfang the Kobold Lord", img:IMG+"monstro_illfang_the_kobold_lord.png", tipo:"Chefe de Andar", ameaca:"chefe",
+      golpes:"4 barras x 6-8 (24-32)", local:"Sala do Chefe",
+      resumo:"Chefe do andar 1. Fase 1: machado+escudo. Fase 2 (1/3 HP): nodachi, skills de katana. Conteúdo de raid, não de grupo pequeno.",
+      fonte:"https://swordartonline.fandom.com/wiki/Illfang_the_Kobold_Lord" }
+  ];
+
+  var ARMAS = [
+    { id:"adagas_gemeas_leves", nome:"Adagas Gêmeas Leves", img:IMG+"arma_adagas_gemeas_leves.png", tipo:"Adagas", atributo:"Técnica", raridade:"Comum",
+      resumo:"Duas adagas de tamanho médio, feitas com lâminas leves e afiadas." },
+    { id:"punhais_equilibrados", nome:"Punhais Equilibrados", img:IMG+"arma_punhais_equilibrados.png", tipo:"Adagas de Arremesso", atributo:"Reflexo", raridade:"Comum",
+      resumo:"Dois punhais de aço inox curtos e finos, com lâminas afiadas e equilibradas para arremesso preciso." },
+    { id:"arco_de_teixo", nome:"Arco de Teixo", img:IMG+"arma_arco_de_teixo.png", tipo:"Arco e Flecha", atributo:"Reflexo", raridade:"Comum",
+      resumo:"Um arco simples e robusto feito de madeira de teixo, com uma cor marrom-escuro." },
+    { id:"bastao_de_madeira_simples", nome:"Bastão de Madeira Simples", img:IMG+"arma_bastao_de_madeira_simples.png", tipo:"Bastão", atributo:"Espírito", raridade:"Comum",
+      resumo:"Um bastão simples, feito de madeira maciça e sem adornos." },
+    { id:"besta_leve_de_madeira", nome:"Besta Leve de Madeira", img:IMG+"arma_besta_leve_de_madeira.png", tipo:"Besta", atributo:"Reflexo", raridade:"Comum",
+      resumo:"Uma besta simples feita de madeira macia, com cordas enceradas que garantem uma boa velocidade e precisão nas flechas." },
+    { id:"chakrams_do_deserto", nome:"Chakrams do Deserto", img:IMG+"arma_chakrams_do_deserto.png", tipo:"Chakrams", atributo:"Técnica", raridade:"Incomum",
+      resumo:"Um par de chakrams feitos de metal simples, com bordas afiadas e detalhes gravados em forma de espinhos." },
+    { id:"chicote_de_couro_trancado", nome:"Chicote de Couro Trançado", img:IMG+"arma_chicote_de_couro_trancado.png", tipo:"Chicote", atributo:"Conhecimento", raridade:"Comum",
+      resumo:"Um chicote fino feito de couro trançado, com uma pederneira no cabo para melhor aderência." },
+    { id:"clava_de_ruinas", nome:"Clava de Ruínas", img:IMG+"arma_clava_de_ruinas.png", tipo:"Clava", atributo:"Corpo", raridade:"Comum",
+      resumo:"Uma clava grande feita de madeira rústica e sólida, com uma ponta reforçada por um pedaço de metal oxidado." },
+    { id:"corrente_do_cla_da_rua", nome:"Corrente do Clã da Rua", img:IMG+"arma_corrente_do_cla_da_rua.png", tipo:"Corrente com Peso", atributo:"Técnica", raridade:"Comum",
+      resumo:"Uma corrente de metal pesada com uma bola afiada na ponta, usada como arma improvisada." },
+    { id:"kit_recruta_iniciante", nome:"Kit Recruta Iniciante", img:IMG+"arma_kit_recruta_iniciante.png", tipo:"Escudo e Espada", atributo:"Corpo", raridade:"Comum",
+      resumo:"Espada curta com lâmina reta e guarda simples, parafusada a um escudo redondo de madeira reforçada com placas de metal." },
+    { id:"espada_longa_simples", nome:"Espada Longa Simples", img:IMG+"arma_espada_longa_simples.png", tipo:"Espada Longa", atributo:"Corpo", raridade:"Comum",
+      resumo:"Uma espada longa simples forjada na Cidade do Início, com uma lâmina de aço branco e guarda em madeira rudimentar." },
+    { id:"foice_de_ferro", nome:"Foice de Ferro", img:IMG+"arma_foice_de_ferro.png", tipo:"Foice", atributo:"Técnica", raridade:"Comum",
+      resumo:"Uma foça de aço simples, com lâmina curva e robusta." },
+    { id:"glaive_de_haste_longa", nome:"Glaive de Haste Longa", img:IMG+"arma_glaive_de_haste_longa.png", tipo:"Glaive", atributo:"Reflexo", raridade:"Incomum",
+      resumo:"Uma glaive com uma haste longa e sólida, cuja lâmina curva brilha levemente sob a luz fraca da cidade." },
+    { id:"katana_equilibrada", nome:"Katana Equilibrada", img:IMG+"arma_katana_equilibrada.png", tipo:"Katana", atributo:"Espírito", raridade:"Incomum",
+      resumo:"A Katana Equilibrada tem uma lâmina de aço branco com uma leve curvatura, proporcionando um equilíbrio entre agilidade e força." },
+    { id:"lanca_de_guarda", nome:"Lança de Guarda", img:IMG+"arma_lanca_de_guarda.png", tipo:"Lanca", atributo:"Técnica", raridade:"Comum",
+      resumo:"Uma lança comum, feita de metal resistente e madeira maciça." },
+    { id:"machado_de_guerra_simples", nome:"Machado de Guerra Simples", img:IMG+"arma_machado_de_guerra_simples.png", tipo:"Machado", atributo:"Corpo", raridade:"Comum",
+      resumo:"Um machado robusto com lâmina curva e pesada, feita de aço comum." },
+    { id:"manopla_reforcada_de_metal", nome:"Manopla Reforçada de Metal", img:IMG+"arma_manopla_reforcada_de_metal.png", tipo:"Manopla", atributo:"Corpo", raridade:"Comum",
+      resumo:"Uma manopla de metal robusto e escuro, com reforços em aço na palma e nos dedos." },
+    { id:"martelo_de_guerra_pesado", nome:"Martelo de Guerra Pesado", img:IMG+"arma_martelo_de_guerra_pesado.png", tipo:"Martelo", atributo:"Corpo", raridade:"Comum",
+      resumo:"Um martelo de guerra pesado com uma haste curta e robusta feita de metal escuro, terminando em um enorme pugno redondo." },
+    { id:"nunchaku_de_madeira_leve", nome:"Nunchaku de Madeira Leve", img:IMG+"arma_nunchaku_de_madeira_leve.png", tipo:"Nunchaku", atributo:"Técnica", raridade:"Comum",
+      resumo:"Duas varinhas de madeira clara, ligeiramente curvadas nas pontas e unidas por uma corda macia." },
+    { id:"pa_reforcada_de_mineracao", nome:"Pá Reforçada de Mineração", img:IMG+"arma_pa_reforcada_de_mineracao.png", tipo:"Pá", atributo:"Conhecimento", raridade:"Comum",
+      resumo:"Uma pá robusta com lâmina reforçada, ideal para escavar e também como arma improvisada em combate." },
+    { id:"rapieira_leve", nome:"Rapieira Leve", img:IMG+"arma_rapieira_leve.png", tipo:"Rapieira", atributo:"Reflexo", raridade:"Comum",
+      resumo:"Uma pequena espada de lâmina estreita e flexível, com guarda simples e cabo curto." },
+    { id:"tonfas_urbanas_de_madeira", nome:"Tonfas Urbanas de Madeira", img:IMG+"arma_tonfas_urbanas_de_madeira.png", tipo:"Tonfas", atributo:"Técnica", raridade:"Comum",
+      resumo:"Um par de tonfas feitas de madeira sólida, com superfícies lisas e sem adornos." }
+  ];
+
+  var MATERIAIS = [
+    { id:"presa_javali", nome:"Presa de Javali", zona:"Planície de Verrun / Estepes de Kaldan", fonte:"Drop de Frenzy Boar", usado:"Costureiro, Cozinheiro" },
+    { id:"pelagem_azulada", nome:"Pelagem Azulada", zona:"Planície de Verrun / Estepes de Kaldan", fonte:"Drop de Frenzy Boar", usado:"Costureiro" },
+    { id:"ferrao_vespa", nome:"Ferrão de Vespa", zona:"Planície de Verrun / Estepes de Kaldan", fonte:"Drop de Stabbing Wasp", usado:"Domador, Alquimista" },
+    { id:"ervas_comuns", nome:"Ervas Comuns", zona:"Qualquer campo aberto", fonte:"Coleta livre (teste de Conhecimento/Reflexo)", usado:"Alquimista, Médico, Cozinheiro" },
+    { id:"madeira", nome:"Madeira", zona:"Floresta de Horunka", fonte:"Coleta (Lenhador)", usado:"Ferreiro (combustível da forja), Costureiro" },
+    { id:"madeira_nodosa", nome:"Madeira Nodosa (variante rara)", zona:"Floresta de Horunka", fonte:"Coleta (Lenhador, chance ocasional)", usado:"Ferreiro, Joalheiro" },
+    { id:"seiva_nepenthes", nome:"Seiva de Nepenthes", zona:"Floresta de Horunka", fonte:"Drop de Little Nepenthes", usado:"Alquimista" },
+    { id:"ovule", nome:"Little Nepenthes's Ovule (raro)", zona:"Floresta de Horunka", fonte:"Drop raro", usado:"Alquimista, Joalheiro" },
+    { id:"escama_prateada", nome:"Escama Prateada", zona:"Lago Sylvaine", fonte:"Drop de Lacustre Vagador", usado:"Joalheiro, Costureiro" },
+    { id:"garras_lacustre", nome:"Garras Completas de Lacustre Vagador", zona:"Lago Sylvaine", fonte:"Material de caça exclusivo do Caçador (2d6+Corpo)", usado:"Ferreiro" },
+    { id:"peixe", nome:"Peixe", zona:"Lago Sylvaine / Rio Coluber", fonte:"Pesca livre", usado:"Cozinheiro" },
+    { id:"minerio_raro", nome:"Minério Raro", zona:"Montanhas de Grauvenn", fonte:"Mineração arriscada (teste de Técnica)", usado:"Ferreiro, Joalheiro" },
+    { id:"cristal_bruto", nome:"Cristal Bruto", zona:"Montanhas de Grauvenn / Gruta de Lumis", fonte:"Mineração/coleta", usado:"Joalheiro, Alquimista (precisa ser refinado)" },
+    { id:"fragmento_kobold", nome:"Fragmento de Armadura Kobold", zona:"Labirinto", fonte:"Material de caça exclusivo (Ruin Kobold Trooper/Sentinel, 2d6+Técnica)", usado:"Ferreiro" },
+    { id:"placas_refinadas", nome:"Placas de Metal Refinado", zona:"Comprado — não se coleta bruto", fonte:"Processado e vendido por qualquer Ferreiro", usado:"Costureiro, armas/armaduras melhores" },
+    { id:"frascos", nome:"Frascos vazios e fio de prata", zona:"Cidade do Início / Tolbana", fonte:"Comprado (Comerciante)", usado:"Alquimista, Joalheiro" },
+    { id:"argila", nome:"Argila", zona:"Rio Coluber", fonte:"Coleta em barranco (teste de Técnica)", usado:"Joalheiro" },
+    { id:"ossos_antigos", nome:"Ossos Antigos", zona:"Necrópole de Voss", fonte:"Coleta", usado:"Alquimista, Coveiro" },
+    { id:"sucata", nome:"Sucata Aproveitável", zona:"Pedreira de Dunhelm", fonte:"Coleta (qualidade inferior)", usado:"Ferreiro" },
+    { id:"mel", nome:"Mel", zona:"Vale de Molwyn", fonte:"Coleta rara (colmeia selvagem)", usado:"Cozinheiro" }
+  ];
+
+  var RECEITAS = [
+    { id:"placas_refinadas", nome:"Placas de Metal Refinado", profissao:"Ferreiro",
+      precisa:"Minério Raro + Madeira (combustível da forja)",
+      efeito:"Componente vendável, não item final — ingrediente de outras receitas (armadura, armas melhores)." },
+    { id:"armadura_reforcada", nome:"Armadura de Couro Reforçada", profissao:"Costureiro",
+      precisa:"Pelagem Azulada (própria ou comprada de um Caçador) + Placas de Metal Refinado (compradas de qualquer Ferreiro, sem precisar dele presente)",
+      efeito:"Cadeia de compra, não cooperação simultânea — o Costureiro fecha a receita sozinho desde que o mercado tenha as duas peças à venda." },
+    { id:"antidoto", nome:"Frasco de Antídoto", profissao:"Alquimista",
+      precisa:"Seiva de Nepenthes (limpa) + frasco vazio (Comerciante)",
+      efeito:"Remove veneno/paralisia/confusão — versão craftada do Cristal Antídoto." },
+    { id:"isca_lacustre", nome:"Isca para Lacustre Vagador", profissao:"Domador / Caçador",
+      precisa:"Ferrão de Vespa + tempo de observação no lago",
+      efeito:"Atrai ou amansa o monstro sem precisar provocar em combate direto." },
+    { id:"anel_escama", nome:"Anel de Escama Prateada", profissao:"Joalheiro",
+      precisa:"Escama Prateada + fio de prata (comprado em Tolbana)",
+      efeito:"Acessório com pequeno bônus de atributo." },
+    { id:"javali_assado", nome:"Javali Assado", profissao:"Cozinheiro",
+      precisa:"Presa/carne de Frenzy Boar (comprada de um Caçador) + ervas comuns",
+      efeito:"Bônus temporário antes de uma expedição." },
+    { id:"lamina_reforcada", nome:"Lâmina Reforçada", profissao:"Ferreiro",
+      precisa:"Placas de Metal Refinado (próprias) + Fragmento de Armadura Kobold",
+      efeito:"Insumo de qualidade melhor pra armas Incomum/Raro — não é item final, é vendido pra quem monta a arma." },
+    { id:"pomada_curativa", nome:"Pomada Curativa", profissao:"Médico",
+      precisa:"Ervas Comuns + um componente comprado do Alquimista",
+      efeito:"Trata status negativo leve fora de combate, sem gastar item de cura de sistema." }
+  ];
+
+  var monstrosPorId = {}; MONSTROS.forEach(function(m){ monstrosPorId[m.id] = m; });
+  var npcsPorId = {}; NPCS.forEach(function(n){ npcsPorId[n.id] = n; });
+
+  /* =================== ESTADO / STORAGE =================== */
+
+  function loadState(){
+    try{ var raw = localStorage.getItem(STORAGE_KEY); if(raw) return JSON.parse(raw); }catch(e){}
+    return { jogador:"", descobertos:{}, pontos:{}, mestre:false };
+  }
+  function saveState(){ localStorage.setItem(STORAGE_KEY, JSON.stringify(state)); }
+  var state = loadState();
+  var selecionado = null;
+
+  var playerInput = document.getElementById("playerName");
+  playerInput.value = state.jogador || "";
+  playerInput.addEventListener("input", function(){ state.jogador = playerInput.value; saveState(); });
+
+  var gmToggle = document.getElementById("gmToggle");
+  var segredosTab = document.querySelector('.tab[data-view="segredos"]');
+  function applyGmMode(){
+    gmToggle.classList.toggle("active", state.mestre);
+    gmToggle.setAttribute("aria-pressed", state.mestre ? "true" : "false");
+    gmToggle.textContent = state.mestre ? "Modo Mestre: ON" : "Modo Mestre";
+    segredosTab.hidden = !state.mestre;
+    if(!state.mestre && segredosTab.classList.contains("active")){
+      document.querySelector('.tab[data-view="mapa"]').click();
+    }
+  }
+  gmToggle.addEventListener("click", function(){
+    if(!state.mestre && !confirm("Isso revela segredos do mestre (spoilers). Tem certeza que você é o mestre?")) return;
+    state.mestre = !state.mestre; saveState(); applyGmMode();
+  });
+  applyGmMode();
+
+  /* =================== TABS =================== */
+
+  Array.prototype.forEach.call(document.querySelectorAll(".tab"), function(tab){
+    tab.addEventListener("click", function(){
+      Array.prototype.forEach.call(document.querySelectorAll(".tab"), function(t){ t.classList.remove("active"); t.setAttribute("aria-selected","false"); });
+      Array.prototype.forEach.call(document.querySelectorAll(".view"), function(v){ v.classList.remove("active"); });
+      tab.classList.add("active"); tab.setAttribute("aria-selected","true");
+      document.getElementById("view-" + tab.dataset.view).classList.add("active");
+    });
+  });
+
+  /* =================== MAPA =================== */
+
+  var svgNodes = document.getElementById("nodes");
+  var pontosPorId = {}; PONTOS.forEach(function(p){ pontosPorId[p.id] = p; });
+  var NS = "http://www.w3.org/2000/svg";
+  function el(tag, attrs){ var e = document.createElementNS(NS, tag); for(var k in attrs) e.setAttribute(k, attrs[k]); return e; }
+
+  var filtrosAtivos = {}; Object.keys(CATEGORIAS).forEach(function(c){ filtrosAtivos[c] = true; });
+
+  function renderFiltros(){
+    var box = document.getElementById("catFilters");
+    box.innerHTML = "";
+    Object.keys(CATEGORIAS).forEach(function(cat){
+      var info = CATEGORIAS[cat];
+      var chip = document.createElement("button");
+      chip.className = "cat-chip" + (filtrosAtivos[cat] ? "" : " off");
+      chip.innerHTML = '<span class="dot" style="background:' + info.cor + '"></span>' + info.label;
+      chip.addEventListener("click", function(){
+        filtrosAtivos[cat] = !filtrosAtivos[cat];
+        renderFiltros(); aplicarFiltros();
+      });
+      box.appendChild(chip);
+    });
+  }
+
+  function aplicarFiltros(){
+    Array.prototype.forEach.call(svgNodes.children, function(g){
+      var p = pontosPorId[g.dataset.id];
+      g.classList.toggle("hidden-cat", !filtrosAtivos[p.categoria]);
+    });
+  }
+
+  function isDescoberto(id){ return !!state.descobertos[id]; }
+
+  function pontoVisivel(p){
+    if(!p.requer) return true;
+    return isDescoberto(p.requer);
+  }
+
+  function renderMap(){
+    svgNodes.innerHTML = "";
+    var visiveis = PONTOS.filter(pontoVisivel);
+    visiveis.forEach(function(p){
+      var disc = isDescoberto(p.id);
+      var cor = CATEGORIAS[p.categoria] ? CATEGORIAS[p.categoria].cor : "#57d9ff";
+      var g = el("g", {class:"node" + (disc ? " discovered" : "") + (selecionado === p.id ? " selected" : ""), tabindex:"0", role:"button", "aria-label":disc ? p.nome : "Ponto não explorado"});
+      g.dataset.id = p.id;
+      var r = p.categoria === "chefe" ? 13 : 9;
+      if(!disc) g.appendChild(el("circle", {class:"pulse", cx:p.x, cy:p.y, r:r}));
+      g.appendChild(el("circle", {class:"ring", cx:p.x, cy:p.y, r:r, fill:cor}));
+      var title = el("title", {}); title.textContent = disc ? p.nome : p.nome + " (não explorado)"; g.appendChild(title);
+      g.addEventListener("click", function(){ onNodeClick(p.id); });
+      g.addEventListener("keydown", function(ev){ if(ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); onNodeClick(p.id); } });
+      svgNodes.appendChild(g);
+    });
+    aplicarFiltros();
+
+    var total = PONTOS.length;
+    var contados = Object.keys(state.descobertos).filter(function(k){ return state.descobertos[k]; }).length;
+    document.getElementById("progressFill").style.width = Math.round(contados/total*100) + "%";
+    document.getElementById("progressCount").textContent = contados + "/" + total;
+  }
+
+  function onNodeClick(id){ selecionado = id; renderMap(); renderPanel(); }
+
+  function pontoEstado(ponto){
+    var registro = state.pontos[ponto.id];
+    if(ponto.tipo === "bloqueado") return {label:"Bloqueado", classe:"locked"};
+    if(ponto.tipo === "sempre") return {label:"Disponível", classe:"ok"};
+    if(ponto.tipo === "unico"){
+      if(registro && registro.concluido) return {label:"Concluído", classe:"done"};
+      return {label:"Pendente", classe:"ok"};
+    }
+    if(ponto.tipo === "respawn"){
+      if(registro && registro.derrotadoEm){
+        var horasPassadas = (Date.now() - registro.derrotadoEm) / 3600000;
+        var restante = ponto.respawnHoras - horasPassadas;
+        if(restante > 0) return {label:"Respawn em " + restante.toFixed(1) + "h", classe:"cooldown"};
+      }
+      return {label:"Disponível", classe:"ok"};
+    }
+    return {label:"—", classe:"ok"};
+  }
+
+  function thumbImg(src, alt){
+    return src ? '<img class="pt-thumb" src="' + src + '" alt="' + alt + '" />'
+                : '<div class="pt-thumb placeholder">?</div>';
+  }
+
+  function renderPanel(){
+    var panel = document.getElementById("panel");
+    if(!selecionado){
+      panel.innerHTML = '<div class="panel-empty">Selecione um ponto no mapa (ou use os filtros de categoria) pra ver os detalhes. Pontos apagados ainda não foram explorados por este personagem.</div>';
+      return;
+    }
+    var p = pontosPorId[selecionado];
+    var disc = isDescoberto(p.id);
+    var regiao = REGIOES.filter(function(r){ return r.id === p.regiao; })[0];
+
+    if(!disc){
+      panel.innerHTML =
+        '<div class="panel-eyebrow">PONTO NÃO EXPLORADO' + (regiao ? " · " + regiao.nome : "") + '</div><h2>???</h2>' +
+        '<div class="desc">Este ponto ainda não foi visitado por este personagem. Explore-o pra revelar o que existe aqui.</div>' +
+        '<button class="explore-cta" id="exploreBtn">Explorar este ponto</button>';
+      document.getElementById("exploreBtn").addEventListener("click", function(){
+        state.descobertos[p.id] = true; saveState(); renderMap(); renderPanel();
+      });
+      return;
+    }
+
+    var catInfo = CATEGORIAS[p.categoria] || {label:p.categoria};
+    var html = '<div class="panel-eyebrow">' + catInfo.label.toUpperCase() + (regiao ? " · " + regiao.nome : "") + '</div>';
+    html += '<h2>' + p.nome + '</h2><div class="desc">' + p.desc + '</div>';
+
+    if(p.ameaca){
+      html += '<div class="monstro-mini"><span>Ameaça: ' + p.ameaca + '</span><span>Golpes p/ derrotar: ' + p.golpes + '</span>' +
+        (p.atributoFraqueza ? '<span>Fraqueza: ' + p.atributoFraqueza + '</span>' : '') + '</div>';
+    }
+
+    if(p.teste){
+      html += '<div class="teste-box"><div class="teste-titulo">Teste — 2d6 + ' + p.teste.atributo + '</div>' +
+        '<div class="teste-linha"><span class="teste-tag s">10+</span>' + p.teste.sucesso + '</div>' +
+        '<div class="teste-linha"><span class="teste-tag p">7-9</span>' + p.teste.parcial + '</div>' +
+        '<div class="teste-linha"><span class="teste-tag f">6-</span>' + p.teste.falha + '</div></div>';
+    }
+
+    if(p.recompensa){
+      html += '<div class="recompensa-box"><span class="recompensa-label">Recompensa</span><span>' + p.recompensa + '</span></div>';
+    }
+
+    if(p.fala){
+      html += '<div class="fala-box">' + p.fala + '</div>';
+    }
+    if(p.oferece){
+      html += '<div class="oferece-box"><b>Oferece:</b> ' + p.oferece + '</div>';
+    }
+
+    if(p.vende){
+      html += '<div class="vende-box"><div class="lbl">À venda</div><div class="txt">' + p.vende + (p.obs ? '<br>' + p.obs : '') + '</div></div>';
+    }
+
+    var chegada = CHEGADAS[p.id];
+    if(chegada){
+      var usada = state.pontos["chegada_" + p.id] && state.pontos["chegada_" + p.id].concluido;
+      html += '<div class="chegada' + (usada ? ' usada' : '') + '">' +
+        '<div class="chegada-eyebrow">Interação de chegada' + (usada ? ' — já usada' : '') + '</div>' +
+        '<div class="chegada-titulo">' + chegada.titulo + '</div>' +
+        '<div class="chegada-texto">' + chegada.texto + '</div>' +
+        '<button class="pt-action" data-ponto="chegada_' + p.id + '" data-acao="alternar" style="margin-top:8px;">' +
+        (usada ? "Marcar como não usada" : "Marcar como usada") + '</button></div>';
+    }
+
+    if(p.ref){
+      var n = npcsPorId[p.ref], m = monstrosPorId[p.ref];
+      var ref = n || m;
+      if(ref){
+        html += '<div class="pt">' + thumbImg(ref.img, ref.nome) +
+          '<div class="pt-body"><div class="pt-top"><span class="pt-name">' + ref.nome + '</span><span class="pill ok">' + (n ? "Ficha de NPC" : "Ficha de monstro") + '</span></div>' +
+          '<div class="pt-desc">' + ref.resumo + '</div></div></div>';
+      }
+    }
+
+    var est = pontoEstado(p);
+    if(p.tipo !== "sempre" || p.tipo === undefined){
+      html += '<div class="pt"><div class="pt-body"><div class="pt-top"><span class="pt-name">Estado</span><span class="pill ' + est.classe + '">' + est.label + '</span></div>';
+      if(p.tipo === "unico"){
+        var concluido = state.pontos[p.id] && state.pontos[p.id].concluido;
+        html += '<button class="pt-action" data-ponto="' + p.id + '" data-acao="concluir" ' + (concluido ? "disabled" : "") + '>' + (concluido ? "Já concluído" : "Marcar como concluído/derrotado") + '</button>';
+      }
+      if(p.tipo === "respawn"){
+        var podeMarcar = est.classe !== "cooldown";
+        html += '<button class="pt-action" data-ponto="' + p.id + '" data-acao="derrotar" ' + (podeMarcar ? "" : "disabled") + '>' + (podeMarcar ? "Marcar como derrotado agora" : "Em cooldown") + '</button>';
+      }
+      html += '</div></div>';
+    }
+
+    if(p.revela && p.revela.length){
+      var aindaOcultos = p.revela.filter(function(id){ return !isDescoberto(id); }).length;
+      if(aindaOcultos > 0){
+        html += '<div class="flow-hint">Explorar este ponto revela <b>' + aindaOcultos + '</b> ponto(s) próximo(s) ainda não visíveis nesta região.</div>';
+      }
+    }
+
+    panel.innerHTML = html;
+    Array.prototype.forEach.call(panel.querySelectorAll(".pt-action"), function(btn){
+      btn.addEventListener("click", function(){
+        var pid = btn.dataset.ponto, acao = btn.dataset.acao;
+        if(!state.pontos[pid]) state.pontos[pid] = {};
+        if(acao === "concluir") state.pontos[pid].concluido = true;
+        if(acao === "alternar") state.pontos[pid].concluido = !state.pontos[pid].concluido;
+        if(acao === "derrotar") state.pontos[pid].derrotadoEm = Date.now();
+        saveState(); renderPanel();
+      });
+    });
+  }
+
+  document.getElementById("resetBtn").addEventListener("click", function(){
+    if(!confirm("Apagar todo o progresso de exploração salvo neste navegador?")) return;
+    state = { jogador: state.jogador, descobertos:{}, pontos:{} };
+    selecionado = null; saveState(); renderMap(); renderPanel();
+  });
+
+  renderFiltros();
+
+  /* =================== COMPÊNDIO (grids) =================== */
+
+  function cardImg(src, alt){
+    return src ? '<img class="card-img" src="' + src + '" alt="' + alt + '" />'
+                : '<div class="card-img placeholder">?</div>';
+  }
+
+  function renderGrid(container, items, buildCard, emptyMsg){
+    container.innerHTML = "";
+    if(items.length === 0){ container.innerHTML = '<div class="card-empty">' + emptyMsg + '</div>'; return; }
+    items.forEach(function(item){
+      var card = document.createElement("div");
+      card.className = "card"; card.tabIndex = 0; card.setAttribute("role","button");
+      card.innerHTML = buildCard(item);
+      card.addEventListener("click", function(){ openModal(item); });
+      card.addEventListener("keydown", function(ev){ if(ev.key === "Enter" || ev.key === " "){ ev.preventDefault(); openModal(item); } });
+      container.appendChild(card);
+    });
+  }
+
+  function filterBySearch(list, query, field){
+    if(!query) return list;
+    query = query.toLowerCase();
+    return list.filter(function(item){ return item[field].toLowerCase().indexOf(query) !== -1; });
+  }
+
+  var gridNpcs = document.getElementById("gridNpcs");
+  function renderNpcs(){
+    var q = document.getElementById("searchNpcs").value;
+    renderGrid(gridNpcs, filterBySearch(NPCS, q, "nome"), function(n){
+      return cardImg(n.img, n.nome) +
+        '<div class="card-body"><div class="card-name">' + n.nome + '</div>' +
+        '<div class="card-meta"><span class="tag">' + n.papel + '</span><span class="tag">' + n.local + '</span></div></div>';
+    }, "Nenhum NPC encontrado.");
+  }
+  document.getElementById("searchNpcs").addEventListener("input", renderNpcs);
+
+  var gridMonstros = document.getElementById("gridMonstros");
+  var monstroFiltro = "todos";
+  function renderMonstros(){
+    var q = document.getElementById("searchMonstros").value;
+    var lista = filterBySearch(MONSTROS, q, "nome");
+    if(monstroFiltro !== "todos") lista = lista.filter(function(m){ return m.ameaca === monstroFiltro; });
+    renderGrid(gridMonstros, lista, function(m){
+      return cardImg(m.img, m.nome) +
+        '<div class="card-body"><div class="card-name">' + m.nome + '</div>' +
+        '<div class="card-meta"><span class="tag threat-' + m.ameaca + '">' + m.ameaca + '</span><span class="tag">' + m.local + '</span></div></div>';
+    }, "Nenhum monstro encontrado.");
+  }
+  document.getElementById("searchMonstros").addEventListener("input", renderMonstros);
+  Array.prototype.forEach.call(document.querySelectorAll("#view-monstros .filter-chip"), function(chip){
+    chip.addEventListener("click", function(){
+      Array.prototype.forEach.call(document.querySelectorAll("#view-monstros .filter-chip"), function(c){ c.classList.remove("active"); });
+      chip.classList.add("active"); monstroFiltro = chip.dataset.threat; renderMonstros();
+    });
+  });
+
+  var gridArmas = document.getElementById("gridArmas");
+  function renderArmas(){
+    var q = document.getElementById("searchArmas").value;
+    renderGrid(gridArmas, filterBySearch(ARMAS, q, "nome"), function(a){
+      return cardImg(a.img, a.nome) +
+        '<div class="card-body"><div class="card-name">' + a.nome + '</div>' +
+        '<div class="card-meta"><span class="tag">' + a.tipo + '</span><span class="tag">' + a.raridade + '</span></div></div>';
+    }, "Nenhuma arma encontrada.");
+  }
+  document.getElementById("searchArmas").addEventListener("input", renderArmas);
+
+  function renderMateriais(){
+    var container = document.getElementById("gridMateriais");
+    container.innerHTML = "";
+    MATERIAIS.forEach(function(mat){
+      var card = document.createElement("div");
+      card.className = "card"; card.style.cursor = "default";
+      card.innerHTML = '<div class="card-body">' +
+        '<div class="card-name">' + mat.nome + '</div>' +
+        '<div class="card-meta"><span class="tag">' + mat.zona + '</span></div>' +
+        '<div class="pt-desc" style="margin-top:8px;">' + mat.fonte + '</div>' +
+        '<div class="pt-desc">Usado por: ' + mat.usado + '</div></div>';
+      container.appendChild(card);
+    });
+  }
+
+  function renderReceitas(){
+    var container = document.getElementById("gridReceitas");
+    container.innerHTML = "";
+    RECEITAS.forEach(function(rec){
+      var card = document.createElement("div");
+      card.className = "card"; card.style.cursor = "default";
+      card.innerHTML = '<div class="card-body">' +
+        '<div class="card-name">' + rec.nome + '</div>' +
+        '<div class="card-meta"><span class="tag">' + rec.profissao + '</span></div>' +
+        '<div class="pt-desc" style="margin-top:8px;"><b>Precisa:</b> ' + rec.precisa + '</div>' +
+        '<div class="pt-desc"><b>Efeito:</b> ' + rec.efeito + '</div></div>';
+      container.appendChild(card);
+    });
+  }
+
+  /* =================== MODAL =================== */
+
+  var overlay = document.getElementById("modalOverlay");
+  var modal = document.getElementById("modal");
+
+  function openModal(item){
+    var isMonstro = MONSTROS.indexOf(item) !== -1;
+    var isNpc = NPCS.indexOf(item) !== -1;
+    var html = '<button class="modal-close" id="modalClose" aria-label="Fechar">✕</button><div class="modal-head">';
+    html += (item.img ? '<img class="modal-img" src="' + item.img + '" alt="' + item.nome + '" />' : '<div class="modal-img placeholder">?</div>');
+    html += '<div class="modal-head-body">';
+    html += '<div class="modal-eyebrow">' + (isMonstro ? "BESTIÁRIO" : isNpc ? "NPC" : "ARMA") + '</div>';
+    html += '<h2>' + item.nome + '</h2>';
+    if(isNpc) html += '<div class="modal-tags"><span class="tag">' + item.papel + '</span><span class="tag">' + item.profissao + '</span><span class="tag">' + item.arma + '</span></div>';
+    if(isMonstro) html += '<div class="modal-tags"><span class="tag threat-' + item.ameaca + '">' + item.ameaca + '</span><span class="tag">' + item.tipo + '</span></div>';
+    if(!isMonstro && !isNpc) html += '<div class="modal-tags"><span class="tag">' + item.tipo + '</span><span class="tag">' + item.atributo + '</span><span class="tag">' + item.raridade + '</span></div>';
+    html += '</div></div>';
+
+    html += '<div class="modal-body">' + item.resumo;
+    if(isNpc){
+      html += '<dl>';
+      for(var attr in item.atributos) html += '<dt>' + attr + '</dt><dd>' + (item.atributos[attr] >= 0 ? "+" : "") + item.atributos[attr] + '</dd>';
+      html += '<dt>Local</dt><dd>' + item.local + '</dd></dl>';
+    }
+    if(isMonstro){
+      html += '<dl><dt>Golpes p/ derrotar</dt><dd>' + item.golpes + '</dd><dt>Local</dt><dd>' + item.local + '</dd></dl>';
+      if(item.fonte) html += '<div style="margin-top:10px;"><a href="' + item.fonte + '" target="_blank" rel="noopener">Fonte (wiki)</a></div>';
+    }
+    html += '</div>';
+
+    modal.innerHTML = html;
+    overlay.classList.add("open");
+    document.getElementById("modalClose").addEventListener("click", closeModal);
+    document.getElementById("modalClose").focus();
+  }
+  function closeModal(){ overlay.classList.remove("open"); modal.innerHTML = ""; }
+  overlay.addEventListener("click", function(ev){ if(ev.target === overlay) closeModal(); });
+  document.addEventListener("keydown", function(ev){ if(ev.key === "Escape" && overlay.classList.contains("open")) closeModal(); });
+
+  /* =================== INIT =================== */
+
+  renderMap(); renderPanel(); renderNpcs(); renderMonstros(); renderArmas(); renderMateriais(); renderReceitas();
+})();
+</script>
