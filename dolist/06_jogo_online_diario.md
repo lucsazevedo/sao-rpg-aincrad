@@ -33,6 +33,37 @@ construímos: banco, login, visibilidade, painel, RAG).
    desbloqueia o quê — só faz sentido desenhar depois que 1-4 existirem,
    porque é literalmente "o que essas peças fazem juntas".
 
+## Referência: TheCrims, adaptado pro que já existe na mesa
+
+Pesquisado (ver `pt.wikipedia.org/wiki/The_Crims` e o guia oficial). Não
+copia mecânica nova — reaproveita vocabulário que a mesa já tem:
+
+- **Fôlego** (energia): teto numérico, regenera com o tempo, velocidade
+  ligada ao atributo Espírito. É a Condição "Exaurido" que já existe em
+  `regras_nucleares_campanha.md`, só que virando barra de verdade no site.
+  Ação custa Fôlego; ação arriscada exige um mínimo.
+- **Desmaio** (TheCrims manda pra cadeia num roubo falhado): reaproveita
+  **À Beira** e a Condição "Crítico" (3 Condições acumuladas) — tentar algo
+  ousado e falhar deixa o personagem impedido de agir por um tempo, com
+  custo real (perde item/Col), redutível pagando ou esperando. Mesmo peso
+  dramático que já vale na mesa.
+- **Liberação por nível**: monstros já têm `nivelRecomendado`/`ameaca` no
+  banco — hoje é só texto. Vira trava de verdade: nível abaixo do
+  recomendado, local/monstro fica bloqueado.
+- **Craft demorado**: a régua de raridade já existente
+  (`armas/00_catalogo_expandido.md` — "facilidade de obter define o teto")
+  ganha um cronômetro: Comum rápido, Incomum médio, Raro demorado.
+
+## Decidido (ritmo do jogo)
+
+- **Fôlego**: casual — enche sozinho em 3-4h. Dá pra logar 2-3x ao dia sem
+  virar grind de app.
+- **Desmaio**: tempo travado + perde uma fração do Col que está "na mão"
+  (não guardado) — mesma lógica do TheCrims (20%), precisa existir a
+  carteira (item 9) antes de valer a pena ligar essa punição.
+- **Craft**: Comum = minutos, Incomum = 1-3h, Raro = 6-12h. Sempre cabe
+  num dia, ninguém trava esperando demais.
+
 ## Preciso saber
 
 - Concorda com essa ordem, ou tem uma peça que é mais urgente pra você
