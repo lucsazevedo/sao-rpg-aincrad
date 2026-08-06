@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Painel do Mestre</title>
+<style>
+:root{
+  --bg:#0a0806; --panel:#15100a; --panel-2:#1d150c;
+  --line:#3d2e1a; --line-soft:#2a2013;
+  --gold:#d9ad5e; --gold-dim:#8c6f3e; --gold-bright:#f2d18a;
+  --ink:#efe5d2; --ink-dim:#a89a80; --ink-faint:#6f6450;
+  --red:#e0524a; --green:#8fd694;
+  --f-disp:"Palatino Linotype",Palatino,Georgia,serif;
+  --f-ui:-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);line-height:1.5}
+button,input,textarea,select{font:inherit;color:inherit}
+.shell{max-width:1100px;margin:0 auto;padding:20px 16px 70px}
+h1{font-family:var(--f-disp);color:var(--gold-bright);font-size:28px;margin:0 0 4px}
+.sub{color:var(--ink-dim);font-size:13px;margin-bottom:18px}
+.gate{border:2px solid var(--gold-dim);border-radius:6px;padding:28px;max-width:380px;margin:80px auto;text-align:center}
+.gate input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:9px 11px;margin:8px 0;color:var(--ink)}
+.gate button{width:100%;background:var(--gold-dim);color:#150f08;border:none;border-radius:4px;padding:10px;font-weight:700;cursor:pointer;margin-top:8px}
+.gate .erro{color:var(--red);font-size:12.5px;min-height:16px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+select,.toolbar input{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:8px 10px;color:var(--ink)}
+.btn{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:8px 13px;cursor:pointer;color:var(--ink)}
+.btn:hover{border-color:var(--gold-dim)}
+.btn.primary{background:var(--gold-dim);color:#150f08;border-color:var(--gold-dim);font-weight:700}
+.btn.danger{border-color:var(--red);color:var(--red)}
+.btn.small{padding:4px 9px;font-size:12px}
+.grid2{display:grid;grid-template-columns:280px 1fr;gap:18px;align-items:start}
+@media (max-width:760px){.grid2{grid-template-columns:1fr}}
+.lista{border:1px solid var(--line);border-radius:4px;max-height:70vh;overflow:auto}
+.item{padding:9px 12px;border-bottom:1px dashed var(--line-soft);cursor:pointer;font-size:13px;display:flex;justify-content:space-between;gap:6px}
+.item:hover{background:var(--panel-2)}
+.item.ativo{background:var(--panel-2);color:var(--gold)}
+.item .tags{display:flex;gap:4px}
+.pill{font-family:var(--f-mono);font-size:9px;padding:1px 5px;border-radius:3px;border:1px solid var(--line)}
+.pill.off{color:var(--ink-faint)}
+.pill.del{color:var(--red);border-color:var(--red)}
+.form{border:1px solid var(--line);border-radius:4px;padding:16px}
+.campo{margin-bottom:12px}
+.campo label{display:flex;gap:6px;align-items:center;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--gold-dim);margin-bottom:4px}
+.campo label .seg{color:var(--red);font-size:9px;border:1px solid var(--red);border-radius:3px;padding:0 4px;text-transform:none;letter-spacing:0}
+.campo input[type=text],.campo input[type=number],.campo textarea{width:100%;background:var(--panel-2);border:1px solid var(--line);border-radius:4px;padding:8px 10px;color:var(--ink)}
+.campo textarea{min-height:70px;font-family:var(--f-mono);font-size:12.5px}
+.campo textarea.grande{min-height:160px}
+.campo .bool{display:flex;align-items:center;gap:8px}
+.acoes-form{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.msg{font-size:12.5px;margin-top:8px}
+.msg.ok{color:var(--green)} .msg.erro{color:var(--red)}
+.aviso{font-size:12px;color:var(--ink-faint);margin-bottom:14px}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div id="gate" class="gate">
+    <h1 style="font-size:20px">🔒 Painel do Mestre</h1>
+    <p class="sub">Faça login pra criar, editar ou remover conteúdo.</p>
+    <input type="text" id="gEmail" placeholder="e-mail" />
+    <input type="password" id="gSenha" placeholder="senha mestra" />
+    <button id="gEntrar">Entrar</button>
+    <div class="erro" id="gErro"></div>
+  </div>
+
+  <div id="painel" style="display:none">
+    <h1>Painel do Mestre</h1>
+    <div class="sub">Qualquer exclusão aqui é <b>lógica</b> — o item some do jogo, mas fica
+      recuperável (nunca é apagado do banco de fato). <span id="quemLogado"></span>
+      <a href="#" id="sair" style="color:var(--gold-dim)">sair</a></div>
+
+    <div class="toolbar">
+      <select id="selTabela"></select>
+      <input type="search" id="busca" placeholder="Buscar..." style="flex:1;min-width:160px" />
+      <label style="display:flex;gap:6px;align-items:center;font-size:12.5px;color:var(--ink-dim)">
+        <input type="checkbox" id="mostrarExcluidos" /> mostrar excluídos
+      </label>
+      <button class="btn primary" id="btnNovo">+ Novo</button>
+    </div>
+
+    <div class="grid2">
+      <div class="lista" id="lista"></div>
+      <div id="formBox"></div>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<script src="modo_mestre.js"></script>
+<script src="admin_schema.js"></script>
+<script>
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+var tabelaAtual = null;
+var linhas = [];
+var editando = null; // linha crua sendo editada, ou null = novo registro
+
+async function iniciar(){
+  await iniciarSessao();
+  if(!estaLogado()){
+    document.getElementById("gate").style.display="";
+    return;
+  }
+  mostrarPainel();
+}
+
+document.getElementById("gEntrar").addEventListener("click", async function(){
+  var email=document.getElementById("gEmail").value.trim();
+  var senha=document.getElementById("gSenha").value;
+  var erro=document.getElementById("gErro");
+  erro.textContent="";
+  try{
+    await fazerLogin(email, senha);
+    mostrarPainel();
+  }catch(e){
+    erro.textContent = "Não deu: " + e.message;
+  }
+});
+
+function mostrarPainel(){
+  document.getElementById("gate").style.display="none";
+  document.getElementById("painel").style.display="";
+  document.getElementById("quemLogado").textContent = "logado como mestre. ";
+  document.getElementById("sair").addEventListener("click", async function(e){
+    e.preventDefault(); await fazerLogout(); location.reload();
+  });
+
+  var sel=document.getElementById("selTabela");
+  Object.keys(TABELAS_ADMIN).forEach(function(k){
+    var o=document.createElement("option");
+    o.value=k; o.textContent=TABELAS_ADMIN[k].rotulo;
+    sel.appendChild(o);
+  });
+  sel.addEventListener("change", function(){ carregarTabela(sel.value); });
+  document.getElementById("busca").addEventListener("input", renderLista);
+  document.getElementById("mostrarExcluidos").addEventListener("change", carregarLinhas);
+  document.getElementById("btnNovo").addEventListener("click", function(){ abrirForm(null); });
+
+  carregarTabela(sel.value);
+}
+
+async function carregarTabela(nome){
+  tabelaAtual = nome;
+  await carregarLinhas();
+  abrirForm(null);
+}
+
+async function carregarLinhas(){
+  var conf = TABELAS_ADMIN[tabelaAtual];
+  var mostrarExcl = document.getElementById("mostrarExcluidos").checked;
+  // le pela view nas tabelas com campo secreto (a view revela o campo pra
+  // quem estiver logado como mestre); escrita sempre vai na tabela base.
+  var origem = TABELAS_COM_VIEW_PUBLICA[tabelaAtual] || tabelaAtual;
+  var q = supaClient().from(origem).select("*");
+  if(!mostrarExcl) q = q.eq("excluido", false);
+  var r = await q;
+  if(r.error){ alert("Erro carregando " + tabelaAtual + ": " + r.error.message); linhas=[]; }
+  else linhas = r.data || [];
+  renderLista();
+}
+
+function renderLista(){
+  var conf = TABELAS_ADMIN[tabelaAtual];
+  var termo = document.getElementById("busca").value.trim().toLowerCase();
+  var box = document.getElementById("lista");
+  box.innerHTML = "";
+  var filtradas = linhas.filter(function(l){
+    if(!termo) return true;
+    return JSON.stringify(l).toLowerCase().indexOf(termo) >= 0;
+  });
+  if(!filtradas.length){
+    box.innerHTML = '<div class="item">nada aqui</div>';
+    return;
+  }
+  filtradas.forEach(function(l){
+    var div = document.createElement("div");
+    div.className = "item" + (editando && editando[conf.pk]===l[conf.pk] ? " ativo" : "");
+    var titulo = l.nome || l.titulo || l.id || l[conf.pk];
+    div.innerHTML = '<span>'+esc(titulo)+'</span><span class="tags">' +
+      (l.excluido ? '<span class="pill del">excluído</span>' : '') +
+      (l.visivel===false ? '<span class="pill off">oculto</span>' : '') +
+      '</span>';
+    div.addEventListener("click", function(){ abrirForm(l); });
+    box.appendChild(div);
+  });
+}
+
+function abrirForm(linha){
+  editando = linha;
+  renderLista();
+  var conf = TABELAS_ADMIN[tabelaAtual];
+  var box = document.getElementById("formBox");
+  var f = document.createElement("div");
+  f.className = "form";
+
+  var aviso = document.createElement("div");
+  aviso.className = "aviso";
+  aviso.textContent = linha ? "Editando " + (linha.nome||linha.titulo||linha[conf.pk]) : "Novo registro em " + conf.rotulo;
+  f.appendChild(aviso);
+
+  var inputs = {};
+  conf.campos.forEach(function(c){
+    var valor = linha ? linha[c.nome] : undefined;
+    var campoDiv = document.createElement("div");
+    campoDiv.className = "campo";
+    var label = document.createElement("label");
+    label.innerHTML = esc(c.nome) + (c.segredo ? ' <span class="seg">só mestre</span>' : "");
+    campoDiv.appendChild(label);
+
+    var input;
+    if(c.tipo === "bool"){
+      var wrap = document.createElement("div");
+      wrap.className = "bool";
+      input = document.createElement("input");
+      input.type = "checkbox";
+      input.checked = valor === true || valor === undefined && c.nome === "visivel";
+      wrap.appendChild(input);
+      campoDiv.appendChild(wrap);
+    } else if(c.tipo === "number"){
+      input = document.createElement("input");
+      input.type = "number";
+      input.value = valor == null ? "" : valor;
+      campoDiv.appendChild(input);
+    } else if(c.tipo === "textarea" || c.tipo === "json"){
+      input = document.createElement("textarea");
+      if(c.tipo === "textarea" && ["corpo","resumo","comportamento","habitat"].indexOf(c.nome)>=0) input.className="grande";
+      input.value = c.tipo === "json"
+        ? JSON.stringify(valor === undefined ? (linha ? null : (c.nome.match(/s$/) ? [] : {})) : valor, null, 1)
+        : (valor == null ? "" : valor);
+      campoDiv.appendChild(input);
+    } else {
+      input = document.createElement("input");
+      input.type = "text";
+      input.value = valor == null ? "" : valor;
+      if(c.nome === conf.pk && linha) input.disabled = true; // nao troca a PK de um existente
+      campoDiv.appendChild(input);
+    }
+    inputs[c.nome] = { el: input, conf: c };
+    f.appendChild(campoDiv);
+  });
+
+  var acoes = document.createElement("div");
+  acoes.className = "acoes-form";
+  var btnSalvar = document.createElement("button");
+  btnSalvar.className = "btn primary"; btnSalvar.textContent = "Salvar";
+  acoes.appendChild(btnSalvar);
+
+  if(linha){
+    var btnExcluir = document.createElement("button");
+    btnExcluir.className = "btn danger";
+    btnExcluir.textContent = linha.excluido ? "Restaurar" : "Excluir (lógico)";
+    btnExcluir.addEventListener("click", async function(){
+      var novoValor = !linha.excluido;
+      if(novoValor && !confirm("Excluir (logicamente) este registro? Ele some do jogo mas continua no banco, pode restaurar depois.")) return;
+      var upd = {}; upd.excluido = novoValor;
+      var r = await supaClient().from(tabelaAtual).update(upd).eq(conf.pk, linha[conf.pk]);
+      if(r.error){ mostrarMsg(f, "erro", r.error.message); return; }
+      await carregarLinhas();
+      abrirForm(null);
+    });
+    acoes.appendChild(btnExcluir);
+  }
+
+  var btnCancelar = document.createElement("button");
+  btnCancelar.className = "btn"; btnCancelar.textContent = "Cancelar";
+  btnCancelar.addEventListener("click", function(){ abrirForm(null); });
+  acoes.appendChild(btnCancelar);
+
+  f.appendChild(acoes);
+  var msgEl = document.createElement("div");
+  f.appendChild(msgEl);
+
+  btnSalvar.addEventListener("click", async function(){
+    var registro = {};
+    var erroJson = null;
+    Object.keys(inputs).forEach(function(nome){
+      var { el, conf: c } = inputs[nome];
+      if(c.tipo === "bool"){ registro[nome] = el.checked; }
+      else if(c.tipo === "number"){ registro[nome] = el.value === "" ? null : Number(el.value); }
+      else if(c.tipo === "json"){
+        try{ registro[nome] = el.value.trim() === "" ? null : JSON.parse(el.value); }
+        catch(e){ erroJson = nome + ": JSON inválido (" + e.message + ")"; }
+      } else { registro[nome] = el.value === "" ? null : el.value; }
+    });
+    if(erroJson){ mostrarMsg(f, "erro", erroJson); return; }
+
+    var r;
+    if(linha){
+      r = await supaClient().from(tabelaAtual).update(registro).eq(conf.pk, linha[conf.pk]);
+    } else {
+      r = await supaClient().from(tabelaAtual).insert(registro);
+    }
+    if(r.error){ mostrarMsg(f, "erro", r.error.message); return; }
+    mostrarMsg(f, "ok", "Salvo.");
+    await carregarLinhas();
+  });
+
+  box.innerHTML = "";
+  box.appendChild(f);
+}
+
+function mostrarMsg(container, tipo, texto){
+  var el = container.querySelector(".msg") || document.createElement("div");
+  el.className = "msg " + tipo;
+  el.textContent = texto;
+  if(!container.contains(el)) container.appendChild(el);
+}
+
+iniciar();
+</script>
+</body>
+</html>
