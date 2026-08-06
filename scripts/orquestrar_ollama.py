@@ -298,11 +298,83 @@ def tarefa_moves_arma_piloto():
     print("Piloto em %s -- revisar antes de escalar pras outras 22 armas." % saida)
 
 
+# --------------------------------------------------------------------------
+# Item 2 (escala): repete o piloto pras 23 armas, escrita incremental
+# (retomável) igual ao item 13. Usa devstral:24b se disponível.
+# --------------------------------------------------------------------------
+
+ARMAS_ATRIBUTO = {
+    "Arco e Flecha": "Reflexo", "Adagas": "Técnica",
+    "Adagas de Arremesso": "Reflexo", "Besta": "Reflexo",
+    "Chakrams": "Técnica", "Chicote": "Conhecimento",
+    "Escudo e Espada": "Corpo", "Espada Longa": "Corpo",
+    "Foice": "Técnica", "Katana": "Espírito", "Lança": "Técnica",
+    "Machado": "Corpo", "Martelo": "Corpo", "Pá": "Conhecimento",
+    "Rapieira": "Reflexo", "Bastão": "Espírito", "Tonfas": "Técnica",
+    "Clava": "Corpo", "Nunchaku": "Técnica", "Glaive": "Reflexo",
+    "Corrente com Peso": "Técnica", "Manopla": "Corpo", "Leque": "Técnica",
+}
+
+
+def tarefa_moves_arma_todas():
+    model = "devstral:24b" if modelo_disponivel("devstral") else MODELO_RAPIDO
+    saida = os.path.join(RAIZ, "dolist", "revisao_item2_moves_arma_todas.md")
+    ja_feitas = escreve_incremental(
+        saida,
+        "---\ntitulo: Revisão — golpes novos pras 23 armas (item 2)\nuso: mestre\n---\n\n"
+        "# Proposta do Ollama — 2 golpes extra + Limit Breaker por arma\n\n"
+        "Gerado automaticamente (modelo: %s). **Nada aplicado ainda** — "
+        "proposta arma por arma, pra revisar antes de somar aos moves já "
+        "existentes em `MOVES_ARMA`/banco.\n" % model,
+        r"- arma: `([^`]+)`",
+    )
+    pendentes = [(a, attr) for a, attr in ARMAS_ATRIBUTO.items() if a not in ja_feitas]
+    if ja_feitas:
+        print("Retomando -- %d ja feitas antes, %d restantes." % (len(ja_feitas), len(pendentes)))
+    print("Armas a processar: %d (modelo: %s)" % (len(pendentes), model))
+
+    system = (
+        "Você é designer de regras pra um RPG PBTA (Powered by the "
+        "Apocalypse) adaptado de Sword Art Online. Toda Move segue o "
+        "formato: nome, teste '2d6+Atributo', resultado em 10+ (escolha "
+        "entre opções) e 7-9 (sucesso com custo). Os 5 atributos: Corpo, "
+        "Reflexo, Conhecimento, Espírito, Técnica. A arma '%s' já tem um "
+        "golpe principal usando %s (Move de Combate já existente, não "
+        "repita). Crie MAIS 2 golpes normais pra ela, cada um usando um "
+        "atributo DIFERENTE de %s e diferente entre si, e 1 golpe especial "
+        "'Limit Breaker' -- destravado só depois de um contador de "
+        "sucesso/erro bater 10, mais forte que os outros 3. Responda em "
+        "JSON: {\"golpe_2\": {\"nome\":..,\"atributo\":..,\"teste\":..,"
+        "\"dez_mais\":..,\"sete_nove\":..}, \"golpe_3\": {...(mesmo "
+        "formato, atributo diferente do golpe_2)}, \"limit_breaker\": "
+        "{\"nome\":..,\"atributo\":..,\"efeito\":..}}."
+    )
+
+    for i, (arma, atributo_principal) in enumerate(pendentes, 1):
+        print("  [%d/%d] %s..." % (i, len(pendentes), arma))
+        try:
+            resposta = chamar_ollama(
+                system % (arma, atributo_principal, atributo_principal),
+                "Arma: %s" % arma, model, temperature=0.6, timeout=300,
+            )
+            dados = extrair_json(resposta)
+            texto = json.dumps(dados, ensure_ascii=False, indent=1)
+        except Exception as e:
+            texto = "ERRO: %s" % e
+        with open(saida, "a", encoding="utf-8") as f:
+            f.write("\n## %s\n- arma: `%s`\n- atributo principal: %s\n```json\n%s\n```\n"
+                     % (arma, arma, atributo_principal, texto))
+            f.flush()
+
+    print("\nProposta completa em %s -- revisar antes de aplicar." % saida)
+
+
 TAREFAS = {
     "elemento_para_atributo": tarefa_elemento_para_atributo,
     "roster_bestiario": tarefa_roster_bestiario,
     "pets_domador": tarefa_pets_domador,
     "moves_arma_piloto": tarefa_moves_arma_piloto,
+    "moves_arma_todas": tarefa_moves_arma_todas,
 }
 
 
