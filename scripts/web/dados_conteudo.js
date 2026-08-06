@@ -238,6 +238,74 @@ var MONSTROS = [
   "corpo": "## Habitat\n\nField boss das Estepes de Kaldan. Não tem covil fixo: dorme onde a matilha\npara, e a matilha para onde há caça grande. Aparece quando um número suficiente\nde Lobos da Alcateia é morto no mesmo território — ele vem ver quem foi.\n\n**Comportamento:** não abre a luta e nunca ataca primeiro. Chega, senta a\ncerca de trinta metros, e uiva. O que vem depois do uivo é o encontro; ele é\nsó quem chama.\n\n## Aparência\n\nUm terço maior que os outros e muito mais velho. Pelagem quase branca nas\ncostas, escura nas pernas, e uma orelha faltando inteira. Os olhos não são\nalaranjados como os da matilha: são claros, quase sem cor, e não piscam.\n\n## Leia em voz alta\n\n> Ele não corre. Sobe na pedra mais alta que tem por perto, senta, e olha\n> vocês do jeito que uma pessoa olha um problema de conta. Vocês têm o tempo\n> de três respirações para fazer alguma coisa. Depois disso, ele levanta a\n> cabeça e enche o peito de ar.\n\n## Sinal antes do ataque\n\nEle senta. Um lobo que senta na frente de um grupo armado não está descansando\n— está contando quantos vocês são, e a matilha está esperando o número.\n\n## Ataques\n\n- **Uivo** — não fere. Traz dois Lobos da Alcateia por vez, sem limite,\n  enquanto ele estiver de pé e com fôlego.\n- **Bote da garganta** — rápido, preciso, e escolhe sempre quem está mais\n  ferido, não quem está mais perto.\n- **Recuo em círculo** — sai do alcance e volta por outro ângulo. É como ele\n  reinicia a luta quando está perdendo.\n\n## Fraquezas\n\n- **Elemento — Veneno:** duas barras de fôlego é o que ele tem, e o veneno cobra as duas. Em 10+ ele perde o uivo pelo resto da cena — e sem uivo o encontro vira um duelo, que é o que ele não quer.\n- **Resiste a Gelo** — passou invernos demais para isso funcionar.\n- A garganta fica exposta durante o uivo. É a janela, e é curta, e é a mesma\n  coisa que ele precisa fazer para vencer.\n- Luz forte na cara interrompe o recuo em círculo: ele precisa enxergar para\n  escolher o ângulo.\n\n## O que torna este encontro memorável\n\nEle é o primeiro chefe que **não é uma barra de vida**. Matar o Alfa é fácil se\no grupo aceitar lutar contra doze lobos; matar os doze é fácil se aceitarem\ndeixar o Alfa uivar. As duas barras dele existem para dar tempo de a mesa\nperceber que o inimigo é a decisão, não a criatura.\n\n## Complicações úteis\n\n- Matam o Alfa e a matilha não dispersa — ela adota outro, e o outro é pior.\n- Ele foge na primeira barra e volta na sessão seguinte, com o dobro.\n- O uivo atrai também o que estava caçando a matilha.\n- Alguém salva um filhote e agora tem um Domador com um problema.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele de Lobo | Comum | 2-3 | 100% | Costureiro |\n| Garra Curva | Incomum | 2 | 70% | Ferreiro |\n| Essência Lupina | Raro | 1-2 | 55% | Alquimista, item Único |\n| Orelha Cortada do Alfa | Raro | 1 | 100% | Prova de feito, Corretores de Tolbana |\n| Coração da Matilha | **Épico** | 1 | 100% | Torna Raro em Único na bancada |\n| Col | — | 1800-2600 | 100% | — |\n\n## Lore\n\nNinguém sabe quantos invernos ele tem, porque ninguém do lado de dentro esteve\naqui em nenhum deles. O Alfa Lupino é mais velho que o jogo, no sentido em que\nos jogadores entendem \"mais velho\": ele já estava caçando quando o primeiro\ndeles acordou na Praça, e caçava exatamente do mesmo jeito. A orelha que falta\nnão foi arrancada por um jogador. Ninguém sabe por quem.\n\n*Ele não luta contra vocês. Ele organiza a coisa que vai.*\n\n## Notas para o mestre\n\n- **Onde entra:** field boss de `campos_leste` (Estepes de Kaldan). Surge\n  depois que o grupo derrota Lobos da Alcateia três vezes na mesma região.\n- **Como usar em transmissão:** o uivo. Corte todo o áudio ambiente por dois\n  segundos antes dele.\n- **Erro comum do grupo:** correr para cima do Alfa ignorando a matilha. É a\n  leitura certa e a execução errada — deixe funcionar parcialmente, e deixe\n  custar caro.\n- **Como a cena encerra sem HP:** submissão. Um Domador que passe no teste com\n  o Alfa **na segunda barra** encerra a luta inteira sem mais um golpe. A\n  matilha vai embora com ele e o grupo não ganha loot nenhum, e essa cena vale\n  mais que qualquer item desta tabela."
  },
  {
+  "id": "aranha_de_luz_velada",
+  "nome": "Aranha de Luz Velada",
+  "epiteto": "",
+  "arquivo": "monstros/aranha_de_luz_velada.md",
+  "img": "",
+  "carta": "",
+  "tipo": "inseto",
+  "zona": "Floresta e Planícies Iniciais",
+  "regioes": [],
+  "nivelRecomendado": "3-4",
+  "ameaca": "forte",
+  "golpes": "4",
+  "local": "caverna",
+  "canonico": "nao",
+  "fonte": "",
+  "fraqueza": "cabeça exposta e teia incendiada",
+  "elementoFraqueza": "Fogo",
+  "elementoResistencia": "Veneno",
+  "fraquezas": [
+   "Elemento — Fogo:** chama e calor queimam a teia. Em 10+ ela perde a rede e fica exposta pelo resto da cena.",
+   "Sua teia é frágil à **luz intensa**; lanternas e tochas de fôlego curto a deixam desorientada.",
+   "Abertura de posição:** se alguém atacar a cabeça ou a parte superior do peito enquanto ela está presa na teia, ela não reage à primeira tentativa.",
+   "Fraqueza de contexto:** em espaço aberto, longe do teto baixo, ela não consegue usar o salto surpresa."
+  ],
+  "resistencias": [
+   "veneno"
+  ],
+  "vulnerabilidades": [
+   "luz intensa",
+   "fogo",
+   "ataques à cabeça"
+  ],
+  "domavel": "nao",
+  "domaSucessos": "",
+  "domaRequisito": "",
+  "resumo": "Corpo preto-brilhante com longas pernas translúcidas, cobertas por finos filamentos que brilham como poeira de prata. Suas teias parecem feitas de fio de cristal fosco e refletem cada chama como se fossem pequenos olhos.",
+  "habitat": "Vive nas cavidades úmidas do Bosque da Bruma, onde a luz do exterior chega fraca e filtrada pelas folhas. Costuma tecer suas teias entre raízes e estacas de pedra, transformando pequenas salas em armadilhas cintilantes.",
+  "comportamento": "agressiva e territorial. Ela observa de longe e só ataca quando alguém derruba uma teia ou cruza o seu corredor de caça. Caça com paciência: deixa o grupo se aproximar antes de fechar o cerco.",
+  "leitura": "",
+  "sinal": "O ar fica pesado e úmido; gotas de água na teia começam a cintilar e deslizar na direção do grupo.",
+  "lore": "A Aranha de Luz Velada é um predador do bosque que aprendeu a caçar com lanternas apagadas. Sua teia não só prende corpos, mas aprisiona também a confiança dos aventureiros que decidem atravessar a caverna no escuro.",
+  "notas": "",
+  "drops": [
+   {
+    "item": "Seda Velada",
+    "raridade": "Incomum",
+    "qtd": "1",
+    "chance": "45%",
+    "serve": "Costureiro, Alquimista"
+   },
+   {
+    "item": "Pata Translúcida",
+    "raridade": "Comum",
+    "qtd": "1",
+    "chance": "60%",
+    "serve": "Arcanista, Armadura leve"
+   },
+   {
+    "item": "Col",
+    "raridade": "—",
+    "qtd": "80-120",
+    "chance": "100%",
+    "serve": "—"
+   }
+  ],
+  "corpo": "## Habitat\n\nVive nas cavidades úmidas do Bosque da Bruma, onde a luz do exterior chega fraca e filtrada pelas folhas. Costuma tecer suas teias entre raízes e estacas de pedra, transformando pequenas salas em armadilhas cintilantes.\n\n**Comportamento:** agressiva e territorial. Ela observa de longe e só ataca quando alguém derruba uma teia ou cruza o seu corredor de caça. Caça com paciência: deixa o grupo se aproximar antes de fechar o cerco.\n\n## Aparência\n\nCorpo preto-brilhante com longas pernas translúcidas, cobertas por finos filamentos que brilham como poeira de prata. Suas teias parecem feitas de fio de cristal fosco e refletem cada chama como se fossem pequenos olhos.\n\n## Leia em voz alta\n\n> A teia na sua frente vibra com uma luz fraca, como se uma vela tivesse sido esmagada há pouco. Um par de patas longas se abre do escuro, e algo espera, imóvel, no centro da rede.\n\n## Sinal antes do ataque\n\nO ar fica pesado e úmido; gotas de água na teia começam a cintilar e deslizar na direção do grupo.\n\n## Ataques\n\n- **Rajada de Teia** — prende uma personagem até ela gastar uma ação para se soltar. Se falhar, sofre dano leve e perde posição.\n- **Salto das Sombras** — salta do teto para o centro da roda, causando dano médio e empurrando para trás.\n- **Sangue Venenoso** — se não for queimada ou iluminada, seu veneno enfraquece a próxima reação do grupo.\n\n## Fraquezas\n\n- **Elemento — Fogo:** chama e calor queimam a teia. Em 10+ ela perde a rede e fica exposta pelo resto da cena.\n- Sua teia é frágil à **luz intensa**; lanternas e tochas de fôlego curto a deixam desorientada.\n- **Abertura de posição:** se alguém atacar a cabeça ou a parte superior do peito enquanto ela está presa na teia, ela não reage à primeira tentativa.\n- **Fraqueza de contexto:** em espaço aberto, longe do teto baixo, ela não consegue usar o salto surpresa.\n\n## O que torna este encontro memorável\n\nA luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A criatura transforma o cenário em armadilha viva e força o grupo a usar fogo e movimento para não ser derrubado.\n\n## Complicações úteis\n\n- Um aliado fica preso na teia antes da criatura aparecer.\n- A teia se rompe e derruba alguém num buraco raso; precisa reagir antes de ser cercado.\n- A criatura usa a teia para se reposicionar acima do grupo, mantendo a altura e forçando ataques à distância.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seda Velada | Incomum | 1 | 45% | Costureiro, Alquimista |\n| Pata Translúcida | Comum | 1 | 60% | Arcanista, Armadura leve |\n| Col | — | 80-120 | 100% | — |\n\n## Lore\n\nA Aranha de Luz Velada é um predador do bosque que aprendeu a caçar com lanternas apagadas. Sua teia não só prende corpos, mas aprisiona também a confiança dos aventureiros que decidem atravessar a caverna no escuro.\n\n*Ela não ataca a primeira pessoa que vê. Ataca a primeira pessoa que pisa em sua casa.*\n\n## Notas para o mestre\n\n- **Onde entra:** em entradas de cavernas florestais e passagens úmidas, antes de um corredor mais largo.\n- **Como usar em transmissão:** o brilho tênue da teia e o estalo súbito do salto fazem um momento visual forte.\n- **Erro comum do grupo:** tentar cortar a teia com ataques leves em vez de incendiar ou usar iluminação.\n- **Como a cena encerra sem HP:** destruir a rede e forçar a aranha a fugir para outra câmara, deixando o grupo com um rastro de teia para seguir."
+ },
+ {
   "id": "arauto_das_alturas",
   "nome": "Arauto das Alturas",
   "epiteto": "",
@@ -4825,7 +4893,7 @@ var NPCS = [
   "papel": "neutro",
   "profissao": "Mercenário",
   "arma": "Machado",
-  "local": "Posto de Kaldrin — barraca central do Sindicato dos Ossos",
+  "local": "Posto de Kaldrin — barraca central do Sindicato",
   "canonico": "nao",
   "atributos": {
    "Corpo": "2",
@@ -4841,7 +4909,7 @@ var NPCS = [
    "Eu não pago por esforço. Pago por caravana inteira chegando inteira.",
    "Do Terraço Geek? Não. Próxima pergunta."
   ],
-  "corpo": "## Aparência\n\nOmbros largos, machado sempre no cinto, e um caderno de contratos que ele\ncarrega com muito mais cuidado que a arma. Chama todo mundo de \"recruta\" até\na pessoa fazer alguma coisa que mereça nome.\n\n## Personalidade\n\nDireto ao ponto e mais justo do que a fama dele sugere. Não gosta de discurso.\nContrata, paga, e cobra quem não entrega.\n\n## História\n\nSe autonomeou sargento no dia 3, quando percebeu que ninguém em Kaldrin sabia\norganizar uma fila. O apelido pegou. Ele finge não gostar.\n\n## O que ele responde\n\n- **Sobre contratos:** todos os abertos, com pagamento e risco declarados.\n  Ele nunca esconde o risco — considera isso a parte mais importante do\n  trabalho.\n- **Sobre as outras guildas:** avalia por competência, não por rivalidade.\n  \"O LHUB é chato e cumpre. Já o iBarr's promete bonito.\"\n- **Sobre o Labirinto:** o que os batedores do Sindicato dos Ossos trouxeram, de graça,\n  pra quem for encarar. Ele não vende informação de dungeon: \"isso não é\n  mercadoria\".\n\n## O que ele NÃO responde\n\n- **Sobre a briga do Sindicato dos Ossos com o Terraço Geek.** Ele muda de assunto de\n  forma tão óbvia que fica claro que a culpa foi dele.\n- **Quantos contratados dele já morreram.** Ele sabe o número exato.\n\n## Gancho de aventura\n\n- É o empregador natural do **Mercenário** jogador (escolta paga por sessão).\n- `bounty_06_caravana_emboscada` e `tolbana_e07_guarda_costas_por_um_dia`\n  passam por ele.\n- Se um **Diplomata** resolver a briga dele com o Terraço Geek, isso preenche\n  um dos dois sulcos vazios do `Selo de Trégua`.\n\n## Diálogo de exemplo\n\n- \"Recruta. Contrato aberto: escolta até a pedreira, cento e vinte, e tem chance real de você não voltar. Ainda quer?\"\n- \"Eu não pago por esforço. Pago por caravana inteira chegando inteira.\"\n- \"Do Terraço Geek? Não. Próxima pergunta.\"\n\n## Combate (se aplicável)\n\nCorpo 2, Machado, Skill Quebrar Guarda. Segura uma linha sozinho."
+  "corpo": "## Aparência\n\nOmbros largos, machado sempre no cinto, e um caderno de contratos que ele\ncarrega com muito mais cuidado que a arma. Chama todo mundo de \"recruta\" até\na pessoa fazer alguma coisa que mereça nome.\n\n## Personalidade\n\nDireto ao ponto e mais justo do que a fama dele sugere. Não gosta de discurso.\nContrata, paga, e cobra quem não entrega.\n\n## História\n\nSe autonomeou sargento no dia 3, quando percebeu que ninguém em Kaldrin sabia\norganizar uma fila. O apelido pegou. Ele finge não gostar.\n\n## O que ele responde\n\n- **Sobre contratos:** todos os abertos, com pagamento e risco declarados.\n  Ele nunca esconde o risco — considera isso a parte mais importante do\n  trabalho.\n- **Sobre as outras guildas:** avalia por competência, não por rivalidade.\n  \"O LHUB é chato e cumpre. Já o iBarr's promete bonito.\"\n- **Sobre o Labirinto:** o que os batedores do Sindicato trouxeram, de graça,\n  pra quem for encarar. Ele não vende informação de dungeon: \"isso não é\n  mercadoria\".\n\n## O que ele NÃO responde\n\n- **Sobre a briga do Sindicato com o Terraço Geek.** Ele muda de assunto de\n  forma tão óbvia que fica claro que a culpa foi dele.\n- **Quantos contratados dele já morreram.** Ele sabe o número exato.\n\n## Gancho de aventura\n\n- É o empregador natural do **Mercenário** jogador (escolta paga por sessão).\n- `bounty_06_caravana_emboscada` e `tolbana_e07_guarda_costas_por_um_dia`\n  passam por ele.\n- Se um **Diplomata** resolver a briga dele com o Terraço Geek, isso preenche\n  um dos dois sulcos vazios do `Selo de Trégua`.\n\n## Diálogo de exemplo\n\n- \"Recruta. Contrato aberto: escolta até a pedreira, cento e vinte, e tem chance real de você não voltar. Ainda quer?\"\n- \"Eu não pago por esforço. Pago por caravana inteira chegando inteira.\"\n- \"Do Terraço Geek? Não. Próxima pergunta.\"\n\n## Combate (se aplicável)\n\nCorpo 2, Machado, Skill Quebrar Guarda. Segura uma linha sozinho."
  },
  {
   "id": "sela",
@@ -5344,6 +5412,25 @@ var ARMAS = [
   "skills": [
    "Ataque à Distância",
    "Desvio"
+  ]
+ },
+ {
+  "id": "leque_de_guerra_simples",
+  "nome": "Leque de Guerra Simples",
+  "arquivo": "armas/leque_de_guerra_simples.md",
+  "img": "",
+  "tipo": "Leque",
+  "atributo": "Técnica",
+  "raridade": "Comum",
+  "requisito": "",
+  "preco": 0,
+  "precoTxt": "",
+  "resumo": "Varetas de metal simples, pontas discretamente afiadas, sem entalhe nem ornamento. O mesmo tipo de peça que qualquer ferreiro de cidade sabe montar.",
+  "efeito": "",
+  "obter": "Disponível na loja da Cidade do Início ou fabricado por um ferreiro local.",
+  "skills": [
+   "Aceno que Comanda",
+   "Vento Que Guia"
   ]
  },
  {
@@ -5946,6 +6033,54 @@ var ARMAS = [
   "skills": []
  },
  {
+  "id": "leque_de_guerra_simples",
+  "nome": "Leque de Guerra Simples",
+  "arquivo": "armas/00_catalogo_expandido.md",
+  "img": "",
+  "tipo": "Leque",
+  "atributo": "Técnica",
+  "raridade": "Comum",
+  "requisito": "—",
+  "preco": 80,
+  "precoTxt": "80 Col",
+  "resumo": "Varetas de metal simples, pontas discretamente afiadas, sem entalhe nem ornamento. O mesmo tipo de peça que qualquer ferreiro de cidade sabe montar.",
+  "efeito": "—",
+  "obter": "loja da Cidade do Início, ou fabricado por um ferreiro local.",
+  "skills": []
+ },
+ {
+  "id": "leque_de_brasa_viva",
+  "nome": "Leque de Brasa Viva",
+  "arquivo": "armas/00_catalogo_expandido.md",
+  "img": "",
+  "tipo": "Leque",
+  "atributo": "Técnica",
+  "raridade": "Incomum",
+  "requisito": "Técnica -1+",
+  "preco": 310,
+  "precoTxt": "310 Col",
+  "resumo": "Varetas enegrecidas por fumaça antiga, tecido chamuscado nas bordas mas ainda inteiro — cheira a cinza mesmo quando fechado.",
+  "efeito": "+1 em testes de Técnica para comandar mais de um aliado ao mesmo tempo.",
+  "obter": "Ferreiro de Tolbana, sob encomenda — sem ingrediente raro, só técnica de forja. 310 Col à vista.",
+  "skills": []
+ },
+ {
+  "id": "leque_das_mil_vozes",
+  "nome": "Leque das Mil Vozes",
+  "arquivo": "armas/00_catalogo_expandido.md",
+  "img": "",
+  "tipo": "Leque",
+  "atributo": "Técnica",
+  "raridade": "Raro",
+  "requisito": "Técnica 0+",
+  "preco": 0,
+  "precoTxt": "não é vendido",
+  "resumo": "Tecido pálido, tingido com a madeira do Bosque de Ashwen — sussurra baixinho quando abre, mesmo sem vento.",
+  "efeito": "+1 em testes de Técnica para comandar, em qualquer situação.",
+  "obter": "resolver o que a Voz Sem Corpo quer no Bosque de Ashwen (docs/oficios_andar1.md, posto de trabalho do Lenhador). É negociação e resolução de conflito, não craft nem compra. Nenhuma profissão é exigida pra tentar.",
+  "skills": []
+ },
+ {
   "id": "chicote_de_raiz_mae",
   "nome": "Chicote de Raiz-Mãe",
   "arquivo": "armas/00_catalogo_expandido.md",
@@ -6293,6 +6428,21 @@ var MOVES_ARMA = [
    "txt": "quando você escala, segura, levanta alguém ou impede uma queda, role 2d6+Corpo. 10+ você salva sem se machucar. 7-9 você salva, mas paga com dor, ferimento ou exposição.",
    "rotulo": "Move Utilitário"
   }
+ },
+ {
+  "nome": "Leque",
+  "atributo": "TEC",
+  "marca": "o leque passa elegância, controle de espaço e comando à distância; ela dirige a cena com um gesto, nunca com força.",
+  "moveA": {
+   "titulo": "Aceno que Comanda",
+   "txt": "quando você usa um gesto do leque para guiar o golpe de um aliado no meio da luta, role 2d6+Técnica. 10+ escolha 1: o aliado acerta sem sofrer reação, você redireciona o ataque de outra pessoa pra um alvo diferente, ou nega a próxima reação do alvo. 7-9 o aliado acerta, mas escolha 1: você se expõe, o inimigo passa a ler seus gestos, ou o aliado sofre o troco.",
+   "rotulo": "Move de Combate"
+  },
+  "moveB": {
+   "titulo": "Vento Que Guia",
+   "txt": "quando você usa o leque pra criar um efeito com o ar — apagar rastro, espalhar fumaça, mandar um sinal à distância, acalmar algo agitado — role 2d6+Técnica. 10+ funciona limpo, sem chamar atenção indevida. 7-9 funciona, mas chama atenção extra ou é mal-interpretado.",
+   "rotulo": "Move Utilitário"
+  }
  }
 ];
 
@@ -6574,7 +6724,7 @@ var SISTEMA = [
  },
  {
   "titulo": "Guildas",
-  "corpo": "Hierarquia: **Líder** (decisões estratégicas, responsável máximo) → **Vice-Líder**\n(auxilia, assume o comando na ausência do líder) → **Membros** (base da\nguilda). Benefícios: compartilhar recursos/informações, formar grupos pra\ndungeons/missões difíceis, organizar caçadas a chefes, proteção/cooperação,\narmazenamento compartilhado (se a mesa usar). Romper laços com uma guilda\npode custar reputação; guildas podem ter alianças ou rivalidades históricas.\n\nGuildas de exemplo já em uso nesta mesa (usar como inspiração de tom, não\nreinventar): Sindicato dos Ossos, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds."
+  "corpo": "Hierarquia: **Líder** (decisões estratégicas, responsável máximo) → **Vice-Líder**\n(auxilia, assume o comando na ausência do líder) → **Membros** (base da\nguilda). Benefícios: compartilhar recursos/informações, formar grupos pra\ndungeons/missões difíceis, organizar caçadas a chefes, proteção/cooperação,\narmazenamento compartilhado (se a mesa usar). Romper laços com uma guilda\npode custar reputação; guildas podem ter alianças ou rivalidades históricas.\n\nGuildas de exemplo já em uso nesta mesa (usar como inspiração de tom, não\nreinventar): Sindicato dos Ossos, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda\nde Nerds."
  }
 ];
 
@@ -6650,7 +6800,7 @@ var EQUIPAMENTOS = [
   "requisito": "Conhecimento -1+ ou Espírito -1+",
   "preco": 0,
   "precoTxt": "não é vendido",
-  "resumo": "Broche de bronze com seis sulcos, um para cada guilda que assinou a trégua informal de Tolbana (Sindicato dos Ossos, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds). Quatro sulcos estão preenchidos com esmalte. Dois não.",
+  "resumo": "Broche de bronze com seis sulcos, um para cada guilda que assinou a trégua informal de Tolbana (Sindicato, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds). Quatro sulcos estão preenchidos com esmalte. Dois não.",
   "efeito": "+1 em testes de Conhecimento para mediar conflito, negociar entre facções ou pedir passagem — é a peça do Diplomata.",
   "obter": "concedido na cadeia E (Vida em Tolbana) a quem resolver uma disputa entre duas guildas sem que ninguém saque arma. Os dois sulcos vazios são conteúdo em aberto de propósito."
  },
@@ -8815,8 +8965,8 @@ var QUESTS = [
   "desbloqueia": [
    "tolbana_e08_reputacao_em_tolbana"
   ],
-  "resumo": "A disputa de preço não era só entre dois comerciantes — cada um tem apoio de uma guilda diferente (ver `docs/economia_profissoes.md`: Sindicato dos Ossos, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds), e a tensão real está subindo pra um nível que passa longe de resolução fácil.",
-  "corpo": "**Tipo:** Diplomacia · **Dificuldade:** Difícil · **Região:** Tolbana\n\n**Requer:** `tolbana_e02_disputa_de_preco` · **Desbloqueia:** `tolbana_e08_reputacao_em_tolbana`\n\n**Gancho**\n\nA disputa de preço não era só entre dois comerciantes — cada um tem apoio\nde uma guilda diferente (ver `docs/economia_profissoes.md`: Sindicato dos Ossos,\nLHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds), e a tensão real\nestá subindo pra um nível que passa longe de resolução fácil.\n\n**Estrutura em beats**\n\n1. Representantes das duas guildas procuram o grupo separadamente,\n   tentando puxar apoio pro próprio lado — cada um oferece algo diferente.\n2. O grupo decide: apoiar uma guilda, ficar neutro publicamente, ou\n   tentar mediar uma reconciliação real entre as duas.\n3. Consequência imediata — a escolha muda como as duas guildas tratam o\n   grupo dali em diante (preços, acesso a informação, convites).\n4. Se o grupo tentar reconciliar, é o caminho mais difícil e mais\n   arriscado — mas o único que evita fazer um inimigo permanente.\n\n**Testes sugeridos**\n\n- 2d6+Espírito — a conversa com cada representante de guilda\n- 2d6+Conhecimento — se tentar reconciliar, entender o que cada lado realmente quer por trás do orgulho\n\n**Complicação**\n\nEscolher um lado sem querer (10+ na conversa com só uma guilda, sem\nEspírito investido na outra) resolve rápido mas cria ressentimento\npermanente do lado não escolhido — não é errado, é uma escolha real com\npeso real.\n\n**Recompensas**\n\nCol 150 + mudança registrada de reputação com as guildas envolvidas\n(documentar pro mestre usar em `tolbana_e08` e em cenas futuras — acesso\na recompensas de guilda, tratamento em lojas, convites pra eventos).\nReconciliar bem-sucedida (resultado raro, exige 10+ no teste de\nConhecimento) rende reputação positiva com as duas ao mesmo tempo.\n\n**Gancho pra próxima quest**\n\nComo quer que tenha terminado, a cidade toda já sabe o nome do grupo.\n\n---"
+  "resumo": "A disputa de preço não era só entre dois comerciantes — cada um tem apoio de uma guilda diferente (ver `docs/economia_profissoes.md`: Sindicato, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds), e a tensão real está subindo pra um nível que passa longe de resolução fácil.",
+  "corpo": "**Tipo:** Diplomacia · **Dificuldade:** Difícil · **Região:** Tolbana\n\n**Requer:** `tolbana_e02_disputa_de_preco` · **Desbloqueia:** `tolbana_e08_reputacao_em_tolbana`\n\n**Gancho**\n\nA disputa de preço não era só entre dois comerciantes — cada um tem apoio\nde uma guilda diferente (ver `docs/economia_profissoes.md`: Sindicato,\nLHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds), e a tensão real\nestá subindo pra um nível que passa longe de resolução fácil.\n\n**Estrutura em beats**\n\n1. Representantes das duas guildas procuram o grupo separadamente,\n   tentando puxar apoio pro próprio lado — cada um oferece algo diferente.\n2. O grupo decide: apoiar uma guilda, ficar neutro publicamente, ou\n   tentar mediar uma reconciliação real entre as duas.\n3. Consequência imediata — a escolha muda como as duas guildas tratam o\n   grupo dali em diante (preços, acesso a informação, convites).\n4. Se o grupo tentar reconciliar, é o caminho mais difícil e mais\n   arriscado — mas o único que evita fazer um inimigo permanente.\n\n**Testes sugeridos**\n\n- 2d6+Espírito — a conversa com cada representante de guilda\n- 2d6+Conhecimento — se tentar reconciliar, entender o que cada lado realmente quer por trás do orgulho\n\n**Complicação**\n\nEscolher um lado sem querer (10+ na conversa com só uma guilda, sem\nEspírito investido na outra) resolve rápido mas cria ressentimento\npermanente do lado não escolhido — não é errado, é uma escolha real com\npeso real.\n\n**Recompensas**\n\nCol 150 + mudança registrada de reputação com as guildas envolvidas\n(documentar pro mestre usar em `tolbana_e08` e em cenas futuras — acesso\na recompensas de guilda, tratamento em lojas, convites pra eventos).\nReconciliar bem-sucedida (resultado raro, exige 10+ no teste de\nConhecimento) rende reputação positiva com as duas ao mesmo tempo.\n\n**Gancho pra próxima quest**\n\nComo quer que tenha terminado, a cidade toda já sabe o nome do grupo.\n\n---"
  },
  {
   "id": "tolbana_e06_o_preco_da_informacao",
@@ -9273,8 +9423,8 @@ var QUESTS = [
   "npc": "",
   "requer": [],
   "desbloqueia": [],
-  "resumo": "Um recruta novo de uma guilda local (Sindicato dos Ossos, LHUB, Dndalcin, iBarr's, Terraço Geek ou Guilda de Nerds — à escolha do mestre) está tentando provar valor pros veteranos e pede ajuda do grupo pra uma tarefa simples.",
-  "corpo": "**Tipo:** Missão de guilda · **Dificuldade:** Fácil · **Região:** Posto de Kaldrin\n\n**Requer:** — · **Desbloqueia:** —\n\n**Gancho**\n\nUm recruta novo de uma guilda local (Sindicato dos Ossos, LHUB, Dndalcin, iBarr's,\nTerraço Geek ou Guilda de Nerds — à escolha do mestre) está tentando\nprovar valor pros veteranos e pede ajuda do grupo pra uma tarefa simples.\n\n**Leia em voz alta**\n\n> O recruta tenta falar como quem já pertence à guilda, mas a pressa entrega\n> o contrário. Não é falta de coragem. É excesso de vontade de não parecer\n> peso morto diante de gente que já tem nome, função e história.\n\n**O que está em jogo**\n\n- Esta bounty funciona muito melhor como cena de vínculo do que como tarefa.\n- A prova em si importa menos do que o que ela revela sobre o recruta.\n- Boa oportunidade para o grupo mostrar que liderança também é protagonismo.\n\n**Estrutura em beats**\n\n1. O pedido — direto, sem mistério: o recruta precisa de uma prova de\n   competência, e não tem certeza se consegue sozinho.\n2. Execução — o mestre pode reaproveitar qualquer combate/coleta já feito\n   nessa sessão como \"a prova\", ou inventar uma tarefa nova rápida.\n3. Entrega da prova — o recruta agradece, visivelmente aliviado.\n\n**Sem teste fixo** — usa o resultado da tarefa escolhida como prova.\n\n**Complicações úteis**\n\n- O recruta quer impressionar e quase estraga algo simples.\n- Um veterano da guilda aparece cedo demais para avaliar.\n- O grupo percebe que a tarefa é fácil, mas a vergonha do recruta não é.\n- A “prova” funciona, mas o recruta ainda acha que foi carregado demais.\n\n**Recompensas**\n\nCol 30 + reputação com a guilda escolhida — possível convite futuro pra\natividades da guilda (gancho reaproveitável em sessões futuras).\n\n**Gancho visual / de transmissão**\n\n- O recruta fingindo confiança um segundo antes de perdê-la.\n- A pequena prova ganhando peso social demais.\n- O alívio visível na entrega final.\n\n---"
+  "resumo": "Um recruta novo de uma guilda local (Sindicato, LHUB, Dndalcin, iBarr's, Terraço Geek ou Guilda de Nerds — à escolha do mestre) está tentando provar valor pros veteranos e pede ajuda do grupo pra uma tarefa simples.",
+  "corpo": "**Tipo:** Missão de guilda · **Dificuldade:** Fácil · **Região:** Posto de Kaldrin\n\n**Requer:** — · **Desbloqueia:** —\n\n**Gancho**\n\nUm recruta novo de uma guilda local (Sindicato, LHUB, Dndalcin, iBarr's,\nTerraço Geek ou Guilda de Nerds — à escolha do mestre) está tentando\nprovar valor pros veteranos e pede ajuda do grupo pra uma tarefa simples.\n\n**Leia em voz alta**\n\n> O recruta tenta falar como quem já pertence à guilda, mas a pressa entrega\n> o contrário. Não é falta de coragem. É excesso de vontade de não parecer\n> peso morto diante de gente que já tem nome, função e história.\n\n**O que está em jogo**\n\n- Esta bounty funciona muito melhor como cena de vínculo do que como tarefa.\n- A prova em si importa menos do que o que ela revela sobre o recruta.\n- Boa oportunidade para o grupo mostrar que liderança também é protagonismo.\n\n**Estrutura em beats**\n\n1. O pedido — direto, sem mistério: o recruta precisa de uma prova de\n   competência, e não tem certeza se consegue sozinho.\n2. Execução — o mestre pode reaproveitar qualquer combate/coleta já feito\n   nessa sessão como \"a prova\", ou inventar uma tarefa nova rápida.\n3. Entrega da prova — o recruta agradece, visivelmente aliviado.\n\n**Sem teste fixo** — usa o resultado da tarefa escolhida como prova.\n\n**Complicações úteis**\n\n- O recruta quer impressionar e quase estraga algo simples.\n- Um veterano da guilda aparece cedo demais para avaliar.\n- O grupo percebe que a tarefa é fácil, mas a vergonha do recruta não é.\n- A “prova” funciona, mas o recruta ainda acha que foi carregado demais.\n\n**Recompensas**\n\nCol 30 + reputação com a guilda escolhida — possível convite futuro pra\natividades da guilda (gancho reaproveitável em sessões futuras).\n\n**Gancho visual / de transmissão**\n\n- O recruta fingindo confiança um segundo antes de perdê-la.\n- A pequena prova ganhando peso social demais.\n- O alívio visível na entrega final.\n\n---"
  },
  {
   "id": "bounty_08_o_que_a_pedreira_escondia",
@@ -9365,7 +9515,7 @@ var QUESTS = [
   "requer": [],
   "desbloqueia": [],
   "resumo": "",
-  "corpo": "**Ofício:** Diplomata · **Dificuldade:** Difícil · **Região:** Posto de Kaldrin · **NPC:** Sargento Kolt\n\n**Gancho:** o Selo de Trégua tem seis sulcos e só quatro estão preenchidos. Os\ndois que faltam são o Sindicato dos Ossos e o Terraço Geek, e a briga entre eles começou\npor algo pequeno demais pra qualquer um dos lados admitir em voz alta.\n\n**O teste que decide:** 2d6+Conhecimento para mediar. **10+** os dois cedem, e\nvocê define os termos. **7-9** cedem, mas um deles sai devendo — e cobra\ndepois. **6-** os dois te culpam, e a trégua atrasa um mês de jogo.\n\n**Complicação:** o Kolt tem culpa no começo da briga e desconversa quando\nperguntam. Descobrir isso é o que destrava a mediação — e usar isso na frente\ndele custa a relação.\n\n**Recompensa:** 70 Col, **um sulco preenchido no `Selo de Trégua`**, e acesso\nàs duas guildas ao mesmo tempo, o que ninguém mais tem.\n\n---"
+  "corpo": "**Ofício:** Diplomata · **Dificuldade:** Difícil · **Região:** Posto de Kaldrin · **NPC:** Sargento Kolt\n\n**Gancho:** o Selo de Trégua tem seis sulcos e só quatro estão preenchidos. Os\ndois que faltam são o Sindicato e o Terraço Geek, e a briga entre eles começou\npor algo pequeno demais pra qualquer um dos lados admitir em voz alta.\n\n**O teste que decide:** 2d6+Conhecimento para mediar. **10+** os dois cedem, e\nvocê define os termos. **7-9** cedem, mas um deles sai devendo — e cobra\ndepois. **6-** os dois te culpam, e a trégua atrasa um mês de jogo.\n\n**Complicação:** o Kolt tem culpa no começo da briga e desconversa quando\nperguntam. Descobrir isso é o que destrava a mediação — e usar isso na frente\ndele custa a relação.\n\n**Recompensa:** 70 Col, **um sulco preenchido no `Selo de Trégua`**, e acesso\nàs duas guildas ao mesmo tempo, o que ninguém mais tem.\n\n---"
  },
  {
   "id": "oficio_bibliotecario_a_heraldica_errada",
@@ -9680,7 +9830,7 @@ var CRONICAS = [
   "conexoes": "Arco A",
   "elenco": "NPCs: npcs/sargento_kolt.md, npcs/gilda_a_batedora.md",
   "resumo": "Um jogador acusado de roubar equipamentos raros tem recompensa por captura. Encontrá-lo é fácil; decidir se ele é realmente culpado é outra história. As pistas colocam o trio entre uma guilda influente e alguém que talvez esteja sendo usado como bode expiatório.",
-  "corpo": "**Tipo:** Investigação/Social · **Dificuldade:** Médio · **Região:** Posto de\nKaldrin · **Conexões:** Arco A · NPCs: `npcs/sargento_kolt.md`,\n`npcs/gilda_a_batedora.md`\n\n**Gancho**\n\nUm jogador acusado de roubar equipamentos raros tem recompensa por captura.\nEncontrá-lo é fácil; decidir se ele é realmente culpado é outra história. As\npistas colocam o trio entre uma guilda influente e alguém que talvez esteja\nsendo usado como bode expiatório.\n\n**Leia em voz alta**\n\n> O cartaz no Sindicato dos Ossos de Kaldrin é direto: nome, retrato, recompensa. O\n> Sargento Kolt confirma os detalhes sem entusiasmo. \"Guilda grande, perda\n> grande, acusação rápida. Rápido demais, se você perguntar a mim — mas\n> ninguém perguntou.\"\n\n**O que está em jogo**\n\n- Capturar sem investigar pode entregar um inocente pra punição injusta.\n- Investigar demais pode fazer a guilda acusadora perder paciência com o grupo.\n- A cena mostra que \"recompensa por captura\" em Aincrad não tem sistema\n  judicial por trás — é conveniência de quem tem mais influência.\n\n**Estrutura em beats**\n\n1. Conversar com Kolt sobre os detalhes formais da acusação — nomes, valor\n   perdido, prazo.\n2. Rastrear o acusado — Gilda (batedora solitária) sabe onde ele anda se\n   escondendo, se convencida a ajudar.\n3. Ouvir o lado dele — evidência de que ele estava em outro lugar, ou de que\n   o item \"roubado\" foi apenas mal registrado.\n4. Confrontar a guilda acusadora com o que foi descoberto — reação varia\n   conforme provas e abordagem.\n5. Resolução — inocentar publicamente, entregar mesmo assim por pressão, ou\n   negociar um meio-termo que ninguém ama totalmente.\n\n**Testes sugeridos**\n\n- 2d6+Espírito — conseguir a cooperação de Gilda\n- 2d6+Conhecimento — encontrar furos na acusação da guilda\n- 2d6+Espírito — confrontar a guilda sem provocar retaliação desproporcional\n\n**NPCs na cena**\n\n- **Sargento Kolt** — quer o caso encerrado sem gerar mais violência entre\n  guildas.\n- **Gilda, a Batedora** — ajuda por interesse próprio (ela desconfia de\n  guildas grandes por princípio), não por bondade gratuita.\n- **Acusado (crie na hora)** — assustado, sem recursos pra se defender sozinho.\n- **Representante da guilda acusadora (crie na hora)** — quer o item de\n  volta ou compensação, não necessariamente vingança.\n\n**Encontro**\n\nNenhum obrigatório — se a guilda reagir mal à acusação desmontada, pode haver\ntensão de intimidação (não combate letal) com 1-2 membros da guilda.\n\n**Complicações úteis**\n\n- O verdadeiro ladrão aparece tarde demais pra evitar dano de reputação já feito.\n- A guilda acusadora tenta subornar o grupo pra \"confirmar\" a versão original.\n- Gilda exige um favor específico e arriscado em troca da ajuda.\n\n**Recompensas**\n\nCol 80-150 (recompensa oficial, se aplicada corretamente) + reputação — tanto\ncom o Sindicato dos Ossos de Kaldrin quanto (possivelmente) com a guilda acusadora,\ndependendo de como a verdade foi entregue.\n\n**Gancho pra próxima cena**\n\nO padrão de \"guilda decide culpa sem processo formal\" volta, muito mais grave,\nem **EP.36 — O Primeiro PK** e **EP.44 — O Julgamento**.\n\n**Gancho visual / de transmissão**\n\n- O cartaz de recompensa exposto como se fosse fato consumado.\n- O acusado escondido, sem recursos pra se defender sozinho.\n- O momento de decidir: entregar, proteger ou negociar.\n\n---"
+  "corpo": "**Tipo:** Investigação/Social · **Dificuldade:** Médio · **Região:** Posto de\nKaldrin · **Conexões:** Arco A · NPCs: `npcs/sargento_kolt.md`,\n`npcs/gilda_a_batedora.md`\n\n**Gancho**\n\nUm jogador acusado de roubar equipamentos raros tem recompensa por captura.\nEncontrá-lo é fácil; decidir se ele é realmente culpado é outra história. As\npistas colocam o trio entre uma guilda influente e alguém que talvez esteja\nsendo usado como bode expiatório.\n\n**Leia em voz alta**\n\n> O cartaz no Sindicato de Kaldrin é direto: nome, retrato, recompensa. O\n> Sargento Kolt confirma os detalhes sem entusiasmo. \"Guilda grande, perda\n> grande, acusação rápida. Rápido demais, se você perguntar a mim — mas\n> ninguém perguntou.\"\n\n**O que está em jogo**\n\n- Capturar sem investigar pode entregar um inocente pra punição injusta.\n- Investigar demais pode fazer a guilda acusadora perder paciência com o grupo.\n- A cena mostra que \"recompensa por captura\" em Aincrad não tem sistema\n  judicial por trás — é conveniência de quem tem mais influência.\n\n**Estrutura em beats**\n\n1. Conversar com Kolt sobre os detalhes formais da acusação — nomes, valor\n   perdido, prazo.\n2. Rastrear o acusado — Gilda (batedora solitária) sabe onde ele anda se\n   escondendo, se convencida a ajudar.\n3. Ouvir o lado dele — evidência de que ele estava em outro lugar, ou de que\n   o item \"roubado\" foi apenas mal registrado.\n4. Confrontar a guilda acusadora com o que foi descoberto — reação varia\n   conforme provas e abordagem.\n5. Resolução — inocentar publicamente, entregar mesmo assim por pressão, ou\n   negociar um meio-termo que ninguém ama totalmente.\n\n**Testes sugeridos**\n\n- 2d6+Espírito — conseguir a cooperação de Gilda\n- 2d6+Conhecimento — encontrar furos na acusação da guilda\n- 2d6+Espírito — confrontar a guilda sem provocar retaliação desproporcional\n\n**NPCs na cena**\n\n- **Sargento Kolt** — quer o caso encerrado sem gerar mais violência entre\n  guildas.\n- **Gilda, a Batedora** — ajuda por interesse próprio (ela desconfia de\n  guildas grandes por princípio), não por bondade gratuita.\n- **Acusado (crie na hora)** — assustado, sem recursos pra se defender sozinho.\n- **Representante da guilda acusadora (crie na hora)** — quer o item de\n  volta ou compensação, não necessariamente vingança.\n\n**Encontro**\n\nNenhum obrigatório — se a guilda reagir mal à acusação desmontada, pode haver\ntensão de intimidação (não combate letal) com 1-2 membros da guilda.\n\n**Complicações úteis**\n\n- O verdadeiro ladrão aparece tarde demais pra evitar dano de reputação já feito.\n- A guilda acusadora tenta subornar o grupo pra \"confirmar\" a versão original.\n- Gilda exige um favor específico e arriscado em troca da ajuda.\n\n**Recompensas**\n\nCol 80-150 (recompensa oficial, se aplicada corretamente) + reputação — tanto\ncom o Sindicato de Kaldrin quanto (possivelmente) com a guilda acusadora,\ndependendo de como a verdade foi entregue.\n\n**Gancho pra próxima cena**\n\nO padrão de \"guilda decide culpa sem processo formal\" volta, muito mais grave,\nem **EP.36 — O Primeiro PK** e **EP.44 — O Julgamento**.\n\n**Gancho visual / de transmissão**\n\n- O cartaz de recompensa exposto como se fosse fato consumado.\n- O acusado escondido, sem recursos pra se defender sozinho.\n- O momento de decidir: entregar, proteger ou negociar.\n\n---"
  },
  {
   "id": "ep14",
@@ -10556,7 +10706,7 @@ var GUIAS = [
   "nivel": "",
   "chegada": "",
   "leitura": "Umas quinze barracas plantadas num alto, com estandartes de cores diferentes\nfincados sem organização nenhuma — cada guilda marcou seu pedaço e ninguém\nconcordou com o desenho final. Tem cheiro de comida, som de metal sendo\nmartelado e três discussões acontecendo ao mesmo tempo. Um recruta magro\nestá tentando montar uma barraca sozinho há um tempo claramente longo.",
-  "cena": "Kaldrin é o entreposto onde as guildas se cruzam sem entrar em cidade. É o\nmelhor lugar do andar pra roleplay de facção: Sindicato dos Ossos, LHUB, Dndalcin,\niBarr's, Terraço Geek e Guilda de Nerds têm presença, e as fricções entre elas\nsão visíveis sem ninguém sacar arma.\n\nNão é zona segura de sistema. Ninguém briga porque ninguém quer ser o primeiro.",
+  "cena": "Kaldrin é o entreposto onde as guildas se cruzam sem entrar em cidade. É o\nmelhor lugar do andar pra roleplay de facção: Sindicato, LHUB, Dndalcin,\niBarr's, Terraço Geek e Guilda de Nerds têm presença, e as fricções entre elas\nsão visíveis sem ninguém sacar arma.\n\nNão é zona segura de sistema. Ninguém briga porque ninguém quer ser o primeiro.",
   "acoes": [
    {
     "acao": "Sondar clima entre as guildas",
