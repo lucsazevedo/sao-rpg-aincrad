@@ -9,14 +9,16 @@ uso: mestre
 
 | Ação | Custo de Fôlego | Resultado |
 |---|---|---|
-| Enfrentar monstro comum de região desbloqueada | Baixo | Drop comum, XP pequeno |
-| Enfrentar monstro **acima** do nível recomendado | Alto | Drop melhor, XP maior, **risco de Desmaio** |
+| Enfrentar monstro de região desbloqueada, com Poder suficiente | Baixo/médio | Drop normal, XP normal |
+| Enfrentar monstro **acima do seu Poder** (ver item 12) | Igual, mas arriscado | Drop melhor se der certo, **Desmaio se falhar** |
 | Miniboss/boss de andar | Alto, talvez em grupo | Drop raro, XP grande |
 | (Domador) chocar ovo / cuidar de pet | Médio | Pet craftado (item 1) |
 
-A trava de nível (`nivelRecomendado` já no banco) decide o que aparece
-como "comum" vs "acima do nível" pra cada personagem — não é fixo, é
-relativo a quem está jogando.
+Duas travas diferentes: **nível** (`nivelRecomendado`) decide o que você
+consegue nem **ver** como opção; **Poder** (item 12, pontos de
+equipamento) decide o **risco** dentro do que já está acessível — jogador
+pode sempre tentar acima do próprio Poder, sabendo que arrisca Desmaio.
+Sem PvP — o risco vem do conteúdo, nunca de outro jogador.
 
 ## Ofício (o que muda de personagem pra personagem)
 
@@ -54,18 +56,16 @@ da ação — não é sempre a mesma moeda.
 - Toda ação acima rende XP (item 5).
 - Nível sobe → libera região/monstro novo (a trava já decidida).
 
-## O que fica de fora, de propósito, por enquanto
+## Decidido
 
-- **PvP direto** (atacar outro jogador, tipo TheCrims) — não é o tom que o
-  Sindicato dos Ossos nem a mesa até agora pediram. Fica como pergunta em
-  aberto, não decisão tomada.
+- **Sem PvP.** Confirmado — o risco do jogo vem de arriscar contra o
+  conteúdo (Poder insuficiente), nunca de outro jogador.
 
 ## Preciso saber
 
 - Todas as **16 profissões** entram já na v1, ou começa com um
   subconjunto (ex: Caçador, Ferreiro, Alquimista, Domador — as mais
   "ativas" pro loop diário) e expande depois?
-- PvP entra em algum momento (mesmo que light, tipo duelo consentido) ou
-  fica de fora por princípio?
 - Boss/miniboss **exige** grupo (precisa de outro jogador online junto),
-  ou dá pra encarar sozinho com risco maior?
+  ou dá pra encarar sozinho com risco maior (ecoa a mesma lógica do item
+  12: Poder insuficiente sozinho = mais arriscado, não impossível)?

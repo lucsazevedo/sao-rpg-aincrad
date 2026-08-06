@@ -22,6 +22,7 @@ fases). RAG fica de propósito fora desta lista — combinado que é o último.
 | 9 | [Sistema de dinheiro/economia](09_sistema_dinheiro.md) | **M–G** | Carteira é simples; "cada jogador ter um mercado próprio" é uma feature de e-commerce |
 | 10 | [Reputação — jogador e clã](10_reputacao_jogador_cla.md) | **M** | Parte já existe (Favor/Suspeita, reputação de clã) — é levar do papel pro banco, não criar do zero |
 | 11 | [Mapa de ações diárias](11_mapa_de_acoes_diarias.md) | — | Não é item de esforço, é o desenho de "o que dá pra fazer" — reaproveita as 3 Ações de Ofício que as 16 profissões já têm |
+| 12 | [Sistema de Poder (pontos por equipamento)](12_sistema_de_poder.md) | **M** | Nível trava acesso, Poder trava risco — mesma tensão do roubo do TheCrims, sem PvP. Depende do item 8 existir primeiro |
 
 ## Como isso se encaixa
 
@@ -38,8 +39,15 @@ Item **1 (Domador/pets)** também usa o mesmo formato de item-com-raridade
 que os itens 3, 7 e 9 vão usar — não é totalmente isolado, mas dá pra fazer
 antes do resto sem travar em nada.
 
+**Item 12 (Poder)** entra depois do 8 (equipamento) — precisa existir "o
+que está equipado" antes de somar Poder. Ordem atualizada da economia:
+**8 (inventário) → 7 (drop) → 12 (poder) → 5 (nível/XP) → 9 (dinheiro) →
+10 (reputação) → resto do loop diário (6/11)**.
+
 Os itens **2, 3 e 4** são independentes entre si e do item 6 — dá pra
 fazer em qualquer ordem, sem esperar o resto.
+
+**Decidido:** sem PvP por enquanto (item 11).
 
 ## Perguntas que preciso de resposta antes de começar qualquer um
 
