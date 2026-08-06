@@ -21,6 +21,7 @@ fases). RAG fica de propósito fora desta lista — combinado que é o último.
 | 8 | [Equipamento/inventário no site](08_equipamento_inventario.md) | **M** | Schema + UI nova, mas reaproveita tudo que já existe (tabela, RLS, página) |
 | 9 | [Sistema de dinheiro/economia](09_sistema_dinheiro.md) | **M–G** | Carteira é simples; "cada jogador ter um mercado próprio" é uma feature de e-commerce |
 | 10 | [Reputação — jogador e clã](10_reputacao_jogador_cla.md) | **M** | Parte já existe (Favor/Suspeita, reputação de clã) — é levar do papel pro banco, não criar do zero |
+| 11 | [Mapa de ações diárias](11_mapa_de_acoes_diarias.md) | — | Não é item de esforço, é o desenho de "o que dá pra fazer" — reaproveita as 3 Ações de Ofício que as 16 profissões já têm |
 
 ## Como isso se encaixa
 
