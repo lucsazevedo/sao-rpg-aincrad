@@ -374,6 +374,16 @@ def migrar_cidades(cur):
 # --------------------------------------------------------------------------
 
 def main():
+    print(
+        "AVISO: isso faz upsert no banco a partir dos dados_*.js/.md locais.\n"
+        "Se algo ja foi editado direto no admin.html, essa edicao sera\n"
+        "sobrescrita pelo que estiver aqui. Ver docs/pipeline.md.\n"
+    )
+    if "--sim" not in sys.argv:
+        resp = input("Continuar mesmo assim? [s/N] ").strip().lower()
+        if resp != "s":
+            print("Cancelado.")
+            return
     conn = conectar()
     cur = conn.cursor()
     total = 0

@@ -4,6 +4,30 @@ Como gerar cada tipo de conteúdo do RPG usando as IAs locais, **e a ordem
 que realmente funcionou** pra construir o Andar 1 do zero — pra repetir no
 Andar 2 (e além) mais rápido, sem redescobrir os mesmos ajustes.
 
+## ⚠️ Mudança importante: o banco (Supabase) é a fonte de verdade do site
+
+Desde [2026-08-06], `scripts/web/compendio_andar1.html`,
+`personagens.html` e `admin.html` **não leem mais `dados_conteudo.js`
+direto** — leem do banco Supabase (ver `scripts/db/schema.sql` e
+`docs/registro_clas_e_reputacao.md` como exemplo já migrado). O `.md`
+continua sendo **onde novo conteúdo nasce** (via `gerar_npc.py` etc., como
+sempre foi), mas o passo final mudou:
+
+- **Conteúdo novo** (NPC novo, quest nova, andar novo): siga o pipeline
+  normal abaixo até `.md`, depois rode `python
+  scripts/migrar_para_supabase.py` — ele faz upsert no banco a partir dos
+  `dados_*.js` recompilados. Isso é seguro pra registro que ainda não
+  existe no banco.
+- **Editar algo que já existe**: use `scripts/web/admin.html` (login de
+  mestre) direto — **não** edite o `.md` e rode a migração de novo pra
+  isso. A migração faz upsert por id/nome; ela **sobrescreve** qualquer
+  edição feita só no banco com o que estiver no `.md`, silenciosamente.
+- Se editar um `.md` de algo que **já foi editado no admin.html**, replique
+  a mudança nos dois lados na mão — não existe sincronismo automático
+  banco→markdown ainda.
+
+## Antes de tudo
+
 ## Antes de tudo
 
 - **Ollama** precisa estar rodando (`ollama list` no terminal confirma — se
