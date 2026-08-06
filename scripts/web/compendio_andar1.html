@@ -361,7 +361,7 @@ body.modo-jogador .masthead{border-bottom-color:#3d5a2e}
       <h1>AINCRAD — 1º ANDAR</h1>
       <div class="sub">O começo da jornada — compêndio completo de mesa</div>
     </div>
-    <div class="who">
+    <div class="who" id="quemBox">
       <span class="pill on">Escudo do Mestre</span>
       <button class="pill" id="btnBusca">Buscar em tudo &nbsp;<b>/</b></button>
     </div>
@@ -707,13 +707,21 @@ body.modo-jogador .masthead{border-bottom-color:#3d5a2e}
   </div>
 </div>
 
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<script src="modo_mestre.js"></script>
+<!-- dados_mapa.js/dados_dungeons.js ainda dao REGIOES, CATEGORIAS e
+     TIPOS_SALA (ficam estaticos); PONTOS e DUNGEONS vem do banco e
+     sobrescrevem essas variaveis depois, no bootstrap abaixo. -->
 <script src="dados_mapa.js"></script>
 <script src="dados_terreno.js"></script>
 <script src="dados_dungeons.js"></script>
-<script src="dados_conteudo.js"></script>
 <script src="dados_sistema.js"></script>
-<script src="dados_clas.js"></script>
 <script>
+(async function iniciarCompendio(){
+await carregarDadosSupabase();
+montarBotaoMestre(document.getElementById("quemBox"));
+
 (function(){
 "use strict";
 var NS="http://www.w3.org/2000/svg";
@@ -3018,6 +3026,7 @@ document.getElementById("btnBusca").addEventListener("click",function(){
 
 rotuloBotao();if(MODO_JOGADOR)aplicarModoJogador();
 desenharTerreno();aplicaFundo();desenharMapa();ajustar();
+})();
 })();
 </script>
 </body>

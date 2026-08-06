@@ -133,7 +133,9 @@ footer a{color:var(--gold-dim)}
   <div class="sheet" id="sheet"></div>
 </div>
 
-<script src="dados_personagens.js"></script>
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<script src="modo_mestre.js"></script>
 <script>
 function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
 
@@ -225,18 +227,28 @@ function fechaFicha(){document.getElementById("ovl").classList.remove("on");}
 document.getElementById("ovl").addEventListener("click",function(e){if(e.target.id==="ovl")fechaFicha();});
 document.addEventListener("keydown",function(e){if(e.key==="Escape")fechaFicha();});
 
-var grid=document.getElementById("grid");
-(PERSONAGENS||[]).forEach(function(p){
-  var c=document.createElement("div");
-  c.className="card";c.tabIndex=0;c.setAttribute("role","button");
-  c.innerHTML='<div class="ct">'+esc(p.nome)+'</div>'+
-    '<div class="cs">'+esc(p.guilda)+'</div>'+
-    '<p>'+esc(p.conceito)+'</p>'+
-    '<div class="row"><span class="tag gold">'+esc(p.arma)+'</span><span class="tag cy">'+esc(p.profissao)+'</span></div>';
-  c.addEventListener("click",function(){abreFicha(p);});
-  c.addEventListener("keypress",function(e){if(e.key==="Enter")abreFicha(p);});
-  grid.appendChild(c);
-});
+(async function(){
+  await carregarPersonagens();
+  var who=document.querySelector(".masthead");
+  if(who){
+    var box=document.createElement("div");
+    box.style.marginTop="10px";
+    montarBotaoMestre(box);
+    who.appendChild(box);
+  }
+  var grid=document.getElementById("grid");
+  (window.PERSONAGENS||[]).forEach(function(p){
+    var c=document.createElement("div");
+    c.className="card";c.tabIndex=0;c.setAttribute("role","button");
+    c.innerHTML='<div class="ct">'+esc(p.nome)+'</div>'+
+      '<div class="cs">'+esc(p.guilda)+'</div>'+
+      '<p>'+esc(p.conceito)+'</p>'+
+      '<div class="row"><span class="tag gold">'+esc(p.arma)+'</span><span class="tag cy">'+esc(p.profissao)+'</span></div>';
+    c.addEventListener("click",function(){abreFicha(p);});
+    c.addEventListener("keypress",function(e){if(e.key==="Enter")abreFicha(p);});
+    grid.appendChild(c);
+  });
+})();
 </script>
 </body>
 </html>
