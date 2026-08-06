@@ -52,15 +52,36 @@ Proposta inicial (número exato é chute, ajusta depois de testar):
   teto (nunca 100% de certeza de dar errado — sempre dá pra tentar a sorte).
 - Falhar aciona Desmaio.
 
+## Fraqueza por atributo (não elemento) — bônus por escolha de arma
+
+**Deliberadamente separado** do sistema elemental de mesa
+(`docs/elementos_andar1.md` — Fogo/Trovão/Gelo/Veneno, regra de mesa, não
+muda). No jogo online, a variável tática é **qual arma você leva**, não
+qual elemento: cada uma das 23 armas já tem um atributo principal
+(Corpo/Reflexo/Conhecimento/Espírito/Técnica — já documentado em
+`docs/guia_sistema_aincrad.md`). Cada monstro ganha uma **fraqueza de
+atributo** (campo novo, separado do `elemento_fraqueza` que já existe pra
+mesa). Levar a arma certa pro monstro certo melhora a chance — incentiva
+trocar de equipamento, não só acumular Poder bruto.
+
+**Como mexe na fórmula de risco:** bater a fraqueza reduz o déficit efetivo
+de Poder (ou soma um bônus fixo de chance — a decidir), então um jogador
+com Poder abaixo do recomendado ainda pode ter uma tentativa segura se
+escolher a arma certa.
+
 ## O que precisa
 
 - Constante de poder por raridade (tabela acima).
 - Campo `poder_recomendado` nos monstros/quests — extensão do
   `nivelRecomendado` que já existe.
+- Campo novo `atributo_fraqueza` em `monstros` (um dos 5 atributos) —
+  separado do `elemento_fraqueza` já existente, que continua sendo só de
+  mesa.
 - Cálculo de Poder total = soma do que está equipado — **depende do item 8
   (inventário/equipamento) existir primeiro**, é onde mora "o que está
-  equipado agora".
-- Fórmula de risco por déficit — pode nascer simples e afinar depois.
+  equipado agora" (inclusive qual arma).
+- Fórmula de risco por déficit, com o ajuste de fraqueza — pode nascer
+  simples e afinar depois.
 
 ## Preciso saber
 
@@ -69,3 +90,8 @@ Proposta inicial (número exato é chute, ajusta depois de testar):
 - Tentar acima do seu poder e **ter sucesso mesmo assim** — dá o drop
   cheio, ou um drop "raspando" (menor)? Isso muda se vale a pena arriscar
   de propósito ou só em desespero.
+- O bônus por acertar a fraqueza de atributo é um número fixo (ex: sempre
+  reduz X% do déficit) ou escala com algo (nível da arma, raridade)?
+- O personagem troca de arma livremente antes de cada ação (escolhe a
+  certa pro monstro certo), ou fica preso numa arma "equipada" por um
+  tempo, tipo craft?
