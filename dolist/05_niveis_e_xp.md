@@ -14,20 +14,25 @@ existe XP por matar"** — progressão de personagem hoje é por **Marcos**
 vínculo, etc.), não por contagem de abate. Um sistema de Nível/XP tradicional
 é o oposto filosófico disso.
 
-## Duas leituras possíveis, tamanhos bem diferentes
+## Decidido: leitura 1, e mais específico — é Nível de Profissão
 
-1. **XP é só do jogo online** (item 6) — nível/XP mede progresso na camada
-   de missão-diária/craft/loja, e o personagem de mesa continua evoluindo só
-   por Marco, sem misturar os dois sistemas. **Médio**: é uma stat nova,
-   isolada, com curva de nível e o que cada nível libera.
-2. **XP substitui ou se funde com Marcos** — muda a regra núcleo do jogo de
-   mesa. Isso não é um item de dolist, é uma decisão de design que merece
-   conversa própria antes de eu tocar em `regras_nucleares_campanha.md`.
+Confirmado: XP/Nível existe **só no jogo online**, o personagem de mesa
+continua evoluindo só por Marco (sem misturar os dois sistemas). E mais
+fechado que a leitura original: **o XP do online é especificamente Nível
+de Profissão** — não é um "nível de personagem" genérico. Cada uma das 16
+profissões tem sua própria curva/XP, subindo com craft/missão daquele
+ofício.
 
-## Preciso saber
+**Nível de Profissão desbloqueia/facilita craft** (receita nova, chance
+melhor de sucesso — ver `01_domador_criador.md` pra exemplo de ferramenta
+que também mexe nisso) **e agora também define a chance de sucesso em
+combate/missão** — ver `12_sistema_de_poder.md`, que descartou o Poder por
+equipamento e passou a usar Nível como única régua de risco.
 
-- É a leitura 1 ou a 2? (Recomendo a 1 — mantém o que já funciona na mesa
-  intacto, e dá o "número subindo" que o jogo online precisa sem forçar
-  uma DR na regra do RPG.)
-- Se for a 1: nível desbloqueia o quê, especificamente? (Acesso a missão
-  mais difícil, receita de craft, região do mercado, etc.)
+## Pendência aberta
+
+- Personagem com mais de uma profissão ativa: a chance de sucesso contra
+  monstro/missão usa **qual** Nível de Profissão — a mais alta, a
+  relacionada à ação (ex: profissão de combate direto, se existir uma), ou
+  uma média? Isso ainda não está fechado — registrar aqui pra decidir
+  antes de implementar o cálculo de `12_sistema_de_poder.md`.

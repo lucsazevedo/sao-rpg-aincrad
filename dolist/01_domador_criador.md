@@ -37,6 +37,17 @@ enfim" — igual qualquer item do catálogo). Isso significa:
   ofícios (`docs/producao_por_oficio.md`) — Domador ganha uma linha lá
   igual às outras 15 profissões.
 
+## Decidido: ferramenta de ofício — Incubadora com nível
+
+Novo conceito, nasce aqui mas é pensado pra se repetir em outras
+profissões (ver `14_ferramentas_de_oficio.md`): o Domador tem uma
+**Incubadora**, que sobe de nível (craft/compra/upgrade, a definir), e
+quanto maior o nível dela, **maior a chance do ovo chocar com sucesso**.
+Isso é separado de Nível de Profissão (item 5) — Nível de Profissão mede
+progresso geral do Domador; nível de Incubadora é um multiplicador
+específico só pra essa ação (chocar ovo), preso a um item/ferramenta que
+o jogador pode upar independente do próprio nível.
+
 ## O que falta
 
 1. **De onde vem o ovo** — decidir quais monstros (de quais) passam a ter
@@ -63,3 +74,6 @@ enfim" — igual qualquer item do catálogo). Isso significa:
 - Efeito do pet escala só com raridade (igual item comum), ou também com o
   tipo de monstro de origem (ovo de monstro forte vira pet melhor mesmo em
   raridade Comum)?
+- Incubadora sobe de nível como — craft (upgrade material), compra direta
+  no mercado, ou Marco/conquista? E quantos níveis ela tem (curva curta
+  tipo 3-5 degraus, ou mais longa igual profissão)?

@@ -12,6 +12,18 @@ O personagem no site (hoje `personagens.html` só mostra a ficha estática)
 ganha inventário de verdade — item que ele tem, item que está equipado,
 progredindo conforme ele joga (drop, compra, craft).
 
+## Decidido: item do online não tem efeito nenhum no online
+
+Equipar uma arma/peça/carta/cristal no site **não muda nada mecanicamente
+enquanto o personagem está no jogo online** — chance de sucesso ali é só
+Nível de Profissão (ver `12_sistema_de_poder.md`, que por isso descartou
+"Poder por equipamento"). O inventário/equipado serve pra **duas coisas**:
+mostrar o que o jogador tem/coleciona, e ser o que ele **leva pra mesa de
+RPG de verdade** — lá sim o item vale mecanicamente, com as regras normais
+de equipamento (`docs/oficios_andar1.md`, `armas/00_catalogo_expandido.md`).
+Isso simplifica bastante o "equipar" do site: é inventário/vitrine, não
+um sistema de stats a calcular em tempo real.
+
 ## Por que isso é a base de tudo o resto
 
 Item 7 (cartas/drop) e item 9 (dinheiro/mercado) só fazem sentido se
