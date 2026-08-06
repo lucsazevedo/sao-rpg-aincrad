@@ -202,6 +202,29 @@ de texto normal ignora a imagem). Não substitui os geradores acima: eles
 escrevem o `.md` certinho em `npcs/`/`armas/`/etc. e já rodam a revisão; o
 chat é pra conversa livre. Copie a resposta pro arquivo final na mão.
 
+**Modo Agente (a IA edita os arquivos sozinha, com sua aprovação):**
+
+```
+python scripts\servidor_agente.py
+```
+
+Liga um servidor local (porta 8787) que dá ao Ollama a capacidade de explorar
+o projeto (listar pasta, ler arquivo, buscar texto) e propor mudanças reais
+em arquivos — vários de uma vez, se o pedido pedir isso. Depois de rodar,
+abra `scripts\web\assistente_ia.html`, aba **"🛠️ Agente"**, escreva o que
+você quer (ex: *"adicione um campo X em todo monstro do tipo Y"*) e clique em
+Executar. Modelo padrão `qwen2.5:14b` — é o único dos instalados aqui com
+suporte a *tool calling* confirmado (`ollama list` mostra a capability
+`tools`); outro modelo sem isso simplesmente não vai chamar ferramenta
+nenhuma.
+
+**Nada é salvo sozinho.** Cada proposta aparece como diff na tela — você
+marca quais aceita e clica em "Aplicar selecionadas" pra ir pro disco de
+verdade. É um modelo de 14B rodando local, bem menor que uma IA de ponta:
+revise os diffs, principalmente em pedidos que tocam muitos arquivos. Depois
+de aplicar: `python scripts\gerar_dados_web.py` pra sincronizar o Compêndio,
+e `python scripts\subir_github.py` quando quiser subir pro GitHub.
+
 ---
 
 ## 6. Áudio (roda em outra pasta, com outra venv)
@@ -249,6 +272,38 @@ troca a mensagem automática pela sua.
 > conteúdo normal do projeto, não uma licença pra subir qualquer coisa sem
 > olhar. Segredo de verdade (chave do Supabase, senha de banco) vive só no
 > `.env`, que nunca é commitado.
+
+---
+
+## 8. Banco de dados, painel do mestre e busca por significado (RAG)
+
+O site (`scripts/web/painel.html`) não lê mais `dados_conteudo.js` direto —
+lê do banco (Supabase). Ver `docs/pipeline.md` (seção do topo) pra saber
+quando editar `.md` ainda vale e quando editar direto no painel.
+
+```
+python scripts/migrar_para_supabase.py    # .md/.js -> banco (conteúdo estruturado)
+python scripts/gerar_embeddings.py        # .md restante -> banco, com embedding (RAG)
+python scripts/servidor_rag.py            # servidor local de busca por significado, porta 8788
+```
+
+- `migrar_para_supabase.py` pergunta antes de rodar — ele sobrescreve
+  edição feita só no banco com o que estiver no `.md`. Use pra conteúdo
+  **novo**, não pra atualizar algo que já existe (isso é o painel).
+- `gerar_embeddings.py` precisa do modelo `nomic-embed-text` no Ollama:
+  `ollama pull nomic-embed-text` (uma vez só, ~274MB). Cobre o que ainda
+  só existe em markdown solto — regras, receitas, história, segredos —
+  quebrado em pedaços com embedding, buscável por significado (não só por
+  palavra exata).
+- `servidor_rag.py` é a peça que um agente de IA (local, tipo
+  `assistente_ia.html`) chama em vez de colar um arquivo inteiro no
+  prompt: `POST localhost:8788/buscar` com `{"pergunta": "...", "k": 5}`
+  devolve só os pedaços relevantes.
+- **Painel do mestre**: `scripts/web/admin.html` — login de mestre, CRUD
+  completo (criar/editar/**excluir só logicamente**, nunca apaga de
+  verdade) em qualquer uma das 23 tabelas, incluindo `documentos` (o texto
+  bruto por trás do RAG — editar aqui não recria o embedding sozinho,
+  rode `gerar_embeddings.py` de novo depois).
 
 ---
 

@@ -186,6 +186,12 @@ var TABELAS_ADMIN = {
     { nome: "companheiro", tipo: "json" }, { nome: "estado", tipo: "json" },
     { nome: "simbolo", tipo: "textarea" }, { nome: "visivel", tipo: "bool" },
   ]},
+  documentos: { pk: "id", rotulo: "Documentos (RAG)", campos: [
+    { nome: "id", tipo: "text" }, { nome: "caminho", tipo: "text" },
+    { nome: "titulo", tipo: "text" }, { nome: "categoria", tipo: "text" },
+    { nome: "publico", tipo: "bool" }, { nome: "corpo", tipo: "textarea" },
+    { nome: "visivel", tipo: "bool" },
+  ]},
   cidades: { pk: "id", rotulo: "Cidades", campos: [
     { nome: "id", tipo: "text" }, { nome: "nome", tipo: "text" },
     { nome: "andar", tipo: "text" }, { nome: "tipo_de_zona", tipo: "text" },
