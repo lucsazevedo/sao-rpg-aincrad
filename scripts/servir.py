@@ -38,7 +38,7 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # pastas liberadas quando NAO se usa --tudo
 PERMITIDAS = ("scripts/web", "imagens", "mapas", "efeitos_sonoros", "musicas")
-INDEX = "/scripts/web/compendio_andar1.html"
+INDEX = "/scripts/web/painel.html"
 
 
 class Handler(http.server.SimpleHTTPRequestHandler):

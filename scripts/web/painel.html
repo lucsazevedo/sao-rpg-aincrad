@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Painel</title>
+<style>
+:root{
+  --bg:#0a0806; --panel:#15100a; --panel-2:#1d150c;
+  --line:#3d2e1a; --line-soft:#2a2013;
+  --gold:#d9ad5e; --gold-dim:#8c6f3e; --gold-bright:#f2d18a;
+  --ink:#efe5d2; --ink-dim:#a89a80; --ink-faint:#6f6450;
+  --f-disp:"Palatino Linotype",Palatino,Georgia,serif;
+  --f-ui:-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);line-height:1.5}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit;color:inherit}
+.shell{max-width:900px;margin:0 auto;padding:40px 16px 70px}
+.eyebrow{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim)}
+h1{font-family:var(--f-disp);color:var(--gold-bright);font-size:34px;margin:2px 0 6px}
+.sub{color:var(--ink-dim);font-size:14px;margin-bottom:26px}
+.status{display:flex;gap:8px;align-items:center;margin-bottom:22px;flex-wrap:wrap}
+.pill{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);padding:6px 11px;border-radius:4px;color:var(--ink-dim)}
+.pill.on{color:var(--gold);border-color:var(--gold-dim)}
+.gate{border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin-bottom:26px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.gate input{background:var(--panel-2);border:1px solid var(--line);border-radius:4px;padding:8px 10px;color:var(--ink)}
+.gate button{background:var(--gold-dim);color:#150f08;border:none;border-radius:4px;padding:8px 14px;font-weight:700;cursor:pointer}
+.erro{color:#e0524a;font-size:12.5px}
+
+.secao{margin-bottom:30px}
+.secao h2{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--line-soft);padding-bottom:8px;margin-bottom:14px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:12px}
+.card{display:block;border:1px solid var(--line);border-radius:6px;padding:16px 18px;background:var(--panel);transition:border-color .15s ease,transform .15s ease}
+.card:hover{border-color:var(--gold-dim);transform:translateY(-1px)}
+.card .ic{font-size:22px;margin-bottom:8px;display:block}
+.card .t{font-family:var(--f-disp);font-size:17px;color:var(--gold-bright);margin-bottom:4px}
+.card .d{font-size:12.5px;color:var(--ink-dim)}
+.card.bloqueado{opacity:.45;cursor:not-allowed;pointer-events:none}
+.card.local .d{color:#c98fff}
+</style>
+</head>
+<body>
+<div class="shell">
+  <span class="eyebrow">Sword Art Online · The Perfect Chaos</span>
+  <h1>Painel</h1>
+  <div class="sub">Um lugar só pra chegar em tudo — sem decorar link nenhum.</div>
+
+  <div class="status" id="statusBox"></div>
+
+  <div class="gate" id="gate" style="display:none">
+    <input type="text" id="gEmail" placeholder="e-mail do mestre" style="flex:1;min-width:160px" />
+    <input type="password" id="gSenha" placeholder="senha mestra" style="flex:1;min-width:120px" />
+    <button id="gEntrar">Entrar como mestre</button>
+    <span class="erro" id="gErro"></span>
+  </div>
+
+  <div class="secao">
+    <h2>Andares</h2>
+    <div class="grid" id="andaresGrid"></div>
+  </div>
+
+  <div class="secao">
+    <h2>Comunidade</h2>
+    <div class="grid">
+      <a class="card" href="personagens.html">
+        <span class="ic">🗡️</span>
+        <div class="t">Fichas de Jogador</div>
+        <div class="d">Personagens em jogo — entra ou cadastra sua conta ali dentro.</div>
+      </a>
+    </div>
+  </div>
+
+  <div class="secao" id="secaoMestre" style="display:none">
+    <h2>Só mestre</h2>
+    <div class="grid">
+      <a class="card" href="admin.html">
+        <span class="ic">🛠️</span>
+        <div class="t">Painel de Edição</div>
+        <div class="d">CRUD completo — cria, edita, exclui (logicamente) qualquer conteúdo.</div>
+      </a>
+      <a class="card local" href="assistente_ia.html">
+        <span class="ic">🤖</span>
+        <div class="t">Assistente de IA</div>
+        <div class="d">Chat com Ollama local — só funciona nesta máquina, com o Ollama rodando.</div>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<script src="modo_mestre.js"></script>
+<script>
+/* Lista de andares — adicionar um novo é só uma linha aqui quando o
+   compêndio do próximo andar existir. */
+var ANDARES = [
+  { n: 1, arquivo: "compendio_andar1.html", pronto: true },
+  { n: 2, arquivo: "compendio_andar2.html", pronto: false },
+];
+
+function montarAndares(){
+  var grid = document.getElementById("andaresGrid");
+  ANDARES.forEach(function(a){
+    var el = document.createElement(a.pronto ? "a" : "div");
+    el.className = "card" + (a.pronto ? "" : " bloqueado");
+    if(a.pronto) el.href = a.arquivo;
+    el.innerHTML = '<span class="ic">🏯</span>' +
+      '<div class="t">Andar ' + a.n + '</div>' +
+      '<div class="d">' + (a.pronto ? "Compêndio completo de mesa" : "Ainda não existe") + '</div>';
+    grid.appendChild(el);
+  });
+}
+
+async function iniciar(){
+  await iniciarSessao();
+  var statusBox = document.getElementById("statusBox");
+
+  if(estaLogado()){
+    var perfil = await meuPerfil();
+    var ehMestre = perfil && perfil.papel === "mestre";
+    statusBox.innerHTML = '<span class="pill on">' +
+      (ehMestre ? "🔓 Logado como mestre" : "🎮 Logado como " + (perfil && perfil.nome || "jogador")) +
+      '</span>';
+    var sair = document.createElement("span");
+    sair.className = "pill"; sair.style.cursor = "pointer"; sair.textContent = "sair";
+    sair.addEventListener("click", async function(){ await fazerLogout(); location.reload(); });
+    statusBox.appendChild(sair);
+    if(ehMestre) document.getElementById("secaoMestre").style.display = "";
+  } else {
+    statusBox.innerHTML = '<span class="pill">visitante — não logado</span>';
+    document.getElementById("gate").style.display = "";
+  }
+
+  document.getElementById("gEntrar").addEventListener("click", async function(){
+    var email = document.getElementById("gEmail").value.trim();
+    var senha = document.getElementById("gSenha").value;
+    var erro = document.getElementById("gErro");
+    erro.textContent = "";
+    try{
+      await fazerLogin(email, senha);
+      location.reload();
+    }catch(e){
+      erro.textContent = "Não deu: " + e.message;
+    }
+  });
+
+  montarAndares();
+}
+iniciar();
+</script>
+</body>
+</html>
