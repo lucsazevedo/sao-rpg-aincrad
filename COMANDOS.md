@@ -194,6 +194,14 @@ FaceID), `--prompt-bruto` (usa seu texto em inglês direto, sem Ollama).
 
 Depois de qualquer um desses: **rode o comando do item 4.**
 
+**Chat com a IA direto do navegador:** `scripts\web\assistente_ia.html` — fala
+com o mesmo Ollama local (dá duplo clique pra abrir). Serve pra rascunhar
+texto, pedir revisão, ou analisar uma imagem que você anexa (precisa de um
+modelo de visão instalado, tipo `qwen2.5vl:7b`, pro upload de imagem — modelo
+de texto normal ignora a imagem). Não substitui os geradores acima: eles
+escrevem o `.md` certinho em `npcs/`/`armas/`/etc. e já rodam a revisão; o
+chat é pra conversa livre. Copie a resposta pro arquivo final na mão.
+
 ---
 
 ## 6. Áudio (roda em outra pasta, com outra venv)
