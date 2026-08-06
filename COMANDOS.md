@@ -232,6 +232,26 @@ Ele detecta sozinho se é música ou efeito e salva em `musicas\` ou
 
 ---
 
+## 7. Subir tudo pro GitHub
+
+```
+python scripts\subir_github.py
+```
+
+Faz `git add` + `commit` (mensagem automática, listando o que mudou por
+pasta) + `push` num comando só. Antes de comitar, escaneia o que vai subir
+procurando cara de senha/chave/token e para se achar algo suspeito (passe
+`--forcar` se for falso positivo). `--dry-run` só mostra o que sairia, sem
+fazer nada. `--sem-push` comita local sem mandar pro GitHub. `--mensagem "..."`
+troca a mensagem automática pela sua.
+
+> O repositório é **público** — isso é só pra automatizar o `git push` de
+> conteúdo normal do projeto, não uma licença pra subir qualquer coisa sem
+> olhar. Segredo de verdade (chave do Supabase, senha de banco) vive só no
+> `.env`, que nunca é commitado.
+
+---
+
 ## Se der erro
 
 | Erro | O que é |
