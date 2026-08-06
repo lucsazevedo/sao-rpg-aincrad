@@ -3,30 +3,30 @@ titulo: Revisão — piloto de golpes novos (item 2)
 uso: mestre
 ---
 
-# Piloto — Foice (modelo usado: qwen2.5:14b)
+# Piloto — Foice (modelo usado: devstral:24b)
 
 Gerado automaticamente, **nada aplicado**. Se aprovar o formato, repete pras outras 22 armas.
 
 ```json
 {
  "golpe_2": {
-  "nome": "Corte de Estarreza",
-  "atributo": "Espírito",
-  "teste": "2d6 + Espírito",
-  "dez_mais": "Inibe a habilidade mental do oponente temporariamente. Você pode fazer uma jogada especial para prejudicar sua capacidade de usar magia ou habilidades especiais por um breve período.",
-  "sete_nove": "O ataque causa dano normal, mas não inibe nenhuma habilidade adversária."
+  "nome": "Giro Defensivo",
+  "atributo": "Corpo",
+  "teste": "2d6+Corpo",
+  "dez_mais": "Você bloqueia o ataque do inimigo e ganha vantagem na próxima ação.",
+  "sete_nove": "Você consegue desviar do ataque, mas não ganha vantagem."
  },
  "golpe_3": {
-  "nome": "Corte Reflexivo",
+  "nome": "Corte de Precisão",
   "atributo": "Reflexo",
-  "teste": "2d6 + Reflexo",
-  "dez_mais": "Consegue desviar de um ataque inimigo e contra-atacar. Escolha um ataque adversário que você está prestes a sofrer, desvie dele automaticamente e então pode fazer um ataque adicional.",
-  "sete_nove": "Você consegue desviar do ataque inimigo, mas não tem energia para um contra-ataque."
+  "teste": "2d6+Reflexo",
+  "dez_mais": "Você acerta um ponto vital do inimigo, causando dano crítico.",
+  "sete_nove": "Você acerta o inimigo, mas não causa dano crítico."
  },
  "limit_breaker": {
-  "nome": "Guilhotina Fantasma",
-  "atributo": "Corpo",
-  "efeito": "Após acumular 10 sucessos e erros em combate com a foice, você pode liberar um ataque devastador que causa dano extremo e desequilibra o adversário. Para usar este golpe, faça um teste de 2d6 + Corpo: Em 10+, cause dano máximo e deixe seu alvo em estado debilitado; em 7-9, apenas cause dano normal."
+  "nome": "Giro Final",
+  "atributo": "Técnica",
+  "efeito": "Após acumular 10 sucessos ou erros, você realiza um poderoso giro com a foice, causando grande dano e estupor ao inimigo."
  }
 }
 ```
