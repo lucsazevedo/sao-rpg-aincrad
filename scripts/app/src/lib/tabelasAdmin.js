@@ -16,6 +16,13 @@ export const TABELAS_ADMIN = {
     pk: "id",
     rotulo: "Monstros",
     icone: "💀",
+    // achado 10/08: "notas" nunca teve GRANT SELECT na tabela base pra
+    // "authenticated" (nem pro mestre — jogador/mestre compartilham esse
+    // role no Postgres, GRANT de coluna não sabe diferenciar sessão). Só a
+    // view resolve com segurança (CASE WHEN is_mestre()). O editor lê daqui
+    // mas escreve na tabela base normalmente (updateExcluido/insert/update
+    // não usam viewLeitura).
+    viewLeitura: "monstros_publico",
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
@@ -221,6 +228,7 @@ export const TABELAS_ADMIN = {
     pk: "id",
     rotulo: "Guias de Região",
     icone: "🗺️",
+    viewLeitura: "guias_publico",
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
@@ -243,6 +251,7 @@ export const TABELAS_ADMIN = {
     pk: "id",
     rotulo: "Puzzles",
     icone: "🧩",
+    viewLeitura: "puzzles_publico",
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "n", tipo: "number" },
@@ -310,6 +319,7 @@ export const TABELAS_ADMIN = {
     pk: "nome",
     rotulo: "Clãs",
     icone: "🛡️",
+    viewLeitura: "clas_publico",
     campos: [
       { nome: "nome", tipo: "text" },
       { nome: "destaque", tipo: "bool" },
@@ -336,6 +346,7 @@ export const TABELAS_ADMIN = {
     pk: "id",
     rotulo: "Pontos do Mapa",
     icone: "📍",
+    viewLeitura: "pontos_publico",
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "regiao", tipo: "text" },
@@ -364,6 +375,7 @@ export const TABELAS_ADMIN = {
     pk: "id",
     rotulo: "Pontos — Detalhe",
     icone: "📌",
+    viewLeitura: "pontos_detalhe_publico",
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },

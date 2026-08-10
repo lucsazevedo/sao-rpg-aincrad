@@ -1178,7 +1178,13 @@ async function carregarMesa(){
       supa.from('mesa_sessoes').select('*').order('criado_em', {ascending:false}).limit(12),
       supa.from('monstros').select('id,nome,ameaca,golpes').eq('excluido',false).order('nome'),
       supa.from('mesa_combate').select('*').eq('ativo', true).order('criado_em', {ascending:false}),
-      supa.from('pontos').select('id,nome,regiao,descricao,mestre').in('categoria', ['segredo','puzzle']).eq('excluido',false),
+      // pontos_publico: a coluna "mestre" nunca teve GRANT SELECT na tabela
+      // base pra "authenticated" — só a view resolve com segurança via
+      // CASE WHEN is_mestre() (achado 10/08, "permission denied for table
+      // pontos"). A view já filtra visivel/excluido; is_mestre() bypassa
+      // ambos, então o mestre também vê ponto excluído aqui — aceitável
+      // pra uma lista de segredos/puzzles de mesa.
+      supa.from('pontos_publico').select('id,nome,regiao,descricao,mestre').in('categoria', ['segredo','puzzle']),
       supa.from('armas').select('id,nome,tipo,efeito,obter').eq('raridade','Raro').eq('excluido',false),
       supa.from('equipamentos').select('id,nome,slot,efeito,obter').eq('raridade','Raro').eq('excluido',false),
     ])
@@ -1248,7 +1254,9 @@ onMounted(async () => {
   const proms = [
     supa.from('oficios').select('nome, atributo').eq('excluido',false),
     supa.from('armas').select('*').eq('raridade','Comum').eq('excluido',false),
-    supa.from('clas').select('*').eq('excluido',false),
+    // clas_publico: mesmo motivo do pontos_publico acima — "ganchos" só
+    // tem GRANT SELECT resolvido com segurança dentro da view.
+    supa.from('clas_publico').select('*'),
     carregarJogadores(), carregarMercado(), carregarMesa(), carregarTiposArma(),
   ]
   const [rOf, rAr, rCl] = await Promise.all(proms)
