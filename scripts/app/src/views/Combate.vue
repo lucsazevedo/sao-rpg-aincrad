@@ -17,14 +17,14 @@
         <div style="flex:1;min-width:160px">
           <div class="cs">❤️ Vida</div>
           <div style="height:12px;background:var(--panel-3);border-radius:6px;overflow:hidden;margin-top:4px">
-            <div :style="{width: pctVida+'%', height:'100%', background: pctVida>40?'linear-gradient(90deg,#5e9e5a,#8fd694)':'linear-gradient(90deg,#a35454,#e0887a)'}"></div>
+            <div :style="{width: pctVida+'%', height:'100%', background: pctVida>40?'linear-gradient(90deg,#2c6f92,#4ea5d9)':'linear-gradient(90deg,#b03d00,#ff5b3d)'}"></div>
           </div>
           <div style="font-size:12px;color:var(--ink-dim);margin-top:2px">{{ vidaAtual }} / {{ vidaMax }}</div>
         </div>
         <div style="flex:1;min-width:160px">
           <div class="cs">💨 Fôlego</div>
           <div style="height:12px;background:var(--panel-3);border-radius:6px;overflow:hidden;margin-top:4px">
-            <div :style="{width: pctFolego+'%', height:'100%', background:'linear-gradient(90deg,#d9ad5e,#f2d18a)'}"></div>
+            <div :style="{width: pctFolego+'%', height:'100%', background:'linear-gradient(90deg,#2c6f92,#4ea5d9)'}"></div>
           </div>
           <div style="font-size:12px;color:var(--ink-dim);margin-top:2px">{{ auth.personagem.folego ?? 0 }} / 20</div>
         </div>
