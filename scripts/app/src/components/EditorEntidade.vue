@@ -418,8 +418,12 @@ async function salvar() {
     } else if (c.tipo === "lista-texto") {
       payload[c.nome] = (camposListaTexto[c.nome] || []).map((s) => String(s).trim()).filter(Boolean);
     } else if (c.tipo === "lista") {
+      // parte de { ...item } (não só os itemCampos) pra não apagar em
+      // silêncio uma chave que já existia no dado real mas não entrou no
+      // sub-schema — achado 10/08: receitas.materiais tem "_nome" em 635
+      // linhas (do import do item 3) e o sub-schema só conhece qtd/mat_id.
       payload[c.nome] = (camposLista[c.nome] || []).map((item) => {
-        const o = {};
+        const o = { ...item };
         for (const ic of c.itemCampos) {
           const v = item[ic.nome];
           o[ic.nome] = ic.tipo === "number" ? (v === "" || v == null ? null : Number(v)) : v;
