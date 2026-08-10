@@ -1,0 +1,58 @@
+name: Deploy app Vue no GitHub Pages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/app/**'
+      - '.github/workflows/deploy-app.yml'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: scripts/app/package-lock.json
+
+      - name: Instala dependências
+        working-directory: scripts/app
+        run: npm ci
+
+      - name: Build
+        working-directory: scripts/app
+        # SUPABASE_URL e SUPABASE_ANON_KEY são seguros de expor no bundle
+        # público — a anon key só abre o que a RLS do banco permite, a
+        # segurança de verdade mora lá, não em esconder essa chave.
+        env:
+          SUPABASE_URL: https://bvdrlvmywnccwripedsa.supabase.co
+          SUPABASE_ANON_KEY: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ2ZHJsdm15d25jY3dyaXBlZHNhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODU5NzAyODcsImV4cCI6MjEwMTU0NjI4N30.cdl0iSMXmdm8yk_IQk4RUgLzF9UEoMsr6uQzOuqfOh4
+        run: npm run build
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: scripts/app/dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
