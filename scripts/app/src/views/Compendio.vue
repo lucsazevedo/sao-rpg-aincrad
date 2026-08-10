@@ -1,7 +1,7 @@
 <template>
   <div>
     <StatusBar />
-    <h2 style="color:var(--gold-bright);margin:10px 0 6px;font-size:24px">📚 Compêndio do Andar 1</h2>
+    <TituloHUD icone="📚" titulo="Compêndio do Andar 1" trilha="Sistema · Enciclopédia" />
     <p style="margin:0 0 12px;color:var(--ink-dim);font-size:13px">
       Migrado de <code>compendio_andar1.html</code> pro Vue — mesmo conteúdo, direto do banco. "Mesa" e
       "Só o Mestre" ficaram no <router-link to="/mestre" style="color:var(--gold-bright)">Painel do Mestre</router-link>,
@@ -83,8 +83,9 @@
         <span class="pill">{{ itensFiltrados.length }} {{ itensFiltrados.length===1?'item':'itens' }}</span>
       </div>
       <div class="grid">
-        <div v-for="it in itensFiltrados" :key="chave(it)" class="card" @click="abrir(it)" style="cursor:pointer">
-          <img v-if="campo(it,'img')" :src="campo(it,'img')" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
+        <div v-for="it in itensFiltrados" :key="chave(it)" class="card" :class="classeRaridade(it)" role="button" tabindex="0"
+          @click="abrir(it)" @keydown.enter="abrir(it)" @keydown.space.prevent="abrir(it)" style="cursor:pointer">
+          <img v-if="campo(it,'img')" :src="campo(it,'img')" :alt="titulo(it)" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
           <div class="ct">{{ titulo(it) }}</div>
           <div class="cs" v-if="subtitulo(it)">{{ subtitulo(it) }}</div>
           <p v-if="resumo(it)">{{ resumo(it).slice(0,160) }}{{ resumo(it).length>160?'…':'' }}</p>
@@ -100,7 +101,7 @@
           <button class="btn ghost" @click="aberto=null">✕</button>
         </div>
         <div class="body">
-          <img v-if="campo(aberto,'img')" :src="campo(aberto,'img')" style="width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <img v-if="campo(aberto,'img')" :src="campo(aberto,'img')" :alt="titulo(aberto)" style="width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px">
           <div v-if="subtitulo(aberto)" class="cs" style="margin-bottom:8px">{{ subtitulo(aberto) }}</div>
           <div v-for="f in tabAtual.pills||[]" :key="f" style="display:inline-block;margin:0 6px 8px 0">
             <span v-if="campo(aberto,f)" class="pill on">{{ String(campo(aberto,f)) }}</span>
@@ -123,6 +124,7 @@ import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
+import TituloHUD from '../components/TituloHUD.vue'
 import { desenharTerreno } from '../lib/mapaTerreno.js'
 
 const auth = useAuthStore()
@@ -171,6 +173,15 @@ const cache = {}
 const tabAtual = computed(() => TABS.find(t => t.k === abaAtiva.value))
 
 function campo(it, nome){ return it ? it[nome] : null }
+// acento de raridade na borda do card — só decora quando a tabela tem
+// campo "raridade" (armas/equipamentos hoje); vira classe rar-* já
+// existente no main.css (era declarada mas nunca usada em lugar nenhum).
+function classeRaridade(it){
+  const r = it?.raridade
+  if (!r) return ''
+  const norm = String(r).normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase()
+  return ['comum','incomum','raro','epico','lendario'].includes(norm) ? 'rar-borda-'+norm : ''
+}
 function primeiro(it, lista){ for (const f of (lista||[])) { if (campo(it,f)) return campo(it,f) } return '' }
 function titulo(it){ return primeiro(it, tabAtual.value.titulo) || '(sem nome)' }
 function subtitulo(it){ return (tabAtual.value.subtitulo||[]).map(f=>campo(it,f)).filter(Boolean).join(' · ') }

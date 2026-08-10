@@ -115,6 +115,7 @@
         </div>
       </div>
 
+      <TituloHUD icone="⚔️" :titulo="tituloPagina" trilha="Sistema · Quadro de Tarefas" />
       <div
         style="
           display: flex;
@@ -125,9 +126,6 @@
           margin: 8px 0 14px;
         "
       >
-        <h2 style="margin: 0; color: var(--gold-bright)">
-          ⚔️ {{ tituloPagina }}
-        </h2>
         <div style="display: flex; gap: 8px; flex-wrap: wrap">
           <input
             v-model="busca"
@@ -403,6 +401,7 @@ import { ref, onMounted, computed } from "vue";
 import { useAuthStore } from "../stores/auth.js";
 import { useSupa } from "../lib/supabase.js";
 import StatusBar from "../components/StatusBar.vue";
+import TituloHUD from "../components/TituloHUD.vue";
 
 const auth = useAuthStore();
 defineEmits(["pedir-login"]);

@@ -1,6 +1,7 @@
 <template>
   <div>
     <StatusBar v-if="auth.temPersonagem"/>
+    <TituloHUD icone="🏪" titulo="Mercado" trilha="Sistema · Comércio entre Jogadores" />
     <div class="tabs" style="margin:12px 0">
       <div class="tab" :class="{on:tab=='vitrine'}" @click="tab='vitrine'">📦 Vitrine</div>
       <div class="tab" :class="{on:tab=='meus'}" @click="tab='meus'">📢 Meus Anúncios</div>
@@ -67,6 +68,7 @@ import { ref, onMounted, reactive, computed } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
+import TituloHUD from '../components/TituloHUD.vue'
 const auth = useAuthStore()
 defineEmits(['pedir-login'])
 const supa = useSupa()

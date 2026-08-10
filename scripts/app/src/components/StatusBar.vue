@@ -1,27 +1,23 @@
 <template>
-  <div class="stbar">
-    <div v-if="pers">
-      <div class="k">🌬️ Fôlego</div>
-      <div class="v">{{ pers.folego || 0 }} / 20</div>
-      <div class="bar"><div :style="{ width: pctFg + '%' }"></div></div>
+  <div class="hud-vitals" v-if="pers">
+    <div class="hv-nome">
+      <span class="hv-tag">{{ auth.ehMestre ? "🧙 MESTRE" : "⚔️ JOGADOR" }}</span>
+      <b>{{ pers.nome }}</b>
     </div>
-    <div v-if="pers">
-      <div class="k">💰 Col (na mão)</div>
-      <div class="v">{{ nf.format(pers.col_mao || 0) }}</div>
+
+    <div class="hv-medidor">
+      <div class="hv-rotulo"><span>❤️ VIDA</span><span>{{ vidaAtual }}/{{ vidaMax }}</span></div>
+      <div class="hv-barra"><div class="hv-fill" :class="pctVida > 40 ? 'hv-vida-alta' : 'hv-vida-baixa'" :style="{ width: pctVida + '%' }"></div></div>
     </div>
-    <div v-if="pers">
-      <div class="k">🏦 Col (Stash)</div>
-      <div class="v">{{ nf.format(pers.col_guardado || 0) }}</div>
+
+    <div class="hv-medidor">
+      <div class="hv-rotulo"><span>🌬️ FÔLEGO</span><span>{{ pers.folego || 0 }}/20</span></div>
+      <div class="hv-barra"><div class="hv-fill hv-folego" :style="{ width: pctFg + '%' }"></div></div>
     </div>
-    <div>
-      <div class="k">🧑‍🏭 Profissão</div>
-      <div class="v">{{ pers && pers.profissao ? pers.profissao : "—" }}</div>
-    </div>
-    <div>
-      <div class="k">🗡️ Arma</div>
-      <div class="v" v-if="pers && pers.arma">{{ nomeArma(pers.arma) }}</div>
-      <div class="v" v-else>—</div>
-    </div>
+
+    <div class="hv-stat"><small>💰 COL</small><span>{{ nf.format(pers.col_mao || 0) }}<em v-if="pers.col_guardado">+{{ nf.format(pers.col_guardado) }} guardado</em></span></div>
+    <div class="hv-stat"><small>🧑‍🏭 OFÍCIO</small><span>{{ pers.profissao || "—" }}</span></div>
+    <div class="hv-stat"><small>🗡️ ARMA</small><span>{{ pers.arma ? nomeArma(pers.arma) : "—" }}</span></div>
   </div>
 </template>
 <script setup>
@@ -29,6 +25,11 @@ import { computed } from "vue";
 import { useAuthStore } from "../stores/auth.js";
 const auth = useAuthStore();
 const pers = computed(() => auth.personagem);
+const vidaMax = computed(() => pers.value?.vida_max || 50);
+const vidaAtual = computed(() => pers.value?.vida_atual ?? vidaMax.value);
+const pctVida = computed(() =>
+  Math.max(0, Math.min(100, Math.round((100 * vidaAtual.value) / (vidaMax.value || 1)))),
+);
 const pctFg = computed(() =>
   Math.max(
     0,
@@ -73,3 +74,28 @@ function nomeArma(id) {
     .replace(/\b\w/g, (l) => l.toUpperCase());
 }
 </script>
+<style scoped>
+/* HUD de vitais — a barra que no jogo fica sempre visível, não só na
+   tela de combate (achado 10/08: vida só aparecia em Combate.vue). */
+.hud-vitals{
+  display:flex;flex-wrap:wrap;align-items:center;gap:16px 22px;
+  padding:12px 16px;margin-bottom:14px;
+  background:var(--panel);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  border:1px solid var(--line);border-left:3px solid var(--laranja);
+}
+.hv-nome{display:flex;flex-direction:column;gap:2px;min-width:96px}
+.hv-tag{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.14em;color:var(--laranja-bright)}
+.hv-nome b{font-family:var(--f-titulo);font-size:15px;color:var(--ink)}
+.hv-medidor{flex:1;min-width:150px;max-width:230px}
+.hv-rotulo{display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.06em;color:var(--azul-bright);margin-bottom:4px}
+.hv-barra{height:8px;background:rgba(0,0,0,.4);border-radius:2px;overflow:hidden;border:1px solid rgba(255,255,255,.06)}
+.hv-fill{height:100%;transition:width .3s ease}
+.hv-vida-alta{background:linear-gradient(90deg,#2c6f92,#4ea5d9);box-shadow:0 0 6px var(--azul-glow)}
+.hv-vida-baixa{background:linear-gradient(90deg,#b03d00,#ff5b3d);box-shadow:0 0 6px rgba(255,91,61,.45)}
+.hv-folego{background:linear-gradient(90deg,#2c6f92,#4ea5d9);box-shadow:0 0 6px var(--azul-glow)}
+.hv-stat{display:flex;flex-direction:column;gap:2px}
+.hv-stat small{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink-faint)}
+.hv-stat span{font-size:13.5px;color:var(--ink);font-weight:600}
+.hv-stat em{display:block;font-style:normal;font-size:10px;color:var(--ink-faint);font-weight:400}
+@media (max-width:640px){.hud-vitals{gap:10px 16px;padding:10px 12px}.hv-medidor{max-width:none;flex-basis:100%}}
+</style>

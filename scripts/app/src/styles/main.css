@@ -66,6 +66,18 @@ body{
 a{color:var(--laranja)}
 a:hover{color:var(--laranja-bright)}
 h1,h2,h3{font-family:var(--f-titulo);letter-spacing:.02em}
+main{display:block}
+
+/* Foco visível por teclado — faltava globalmente (só existia em
+   .form input:focus). Sem isso, navegar só de teclado (Tab) é invisível
+   em botão/link/card clicável. */
+a:focus-visible,button:focus-visible,.btn:focus-visible,
+.card:focus-visible,.tabs .tab:focus-visible,[tabindex]:focus-visible{
+  outline:2px solid var(--laranja);outline-offset:2px;
+}
+input:focus-visible,select:focus-visible,textarea:focus-visible{
+  outline:2px solid var(--laranja);outline-offset:1px;
+}
 
 /* painel "de vidro" reutilizável — vidro fosco + canto chanfrado */
 .vidro{background:var(--panel);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -92,14 +104,27 @@ h1,h2,h3{font-family:var(--f-titulo);letter-spacing:.02em}
 }
 .nav .brand{font-family:var(--f-titulo);font-weight:700;font-size:14px;color:var(--laranja);letter-spacing:.08em;text-shadow:0 0 14px var(--laranja-glow)}
 .nav .brand small{display:block;color:var(--ink-faint);font-size:10px;letter-spacing:.2em;font-family:var(--f-mono)}
-.nav-links{display:flex;gap:6px;flex-wrap:wrap}
+.nav-links{display:flex;gap:2px;flex-wrap:wrap}
 .nav a.nav-link{
-  font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;
-  color:var(--ink-dim);text-decoration:none;padding:8px 12px;border-radius:2px;border:1px solid transparent;
-  transition:color .15s, border-color .15s, background .15s;
+  font-family:var(--f-mono);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-dim);text-decoration:none;padding:8px 11px;border:1px solid transparent;
+  display:inline-flex;align-items:center;gap:6px;position:relative;overflow:hidden;
+  transition:color .15s;
 }
-.nav a.nav-link:hover{color:var(--laranja);border-color:var(--line)}
-.nav a.nav-link.router-link-active{color:var(--laranja-bright);border-color:var(--laranja-dim);background:rgba(255,153,0,0.1);box-shadow:inset 0 0 12px rgba(255,153,0,0.08)}
+.nav a.nav-link .ico{font-size:13px;filter:grayscale(.4);transition:filter .15s}
+/* "cursor" do menu — barra que preenche de baixo pra cima no hover, igual
+   ao realce de item selecionado no menu do jogo */
+.nav a.nav-link::before{
+  content:"";position:absolute;inset:auto 0 0 0;height:0;background:rgba(255,153,0,0.12);
+  border-top:1px solid transparent;transition:height .18s ease;z-index:0;
+}
+.nav a.nav-link>*{position:relative;z-index:1}
+.nav a.nav-link:hover{color:var(--laranja)}
+.nav a.nav-link:hover .ico{filter:none}
+.nav a.nav-link:hover::before{height:100%;border-top-color:var(--laranja-dim)}
+.nav a.nav-link.router-link-active{color:var(--laranja-bright)}
+.nav a.nav-link.router-link-active .ico{filter:none}
+.nav a.nav-link.router-link-active::before{height:100%;background:rgba(255,153,0,0.16);border-top-color:var(--laranja)}
 .nav .spacer{flex:1}
 
 /* Pills */
@@ -126,6 +151,14 @@ h1,h2,h3{font-family:var(--f-titulo);letter-spacing:.02em}
 .card p{margin:6px 0;font-size:14px;color:var(--ink-dim)}
 .card .faixa{display:flex;gap:6px;flex-wrap:wrap;margin-top:4px}
 .card .rar-comum{color:#d5c9a8}.rar-incomum{color:#62c56a}.rar-raro{color:#5fa0e8}.rar-epico{color:#c185ff}.rar-lendario{color:var(--laranja-bright)}
+/* acento de raridade na borda esquerda do card (item de loot) — cor igual
+   à das etiquetas .rar-* acima, só que aplicada no contorno do card
+   inteiro (Compendio.vue seta isso via classeRaridade()) */
+.card.rar-borda-comum{border-left:3px solid #d5c9a8}
+.card.rar-borda-incomum{border-left:3px solid #62c56a}
+.card.rar-borda-raro{border-left:3px solid #5fa0e8}
+.card.rar-borda-epico{border-left:3px solid #c185ff}
+.card.rar-borda-lendario{border-left:3px solid var(--laranja);box-shadow:0 0 16px rgba(255,153,0,0.1)}
 
 /* Botões — a cor de ação (laranja) com canto chanfrado nas duas pontas
    opostas, igual botão de confirmação do menu do jogo */
