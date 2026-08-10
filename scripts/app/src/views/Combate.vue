@@ -1,7 +1,7 @@
 <template>
   <div>
     <StatusBar @pedir-login="$emit('pedir-login')" />
-    <h2 style="color:var(--gold-bright);margin:10px 0 6px;font-size:24px">⚔️ Combate Livre</h2>
+    <TituloHUD icone="⚔️" titulo="Combate Livre" trilha="Sistema · Encontro" />
     <p style="margin:0 0 12px;color:var(--ink-dim);font-size:13px">
       Ataque um monstro direto do quadro — sem missão no meio, XP/Col/drop na hora. Gasta Fôlego sempre;
       Vida só cai em sucesso parcial ou falha. Equipar arma/carta aqui não muda a chance — é a Mesa de
@@ -65,7 +65,7 @@
       <div v-if="carregando" class="msg info">Carregando bestiário…</div>
       <div v-else class="grid">
         <div v-for="m in monstrosFiltrados" :key="m.id" class="card">
-          <img v-if="m.img" :src="m.img" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
+          <img v-if="m.img" :src="m.img" :alt="m.nome" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
           <div class="ct">{{ m.nome }}</div>
           <div class="cs">Nv {{ nivelMonstro(m) }} · {{ m.ameaca || '?' }}</div>
           <div class="faixa">
@@ -100,6 +100,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
+import TituloHUD from '../components/TituloHUD.vue'
 
 const auth = useAuthStore()
 defineEmits(['pedir-login'])

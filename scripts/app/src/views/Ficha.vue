@@ -9,6 +9,7 @@
   </div>
   <div v-else>
     <StatusBar />
+    <TituloHUD icone="🧑" titulo="Ficha do Jogador" trilha="Sistema · Personagem" />
     <div
       style="
         display: grid;
@@ -21,7 +22,7 @@
         <img
           v-if="foto"
           :src="foto"
-          alt="avatar"
+          :alt="'Retrato de ' + (auth.personagem?.nome || 'personagem')"
           style="
             width: 100%;
             aspect-ratio: 1/1;
@@ -171,6 +172,7 @@ import { computed, onMounted, ref } from "vue";
 import { useAuthStore } from "../stores/auth.js";
 import { useSupa } from "../lib/supabase.js";
 import StatusBar from "../components/StatusBar.vue";
+import TituloHUD from "../components/TituloHUD.vue";
 const auth = useAuthStore();
 const supa = useSupa();
 defineEmits(["pedir-login"]);

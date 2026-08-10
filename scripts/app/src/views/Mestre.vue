@@ -26,7 +26,7 @@
         </nav>
         <div class="admin-foot">
           <div class="pill on" style="justify-content:center;width:100%;display:flex">
-            <img v-if="auth.foto" :src="auth.foto" style="width:18px;height:18px;border-radius:50%;border:1px solid #7a5ab8;margin-right:6px;object-fit:cover">
+            <img v-if="auth.foto" :src="auth.foto" alt="" style="width:18px;height:18px;border-radius:50%;border:1px solid #7a5ab8;margin-right:6px;object-fit:cover">
             👑 Mestre logado
           </div>
           <div style="margin-top:8px;font-size:12px;color:#b8a8db;text-align:center">
@@ -93,7 +93,7 @@
               <div v-else-if="!jogadores.length" class="msg warn">Nenhum personagem criado ainda.</div>
               <div v-else class="admin-list">
                 <div v-for="p in jogadores.slice(0,6)" :key="p.nome" class="admin-row" @click="aba='jogadores'; selecionarPersonagem(p)">
-                  <img v-if="p.foto_url" :src="p.foto_url" class="row-avatar">
+                  <img v-if="p.foto_url" :src="p.foto_url" :alt="p.nome" class="row-avatar">
                   <div v-else class="row-avatar def">👤</div>
                   <div style="flex:1">
                     <div class="row-nome">{{ p.nome }} <span class="pill rar-incomum" style="margin-left:6px">💨 {{ p.folego ?? 0 }}/20</span></div>
@@ -346,7 +346,7 @@
                 <tr v-for="p in jogadoresFiltrados" :key="p.nome" @click="selecionarPersonagem(p)">
                   <td>
                     <div style="display:flex;align-items:center;gap:10px">
-                      <img v-if="p.foto_url" :src="p.foto_url" class="row-avatar">
+                      <img v-if="p.foto_url" :src="p.foto_url" :alt="p.nome" class="row-avatar">
                       <div v-else class="row-avatar def">👤</div>
                       <div>
                         <div class="row-nome">{{ p.nome }}</div>
@@ -376,7 +376,7 @@
               </div>
               <div class="body">
                 <div style="display:grid;grid-template-columns:180px 1fr;gap:14px">
-                  <img v-if="fichaAberta.foto_url" :src="fichaAberta.foto_url"
+                  <img v-if="fichaAberta.foto_url" :src="fichaAberta.foto_url" :alt="'Retrato de ' + fichaAberta.nome"
                     style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:2px solid #7a5ab8">
                   <div v-else style="width:100%;aspect-ratio:1/1;border-radius:10px;border:2px dashed #332a4d;display:grid;place-items:center;color:#6d6199;font-size:70px">👤</div>
                   <div class="card" style="background:#0f0b19;border:none;padding:0">

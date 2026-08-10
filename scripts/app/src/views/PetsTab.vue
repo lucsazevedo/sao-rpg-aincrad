@@ -1,5 +1,7 @@
 <template>
   <div>
+    <StatusBar v-if="auth.temPersonagem" />
+    <TituloHUD icone="🥚" titulo="Incubadora do Domador" trilha="Sistema · Pets" />
     <div class="tabs" style="margin:0 0 12px">
       <div class="tab" :class="{on:tab==='ativos'}" @click="tab='ativos'">🐾 Ativos</div>
       <div class="tab" :class="{on:tab==='incub'}" @click="tab='incub'">🥚 Incubando <span v-if="incubando.length">({{ incubando.length }})</span></div>
@@ -51,6 +53,8 @@
 import { ref, onMounted, onBeforeUnmount, computed, watch } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
+import StatusBar from '../components/StatusBar.vue'
+import TituloHUD from '../components/TituloHUD.vue'
 const auth = useAuthStore()
 defineEmits(['pedir-login'])
 const supa = useSupa()

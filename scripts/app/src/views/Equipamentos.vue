@@ -1,7 +1,7 @@
 <template>
   <div>
     <StatusBar @pedir-login="$emit('pedir-login')" />
-    <h2 style="color:var(--gold-bright);margin:10px 0 6px;font-size:24px">🎒 Equipamentos · Inventário</h2>
+    <TituloHUD icone="🎒" titulo="Equipamentos · Inventário" trilha="Sistema · Equipagem" />
     <p style="margin:0 0 12px;color:var(--ink-dim);font-size:13px">
       Equipar/desequipar aqui não muda nada mecanicamente no jogo online — chance de sucesso é só Nível de
       Profissão (ver <code>dolist/12_sistema_de_poder.md</code>). Isto é coleção/vitrine e o que você leva pra
@@ -103,6 +103,7 @@ import { ref, computed, onMounted, watch } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
+import TituloHUD from '../components/TituloHUD.vue'
 
 const auth = useAuthStore()
 defineEmits(['pedir-login'])

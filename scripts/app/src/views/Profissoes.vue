@@ -9,12 +9,8 @@
     </div>
     <div v-else>
       <StatusBar />
-      <!-- ITEM 6: HEADER = NOME DA PROFISSÃO DO USUÁRIO LOGADO, em destaque dourado -->
-      <h2
-        style="margin: 14px 0 2px; color: var(--gold-bright); font-size: 24px"
-      >
-        🛠️ {{ tituloPagina }}
-      </h2>
+      <!-- ITEM 6: HEADER = NOME DA PROFISSÃO DO USUÁRIO LOGADO -->
+      <TituloHUD icone="🛠️" :titulo="tituloPagina" trilha="Sistema · Ofício" />
       <p
         v-if="descricaoProfissao"
         style="margin: 0 0 10px; color: var(--ink-dim); font-size: 13px"
@@ -261,6 +257,7 @@ import { ref, computed, onMounted } from "vue";
 import { useAuthStore } from "../stores/auth.js";
 import { useSupa } from "../lib/supabase.js";
 import StatusBar from "../components/StatusBar.vue";
+import TituloHUD from "../components/TituloHUD.vue";
 import PetsTab from "./PetsTab.vue";
 
 const auth = useAuthStore();

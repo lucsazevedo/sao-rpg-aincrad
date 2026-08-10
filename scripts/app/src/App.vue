@@ -1,24 +1,24 @@
 <template>
   <div class="shell">
-    <nav class="nav">
-      <router-link to="/" class="brand">
+    <nav class="nav" aria-label="Navegação principal">
+      <router-link to="/" class="brand" aria-label="Início — SAO RPG Aincrad">
         🗡️ SAO RPG
         <small>Aincrad · Andar 1</small>
       </router-link>
       <div class="nav-links">
-        <router-link to="/compendio" class="nav-link">Compêndio</router-link>
-        <router-link to="/ficha" class="nav-link">Ficha</router-link>
-        <router-link to="/tarefas" class="nav-link">Tarefas</router-link>
-        <router-link to="/combate" class="nav-link">Combate</router-link>
-        <router-link to="/cooperacao" class="nav-link">Cooperação</router-link>
-        <router-link to="/pets" class="nav-link">Pets</router-link>
-        <router-link to="/profissoes" class="nav-link">Profissões</router-link>
+        <router-link to="/compendio" class="nav-link"><span class="ico">📚</span>Compêndio</router-link>
+        <router-link to="/ficha" class="nav-link"><span class="ico">🧑</span>Ficha</router-link>
+        <router-link to="/tarefas" class="nav-link"><span class="ico">📋</span>Tarefas</router-link>
+        <router-link to="/combate" class="nav-link"><span class="ico">⚔️</span>Combate</router-link>
+        <router-link to="/cooperacao" class="nav-link"><span class="ico">🤝</span>Cooperação</router-link>
+        <router-link to="/pets" class="nav-link"><span class="ico">🥚</span>Pets</router-link>
+        <router-link to="/profissoes" class="nav-link"><span class="ico">🛠️</span>Profissões</router-link>
         <router-link to="/equipamentos" class="nav-link"
-          >Equipamentos</router-link
+          ><span class="ico">🎒</span>Equipamentos</router-link
         >
-        <router-link to="/mercado" class="nav-link">Mercado</router-link>
+        <router-link to="/mercado" class="nav-link"><span class="ico">🏪</span>Mercado</router-link>
         <router-link to="/mestre" v-if="auth.ehMestre" class="nav-link"
-          >Mestre</router-link
+          ><span class="ico">🧙</span>Mestre</router-link
         >
       </div>
       <div class="spacer"></div>
@@ -54,11 +54,13 @@
       @fechar="mostrarLogin = false"
       @ok="mostrarLogin = false"
     />
-    <router-view v-slot="{ Component }">
-      <keep-alive>
-        <component :is="Component" @pedir-login="mostrarLogin = true" />
-      </keep-alive>
-    </router-view>
+    <main>
+      <router-view v-slot="{ Component }">
+        <keep-alive>
+          <component :is="Component" @pedir-login="mostrarLogin = true" />
+        </keep-alive>
+      </router-view>
+    </main>
   </div>
 </template>
 

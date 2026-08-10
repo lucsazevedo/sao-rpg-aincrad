@@ -1,7 +1,7 @@
 <template>
   <div>
     <StatusBar @pedir-login="$emit('pedir-login')" />
-    <h2 style="color:var(--gold-bright);margin:10px 0 6px;font-size:24px">🤝 Cooperação</h2>
+    <TituloHUD icone="🤝" titulo="Cooperação" trilha="Sistema · Clã" />
     <p style="margin:0 0 12px;color:var(--ink-dim);font-size:13px">
       Correio entre jogadores, baú do clã e metas globais do mestre — sem taxa em nenhum envio (mesmo padrão do mercado).
     </p>
@@ -99,6 +99,7 @@ import { ref, onMounted } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
+import TituloHUD from '../components/TituloHUD.vue'
 
 const auth = useAuthStore()
 defineEmits(['pedir-login'])
