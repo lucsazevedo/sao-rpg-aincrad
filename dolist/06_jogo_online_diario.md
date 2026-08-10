@@ -42,11 +42,16 @@ copia mecânica nova — reaproveita vocabulário que a mesa já tem:
   ligada ao atributo Espírito. É a Condição "Exaurido" que já existe em
   `regras_nucleares_campanha.md`, só que virando barra de verdade no site.
   Ação custa Fôlego; ação arriscada exige um mínimo.
-- **Desmaio** (TheCrims manda pra cadeia num roubo falhado): reaproveita
-  **À Beira** e a Condição "Crítico" (3 Condições acumuladas) — tentar algo
-  ousado e falhar deixa o personagem impedido de agir por um tempo, com
-  custo real (perde item/Col), redutível pagando ou esperando. Mesmo peso
-  dramático que já vale na mesa.
+- **Estado de Bug** (renomeado de "Desmaio" — tema combina mais com VRMMO/
+  Aincrad: o personagem "bugou" em vez de desmaiar): tentar algo ousado e
+  falhar deixa o personagem impedido de agir por um tempo, com custo real
+  (perde item/Col), redutível pagando ou esperando. Mesmo peso dramático
+  que já vale na mesa (reaproveita **À Beira** e a Condição "Crítico").
+  **Decisão nova**: Bug **acumula** — cada falha soma "quanto de bug" o
+  personagem carrega, e quanto mais bug acumulado, **mais tempo** ele
+  fica travado no online na próxima vez que falhar (não é um tempo fixo
+  sempre igual). Precisa de curva de decaimento (o bug reduz sozinho com o
+  tempo, ou só zera pagando/esperando um reset?).
 - **Liberação por nível**: monstros já têm `nivelRecomendado`/`ameaca` no
   banco — hoje é só texto. Vira trava de verdade: nível abaixo do
   recomendado, local/monstro fica bloqueado.
@@ -58,11 +63,17 @@ copia mecânica nova — reaproveita vocabulário que a mesa já tem:
 
 - **Fôlego**: casual — enche sozinho em 3-4h. Dá pra logar 2-3x ao dia sem
   virar grind de app.
-- **Desmaio**: tempo travado + perde uma fração do Col que está "na mão"
-  (não guardado) — mesma lógica do TheCrims (20%), precisa existir a
-  carteira (item 9) antes de valer a pena ligar essa punição.
+- **Estado de Bug**: tempo travado (escala com bug acumulado, ver acima) +
+  perde uma fração do Col que está "na mão" (não guardado) — mesma lógica
+  do TheCrims (20%), precisa existir a carteira (item 9) antes de valer a
+  pena ligar essa punição.
 - **Craft**: Comum = minutos, Incomum = 1-3h, Raro = 6-12h. Sempre cabe
   num dia, ninguém trava esperando demais.
+- **Item do online não tem efeito no online** — equipável/consumível/
+  carta/cristal (item 7) só valem mecanicamente quando o jogador leva pra
+  mesa de RPG de verdade. Chance de sucesso no online é só Nível de
+  Profissão (ver `12_sistema_de_poder.md`, que por isso descartou "Poder
+  por equipamento").
 
 ## Preciso saber
 
@@ -72,3 +83,5 @@ copia mecânica nova — reaproveita vocabulário que a mesa já tem:
   (cada um com sua própria vitrine) ou um mercado **compartilhado** onde
   todo mundo lista item no mesmo lugar (tipo leilão)? Muda bastante o
   design.
+- Bug decai sozinho com o tempo (ex: -1 por hora fora do jogo) ou só zera
+  gastando algo (Col, item, esperar um reset diário)?

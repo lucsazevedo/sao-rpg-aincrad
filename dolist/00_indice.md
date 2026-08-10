@@ -5,7 +5,7 @@ uso: mestre
 
 # Dolist
 
-Nove ideias, com tamanho estimado (P = menos de 1 sessão de trabalho, M = 1-2
+Catorze ideias, com tamanho estimado (P = menos de 1 sessão de trabalho, M = 1-2
 sessões, G = 3+ sessões / trabalho contínuo, GG = projeto próprio, com várias
 fases). RAG fica de propósito fora desta lista — combinado que é o último.
 
@@ -22,27 +22,35 @@ fases). RAG fica de propósito fora desta lista — combinado que é o último.
 | 9 | [Sistema de dinheiro/economia](09_sistema_dinheiro.md) | **M–G** | Carteira é simples; "cada jogador ter um mercado próprio" é uma feature de e-commerce |
 | 10 | [Reputação — jogador e clã](10_reputacao_jogador_cla.md) | **M** | Parte já existe (Favor/Suspeita, reputação de clã) — é levar do papel pro banco, não criar do zero |
 | 11 | [Mapa de ações diárias](11_mapa_de_acoes_diarias.md) | — | Não é item de esforço, é o desenho de "o que dá pra fazer" — reaproveita as 3 Ações de Ofício que as 16 profissões já têm |
-| 12 | [Sistema de Poder (pontos por equipamento)](12_sistema_de_poder.md) | **M** | Nível trava acesso, Poder trava risco — mesma tensão do roubo do TheCrims, sem PvP. Depende do item 8 existir primeiro |
+| 12 | [Chance de sucesso por Nível (Poder por equipamento removido)](12_sistema_de_poder.md) | **M** | Poder por equipamento foi descartado — item do online não tem efeito online (ver item 8), então quem trava risco agora é só o Nível de Profissão (item 5) |
+| 13 | [Remover sistema elemental, trocar por fraqueza de atributo](13_remover_elementos.md) | **M** | Decisão maior de jogo inteiro (mesa + site), não só do online |
+| 14 | [Ferramentas de ofício (bônus de sucesso em craft)](14_ferramentas_de_oficio.md) | **M** | Nasceu do Domador (Incubadora); multiplicador local por ação, separado do Nível de Profissão geral |
 
 ## Como isso se encaixa
 
-Os itens **5, 7, 8, 9 e 10 não são independentes** — são as peças do item
-**6** ("sistema de jogo online"). Level/XP (5) alimenta o que desbloqueia;
-drop/equipável/consumível/carta (7) enchem o inventário (8); inventário
-vira o que o mercado (9) compra e vende; reputação (10) é o que dá
-mordomia por comportamento, não só por progresso. Faz mais sentido tratar
-**6 como o projeto**, e 5/7/8/9/10 como as fases dele, na ordem: **8
-(inventário) → 7 (drop) → 5 (nível/XP) → 9 (dinheiro/mercado) → 10
-(reputação) → o resto do loop diário do 6**.
+Os itens **5, 7, 8, 9, 10 e 12 não são independentes** — são as peças do
+item **6** ("sistema de jogo online"). Nível de Profissão (5) alimenta o
+que desbloqueia e agora também a chance de sucesso (12); drop/equipável/
+consumível/carta/cristal (7) enchem o inventário (8) — sem efeito online,
+só valem levados pra mesa; inventário vira o que o mercado (9) compra e
+vende; reputação (10) é o que dá mordomia por comportamento, não só por
+progresso. Faz mais sentido tratar **6 como o projeto**, e 5/7/8/9/10/12
+como as fases dele, na ordem atualizada logo abaixo.
 
 Item **1 (Domador/pets)** também usa o mesmo formato de item-com-raridade
 que os itens 3, 7 e 9 vão usar — não é totalmente isolado, mas dá pra fazer
 antes do resto sem travar em nada.
 
-**Item 12 (Poder)** entra depois do 8 (equipamento) — precisa existir "o
-que está equipado" antes de somar Poder. Ordem atualizada da economia:
-**8 (inventário) → 7 (drop) → 12 (poder) → 5 (nível/XP) → 9 (dinheiro) →
-10 (reputação) → resto do loop diário (6/11)**.
+**Item 12 mudou de nome e de dependência**: não é mais "Poder por
+equipamento" (isso foi descartado — item do online não tem efeito
+mecânico online, ver item 8), agora é "chance de sucesso por Nível de
+Profissão", e por isso **não depende mais do item 8**. Ordem atualizada:
+**5 (nível de profissão) → 12 (chance de sucesso) → 8 (inventário) → 7
+(drop) → 9 (dinheiro) → 10 (reputação) → resto do loop diário (6/11)**.
+
+**Item 14 (ferramentas de ofício)** é independente — nasce do Domador
+(item 1) mas não bloqueia nem é bloqueado por nada da cadeia de economia
+acima.
 
 Os itens **2, 3 e 4** são independentes entre si e do item 6 — dá pra
 fazer em qualquer ordem, sem esperar o resto.
