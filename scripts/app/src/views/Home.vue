@@ -1,6 +1,22 @@
 <template>
   <div>
     <section class="hero">
+      <!-- Aincrad — o castelo-ilha flutuante cônico, a silhueta mais
+           reconhecível da obra. Decorativo, aria-hidden. -->
+      <svg class="hero-aincrad" viewBox="0 0 260 200" aria-hidden="true">
+        <defs>
+          <linearGradient id="aincradGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="var(--laranja)" stop-opacity=".9"/>
+            <stop offset="100%" stop-color="var(--azul)" stop-opacity=".5"/>
+          </linearGradient>
+        </defs>
+        <g fill="url(#aincradGrad)">
+          <polygon points="130,8 178,52 82,52" />
+          <polygon points="118,58 190,96 46,96" />
+          <polygon points="104,102 208,148 0,148" />
+        </g>
+        <ellipse cx="104" cy="160" rx="118" ry="9" fill="var(--azul)" opacity=".22" />
+      </svg>
       <div>
         <h1>Seja bem-vindo a Aincrad</h1>
         <!-- ITEM 9: Home principal só mostra CRAFT como opção principal -->
