@@ -243,8 +243,12 @@ async function carregarMapa(){
   if (pontosMapa.value.length) { carregandoMapa.value = false; nextTick(redesenharTerreno); return }
   carregandoMapa.value = true
   try {
-    const usaView = !auth.ehMestre
-    const r = await supa.from(usaView ? 'pontos_publico' : 'pontos').select('*').limit(500)
+    // Sempre a view: ela já resolve is_mestre() internamente (CASE WHEN,
+    // ver schema) e devolve a coluna "mestre" de verdade pro mestre e null
+    // pro jogador. Achado 10/08: usar a tabela base como mestre quebrava
+    // com "permission denied" — a coluna "mestre" nunca teve GRANT SELECT
+    // pra authenticated (só a view expõe isso com segurança).
+    const r = await supa.from('pontos_publico').select('*').limit(500)
     if (r.error) throw r.error
     pontosMapa.value = (r.data || []).filter(p => p.x != null && p.y != null)
   } catch(e){ console.warn(e); pontosMapa.value = [] }
@@ -255,8 +259,7 @@ async function abrirPonto(p){
   detalhePonto.value = null
   if (pontosDetalheMapa[p.id] !== undefined) { detalhePonto.value = pontosDetalheMapa[p.id]; return }
   try {
-    const usaView = !auth.ehMestre
-    const r = await supa.from(usaView ? 'pontos_detalhe_publico' : 'pontos_detalhe').select('*').eq('id', p.id).maybeSingle()
+    const r = await supa.from('pontos_detalhe_publico').select('*').eq('id', p.id).maybeSingle()
     pontosDetalheMapa[p.id] = r.data || null
     detalhePonto.value = pontosDetalheMapa[p.id]
   } catch(e){ console.warn(e) }
@@ -268,10 +271,15 @@ async function carregar(){
   if (cache[t.k]) { itens.value = cache[t.k]; return }
   carregando.value = true
   try {
-    // tabelas com coluna "só mestre" quebram o select inteiro (403) se o
-    // jogador tentar ler a coluna crua — usa a view pública quando existir
-    // e o usuário não for mestre (achado 10/08, ver docs/pendencias.md).
-    const usaView = !!(t.view && !auth.ehMestre)
+    // tabelas com coluna "só mestre" (monstros.notas, guias.mestre,
+    // puzzles.verdade) SEMPRE usam a view, mestre incluído — a view resolve
+    // is_mestre() internamente (CASE WHEN) e devolve o conteúdo real pro
+    // mestre; a coluna nunca teve GRANT SELECT na tabela base pra
+    // "authenticated" (nem pra mestre, já que jogador/mestre compartilham
+    // esse role — GRANT de coluna não sabe diferenciar sessão). Achado
+    // 10/08: consultar a tabela base como mestre quebrava com "permission
+    // denied for table X" — corrigido usando sempre a view.
+    const usaView = !!t.view
     const alvo = usaView ? t.view : t.tabela
     // as views _publico já filtram visivel=true internamente e nem
     // devolvem essa coluna — só filtra explicitamente na tabela base.

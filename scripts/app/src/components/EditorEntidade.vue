@@ -174,8 +174,13 @@ async function carregar() {
   carregando.value = true;
   erro.value = "";
   try {
+    // tabelas com coluna "só mestre" (monstros.notas, guias.mestre,
+    // puzzles.verdade, clas.ganchos, pontos.mestre, pontos_detalhe.mestre)
+    // nunca tiveram GRANT SELECT na tabela base pra "authenticated" — só a
+    // view resolve com segurança (CASE WHEN is_mestre()). Escrita continua
+    // sempre na tabela base (salvar/excluir/restaurar, mais abaixo).
     const r = await supa
-      .from(props.tabela)
+      .from(config.viewLeitura || props.tabela)
       .select("*")
       .order(campoTitulo.value === config.pk ? config.pk : campoTitulo.value, { ascending: true })
       .limit(1000);
