@@ -448,7 +448,12 @@ async function salvar() {
         if (!pkVal) throw new Error(`Preencha o campo "${config.pk}" (chave primária).`);
         payload[config.pk] = pkVal;
       }
-      const r = await supa.from(props.tabela).insert([payload]).select();
+      // sem .select(): pedir o registro de volta faria um "select *" na
+      // tabela base, que quebra pras 6 tabelas com coluna "só mestre" (a
+      // mesma causa do "permission denied" corrigido em 10/08 — a coluna
+      // nunca teve GRANT SELECT direto, só a view resolve). Não precisa do
+      // retorno mesmo: `carregar()` já busca a lista de novo em seguida.
+      const r = await supa.from(props.tabela).insert([payload]);
       if (r.error) throw r.error;
     } else {
       const r = await supa
