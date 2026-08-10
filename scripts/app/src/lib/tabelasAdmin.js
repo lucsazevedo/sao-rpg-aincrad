@@ -3,13 +3,60 @@
 
    Espelha 1:1 scripts/web/admin_schema.js (fonte da verdade compartilhada
    com o painel legado admin.html). Se mudar uma coluna no banco, muda nos
-   dois lugares. Tipos de campo: text | textarea | number | bool | json
-   ("json" cobre jsonb e array — edita como texto JSON cru, validado antes
-   de salvar).
+   dois lugares.
+
+   Tipos de campo:
+   - text | textarea | number | bool         básicos
+   - select      dropdown TRAVADO — só aceita um valor da lista `opcoes`.
+                 Usado em campo com vocabulário fixo real (enum do banco,
+                 ou taxonomia da qual outro código depende — ex: arma.tipo
+                 é usado pra casar com moves_arma.nome).
+   - sugestao    <input> com autocomplete (datalist) — sugere `opcoes` (ou
+                 busca de outra tabela via tabelaRef/campoRef) mas deixa
+                 digitar algo novo. Pra vocabulário "geralmente é um
+                 desses, mas pode crescer".
+   - imagem      URL de imagem com preview ao vivo abaixo do campo.
+   - lista-texto array de strings — vira um repetidor de linhas (➕/🗑️).
+   - lista       array de objetos com sub-schema fixo (itemCampos).
+   - objeto      objeto de forma fixa e conhecida (campos).
+   - json        fallback cru pra formato que ainda não ganhou
+                 sub-formulário — tem botão de formatar + validação ao vivo.
 
    Campo extra "auto" = chave gerada pelo banco (bigserial), não editável
    na criação. Campo extra "segredo" = só o mestre vê o valor de verdade
-   (a view pública devolve null pra jogador) — mostramos um aviso no form. */
+   (a view pública devolve null pra jogador) — mostramos um aviso no form.
+   Campo extra "rotulo" = texto mais amigável pro label (senão usa o nome
+   cru da coluna). */
+
+// ===== vocabulários compartilhados (revisão 10/08 — usabilidade dos CRUDs) =====
+const ATRIBUTOS = ["Corpo", "Reflexo", "Técnica", "Conhecimento", "Espírito"];
+const ATRIBUTOS_ABREV = ["COR", "REF", "TEC", "CON", "ESP"];
+const RARIDADE_5 = ["Comum", "Incomum", "Raro", "Épico", "Lendário"];
+const RARIDADE_4 = ["Comum", "Incomum", "Raro", "Épico"];
+const RARIDADE_5_MIN = ["comum", "incomum", "raro", "epico", "lendario"];
+const PROFISSOES = ["Alquimista", "Bibliotecário", "Caçador", "Cartógrafo", "Comerciante", "Costureiro", "Coveiro", "Cozinheiro", "Diplomata", "Domador", "Ferreiro", "Joalheiro", "Lenhador", "Médico", "Mercenário", "Músico"];
+const ARMAS_TIPOS = ["Adagas", "Adagas de Arremesso", "Arco e Flecha", "Bastão", "Besta", "Chakrams", "Chicote", "Clava", "Corrente com Peso", "Escudo e Espada", "Espada Longa", "Foice", "Glaive", "Katana", "Lança", "Leque", "Machado", "Manopla", "Martelo", "Nunchaku", "Pá", "Rapieira", "Tonfas"];
+const EQUIP_SLOTS = ["Acessórios", "Armaduras", "Botas", "Capuz", "Comidas", "Cristais de Uso", "Elmos", "Escudos", "Luvas", "Munições", "Parte de Baixo", "Parte de Cima", "Poções"];
+const MONSTRO_TIPOS = ["aracnideo", "besta", "chefe_de_andar", "construto", "humanoide", "inseto", "nao-corporeo", "planta"];
+const PONTOS_CATEGORIA = ["npc", "monstro", "chefe", "recurso", "segredo", "puzzle", "dungeon", "cidade", "comerciante"]; // bate 1:1 com CAT_INFO em Compendio.vue — não adicionar sem atualizar lá também
+const PONTOS_TIPO = ["sempre", "respawn", "unico"];
+const NPC_PAPEL = ["aliado", "neutro", "vendedor"];
+const INVENTARIO_TIPO = ["arma", "equipamento", "consumivel", "material", "carta", "cristal", "ovo", "pet"]; // = CHECK inventario_tipo_check
+const INVENTARIO_LOCAL = ["mochila", "stash"]; // = CHECK inventario_local_check
+const RECEITAS_TIPO = ["ferramenta", "item", "ovo_especial"]; // = CHECK receitas_tipo_check
+const TIPO_BONUS = ["atributo", "dano", "resist", "especial"]; // = CHECK cartas/cristais_tipo_bonus_check
+const CLA_CARGO = ["lider", "oficial", "membro"]; // = CHECK cla_autoridade_cargo_check
+const CRIATURA_STATUS = ["incubando", "ativo", "perdido"]; // = CHECK criaturas_domadas_status_check
+const BESTIARIO_CATEGORIA = ["comum", "mini_boss", "mvp", "boss"]; // = CHECK bestiario_roster_categoria_check
+const REPUTACAO_ALVO_TIPO = ["cla", "cidade", "vila", "npc", "faccao", "outro"]; // = CHECK reputacao/missoes
+const TRANSACAO_TIPO = ["missao", "venda", "compra", "craft", "bug", "ajuste_mestre", "npc", "taxa", "limite_diario", "combate", "estalagem", "transferencia", "meta_global"]; // = CHECK transacoes_tipo_check
+
+// sub-schema reutilizado em receitas.materiais e ferramentas_oficio.receita
+// (mesma forma: [{qtd, mat_id}, ...])
+const ITEM_CAMPOS_MATERIAL = [
+  { nome: "qtd", tipo: "number", rotulo: "Qtd" },
+  { nome: "mat_id", tipo: "text", rotulo: "ID do material (ex: mat_couro_cru)" },
+];
 
 export const TABELAS_ADMIN = {
   monstros: {
@@ -28,22 +75,22 @@ export const TABELAS_ADMIN = {
       { nome: "nome", tipo: "text" },
       { nome: "epiteto", tipo: "text" },
       { nome: "arquivo", tipo: "text" },
-      { nome: "img", tipo: "text" },
-      { nome: "carta", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
+      { nome: "img", tipo: "imagem" },
+      { nome: "carta", tipo: "sugestao", tabelaRef: "cartas", campoRef: "nome", rotulo: "Carta assinatura (opcional)" },
+      { nome: "tipo", tipo: "sugestao", opcoes: MONSTRO_TIPOS },
       { nome: "zona", tipo: "text" },
-      { nome: "regioes", tipo: "json" },
-      { nome: "nivel_recomendado", tipo: "text" },
+      { nome: "regioes", tipo: "lista-texto" },
+      { nome: "nivel_recomendado", tipo: "text", rotulo: "Nível recomendado (ex: 6-8)" },
       { nome: "ameaca", tipo: "text" },
       { nome: "golpes", tipo: "text" },
-      { nome: "local", tipo: "text" },
+      { nome: "local", tipo: "text", rotulo: "Local/habitat (descrição livre)" },
       { nome: "canonico", tipo: "bool" },
       { nome: "fonte", tipo: "text" },
-      { nome: "fraqueza", tipo: "text" },
-      { nome: "atributo_fraqueza", tipo: "text" },
-      { nome: "fraquezas", tipo: "json" },
-      { nome: "resistencias", tipo: "json" },
-      { nome: "vulnerabilidades", tipo: "json" },
+      { nome: "fraqueza", tipo: "textarea", rotulo: "Fraqueza (descrição narrativa)" },
+      { nome: "atributo_fraqueza", tipo: "select", opcoes: ATRIBUTOS },
+      { nome: "fraquezas", tipo: "lista-texto" },
+      { nome: "resistencias", tipo: "lista-texto" },
+      { nome: "vulnerabilidades", tipo: "lista-texto" },
       { nome: "resumo", tipo: "textarea" },
       { nome: "habitat", tipo: "textarea" },
       { nome: "comportamento", tipo: "textarea" },
@@ -51,7 +98,16 @@ export const TABELAS_ADMIN = {
       { nome: "sinal", tipo: "textarea" },
       { nome: "lore", tipo: "textarea" },
       { nome: "notas", tipo: "textarea", segredo: true },
-      { nome: "drops", tipo: "json" },
+      {
+        nome: "drops", tipo: "lista", itemNome: "drop",
+        itemCampos: [
+          { nome: "item", tipo: "text" },
+          { nome: "qtd", tipo: "text", rotulo: "Qtd (aceita faixa, ex: 1-2)" },
+          { nome: "chance", tipo: "text", rotulo: "Chance (ex: 30%)" },
+          { nome: "raridade", tipo: "sugestao", opcoes: RARIDADE_5 },
+          { nome: "serve", tipo: "text", rotulo: "Serve pra (opcional)" },
+        ],
+      },
       { nome: "corpo", tipo: "textarea" },
       { nome: "visivel", tipo: "bool" },
     ],
@@ -64,10 +120,12 @@ export const TABELAS_ADMIN = {
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
       { nome: "arquivo", tipo: "text" },
-      { nome: "img", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
-      { nome: "atributo", tipo: "text" },
-      { nome: "raridade", tipo: "text" },
+      { nome: "img", tipo: "imagem" },
+      // trava importante: golpes/Limit Breaker (moves_arma) casam por NOME
+      // com este tipo — um typo aqui quebra o moveset da arma inteira.
+      { nome: "tipo", tipo: "select", opcoes: ARMAS_TIPOS },
+      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS },
+      { nome: "raridade", tipo: "select", opcoes: RARIDADE_5 },
       { nome: "requisito", tipo: "text" },
       { nome: "preco", tipo: "number" },
       { nome: "preco_txt", tipo: "text" },
@@ -85,9 +143,11 @@ export const TABELAS_ADMIN = {
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
-      { nome: "img", tipo: "text" },
-      { nome: "slot", tipo: "text" },
-      { nome: "raridade", tipo: "text" },
+      { nome: "img", tipo: "imagem" },
+      // sugestão, não select travado: slot novo já apareceu no item 3 sem
+      // quebrar nada — travar demais aqui impediria isso de novo.
+      { nome: "slot", tipo: "sugestao", opcoes: EQUIP_SLOTS },
+      { nome: "raridade", tipo: "select", opcoes: RARIDADE_5 },
       { nome: "conjunto", tipo: "bool" },
       { nome: "arquivo", tipo: "text" },
       { nome: "requisito", tipo: "text" },
@@ -104,8 +164,8 @@ export const TABELAS_ADMIN = {
     rotulo: "Golpes de Arma",
     icone: "🗡️",
     campos: [
-      { nome: "nome", tipo: "text" },
-      { nome: "atributo", tipo: "text" },
+      { nome: "nome", tipo: "select", opcoes: ARMAS_TIPOS, rotulo: "Arma (precisa bater com armas.tipo)" },
+      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS_ABREV },
       { nome: "marca", tipo: "textarea" },
       { nome: "move_a", tipo: "json" },
       { nome: "move_b", tipo: "json" },
@@ -120,8 +180,8 @@ export const TABELAS_ADMIN = {
     rotulo: "Golpes de Profissão",
     icone: "🛠️",
     campos: [
-      { nome: "nome", tipo: "text" },
-      { nome: "atributo", tipo: "text" },
+      { nome: "nome", tipo: "select", opcoes: PROFISSOES },
+      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS_ABREV },
       { nome: "marca", tipo: "textarea" },
       { nome: "move_a", tipo: "json" },
       { nome: "move_b", tipo: "json" },
@@ -136,9 +196,9 @@ export const TABELAS_ADMIN = {
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
-      { nome: "raridade", tipo: "text" },
-      { nome: "tipo_bonus", tipo: "text" },
-      { nome: "valor_bonus", tipo: "number" },
+      { nome: "raridade", tipo: "select", opcoes: RARIDADE_5 },
+      { nome: "tipo_bonus", tipo: "select", opcoes: TIPO_BONUS },
+      { nome: "valor_bonus", tipo: "number", min: 0, max: 1, rotulo: "Valor do bônus (regra: máx. +1)" },
       { nome: "descricao", tipo: "textarea" },
       { nome: "drop_de", tipo: "text" },
       { nome: "chance_drop", tipo: "number" },
@@ -153,8 +213,8 @@ export const TABELAS_ADMIN = {
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
-      { nome: "tipo_bonus", tipo: "text" },
-      { nome: "valor_bonus", tipo: "number" },
+      { nome: "tipo_bonus", tipo: "select", opcoes: TIPO_BONUS },
+      { nome: "valor_bonus", tipo: "number", min: 0, max: 1, rotulo: "Valor do bônus (regra: máx. +1)" },
       { nome: "descricao", tipo: "textarea" },
       { nome: "drop_de", tipo: "text" },
       { nome: "excluido", tipo: "bool" },
@@ -170,15 +230,15 @@ export const TABELAS_ADMIN = {
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
       { nome: "arquivo", tipo: "text" },
-      { nome: "img", tipo: "text" },
-      { nome: "papel", tipo: "text" },
-      { nome: "profissao", tipo: "text" },
-      { nome: "arma", tipo: "text" },
+      { nome: "img", tipo: "imagem" },
+      { nome: "papel", tipo: "select", opcoes: NPC_PAPEL },
+      { nome: "profissao", tipo: "sugestao", opcoes: PROFISSOES },
+      { nome: "arma", tipo: "sugestao", opcoes: ARMAS_TIPOS },
       { nome: "local", tipo: "text" },
       { nome: "atributos", tipo: "json" },
       { nome: "resumo", tipo: "textarea" },
       { nome: "gancho", tipo: "textarea" },
-      { nome: "falas", tipo: "json" },
+      { nome: "falas", tipo: "lista-texto" },
       { nome: "corpo", tipo: "textarea" },
       { nome: "canonico", tipo: "bool" },
       { nome: "fonte", tipo: "text" },
@@ -193,12 +253,14 @@ export const TABELAS_ADMIN = {
       { nome: "id", tipo: "text" },
       { nome: "titulo", tipo: "text" },
       { nome: "cadeia", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
-      { nome: "dificuldade", tipo: "text" },
+      // tipo/dificuldade aqui usam combinações tipo "Coleta/Investigação" —
+      // sugestão (não trava) pra não impedir esse padrão já em uso.
+      { nome: "tipo", tipo: "sugestao", opcoes: ["Caça", "Coleta", "Combate", "Diplomacia", "Doma", "Eliminação", "Entrega", "Escolta", "Defesa", "Comércio", "Diálogo"] },
+      { nome: "dificuldade", tipo: "sugestao", opcoes: ["Fácil", "Médio", "Difícil", "Muito Difícil", "Chefe (fora da escala normal)", "— (sem teste obrigatório)"] },
       { nome: "regiao", tipo: "text" },
-      { nome: "npc", tipo: "text" },
-      { nome: "requer", tipo: "json" },
-      { nome: "desbloqueia", tipo: "json" },
+      { nome: "npc", tipo: "sugestao", tabelaRef: "npcs", campoRef: "nome" },
+      { nome: "requer", tipo: "lista-texto", rotulo: "Requer (ids de outra quest)" },
+      { nome: "desbloqueia", tipo: "lista-texto", rotulo: "Desbloqueia (ids de outra quest)" },
       { nome: "resumo", tipo: "textarea" },
       { nome: "corpo", tipo: "textarea" },
       { nome: "visivel", tipo: "bool" },
@@ -214,8 +276,8 @@ export const TABELAS_ADMIN = {
       { nome: "ep_rotulo", tipo: "text" },
       { nome: "titulo", tipo: "text" },
       { nome: "arquivo", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
-      { nome: "dificuldade", tipo: "text" },
+      { nome: "tipo", tipo: "sugestao", opcoes: ["Coleta", "Defesa", "Eliminação", "Escolta", "Exploração", "Investigação", "Puzzle", "Social", "Fenômeno", "Finale"] },
+      { nome: "dificuldade", tipo: "sugestao", opcoes: ["Fácil", "Médio", "Difícil", "Muito Difícil"] },
       { nome: "regiao", tipo: "text" },
       { nome: "conexoes", tipo: "text" },
       { nome: "elenco", tipo: "text" },
@@ -238,12 +300,12 @@ export const TABELAS_ADMIN = {
       { nome: "chegada", tipo: "text" },
       { nome: "leitura", tipo: "textarea" },
       { nome: "cena", tipo: "textarea" },
-      { nome: "acoes", tipo: "json" },
+      { nome: "acoes", tipo: "lista-texto" },
       { nome: "mestre", tipo: "textarea", segredo: true },
       { nome: "demora", tipo: "textarea" },
       { nome: "evento", tipo: "textarea" },
-      { nome: "locais", tipo: "json" },
-      { nome: "ligado", tipo: "json" },
+      { nome: "locais", tipo: "lista-texto" },
+      { nome: "ligado", tipo: "lista-texto", rotulo: "Ligado (ids de outro guia/ponto)" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
@@ -290,7 +352,7 @@ export const TABELAS_ADMIN = {
     icone: "🚪",
     campos: [
       { nome: "id", tipo: "text" },
-      { nome: "dungeon_id", tipo: "text" },
+      { nome: "dungeon_id", tipo: "sugestao", tabelaRef: "dungeons", campoRef: "id" },
       { nome: "nome", tipo: "text" },
       { nome: "tipo", tipo: "text" },
       { nome: "leitura", tipo: "textarea" },
@@ -306,8 +368,8 @@ export const TABELAS_ADMIN = {
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
       { nome: "andar", tipo: "text" },
-      { nome: "tipo_de_zona", tipo: "text" },
-      { nome: "guildas_presentes", tipo: "json" },
+      { nome: "tipo_de_zona", tipo: "sugestao", opcoes: ["zona segura"] },
+      { nome: "guildas_presentes", tipo: "lista-texto" },
       { nome: "canonico", tipo: "bool" },
       { nome: "fonte", tipo: "text" },
       { nome: "corpo", tipo: "textarea" },
@@ -325,7 +387,7 @@ export const TABELAS_ADMIN = {
       { nome: "destaque", tipo: "bool" },
       { nome: "forca", tipo: "text" },
       { nome: "necessidade", tipo: "text" },
-      { nome: "rival", tipo: "text" },
+      { nome: "rival", tipo: "sugestao", tabelaRef: "clas", campoRef: "nome" },
       { nome: "rumor", tipo: "text" },
       { nome: "status", tipo: "text" },
       { nome: "resumo", tipo: "textarea" },
@@ -351,18 +413,29 @@ export const TABELAS_ADMIN = {
       { nome: "id", tipo: "text" },
       { nome: "regiao", tipo: "text" },
       { nome: "nome", tipo: "text" },
-      { nome: "categoria", tipo: "text" },
-      { nome: "x", tipo: "number" },
-      { nome: "y", tipo: "number" },
-      { nome: "tipo", tipo: "text" },
+      // trava: a cor/ícone no mapa (Compendio.vue CAT_INFO) depende
+      // exatamente desses 9 valores — categoria errada vira ponto cinza
+      // sem legenda no mapa.
+      { nome: "categoria", tipo: "select", opcoes: PONTOS_CATEGORIA },
+      { nome: "x", tipo: "number", min: 0, max: 1536, rotulo: "X (0-1536, mesmo viewBox do mapa)" },
+      { nome: "y", tipo: "number", min: 0, max: 1024, rotulo: "Y (0-1024, mesmo viewBox do mapa)" },
+      { nome: "tipo", tipo: "select", opcoes: PONTOS_TIPO },
       { nome: "ref", tipo: "text" },
       { nome: "descricao", tipo: "textarea" },
       { nome: "respawn_horas", tipo: "number" },
-      { nome: "teste", tipo: "json" },
+      {
+        nome: "teste", tipo: "objeto",
+        campos: [
+          { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS },
+          { nome: "sucesso", tipo: "textarea" },
+          { nome: "parcial", tipo: "textarea" },
+          { nome: "falha", tipo: "textarea" },
+        ],
+      },
       { nome: "recompensa", tipo: "textarea" },
       { nome: "ameaca", tipo: "text" },
       { nome: "golpes", tipo: "text" },
-      { nome: "atributo_fraqueza", tipo: "text" },
+      { nome: "atributo_fraqueza", tipo: "select", opcoes: ATRIBUTOS },
       { nome: "fala", tipo: "textarea" },
       { nome: "oferece", tipo: "text" },
       { nome: "vende", tipo: "text" },
@@ -377,15 +450,15 @@ export const TABELAS_ADMIN = {
     icone: "📌",
     viewLeitura: "pontos_detalhe_publico",
     campos: [
-      { nome: "id", tipo: "text" },
+      { nome: "id", tipo: "sugestao", tabelaRef: "pontos", campoRef: "id" },
       { nome: "nome", tipo: "text" },
       { nome: "regiao", tipo: "text" },
       { nome: "arquivo", tipo: "text" },
       { nome: "leitura", tipo: "textarea" },
       { nome: "oque", tipo: "textarea" },
-      { nome: "acoes", tipo: "json" },
+      { nome: "acoes", tipo: "lista-texto" },
       { nome: "mestre", tipo: "textarea", segredo: true },
-      { nome: "atalhos", tipo: "json" },
+      { nome: "atalhos", tipo: "lista-texto" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
@@ -405,11 +478,11 @@ export const TABELAS_ADMIN = {
     rotulo: "Ofícios",
     icone: "🔨",
     campos: [
-      { nome: "nome", tipo: "text" },
-      { nome: "atributo", tipo: "text" },
+      { nome: "nome", tipo: "select", opcoes: PROFISSOES },
+      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS },
       { nome: "arquivo", tipo: "text" },
       { nome: "marca", tipo: "textarea" },
-      { nome: "acoes", tipo: "json" },
+      { nome: "acoes", tipo: "lista-texto" },
       { nome: "postos", tipo: "json" },
       { nome: "contato", tipo: "text" },
       { nome: "gancho", tipo: "textarea" },
@@ -423,7 +496,7 @@ export const TABELAS_ADMIN = {
     rotulo: "Produção (crafting)",
     icone: "⚙️",
     campos: [
-      { nome: "profissao", tipo: "text" },
+      { nome: "profissao", tipo: "select", opcoes: PROFISSOES },
       { nome: "moeda", tipo: "text" },
       { nome: "itens", tipo: "json" },
       { nome: "vale", tipo: "textarea" },
@@ -437,10 +510,10 @@ export const TABELAS_ADMIN = {
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
-      { nome: "raridade", tipo: "text" },
-      { nome: "nivel_obtencao", tipo: "number" },
+      { nome: "raridade", tipo: "select", opcoes: RARIDADE_5_MIN },
+      { nome: "nivel_obtencao", tipo: "number", min: 1, max: 10 },
       { nome: "categoria", tipo: "text" },
-      { nome: "peso_uso_esperado", tipo: "number" },
+      { nome: "peso_uso_esperado", tipo: "number", min: 1, max: 10 },
       { nome: "descricao", tipo: "textarea" },
       { nome: "fonte", tipo: "textarea" },
       { nome: "excluido", tipo: "bool" },
@@ -453,21 +526,23 @@ export const TABELAS_ADMIN = {
     icone: "📜",
     campos: [
       { nome: "id", tipo: "text" },
-      { nome: "profissao", tipo: "text" },
-      { nome: "nivel_receita", tipo: "number" },
-      { nome: "tipo", tipo: "text" },
+      { nome: "profissao", tipo: "select", opcoes: PROFISSOES },
+      { nome: "nivel_receita", tipo: "number", min: 1, max: 10 },
+      { nome: "tipo", tipo: "select", opcoes: RECEITAS_TIPO },
       { nome: "nome_resultado", tipo: "text" },
-      { nome: "resultado_item_id", tipo: "text" },
-      { nome: "resultado_raridade", tipo: "text" },
-      { nome: "atributo_teste", tipo: "text" },
+      { nome: "resultado_item_id", tipo: "sugestao", tabelaRef: "equipamentos", campoRef: "id", rotulo: "Item resultado (se for equipamento — vazio pra consumível)" },
+      { nome: "resultado_raridade", tipo: "select", opcoes: RARIDADE_5_MIN },
+      { nome: "atributo_teste", tipo: "select", opcoes: ATRIBUTOS },
       { nome: "dificuldade_mod", tipo: "number" },
-      { nome: "folego_custo", tipo: "number" },
+      { nome: "folego_custo", tipo: "number", min: 0, max: 10 },
       { nome: "xp_recompensa", tipo: "number" },
-      { nome: "materiais", tipo: "json" },
+      { nome: "materiais", tipo: "lista", itemNome: "material", itemCampos: ITEM_CAMPOS_MATERIAL },
       { nome: "efeitos", tipo: "json" },
       { nome: "receita_refino", tipo: "bool" },
-      { nome: "receita_estagio", tipo: "number" },
-      { nome: "receita_antecessora_id", tipo: "text" },
+      { nome: "receita_estagio", tipo: "number", min: 1, max: 2 },
+      { nome: "receita_antecessora_id", tipo: "sugestao", tabelaRef: "receitas", campoRef: "id" },
+      { nome: "requer_ferramenta_id", tipo: "sugestao", tabelaRef: "ferramentas_oficio", campoRef: "id" },
+      { nome: "resultado_qtd", tipo: "number", min: 1 },
       { nome: "excluido", tipo: "bool" },
       { nome: "visivel", tipo: "bool" },
     ],
@@ -478,12 +553,12 @@ export const TABELAS_ADMIN = {
     icone: "🧰",
     campos: [
       { nome: "id", tipo: "text" },
-      { nome: "profissao", tipo: "text" },
+      { nome: "profissao", tipo: "select", opcoes: PROFISSOES },
       { nome: "nome", tipo: "text" },
-      { nome: "nivel_ferramenta", tipo: "number" },
-      { nome: "bonus_acao", tipo: "number" },
+      { nome: "nivel_ferramenta", tipo: "number", min: 1, max: 5 },
+      { nome: "bonus_acao", tipo: "number", rotulo: "Bônus de ação (mod PBTA pequeno, ex: +1)" },
       { nome: "descricao", tipo: "textarea" },
-      { nome: "receita", tipo: "json" },
+      { nome: "receita", tipo: "lista", itemNome: "material", itemCampos: ITEM_CAMPOS_MATERIAL },
       { nome: "excluido", tipo: "bool" },
       { nome: "visivel", tipo: "bool" },
     ],
@@ -496,11 +571,11 @@ export const TABELAS_ADMIN = {
       { nome: "id", tipo: "text" },
       { nome: "nome", tipo: "text" },
       { nome: "especie", tipo: "text" },
-      { nome: "monstro_id", tipo: "text" },
-      { nome: "raridade", tipo: "text" },
-      { nome: "nivel_min", tipo: "number" },
-      { nome: "tempo_chocagem_horas", tipo: "number" },
-      { nome: "incubadora_min", tipo: "number" },
+      { nome: "monstro_id", tipo: "sugestao", tabelaRef: "monstros", campoRef: "id" },
+      { nome: "raridade", tipo: "select", opcoes: RARIDADE_5_MIN },
+      { nome: "nivel_min", tipo: "number", min: 1, max: 10 },
+      { nome: "tempo_chocagem_horas", tipo: "number", min: 1, max: 72 },
+      { nome: "incubadora_min", tipo: "number", min: 1, max: 5 },
       { nome: "efeitos_padrao", tipo: "json" },
       { nome: "como_obter", tipo: "textarea" },
       { nome: "descricao", tipo: "textarea" },
@@ -513,7 +588,7 @@ export const TABELAS_ADMIN = {
     rotulo: "Curva de XP de Profissão",
     icone: "📈",
     campos: [
-      { nome: "nivel", tipo: "number" },
+      { nome: "nivel", tipo: "number", min: 2, max: 10 },
       { nome: "xp_necessario", tipo: "number" },
     ],
   },
@@ -536,7 +611,7 @@ export const TABELAS_ADMIN = {
     icone: "🛒",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "mercado_id", tipo: "text" },
+      { nome: "mercado_id", tipo: "sugestao", tabelaRef: "mercado", campoRef: "id" },
       { nome: "item", tipo: "text" },
       { nome: "col", tipo: "text" },
       { nome: "obs", tipo: "text" },
@@ -562,24 +637,24 @@ export const TABELAS_ADMIN = {
     campos: [
       { nome: "id", tipo: "text" },
       { nome: "titulo", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
+      { nome: "tipo", tipo: "sugestao", opcoes: ["caca", "coleta", "combate", "entrega", "contrato_arriscado"] },
       { nome: "descricao", tipo: "textarea" },
       { nome: "regiao", tipo: "text" },
       { nome: "alvo", tipo: "text" },
       { nome: "alvo_qtd", tipo: "number" },
-      { nome: "raridade", tipo: "text" },
-      { nome: "custo_folego", tipo: "number" },
+      { nome: "raridade", tipo: "select", opcoes: RARIDADE_5_MIN },
+      { nome: "custo_folego", tipo: "number", min: 0, max: 10 },
       { nome: "recompensa_xp", tipo: "number" },
       { nome: "recompensa_col_min", tipo: "number" },
       { nome: "recompensa_col_max", tipo: "number" },
       { nome: "drop_item_id", tipo: "text" },
-      { nome: "drop_chance", tipo: "number" },
-      { nome: "drop_tabela", tipo: "text" },
-      { nome: "reputacao_cla_nome", tipo: "text" },
+      { nome: "drop_chance", tipo: "number", min: 0, max: 1 },
+      { nome: "drop_tabela", tipo: "sugestao", opcoes: ["monstros_comuns", "monstros_elite"] },
+      { nome: "reputacao_cla_nome", tipo: "sugestao", tabelaRef: "clas", campoRef: "nome" },
       { nome: "reputacao_delta", tipo: "number" },
       { nome: "penalidade_col_falha", tipo: "number" },
       { nome: "penalidade_folego_falha", tipo: "number" },
-      { nome: "nivel_min", tipo: "number" },
+      { nome: "nivel_min", tipo: "number", min: 1, max: 10 },
       { nome: "requer_grupo", tipo: "bool" },
       { nome: "excluido", tipo: "bool" },
       { nome: "visivel", tipo: "bool" },
@@ -592,9 +667,9 @@ export const TABELAS_ADMIN = {
     icone: "🧾",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "de_personagem", tipo: "text" },
-      { nome: "para_personagem", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
+      { nome: "de_personagem", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "para_personagem", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "tipo", tipo: "select", opcoes: TRANSACAO_TIPO },
       { nome: "valor", tipo: "number" },
       { nome: "item_id", tipo: "text" },
       { nome: "observacao", tipo: "text" },
@@ -606,12 +681,12 @@ export const TABELAS_ADMIN = {
     icone: "🏷️",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "vendedor_nome", tipo: "text" },
+      { nome: "vendedor_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
       { nome: "inventario_id", tipo: "number" },
-      { nome: "preco_col", tipo: "number" },
+      { nome: "preco_col", tipo: "number", min: 1 },
       { nome: "expira_em", tipo: "text" },
       { nome: "vendido", tipo: "bool" },
-      { nome: "comprador_nome", tipo: "text" },
+      { nome: "comprador_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
     ],
   },
   inventario: {
@@ -620,15 +695,16 @@ export const TABELAS_ADMIN = {
     icone: "🎒",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "personagem_nome", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "tipo", tipo: "select", opcoes: INVENTARIO_TIPO },
       { nome: "item_id", tipo: "text" },
       { nome: "nome", tipo: "text" },
-      { nome: "quantidade", tipo: "number" },
+      { nome: "quantidade", tipo: "number", min: 1 },
       { nome: "equipado", tipo: "bool" },
-      { nome: "slot", tipo: "text" },
-      { nome: "cristal_id", tipo: "text" },
+      { nome: "slot", tipo: "sugestao", opcoes: EQUIP_SLOTS },
+      { nome: "cristal_id", tipo: "sugestao", tabelaRef: "cristais", campoRef: "id" },
       { nome: "origem", tipo: "text" },
+      { nome: "local", tipo: "select", opcoes: INVENTARIO_LOCAL },
       { nome: "excluido", tipo: "bool" },
     ],
   },
@@ -638,13 +714,13 @@ export const TABELAS_ADMIN = {
     icone: "🐾",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "personagem_nome", tipo: "text" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
       { nome: "especie", tipo: "text" },
-      { nome: "monstro_id", tipo: "text" },
+      { nome: "monstro_id", tipo: "sugestao", tabelaRef: "monstros", campoRef: "id" },
       { nome: "nome_pet", tipo: "text" },
-      { nome: "raridade", tipo: "text" },
-      { nome: "status", tipo: "text" },
-      { nome: "incubadora_nivel", tipo: "number" },
+      { nome: "raridade", tipo: "select", opcoes: RARIDADE_4 },
+      { nome: "status", tipo: "select", opcoes: CRIATURA_STATUS },
+      { nome: "incubadora_nivel", tipo: "number", min: 1, max: 5 },
       { nome: "efeitos", tipo: "json" },
       { nome: "choca_em", tipo: "text" },
       { nome: "nascido_em", tipo: "text" },
@@ -656,9 +732,9 @@ export const TABELAS_ADMIN = {
     rotulo: "Nível de Profissão (jogador)",
     icone: "🎓",
     campos: [
-      { nome: "personagem_nome", tipo: "text" },
-      { nome: "profissao", tipo: "text" },
-      { nome: "nivel", tipo: "number" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "profissao", tipo: "select", opcoes: PROFISSOES },
+      { nome: "nivel", tipo: "number", min: 1, max: 10 },
       { nome: "xp", tipo: "number" },
       { nome: "ultima_acao", tipo: "text" },
     ],
@@ -668,10 +744,10 @@ export const TABELAS_ADMIN = {
     rotulo: "Reputação (universal)",
     icone: "🤝",
     campos: [
-      { nome: "personagem_nome", tipo: "text" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
       { nome: "alvo_nome", tipo: "text" },
-      { nome: "alvo_tipo", tipo: "text" },
-      { nome: "nivel", tipo: "number" },
+      { nome: "alvo_tipo", tipo: "select", opcoes: REPUTACAO_ALVO_TIPO },
+      { nome: "nivel", tipo: "number", min: -3, max: 3 },
       { nome: "motivo", tipo: "text" },
     ],
   },
@@ -681,14 +757,14 @@ export const TABELAS_ADMIN = {
     icone: "📖",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "andar", tipo: "number" },
+      { nome: "andar", tipo: "number", min: 1, max: 50 },
       { nome: "bioma", tipo: "text" },
-      { nome: "categoria", tipo: "text" },
+      { nome: "categoria", tipo: "select", opcoes: BESTIARIO_CATEGORIA },
       { nome: "nome", tipo: "text" },
       { nome: "emoji", tipo: "text" },
-      { nome: "materiais", tipo: "json" },
-      { nome: "cristais", tipo: "json" },
-      { nome: "cartas", tipo: "json" },
+      { nome: "materiais", tipo: "lista-texto" },
+      { nome: "cristais", tipo: "lista-texto" },
+      { nome: "cartas", tipo: "lista-texto" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
@@ -698,9 +774,9 @@ export const TABELAS_ADMIN = {
     icone: "⚔️",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "personagem_nome", tipo: "text" },
-      { nome: "monstro_nome", tipo: "text" },
-      { nome: "resultado", tipo: "text" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "monstro_nome", tipo: "sugestao", tabelaRef: "monstros", campoRef: "nome" },
+      { nome: "resultado", tipo: "sugestao", opcoes: ["sucesso_total", "sucesso_parcial", "falha"] },
       { nome: "vida_perdida", tipo: "number" },
       { nome: "xp_ganho", tipo: "number" },
       { nome: "col_ganho", tipo: "number" },
@@ -713,12 +789,12 @@ export const TABELAS_ADMIN = {
     icone: "🧰",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "cla_nome", tipo: "text" },
+      { nome: "cla_nome", tipo: "sugestao", tabelaRef: "clas", campoRef: "nome" },
       { nome: "nome", tipo: "text" },
-      { nome: "tipo", tipo: "text" },
-      { nome: "qtd", tipo: "number" },
+      { nome: "tipo", tipo: "select", opcoes: INVENTARIO_TIPO },
+      { nome: "qtd", tipo: "number", min: 1 },
       { nome: "liberado_para_membros", tipo: "bool" },
-      { nome: "depositado_por", tipo: "text" },
+      { nome: "depositado_por", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
       { nome: "excluido", tipo: "bool" },
     ],
   },
@@ -728,9 +804,9 @@ export const TABELAS_ADMIN = {
     icone: "👑",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "cla_nome", tipo: "text" },
-      { nome: "personagem_nome", tipo: "text" },
-      { nome: "cargo", tipo: "text" },
+      { nome: "cla_nome", tipo: "sugestao", tabelaRef: "clas", campoRef: "nome" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "cargo", tipo: "select", opcoes: CLA_CARGO },
     ],
   },
   metas_globais: {
@@ -742,13 +818,13 @@ export const TABELAS_ADMIN = {
       { nome: "titulo", tipo: "text" },
       { nome: "descricao", tipo: "textarea" },
       { nome: "meta_item", tipo: "text" },
-      { nome: "meta_qtd", tipo: "number" },
+      { nome: "meta_qtd", tipo: "number", min: 1 },
       { nome: "progresso", tipo: "number" },
       { nome: "recompensa_col", tipo: "number" },
       { nome: "recompensa_xp", tipo: "number" },
       { nome: "recompensa_item", tipo: "text" },
-      { nome: "recompensa_reputacao_alvo_nome", tipo: "text" },
-      { nome: "recompensa_reputacao_valor", tipo: "number" },
+      { nome: "recompensa_reputacao_alvo_nome", tipo: "sugestao", tabelaRef: "clas", campoRef: "nome" },
+      { nome: "recompensa_reputacao_valor", tipo: "number", min: -3, max: 3 },
       { nome: "finalizada", tipo: "bool" },
       { nome: "visivel", tipo: "bool" },
     ],
@@ -759,9 +835,9 @@ export const TABELAS_ADMIN = {
     icone: "📥",
     campos: [
       { nome: "id", tipo: "number", auto: true },
-      { nome: "meta_id", tipo: "number" },
-      { nome: "personagem_nome", tipo: "text" },
-      { nome: "qtd_doada", tipo: "number" },
+      { nome: "meta_id", tipo: "sugestao", tabelaRef: "metas_globais", campoRef: "titulo" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "qtd_doada", tipo: "number", min: 1 },
     ],
   },
 };

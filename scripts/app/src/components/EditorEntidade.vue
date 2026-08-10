@@ -31,6 +31,7 @@
               :class="{ excl: r.excluido }"
               @click="abrirEdicao(r)"
             >
+              <img v-if="campoImagem && r[campoImagem]" :src="r[campoImagem]" class="ee-thumb" @error="e => e.target.style.visibility='hidden'" />
               <div style="flex:1;min-width:0">
                 <div class="ee-row-titulo">
                   {{ tituloDe(r) }}
@@ -78,23 +79,113 @@
               v-for="c in camposFormulario"
               :key="c.nome"
               class="ee-campo"
-              :class="{ full: c.tipo === 'textarea' || c.tipo === 'json' }"
+              :class="{ full: ['textarea','json','lista','lista-texto','objeto','imagem'].includes(c.tipo) }"
             >
               <label>
-                {{ c.nome }}
+                {{ c.rotulo || c.nome }}
                 <span v-if="c.segredo" class="ee-lock" title="Só o mestre vê esse valor — jogadores nunca recebem esse campo.">🔒 só mestre</span>
               </label>
 
+              <!-- texto simples -->
               <input v-if="c.tipo === 'text'" v-model="itemAberto[c.nome]" class="ee-input" />
-              <input v-else-if="c.tipo === 'number'" type="number" v-model="itemAberto[c.nome]" class="ee-input" />
+              <input v-else-if="c.tipo === 'number'" type="number" v-model="itemAberto[c.nome]" class="ee-input" :min="c.min" :max="c.max" />
               <textarea v-else-if="c.tipo === 'textarea'" v-model="itemAberto[c.nome]" rows="3" class="ee-input"></textarea>
               <label v-else-if="c.tipo === 'bool'" class="ee-check">
                 <input type="checkbox" v-model="itemAberto[c.nome]" />
                 {{ itemAberto[c.nome] ? "Sim" : "Não" }}
               </label>
+
+              <!-- select travado: só aceita valor da lista, impossível digitar errado -->
+              <select v-else-if="c.tipo === 'select'" v-model="itemAberto[c.nome]" class="ee-input">
+                <option value="">— selecione —</option>
+                <option v-for="op in c.opcoes" :key="op" :value="op">{{ op }}</option>
+              </select>
+
+              <!-- sugestão (datalist): guia com valores comuns mas deixa digitar algo novo -->
+              <template v-else-if="c.tipo === 'sugestao'">
+                <input v-model="itemAberto[c.nome]" class="ee-input" :list="`dl-${tabela}-${c.nome}`" placeholder="digite ou escolha uma sugestão" />
+                <datalist :id="`dl-${tabela}-${c.nome}`">
+                  <option v-for="op in (c.opcoes || opcoesReferencia[c.nome] || [])" :key="op" :value="op" />
+                </datalist>
+              </template>
+
+              <!-- imagem: URL + preview ao vivo -->
+              <template v-else-if="c.tipo === 'imagem'">
+                <input v-model="itemAberto[c.nome]" class="ee-input" placeholder="URL da imagem (https://…)" />
+                <div v-if="itemAberto[c.nome]" class="ee-preview">
+                  <img :src="itemAberto[c.nome]" @load="e => e.target.classList.remove('erro')" @error="e => e.target.classList.add('erro')" />
+                  <small class="ee-hint">Se a imagem não aparecer acima, o link está quebrado ou não é uma URL de imagem direta.</small>
+                </div>
+              </template>
+
+              <!-- lista de texto simples: array de strings -->
+              <template v-else-if="c.tipo === 'lista-texto'">
+                <div class="ee-lista">
+                  <div v-for="(_, i) in (camposListaTexto[c.nome] || [])" :key="i" class="ee-lista-linha">
+                    <textarea v-model="camposListaTexto[c.nome][i]" rows="1" class="ee-input"></textarea>
+                    <button type="button" class="btn tiny bad ghost" @click="camposListaTexto[c.nome].splice(i, 1)">🗑️</button>
+                  </div>
+                  <button type="button" class="btn tiny" @click="(camposListaTexto[c.nome] ||= []).push('')">➕ Adicionar linha</button>
+                </div>
+              </template>
+
+              <!-- lista de objetos: array de {campo1, campo2, ...} com sub-schema fixo -->
+              <template v-else-if="c.tipo === 'lista'">
+                <div class="ee-lista">
+                  <div v-for="(item, i) in (camposLista[c.nome] || [])" :key="i" class="ee-lista-obj">
+                    <div class="ee-lista-obj-campos">
+                      <div v-for="ic in c.itemCampos" :key="ic.nome" class="ee-campo">
+                        <label>{{ ic.rotulo || ic.nome }}</label>
+                        <select v-if="ic.tipo === 'select'" v-model="item[ic.nome]" class="ee-input">
+                          <option value="">—</option>
+                          <option v-for="op in ic.opcoes" :key="op" :value="op">{{ op }}</option>
+                        </select>
+                        <template v-else-if="ic.tipo === 'sugestao'">
+                          <input v-model="item[ic.nome]" class="ee-input" :list="`dl-${tabela}-${c.nome}-${ic.nome}`" />
+                          <datalist :id="`dl-${tabela}-${c.nome}-${ic.nome}`">
+                            <option v-for="op in (ic.opcoes || opcoesReferencia[c.nome + '.' + ic.nome] || [])" :key="op" :value="op" />
+                          </datalist>
+                        </template>
+                        <input v-else-if="ic.tipo === 'number'" type="number" v-model="item[ic.nome]" class="ee-input" />
+                        <input v-else v-model="item[ic.nome]" class="ee-input" />
+                      </div>
+                    </div>
+                    <button type="button" class="btn tiny bad ghost" @click="camposLista[c.nome].splice(i, 1)">🗑️ Remover linha</button>
+                  </div>
+                  <button type="button" class="btn tiny" @click="adicionarLinhaLista(c)">➕ Adicionar {{ c.itemNome || 'item' }}</button>
+                </div>
+              </template>
+
+              <!-- objeto de forma fixa: {campo1, campo2, ...} -->
+              <template v-else-if="c.tipo === 'objeto'">
+                <div class="ee-lista ee-objeto">
+                  <div v-for="ic in c.campos" :key="ic.nome" class="ee-campo">
+                    <label>{{ ic.rotulo || ic.nome }}</label>
+                    <select v-if="ic.tipo === 'select'" v-model="(camposObjeto[c.nome] ||= {})[ic.nome]" class="ee-input">
+                      <option value="">—</option>
+                      <option v-for="op in ic.opcoes" :key="op" :value="op">{{ op }}</option>
+                    </select>
+                    <textarea v-else-if="ic.tipo === 'textarea'" v-model="(camposObjeto[c.nome] ||= {})[ic.nome]" rows="2" class="ee-input"></textarea>
+                    <input v-else v-model="(camposObjeto[c.nome] ||= {})[ic.nome]" class="ee-input" />
+                  </div>
+                </div>
+              </template>
+
+              <!-- fallback: JSON cru, com botão de formatar e indicador de validade -->
               <template v-else-if="c.tipo === 'json'">
-                <textarea v-model="camposJsonTexto[c.nome]" rows="4" class="ee-input ee-mono" placeholder="null, [], {} ou JSON válido"></textarea>
-                <small class="ee-hint">Formato JSON cru — listas viram <code>["a","b"]</code>, objetos viram <code>{{ '{' }}"chave":"valor"{{ '}' }}</code>.</small>
+                <textarea
+                  v-model="camposJsonTexto[c.nome]"
+                  rows="4"
+                  class="ee-input ee-mono"
+                  :class="{ 'ee-invalido': jsonValido(c.nome) === false }"
+                  placeholder="null, [], {} ou JSON válido"
+                ></textarea>
+                <div class="ee-json-barra">
+                  <small class="ee-hint" v-if="jsonValido(c.nome) === false">⚠️ JSON inválido — não vai salvar assim.</small>
+                  <small class="ee-hint" v-else-if="jsonValido(c.nome) === true">✓ JSON válido</small>
+                  <small class="ee-hint" v-else>Formato JSON cru — sem sub-formulário pronto pra esse campo ainda.</small>
+                  <button type="button" class="btn tiny" @click="formatarJson(c.nome)">🧹 Formatar</button>
+                </div>
               </template>
             </div>
           </div>
@@ -144,6 +235,10 @@ const mostrarExcluidos = ref(false);
 const itemAberto = ref(null);
 const modoNovo = ref(false);
 const camposJsonTexto = reactive({});
+const camposListaTexto = reactive({});
+const camposLista = reactive({});
+const camposObjeto = reactive({});
+const opcoesReferencia = reactive({});
 const salvando = ref(false);
 const erroSalvar = ref("");
 
@@ -155,6 +250,7 @@ const campoTitulo = computed(() => {
   const achado = pref.find((n) => temCampo(n));
   return achado || config?.pk;
 });
+const campoImagem = computed(() => config?.campos.find((c) => c.tipo === "imagem")?.nome || null);
 const camposFormulario = computed(
   () => config?.campos.filter((c) => c.nome !== config.pk && !c.auto) || []
 );
@@ -205,6 +301,30 @@ const linhasFiltradas = computed(() => {
   return l;
 });
 
+// ===== campos de referência (datalist alimentado por outra tabela) =====
+async function carregarOpcoesReferencia() {
+  const alvos = [];
+  for (const c of camposFormulario.value) {
+    if (c.tipo === "sugestao" && c.tabelaRef && !opcoesReferencia[c.nome]) alvos.push(c);
+    if (c.tipo === "lista") {
+      for (const ic of c.itemCampos || []) {
+        if (ic.tipo === "sugestao" && ic.tabelaRef && !opcoesReferencia[c.nome + "." + ic.nome]) {
+          alvos.push({ chave: c.nome + "." + ic.nome, tabelaRef: ic.tabelaRef, campoRef: ic.campoRef });
+        }
+      }
+    }
+  }
+  for (const a of alvos) {
+    try {
+      const r = await supa.from(a.tabelaRef).select(a.campoRef || "nome").limit(500);
+      const valores = [...new Set((r.data || []).map((row) => row[a.campoRef || "nome"]).filter(Boolean))].sort();
+      opcoesReferencia[a.chave || a.nome] = valores;
+    } catch (e) {
+      console.warn("referência", a, e);
+    }
+  }
+}
+
 function valorPadrao(c) {
   if (c.tipo === "bool") return c.nome === "visivel";
   return "";
@@ -216,26 +336,62 @@ function abrirNovo() {
   itemAberto.value = obj;
   modoNovo.value = true;
   erroSalvar.value = "";
-  camposFormulario.value
-    .filter((c) => c.tipo === "json")
-    .forEach((c) => (camposJsonTexto[c.nome] = ""));
+  inicializarCamposEstruturados({});
+  carregarOpcoesReferencia();
 }
 function abrirEdicao(r) {
   itemAberto.value = JSON.parse(JSON.stringify(r));
   modoNovo.value = false;
   erroSalvar.value = "";
-  camposFormulario.value
-    .filter((c) => c.tipo === "json")
-    .forEach((c) => {
+  inicializarCamposEstruturados(r);
+  carregarOpcoesReferencia();
+}
+function inicializarCamposEstruturados(r) {
+  for (const c of camposFormulario.value) {
+    if (c.tipo === "json") {
       const v = r[c.nome];
       camposJsonTexto[c.nome] = v === null || v === undefined ? "" : JSON.stringify(v, null, 2);
-    });
+    } else if (c.tipo === "lista-texto") {
+      const v = r[c.nome];
+      camposListaTexto[c.nome] = Array.isArray(v) ? [...v] : [];
+    } else if (c.tipo === "lista") {
+      const v = r[c.nome];
+      camposLista[c.nome] = Array.isArray(v) ? v.map((o) => ({ ...o })) : [];
+    } else if (c.tipo === "objeto") {
+      const v = r[c.nome];
+      camposObjeto[c.nome] = v && typeof v === "object" ? { ...v } : {};
+    }
+  }
 }
+function adicionarLinhaLista(c) {
+  const nova = {};
+  for (const ic of c.itemCampos) nova[ic.nome] = ic.tipo === "number" ? null : "";
+  (camposLista[c.nome] ||= []).push(nova);
+}
+function jsonValido(nome) {
+  const txt = (camposJsonTexto[nome] || "").trim();
+  if (!txt) return null;
+  try {
+    JSON.parse(txt);
+    return true;
+  } catch {
+    return false;
+  }
+}
+function formatarJson(nome) {
+  try {
+    const obj = JSON.parse((camposJsonTexto[nome] || "").trim() || "null");
+    camposJsonTexto[nome] = JSON.stringify(obj, null, 2);
+  } catch {
+    /* deixa como está, o indicador de inválido já avisa */
+  }
+}
+
 function gerarIdDoNome() {
   const base = String(itemAberto.value[campoTitulo.value] || "");
   const slug = base
     .normalize("NFD")
-    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[̀-ͯ]/g, "")
     .toLowerCase()
     .trim()
     .replace(/[^a-z0-9]+/g, "_")
@@ -259,6 +415,19 @@ async function salvar() {
         erroSalvar.value = `Campo "${c.nome}": JSON inválido — ${e.message}`;
         return;
       }
+    } else if (c.tipo === "lista-texto") {
+      payload[c.nome] = (camposListaTexto[c.nome] || []).map((s) => String(s).trim()).filter(Boolean);
+    } else if (c.tipo === "lista") {
+      payload[c.nome] = (camposLista[c.nome] || []).map((item) => {
+        const o = {};
+        for (const ic of c.itemCampos) {
+          const v = item[ic.nome];
+          o[ic.nome] = ic.tipo === "number" ? (v === "" || v == null ? null : Number(v)) : v;
+        }
+        return o;
+      });
+    } else if (c.tipo === "objeto") {
+      payload[c.nome] = camposObjeto[c.nome] && Object.keys(camposObjeto[c.nome]).length ? camposObjeto[c.nome] : {};
     } else if (c.tipo === "number") {
       const v = itemAberto.value[c.nome];
       payload[c.nome] = v === "" || v === null || v === undefined ? null : Number(v);
@@ -361,6 +530,12 @@ onMounted(carregar);
 .ee-input:focus {
   border-color: #7a5ab8;
 }
+.ee-input.ee-invalido {
+  border-color: #d9534f;
+}
+select.ee-input {
+  cursor: pointer;
+}
 .ee-mono {
   font-family: var(--f-mono);
   font-size: 12.5px;
@@ -397,6 +572,14 @@ onMounted(carregar);
 }
 .ee-row.excl {
   opacity: 0.55;
+}
+.ee-thumb {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 1px solid #332a4d;
+  flex-shrink: 0;
 }
 .ee-row-titulo {
   color: #e6e2ff;
@@ -459,6 +642,60 @@ onMounted(carregar);
 .ee-hint {
   color: #6d6199;
   font-size: 11px;
+}
+.ee-preview {
+  margin-top: 4px;
+}
+.ee-preview img {
+  max-width: 160px;
+  max-height: 160px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid #332a4d;
+  display: block;
+}
+.ee-preview img.erro {
+  display: none;
+}
+.ee-json-barra {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  margin-top: 2px;
+}
+.ee-lista {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ee-lista-linha {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+.ee-lista-linha .ee-input {
+  flex: 1;
+}
+.ee-lista-obj {
+  border: 1px solid #251f39;
+  border-radius: 8px;
+  padding: 10px;
+  background: #0f0b19;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ee-lista-obj-campos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 8px;
+}
+.ee-objeto {
+  border: 1px solid #251f39;
+  border-radius: 8px;
+  padding: 10px;
+  background: #0f0b19;
 }
 .ee-footer {
   display: flex;
