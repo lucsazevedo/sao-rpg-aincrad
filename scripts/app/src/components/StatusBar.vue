@@ -5,8 +5,8 @@
       <b>{{ pers.nome }}</b>
     </div>
 
-    <div class="hv-medidor">
-      <div class="hv-rotulo"><span>❤️ VIDA</span><span>{{ vidaAtual }}/{{ vidaMax }}</span></div>
+    <div class="hv-medidor" :class="{ 'hv-critico': pctVida <= 20 }">
+      <div class="hv-rotulo"><span>❤️ VIDA<span v-if="pctVida<=20" class="hv-alerta"> · CRÍTICO</span></span><span>{{ vidaAtual }}/{{ vidaMax }}</span></div>
       <div class="hv-barra"><div class="hv-fill" :class="pctVida > 40 ? 'hv-vida-alta' : 'hv-vida-baixa'" :style="{ width: pctVida + '%' }"></div></div>
     </div>
 
@@ -97,5 +97,11 @@ function nomeArma(id) {
 .hv-stat small{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink-faint)}
 .hv-stat span{font-size:13.5px;color:var(--ink);font-weight:600}
 .hv-stat em{display:block;font-style:normal;font-size:10px;color:var(--ink-faint);font-weight:400}
+/* HP crítico — o alerta visual clássico de vida baixa do HUD do jogo:
+   pulso vermelho na barra + rótulo piscando */
+.hv-alerta{color:#ff5b3d;animation:hvPiscar 1s ease-in-out infinite}
+.hv-critico .hv-barra{animation:hvPulso 1.1s ease-in-out infinite}
+@keyframes hvPiscar{0%,100%{opacity:1}50%{opacity:.35}}
+@keyframes hvPulso{0%,100%{box-shadow:0 0 0 0 rgba(255,91,61,.5)}50%{box-shadow:0 0 0 4px rgba(255,91,61,0)}}
 @media (max-width:640px){.hud-vitals{gap:10px 16px;padding:10px 12px}.hv-medidor{max-width:none;flex-basis:100%}}
 </style>

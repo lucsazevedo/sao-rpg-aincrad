@@ -257,6 +257,11 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
 }
 .hero h1{margin:0;font-size:30px;color:var(--ink);font-family:var(--f-titulo)}
 .hero p{margin:8px 0 0;color:var(--ink-dim);font-size:15px}
+/* silhueta de Aincrad — decorativa, atrás do texto, some em telas estreitas
+   pra não brigar com o conteúdo */
+.hero-aincrad{position:absolute;right:-10px;top:50%;transform:translateY(-50%);width:220px;height:auto;opacity:.16;pointer-events:none;z-index:0}
+.hero>div{position:relative;z-index:1}
+@media (max-width:900px){.hero-aincrad{display:none}}
 
 /* Responsivo */
 @media (max-width: 720px){

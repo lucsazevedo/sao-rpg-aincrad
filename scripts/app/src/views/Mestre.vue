@@ -18,7 +18,9 @@
           </div>
         </div>
         <nav class="admin-nav">
-          <div v-for="s in secoes" :key="s.k" class="admin-nav-item" :class="{on: aba===s.k, d: s.divider}" @click="aba=s.k">
+          <div v-for="s in secoes" :key="s.k" class="admin-nav-item" :class="{on: aba===s.k, d: s.divider}"
+            role="button" tabindex="0" :aria-current="aba===s.k ? 'page' : undefined"
+            @click="aba=s.k" @keydown.enter="aba=s.k" @keydown.space.prevent="aba=s.k">
             <span class="ico">{{ s.ico }}</span>
             <span class="lbl">{{ s.lbl }}</span>
             <span v-if="s.badge" class="badge">{{ s.badge }}</span>
@@ -26,10 +28,10 @@
         </nav>
         <div class="admin-foot">
           <div class="pill on" style="justify-content:center;width:100%;display:flex">
-            <img v-if="auth.foto" :src="auth.foto" alt="" style="width:18px;height:18px;border-radius:50%;border:1px solid #7a5ab8;margin-right:6px;object-fit:cover">
+            <img v-if="auth.foto" :src="auth.foto" alt="" style="width:18px;height:18px;border-radius:50%;border:1px solid var(--laranja);margin-right:6px;object-fit:cover">
             👑 Mestre logado
           </div>
-          <div style="margin-top:8px;font-size:12px;color:#b8a8db;text-align:center">
+          <div style="margin-top:8px;font-size:12px;color:var(--ink-dim);text-align:center">
             {{ auth.nomeMostrar || auth.perfil?.nome || 'Mestre' }}
           </div>
           <div style="margin-top:10px">
@@ -87,12 +89,15 @@
           </div>
           <!-- 2 colunas: jogadores recentes + últimas atividades -->
           <div class="admin-twocol">
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 12px;color:#c9b8ff">🎲 Últimos personagens criados</h4>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 12px;color:var(--azul-bright)">🎲 Últimos personagens criados</h4>
               <div v-if="carregandoPers" class="msg info">Carregando…</div>
               <div v-else-if="!jogadores.length" class="msg warn">Nenhum personagem criado ainda.</div>
               <div v-else class="admin-list">
-                <div v-for="p in jogadores.slice(0,6)" :key="p.nome" class="admin-row" @click="aba='jogadores'; selecionarPersonagem(p)">
+                <div v-for="p in jogadores.slice(0,6)" :key="p.nome" class="admin-row" role="button" tabindex="0"
+                  @click="aba='jogadores'; selecionarPersonagem(p)"
+                  @keydown.enter="aba='jogadores'; selecionarPersonagem(p)"
+                  @keydown.space.prevent="aba='jogadores'; selecionarPersonagem(p)">
                   <img v-if="p.foto_url" :src="p.foto_url" :alt="p.nome" class="row-avatar">
                   <div v-else class="row-avatar def">👤</div>
                   <div style="flex:1">
@@ -105,8 +110,8 @@
                 </div>
               </div>
             </div>
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 12px;color:#c9b8ff">⚔️ Ações rápidas</h4>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 12px;color:var(--azul-bright)">⚔️ Ações rápidas</h4>
               <div class="admin-quick">
                 <router-link to="/tarefas" class="btn" style="justify-content:space-between;display:flex">🎯 Missões do dia <span>→</span></router-link>
                 <router-link to="/profissoes" class="btn" style="justify-content:space-between;display:flex">🛠️ Oficina de Craft <span>→</span></router-link>
@@ -114,14 +119,14 @@
                 <button class="btn" @click="aba='jogadores'" style="justify-content:space-between;display:flex">👥 Gerenciar jogadores <span>→</span></button>
                 <button class="btn" @click="aba='criar'" style="justify-content:space-between;display:flex">➕ Criar personagem <span>→</span></button>
               </div>
-              <h4 style="margin:18px 0 10px;color:#c9b8ff">📊 Distribuição por profissão</h4>
+              <h4 style="margin:18px 0 10px;color:var(--azul-bright)">📊 Distribuição por profissão</h4>
               <div v-if="!jogadores.length" class="msg warn">Sem dados ainda.</div>
               <div v-else class="admin-list">
                 <div v-for="g in distProfissoes" :key="g.nome" class="admin-row">
                   <div class="row-nome">🛠️ {{ g.nome }}</div>
                   <div style="flex:1;margin:0 12px">
                     <div style="height:10px;background:#201b2e;border-radius:5px;overflow:hidden">
-                      <div :style="{width: Math.min(100, (g.qtd/Math.max(1,jogadores.length))*100)+'%', height:'100%', background:'linear-gradient(90deg,#7a5ab8,#b8a8db)'}"></div>
+                      <div :style="{width: Math.min(100, (g.qtd/Math.max(1,jogadores.length))*100)+'%', height:'100%', background:'linear-gradient(90deg,var(--laranja),var(--ink-dim))'}"></div>
                     </div>
                   </div>
                   <div class="row-val">{{ g.qtd }} jogadores</div>
@@ -138,9 +143,9 @@
           </div>
 
           <div class="admin-twocol">
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 4px;color:#c9b8ff">🕰️ Relógios narrativos</h4>
-              <p style="color:#6d6199;font-size:12px;margin:0 0 12px">Progresso 0-6 de ameaças e tramas de fundo. Suba quando a ficção empurrar.</p>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 4px;color:var(--azul-bright)">🕰️ Relógios narrativos</h4>
+              <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">Progresso 0-6 de ameaças e tramas de fundo. Suba quando a ficção empurrar.</p>
               <div v-if="carregandoMesa" class="msg info">Carregando…</div>
               <div v-else style="display:grid;gap:12px">
                 <div v-for="r in relogios" :key="r.id">
@@ -151,9 +156,9 @@
               </div>
             </div>
 
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 4px;color:#c9b8ff">🛡️ Preparação de Raid <span class="pill" style="margin-left:6px">{{ raidPrepTotal }}/6</span></h4>
-              <p style="color:#6d6199;font-size:12px;margin:0 0 12px">Um crédito por contribuição diferente. Em 6, o raid começa com vantagem coletiva; em 3 ou menos, o mestre escolhe uma pressão inicial.</p>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 4px;color:var(--azul-bright)">🛡️ Preparação de Raid <span class="pill" style="margin-left:6px">{{ raidPrepTotal }}/6</span></h4>
+              <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">Um crédito por contribuição diferente. Em 6, o raid começa com vantagem coletiva; em 3 ou menos, o mestre escolhe uma pressão inicial.</p>
               <div class="admin-list">
                 <label v-for="c in raidPrep" :key="c.categoria" class="admin-row" style="cursor:pointer">
                   <input type="checkbox" v-model="c.marcado" @change="salvarRaidPrep(c)">
@@ -166,12 +171,12 @@
             </div>
           </div>
 
-          <div class="card" style="background:#14121d">
-            <h4 style="margin:0 0 12px;color:#c9b8ff">🤝 Favor e Suspeita</h4>
+          <div class="card" style="background:var(--panel-2)">
+            <h4 style="margin:0 0 12px;color:var(--azul-bright)">🤝 Favor e Suspeita</h4>
             <div class="admin-toolbar">
               <input v-model="novaRelacaoNome" placeholder="Nome da relação — pessoa, facção, clã…"
-                style="flex:1;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:9px 12px;border-radius:6px;font:inherit">
-              <div style="display:flex;align-items:center;gap:8px;background:#1a1526;border:1px solid #332a4d;border-radius:6px;padding:0 10px">
+                style="flex:1;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
+              <div style="display:flex;align-items:center;gap:8px;background:var(--panel-3);border:1px solid var(--line);border-radius:6px;padding:0 10px">
                 <input type="range" min="-3" max="3" step="1" v-model.number="novaRelacaoValor" style="width:140px">
                 <span class="pill" style="white-space:nowrap">{{ novaRelacaoValor }} · {{ statusRelacao(novaRelacaoValor) }}</span>
               </div>
@@ -190,9 +195,9 @@
           </div>
 
           <div class="admin-twocol">
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 4px;color:#c9b8ff">🩹 Condições dos jogadores</h4>
-              <p style="color:#6d6199;font-size:12px;margin:0 0 12px">Substituem pontos de vida. 3 ativas = Crítico (rolagem À Beira no próximo perigo grave).</p>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 4px;color:var(--azul-bright)">🩹 Condições dos jogadores</h4>
+              <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">Substituem pontos de vida. 3 ativas = Crítico (rolagem À Beira no próximo perigo grave).</p>
               <div v-if="!jogadores.filter(j=>!j.excluido).length" class="msg warn">Nenhum jogador cadastrado ainda.</div>
               <div v-else style="display:grid;gap:12px">
                 <div v-for="p in jogadores.filter(j=>!j.excluido)" :key="p.nome">
@@ -207,11 +212,11 @@
               </div>
             </div>
 
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 4px;color:#c9b8ff">⚔️ Rastreador de combate</h4>
-              <p style="color:#6d6199;font-size:12px;margin:0 0 12px">Sem HP nem iniciativa neste sistema (quem age é o jogador, o monstro reage) — isto é só uma contagem de golpes pra não decorar.</p>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 4px;color:var(--azul-bright)">⚔️ Rastreador de combate</h4>
+              <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">Sem HP nem iniciativa neste sistema (quem age é o jogador, o monstro reage) — isto é só uma contagem de golpes pra não decorar.</p>
               <div class="admin-toolbar">
-                <select v-model="monstroEscolhido" style="flex:1;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:9px 12px;border-radius:6px;font:inherit">
+                <select v-model="monstroEscolhido" style="flex:1;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
                   <option value="">-- Escolher monstro --</option>
                   <option v-for="m in monstrosRef" :key="m.id" :value="m.id">{{ m.nome }} · {{ m.ameaca || '?' }}</option>
                 </select>
@@ -233,8 +238,8 @@
             </div>
           </div>
 
-          <div class="card" style="background:#14121d">
-            <h4 style="margin:0 0 12px;color:#c9b8ff">📓 Registro de sessão</h4>
+          <div class="card" style="background:var(--panel-2)">
+            <h4 style="margin:0 0 12px;color:var(--azul-bright)">📓 Registro de sessão</h4>
             <div class="form">
               <div class="campo"><label>Sessão / episódio</label><input v-model="novaSessao.titulo"></div>
               <div class="campo"><label>Trio em cena</label><input v-model="novaSessao.trio"></div>
@@ -254,8 +259,8 @@
           </div>
 
           <div class="admin-twocol">
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 12px;color:#c9b8ff">🔒 Segredos e puzzles no mapa</h4>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 12px;color:var(--azul-bright)">🔒 Segredos e puzzles no mapa</h4>
               <div v-if="!segredosPontos.length" class="msg warn">Nenhum ponto de segredo/puzzle carregado.</div>
               <div v-else class="admin-list">
                 <div v-for="p in segredosPontos" :key="p.id" class="admin-row" style="flex-direction:column;align-items:flex-start">
@@ -265,8 +270,8 @@
                 </div>
               </div>
             </div>
-            <div class="card" style="background:#14121d">
-              <h4 style="margin:0 0 12px;color:#c9b8ff">💎 Raros do andar — não estão à venda</h4>
+            <div class="card" style="background:var(--panel-2)">
+              <h4 style="margin:0 0 12px;color:var(--azul-bright)">💎 Raros do andar — não estão à venda</h4>
               <div v-if="!rarosDoAndar.length" class="msg warn">Nenhum raro carregado.</div>
               <div v-else class="admin-list">
                 <div v-for="x in rarosDoAndar" :key="x.id" class="admin-row" style="flex-direction:column;align-items:flex-start">
@@ -278,9 +283,9 @@
             </div>
           </div>
 
-          <div class="card" style="background:#14121d">
-            <h4 style="margin:0 0 4px;color:#c9b8ff">🎯 Metas Globais (cooperação, item 18)</h4>
-            <p style="color:#6d6199;font-size:12px;margin:0 0 12px">Até 3 abertas ao mesmo tempo. Todo jogador que doar qualquer quantidade recebe a recompensa quando a meta bater 100%.</p>
+          <div class="card" style="background:var(--panel-2)">
+            <h4 style="margin:0 0 4px;color:var(--azul-bright)">🎯 Metas Globais (cooperação, item 18)</h4>
+            <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">Até 3 abertas ao mesmo tempo. Todo jogador que doar qualquer quantidade recebe a recompensa quando a meta bater 100%.</p>
             <div class="form" style="padding:0;border:none;background:transparent;grid-template-columns:repeat(3,1fr)">
               <div class="campo" style="grid-column:span 2"><label>Título</label><input v-model="novaMeta.titulo"></div>
               <div class="campo"><label>Item pedido (nome exato)</label><input v-model="novaMeta.meta_item"></div>
@@ -301,9 +306,9 @@
             </div>
           </div>
 
-          <div class="card" style="background:#14121d">
-            <h4 style="margin:0 0 4px;color:#c9b8ff">🔨 Painel de Profissões (item 16, visão do mestre)</h4>
-            <p style="color:#6d6199;font-size:12px;margin:0 0 12px">
+          <div class="card" style="background:var(--panel-2)">
+            <h4 style="margin:0 0 4px;color:var(--azul-bright)">🔨 Painel de Profissões (item 16, visão do mestre)</h4>
+            <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">
               As 16 profissões lado a lado — não é a tela do jogador (ele só vê a própria); isto é só pra você
               ver de longe onde a mesa está investindo.
             </p>
@@ -320,8 +325,8 @@
         <div v-if="aba==='jogadores'" class="admin-content">
           <div class="admin-toolbar">
             <input v-model="buscaJog" placeholder="🔎 Buscar personagem, Discord, profissão…"
-              style="flex:1;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:9px 12px;border-radius:6px;font:inherit">
-            <select v-model="filtroProf" style="background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:9px 12px;border-radius:6px;font:inherit">
+              style="flex:1;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
+            <select v-model="filtroProf" style="background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
               <option value="">Todas as profissões</option>
               <option v-for="g in distProfissoes" :key="g.nome" :value="g.nome">{{ g.nome }} ({{ g.qtd }})</option>
             </select>
@@ -329,7 +334,7 @@
           </div>
           <div v-if="carregandoPers" class="msg info">Carregando lista de jogadores…</div>
           <div v-else-if="!jogadoresFiltrados.length" class="msg warn">Nenhum personagem com esses filtros.</div>
-          <div v-else class="card" style="background:#14121d;padding:0;overflow:hidden">
+          <div v-else class="card" style="background:var(--panel-2);padding:0;overflow:hidden">
             <table class="admin-table">
               <thead>
                 <tr>
@@ -343,7 +348,8 @@
                 </tr>
               </thead>
               <tbody>
-                <tr v-for="p in jogadoresFiltrados" :key="p.nome" @click="selecionarPersonagem(p)">
+                <tr v-for="p in jogadoresFiltrados" :key="p.nome" tabindex="0"
+                  @click="selecionarPersonagem(p)" @keydown.enter="selecionarPersonagem(p)">
                   <td>
                     <div style="display:flex;align-items:center;gap:10px">
                       <img v-if="p.foto_url" :src="p.foto_url" :alt="p.nome" class="row-avatar">
@@ -357,7 +363,7 @@
                   <td style="text-align:center">{{ p.profissao || '—' }}</td>
                   <td style="text-align:center">{{ p.discord_nome || '—' }}</td>
                   <td style="text-align:center">{{ p.guilda || 'Independente' }}</td>
-                  <td style="text-align:right;font-weight:700;color:#d9ad5e">{{ ((p.col_mao||0)+(p.col_guardado||0)).toLocaleString('pt-BR') }}</td>
+                  <td style="text-align:right;font-weight:700;color:var(--laranja)">{{ ((p.col_mao||0)+(p.col_guardado||0)).toLocaleString('pt-BR') }}</td>
                   <td style="text-align:center">{{ p.folego ?? 0 }}/20</td>
                   <td style="text-align:center;white-space:nowrap">
                     <button class="btn tiny" @click.stop="editarPersonagem(p)">✏️ Editar</button>
@@ -377,9 +383,9 @@
               <div class="body">
                 <div style="display:grid;grid-template-columns:180px 1fr;gap:14px">
                   <img v-if="fichaAberta.foto_url" :src="fichaAberta.foto_url" :alt="'Retrato de ' + fichaAberta.nome"
-                    style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:2px solid #7a5ab8">
-                  <div v-else style="width:100%;aspect-ratio:1/1;border-radius:10px;border:2px dashed #332a4d;display:grid;place-items:center;color:#6d6199;font-size:70px">👤</div>
-                  <div class="card" style="background:#0f0b19;border:none;padding:0">
+                    style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:2px solid var(--laranja)">
+                  <div v-else style="width:100%;aspect-ratio:1/1;border-radius:10px;border:2px dashed var(--line);display:grid;place-items:center;color:var(--ink-faint);font-size:70px">👤</div>
+                  <div class="card" style="background:var(--panel);border:none;padding:0">
                     <div class="form" style="padding:0;border:none;background:transparent">
                       <div class="campo">
                         <label>Nome</label>
@@ -400,8 +406,8 @@
                     </div>
                   </div>
                 </div>
-                <div class="card" style="margin-top:14px;background:#0f0b19;border:none">
-                  <h4 style="margin:0 0 10px;color:#c9b8ff">📊 Atributos</h4>
+                <div class="card" style="margin-top:14px;background:var(--panel);border:none">
+                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">📊 Atributos</h4>
                   <div class="atributos">
                     <div v-for="a in atributosAbertos" :key="a.k" class="atrib" :class="{pos:a.v>0, neg:a.v<0}">
                       <label>{{ a.nome }}</label>
@@ -410,9 +416,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="card" style="margin-top:14px;background:#0f0b19;border:none">
-                  <h4 style="margin:0 0 10px;color:#c9b8ff">💰 Dinheiro · 💨 Fôlego</h4>
-                  <p style="color:#6d6199;font-size:12px;margin:-6px 0 10px">
+                <div class="card" style="margin-top:14px;background:var(--panel);border:none">
+                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">💰 Dinheiro · 💨 Fôlego</h4>
+                  <p style="color:var(--ink-faint);font-size:12px;margin:-6px 0 10px">
                     Não existe nível de personagem separado no sistema — ver <code>dolist/05_niveis_e_xp.md</code>
                     (decisão em aberto). Quem trava dificuldade/desbloqueio hoje é o Nível de Profissão.
                   </p>
@@ -443,9 +449,9 @@
                     </div>
                   </div>
                 </div>
-                <div class="card" style="margin-top:14px;background:#0f0b19;border:none">
-                  <h4 style="margin:0 0 10px;color:#c9b8ff">🩹 Condições ativas</h4>
-                  <p style="color:#6d6199;font-size:12px;margin:-6px 0 10px">
+                <div class="card" style="margin-top:14px;background:var(--panel);border:none">
+                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">🩹 Condições ativas</h4>
+                  <p style="color:var(--ink-faint);font-size:12px;margin:-6px 0 10px">
                     Condições substituem pontos de vida (ver <code>docs/regras_nucleares_campanha.md</code>). Com 3 ativas o personagem está em Crítico — próximo perigo grave pede a rolagem À Beira.
                   </p>
                   <div style="display:flex;gap:8px;flex-wrap:wrap">
@@ -456,16 +462,16 @@
                   </div>
                   <div v-if="(fichaAberta.condicoes||[]).length>=3" class="msg erro" style="margin-top:10px">⚠️ Crítico — o próximo perigo grave pede a rolagem À Beira (2d6+Espírito).</div>
                 </div>
-                <div class="card" style="margin-top:14px;background:#0f0b19;border:none">
-                  <h4 style="margin:0 0 10px;color:#c9b8ff">🤝 Reputação</h4>
-                  <p style="color:#6d6199;font-size:12px;margin:-6px 0 10px">
+                <div class="card" style="margin-top:14px;background:var(--panel);border:none">
+                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">🤝 Reputação</h4>
+                  <p style="color:var(--ink-faint);font-size:12px;margin:-6px 0 10px">
                     Universo inteiro — cidade, vila, NPC, clã, facção. Jogador não edita a própria (só o mestre e a
                     recompensa automática de missão mudam isto).
                   </p>
                   <div class="admin-toolbar">
                     <input v-model="novaRepAlvo" placeholder="Nome — ex: Tolbana, Erik o Fazendeiro, Sindicato dos Ossos…"
-                      style="flex:1;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:8px 10px;border-radius:6px;font:inherit">
-                    <select v-model="novaRepTipo" style="background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:8px 10px;border-radius:6px;font:inherit">
+                      style="flex:1;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:6px;font:inherit">
+                    <select v-model="novaRepTipo" style="background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:6px;font:inherit">
                       <option value="outro">Outro</option>
                       <option value="cidade">Cidade</option>
                       <option value="vila">Vila</option>
@@ -473,7 +479,7 @@
                       <option value="cla">Clã</option>
                       <option value="faccao">Facção</option>
                     </select>
-                    <input type="number" min="-3" max="3" v-model.number="novaRepDelta" style="width:70px;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:8px 10px;border-radius:6px;font:inherit">
+                    <input type="number" min="-3" max="3" v-model.number="novaRepDelta" style="width:70px;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:6px;font:inherit">
                     <button class="btn primario" :disabled="!novaRepAlvo.trim()" @click="salvarReputacaoFicha()">Aplicar</button>
                   </div>
                   <div v-if="!reputacoesFicha.length" class="msg warn" style="margin-top:10px">Nenhuma reputação registrada.</div>
@@ -481,14 +487,14 @@
                     <span v-for="r in reputacoesFicha" :key="r.alvo_nome" class="pill" :class="{on:r.nivel>0}">{{ r.alvo_nome }} ({{ r.alvo_tipo }}) · {{ r.nivel }}</span>
                   </div>
                 </div>
-                <div class="card" style="margin-top:14px;background:#0f0b19;border:none">
-                  <h4 style="margin:0 0 10px;color:#c9b8ff">⚡ Limit Breaker</h4>
-                  <p style="color:#6d6199;font-size:12px;margin:-6px 0 10px">
+                <div class="card" style="margin-top:14px;background:var(--panel);border:none">
+                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">⚡ Limit Breaker</h4>
+                  <p style="color:var(--ink-faint);font-size:12px;margin:-6px 0 10px">
                     Contador por arma equipada (trocar de arma não zera a anterior). Em 10, o golpe especial da arma
                     destrava; usar zera de novo. Ferramenta de mesa — o site não rola isso sozinho.
                   </p>
                   <div class="admin-toolbar">
-                    <select v-model="novaLbArma" style="flex:1;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:8px 10px;border-radius:6px;font:inherit">
+                    <select v-model="novaLbArma" style="flex:1;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:6px;font:inherit">
                       <option value="">-- Escolher tipo de arma --</option>
                       <option v-for="a in tiposArma" :key="a" :value="a">{{ a }}</option>
                     </select>
@@ -530,7 +536,7 @@
               <div class="body">
                 <div class="msg ok" style="margin:0 0 12px">Envie essa senha para <b>{{ senhaResetada.nome }}</b> no Discord.</div>
                 <div style="display:flex;gap:8px;align-items:center">
-                  <code style="flex:1;background:#1a1526;padding:10px 12px;border-radius:6px;border:1px solid #7a5ab8;color:#c9b8ff;font-size:16px;letter-spacing:.05em;word-break:break-all">{{ senhaResetada.senha }}</code>
+                  <code style="flex:1;background:var(--panel-3);padding:10px 12px;border-radius:6px;border:1px solid var(--laranja);color:var(--azul-bright);font-size:16px;letter-spacing:.05em;word-break:break-all">{{ senhaResetada.senha }}</code>
                   <button class="btn primario" @click="copiarSenhaResetada()">{{ copiadoReset?'✅ Copiado':'📋 Copiar' }}</button>
                 </div>
                 <div style="text-align:right;margin-top:16px">
@@ -543,9 +549,9 @@
 
         <!-- ============ ABA 3: CRIAR PERSONAGEM (mantido, com visual novo) ============ -->
         <div v-if="aba==='criar'" class="admin-content">
-          <div class="card" style="background:#14121d;border-color:#332a4d">
-            <h3 style="margin:0 0 10px;color:#c9b8ff">🧙 Criar Jogador / Personagem</h3>
-            <p style="color:#b8a8db;margin:0 0 14px;font-size:13px">Preencha os dados. O sistema gera uma senha forte automática e exibe aqui para você copiar e enviar no Discord.</p>
+          <div class="card" style="background:var(--panel-2);border-color:var(--line)">
+            <h3 style="margin:0 0 10px;color:var(--azul-bright)">🧙 Criar Jogador / Personagem</h3>
+            <p style="color:var(--ink-dim);margin:0 0 14px;font-size:13px">Preencha os dados. O sistema gera uma senha forte automática e exibe aqui para você copiar e enviar no Discord.</p>
             <div class="form">
               <div style="grid-column:1 / -1">
                 <div class="campo foto-campo">
@@ -555,12 +561,12 @@
                       <span v-if="!F.foto_url">👤</span>
                     </div>
                     <div style="display:grid;gap:6px">
-                      <input v-model="F.foto_url" placeholder="Cole uma URL de imagem ou deixe em branco." style="width:100%;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:10px 12px;border-radius:6px;font:inherit;outline:none">
+                      <input v-model="F.foto_url" placeholder="Cole uma URL de imagem ou deixe em branco." style="width:100%;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:10px 12px;border-radius:6px;font:inherit;outline:none">
                       <div style="display:flex;gap:8px;flex-wrap:wrap">
                         <button class="btn" type="button" @click="aleatorioFoto()">🎲 Foto aleatória</button>
                         <button class="btn ghost" type="button" @click="F.foto_url=''">Limpar</button>
                       </div>
-                      <small style="color:#6d6199;font-size:12px">Dica: use qualquer URL HTTPS (Discord, Gravatar, Dicebear, Imgur).</small>
+                      <small style="color:var(--ink-faint);font-size:12px">Dica: use qualquer URL HTTPS (Discord, Gravatar, Dicebear, Imgur).</small>
                     </div>
                   </div>
                 </div>
@@ -599,7 +605,7 @@
                 </select>
               </div>
               <div style="grid-column:1 / -1;margin-top:6px">
-                <h4 style="margin:0 0 8px;color:#c9b8ff">Atributos · Padrão Andar 1: 0, -1, -1, -1, -2 = <b>-5</b></h4>
+                <h4 style="margin:0 0 8px;color:var(--azul-bright)">Atributos · Padrão Andar 1: 0, -1, -1, -1, -2 = <b>-5</b></h4>
                 <div class="atributos">
                   <div v-for="a in listaAtributos" :key="a.k" class="atrib" :class="{pos:a.v>0, neg:a.v<0}">
                     <label>{{ a.nome }}</label>
@@ -633,15 +639,15 @@
               </div>
               <div class="body">
                 <div class="msg ok" style="margin:0 0 12px">⚠️ Copie a senha AGORA e envie para <b>{{ resultadoCriacao.nome }}</b> — única vez!</div>
-                <div class="card" style="padding:14px;background:#0f0b19">
+                <div class="card" style="padding:14px;background:var(--panel)">
                   <div style="display:grid;grid-template-columns:140px 1fr;gap:6px;font-size:13.5px">
-                    <div style="color:#9d90c0">👤 Personagem</div><div><b>{{ resultadoCriacao.nome }}</b></div>
-                    <div style="color:#9d90c0">💬 Discord</div><div>{{ resultadoCriacao.discord_nome || '—' }}</div>
-                    <div style="color:#9d90c0">📧 Login (email)</div><div><code style="background:#1a1526;padding:2px 6px;border-radius:4px">{{ resultadoCriacao.email }}</code></div>
-                    <div style="color:#9d90c0">🔑 Senha</div>
+                    <div style="color:var(--ink-dim)">👤 Personagem</div><div><b>{{ resultadoCriacao.nome }}</b></div>
+                    <div style="color:var(--ink-dim)">💬 Discord</div><div>{{ resultadoCriacao.discord_nome || '—' }}</div>
+                    <div style="color:var(--ink-dim)">📧 Login (email)</div><div><code style="background:var(--panel-3);padding:2px 6px;border-radius:4px">{{ resultadoCriacao.email }}</code></div>
+                    <div style="color:var(--ink-dim)">🔑 Senha</div>
                     <div>
                       <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap">
-                        <code style="flex:1;min-width:220px;background:#1a1526;padding:8px 10px;border-radius:6px;font-size:15px;border:1px solid #7a5ab8;color:#c9b8ff">{{ resultadoCriacao.senha }}</code>
+                        <code style="flex:1;min-width:220px;background:var(--panel-3);padding:8px 10px;border-radius:6px;font-size:15px;border:1px solid var(--laranja);color:var(--azul-bright)">{{ resultadoCriacao.senha }}</code>
                         <button class="btn primario" @click="copiarSenhaCriada()">{{ copiadoCriada?'✅ Copiado!':'📋 Copiar' }}</button>
                       </div>
                     </div>
@@ -663,9 +669,9 @@
             regra</b> (ex: a fórmula de chance de sucesso, que usa só o Nível de Profissão) — isso mora no código, não
             no banco, pra não quebrar o jogo sem querer.
           </div>
-          <div v-for="g in gruposCompendio" :key="g.k" class="card" style="background:#14121d">
+          <div v-for="g in gruposCompendio" :key="g.k" class="card" style="background:var(--panel-2)">
             <div class="compendio-grupo-head" @click="g.colapsavel && (grupoAberto[g.k] = !grupoAberto[g.k])">
-              <h4 style="margin:0;color:#c9b8ff">{{ g.ico }} {{ g.lbl }}</h4>
+              <h4 style="margin:0;color:var(--azul-bright)">{{ g.ico }} {{ g.lbl }}</h4>
               <span v-if="g.colapsavel" class="pill">{{ grupoAberto[g.k] ? '▾ ocultar' : '▸ mostrar' }}</span>
             </div>
             <div v-if="!g.colapsavel || grupoAberto[g.k]" class="compendio-grid">
@@ -690,8 +696,8 @@
 
         <!-- ============ ABA 7: MERCADO ============ -->
         <div v-if="aba==='mercado'" class="admin-content">
-          <div class="card" style="background:#14121d">
-            <h4 style="margin:0 0 12px;color:#c9b8ff">🏪 Anúncios do mercado</h4>
+          <div class="card" style="background:var(--panel-2)">
+            <h4 style="margin:0 0 12px;color:var(--azul-bright)">🏪 Anúncios do mercado</h4>
             <button class="btn" style="margin-bottom:10px" @click="carregarMercado()">🔄 Atualizar</button>
             <div v-if="carregandoMercado" class="msg info">Carregando mercado…</div>
             <div v-else-if="!anuncios.length" class="msg warn">Nenhum anúncio no mercado.</div>
@@ -713,10 +719,10 @@
 
         <!-- ============ ABA 8: INVENTÁRIOS (ver stash de qualquer jogador) ============ -->
         <div v-if="aba==='inventarios'" class="admin-content">
-          <div class="card" style="background:#14121d">
-            <h4 style="margin:0 0 12px;color:#c9b8ff">🎒 Inventários · Stash (por jogador)</h4>
+          <div class="card" style="background:var(--panel-2)">
+            <h4 style="margin:0 0 12px;color:var(--azul-bright)">🎒 Inventários · Stash (por jogador)</h4>
             <div class="admin-toolbar">
-              <select v-model="invPers" style="flex:1;background:#1a1526;border:1px solid #332a4d;color:#e6e2ff;padding:9px 12px;border-radius:6px;font:inherit">
+              <select v-model="invPers" style="flex:1;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
                 <option value="">-- Selecione um jogador --</option>
                 <option v-for="p in jogadores" :key="p.nome" :value="p.nome">{{ p.nome }} ({{ p.profissao || 'Sem profissão' }})</option>
               </select>
@@ -1275,9 +1281,10 @@ onMounted(async () => {
   min-height: 70vh;
 }
 .admin-sidebar {
-  background: linear-gradient(180deg, #1a1030 0%, #0c0818 100%);
-  border: 1px solid #332a4d;
-  border-radius: 12px;
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--laranja);
   padding: 16px 12px;
   display: flex;
   flex-direction: column;
@@ -1288,38 +1295,41 @@ onMounted(async () => {
 }
 .admin-brand {
   display: flex; gap: 10px; align-items: center;
-  padding: 10px 8px; border-radius: 10px;
-  background: rgba(122,90,184,.12);
-  border: 1px solid rgba(122,90,184,.3);
+  padding: 10px 8px;
+  background: rgba(255,153,0,.08);
+  border: 1px solid var(--line);
 }
 .brand-emoji { font-size: 34px; line-height: 1; }
-.brand-title { color: #e6e2ff; font-weight: 800; font-size: 15px; letter-spacing: .01em; }
-.brand-sub { color: #9d90c0; font-size: 11px; font-family: var(--f-mono); }
+.brand-title { color: var(--ink); font-weight: 800; font-size: 15px; letter-spacing: .01em; font-family: var(--f-titulo); }
+.brand-sub { color: var(--ink-faint); font-size: 11px; font-family: var(--f-mono); }
 .admin-nav { display: flex; flex-direction: column; gap: 3px; }
 .admin-nav-item {
   display: flex; align-items: center; gap: 10px;
-  padding: 10px 12px; border-radius: 8px;
-  color: #c5bbe6; font-size: 13.5px; cursor: pointer;
+  padding: 10px 12px;
+  color: var(--ink-dim); font-size: 13.5px; cursor: pointer;
   border: 1px solid transparent;
   transition: all .15s;
 }
-.admin-nav-item.d { margin-top: 10px; border-top: 1px dashed #332a4d; padding-top: 14px; }
-.admin-nav-item:hover { background: rgba(122,90,184,.14); color: #e6e2ff; }
+.admin-nav-item.d { margin-top: 10px; border-top: 1px dashed var(--line); padding-top: 14px; }
+.admin-nav-item:hover { background: rgba(255,153,0,.08); color: var(--laranja-bright); }
+.admin-nav-item:focus-visible { outline: 2px solid var(--laranja); outline-offset: -2px; }
 .admin-nav-item.on {
-  background: linear-gradient(90deg, rgba(122,90,184,.28), rgba(122,90,184,.08));
-  border-color: #7a5ab8;
+  background: linear-gradient(90deg, rgba(255,153,0,.16), rgba(255,153,0,.03));
+  border-color: var(--laranja-dim);
   color: #ffffff;
   font-weight: 700;
+  box-shadow: inset 0 0 12px rgba(255,153,0,.08);
 }
 .admin-nav-item .ico { font-size: 18px; }
 .admin-nav-item .lbl { flex: 1; }
-.admin-foot { margin-top: auto; padding-top: 10px; border-top: 1px dashed #332a4d; }
+.admin-foot { margin-top: auto; padding-top: 10px; border-top: 1px dashed var(--line); }
 
 .admin-main { min-width: 0; }
 .admin-header {
-  background: linear-gradient(135deg, #1a1030 0%, #0e0a1c 100%);
-  border: 1px solid #332a4d;
-  border-radius: 12px;
+  background: var(--panel);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--laranja);
   padding: 14px 18px;
   display: flex;
   justify-content: space-between;
@@ -1328,8 +1338,8 @@ onMounted(async () => {
   flex-wrap: wrap;
   margin-bottom: 14px;
 }
-.admin-header h2 { margin: 0; color: #e6e2ff; font-size: 22px; }
-.admin-desc { margin: 4px 0 0; color: #a598d1; font-size: 13px; max-width: 70ch; }
+.admin-header h2 { margin: 0; color: var(--ink); font-size: 21px; font-family: var(--f-titulo) }
+.admin-desc { margin: 4px 0 0; color: var(--ink-dim); font-size: 13px; max-width: 70ch; }
 .admin-content { display: grid; gap: 14px; }
 
 .admin-statgrid {
@@ -1338,9 +1348,8 @@ onMounted(async () => {
   gap: 12px;
 }
 .admin-stat {
-  background: #14121d;
-  border: 1px solid #332a4d;
-  border-radius: 10px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
   padding: 14px;
   display: flex;
   gap: 12px;
@@ -1353,8 +1362,8 @@ onMounted(async () => {
   border-radius: 10px;
   flex-shrink: 0;
 }
-.stat-num { color: #ffffff; font-weight: 800; font-size: 22px; font-family: var(--f-mono); }
-.stat-lbl { color: #9d90c0; font-size: 12px; margin-top: 2px; }
+.stat-num { color: var(--ink); font-weight: 800; font-size: 22px; font-family: var(--f-mono); }
+.stat-lbl { color: var(--ink-dim); font-size: 12px; margin-top: 2px; }
 
 .admin-twocol {
   display: grid;
@@ -1371,19 +1380,19 @@ onMounted(async () => {
   align-items: center;
   gap: 12px;
   padding: 10px 12px;
-  border-radius: 8px;
-  background: #0f0b19;
-  border: 1px solid #251f39;
-  cursor: pointer;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
   transition: all .15s;
   flex-wrap: wrap;
 }
-.admin-row:hover { background: #14121d; border-color: #3a2f5e; }
-.row-avatar { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; border: 1px solid #332a4d; }
-.row-avatar.def { display: grid; place-items: center; background: #1a1526; color: #6d6199; font-size: 18px; }
-.row-nome { color: #e6e2ff; font-weight: 700; font-size: 14px; }
-.row-sub { color: #9d90c0; font-size: 12px; margin-top: 2px; }
-.row-val { color: #d9c9ff; font-weight: 600; font-size: 13px; }
+.admin-row[role="button"], .admin-row.clicavel { cursor: pointer; }
+.admin-row[role="button"]:hover { background: var(--panel-3); border-color: var(--azul-dim); }
+.admin-row[role="button"]:focus-visible { outline: 2px solid var(--laranja); outline-offset: 1px; }
+.row-avatar { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; border: 1px solid var(--line); }
+.row-avatar.def { display: grid; place-items: center; background: var(--panel-3); color: var(--ink-faint); font-size: 18px; }
+.row-nome { color: var(--ink); font-weight: 700; font-size: 14px; }
+.row-sub { color: var(--ink-dim); font-size: 12px; margin-top: 2px; }
+.row-val { color: var(--azul-bright); font-weight: 600; font-size: 13px; }
 .admin-quick { display: grid; gap: 6px; }
 .btn.tiny { padding: 5px 9px; font-size: 12px; }
 
@@ -1393,11 +1402,11 @@ onMounted(async () => {
   font-size: 13px;
 }
 .admin-table th {
-  background: #0c0818;
-  color: #a598d1;
+  background: var(--panel-2);
+  color: var(--azul-bright);
   text-align: left;
   padding: 10px 12px;
-  border-bottom: 1px solid #251f39;
+  border-bottom: 1px solid var(--line);
   font-weight: 600;
   font-size: 12px;
   text-transform: uppercase;
@@ -1405,11 +1414,12 @@ onMounted(async () => {
 }
 .admin-table td {
   padding: 10px 12px;
-  border-bottom: 1px solid #1d1830;
-  color: #d7d0f1;
+  border-bottom: 1px solid var(--line);
+  color: var(--ink-dim);
 }
 .admin-table tbody tr { cursor: pointer; }
-.admin-table tbody tr:hover { background: #1a1526; }
+.admin-table tbody tr:hover { background: var(--panel-3); }
+.admin-table tbody tr:focus-visible { outline: 2px solid var(--laranja); outline-offset: -2px; }
 .pill {
   display: inline-flex;
   gap: 4px;
@@ -1417,14 +1427,14 @@ onMounted(async () => {
   padding: 2px 8px;
   border-radius: 999px;
   font-size: 11px;
-  background: #1a1526;
-  color: #c5bbe6;
-  border: 1px solid #332a4d;
+  background: var(--panel-3);
+  color: var(--ink-dim);
+  border: 1px solid var(--line);
   font-weight: 600;
 }
 .badge {
-  background: #7a5ab8;
-  color: #fff;
+  background: var(--laranja);
+  color: #1a0f00;
   border-radius: 999px;
   padding: 1px 8px;
   font-size: 10px;
@@ -1438,17 +1448,18 @@ onMounted(async () => {
 }
 .foto-preview { aspect-ratio: 1/1; min-height: 160px; }
 .foto-campo { grid-column: 1 / -1; }
-.modal :deep(.top), .modal :deep(.body) { background: #14121d !important; }
-.modal-bg.on :deep(.modal) { background: #14121d !important; border: 1px solid #332a4d !important; }
+.modal :deep(.top), .modal :deep(.body) { background: var(--panel-2) !important; }
+.modal-bg.on :deep(.modal) { background: var(--panel-2) !important; border-color: var(--line-bright) !important; }
 
 .compendio-grupo-head { display:flex; align-items:center; justify-content:space-between; gap:10px; cursor:default; }
 .compendio-grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(190px,1fr)); gap:8px; margin-top:12px; }
 .compendio-item {
   display:flex; align-items:center; gap:10px; text-align:left;
-  padding:11px 12px; border-radius:8px; background:#0f0b19; border:1px solid #251f39;
-  color:#e6e2ff; font:inherit; font-size:13px; cursor:pointer; transition:all .15s;
+  padding:11px 12px; background:var(--panel-2); border:1px solid var(--line);
+  color:var(--ink); font:inherit; font-size:13px; cursor:pointer; transition:all .15s;
 }
-.compendio-item:hover { background:#1a1526; border-color:#7a5ab8; }
+.compendio-item:hover { background:var(--panel-3); border-color:var(--laranja-dim); }
+.compendio-item:focus-visible { outline: 2px solid var(--laranja); outline-offset: 1px; }
 .compendio-item .ico { font-size:18px; }
 .compendio-item .lbl { flex:1; font-weight:600; }
 </style>
