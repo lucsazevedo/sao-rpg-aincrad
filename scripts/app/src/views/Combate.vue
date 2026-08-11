@@ -46,11 +46,19 @@
       <div v-if="ultimoResultado" class="msg" :class="corResultado(ultimoResultado.resultado)" style="margin-bottom:14px">
         <b>{{ tituloResultado(ultimoResultado.resultado) }}</b> contra {{ ultimoResultado.monstro_nome }} —
         dados {{ ultimoResultado.dados?.join('+') }} (mod incluso, soma {{ ultimoResultado.soma_com_mod }}).
-        <span v-if="ultimoResultado.xp_ganho">+{{ ultimoResultado.xp_ganho }} XP</span>
-        <span v-if="ultimoResultado.col_ganho"> · +{{ ultimoResultado.col_ganho }} Col</span>
-        <span v-if="ultimoResultado.vida_perdida"> · −{{ ultimoResultado.vida_perdida }} Vida</span>
-        <span v-if="ultimoResultado.drop_item"> · dropou: {{ ultimoResultado.drop_item }}</span>
-        <span v-if="ultimoResultado.derrotado"> · ⚠️ Vida chegou a 0 — cure na Estalagem antes de lutar de novo.</span>
+        <template v-if="ultimoResultado.chefe_vida_max !== undefined">
+          <span v-if="ultimoResultado.dano_causado">· {{ ultimoResultado.dano_causado }} de dano no chefe</span>
+          <span> · {{ ultimoResultado.contribuintes_distintos }}/{{ ultimoResultado.min_contribuintes }} contribuintes</span>
+          <span v-if="ultimoResultado.vida_perdida_jogador"> · −{{ ultimoResultado.vida_perdida_jogador }} sua Vida</span>
+          <span v-if="ultimoResultado.chefe_derrotado"> · 🏆 CHEFE DERROTADO! +{{ ultimoResultado.xp_ganho }} XP · +{{ ultimoResultado.col_ganho }} Col pra todo mundo que contribuiu</span>
+        </template>
+        <template v-else>
+          <span v-if="ultimoResultado.xp_ganho">+{{ ultimoResultado.xp_ganho }} XP</span>
+          <span v-if="ultimoResultado.col_ganho"> · +{{ ultimoResultado.col_ganho }} Col</span>
+          <span v-if="ultimoResultado.vida_perdida"> · −{{ ultimoResultado.vida_perdida }} Vida</span>
+          <span v-if="ultimoResultado.drop_item"> · dropou: {{ ultimoResultado.drop_item }}</span>
+          <span v-if="ultimoResultado.derrotado"> · ⚠️ Vida chegou a 0 — cure na Estalagem antes de lutar de novo.</span>
+        </template>
       </div>
 
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 14px">
@@ -64,11 +72,29 @@
 
       <div v-if="carregando" class="msg info carregando">Carregando bestiário…</div>
       <div v-else class="grid">
-        <div v-for="m in monstrosFiltrados" :key="m.id" class="card">
+        <div v-for="m in monstrosFiltrados" :key="m.id" class="card" :class="{'rar-borda-lendario': ehChefe(m)}">
           <img v-if="m.img" :src="urlImagem(m.img)" :alt="m.nome" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
-          <div class="ct">{{ m.nome }}</div>
+          <div class="ct">{{ m.nome }} <span v-if="ehChefe(m)" class="pill on" style="margin-left:4px">{{ m.ameaca==='chefe' ? '👑 CHEFE' : '🔶 MINIBOSS' }}</span></div>
           <div class="cs">Nv {{ nivelMonstro(m) }} · {{ m.ameaca || '?' }}</div>
-          <div class="faixa">
+
+          <!-- chefe/miniboss: HP compartilhado entre todos os jogadores, não é 1x1 -->
+          <template v-if="ehChefe(m)">
+            <div style="margin-top:8px">
+              <div style="display:flex;justify-content:space-between;font-family:var(--f-mono);font-size:10.5px;color:var(--azul-bright)">
+                <span>💥 VIDA DO CHEFE</span>
+                <span>{{ chefesInfo[m.id]?.vida_atual ?? m.chefe_vida_max ?? '?' }} / {{ chefesInfo[m.id]?.vida_max ?? m.chefe_vida_max ?? '?' }}</span>
+              </div>
+              <div class="hv-barra" style="margin-top:3px">
+                <div class="hv-fill hv-vida-baixa" :style="{width: Math.max(0, Math.min(100, 100*(chefesInfo[m.id]?.vida_atual ?? 1)/(chefesInfo[m.id]?.vida_max || m.chefe_vida_max || 1)))+'%'}"></div>
+              </div>
+              <div style="font-size:11px;color:var(--ink-dim);margin-top:4px">
+                👥 {{ chefesInfo[m.id]?.contribuintes ?? 0 }} / {{ m.min_contribuintes }} jogadores diferentes já atacaram
+                <span v-if="(chefesInfo[m.id]?.contribuintes ?? 0) < m.min_contribuintes">— precisa de mais gente pra derrubar de vez</span>
+              </div>
+            </div>
+          </template>
+
+          <div class="faixa" style="margin-top:8px">
             <span class="pill" :class="{on: chancePreview(m)>=50}">🎯 {{ chancePreview(m) }}% vitória</span>
             <span v-if="bateFraqueza(m)" class="pill on">⚡ sua arma bate a fraqueza (+1)</span>
             <span class="pill">💨 −{{ custoFolego(m) }}</span>
@@ -123,7 +149,10 @@ const vidaMax = computed(() => auth.personagem?.vida_max || 50)
 const pctVida = computed(() => Math.max(0, Math.min(100, (vidaAtual.value / vidaMax.value) * 100)))
 const pctFolego = computed(() => Math.max(0, Math.min(100, ((auth.personagem?.folego ?? 0) / 20) * 100)))
 
+const chefesInfo = ref({}) // monstro_id -> {vida_atual, vida_max, contribuintes, min_contribuintes}
+
 const ameacasPresentes = computed(() => [...new Set(monstros.value.map(m => m.ameaca).filter(Boolean))])
+function ehChefe(m) { return m.ameaca === 'elite' || m.ameaca === 'chefe' }
 function nivelMonstro(m) {
   const n = String(m.nivel_recomendado || '').match(/\d+/)
   return n ? Number(n[0]) : 1
@@ -157,10 +186,31 @@ function corResultado(r) {
 async function carregarMonstros() {
   carregando.value = true
   try {
-    const r = await supa.from('monstros').select('id,nome,img,nivel_recomendado,ameaca,zona,atributo_fraqueza').eq('visivel', true).eq('excluido', false).order('nome')
+    const r = await supa.from('monstros').select('id,nome,img,nivel_recomendado,ameaca,zona,atributo_fraqueza,min_contribuintes').eq('visivel', true).eq('excluido', false).order('nome')
     monstros.value = r.data || []
+    await carregarChefes()
   } catch (e) { console.warn(e) }
   finally { carregando.value = false }
+}
+// chefe/miniboss tem HP compartilhado entre todo mundo (item 11) — busca
+// o estado ativo (se tiver) + quantos personagens diferentes já bateram.
+// Poucas linhas sempre (só 6 monstros são elite/chefe no Andar 1), então
+// agrega no cliente em vez de criar view nova só pra isso.
+async function carregarChefes() {
+  const idsChefes = monstros.value.filter(ehChefe).map(m => m.id)
+  if (!idsChefes.length) return
+  const rAtivos = await supa.from('chefes_ativos').select('*').in('monstro_id', idsChefes).eq('derrotado', false)
+  const ativos = rAtivos.data || []
+  if (!ativos.length) { chefesInfo.value = {}; return }
+  const rContrib = await supa.from('chefes_contribuicoes').select('chefe_ativo_id').in('chefe_ativo_id', ativos.map(a => a.id))
+  const contagem = {}
+  for (const c of (rContrib.data || [])) contagem[c.chefe_ativo_id] = (contagem[c.chefe_ativo_id] || 0) + 1
+  const info = {}
+  for (const a of ativos) {
+    const m = monstros.value.find(x => x.id === a.monstro_id)
+    info[a.monstro_id] = { vida_atual: a.vida_atual, vida_max: a.vida_max, contribuintes: contagem[a.id] || 0, min_contribuintes: m?.min_contribuintes || 1 }
+  }
+  chefesInfo.value = info
 }
 async function carregarNivelProfissao() {
   if (!auth.temPersonagem) return
@@ -182,13 +232,15 @@ async function atacar(m) {
   if (atacando.value) return
   atacando.value = m.id
   try {
-    const r = await supa.rpc('combater_monstro', { p_monstro_id: m.id })
+    const chefe = ehChefe(m)
+    const r = await supa.rpc(chefe ? 'atacar_chefe' : 'combater_monstro', { p_monstro_id: m.id })
     if (r.error) throw r.error
     const d = typeof r.data === 'string' ? JSON.parse(r.data) : r.data
     if (d.erro) { alert(d.erro); return }
     ultimoResultado.value = d
     await auth.carregarPerfilEPersonagem()
     await carregarLogs()
+    if (chefe) await carregarChefes()
   } catch (e) { alert('Erro no combate: ' + e.message) }
   finally { atacando.value = null }
 }

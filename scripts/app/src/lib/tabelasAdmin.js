@@ -48,6 +48,7 @@ const TIPO_BONUS = ["atributo", "dano", "resist", "especial"]; // = CHECK cartas
 const CLA_CARGO = ["lider", "oficial", "membro"]; // = CHECK cla_autoridade_cargo_check
 const CRIATURA_STATUS = ["incubando", "ativo", "perdido"]; // = CHECK criaturas_domadas_status_check
 const BESTIARIO_CATEGORIA = ["comum", "mini_boss", "mvp", "boss"]; // = CHECK bestiario_roster_categoria_check
+const AMEACA = ["fraco", "comum", "forte", "elite", "chefe"]; // elite=miniboss e chefe=boss usam HP compartilhado (item 11)
 const REPUTACAO_ALVO_TIPO = ["cla", "cidade", "vila", "npc", "faccao", "outro"]; // = CHECK reputacao/missoes
 const TRANSACAO_TIPO = ["missao", "venda", "compra", "craft", "bug", "ajuste_mestre", "npc", "taxa", "limite_diario", "combate", "estalagem", "transferencia", "meta_global"]; // = CHECK transacoes_tipo_check
 
@@ -81,11 +82,19 @@ export const TABELAS_ADMIN = {
       { nome: "zona", tipo: "text" },
       { nome: "regioes", tipo: "lista-texto" },
       { nome: "nivel_recomendado", tipo: "text", rotulo: "Nível recomendado (ex: 6-8)" },
-      { nome: "ameaca", tipo: "text" },
+      { nome: "ameaca", tipo: "select", opcoes: AMEACA },
       { nome: "golpes", tipo: "text" },
       { nome: "local", tipo: "text", rotulo: "Local/habitat (descrição livre)" },
       { nome: "canonico", tipo: "bool" },
       { nome: "fonte", tipo: "text" },
+      {
+        nome: "min_contribuintes", tipo: "number", min: 1,
+        rotulo: "Jogadores diferentes p/ derrubar (só importa se ameaça = elite/chefe)",
+      },
+      {
+        nome: "chefe_vida_max", tipo: "number", min: 1,
+        rotulo: "HP compartilhado do chefe (só importa se ameaça = elite/chefe)",
+      },
       { nome: "fraqueza", tipo: "textarea", rotulo: "Fraqueza (descrição narrativa)" },
       { nome: "atributo_fraqueza", tipo: "select", opcoes: ATRIBUTOS },
       { nome: "fraquezas", tipo: "lista-texto" },
@@ -783,6 +792,30 @@ export const TABELAS_ADMIN = {
       { nome: "drop_item_id", tipo: "text" },
     ],
   },
+  chefes_ativos: {
+    pk: "id",
+    rotulo: "Chefes/Minibosses Ativos (item 11)",
+    icone: "👑",
+    campos: [
+      { nome: "id", tipo: "number", auto: true },
+      { nome: "monstro_id", tipo: "sugestao", tabelaRef: "monstros", campoRef: "id" },
+      { nome: "vida_max", tipo: "number" },
+      { nome: "vida_atual", tipo: "number" },
+      { nome: "derrotado", tipo: "bool" },
+    ],
+  },
+  chefes_contribuicoes: {
+    pk: "id",
+    rotulo: "Contribuições em Chefe (item 11)",
+    icone: "🗡️",
+    campos: [
+      { nome: "id", tipo: "number", auto: true },
+      { nome: "chefe_ativo_id", tipo: "number" },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome" },
+      { nome: "dano_total", tipo: "number" },
+      { nome: "ataques", tipo: "number" },
+    ],
+  },
   cla_inventario: {
     pk: "id",
     rotulo: "Baú de Clã (item 18B)",
@@ -883,6 +916,6 @@ export const GRUPOS_COMPENDIO = [
     ico: "🧪",
     colapsavel: true,
     tabelas: ["transacoes", "vitrine", "inventario", "criaturas_domadas", "nivel_profissao", "reputacao_personagem",
-      "cla_inventario", "cla_autoridade", "metas_globais", "metas_doacoes"],
+      "cla_inventario", "cla_autoridade", "metas_globais", "metas_doacoes", "chefes_ativos", "chefes_contribuicoes"],
   },
 ];
