@@ -1,3 +1,56 @@
+## Novo nesta rodada — gate de nível estendido ("pode fazer") + bug real achado testando
+
+Pedido do usuário depois da rodada anterior: "pode fazer" (estender
+nível pras tabelas que tinham ficado só com login).
+
+Achei vínculo real e limpo em mais 2 relações — `monstros.regioes`
+(array) bate exatamente com `guias.id`, e `salas_dungeon.dungeon_id` bate
+com `dungeons.id` — então:
+
+- **`guias.nivel` estava vazio em 100% das linhas** (achado da rodada
+  anterior) — populado agora com dado real: menor `nivel_recomendado`
+  entre os monstros daquela região (26 de 30 guias tiveram monstro
+  associado; as 4 sem nenhum ficaram nível 1, faz sentido pra hub/cidade).
+- `guias`, `pontos`, `pontos_detalhe` ganharam nível de verdade (pontos
+  herdam da guia da própria região).
+- `salas_dungeon` herda o nível da dungeon (`dungeons.nivel`, já existia).
+- `armas`, `equipamentos`, `cartas` ganharam nível derivado da
+  `raridade` (mesma escala do item 3: Comum=1, Incomum=3, Raro=6,
+  Épico=8, Lendário=10).
+- `quests`, `cronicas` ganharam nível derivado da `dificuldade` (texto:
+  Fácil=1, Médio=4, Difícil=7, Muito Difícil=9, Chefe=10).
+
+**Ainda só com login, sem nível** (documentado por quê, não é esquecimento):
+`npcs.local`, `puzzles.regiao`, `mercado.regiao` e `quests.regiao` são
+texto NARRATIVO livre ("Cidade do Início — Guarita dos Cartógrafos, saída
+norte"), não um slug que bate com `guias.id` — um match automático aí
+arriscaria esconder o que devia mostrar ou vice-versa, não é decisão
+segura de tomar sozinho sem confirmar. `cidades`, `clas`, `cristais`,
+`oficios`, `producao`, `sistema` não têm nenhum campo (nem direto nem por
+vínculo) que sirva de nível real.
+
+**Bug real achado testando, corrigido antes de considerar pronto**: as
+policies de `pontos`/`pontos_detalhe`/`salas_dungeon` usavam uma subquery
+correlacionada pra buscar o nível de `guias`/`dungeons` — mas essas
+tabelas TAMBÉM têm RLS com gate de nível, e subquery dentro de `USING`
+roda com o mesmo contexto de autenticação do usuário, sujeita à RLS da
+tabela referenciada. Resultado prático: uma dungeon de nível alto
+(bloqueada pra aquele jogador) fazia a subquery não achar a linha,
+retornar NULL, e o `coalesce(NULL, 1)` liberava como "nível 1" — o
+OPOSTO do que devia. Testado com Mournhall (nível 8): um jogador nível 2
+via as 8 salas de lá, quando deveria ver zero. Corrigido com funções
+`SECURITY DEFINER` (`nivel_da_guia()`, `nivel_da_dungeon()`) que ignoram
+a RLS da tabela de origem só pra essa consulta pontual — mesma técnica já
+usada em `nivel_jogador_atual()`.
+
+Testado via HTTP real depois do fix: jogador nível 2 só via a dungeon
+"oculta" (nível 1, 5 salas) — Mournhall/Lumis/Labirinto (nível 6+)
+corretamente escondidas. Mestre continua vendo as 47 salas das 4
+dungeons. Anônimo confirmado em 0 linhas em tudo de novo depois do fix.
+
+Schema: `scripts/db/schema_gate_nivel_extensao.sql` +
+`scripts/db/schema_fix_gate_subquery_rls.sql`.
+
 ## Novo nesta rodada — gate de login + nível em todo conteúdo de mundo
 
 Pedido do usuário, endurecendo a rodada anterior: "nada é público, tudo
