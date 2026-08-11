@@ -1,3 +1,95 @@
+## Novo nesta rodada — bugs achados jogando de verdade: drop de combate, ovo, Domador
+
+Lista grande de feedback de uso real (13 itens) mais 2 interjeições
+("upload de imagem", "menu de combate não faz sentido"), e depois "profissão
+de domador tá toda estranha, não tem o item Ferro Bruto, para chocar ovo
+precisa da incubadora, mas parece que não são relacionados, o drop de ovo
+não funciona" — os 3 bugs do Domador foram investigados e fechados nesta
+rodada (o resto da lista grande de 13+2 itens fica para as próximas):
+
+**1) Drop de combate só soltava 1 item por vitória, sempre o mesmo tipo de
+prioridade.** `combater_monstro` tinha um `exit;` logo depois do primeiro
+item de `monstros.drops` que passasse na própria chance — não importa
+quantas entradas a lista tivesse, só a primeira "sortuda" contava. Isso
+também starvava a entrada "Col" (100% chance, mas geralmente por último no
+array) e é a causa raiz do pedido de "todo drop tem que ter chance,
+independente dos outros" (item 11 da lista grande). Corrigido: cada entrada
+agora rola a própria chance independentemente, igual já funcionava do lado
+de `aceitar_e_resolver_missao`. A entrada "Col" foi explicitamente pulada
+do loop de item — ela é o texto legado da mesa de RPG de verdade (moeda),
+não um material; o Col real já é dado por `v_col_ganho` à parte, incluir de
+novo como item de inventário duplicava moeda como se fosse craftável (só
+apareceu como problema agora que passou a rolar toda vez, sem o bug do
+"só o primeiro" escondendo isso).
+
+**2) "não tem o item Ferro Bruto":** `mat_ferro_bruto` existe de verdade no
+catálogo (`materiais_basicos`, categoria mineral, comum) e as receitas do
+Domador pedem ele — mas nenhum monstro tinha essa palavra no próprio
+`drops` (confirmado por busca: zero). O material só era alcançável via
+missão (tipo caça/ofício preferem categoria mineral), nunca combate — e a
+tela de Profissões escondia a receita da Incubadora até o jogador já ter os
+materiais dela (ver item 4). Aproveitando o fix do item 1, o loop de drop
+de combate agora tenta casar o nome do drop com o catálogo real de
+`materiais_basicos` antes de inventar um id — antes ele sempre inventava um
+id na hora fazendo slug do texto livre (`'mat_' || slug(nome)`), que nunca
+batia com o `mat_id` de verdade esperado pelas receitas mesmo quando o
+nome parecia igual. Ferro Bruto especificamente continua só vindo de
+missão (nenhum monstro droppa ele no próprio texto ainda — não inventei
+vínculo que não existia), mas agora qualquer material cujo nome de combate
+bata com o catálogo vira um item realmente utilizável em receita.
+
+**3) "para chocar ovo precisa da incubadora, mas parece que não são
+relacionados" / "o drop de ovo não funciona":** duas causas empilhadas:
+- A ferramenta em si (craftar → `personagem_ferramentas` → `chocar_ovo` lê
+  o nível da incubadora de lá) já estava certa (mesmo id usado nos dois
+  lados desde a migração do item 14) — não era isso.
+- O bug real: **não existia NENHUM caminho pra um ovo cair de combate**. O
+  loop de drop sempre inseria `tipo='material'`, então mesmo que o texto de
+  um drop mencionasse "ovo" ele virava material — nunca `tipo='ovo'`, o
+  único tipo que `chocar_ovo` aceita. A tabela `ovos_catalogo` já tinha uma
+  coluna `monstro_id` ligando cada ovo a um monstro específico, mas nunca
+  era usada. Adicionado: chance própria de dropar o ovo certo quando o
+  monstro tem um `ovos_catalogo` correspondente (escalada pela raridade do
+  ovo: comum 15% / incomum 8% / raro 4% / épico 2% — número novo, não
+  existia nenhum antes, documentado na migração).
+- E por cima disso: **6 dos 12 `ovos_catalogo.monstro_id` apontavam pra um
+  monstro que nem existe** no bestiário (ex. `lobo_alfa`, `urso_floresta` —
+  nenhum monstro com esse id). Corrigidos 5 pra o monstro real mais
+  próximo por nome (`urso_de_pedra`, `corvo_das_ruinas`,
+  `coruja_das_sombras`, `lobo_da_alcateia` pros 2 ovos de lobo, únicos do
+  bestiário). **4 continuam sem monstro real correspondente e não
+  inventei um vínculo pra eles — gap de conteúdo, não bug**:
+  `javali_jovem`, `avestruz_batalha`, `dragao_bebe_obsidiana`, `fenix_bebe`
+  não têm NENHUM monstro parecido nos 53 cadastrados; ou o mestre cadastra
+  esses monstros, ou decide outra fonte pro ovo (drop de missão/quest
+  específica), mas isso não dava pra resolver sem inventar dado.
+
+Testado ao vivo com a conta Shen (Domador) via `SET LOCAL ROLE` + JWT
+simulado: 15 combates contra Rato Gigante, múltiplos materiais chegando no
+mesmo combate, 3 ovos de Rato Gigante caindo (`tipo='ovo'`,
+`item_id='ovo_ratogig'`), zero "Col" fantasma no inventário. Estado de
+teste limpo depois (`excluido=true` nas linhas de teste, fôlego/vida do
+Shen resetados).
+
+**Também nesta rodada** (ligado ao mesmo fio de "não achei a receita"):
+- `Profissoes.vue`: toggle "só receitas que eu consigo craftar" começava
+  **ligado** por padrão (decisão do item 12, sessão anterior) — só que isso
+  esconde qualquer receita nova até o jogador já ter os materiais dela,
+  impossível descobrir o que precisa juntar (causa direta de "não vi o
+  lugar de fazer" a Incubadora). Virou desligado por padrão; o modal de
+  craft já mostra "tem X / precisa Y" por material quando falta algo, então
+  desligar o filtro não perde a informação de craftável.
+- Nav renomeado `Profissões` → `Craft` (pedido explícito do item 8).
+
+Schema: `scripts/db/schema_fix_drops_combate_ovo.sql` +
+`scripts/db/schema_fix_ovos_monstro_id.sql`.
+
+Segue pendente o resto da lista de 13+2 itens (equipamentos não
+equipando — inventário nunca grava `slot`, XP sem exibição, mercado sem
+NPC, cooperação sem agrupar/quantidade, dificuldade de quest, missão sem
+drop dar mais Col, upload de imagem real, menu de combate confuso) — não
+fechados nesta rodada, ficam para a próxima passada.
+
 ## Novo nesta rodada — gate de nível estendido ("pode fazer") + bug real achado testando
 
 Pedido do usuário depois da rodada anterior: "pode fazer" (estender

@@ -12,7 +12,7 @@
         <router-link to="/combate" class="nav-link"><span class="ico">⚔️</span>Combate</router-link>
         <router-link to="/cooperacao" class="nav-link"><span class="ico">🤝</span>Cooperação</router-link>
         <router-link to="/pets" class="nav-link"><span class="ico">🥚</span>Pets</router-link>
-        <router-link to="/profissoes" class="nav-link"><span class="ico">🛠️</span>Profissões</router-link>
+        <router-link to="/profissoes" class="nav-link"><span class="ico">🛠️</span>Craft</router-link>
         <router-link to="/equipamentos" class="nav-link"
           ><span class="ico">🎒</span>Equipamentos</router-link
         >

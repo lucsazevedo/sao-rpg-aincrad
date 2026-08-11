@@ -77,7 +77,14 @@
             <option value="item">Apenas itens</option>
             <option value="ferramenta">Apenas ferramentas de ofício</option>
           </select>
-          <!-- ITEM 12: Toggle 'Mostrar só receitas que eu consigo craftar' LIGADO por padrão -->
+          <!-- ITEM 12, revisto (11/08): toggle começa DESLIGADO agora. Ligado por
+          padrão escondia receita que o jogador ainda não tem material pra
+          fazer — inclusive a Incubadora do Domador, que ninguém achava porque
+          ela só aparecia depois de já ter os materiais dela (impossível
+          descobrir o que precisa juntar se a receita fica invisível até
+          juntar). Melhor mostrar tudo do seu nível e deixar craftar
+          desabilitado quando faltar material — dá pra ver o que precisa
+          coletar. -->
           <label
             style="
               background: var(--panel-3);
@@ -318,7 +325,7 @@ const descricaoProfissao = computed(() => {
 });
 
 // ===== ITEM 12: Mostrar apenas RECEITAS FAZÍVEIS (ligado por padrão) =====
-const soFaziveis = ref(true);
+const soFaziveis = ref(false);
 function possoCraftarReceita(r) {
   const mats = Array.isArray(r.materiais_com_nome) ? r.materiais_com_nome : (
     Array.isArray(r.materiais) ? r.materiais :
