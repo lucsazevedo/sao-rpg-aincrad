@@ -1,3 +1,51 @@
+## Novo nesta rodada — gate de login + nível em todo conteúdo de mundo
+
+Pedido do usuário, endurecendo a rodada anterior: "nada é público, tudo
+só é visual se logado, e isso depende ainda de nível mínimo... todo tipo
+de item, monstro, região, missão... tudo depende de um nível".
+
+Antes da RLS: 24 tabelas de conteúdo de mundo (monstros, guias, puzzles,
+pontos, npcs, quests, crônicas, dungeons, cidades, clãs, armas,
+equipamentos, cartas, cristais, ofícios, produção, materiais, receitas,
+ferramentas, ovos, missões do quadro, mercado, sistema) tinham
+`visivel=true` liberado pra QUALQUER UM, sem exigir login. Corrigido com
+duas camadas, aplicadas onde faz sentido de verdade:
+
+1. **Login obrigatório** — em todas as 24, sem exceção. `nivel_jogador_atual()`
+   nova função (maior Nível de Profissão do personagem do usuário logado,
+   mesma régua que combate/craft já usam pra dificuldade).
+2. **Nível mínimo** — só onde existe um campo de nível REAL e preenchido:
+   `monstros.nivel_recomendado`, `dungeons.nivel`, `materiais_basicos.nivel_obtencao`,
+   `receitas.nivel_receita`, `ferramentas_oficio.nivel_ferramenta`,
+   `ovos_catalogo.nivel_min`, `missoes_quadro.nivel_min`.
+
+**Levantamento antes de mexer** (pra não inventar nível onde não tem
+dado real): `guias.nivel` existe na tabela mas está **vazio em 100% das
+linhas** — nunca foi preenchido, sem dado real pra gatear.
+`armas.requisito`/`equipamentos.requisito` é texto de **atributo**
+("Corpo 0+", "Espírito -1+"), não nível numérico — bater dificuldade com
+esse campo exigiria reescrever o conteúdo, não é decisão técnica minha
+pra tomar sozinho. `puzzles`, `pontos`, `pontos_detalhe`, `npcs`,
+`quests`, `cronicas`, `salas_dungeon`, `cidades`, `clas`, `cartas`,
+`cristais`, `oficios`, `producao`, `mercado`, `sistema` não têm campo de
+nível nenhum. Essas 17 tabelas ganharam **só o gate de login** por
+enquanto — se quiser nível nelas também, precisa decidir o número por
+linha (é conteúdo, não mecanismo).
+
+6 views `*_publico` (monstros/guias/puzzles/pontos/pontos_detalhe/clas)
+também precisaram do mesmo gate — têm `WHERE` próprio, não herdam RLS da
+tabela base automaticamente.
+
+Testado via HTTP real: anônimo (sem token) agora recebe **0 linhas** em
+tudo, sem exceção. Jogador logado sem `nivel_profissao` nenhum (nível 1
+default) via 6 de 54 monstros e 32 de ~299 receitas; subindo pra nível 8
+via 53 monstros e 285 receitas — escala certo. Mestre continua vendo
+tudo sempre. Nenhuma mudança de código Vue foi necessária (RLS é
+transparente pro cliente — PostgREST só devolve menos/mais linha, sem
+erro; a tela de "nada encontrado" já existia pra lista vazia).
+
+Schema: `scripts/db/schema_gate_login_e_nivel.sql`.
+
 ## Novo nesta rodada — RLS vazando dado de jogador pra usuário sem login
 
 Pedido do usuário: "tem muita informação que está sendo exibido para
