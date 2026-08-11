@@ -31,7 +31,7 @@
               :class="{ excl: r.excluido }"
               @click="abrirEdicao(r)"
             >
-              <img v-if="campoImagem && r[campoImagem]" :src="r[campoImagem]" :alt="tituloDe(r)" class="ee-thumb" @error="e => e.target.style.visibility='hidden'" />
+              <img v-if="campoImagem && r[campoImagem]" :src="urlImagem(r[campoImagem])" :alt="tituloDe(r)" class="ee-thumb" @error="e => e.target.style.visibility='hidden'" />
               <div style="flex:1;min-width:0">
                 <div class="ee-row-titulo">
                   {{ tituloDe(r) }}
@@ -111,9 +111,9 @@
 
               <!-- imagem: URL + preview ao vivo -->
               <template v-else-if="c.tipo === 'imagem'">
-                <input v-model="itemAberto[c.nome]" class="ee-input" placeholder="URL da imagem (https://…)" />
+                <input v-model="itemAberto[c.nome]" class="ee-input" placeholder="URL completa (https://…) ou caminho tipo imagens/arquivo.png" />
                 <div v-if="itemAberto[c.nome]" class="ee-preview">
-                  <img :src="itemAberto[c.nome]" alt="Pré-visualização da imagem" @load="e => e.target.classList.remove('erro')" @error="e => e.target.classList.add('erro')" />
+                  <img :src="urlImagem(itemAberto[c.nome])" alt="Pré-visualização da imagem" @load="e => e.target.classList.remove('erro')" @error="e => e.target.classList.add('erro')" />
                   <small class="ee-hint">Se a imagem não aparecer acima, o link está quebrado ou não é uma URL de imagem direta.</small>
                 </div>
               </template>
@@ -219,6 +219,7 @@
 import { ref, reactive, computed, onMounted } from "vue";
 import { useSupa } from "../lib/supabase.js";
 import { TABELAS_ADMIN } from "../lib/tabelasAdmin.js";
+import { urlImagem } from "../lib/imagens.js";
 
 const props = defineProps({ tabela: { type: String, required: true } });
 const emit = defineEmits(["fechar"]);

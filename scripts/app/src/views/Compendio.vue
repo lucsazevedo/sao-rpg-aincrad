@@ -85,7 +85,7 @@
       <div class="grid">
         <div v-for="it in itensFiltrados" :key="chave(it)" class="card" :class="classeRaridade(it)" role="button" tabindex="0"
           @click="abrir(it)" @keydown.enter="abrir(it)" @keydown.space.prevent="abrir(it)" style="cursor:pointer">
-          <img v-if="campo(it,'img')" :src="campo(it,'img')" :alt="titulo(it)" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
+          <img v-if="campo(it,'img')" :src="urlImagem(campo(it,'img'))" :alt="titulo(it)" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
           <div class="ct">{{ titulo(it) }}</div>
           <div class="cs" v-if="subtitulo(it)">{{ subtitulo(it) }}</div>
           <p v-if="resumo(it)">{{ resumo(it).slice(0,160) }}{{ resumo(it).length>160?'…':'' }}</p>
@@ -101,7 +101,7 @@
           <button class="btn ghost" @click="aberto=null">✕</button>
         </div>
         <div class="body">
-          <img v-if="campo(aberto,'img')" :src="campo(aberto,'img')" :alt="titulo(aberto)" style="width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <img v-if="campo(aberto,'img')" :src="urlImagem(campo(aberto,'img'))" :alt="titulo(aberto)" style="width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px">
           <div v-if="subtitulo(aberto)" class="cs" style="margin-bottom:8px">{{ subtitulo(aberto) }}</div>
           <div v-for="f in tabAtual.pills||[]" :key="f" style="display:inline-block;margin:0 6px 8px 0">
             <span v-if="campo(aberto,f)" class="pill on">{{ String(campo(aberto,f)) }}</span>
@@ -124,6 +124,7 @@ import { ref, computed, onMounted, watch, nextTick } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
+import { urlImagem } from '../lib/imagens.js'
 import TituloHUD from '../components/TituloHUD.vue'
 import { desenharTerreno } from '../lib/mapaTerreno.js'
 

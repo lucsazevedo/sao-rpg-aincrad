@@ -65,7 +65,7 @@
       <div v-if="carregando" class="msg info carregando">Carregando bestiário…</div>
       <div v-else class="grid">
         <div v-for="m in monstrosFiltrados" :key="m.id" class="card">
-          <img v-if="m.img" :src="m.img" :alt="m.nome" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
+          <img v-if="m.img" :src="urlImagem(m.img)" :alt="m.nome" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
           <div class="ct">{{ m.nome }}</div>
           <div class="cs">Nv {{ nivelMonstro(m) }} · {{ m.ameaca || '?' }}</div>
           <div class="faixa">
@@ -100,6 +100,7 @@ import { ref, computed, onMounted } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
+import { urlImagem } from '../lib/imagens.js'
 import TituloHUD from '../components/TituloHUD.vue'
 
 const auth = useAuthStore()
