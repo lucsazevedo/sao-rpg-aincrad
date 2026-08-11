@@ -1,0 +1,219 @@
+🛡️ Categoria: Armaduras
+🟢 Dificuldade 6-
+1. Vestimenta de Aventureiro
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro Cru
+1x Fibra Vegetal
+1x Linha Resistente
+Ferramentas
+Agulha de Coureiro
+Bancada de Trabalho
+Produz
+1x Vestimenta de Aventureiro
+2. Armadura de Couro Simples
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+5x Couro Curtido
+1x Linha Reforçada
+1x Resina Natural
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Armadura de Couro Simples
+3. Armadura de Couro Reforçado
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+6x Couro Grosso
+2x Placa de Ferro Pequena
+1x Linha Resistente
+Ferramentas
+Bancada de Trabalho
+Martelo de Ferreiro
+Produz
+1x Armadura de Couro Reforçado
+4. Colete do Caçador
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+4x Couro de Lobo
+1x Pena de Ave Grande
+1x Fibra Forte
+Ferramentas
+Agulha de Coureiro
+Bancada de Trabalho
+Produz
+1x Colete do Caçador
+5. Armadura de Ferro Leve
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+4x Barra de Ferro
+2x Couro Curtido
+1x Rebite de Ferro
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Armadura de Ferro Leve
+6. Armadura do Soldado
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+5x Barra de Ferro
+2x Couro Reforçado
+1x Placa de Ferro
+Ferramentas
+Bigorna
+Martelo de Ferreiro
+Produz
+1x Armadura do Soldado
+7. Armadura Escamada
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+4x Escama de Monstro
+2x Barra de Ferro
+1x Couro Grosso
+Ferramentas
+Bigorna
+Bancada de Montagem
+Produz
+1x Armadura Escamada
+8. Armadura do Guarda
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+6x Barra de Ferro
+1x Couro Nobre
+1x Placa Reforçada
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Armadura do Guarda
+9. Armadura do Mercenário
+
+Profissão: Coureiro/Ferreiro • Dificuldade: 6-
+
+Materiais
+3x Couro Grosso
+3x Barra de Ferro
+1x Tecido Resistente
+Ferramentas
+Bancada de Trabalho
+Bigorna
+Produz
+1x Armadura do Mercenário
+10. Armadura de Batalha Inicial
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+7x Barra de Ferro
+2x Couro Reforçado
+1x Pedra de Amolar
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Armadura de Batalha Inicial
+🔵 Dificuldade 7-9
+11. Armadura de Aço
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+8x Barra de Aço
+2x Couro Nobre
+1x Carvão Refinado
+Ferramentas
+Bigorna Pesada
+Fornalha Avançada
+Produz
+1x Armadura de Aço
+12. Armadura do Cavaleiro
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+8x Placa de Aço
+2x Couro Reforçado
+1x Cristal de Defesa
+Ferramentas
+Bigorna Pesada
+Martelo de Precisão
+Produz
+1x Armadura do Cavaleiro
+13. Armadura do Guardião
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+6x Placa de Aço
+2x Cristal de Defesa
+1x Núcleo de Monstro
+Ferramentas
+Bigorna
+Ferramentas de Precisão
+Produz
+1x Armadura do Guardião
+🔴 Dificuldade 10+
+14. Armadura Celestial
+
+Profissão: Ferreiro • Dificuldade: 10+
+
+Materiais
+8x Liga de Mithril
+2x Cristal Luminoso
+1x Núcleo de Guardião
+1x Essência Divina
+Ferramentas
+Bigorna Ancestral
+Fornalha Lendária
+Produz
+1x Armadura Celestial
+✨ Efeito da Armadura — Luz Protetora
+
+A armadura reage ao perigo antes que o usuário perceba.
+
+Quando sofrer uma ameaça extrema:
+
+Pode criar uma proteção inesperada.
+Pode revelar a origem de um ataque.
+Pode permitir uma reação defensiva impossível.
+15. Armadura Lendária de Aincrad
+
+Profissão: Ferreiro • Dificuldade: 10+
+
+Materiais
+10x Liga de Mithril
+3x Cristal Prismático
+1x Núcleo de Chefe
+1x Essência Lendária
+Ferramentas
+Bigorna Ancestral
+Fornalha Lendária
+Produz
+1x Armadura Lendária de Aincrad
+✨ Efeito da Armadura — Vontade Inquebrável
+
+Uma armadura criada para aqueles que recusam cair.
+
+Quando o usuário proteger alguém ou enfrentar uma situação impossível:
+
+Pode permanecer lutando mesmo sob grande pressão.
+Pode transformar resistência em vantagem.
+Pode inspirar aliados próximos.

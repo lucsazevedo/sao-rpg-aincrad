@@ -45,9 +45,25 @@ pra crescer quando a mesa chegar lá.
   real (Conhecimento sem item Raro em arma) foi corrigido.
 - **VTT (Foundry ou qualquer outro) está fora de escopo, por decisão do
   usuário.** `base/foundry_sistema/` continua vazia de propósito — não é
-  pendência, é escopo explicitamente descartado. O Compêndio HTML
-  (`scripts/web/compendio_andar1.html`) é o único "app" que este projeto
-  precisa.
+  pendência, é escopo explicitamente descartado.
+- **Direção atual (10/08): migrar tudo pra `scripts/app/` (Vue 3 + Vite +
+  Supabase) e aposentar HTML/`.md` como fonte viva.** O Compêndio HTML
+  (`scripts/web/compendio_andar1.html`) continua funcionando por enquanto,
+  mas deixou de ser "o único app" — é o legado sendo substituído. Todo
+  conteúdo do jogo já está no banco (ver `scripts/db/schema*.sql` +
+  `scripts/app/src/lib/tabelasAdmin.js`, que cobre praticamente toda
+  tabela). `scripts/app/src/views/Mestre.vue` é a visão do mestre nova:
+  dashboard, CRUD completo de conteúdo (aba Compêndio), gestão de
+  jogadores/mercado/inventário, e a aba **Mesa & Sessão** (relógios
+  narrativos, preparação de raid, favor/suspeita, log de sessão, condições
+  por jogador, rastreador de golpes de combate, segredos/puzzles do mapa,
+  raros do andar — tudo no banco, mestre-only via RLS). Views de jogador
+  (`Home`, `Ficha`, `Tarefas`, `Profissoes`, `Mercado`, `PetsTab`) também já
+  existem; `Equipamentos.vue` é a exceção — está escrito mas não funciona
+  contra o schema real (ver achado em `dolist/08_equipamento_inventario.md`).
+  As páginas antigas em `scripts/web/*.html` (compêndio, painel, admin,
+  personagens, etc.) ainda não foram retiradas — próxima decisão do usuário
+  é quando cortar o legado de vez.
 
 ## O sistema de jogo
 
@@ -76,14 +92,11 @@ fotografados).
   `guia_sistema_aincrad.md`): zona segura bloqueia todo PvP por sistema;
   fora dela, Duelo Selado (sem risco de morte) ou Duelo de Sangue
   (consensual, risco real); PK confirmado derruba Suspeita pra -3 na hora.
-- **Doma (Domador):** mesma lógica de barra de sucessos do combate — N
-  sucessos em 2d6+Técnica antes de 2 falhas, N escala com o tier de ameaça.
-  Tabela completa em `docs/economia_profissoes.md`.
+- **Domador → Criador:** Doma REMOVIDA. Pet = craft via Ovo de Fera + Incubadora (desbloqueada por nível de profissão). Ovo choca em tempo real, pet escala com raridade + espécie de origem. Ver `docs/economia_profissoes.md`.
 - **Raridade (material):** Comum → Incomum → Raro → Épico (só chefe).
   **Raridade (equipamento):** Comum → Incomum → Raro → Único.
 - **Cristais (6 tipos):** Teleporte, Cura, Antídoto, Luz, Barreira, Outros.
-- **4 elementos** (Fogo, Trovão, Gelo, Veneno) — nunca somam número, negam
-  a reação do monstro na fraqueza certa. Ver `docs/elementos_andar1.md`.
+- **Fraqueza por atributo** (Corpo, Reflexo, Conhecimento, Espírito, Técnica) — acerta a fraqueza: 7-9 vira 10+, 10+ tira capacidade do monstro pelo resto da cena. Não soma bônus numérico externo. Ver `docs/elementos_andar1.md`.
 
 ## Estrutura de pastas
 
@@ -155,15 +168,16 @@ final — 0 referências quebradas de `requer`/`desbloqueia`.
 ### Crônicas de Aincrad — Temporada 1 (50 one-shots)
 
 `cenas/cronicas_de_aincrad_indice.md` + `cenas/cronicas_de_aincrad_ep01_25.md`
-+ `..._ep26_50.md` — 50 episódios standalone (qualquer trio pode jogar
-qualquer um), organizados em **Arco A** (vida cotidiana em Aincrad, a
-maioria) e **Arco B** ("Cardinal", 17 episódios formando um mistério
-contínuo sobre a natureza do próprio Aincrad, sem nunca contradizer
-`docs/misterio_andar2.md`). Elenco recorrente com fichas próprias:
-`npcs/o_sentado.md`, `npcs/mercador_de_memorias.md`,
-`npcs/crianca_da_floresta.md`; monstros/entidades:
-`monstros/enxame_de_abelhas_douradas.md`, `monstros/slime.md`,
-`monstros/sem_cor.md`. Integrado ao Compêndio (aba **Crônicas** própria).
+
+- `..._ep26_50.md` — 50 episódios standalone (qualquer trio pode jogar
+  qualquer um), organizados em **Arco A** (vida cotidiana em Aincrad, a
+  maioria) e **Arco B** ("Cardinal", 17 episódios formando um mistério
+  contínuo sobre a natureza do próprio Aincrad, sem nunca contradizer
+  `docs/misterio_andar2.md`). Elenco recorrente com fichas próprias:
+  `npcs/o_sentado.md`, `npcs/mercador_de_memorias.md`,
+  `npcs/crianca_da_floresta.md`; monstros/entidades:
+  `monstros/enxame_de_abelhas_douradas.md`, `monstros/slime.md`,
+  `monstros/sem_cor.md`. Integrado ao Compêndio (aba **Crônicas** própria).
 
 ### Bestiário — 49 criaturas (45 andar 1 + 4 andar 2)
 

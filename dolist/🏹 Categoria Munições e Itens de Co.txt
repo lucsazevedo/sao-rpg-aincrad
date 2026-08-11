@@ -1,0 +1,249 @@
+🏹 Categoria: Munições e Itens de Combate
+
+Em Sword Art Online, jogadores que usam arco, besta ou estilos de combate mais estratégicos precisam de consumíveis preparados antes das batalhas.
+
+Esta categoria inclui:
+
+🏹 Flechas especiais
+🔩 Virotes para besta
+💣 Bombas e explosivos de suporte
+🪤 Armadilhas
+⚔️ Itens temporários de combate
+🧪 Frascos ofensivos
+
+Distribuição:
+
+🟢 Dificuldade 6- → Equipamentos comuns
+🔵 Dificuldade 7-9 → Equipamentos avançados
+🔴 Dificuldade 10+ → Equipamentos raros com efeitos únicos
+
+🟢 Dificuldade 6-
+Munições e Itens Comuns
+🏹 Flecha Simples
+
+Profissão: Arqueiro/Flecheiro • Dificuldade: 6-
+
+Materiais
+1x Madeira Leve
+1x Pena de Ave
+1x Ponta de Ferro
+Produz
+10x Flechas Simples
+Efeito
+
+Munição básica para arco.
+
+🏹 Flecha Perfurante
+Materiais
+1x Madeira Resistente
+1x Ponta de Ferro Afiada
+1x Pena
+Produz
+10x Flechas Perfurantes
+Efeito
+
+Melhor contra armaduras leves.
+
+🏹 Flecha Incendiária
+Materiais
+10x Flechas Simples
+1x Óleo
+1x Cristal de Fogo Pequeno
+Produz
+10x Flechas Incendiárias
+Efeito
+
+Pode causar queimadura ou incendiar objetos.
+
+🔩 Virote Simples
+Materiais
+Madeira Leve
+Ponta de Ferro
+Pena Pequena
+Produz
+10x Virotes
+🔩 Virote Perfurante
+Materiais
+Madeira Resistente
+Ponta de Aço
+Pedra de Amolar
+Produz
+10x Virotes Perfurantes
+💣 Bomba de Fumaça
+Materiais
+Carvão
+Erva Escura
+Frasco Vazio
+Efeito
+
+Cria uma área de fumaça.
+
+Usos:
+
+Fugir.
+Esconder aliados.
+Criar oportunidade.
+💣 Bomba Cegante
+Materiais
+Cristal Luminoso
+Pó Mineral
+Frasco Vazio
+Efeito
+
+Libera uma luz intensa.
+
+🪤 Armadilha Simples
+Materiais
+Madeira
+Corda
+Ferro
+Efeito
+
+Prende criaturas pequenas.
+
+🧴 Óleo Escorregadio
+Materiais
+Óleo Natural
+Erva Lubrificante
+Efeito
+
+Cria uma área difícil de atravessar.
+
+🔵 Dificuldade 7-9
+Munições Avançadas
+🏹 Flecha Elemental
+Materiais
+10x Flechas Perfurantes
+1x Cristal Elemental
+1x Essência Mágica
+Produz
+10x Flechas Elementais
+Efeito
+
+Escolha:
+
+🔥 Fogo
+❄️ Gelo
+⚡ Raio
+🌪️ Vento
+
+A flecha recebe propriedade elemental.
+
+🏹 Flecha Rastreadora
+Materiais
+Flecha Perfeita
+Cristal de Localização
+Essência de Monstro
+Produz
+5x Flechas Rastreadoras
+Efeito
+
+Ao atingir um alvo:
+
+Permite acompanhar sua localização.
+Facilita perseguições.
+🔩 Virote Explosivo
+Materiais
+Virote de Aço
+Pólvora
+Cristal de Fogo
+Produz
+5x Virotes Explosivos
+Efeito
+
+Ao atingir:
+
+Causa impacto em área pequena.
+💣 Bomba Congelante
+Materiais
+Cristal de Gelo
+Água Cristalizada
+Frasco Reforçado
+Efeito
+
+Pode reduzir movimento de inimigos.
+
+🧪 Veneno de Monstro
+Materiais
+Veneno Natural
+Ervas Sombras
+Frasco Especial
+Efeito
+
+Aplica efeito negativo temporário.
+
+🪤 Armadilha do Caçador
+Materiais
+Ferro Reforçado
+Corda Forte
+Presa de Monstro
+Efeito
+
+Prende criaturas médias.
+
+🔴 Dificuldade 10+
+Munições Lendárias
+🏹 Flecha do Dragão Celestial
+Materiais
+10x Flechas Perfeitas
+2x Escama de Dragão
+1x Cristal Elemental Supremo
+✨ Efeito — Chama Celestial
+
+Ao atingir:
+
+Libera energia elemental.
+Pode atravessar defesas.
+Causa uma grande abertura no inimigo.
+🏹 Flecha Fantasma
+Materiais
+Madeira Ancestral
+Cristal Sombrio
+Essência Espiritual
+✨ Efeito — Disparo Invisível
+
+A flecha:
+
+É difícil de detectar.
+Pode surpreender inimigos.
+Ignora algumas proteções.
+💣 Bomba do Caos
+Materiais
+Cristal Prismático
+Essência Elemental
+Núcleo de Monstro Chefe
+✨ Efeito — Explosão Variável
+
+Ao explodir:
+
+Escolha um efeito:
+
+🔥 Fogo
+❄️ Gelo
+⚡ Raio
+🌑 Trevas
+🌪️ Vento
+
+💎 Cristal de Impacto Supremo
+Materiais
+Cristal Prismático
+Núcleo de Guardião
+Essência Lendária
+✨ Efeito — Ruptura
+
+Quando usado:
+
+Aumenta o impacto de um ataque.
+Pode quebrar uma defesa.
+Cria uma abertura para aliados.
+🪤 Armadilha do Predador Ancestral
+Materiais
+Metal Lendário
+Cristal de Controle
+Núcleo de Chefe
+✨ Efeito — Prisão Absoluta
+
+Quando ativada:
+
+Pode impedir o movimento de uma criatura poderosa.
+Cria uma grande vantagem estratégica.

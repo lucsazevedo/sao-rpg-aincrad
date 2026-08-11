@@ -62,15 +62,36 @@ material solto. Por isso o tamanho subiu de M pra **M–G** — o esqueleto
 (schema + regra) é médio, mas ele não para de crescer conforme o bestiário
 cresce.
 
-## Preciso saber
+## ✅ Resolvido em parte (10/08) — catálogo populado a partir do roster (item 4)
+
+**Achado que corrige uma suposição deste arquivo**: no roster de verdade,
+**cristal não é exclusivo de Boss** — Mini Boss e MVP também têm cristal
+próprio nomeado (ex. Alfa Lupino/mini_boss → "Cristal Selvagem"). A
+tabela de "o que dropa por categoria" no topo deste arquivo está com essa
+premissa errada — Boss é só quem tem MAIS coisa (crafting+equipável+
+carta+cristal), não quem tem cristal *sozinho*.
+
+Importado (`scripts/db/_importar_bestiario.py`, reaproveita o parse do
+item 4): **150 cartas** e **57 cristais únicos** em `cartas`/`cristais`
+(já existiam vazias no schema). `raridade`/`tipo_bonus` preenchidos por
+heurística (categoria do monstro de origem → raridade; palavra-chave no
+nome → tipo_bonus, dos 4 valores que o CHECK do banco já trava:
+atributo/dano/resist/especial). **Descrição/efeito de cada carta e
+cristal ficou como placeholder** ("efeito ainda não definido") — isso é
+justamente o que as perguntas abaixo pediam e eu não inventei 200+ textos
+de efeito sem direção sua.
+
+**Slot de carta equipada**: já resolvido sem precisar de trabalho novo —
+`Equipamentos.vue` (rescrito no item 8) já tem o slot "Carta Equipada" no
+paper doll, um só, igual pedido aqui.
+
+## Preciso saber (ainda em aberto — conteúdo, não schema)
 
 - A carta dá bônus em qual tipo de coisa — atributo, dano, resistência,
-  algo narrativo (tipo as Especialidades do sistema de Evolução)? (Vale só
-  pra quando o jogador leva o item pra mesa — no online não tem efeito.)
-- Ela é **igual a "Único"** no catálogo atual (uma unidade no andar inteiro,
-  paga um preço) ou mais comum que isso, tipo Raro?
-- **Cristal** (novo, exclusivo de Boss): o que ele faz? Ideias possíveis —
-  encaixa num equipamento como um segundo slot de bônus (tipo socket),
-  vira ingrediente pra craft de raridade mais alta, ou é o "abrir uma
-  Especialidade nova" do sistema de Evolução. Preciso de direção antes de
-  desenhar o schema dele.
+  algo narrativo? (`tipo_bonus` já tem as 4 opções no banco, só falta
+  confirmar/ajustar carta por carta, hoje é heurística de nome.)
+- Ela é igual a "Único" (uma unidade no andar inteiro) ou mais comum, tipo
+  Raro? (Hoje mapeei raridade da carta pela categoria do monstro:
+  mini_boss→Incomum, mvp→Raro, boss→Épico — não usei "Único".)
+- **Cristal**: o que ele faz de verdade (socket, ingrediente de craft,
+  Especialidade nova)? Catálogo existe (57 nomes), efeito não.

@@ -64,16 +64,55 @@ o jogador pode upar independente do próprio nível.
 4. Atualizar a ficha de Domador em `docs/oficios_andar1.md` mencionando a
    nova via de vínculo.
 
-## Preciso saber
+## ✅ Resolvido (10/08) — achado que a mecânica já estava quase toda construída
 
-- Ovo é item que dropa de **qualquer** fera domável, ou só de bichos
-  específicos escolhidos a dedo?
-- O pet nascido de ovo **substitui** a doma de bicho adulto que o Domador já
-  faz hoje (`Move de Ofício — Doma`), ou os dois convivem (doma no campo
-  pra vínculo grande, ovo pra pet-item mais rápido/descartável)?
-- Efeito do pet escala só com raridade (igual item comum), ou também com o
-  tipo de monstro de origem (ovo de monstro forte vira pet melhor mesmo em
-  raridade Comum)?
-- Incubadora sobe de nível como — craft (upgrade material), compra direta
-  no mercado, ou Marco/conquista? E quantos níveis ela tem (curva curta
-  tipo 3-5 degraus, ou mais longa igual profissão)?
+Varredura encontrou: `chocar_ovo`/`verificar_chocagem` (RPCs), `ovos_catalogo`
+(12 ovos já curados: Rato Gigante → Fênix Bebê, raridade/nível/incubadora_min
+progressivos), 4 receitas de Incubadora já escritas (Pequena→Média→Sagrada→
+Primordial, a última em refino 2 estágios), e `PetsTab.vue` inteiro
+funcional (3 abas: Meus Ovos → Chocar → Incubando com timer ao vivo →
+Ativos). Isso **já responde as perguntas antigas** sem eu ter que inventar:
+
+- **Ovo é curado, não "qualquer bicho"** — 12 espécies específicas hoje.
+- **Substitui, não convive** — Doma (bicho adulto) já estava marcada
+  removida em `docs/visao_geral.md`; não tem "os dois". A Move de Ofício
+  do Domador em `moves_profissao` ainda estava com o texto antigo de Doma
+  (nunca atualizada) — troquei pelo texto real de "Ovo de Fera"
+  (`dolist/Domador.png`, PBTA +Técnica, Complicou/Parcial/Total).
+- **Escala só por raridade** — `ovos_catalogo.efeitos_padrao` por ovo,
+  sem termo de "espécie mais forte = pet melhor" fora da raridade.
+- **Incubadora sobe por craft**, 4 estágios (curva curta) — já decidido
+  nas receitas existentes.
+
+**O que estava genuinamente quebrado (corrigido em
+`scripts/db/schema_incubadora_e_ovos.sql`):**
+
+1. `ferramentas_oficio` (de onde `chocar_ovo` lê o nível da incubadora)
+   não tinha **nenhuma linha** — craftar a Incubadora "funcionava"
+   (upsert em `personagem_ferramentas`) mas o nível nunca existia em
+   lugar nenhum pra ler; todo Domador ficava travado em nível 1 pra
+   sempre. Criadas as 4 linhas (níveis 1/2/3/5 — pulei o 4 de propósito,
+   os nomes Sagrada→Primordial já eram um salto direto nas receitas
+   originais).
+2. `criaturas_domadas.monstro_id` tinha **FK pra `monstros`**, mas 10 dos
+   12 `ovos_catalogo.monstro_id` são espécie "roster" do item 4 (nome
+   existe, ficha jogável completa ainda não foi escrita — projeto GG à
+   parte). Isso quebrava `chocar_ovo` com erro de FK pra 10 de 12 ovos.
+   FK removida — pet não deveria depender de o monstro de origem já ter
+   ficha de combate completa.
+3. ✅ **Nenhuma missão tinha `drop_item_id` apontando pra um ovo** —
+   fechado numa rodada seguinte. `n1-caca-ratos`→`ovo_ratogig` já casava
+   com missão existente; as outras 11 espécies ganharam missão de caça
+   nova cada (decisão do usuário: "escrever missão de caça nova pra cada
+   espécie"), em `scripts/db/_seed_missoes_ovos.py`. **12 de 12 ovos com
+   fonte real agora.**
+4. ✅ Achado testando as missões novas: `aceitar_e_resolver_missao`
+   quebrava (erro de SQL cru) sempre que o drop de qualquer missão
+   não-arma realmente caía — bug preexistente que afetava **80 das 100
+   missões do jogo**, não só as de ovo. Corrigido — detalhe em
+   `docs/pendencias.md`.
+
+Testado de ponta a ponta com rollback: chocar sem incubadora suficiente
+bloqueia com a mensagem certa, craftar/possuir a ferramenta libera o
+nível certo, chocar com sucesso cria a criatura "incubando", e
+`verificar_chocagem` depois do tempo passar vira "ativo".

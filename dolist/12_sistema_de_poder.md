@@ -57,12 +57,44 @@ que a régua agora é Nível, não Poder.
   travava nisso porque Poder somava equipamento; Nível de Profissão já
   existe independente de inventário.
 
-## Preciso saber
+## Preciso saber — respondido (10/08)
 
-- Fórmula de chance por diferença de Nível: degrau fixo por ponto de
-  diferença, ou curva (ex: cada nível abaixo soma X% de risco, com teto)?
-- O bônus por acertar a fraqueza de atributo é fixo (ex: sempre soma X% de
-  chance) ou escala com o Nível da arma/profissão usada?
-- Tentar acima do que o Nível recomenda e **ter sucesso mesmo assim** — dá
-  o drop cheio, ou um drop "raspando" (menor)? Isso muda se vale a pena
-  arriscar de propósito ou só em desespero.
+- **Degrau fixo por ponto** de diferença de Nível (escolhido) — e, achado
+  numa varredura desta rodada: **isso já existe no servidor.** A RPC
+  `aceitar_e_resolver_missao` já calcula `v_dif = nivel_profissao -
+  missao.nivel_min` e converte num modificador de 2d6 em degrau (≥+2→+3,
+  +1→+1, 0→0, -1→-1, ≤-2→-3), rola de verdade no banco (não é decorativo)
+  e resolve em sucesso_total/parcial/falha — o mesmo padrão PBTA da mesa.
+  Não escrevi essa parte porque já estava certa; só corrigi o que exibia
+  errado (ver abaixo).
+- ✅ **Bônus de fraqueza de atributo: fixo (+1 no mod de 2d6), implementado
+  e testado.** A migração rodou (confirmada por você), `atributo_fraqueza`
+  ficou 54/54 preenchido. Implementado em `combater_monstro` (item 17):
+  compara `armas.atributo` da arma equipada com `monstros.atributo_fraqueza`
+  do alvo, soma +1 ao mod se bater. UI mostra "⚡ sua arma bate a fraqueza"
+  no card do monstro em `/combate`. **Escopo**: só no combate assíncrono
+  (item 17), que já tem `monstro_id` de verdade — não implementado em
+  `aceitar_e_resolver_missao` (item 6), cujo `alvo` é texto livre
+  (`missoes_quadro.alvo`, ex. "Guerreiro Kobold") sem link direto pra
+  `monstros`; casar os dois por nome seria mais frágil e exigiria editar de
+  novo uma função já grande — deixei de fora por segurança, não por
+  esquecimento.
+- Achado extra no caminho: `armas.atributo` tinha grafia inconsistente
+  (`Tecnica`/`Espirito` sem acento em 9 linhas, coexistindo com
+  `Técnica`/`Espírito` acentuado no resto) — o bônus de fraqueza nunca ia
+  bater pra essas 9 armas. Corrigido, todas as 22 usam a mesma grafia agora.
+- **Sucesso acima do nível recomendado → drop cheio** (escolhido) — já é
+  o comportamento de fato: a RPC não tem regra especial pra "acima do
+  nível", só resolve pela soma de 2d6+mod normalmente (sucesso_total =
+  prêmio cheio, sucesso_parcial = reduzido, não há terceira categoria
+  "raspando acima do nível").
+
+## Corrigido nesta rodada — prévia de chance no site mentia
+
+`Tarefas.vue` mostrava uma % de chance pro jogador **antes** de clicar
+numa missão, calculada com `personagens.nivel` — coluna que não existe
+(sempre 1). A rolagem de verdade no servidor sempre usou o Nível de
+Profissão certo; só a prévia no navegador estava presa em "nível 1 pra
+sempre", ficando cada vez mais pessimista conforme o jogador evoluía.
+Corrigido: busca `nivel_profissao` real do personagem/profissão ao montar
+a tela e usa isso na prévia.

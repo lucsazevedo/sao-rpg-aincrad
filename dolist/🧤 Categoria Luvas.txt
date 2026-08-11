@@ -1,0 +1,224 @@
+🧤 Categoria: Luvas
+
+Distribuição:
+
+🟢 10 Luvas — Dificuldade 6-
+🔵 3 Luvas — Dificuldade 7-9
+🔴 2 Luvas — Dificuldade 10+ com efeitos únicos
+🟢 Dificuldade 6-
+1. Luvas Simples
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+2x Couro Cru
+1x Linha Resistente
+1x Fibra Vegetal
+Ferramentas
+Bancada de Trabalho
+Agulha de Coureiro
+Produz
+1x Luvas Simples
+2. Luvas de Couro
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro Curtido
+1x Linha Reforçada
+1x Resina Natural
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Luvas de Couro
+3. Luvas do Trabalhador
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+2x Couro Grosso
+1x Tecido Resistente
+1x Fibra Forte
+Ferramentas
+Bancada de Trabalho
+Agulha
+Produz
+1x Luvas do Trabalhador
+4. Luvas do Caçador
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro de Lobo
+1x Garra de Fera
+1x Linha Reforçada
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Luvas do Caçador
+5. Luvas Reforçadas
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+3x Couro Grosso
+1x Placa de Ferro Pequena
+1x Linha de Aço
+Ferramentas
+Bancada de Trabalho
+Martelo Pequeno
+Produz
+1x Luvas Reforçadas
+6. Luvas de Ferro Leve
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+2x Barra de Ferro
+2x Couro Curtido
+1x Rebite de Ferro
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Luvas de Ferro Leve
+7. Luvas do Soldado
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+3x Barra de Ferro
+1x Couro Reforçado
+1x Placa de Ferro
+Ferramentas
+Bigorna
+Martelo de Ferreiro
+Produz
+1x Luvas do Soldado
+8. Luvas Escamadas
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+4x Escama de Monstro
+2x Couro Grosso
+1x Linha Resistente
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Luvas Escamadas
+9. Luvas do Ladrão
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro Fino
+1x Seda Resistente
+1x Linha Reforçada
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Precisão
+Produz
+1x Luvas do Ladrão
+10. Luvas de Batalha
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+4x Barra de Ferro
+2x Couro Reforçado
+1x Pedra de Amolar
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Luvas de Batalha
+🔵 Dificuldade 7-9
+11. Luvas de Aço
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+5x Barra de Aço
+2x Couro Nobre
+1x Carvão Refinado
+Ferramentas
+Bigorna Pesada
+Fornalha Avançada
+Produz
+1x Luvas de Aço
+12. Luvas do Duelista
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+4x Barra de Aço
+1x Cristal de Precisão
+1x Couro Reforçado
+Ferramentas
+Bigorna
+Ferramentas de Precisão
+Produz
+1x Luvas do Duelista
+13. Luvas do Guardião
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+5x Placa de Aço
+1x Cristal de Defesa
+1x Núcleo de Monstro
+Ferramentas
+Bigorna Pesada
+Martelo de Precisão
+Produz
+1x Luvas do Guardião
+🔴 Dificuldade 10+
+14. Luvas do Titã
+
+Profissão: Ferreiro • Dificuldade: 10+
+
+Materiais
+5x Liga de Mithril
+2x Cristal de Força
+1x Núcleo de Gigante
+Ferramentas
+Bigorna Rúnica
+Fornalha Lendária
+Produz
+1x Luvas do Titã
+✨ Efeito das Luvas — Força Colossal
+
+As luvas amplificam a força física do usuário.
+
+Quando realizar uma ação de força:
+
+Pode superar limitações normais.
+Pode manipular objetos muito pesados.
+Pode transformar esforço bruto em uma grande vantagem.
+15. Luvas Lendárias de Aincrad
+
+Profissão: Artesão • Dificuldade: 10+
+
+Materiais
+6x Liga de Mithril
+2x Cristal Prismático
+1x Núcleo de Chefe
+1x Essência Lendária
+Ferramentas
+Bancada Ancestral
+Ferramentas Lendárias
+Produz
+1x Luvas Lendárias de Aincrad
+✨ Efeito das Luvas — Domínio Perfeito
+
+Uma criação feita para mestres de qualquer arma.
+
+Quando utilizar técnica ou habilidade:
+
+Pode executar movimentos com precisão extrema.
+Pode reduzir erros em ações delicadas.
+Pode transformar conhecimento em vantagem.

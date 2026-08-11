@@ -1,0 +1,251 @@
+💎 Categoria: Cristais de SAO
+
+Os cristais são alguns dos itens mais importantes de Sword Art Online. Eles funcionam como ferramentas de emergência, suporte e estratégia.
+
+Diferente das poções, os cristais possuem uma ativação instantânea: o jogador quebra ou ativa o cristal para liberar seu efeito.
+
+Distribuição:
+
+🟢 Dificuldade 6- → Cristais Comuns
+🔵 Dificuldade 7-9 → Cristais Avançados
+🔴 Dificuldade 10+ → Cristais Raros/Lendários
+
+🟢 Dificuldade 6-
+Cristais Comuns
+💎 Cristal de Cura
+
+Profissão: Cristalista/Alquimista • Dificuldade: 6-
+
+Materiais
+1x Cristal Verde
+2x Erva Curativa
+1x Essência Vital
+Produz
+1x Cristal de Cura
+Efeito
+
+Ao quebrar:
+
+Recupera vida imediatamente.
+Pode ser usado em aliados próximos.
+💎 Cristal de Purificação
+Materiais
+1x Cristal Branco
+2x Erva Purificadora
+1x Água Sagrada
+Efeito
+
+Remove:
+
+Veneno comum.
+Doenças simples.
+Efeitos negativos leves.
+💎 Cristal de Luz
+Materiais
+1x Cristal Luminoso
+1x Fragmento Mágico
+Efeito
+
+Cria uma luz intensa durante uma cena.
+
+Usado para:
+
+Exploração.
+Cidades.
+Cavernas.
+💎 Cristal de Mensagem
+Materiais
+1x Cristal Azul
+1x Fragmento Mágico
+Efeito
+
+Permite comunicação à distância.
+
+💎 Cristal de Visão
+Materiais
+1x Cristal Claro
+1x Essência Lunar
+Efeito
+
+Melhora percepção.
+
+Permite:
+
+Enxergar no escuro.
+Encontrar rastros.
+Observar detalhes ocultos.
+💎 Cristal de Respiração
+Materiais
+1x Cristal Azul
+1x Erva Aquática
+Efeito
+
+Permite respirar em ambientes difíceis.
+
+💎 Cristal de Calor
+Materiais
+1x Cristal Vermelho
+1x Essência Flamejante
+Efeito
+
+Protege contra frio extremo.
+
+💎 Cristal de Água
+Materiais
+1x Cristal Azul
+1x Essência Aquática
+Efeito
+
+Cria água limpa para consumo.
+
+💎 Cristal de Armazenamento
+Materiais
+1x Cristal Pequeno
+1x Fragmento Dimensional
+Efeito
+
+Permite guardar pequenos itens.
+
+💎 Cristal de Retorno
+Materiais
+1x Cristal Azul
+1x Essência Espacial
+Efeito
+
+Retorna para um ponto seguro registrado.
+
+🔵 Dificuldade 7-9
+Cristais Avançados
+💎 Cristal de Teleporte
+
+(Inspirado diretamente nos cristais usados em SAO)
+
+Materiais
+2x Cristal Azul
+1x Fragmento Dimensional
+1x Essência Espacial
+Efeito
+
+Permite teleportar para:
+
+Cidades.
+Áreas registradas.
+Pontos de encontro.
+💎 Cristal de Teleporte em Grupo
+Materiais
+3x Cristal Azul
+1x Cristal de Retorno
+1x Essência Espacial
+Efeito
+
+Transporta:
+
+O usuário.
+Aliados próximos.
+💎 Cristal de Detecção
+Materiais
+2x Cristal Claro
+1x Cristal de Visão
+1x Essência Mística
+Efeito
+
+Revela:
+
+Criaturas próximas.
+Armadilhas.
+Objetos escondidos.
+💎 Cristal de Barreira
+Materiais
+2x Cristal de Defesa
+1x Essência Protetora
+Efeito
+
+Cria uma proteção temporária.
+
+💎 Cristal de Camuflagem
+Materiais
+2x Cristal Sombrio
+1x Essência Oculta
+Efeito
+
+Dificulta ser encontrado.
+
+💎 Cristal Elemental
+Materiais
+2x Cristal Elemental
+1x Fragmento Mágico
+Efeito
+
+Libera energia elemental:
+
+🔥 Fogo
+❄️ Gelo
+⚡ Raio
+🌪️ Vento
+
+🔴 Dificuldade 10+
+Cristais Lendários
+💎 Cristal de Ressurreição
+Materiais
+3x Cristal Prismático
+1x Essência da Vida
+1x Núcleo de Chefe
+✨ Efeito — Última Esperança
+
+Um cristal extremamente raro.
+
+Permite:
+
+Evitar uma consequência fatal.
+Salvar alguém em uma situação crítica.
+💎 Cristal Supremo de Teleporte
+Materiais
+4x Cristal Azul Perfeito
+2x Essência Espacial
+1x Núcleo Ancestral
+✨ Efeito — Portal Supremo
+
+Permite:
+
+Teleportar grandes grupos.
+Alcançar locais extremamente distantes.
+Criar rotas estratégicas.
+💎 Cristal do Administrador
+Materiais
+3x Cristal Prismático
+1x Núcleo de Chefe
+1x Essência do Sistema
+✨ Efeito — Controle do Sistema
+
+Um cristal quase impossível de existir.
+
+Permite:
+
+Interagir com sistemas especiais.
+Ativar mecanismos antigos.
+Revelar informações ocultas.
+💎 Cristal da Alma
+Materiais
+3x Cristal Espiritual
+2x Cristal Prismático
+1x Essência Lendária
+✨ Efeito — Espírito Inquebrável
+
+Quando ativado:
+
+Fortalece a determinação do usuário.
+Protege contra efeitos mentais.
+Permite superar limitações.
+💎 Cristal do Herói de Aincrad
+Materiais
+5x Cristal Prismático
+1x Núcleo de Chefe Final
+1x Essência Lendária
+✨ Efeito — Legado do Jogador
+
+O cristal guarda a vontade de grandes aventureiros.
+
+Quando usado:
+
+Concede uma grande vantagem em uma cena decisiva.
+Pode mudar o rumo de uma batalha.

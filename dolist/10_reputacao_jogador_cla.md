@@ -38,8 +38,31 @@ a área/missão que exige reputação mínima, etc.
 
 ## Preciso saber
 
-- Reputação de jogador é só com o **próprio clã**, ou também com cada um
-  dos outros 5 (tipo hoje já existe clã→cidade, ficaria jogador→clã pros 6)?
+- ~~Reputação de jogador é só com o próprio clã, ou também com cada um dos
+  outros 5?~~ **Respondido (10/08): universo inteiro** — cidades, vilas e
+  NPCs, não só os 6 clãs. Ver "Resolvido" abaixo.
 - As "mordomias" são coisa do jogo online (desconto, acesso) ou também
   afetam a mesa de RPG (o Favor/Suspeita já documentado passa a ser
-  alimentado pelas ações do site, em vez de só anotado pelo mestre)?
+  alimentado pelas ações do site, em vez de só anotado pelo mestre)? —
+  **ainda em aberto**, não decidido nesta rodada. Implementado por enquanto
+  só como registro (número + histórico); nenhuma mordomia concreta
+  (desconto, acesso condicionado) foi ligada ainda — é conteúdo, não schema.
+
+## ✅ Resolvido (10/08) — schema, trigger e UI
+
+- `reputacao_personagem.cla_nome` (FK pra `clas`, só 6 valores possíveis)
+  virou `alvo_nome` (texto livre, sem FK) + `alvo_tipo`
+  (`cla/cidade/vila/npc/faccao/outro`) — `scripts/db/schema_reputacao_universal.sql`.
+  Mesma mudança em `missoes_quadro.reputacao_cla_nome` → `reputacao_alvo_nome`
+  (+ `reputacao_alvo_tipo`), hoje sem nenhuma missão usando ainda (conteúdo
+  pendente, não é bug).
+- **Ganho automático por missão**: trigger `reputacao_por_missao` em
+  `missao_diaria` — quando uma missão concluída tem `reputacao_alvo_nome`/
+  `reputacao_delta`, soma automático (clampado -3..+3) sem precisar de
+  código novo no app. Testado ponta a ponta com rollback.
+- **Mestre ajusta na mão**: RPC `mestre_ajustar_reputacao`, gated por
+  `is_mestre()` — jogador **não pode** editar a própria reputação (RLS
+  bloqueia insert/update direto na tabela também, testado). UI em
+  `Mestre.vue`, dentro da ficha de cada jogador.
+- **Leitura pro jogador**: `Ficha.vue` mostra a lista de relações do
+  próprio personagem (read-only).

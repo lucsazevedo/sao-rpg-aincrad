@@ -25,6 +25,10 @@ fases). RAG fica de propósito fora desta lista — combinado que é o último.
 | 12 | [Chance de sucesso por Nível (Poder por equipamento removido)](12_sistema_de_poder.md) | **M** | Poder por equipamento foi descartado — item do online não tem efeito online (ver item 8), então quem trava risco agora é só o Nível de Profissão (item 5) |
 | 13 | [Remover sistema elemental, trocar por fraqueza de atributo](13_remover_elementos.md) | **M** | Decisão maior de jogo inteiro (mesa + site), não só do online |
 | 14 | [Ferramentas de ofício (bônus de sucesso em craft)](14_ferramentas_de_oficio.md) | **M** | Nasceu do Domador (Incubadora); multiplicador local por ação, separado do Nível de Profissão geral |
+| 15 | [Estalagem: recuperar Fôlego gastando Col](15_estalagem_recuperar_folego.md) | **P** | 3 pacotes (+1, +5, encher tudo) — atalho pago para não esperar os 30min/passo de regeneração |
+| 16 | [Ferramentas obrigatórias + Refino + Painel Profissões](16_ferramentas_refino_painel_profissoes.md) | **M–G** | 3 em 1: ferramenta como requisito duro para ação, refino 2 estágios MP→intermediário→final, painel 4×4 compacto com 16 barras de nível estilo Gates of Survival |
+| 17 | [Combate assíncrono free-roam (chance % + Vida → Estalagem)](17_combate_assincrono_chance_vida.md) | **G** | Quadro de monstros separado de missões; chance % mostrada ao jogador = servidor rola 2d6 PBTA (sucesso total/parcial/falha); vida nova coluna em personagens; derrota = redireciona pra estalagem |
+| 18 | [Cooperação 30 jogadores (envios P2P, Baú de clã, Metas globais)](18_cooperacao_30jogadores.md) | **GG** | 3 submódulos independentes: A) correio/enviar Col+item entre jogadores; B) baú/cofre de clã com níveis de cargo (lider/oficial/membro); C) metas mestre-criadas com barra de progresso coletiva + recompensa global |
 
 ## Como isso se encaixa
 

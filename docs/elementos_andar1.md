@@ -1,16 +1,20 @@
 ---
-titulo: Elementos — Fogo, Trovão, Gelo e Veneno
+titulo: Fraquezas de Atributo
 andar: 1
 uso: regra de sistema
 ---
 
-# Elementos
+# Fraquezas de Atributo
 
-Elemento **não é um número**. A regra de teto continua valendo: nenhum teste
-recebe mais de **+1 numérico externo**, e elemento nunca ocupa esse espaço.
+O sistema elemental (Fogo/Trovão/Gelo/Veneno) foi descontinuado — esta
+regra o substitui.
 
-Elemento muda **o que acontece** — e o que ele compra é a coisa mais cara do
-sistema: **negar a reação do monstro**.
+Fraqueza de atributo **não é um número**. A regra de teto continua valendo:
+nenhum teste recebe mais de **+1 numérico externo**, e a fraqueza nunca
+ocupa esse espaço.
+
+Fraqueza muda **o que acontece** — e o que ela compra é a coisa mais cara
+do sistema: **negar a reação do monstro**.
 
 ---
 
@@ -19,111 +23,45 @@ sistema: **negar a reação do monstro**.
 Aqui o monstro só reage. O jogador sempre bate primeiro, e a diferença entre
 um resultado bom e um ruim não é dano — é se a criatura consegue responder.
 
-| Resultado | Sem elemento | **Acertando a fraqueza elemental** |
+| Resultado | Sem acertar a fraqueza | **Acertando a fraqueza de atributo** |
 |---|---|---|
 | **10+** | Acerta limpo, sem reação | Acerta limpo **e a criatura perde uma capacidade listada pelo resto da cena** |
 | **7-9** | Acerta, mas a criatura reage | Acerta **e a criatura não reage** — o 7-9 vira um 10+ funcional |
-| **6-** | O mestre narra a complicação | O mesmo, **e a carga do elemento foi gasta à toa** |
+| **6-** | O mestre narra a complicação | O mesmo — complicação normal |
 
-O 7-9 é onde a mesa vai sentir. Uma tocha bem usada transforma metade das
-rolagens ruins em rolagens boas, e isso é enorme — por isso elemento é
-**finito**.
+O 7-9 é onde a mesa vai sentir. A arma certa na mão certa transforma metade
+das rolagens ruins em rolagens boas, e isso é enorme.
 
-## Contra resistência
+## Como se acerta a fraqueza
 
-Se a criatura **resiste** ao elemento usado, o 10+ passa a se comportar como
-7-9: acerta, e ela reage assim mesmo. Não existe punição além disso. Errar o
-elemento é perder o recurso, não tomar um castigo.
+Cada monstro tem um `atributo_fraqueza` na ficha — um dos cinco: **Corpo,
+Reflexo, Conhecimento, Espírito, Técnica**. Você acerta a fraqueza atacando
+com uma arma **cujo atributo principal é esse**. A tabela de arma →
+atributo está em `docs/guia_sistema_aincrad.md`.
 
----
+Não custa preparo, não gasta carga e não acaba no meio da cena: custa a
+arma que você escolheu empunhar. Trocar de arma pro monstro certo é a
+decisão tática que ocupa o lugar do antigo "qual elemento carregar" — e é
+por isso que reconhecimento continua valendo ouro. Um grupo que sabe o que
+vai enfrentar chega com a arma certa na mão. Um grupo que não sabe gasta a
+vez trocando.
 
-## Os quatro elementos
+Tocha, óleo, cristal de descarga e afins viraram flavor: continuam
+existindo no mundo, mas **não têm mais efeito mecânico** sobre a fraqueza.
 
-### Fogo
+**O mestre deve dizer a fraqueza.** Não esconda: descreva. A investida que
+deixa o flanco aberto, o padrão mecânico da armadura, o uivo que expõe a
+garganta. A graça não é adivinhar qual é — é ter trazido a arma certa.
 
-O mais comum e o mais fácil de improvisar. Funciona contra o que é feito de
-matéria orgânica seca, o que depende de enxame e o que tem couro ou pelo.
+## O que o 10+ tira
 
-| Fonte | Cargas | Onde se consegue |
-|---|---|---|
-| Tocha acesa | ilimitada enquanto queima | Qualquer loja de suprimentos, 15 Col |
-| Frasco de Óleo | 1 | Mercado, 40 Col · Alquimista produz |
-| Brasa da Forja | 2 | Forja de Kazuo, só na hora, não viaja |
-| Frasco Incendiário | 1 | Alquimista, receita própria |
-
-**Capacidade que 10+ tira:** enxame, regeneração, teia, raiz, camuflagem.
-
-### Trovão
-
-Descarga curta. Funciona contra o que é metal, o que é grande e coordenado, e
-o que depende de reflexo para acertar.
-
-| Fonte | Cargas | Onde se consegue |
-|---|---|---|
-| Cristal de Descarga | 1 | Gruta de Lumis · lapidado por Joalheiro |
-| Pó de Estática | 2 | Alquimista, a partir de Cristal Pequeno |
-| Metal na água | 1, situacional | De graça, se o terreno permitir |
-
-**Capacidade que 10+ tira:** investida, coordenação de matilha, comando de
-grupo, voo.
-
-### Gelo
-
-Trava em vez de ferir. Funciona contra o que é rápido, o que sangra e o que
-precisa se mover para ser perigoso.
-
-| Fonte | Cargas | Onde se consegue |
-|---|---|---|
-| Cristal de Gelo | 1 | Águas Profundas do Lago Sylvaine |
-| Sal de Gelo | 2 | Cozinheiro, a partir de Cristal Pequeno |
-| Água parada da gruta | 1, situacional | Gruta de Lumis, no local |
-
-**Capacidade que 10+ tira:** velocidade, fuga, salto, esquiva, mergulho.
-
-### Veneno
-
-Lento e desonesto. Funciona contra o que respira e o que é grande demais para
-morrer rápido — é o elemento de quem não pode vencer no golpe.
-
-| Fonte | Cargas | Onde se consegue |
-|---|---|---|
-| Glândula Venenosa | 1 | Drop da Mosca Venenosa |
-| Lâmina Untada | 3 | Alquimista ou Caçador, preparo de 1 cena |
-| Seiva escura | 1 | Floresta de Horunka, colhida na hora |
-
-**Capacidade que 10+ tira:** resistência, fúria, aguentar em pé, rugido.
-
-**Veneno não funciona** contra construto, morto-vivo e planta.
+A capacidade perdida está escrita na ficha do monstro, na primeira bala de
+**Fraquezas** — o mergulho da águia, a investida do touro, a coordenação
+da matilha, o agarrão da trepadeira. É sempre concreta e sempre pelo resto
+da cena. Se a ficha não disser, o mestre tira a capacidade mais icônica
+da criatura, na hora.
 
 ---
-
-## Como se aplica na mesa
-
-Aplicar um elemento **custa a sua vez de preparar**, não a sua vez de atacar.
-Untar a lâmina, acender a tocha, encaixar o cristal: uma ação de preparo, e o
-elemento fica ativo até o fim da cena ou até a carga acabar.
-
-Isso significa que elemento é uma decisão tomada **antes** de a luta começar,
-e é por isso que reconhecimento vale ouro. Um grupo que sabe o que vai
-enfrentar chega com a coisa certa na mão. Um grupo que não sabe, gasta a vez
-descobrindo.
-
-**O mestre deve dizer a fraqueza.** Não esconda: descreva. Pelo seco, escamas
-molhadas, casco de metal, o bicho encolhendo perto do fogo. A graça não é
-adivinhar qual é — é ter trazido.
-
----
-
-## Elemento em equipamento
-
-**Nenhuma arma Comum ou Incomum do Andar 1 tem elemento próprio.** Isso é
-proposital e protege a regra de teto: se a katana comum viesse com fogo, todo
-mundo usaria katana.
-
-- **Comum e Incomum:** nunca têm elemento. Recebem elemento por consumível.
-- **Raro:** pode ter **afinidade** — o consumível dura o dobro de cargas nela.
-- **Único e drop Épico:** pode ter elemento próprio, permanente, e deve pagar
-  um custo real por isso (ver a regra de raridade em `docs/mercado_andar1.md`).
 
 ## Raridade: as duas escalas
 
@@ -135,26 +73,29 @@ Elas não são a mesma coisa e a ficha sempre diz qual está usando.
 | **Equipamento** | Comum · Incomum · Raro · **Único** | Armas, armaduras, acessórios |
 
 **Épico** é material que só chefe larga — Essência Kobold, Núcleo Selvagem,
-Cristal de Comando. Não se compra, não se produz, e é o que transforma um item
-Raro em Único na bancada de um artesão.
+Cristal de Comando. Não se compra, não se produz, e é o que transforma um
+item Raro em Único na bancada de um artesão.
 
-**Único** continua sendo a única categoria de equipamento autorizada a quebrar
-a curva, e continua tendo que pagar por isso.
+**Único** continua sendo a única categoria de equipamento autorizada a
+quebrar a curva, e continua tendo que pagar por isso.
 
 ---
 
 ## Tabela rápida para o mestre
 
-| Se a criatura é... | O elemento que morde é |
+A ficha de cada monstro do Andar 1 já traz o atributo certo. Esta tabela é
+pra quando você improvisar uma criatura nova:
+
+| Se a criatura é... | O atributo que morde tende a ser |
 |---|---|
-| Planta, inseto, enxame, pelo seco | **Fogo** |
-| Metal, armadura, matilha coordenada, voador | **Trovão** |
-| Rápida, esquiva, aquática, sangrenta | **Gelo** |
-| Grande, resistente, furiosa, respira | **Veneno** |
-| Construto, morto-vivo | Fogo ou Trovão — **nunca Veneno** |
+| Rápida, voadora, de investida | **Reflexo** |
+| Grande, pesada, de força bruta | **Corpo** |
+| Enganadora, ilusória, mecânica | **Conhecimento** |
+| Mental, aterradora, fanática | **Espírito** |
+| Perita, precisa, especializada | **Técnica** |
 
 ## O erro que você vai cometer
 
-Deixar o grupo carregar seis frascos e resolver tudo. Cargas são finitas e
-ocupam espaço nos 7 slots de equipamento: se estão levando fogo para tudo,
-não estão levando corda, remédio e comida — e a floresta cobra isso.
+Tratar a fraqueza como curiosidade de ficha em vez de preparo. Quem sabe
+que vai enfrentar o Rei Touro e não leva uma arma de Reflexo escolheu a
+luta dura — e a ficha estava pública antes da luta começar.

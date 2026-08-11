@@ -1,0 +1,225 @@
+🪖 Categoria: Elmos
+
+Distribuição:
+
+🟢 10 Elmos — Dificuldade 6-
+🔵 3 Elmos — Dificuldade 7-9
+🔴 2 Elmos — Dificuldade 10+ com efeitos únicos
+🟢 Dificuldade 6-
+1. Elmo Simples
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+2x Barra de Ferro
+1x Couro Curtido
+1x Tecido Resistente
+Ferramentas
+Bigorna
+Martelo de Ferreiro
+Produz
+1x Elmo Simples
+2. Capuz de Couro
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro Cru
+1x Linha Reforçada
+1x Fibra Vegetal
+Ferramentas
+Bancada de Trabalho
+Agulha de Coureiro
+Produz
+1x Capuz de Couro
+3. Elmo de Bronze
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+3x Minério de Bronze
+1x Couro Curtido
+1x Rebite de Ferro
+Ferramentas
+Fornalha
+Bigorna
+Produz
+1x Elmo de Bronze
+4. Elmo do Soldado
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+3x Barra de Ferro
+2x Couro Reforçado
+1x Placa de Ferro
+Ferramentas
+Bigorna
+Martelo de Precisão
+Produz
+1x Elmo do Soldado
+5. Elmo do Caçador
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+4x Couro de Lobo
+1x Pena Rara
+1x Fibra Forte
+Ferramentas
+Bancada de Trabalho
+Agulha de Coureiro
+Produz
+1x Elmo do Caçador
+6. Elmo Reforçado
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+4x Barra de Ferro
+1x Couro Grosso
+1x Placa de Ferro
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Elmo Reforçado
+7. Elmo de Guarda
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+3x Barra de Ferro
+1x Couro Nobre
+1x Cristal de Defesa
+Ferramentas
+Bigorna
+Martelo de Ferreiro
+Produz
+1x Elmo de Guarda
+8. Elmo Escamado
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+4x Escama de Monstro
+2x Barra de Ferro
+1x Couro Curtido
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Elmo Escamado
+9. Elmo do Mercenário
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+3x Couro Grosso
+2x Barra de Ferro
+1x Tecido Resistente
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Elmo do Mercenário
+10. Elmo de Batalha
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+5x Barra de Ferro
+1x Couro Reforçado
+1x Pedra de Amolar
+Ferramentas
+Bigorna Pesada
+Martelo de Precisão
+Produz
+1x Elmo de Batalha
+🔵 Dificuldade 7-9
+11. Elmo de Aço
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+4x Barra de Aço
+1x Couro Nobre
+1x Carvão Refinado
+Ferramentas
+Bigorna Pesada
+Fornalha Avançada
+Produz
+1x Elmo de Aço
+12. Elmo do Cavaleiro
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+5x Placa de Aço
+1x Cristal de Defesa
+1x Couro Reforçado
+Ferramentas
+Bigorna
+Martelo de Precisão
+Produz
+1x Elmo do Cavaleiro
+13. Elmo do Guardião
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+4x Placa de Aço
+2x Cristal de Defesa
+1x Núcleo de Monstro
+Ferramentas
+Bigorna Avançada
+Ferramentas de Precisão
+Produz
+1x Elmo do Guardião
+🔴 Dificuldade 10+
+14. Elmo do Dragão Ancestral
+
+Profissão: Ferreiro • Dificuldade: 10+
+
+Materiais
+5x Liga de Mithril
+2x Escama de Dragão
+1x Cristal Flamejante
+1x Núcleo de Criatura Ancestral
+Ferramentas
+Bigorna Rúnica
+Fornalha Lendária
+Produz
+1x Elmo do Dragão Ancestral
+✨ Efeito do Elmo — Instinto Dracônico
+
+O usuário sente o perigo antes que ele aconteça.
+
+Quando estiver em combate:
+
+Pode perceber ameaças escondidas.
+Pode reagir melhor contra ataques surpresa.
+Pode intimidar criaturas inferiores.
+15. Elmo Lendário de Aincrad
+
+Profissão: Ferreiro • Dificuldade: 10+
+
+Materiais
+6x Liga de Mithril
+2x Cristal Prismático
+1x Núcleo de Chefe
+1x Essência Lendária
+Ferramentas
+Bigorna Ancestral
+Fornalha Lendária
+Produz
+1x Elmo Lendário de Aincrad
+✨ Efeito do Elmo — Visão do Herói
+
+Um equipamento criado para líderes e guerreiros lendários.
+
+Quando comandar ou proteger aliados:
+
+Pode identificar pontos fracos do inimigo.
+Pode coordenar ações do grupo.
+Pode transformar uma decisão difícil em uma vantagem.

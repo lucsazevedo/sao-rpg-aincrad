@@ -36,11 +36,41 @@ Além disso precisa de:
   com o golpe já existente, nem tornar irrelevante a escolha de atributo
   principal da arma.
 
-## Preciso saber
+## ✅ Carregado (10/08) — texto dos 69 movesets, ainda SEM revisão de qualidade
 
-- O Limit Breaker é **um contador por personagem** (qualquer teste soma) ou
-  **por arma equipada** (só rolagem daquela arma soma)?
-- Zera depois de usado, ou depois de uma sessão, ou nunca (só sobe)?
-- Quer que eu comece desenhando **uma arma só** como modelo (pra você
-  aprovar o formato antes de eu repetir 22 vezes), ou já tenta as 23 de
-  uma vez?
+Achado numa varredura: uma sessão anterior já tinha gerado os 69 movesets
+via Ollama (`scripts/db/dml_moves_armas_golpes.sql`, commits "Propostas do
+Ollama"/"Piloto de golpes de arma") — arquivo pronto, nunca tinha sido
+aplicado no banco. Apliquei: as 23 armas agora têm `golpe_2`, `golpe_3` e
+`limit_breaker` preenchidos em `moves_arma`.
+
+**Revisão automatizada feita (10/08)**: conferido programaticamente nas
+23 armas — 0 problema estrutural (nome/atributo/efeito faltando, nome
+duplicado entre os 5 campos de uma arma) e **as 3 atributos por arma são
+sempre diferentes entre si** (move_a/golpe_2/golpe_3), batendo exatamente
+com o pedido original do item ("2 ataques normais, cada um usando um
+atributo diferente"). Isso é mais do que eu esperava de um rascunho de
+IA — a checagem estrutural e de design passou limpa. **O que não foi
+feito**: leitura humana de balanceamento/tom narrativo linha a linha —
+isso é julgamento subjetivo que só uma leitura sua resolve. Nenhum lugar
+do site/mesa ainda exibe esses campos pra ninguém ver, então dá pra
+revisar sem pressa quando quiser.
+
+## ✅ Resolvido (10/08) — mecanismo do contador construído e testado
+
+Decidido pelo usuário: **por arma equipada** (cada um dos 23 tipos guarda
+o próprio número, trocar de arma não zera o anterior), **zera ao usar**
+(limiar 10, já estava definido em `dolist/02_ataques_limit_breaker.md`
+antigo). Tabela `limit_breaker_contador`
+(`scripts/db/schema_limit_breaker.sql`) — chave (personagem, tipo de
+arma), RLS mestre-only pra escrever (é ferramenta de mesa, não algo que o
+jogador se autopromove; jogador só lê o próprio). UI: `Mestre.vue` (ficha
+de cada jogador — adicionar tipo de arma, +1/−1, "Usar" zera) e
+`Ficha.vue` (jogador vê os próprios contadores, leitura). Testado com
+rollback: 10 incrementos chegam a 10, "usar" zera, jogador não consegue
+editar contador de outro personagem (RLS bloqueia, 0 linhas afetadas).
+
+Achado no caminho: `armas.tipo` tinha uma linha com "Lanca" sem cedilha
+(`lanca_de_guarda`) enquanto `moves_arma.nome` usa "Lança" — os 23 tipos
+não batiam 100% por causa disso. Corrigido (agora os dois lados usam a
+mesma grafia em todas as 23 armas).

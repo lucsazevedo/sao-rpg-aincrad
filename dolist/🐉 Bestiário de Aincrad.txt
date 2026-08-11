@@ -1,0 +1,3689 @@
+🐉 Bestiário de Aincrad
+🏰 1º Andar — Floresta e Planícies Iniciais
+🟢 Monstros Comuns
+🐺 Lobo Cinzento
+
+Drops:
+
+Pele de Lobo
+Presa de Lobo
+Carne de Caça
+Couro Simples
+🐗 Javali Selvagem
+
+Drops:
+
+Couro Grosso
+Carne de Javali
+Presa Curva
+Gordura Animal
+🦎 Lagarto da Floresta
+
+Drops:
+
+Escama Pequena
+Pele de Lagarto
+Garra de Réptil
+🐝 Abelha Gigante
+
+Drops:
+
+Ferrão de Abelha
+Mel Natural
+Asa Pequena
+🕷️ Aranha Sombria
+
+Drops:
+
+Seda de Aranha
+Veneno Fraco
+Presa Pequena
+🐿️ Rato Gigante
+
+Drops:
+
+Pele Rústica
+Dente Pequeno
+Carne Simples
+🌱 Slime Verde
+
+Drops:
+
+Gelatina Verde
+Núcleo de Slime
+Cristal Pequeno
+🔵 Mini Boss
+🐺 Alfa Lupino
+
+Drops:
+
+Pele de Lobo Alfa
+Presa de Alfa
+Cristal Selvagem
+Carta "Alfa Lupino"
+🟣 MVP
+🦁 Rei das Planícies
+
+Drops:
+
+Pele Real
+Garra do Rei
+Núcleo de Fera
+Cristal de Força
+Carta "Rei das Planícies"
+🔴 Boss do Andar
+🐉 Illfang, o Lorde Kobold
+
+Drops:
+
+Espada do Lorde Kobold
+Couro Kobold Real
+Cristal do Boss
+Núcleo de Chefe
+Carta "Illfang, o Lorde Kobold"
+🏰 2º Andar — Floresta Profunda
+🟢 Monstros Comuns
+🐺 Lobo Negro
+
+Drops:
+
+Pele Negra
+Presa Sombria
+Couro de Fera
+🐻 Urso Jovem
+
+Drops:
+
+Pele de Urso
+Garra de Urso
+Carne Selvagem
+🦌 Cervo Selvagem
+
+Drops:
+
+Chifre Pequeno
+Couro Leve
+Carne de Caça
+🐍 Cobra Venenosa
+
+Drops:
+
+Escama Venenosa
+Veneno Natural
+Presa de Cobra
+🦋 Mariposa Cristalina
+
+Drops:
+
+Asa Cristalina
+Pó Mágico
+Fragmento de Cristal
+🪲 Besouro Blindado
+
+Drops:
+
+Casco Duro
+Quitina
+Mandíbula Forte
+👺 Goblin Selvagem
+
+Drops:
+
+Couro Goblin
+Moeda Antiga
+Adaga Enferrujada
+🔵 Mini Boss
+👺 Goblin Caçador
+
+Drops:
+
+Arco Goblin
+Pele Goblin Rara
+Olho de Goblin
+Carta "Goblin Caçador"
+🟣 MVP
+🐻 Urso Ancião da Floresta
+
+Drops:
+
+Pele Ancestral
+Garra Gigante
+Núcleo Selvagem
+Cristal de Resistência
+Carta "Urso Ancião da Floresta"
+🔴 Boss do Andar
+🌲 Guardião da Floresta Antiga
+
+Drops:
+
+Machado do Guardião
+Madeira Ancestral
+Cristal do Boss
+Núcleo de Chefe
+Carta "Guardião da Floresta Antiga"
+🏰 3º Andar — Montanhas Rochosas
+🟢 Monstros Comuns
+🐐 Cabra Rochosa
+
+Drops:
+
+Chifre Pequeno
+Couro Grosso
+Carne Selvagem
+🦅 Águia da Montanha
+
+Drops:
+
+Pena Grande
+Garra Afiada
+Asa Forte
+🦎 Lagarto Rochoso
+
+Drops:
+
+Escama Dura
+Pedra Bruta
+Garra
+🪨 Golem Pequeno
+
+Drops:
+
+Fragmento de Pedra
+Núcleo Mineral
+🐍 Serpente da Montanha
+
+Drops:
+
+Veneno
+Escama Escura
+🐺 Lobo das Rochas
+
+Drops:
+
+Pele Resistente
+Presa Grande
+🦇 Morcego Gigante
+
+Drops:
+
+Asa Sombria
+Presa Pequena
+🔵 Mini Boss
+🪨 Golem Guardião Menor
+
+Drops:
+
+Núcleo de Pedra
+Fragmento Raro
+Minério Antigo
+Carta "Golem Guardião Menor"
+🟣 MVP
+🐉 Wyvern Jovem
+
+Drops:
+
+Escama de Wyvern
+Garra de Dragão
+Asa de Wyvern
+Carta "Wyvern Jovem"
+🔴 Boss do Andar
+🗿 Colosso da Montanha
+
+Drops:
+
+Núcleo Gigante
+Minério Lendário
+Cristal do Boss
+Carta "Colosso da Montanha"
+
+🏰 4º Andar — Pântanos Nebulosos
+🟢 Monstros Comuns
+🐸 Sapo Venenoso
+
+Drops:
+
+Pele de Sapo
+Veneno Natural
+Língua Rara
+🐊 Crocodilo do Pântano
+
+Drops:
+
+Couro de Crocodilo
+Escama Dura
+Dente Grande
+🦟 Mosquito Gigante
+
+Drops:
+
+Asa Pequena
+Ferrão
+Sangue de Monstro
+🪱 Verme da Lama
+
+Drops:
+
+Gelatina Marrom
+Secreção Pegajosa
+Pele Grossa
+🧟 Morto-Vivo Errante
+
+Drops:
+
+Osso Antigo
+Fragmento Sombrio
+Moeda Antiga
+🕷️ Aranha do Pântano
+
+Drops:
+
+Seda Venenosa
+Presa Tóxica
+Veneno
+👻 Espírito Perdido
+
+Drops:
+
+Fragmento Espiritual
+Essência Sombria
+Cristal Pequeno
+🔵 Mini Boss
+🐸 Rei Sapo do Pântano
+
+Drops:
+
+Coroa do Sapo
+Pele Real de Sapo
+Veneno Concentrado
+Carta "Rei Sapo do Pântano"
+🟣 MVP
+👻 Guardião Fantasma do Brejo
+
+Drops:
+
+Essência Fantasma
+Cristal Espiritual
+Manto Espectral
+Carta "Guardião Fantasma do Brejo"
+🔴 Boss do Andar
+🐉 Hidra do Pântano
+
+Drops:
+
+Cabeça de Hidra
+Escama de Hidra
+Veneno Supremo
+Cristal do Boss
+Carta "Hidra do Pântano"
+🏰 5º Andar — Floresta Encantada
+🟢 Monstros Comuns
+🦊 Raposa Mística
+
+Drops:
+
+Pele de Raposa
+Cauda Mística
+Cristal Pequeno
+🧚 Fada Selvagem
+
+Drops:
+
+Asa Pequena
+Pó Mágico
+Essência Mágica
+🌳 Trepadeira Viva
+
+Drops:
+
+Fibra Natural
+Raiz Encantada
+Madeira Viva
+🐺 Lobo Lunar
+
+Drops:
+
+Pele Lunar
+Presa Prateada
+Essência Selvagem
+🦌 Guardião Cervo
+
+Drops:
+
+Chifre Encantado
+Couro Raro
+Essência Natural
+🐛 Lagarta Gigante
+
+Drops:
+
+Seda Grossa
+Casca Resistente
+Secreção Natural
+🍄 Cogumelo Vivo
+
+Drops:
+
+Cogumelo Raro
+Esporos Mágicos
+Raiz Estranha
+🔵 Mini Boss
+🌲 Ent Jovem
+
+Drops:
+
+Madeira Encantada
+Semente Ancestral
+Núcleo Natural
+Carta "Ent Jovem"
+🟣 MVP
+🦄 Unicórnio Selvagem
+
+Drops:
+
+Chifre de Unicórnio
+Pelo Místico
+Cristal de Pureza
+Carta "Unicórnio Selvagem"
+🔴 Boss do Andar
+🌳 Árvore Anciã Guardiã
+
+Drops:
+
+Madeira Ancestral
+Coração da Floresta
+Cristal do Boss
+Essência Natural Suprema
+Carta "Árvore Anciã Guardiã"
+🏰 6º Andar — Deserto das Dunas Vermelhas
+🟢 Monstros Comuns
+🦂 Escorpião Gigante
+
+Drops:
+
+Ferrão de Escorpião
+Carapaça
+Veneno Forte
+🐍 Cobra do Deserto
+
+Drops:
+
+Escama de Areia
+Veneno
+Presa Longa
+🦎 Lagarto Solar
+
+Drops:
+
+Escama Solar
+Couro Quente
+Garra
+🐜 Formiga Guerreira
+
+Drops:
+
+Quitina
+Mandíbula
+Ácido Natural
+🦅 Abutre Gigante
+
+Drops:
+
+Pena Negra
+Garra
+Asa Grande
+👹 Goblin do Deserto
+
+Drops:
+
+Couro Goblin
+Arma Enferrujada
+Moeda Antiga
+🧞 Espírito da Areia
+
+Drops:
+
+Areia Mágica
+Essência Elemental
+Cristal Pequeno
+🔵 Mini Boss
+🦂 Escorpião Rei
+
+Drops:
+
+Ferrão Real
+Carapaça Dourada
+Veneno Supremo
+Carta "Escorpião Rei"
+🟣 MVP
+🧞 Djinn das Dunas
+
+Drops:
+
+Essência do Deserto
+Cristal Elemental
+Lâmpada Antiga
+Carta "Djinn das Dunas"
+🔴 Boss do Andar
+🐉 Dragão das Areias
+
+Drops:
+
+Escama de Dragão
+Presa Ancestral
+Cristal do Boss
+Núcleo de Dragão
+Carta "Dragão das Areias"
+🏰 7º Andar — Ruínas Antigas
+🟢 Monstros Comuns
+🗿 Estátua Viva
+
+Drops:
+
+Fragmento de Pedra
+Núcleo Mineral
+⚔️ Soldado Antigo
+
+Drops:
+
+Armadura Antiga
+Espada Quebrada
+🕷️ Aranha de Ruína
+
+Drops:
+
+Seda Escura
+Veneno
+🦇 Morcego Sombrio
+
+Drops:
+
+Asa Negra
+Presa
+👁️ Olho Flutuante
+
+Drops:
+
+Cristal de Visão
+Fragmento Mágico
+👺 Guardião Goblin
+
+Drops:
+
+Escudo Goblin
+Couro Raro
+💀 Esqueleto Guerreiro
+
+Drops:
+
+Osso Antigo
+Espada Enferrujada
+🔵 Mini Boss
+⚔️ Cavaleiro das Ruínas
+
+Drops:
+
+Armadura Antiga Rara
+Espada do Cavaleiro
+Carta "Cavaleiro das Ruínas"
+🟣 MVP
+👁️ Observador Ancestral
+
+Drops:
+
+Cristal de Visão Superior
+Olho Místico
+Núcleo Antigo
+Carta "Observador Ancestral"
+🔴 Boss do Andar
+🏛️ Colosso das Ruínas
+
+Drops:
+
+Núcleo Colossal
+Pedra Ancestral
+Cristal do Boss
+Carta "Colosso das Ruínas"
+
+🏰 8º Andar — Cavernas de Cristal
+🟢 Monstros Comuns
+🦇 Morcego Cristalino
+
+Drops:
+
+Asa Cristalina
+Presa Pequena
+Fragmento de Cristal
+🪨 Golem de Quartzo
+
+Drops:
+
+Fragmento de Quartzo
+Núcleo Mineral
+Pedra Bruta
+🦂 Escorpião Cristalizado
+
+Drops:
+
+Carapaça Cristalina
+Ferrão
+Cristal Pequeno
+🐍 Serpente de Cristal
+
+Drops:
+
+Escama Cristalina
+Veneno Brilhante
+Presa Afiada
+👁️ Olho Mineral
+
+Drops:
+
+Cristal de Visão
+Fragmento Mágico
+Núcleo Pequeno
+🕷️ Aranha das Cavernas
+
+Drops:
+
+Seda Resistente
+Veneno
+Presa Sombria
+🐛 Verme Cristalino
+
+Drops:
+
+Casca Dura
+Cristal Bruto
+Secreção Mineral
+🔵 Mini Boss
+💎 Guardião de Quartzo
+
+Drops:
+
+Núcleo de Quartzo
+Cristal Raro
+Minério Especial
+Carta "Guardião de Quartzo"
+🟣 MVP
+🐉 Wyvern Cristalino
+
+Drops:
+
+Escama Cristalina Rara
+Garra de Wyvern
+Cristal Elemental
+Carta "Wyvern Cristalino"
+🔴 Boss do Andar
+💎 Dragão Cristal de Aincrad
+
+Drops:
+
+Escama de Dragão Cristalina
+Núcleo de Dragão
+Cristal do Boss
+Minério Lendário
+Carta "Dragão Cristal de Aincrad"
+🏰 9º Andar — Planícies Geladas
+🟢 Monstros Comuns
+🐺 Lobo de Gelo
+
+Drops:
+
+Pele Congelada
+Presa de Gelo
+Cristal de Gelo
+🐧 Ave Polar Gigante
+
+Drops:
+
+Pena Branca
+Garra Gelada
+Carne Polar
+🐻 Urso Glacial Jovem
+
+Drops:
+
+Pele Glacial
+Garra Grande
+Carne Rara
+🦎 Lagarto Congelado
+
+Drops:
+
+Escama Gelada
+Couro Frio
+Cristal Pequeno
+👻 Espírito do Gelo
+
+Drops:
+
+Essência Congelada
+Fragmento Espiritual
+Cristal Azul
+🕷️ Aranha da Neve
+
+Drops:
+
+Seda Branca
+Veneno Frio
+Presa Pequena
+🧊 Slime de Gelo
+
+Drops:
+
+Gelatina Congelada
+Núcleo de Gelo
+Cristal Pequeno
+🔵 Mini Boss
+❄️ Cavaleiro Congelado
+
+Drops:
+
+Armadura Congelada
+Espada de Gelo
+Essência Gelada
+Carta "Cavaleiro Congelado"
+🟣 MVP
+🐻 Rei Urso Glacial
+
+Drops:
+
+Pele Real Glacial
+Garra Suprema
+Cristal de Resistência
+Carta "Rei Urso Glacial"
+🔴 Boss do Andar
+🐉 Dragão Branco do Norte
+
+Drops:
+
+Escama de Dragão Branco
+Cristal de Gelo Supremo
+Núcleo de Dragão
+Carta "Dragão Branco do Norte"
+🏰 10º Andar — Vulcão Flamejante
+🟢 Monstros Comuns
+🔥 Salamandra Pequena
+
+Drops:
+
+Escama Flamejante
+Essência de Fogo
+Cristal Vermelho
+🦎 Lagarto de Lava
+
+Drops:
+
+Pele Vulcânica
+Pedra Quente
+Garra Flamejante
+🦂 Escorpião de Fogo
+
+Drops:
+
+Ferrão Ardente
+Carapaça Quente
+Veneno Flamejante
+🐗 Javali Vulcânico
+
+Drops:
+
+Presa Incandescente
+Couro Grosso
+Carne Selvagem
+👺 Goblin da Cinza
+
+Drops:
+
+Cinza Mística
+Couro Goblin
+Arma Queimada
+🪨 Golem de Magma Pequeno
+
+Drops:
+
+Fragmento de Magma
+Núcleo de Fogo
+🦇 Morcego Flamejante
+
+Drops:
+
+Asa Vermelha
+Presa Quente
+🔵 Mini Boss
+🌋 Guardião de Magma
+
+Drops:
+
+Núcleo de Magma
+Cristal Flamejante
+Pedra Vulcânica Rara
+Carta "Guardião de Magma"
+🟣 MVP
+🔥 Fênix Renascida
+
+Drops:
+
+Pena Flamejante
+Cinza Imortal
+Cristal de Fogo Supremo
+Carta "Fênix Renascida"
+🔴 Boss do Andar
+🐲 Dragão Vulcânico
+
+Drops:
+
+Escama Vulcânica
+Coração de Dragão
+Cristal do Boss
+Núcleo de Fogo Ancestral
+Carta "Dragão Vulcânico"
+🏰 11º Andar — Cidade Abandonada
+🟢 Monstros Comuns
+💀 Soldado Morto-Vivo
+
+Drops:
+
+Osso Antigo
+Armadura Velha
+Espada Quebrada
+🧟 Cavaleiro Zumbi
+
+Drops:
+
+Metal Enferrujado
+Fragmento Sombrio
+👻 Fantasma Errante
+
+Drops:
+
+Essência Fantasma
+Cristal Espiritual
+🕷️ Aranha Sombria
+
+Drops:
+
+Seda Escura
+Veneno Sombrio
+🐀 Rato Corrompido
+
+Drops:
+
+Pele Suja
+Dente Afiado
+🦇 Morcego Noturno
+
+Drops:
+
+Asa Sombria
+Sangue de Monstro
+👺 Goblin Saqueador
+
+Drops:
+
+Moeda Antiga
+Couro Goblin
+Adaga Velha
+🔵 Mini Boss
+💀 Capitão Morto-Vivo
+
+Drops:
+
+Espada do Capitão
+Armadura Sombria
+Carta "Capitão Morto-Vivo"
+🟣 MVP
+👑 Rei dos Mortos
+
+Drops:
+
+Coroa Sombria
+Essência da Morte
+Cristal Negro
+Carta "Rei dos Mortos"
+🔴 Boss do Andar
+☠️ Lich da Cidade Perdida
+
+Drops:
+
+Cajado do Lich
+Cristal Sombrio Supremo
+Núcleo de Chefe
+Carta "Lich da Cidade Perdida"
+
+🏰 12º Andar — Lago das Águas Profundas
+🟢 Monstros Comuns
+🐟 Peixe Predador Gigante
+
+Drops:
+
+Escama de Peixe
+Carne de Peixe
+Dente Afiado
+🐙 Tentáculo Selvagem
+
+Drops:
+
+Ventosa
+Tinta de Monstro
+Carne Estranha
+🐍 Serpente Aquática
+
+Drops:
+
+Escama Azul
+Veneno Aquático
+Presa Longa
+🦀 Caranguejo Blindado
+
+Drops:
+
+Casco Duro
+Garra Grande
+Quitina
+🐢 Tartaruga Rochosa
+
+Drops:
+
+Casco Resistente
+Pedra Mineral
+Carne Rara
+🧚 Espírito da Água
+
+Drops:
+
+Essência Aquática
+Cristal Azul
+Fragmento Mágico
+🦈 Tubarão Jovem
+
+Drops:
+
+Dente de Tubarão
+Couro Marinho
+Carne Selvagem
+🔵 Mini Boss
+🐙 Kraken Jovem
+
+Drops:
+
+Tentáculo Raro
+Tinta Negra
+Cristal Aquático
+Carta "Kraken Jovem"
+🟣 MVP
+🌊 Leviatã das Águas
+
+Drops:
+
+Escama de Leviatã
+Núcleo Aquático
+Cristal Elemental
+Carta "Leviatã das Águas"
+🔴 Boss do Andar
+🐉 Dragão Marinho Ancestral
+
+Drops:
+
+Escama de Dragão Marinho
+Pérola Antiga
+Núcleo de Dragão
+Carta "Dragão Marinho Ancestral"
+🏰 13º Andar — Vale dos Ventos
+🟢 Monstros Comuns
+🦅 Águia do Vendaval
+
+Drops:
+
+Pena de Vento
+Garra Afiada
+Asa Grande
+🐺 Lobo do Vendaval
+
+Drops:
+
+Pele Leve
+Presa de Vento
+Couro Raro
+🦋 Borboleta Celeste
+
+Drops:
+
+Asa Colorida
+Pó Mágico
+Essência Natural
+🌪️ Espírito do Vento
+
+Drops:
+
+Essência do Vento
+Cristal Azul
+🐐 Cabra das Alturas
+
+Drops:
+
+Chifre Curvo
+Couro Resistente
+🪲 Besouro Voador
+
+Drops:
+
+Casco Duro
+Asa de Besouro
+🐍 Serpente Aérea
+
+Drops:
+
+Escama Leve
+Veneno de Vento
+🔵 Mini Boss
+🌪️ Elemental do Vendaval
+
+Drops:
+
+Núcleo de Vento
+Cristal Elemental
+Essência Aérea
+Carta "Elemental do Vendaval"
+🟣 MVP
+🦅 Roc Gigante
+
+Drops:
+
+Pena de Roc
+Garra Gigante
+Asa Celestial
+Carta "Roc Gigante"
+🔴 Boss do Andar
+🐉 Dragão Celeste
+
+Drops:
+
+Escama Celestial
+Asa de Dragão
+Cristal Supremo de Vento
+Carta "Dragão Celeste"
+🏰 14º Andar — Floresta Sombria
+🟢 Monstros Comuns
+🐺 Lobo Sombrio
+
+Drops:
+
+Pele Negra
+Presa Sombria
+🕷️ Aranha Negra
+
+Drops:
+
+Seda Sombria
+Veneno Escuro
+🦉 Coruja Noturna
+
+Drops:
+
+Pena Negra
+Olho Noturno
+👺 Goblin das Sombras
+
+Drops:
+
+Couro Sombrio
+Adaga Velha
+🍄 Cogumelo Sombrio
+
+Drops:
+
+Esporo Escuro
+Cogumelo Raro
+🌳 Trepadeira Corrompida
+
+Drops:
+
+Raiz Negra
+Fibra Sombria
+👻 Espírito da Floresta
+
+Drops:
+
+Essência Espiritual
+Cristal Sombrio
+🔵 Mini Boss
+🌲 Ent Corrompido
+
+Drops:
+
+Madeira Negra
+Coração da Árvore
+Carta "Ent Corrompido"
+🟣 MVP
+🦌 Guardião da Lua Negra
+
+Drops:
+
+Chifre Lunar
+Pele Mística
+Cristal Sombrio
+Carta "Guardião da Lua Negra"
+🔴 Boss do Andar
+🌳 Árvore Demoníaca Anciã
+
+Drops:
+
+Madeira Demoníaca
+Raiz Ancestral
+Cristal do Boss
+Carta "Árvore Demoníaca Anciã"
+🏰 15º Andar — Templo Perdido
+🟢 Monstros Comuns
+🗿 Sentinela de Pedra
+
+Drops:
+
+Fragmento de Pedra
+Núcleo Mineral
+⚔️ Guerreiro Antigo
+
+Drops:
+
+Metal Antigo
+Espada Quebrada
+🏹 Arqueiro Esquecido
+
+Drops:
+
+Arco Antigo
+Flecha Velha
+🐍 Serpente do Templo
+
+Drops:
+
+Escama Antiga
+Veneno
+🪲 Escaravelho Dourado
+
+Drops:
+
+Casco Dourado
+Fragmento de Ouro
+👁️ Guardião Ocular
+
+Drops:
+
+Cristal de Visão
+Olho Mágico
+💀 Sacerdote Morto
+
+Drops:
+
+Manto Antigo
+Essência Sombria
+🔵 Mini Boss
+⚔️ Cavaleiro Sagrado Perdido
+
+Drops:
+
+Armadura Sagrada
+Espada Antiga
+Carta "Cavaleiro Sagrado Perdido"
+🟣 MVP
+🏛️ Guardião do Templo
+
+Drops:
+
+Núcleo Divino
+Relíquia Antiga
+Cristal Sagrado
+Carta "Guardião do Templo"
+🔴 Boss do Andar
+👑 Rei Sacerdote Corrompido
+
+Drops:
+
+Cajado Real
+Coroa Antiga
+Cristal do Boss
+Carta "Rei Sacerdote Corrompido"
+
+
+🏰 16º Andar — Montanhas dos Gigantes
+🟢 Monstros Comuns
+🗿 Gigante Jovem
+
+Drops:
+
+Pele de Gigante
+Osso Grande
+Carne Gigante
+🐐 Cabra Montanhesa
+
+Drops:
+
+Chifre Curvo
+Couro Grosso
+Carne Selvagem
+🦅 Águia Rochosa
+
+Drops:
+
+Pena Resistente
+Garra Afiada
+Asa Grande
+🪨 Golem de Granito
+
+Drops:
+
+Fragmento de Granito
+Núcleo Mineral
+Pedra Rara
+🐍 Serpente da Montanha
+
+Drops:
+
+Escama Dura
+Veneno Forte
+Presa Longa
+🐺 Lobo da Montanha
+
+Drops:
+
+Pele Espessa
+Presa Grande
+Couro Selvagem
+🦇 Morcego das Alturas
+
+Drops:
+
+Asa Escura
+Presa Pequena
+Sangue de Monstro
+🔵 Mini Boss
+🗿 Guardião Gigante de Pedra
+
+Drops:
+
+Núcleo de Pedra Gigante
+Minério Raro
+Fragmento Antigo
+Carta "Guardião Gigante de Pedra"
+🟣 MVP
+🦍 Rei Gigante das Montanhas
+
+Drops:
+
+Pele Real de Gigante
+Machado Gigante
+Núcleo Selvagem
+Carta "Rei Gigante das Montanhas"
+🔴 Boss do Andar
+🗿 Colosso da Montanha Eterna
+
+Drops:
+
+Coração de Pedra Ancestral
+Minério Lendário
+Cristal do Boss
+Carta "Colosso da Montanha Eterna"
+🏰 17º Andar — Cavernas Profundas
+🟢 Monstros Comuns
+🦇 Morcego Abissal
+
+Drops:
+
+Asa Sombria
+Presa Abissal
+🪱 Verme Gigante
+
+Drops:
+
+Pele Grossa
+Secreção Ácida
+🦂 Escorpião das Cavernas
+
+Drops:
+
+Carapaça Escura
+Ferrão Venenoso
+🕷️ Aranha Abissal
+
+Drops:
+
+Seda Negra
+Veneno Raro
+🪨 Golem de Minério
+
+Drops:
+
+Minério Bruto
+Núcleo Mineral
+🐍 Cobra Subterrânea
+
+Drops:
+
+Escama Escura
+Veneno Forte
+👁️ Olho da Caverna
+
+Drops:
+
+Cristal de Visão
+Fragmento Mágico
+🔵 Mini Boss
+🪨 Golem de Ferro Antigo
+
+Drops:
+
+Núcleo de Ferro
+Minério Especial
+Placa Metálica
+Carta "Golem de Ferro Antigo"
+🟣 MVP
+🐉 Basilisco das Profundezas
+
+Drops:
+
+Escama de Basilisco
+Olho Petrificante
+Veneno Supremo
+Carta "Basilisco das Profundezas"
+🔴 Boss do Andar
+🐲 Dragão das Cavernas Negras
+
+Drops:
+
+Escama Negra de Dragão
+Coração de Dragão
+Cristal do Boss
+Carta "Dragão das Cavernas Negras"
+🏰 18º Andar — Pântano Corrompido
+🟢 Monstros Comuns
+🐸 Sapo Gigante Corrompido
+
+Drops:
+
+Pele Venenosa
+Língua Rara
+Veneno
+🐊 Crocodilo Sombrio
+
+Drops:
+
+Couro Escuro
+Dente Grande
+🦟 Mosquito Vampírico
+
+Drops:
+
+Asa Negra
+Ferrão
+Sangue Raro
+🪱 Verme Ácido
+
+Drops:
+
+Ácido Natural
+Pele Grossa
+🕷️ Aranha Venenosa
+
+Drops:
+
+Seda Venenosa
+Veneno Concentrado
+👻 Espírito Corrompido
+
+Drops:
+
+Essência Sombria
+Fragmento Espiritual
+🐍 Hidra Jovem
+
+Drops:
+
+Escama Pequena
+Veneno Fraco
+🔵 Mini Boss
+🐊 Devorador do Pântano
+
+Drops:
+
+Couro do Pântano
+Presa Gigante
+Núcleo Venenoso
+Carta "Devorador do Pântano"
+🟣 MVP
+☠️ Senhor das Águas Mortas
+
+Drops:
+
+Essência Corrompida
+Cristal Sombrio
+Núcleo Abissal
+Carta "Senhor das Águas Mortas"
+🔴 Boss do Andar
+🐉 Hidra Negra do Pântano
+
+Drops:
+
+Cabeça de Hidra Negra
+Veneno Supremo
+Cristal do Boss
+Carta "Hidra Negra do Pântano"
+🏰 19º Andar — Fortaleza dos Orcs
+🟢 Monstros Comuns
+👹 Orc Guerreiro
+
+Drops:
+
+Couro Orc
+Machado Simples
+Presa Orc
+👹 Orc Arqueiro
+
+Drops:
+
+Arco Orc
+Flechas Grossas
+Couro Orc
+👹 Orc Berserker
+
+Drops:
+
+Couro Grosso
+Machado Pesado
+👺 Goblin Soldado
+
+Drops:
+
+Armadura Goblin
+Moeda Antiga
+🐗 Javali de Guerra
+
+Drops:
+
+Presa Grande
+Couro Resistente
+🐺 Lobo de Guerra
+
+Drops:
+
+Pele Militar
+Presa Afiada
+🪲 Besouro Blindado
+
+Drops:
+
+Casco Duro
+Quitina
+🔵 Mini Boss
+👹 General Orc
+
+Drops:
+
+Armadura Orc
+Machado de Guerra
+Bandeira Orc
+Carta "General Orc"
+🟣 MVP
+👑 Rei Orc
+
+Drops:
+
+Coroa Orc
+Machado Real
+Núcleo Selvagem
+Carta "Rei Orc"
+🔴 Boss do Andar
+⚔️ Imperador Orc de Ferro
+
+Drops:
+
+Armadura Imperial Orc
+Arma do Imperador
+Cristal do Boss
+Carta "Imperador Orc de Ferro"
+🏰 20º Andar — Torre Arcana
+🟢 Monstros Comuns
+🧙 Aprendiz Arcano Corrompido
+
+Drops:
+
+Fragmento Mágico
+Livro Antigo
+👁️ Olho Arcano
+
+Drops:
+
+Cristal Mágico
+Olho Místico
+🧿 Cristal Vivo
+
+Drops:
+
+Cristal Pequeno
+Núcleo Mágico
+🧟 Mago Morto-Vivo
+
+Drops:
+
+Manto Antigo
+Cajado Quebrado
+🐍 Serpente Mágica
+
+Drops:
+
+Escama Arcana
+Essência Mágica
+🦇 Morcego Arcano
+
+Drops:
+
+Asa Mística
+Cristal Azul
+🪄 Familiar Selvagem
+
+Drops:
+
+Essência Mágica
+Fragmento Espiritual
+🔵 Mini Boss
+🧙 Mago Guardião da Torre
+
+Drops:
+
+Cajado Arcano
+Livro de Magia
+Cristal Arcano
+Carta "Mago Guardião da Torre"
+🟣 MVP
+🔮 Arquimago Perdido
+
+Drops:
+
+Cajado Ancestral
+Cristal Supremo
+Essência Arcana
+Carta "Arquimago Perdido"
+🔴 Boss do Andar
+🧙‍♂️ Senhor da Torre Arcana
+
+Drops:
+
+Grimório Supremo
+Cristal do Boss
+Núcleo Arcano
+Carta "Senhor da Torre Arcana"
+
+
+🏰 21º Andar — Floresta Encantada Profunda
+🟢 Monstros Comuns
+🐺 Lobo Espiritual
+
+Drops:
+
+Pele Espiritual
+Presa Lunar
+Essência Selvagem
+🧚 Fada Sombria
+
+Drops:
+
+Asa Sombria
+Pó Mágico
+Cristal Pequeno
+🌳 Trepadeira Encantada
+
+Drops:
+
+Fibra Mágica
+Raiz Encantada
+Madeira Viva
+🦌 Cervo Místico
+
+Drops:
+
+Chifre Místico
+Couro Raro
+Essência Natural
+🐛 Lagarta Cristalina
+
+Drops:
+
+Seda Cristalina
+Casca Dura
+Fragmento Cristalino
+🍄 Cogumelo Encantado
+
+Drops:
+
+Esporo Mágico
+Cogumelo Raro
+Essência Natural
+🦉 Coruja Arcana
+
+Drops:
+
+Pena Mística
+Olho Arcano
+Asa Leve
+🔵 Mini Boss
+🌲 Guardião Ent Místico
+
+Drops:
+
+Madeira Encantada
+Núcleo Natural
+Semente Ancestral
+Carta "Guardião Ent Místico"
+🟣 MVP
+🦄 Unicórnio Lunar
+
+Drops:
+
+Chifre Lunar
+Pelo Celestial
+Cristal de Pureza
+Carta "Unicórnio Lunar"
+🔴 Boss do Andar
+🌳 Árvore da Vida Corrompida
+
+Drops:
+
+Coração da Floresta
+Madeira Ancestral
+Cristal do Boss
+Carta "Árvore da Vida Corrompida"
+🏰 22º Andar — Lago Cristalino
+🟢 Monstros Comuns
+🐟 Peixe Cristalino
+
+Drops:
+
+Escama Cristalina
+Carne Rara
+Cristal Azul
+🐙 Polvo Gigante
+
+Drops:
+
+Tentáculo
+Tinta Marinha
+Ventosa
+🦀 Caranguejo de Cristal
+
+Drops:
+
+Casco Cristalino
+Garra Dura
+Cristal Pequeno
+🐍 Serpente do Lago
+
+Drops:
+
+Escama Azul
+Veneno Aquático
+🧜 Espírito Aquático
+
+Drops:
+
+Essência da Água
+Cristal Elemental
+🐢 Tartaruga Anciã Jovem
+
+Drops:
+
+Casco Antigo
+Pedra Rara
+🦈 Tubarão Cristalino
+
+Drops:
+
+Dente Cristalino
+Couro Marinho
+🔵 Mini Boss
+🐙 Kraken Cristalino
+
+Drops:
+
+Tentáculo Cristalino
+Pérola Rara
+Cristal Aquático
+Carta "Kraken Cristalino"
+🟣 MVP
+🌊 Senhor dos Mares
+
+Drops:
+
+Pérola Ancestral
+Escama Marinha
+Núcleo Aquático
+Carta "Senhor dos Mares"
+🔴 Boss do Andar
+🐉 Leviatã Cristalino
+
+Drops:
+
+Escama de Leviatã
+Coração Oceânico
+Cristal do Boss
+Carta "Leviatã Cristalino"
+🏰 23º Andar — Deserto Dourado
+🟢 Monstros Comuns
+🦂 Escorpião Dourado
+
+Drops:
+
+Carapaça Dourada
+Ferrão
+Veneno Forte
+🐍 Cobra Solar
+
+Drops:
+
+Escama Solar
+Presa Solar
+🐜 Formiga Imperial
+
+Drops:
+
+Quitina Dura
+Mandíbula Forte
+🦎 Lagarto do Sol
+
+Drops:
+
+Couro Quente
+Escama Vermelha
+🧞 Espírito da Areia
+
+Drops:
+
+Areia Mágica
+Essência Elemental
+🦅 Abutre do Deserto
+
+Drops:
+
+Pena Escura
+Garra Afiada
+👺 Goblin Saqueador Dourado
+
+Drops:
+
+Ouro Pequeno
+Couro Goblin
+🔵 Mini Boss
+🦂 Imperador Escorpião
+
+Drops:
+
+Ferrão Imperial
+Carapaça Dourada
+Veneno Supremo
+Carta "Imperador Escorpião"
+🟣 MVP
+🧞 Guardião Djinn do Deserto
+
+Drops:
+
+Essência do Deserto
+Cristal Elemental
+Lâmpada Antiga
+Carta "Guardião Djinn do Deserto"
+🔴 Boss do Andar
+🐲 Dragão Solar das Dunas
+
+Drops:
+
+Escama Solar
+Núcleo de Dragão
+Cristal do Boss
+Carta "Dragão Solar das Dunas"
+🏰 24º Andar — Cidade das Máquinas Antigas
+🟢 Monstros Comuns
+🤖 Autômato Pequeno
+
+Drops:
+
+Engrenagem
+Metal Antigo
+Núcleo Mecânico
+⚙️ Máquina Defeituosa
+
+Drops:
+
+Peça Mecânica
+Ferro Velho
+🕷️ Robô Aranha
+
+Drops:
+
+Perna Mecânica
+Cristal Energético
+🛡️ Soldado Mecânico
+
+Drops:
+
+Placa de Metal
+Espada Mecânica
+👁️ Drone Antigo
+
+Drops:
+
+Cristal de Visão
+Peça Voadora
+🔧 Golem Mecânico
+
+Drops:
+
+Núcleo Mecânico
+Liga Metálica
+⚡ Esfera Energética
+
+Drops:
+
+Cristal Elétrico
+Essência de Energia
+🔵 Mini Boss
+⚙️ Guardião Mecânico
+
+Drops:
+
+Núcleo Avançado
+Liga Especial
+Carta "Guardião Mecânico"
+🟣 MVP
+🤖 Titã Mecânico
+
+Drops:
+
+Núcleo de Energia
+Armadura Mecânica
+Cristal Elétrico
+Carta "Titã Mecânico"
+🔴 Boss do Andar
+⚙️ Colosso Mecânico Ancestral
+
+Drops:
+
+Núcleo Supremo
+Metal Lendário
+Cristal do Boss
+Carta "Colosso Mecânico Ancestral"
+🏰 25º Andar — Templo Celestial
+🟢 Monstros Comuns
+👼 Anjo Caído Menor
+
+Drops:
+
+Pena Branca
+Essência Divina
+🪽 Servo Celestial
+
+Drops:
+
+Pena Celestial
+Cristal Luminoso
+⚔️ Guerreiro Sagrado
+
+Drops:
+
+Metal Sagrado
+Espada Antiga
+🕊️ Ave Celestial
+
+Drops:
+
+Pena Rara
+Asa Leve
+👁️ Olho Divino
+
+Drops:
+
+Cristal de Visão
+Fragmento Divino
+🧙 Sacerdote Antigo
+
+Drops:
+
+Livro Sagrado
+Essência Mágica
+🗿 Estátua Divina
+
+Drops:
+
+Pedra Sagrada
+Núcleo Divino
+🔵 Mini Boss
+⚔️ Cavaleiro Celestial
+
+Drops:
+
+Armadura Celestial
+Espada Sagrada
+Carta "Cavaleiro Celestial"
+🟣 MVP
+👼 Arcanjo Guardião
+
+Drops:
+
+Asa de Arcanjo
+Cristal Divino
+Essência Celestial
+Carta "Arcanjo Guardião"
+🔴 Boss do Andar
+👑 Serafim Supremo
+
+Drops:
+
+Lâmina Celestial
+Cristal do Boss
+Núcleo Divino Supremo
+Carta "Serafim Supremo"
+
+🏰 26º Andar — Floresta Venenosa
+🟢 Monstros Comuns
+🐍 Cobra Venenosa Anciã
+
+Drops:
+
+Escama Venenosa
+Veneno Concentrado
+Presa Longa
+🕷️ Aranha Tóxica
+
+Drops:
+
+Seda Venenosa
+Veneno Forte
+Presa Sombria
+🐸 Sapo Corrosivo
+
+Drops:
+
+Pele Ácida
+Veneno Natural
+Língua Rara
+🌿 Planta Carnívora
+
+Drops:
+
+Raiz Viva
+Fibra Vegetal
+Seiva Ácida
+🦂 Escorpião Verde
+
+Drops:
+
+Carapaça Verde
+Ferrão Tóxico
+Veneno
+🦟 Mosquito Parasita
+
+Drops:
+
+Asa Fina
+Sangue de Monstro
+Ferrão
+🦎 Lagarto Venenoso
+
+Drops:
+
+Couro Tóxico
+Escama Verde
+Garra
+🔵 Mini Boss
+🌿 Treant Venenoso
+
+Drops:
+
+Madeira Tóxica
+Núcleo Natural
+Raiz Ancestral
+Carta "Treant Venenoso"
+🟣 MVP
+🐉 Basilisco Verde Imperial
+
+Drops:
+
+Olho Petrificante
+Escama Imperial
+Veneno Supremo
+Carta "Basilisco Verde Imperial"
+🔴 Boss do Andar
+🐍 Imperatriz Serpente Venenosa
+
+Drops:
+
+Coroa de Serpente
+Veneno Absoluto
+Escama Real
+Cristal do Boss
+Carta "Imperatriz Serpente Venenosa"
+🏰 27º Andar — Fortaleza Abandonada
+🟢 Monstros Comuns
+💀 Soldado Esquecido
+
+Drops:
+
+Osso Antigo
+Armadura Velha
+Espada Quebrada
+🧟 Cavaleiro Caído
+
+Drops:
+
+Metal Enferrujado
+Fragmento Sombrio
+🏹 Arqueiro Fantasma
+
+Drops:
+
+Arco Antigo
+Flecha Sombria
+👻 Espírito Guerreiro
+
+Drops:
+
+Essência Espiritual
+Cristal Fantasma
+🕷️ Aranha da Fortaleza
+
+Drops:
+
+Seda Escura
+Veneno
+🦇 Morcego da Ruína
+
+Drops:
+
+Asa Sombria
+Presa Negra
+🗿 Sentinela Quebrado
+
+Drops:
+
+Pedra Antiga
+Núcleo Mineral
+🔵 Mini Boss
+⚔️ Capitão da Fortaleza Perdida
+
+Drops:
+
+Espada do Capitão
+Armadura Militar
+Medalha Antiga
+Carta "Capitão da Fortaleza Perdida"
+🟣 MVP
+👑 General Morto da Fortaleza
+
+Drops:
+
+Armadura Real Sombria
+Espada Negra
+Cristal Sombrio
+Carta "General Morto da Fortaleza"
+🔴 Boss do Andar
+🏰 Senhor da Fortaleza Amaldiçoada
+
+Drops:
+
+Espada Amaldiçoada
+Armadura do Senhor
+Núcleo Sombrio
+Cristal do Boss
+Carta "Senhor da Fortaleza Amaldiçoada"
+🏰 28º Andar — Reino Subterrâneo
+🟢 Monstros Comuns
+👹 Kobold Mineiro
+
+Drops:
+
+Couro Kobold
+Minério Pequeno
+Picareta Velha
+🪨 Golem de Minério
+
+Drops:
+
+Minério Bruto
+Núcleo Mineral
+🐀 Rato das Cavernas
+
+Drops:
+
+Pele Rústica
+Dente Afiado
+🦇 Morcego Subterrâneo
+
+Drops:
+
+Asa Escura
+Presa
+🐛 Verme de Cristal
+
+Drops:
+
+Cristal Pequeno
+Secreção Mineral
+🦂 Escorpião Rochoso
+
+Drops:
+
+Carapaça Dura
+Ferrão
+👁️ Cristal Vivo
+
+Drops:
+
+Fragmento Cristalino
+Núcleo Mágico
+🔵 Mini Boss
+⛏️ Mestre Kobold Minerador
+
+Drops:
+
+Picareta Real
+Minério Raro
+Couro Kobold Especial
+Carta "Mestre Kobold Minerador"
+🟣 MVP
+🐲 Verme Dragão Subterrâneo
+
+Drops:
+
+Escama de Dragão
+Cristal Mineral
+Núcleo Antigo
+Carta "Verme Dragão Subterrâneo"
+🔴 Boss do Andar
+⛏️ Rei Kobold das Profundezas
+
+Drops:
+
+Machado Real Kobold
+Coroa Kobold
+Minério Lendário
+Cristal do Boss
+Carta "Rei Kobold das Profundezas"
+🏰 29º Andar — Pântano Sombrio
+🟢 Monstros Comuns
+🐊 Crocodilo Negro
+
+Drops:
+
+Couro Negro
+Dente Grande
+🐸 Sapo Sombrio
+
+Drops:
+
+Pele Escura
+Veneno
+👻 Espírito do Pântano
+
+Drops:
+
+Essência Sombria
+Fragmento Espiritual
+🕷️ Aranha do Lodo
+
+Drops:
+
+Seda Pegajosa
+Veneno
+🪱 Verme Sombrio
+
+Drops:
+
+Secreção Negra
+Pele Grossa
+🦎 Lagarto Corrompido
+
+Drops:
+
+Escama Negra
+Garra
+🌱 Planta Sombria
+
+Drops:
+
+Raiz Negra
+Fibra Rara
+🔵 Mini Boss
+☠️ Guardião do Lodo Negro
+
+Drops:
+
+Núcleo Sombrio
+Lodo Raro
+Cristal Negro
+Carta "Guardião do Lodo Negro"
+🟣 MVP
+🐉 Hidra das Sombras
+
+Drops:
+
+Cabeça de Hidra
+Veneno Supremo
+Escama Negra
+Carta "Hidra das Sombras"
+🔴 Boss do Andar
+☠️ Rei do Pântano Sombrio
+
+Drops:
+
+Coroa Negra
+Núcleo Abissal
+Cristal do Boss
+Carta "Rei do Pântano Sombrio"
+🏰 30º Andar — Castelo dos Cavaleiros
+🟢 Monstros Comuns
+⚔️ Soldado do Castelo
+
+Drops:
+
+Metal Polido
+Espada Simples
+🛡️ Guarda Imperial
+
+Drops:
+
+Placa de Armadura
+Escudo Antigo
+🏹 Arqueiro Real
+
+Drops:
+
+Arco Real
+Flecha Reforçada
+🐺 Cão de Guerra
+
+Drops:
+
+Presa Forte
+Couro Militar
+🧙 Mago do Castelo
+
+Drops:
+
+Livro Antigo
+Cristal Mágico
+🦅 Falcão Real
+
+Drops:
+
+Pena Real
+Garra
+🗿 Estátua do Castelo
+
+Drops:
+
+Pedra Nobre
+Núcleo Antigo
+🔵 Mini Boss
+⚔️ Cavaleiro Negro do Castelo
+
+Drops:
+
+Armadura Negra
+Espada Sombria
+Carta "Cavaleiro Negro do Castelo"
+🟣 MVP
+👑 Duque Guerreiro de Aincrad
+
+Drops:
+
+Armadura Nobre
+Espada Ducal
+Cristal de Força
+Carta "Duque Guerreiro de Aincrad"
+🔴 Boss do Andar
+👑 Rei Cavaleiro de Ferro
+
+Drops:
+
+Espada do Rei
+Armadura Real
+Núcleo de Chefe
+Cristal do Boss
+Carta "Rei Cavaleiro de Ferro"
+
+🏰 31º Andar — Vale dos Dragões Menores
+🟢 Monstros Comuns
+🐉 Filhote de Dragão Rochoso
+
+Drops:
+
+Escama Rochosa
+Garra Pequena
+Couro de Dragão
+🦎 Lagarto Dracônico
+
+Drops:
+
+Escama Dracônica
+Presa Afiada
+Pele Resistente
+🐺 Lobo Dracônico
+
+Drops:
+
+Pele Dracônica
+Presa Forte
+Essência Selvagem
+🦅 Ave Flamejante
+
+Drops:
+
+Pena Flamejante
+Garra Quente
+Cinza Mágica
+🦂 Escorpião Dracônico
+
+Drops:
+
+Carapaça Dura
+Ferrão Dracônico
+Veneno Forte
+🪨 Golem de Escama
+
+Drops:
+
+Pedra Dracônica
+Fragmento Mineral
+Núcleo Pequeno
+🐍 Serpente Dracônica
+
+Drops:
+
+Escama Azul
+Veneno Raro
+Presa Longa
+🔵 Mini Boss
+🐲 Dragão Jovem das Montanhas
+
+Drops:
+
+Escama de Dragão Jovem
+Garra Dracônica
+Cristal de Fogo
+Carta "Dragão Jovem das Montanhas"
+🟣 MVP
+🐉 Dragão Ancião Menor
+
+Drops:
+
+Escama Ancestral
+Núcleo Dracônico
+Cristal Elemental
+Carta "Dragão Ancião Menor"
+🔴 Boss do Andar
+🐲 Tyrannus, Dragão das Montanhas
+
+Drops:
+
+Escama do Tyrannus
+Coração de Dragão
+Lâmina Dracônica
+Cristal do Boss
+Carta "Tyrannus, Dragão das Montanhas"
+🏰 32º Andar — Floresta dos Espíritos Antigos
+🟢 Monstros Comuns
+🌲 Espírito da Árvore Antiga
+
+Drops:
+
+Madeira Antiga
+Essência Natural
+🦌 Guardião Cerval
+
+Drops:
+
+Chifre Antigo
+Couro Raro
+🧚 Fada Anciã
+
+Drops:
+
+Asa Encantada
+Pó Mágico
+🦉 Coruja Espiritual
+
+Drops:
+
+Pena Espiritual
+Olho Místico
+🐺 Lobo Fantasma
+
+Drops:
+
+Pele Espectral
+Presa Fantasma
+🍄 Cogumelo Ancestral
+
+Drops:
+
+Esporo Raro
+Raiz Mágica
+🌿 Planta Guardiã
+
+Drops:
+
+Fibra Antiga
+Seiva Especial
+🔵 Mini Boss
+🌳 Ent Ancestral
+
+Drops:
+
+Coração da Árvore
+Madeira Sagrada
+Semente Ancestral
+Carta "Ent Ancestral"
+🟣 MVP
+🦌 Senhor dos Espíritos da Floresta
+
+Drops:
+
+Chifre Espiritual
+Essência da Natureza
+Cristal Verde
+Carta "Senhor dos Espíritos da Floresta"
+🔴 Boss do Andar
+🌳 Yggdrasil Corrompida
+
+Drops:
+
+Raiz de Yggdrasil
+Madeira Divina
+Cristal do Boss
+Carta "Yggdrasil Corrompida"
+🏰 33º Andar — Cidade dos Mercadores Perdidos
+🟢 Monstros Comuns
+🗡️ Ladrão Errante
+
+Drops:
+
+Bolsa Antiga
+Adaga Simples
+🏹 Caçador Urbano
+
+Drops:
+
+Arco Leve
+Flecha Reforçada
+🐀 Rato Gigante Urbano
+
+Drops:
+
+Pele Rústica
+Dente Grande
+👻 Comerciante Fantasma
+
+Drops:
+
+Moeda Antiga
+Fragmento Espiritual
+🧟 Guarda Corrompido
+
+Drops:
+
+Armadura Velha
+Espada Quebrada
+🕷️ Aranha dos Becos
+
+Drops:
+
+Seda Escura
+Veneno
+🦇 Morcego Urbano
+
+Drops:
+
+Asa Pequena
+Presa
+🔵 Mini Boss
+💰 Mestre Ladrão Fantasma
+
+Drops:
+
+Bolsa Misteriosa
+Adaga Rara
+Moeda Antiga
+Carta "Mestre Ladrão Fantasma"
+🟣 MVP
+👑 Barão Mercador Sombrio
+
+Drops:
+
+Anel Nobre
+Tesouro Antigo
+Cristal de Fortuna
+Carta "Barão Mercador Sombrio"
+🔴 Boss do Andar
+💀 Rei dos Ladrões Perdidos
+
+Drops:
+
+Coroa do Ladrão
+Adaga Lendária
+Tesouro Real
+Cristal do Boss
+Carta "Rei dos Ladrões Perdidos"
+🏰 34º Andar — Montanha Congelada
+🟢 Monstros Comuns
+❄️ Urso Polar Gigante
+
+Drops:
+
+Pele Polar
+Garra Gelada
+🐺 Lobo Branco
+
+Drops:
+
+Pele Branca
+Presa Congelada
+🧊 Golem de Gelo
+
+Drops:
+
+Núcleo de Gelo
+Cristal Azul
+🦅 Águia Glacial
+
+Drops:
+
+Pena Branca
+Garra Fria
+🐍 Cobra Congelante
+
+Drops:
+
+Escama Gelada
+Veneno Frio
+🦇 Morcego de Neve
+
+Drops:
+
+Asa Branca
+Presa
+👻 Espírito Congelado
+
+Drops:
+
+Essência de Gelo
+Cristal Espiritual
+🔵 Mini Boss
+❄️ Cavaleiro do Gelo Eterno
+
+Drops:
+
+Armadura Congelada
+Espada Glacial
+Carta "Cavaleiro do Gelo Eterno"
+🟣 MVP
+🐻 Rei Urso da Nevasca
+
+Drops:
+
+Pele Suprema
+Garra Imperial
+Cristal de Gelo
+Carta "Rei Urso da Nevasca"
+🔴 Boss do Andar
+🐉 Dragão Branco Glacial
+
+Drops:
+
+Escama Glacial
+Coração Congelado
+Cristal do Boss
+Carta "Dragão Branco Glacial"
+🏰 35º Andar — Ruínas Demoníacas
+🟢 Monstros Comuns
+👹 Imp Selvagem
+
+Drops:
+
+Asa Pequena
+Essência Sombria
+😈 Demônio Menor
+
+Drops:
+
+Chifre Pequeno
+Fragmento Sombrio
+🦇 Morcego Demoníaco
+
+Drops:
+
+Asa Negra
+Presa Sombria
+👁️ Olho Demoníaco
+
+Drops:
+
+Cristal Negro
+Olho Mágico
+💀 Guerreiro Amaldiçoado
+
+Drops:
+
+Metal Negro
+Espada Antiga
+🕷️ Aranha Infernal
+
+Drops:
+
+Seda Negra
+Veneno Inferior
+🔥 Espírito Flamejante
+
+Drops:
+
+Essência de Fogo
+Cristal Vermelho
+🔵 Mini Boss
+😈 General Imp Inferior
+
+Drops:
+
+Chifre Demoníaco
+Armadura Sombria
+Carta "General Imp Inferior"
+🟣 MVP
+👿 Lorde Demônio Menor
+
+Drops:
+
+Núcleo Demoníaco
+Cristal Sombrio
+Arma Demoníaca
+Carta "Lorde Demônio Menor"
+🔴 Boss do Andar
+👑 Arquiduque Infernal
+
+Drops:
+
+Chifre Supremo
+Espada Infernal
+Cristal do Boss
+Carta "Arquiduque Infernal"
+
+🏰 36º Andar — Reino dos Cristais Mágicos
+🟢 Monstros Comuns
+💎 Golem de Cristal Azul
+
+Drops:
+
+Fragmento de Cristal Azul
+Núcleo Cristalino
+Pedra Mágica
+🧿 Olho Prismático
+
+Drops:
+
+Cristal de Visão
+Fragmento Prismático
+🦋 Borboleta Cristalina
+
+Drops:
+
+Asa Cristalina
+Pó Mágico
+🐍 Serpente Prismática
+
+Drops:
+
+Escama Colorida
+Veneno Mágico
+🪨 Caranguejo Mineral
+
+Drops:
+
+Casco Mineral
+Minério Raro
+🦇 Morcego de Cristal
+
+Drops:
+
+Asa Cristalina
+Cristal Pequeno
+🌟 Slime Prismático
+
+Drops:
+
+Núcleo Prismático
+Gelatina Mágica
+🔵 Mini Boss
+💎 Guardião Prismático
+
+Drops:
+
+Núcleo Prismático
+Cristal Raro
+Fragmento Arcano
+Carta "Guardião Prismático"
+🟣 MVP
+🔮 Senhor dos Cristais
+
+Drops:
+
+Cristal Supremo
+Essência Arcana
+Núcleo Mágico
+Carta "Senhor dos Cristais"
+🔴 Boss do Andar
+💎 Colosso Prismático Ancestral
+
+Drops:
+
+Cristal Lendário
+Núcleo Prismático Supremo
+Armadura Cristalina
+Carta "Colosso Prismático Ancestral"
+🏰 37º Andar — Pântano dos Mortos
+🟢 Monstros Comuns
+🧟 Zumbi Errante
+
+Drops:
+
+Osso Antigo
+Fragmento Sombrio
+💀 Esqueleto Guerreiro
+
+Drops:
+
+Osso Reforçado
+Espada Quebrada
+👻 Fantasma Faminto
+
+Drops:
+
+Essência Fantasma
+Cristal Espiritual
+🪦 Espírito do Túmulo
+
+Drops:
+
+Poeira Antiga
+Fragmento Sombrio
+🕷️ Aranha Cadavérica
+
+Drops:
+
+Seda Morta
+Veneno
+🦇 Morcego Morto-Vivo
+
+Drops:
+
+Asa Negra
+Presa
+🐸 Sapo Necromante
+
+Drops:
+
+Pele Podre
+Essência Sombria
+🔵 Mini Boss
+💀 Cavaleiro Sepulcral
+
+Drops:
+
+Armadura Sepulcral
+Espada Amaldiçoada
+Carta "Cavaleiro Sepulcral"
+🟣 MVP
+☠️ Ceifador Espectral
+
+Drops:
+
+Foice Fantasma
+Essência da Morte
+Cristal Negro
+Carta "Ceifador Espectral"
+🔴 Boss do Andar
+💀 Lich Rei dos Mortos
+
+Drops:
+
+Coroa do Lich
+Cajado da Morte
+Cristal do Boss
+Carta "Lich Rei dos Mortos"
+🏰 38º Andar — Planícies Douradas
+🟢 Monstros Comuns
+🦁 Leão Dourado
+
+Drops:
+
+Pele Dourada
+Garra Real
+🐺 Lobo Solar
+
+Drops:
+
+Pele Solar
+Presa Dourada
+🦌 Cervo Imperial
+
+Drops:
+
+Chifre Dourado
+Couro Nobre
+🦅 Águia Real
+
+Drops:
+
+Pena Dourada
+Garra Afiada
+🐗 Javali Imperial
+
+Drops:
+
+Presa Grande
+Couro Real
+🐍 Serpente Dourada
+
+Drops:
+
+Escama Dourada
+Veneno Raro
+🦋 Borboleta Solar
+
+Drops:
+
+Asa Dourada
+Pó Luminoso
+🔵 Mini Boss
+🦁 Rei Leão Dourado
+
+Drops:
+
+Pele Real
+Garra Imperial
+Carta "Rei Leão Dourado"
+🟣 MVP
+🦄 Guardião Solar
+
+Drops:
+
+Chifre Solar
+Cristal Luminoso
+Essência Celestial
+Carta "Guardião Solar"
+🔴 Boss do Andar
+☀️ Fera Solar Ancestral
+
+Drops:
+
+Núcleo Solar
+Presa Ancestral
+Cristal do Boss
+Carta "Fera Solar Ancestral"
+🏰 39º Andar — Cidade Submersa
+🟢 Monstros Comuns
+🐟 Guerreiro Peixe
+
+Drops:
+
+Escama Azul
+Lança Enferrujada
+🐙 Polvo Abissal
+
+Drops:
+
+Tentáculo
+Tinta Negra
+🦀 Caranguejo Gigante
+
+Drops:
+
+Casco Duro
+Garra Grande
+🐍 Serpente Marinha
+
+Drops:
+
+Escama Marinha
+Veneno Aquático
+🧜 Espírito da Maré
+
+Drops:
+
+Essência Aquática
+Cristal Azul
+🦈 Tubarão Abissal
+
+Drops:
+
+Dente Grande
+Couro Marinho
+🐢 Tartaruga Antiga
+
+Drops:
+
+Casco Antigo
+Pedra Rara
+🔵 Mini Boss
+🌊 Cavaleiro da Maré Perdida
+
+Drops:
+
+Armadura Marinha
+Tridente Antigo
+Carta "Cavaleiro da Maré Perdida"
+🟣 MVP
+🐙 Kraken Ancião
+
+Drops:
+
+Tentáculo Ancestral
+Pérola Negra
+Núcleo Aquático
+Carta "Kraken Ancião"
+🔴 Boss do Andar
+🌊 Imperador Leviatã
+
+Drops:
+
+Escama de Leviatã
+Coração Oceânico
+Cristal do Boss
+Carta "Imperador Leviatã"
+🏰 40º Andar — Fortaleza dos Cavaleiros Negros
+🟢 Monstros Comuns
+⚔️ Soldado Negro
+
+Drops:
+
+Metal Negro
+Espada Simples
+🛡️ Guarda Sombrio
+
+Drops:
+
+Placa Negra
+Escudo Antigo
+🏹 Arqueiro Sombrio
+
+Drops:
+
+Arco Negro
+Flecha Sombria
+🐺 Lobo de Guerra Negro
+
+Drops:
+
+Pele Negra
+Presa Afiada
+🧙 Mago Negro
+
+Drops:
+
+Livro Sombrio
+Cristal Negro
+🦅 Corvo Gigante
+
+Drops:
+
+Pena Negra
+Garra
+🗿 Estátua Sombria
+
+Drops:
+
+Pedra Negra
+Núcleo Antigo
+🔵 Mini Boss
+⚔️ Capitão Cavaleiro Negro
+
+Drops:
+
+Armadura Negra
+Espada Sombria
+Carta "Capitão Cavaleiro Negro"
+🟣 MVP
+👑 General da Ordem Negra
+
+Drops:
+
+Armadura Imperial Negra
+Espada do General
+Cristal de Força
+Carta "General da Ordem Negra"
+🔴 Boss do Andar
+👑 Rei Cavaleiro das Trevas
+
+Drops:
+
+Espada Real Negra
+Armadura do Rei
+Núcleo de Chefe
+Cristal do Boss
+Carta "Rei Cavaleiro das Trevas"
+
+🏰 41º Andar — Vale dos Dragões Ancestrais
+🟢 Monstros Comuns
+🐉 Dragão Jovem de Pedra
+
+Drops:
+
+Escama Rochosa
+Garra Dracônica
+Couro de Dragão
+🦎 Lagarto Ancião
+
+Drops:
+
+Escama Antiga
+Presa Grande
+Pele Resistente
+🐺 Lobo Dracônico Sombrio
+
+Drops:
+
+Pele Dracônica
+Presa Negra
+Essência Selvagem
+🦅 Wyvern Jovem
+
+Drops:
+
+Pena de Wyvern
+Garra Afiada
+Asa Pequena
+🦂 Escorpião de Cristal Vermelho
+
+Drops:
+
+Carapaça Cristalina
+Ferrão Raro
+Cristal Pequeno
+🐍 Serpente do Dragão
+
+Drops:
+
+Escama Azul
+Veneno Dracônico
+🪨 Golem de Ossos Antigos
+
+Drops:
+
+Fragmento Ósseo
+Núcleo Mineral
+🔵 Mini Boss
+🐲 Guardião Wyvern das Montanhas
+
+Drops:
+
+Escama de Wyvern
+Garra Superior
+Cristal Elemental
+Carta "Guardião Wyvern das Montanhas"
+🟣 MVP
+🐉 Dragão Ancião Rubro
+
+Drops:
+
+Escama Rubra
+Coração de Dragão
+Cristal de Fogo Supremo
+Carta "Dragão Ancião Rubro"
+🔴 Boss do Andar
+🐲 Vermillion, Senhor dos Dragões
+
+Drops:
+
+Escama Vermillion
+Núcleo Dracônico Supremo
+Espada Dracônica
+Cristal do Boss
+Carta "Vermillion, Senhor dos Dragões"
+🏰 42º Andar — Torre dos Magos Perdidos
+🟢 Monstros Comuns
+🧙 Aprendiz Arcano
+
+Drops:
+
+Livro Simples
+Fragmento Mágico
+🔮 Cristal Vivo Arcano
+
+Drops:
+
+Cristal Mágico
+Núcleo Arcano
+👁️ Olho Místico
+
+Drops:
+
+Olho Mágico
+Cristal de Visão
+🦇 Morcego Arcano
+
+Drops:
+
+Asa Mística
+Presa
+🐍 Serpente Mágica
+
+Drops:
+
+Escama Arcana
+Essência Elemental
+🧟 Mago Morto-Vivo
+
+Drops:
+
+Cajado Quebrado
+Manto Antigo
+🧿 Familiar Corrompido
+
+Drops:
+
+Essência Mágica
+Cristal Pequeno
+🔵 Mini Boss
+🧙 Mestre Arcano Esquecido
+
+Drops:
+
+Cajado Arcano
+Grimório Antigo
+Cristal Mágico Superior
+Carta "Mestre Arcano Esquecido"
+🟣 MVP
+🔮 Arquimago das Sete Torres
+
+Drops:
+
+Cajado Ancestral
+Cristal Supremo
+Essência Arcana
+Carta "Arquimago das Sete Torres"
+🔴 Boss do Andar
+🧙‍♂️ Mago Supremo Proibido
+
+Drops:
+
+Grimório Proibido
+Núcleo Arcano
+Cristal do Boss
+Carta "Mago Supremo Proibido"
+🏰 43º Andar — Floresta dos Predadores
+🟢 Monstros Comuns
+🐅 Tigre Selvagem
+
+Drops:
+
+Pele de Tigre
+Garra Afiada
+🐺 Lobo Alfa
+
+Drops:
+
+Pele Alfa
+Presa Grande
+🐻 Urso Gigante
+
+Drops:
+
+Pele Grossa
+Garra Gigante
+🦅 Águia Caçadora
+
+Drops:
+
+Pena Grande
+Garra
+🐍 Cobra Real
+
+Drops:
+
+Escama Real
+Veneno Forte
+🕷️ Aranha Caçadora
+
+Drops:
+
+Seda Resistente
+Veneno
+🐗 Javali Selvagem Rei
+
+Drops:
+
+Presa Real
+Couro Grosso
+🔵 Mini Boss
+🐺 Senhor dos Lobos
+
+Drops:
+
+Pele Real
+Presa Lunar
+Essência Selvagem
+Carta "Senhor dos Lobos"
+🟣 MVP
+🦁 Leão Imperial
+
+Drops:
+
+Pele Imperial
+Garra Suprema
+Cristal Selvagem
+Carta "Leão Imperial"
+🔴 Boss do Andar
+🐯 Rei Predador Ancestral
+
+Drops:
+
+Pele Ancestral
+Garra do Rei
+Núcleo Selvagem
+Cristal do Boss
+Carta "Rei Predador Ancestral"
+🏰 44º Andar — Deserto das Chamas Eternas
+🟢 Monstros Comuns
+🔥 Salamandra Flamejante
+
+Drops:
+
+Escama Flamejante
+Essência de Fogo
+🦂 Escorpião de Lava
+
+Drops:
+
+Carapaça Vulcânica
+Ferrão Ardente
+🐍 Cobra de Fogo
+
+Drops:
+
+Escama Vermelha
+Veneno Flamejante
+🪨 Golem Vulcânico
+
+Drops:
+
+Pedra de Lava
+Núcleo de Fogo
+🐲 Lagarto Flamejante
+
+Drops:
+
+Couro Quente
+Garra Flamejante
+🦅 Fênix Jovem
+
+Drops:
+
+Pena Vermelha
+Cinza Mágica
+👹 Demônio da Cinza
+
+Drops:
+
+Fragmento Demoníaco
+Essência Sombria
+🔵 Mini Boss
+🌋 Guardião da Lava
+
+Drops:
+
+Núcleo Vulcânico
+Cristal Flamejante
+Pedra Rara
+Carta "Guardião da Lava"
+🟣 MVP
+🔥 Fênix Ancestral
+
+Drops:
+
+Pena Imortal
+Cinza Sagrada
+Cristal Supremo de Fogo
+Carta "Fênix Ancestral"
+🔴 Boss do Andar
+🐉 Dragão Infernal de Lava
+
+Drops:
+
+Escama Infernal
+Coração de Fogo
+Núcleo de Dragão
+Cristal do Boss
+Carta "Dragão Infernal de Lava"
+🏰 45º Andar — Reino das Sombras
+🟢 Monstros Comuns
+👤 Sombra Viva
+
+Drops:
+
+Fragmento Sombrio
+Essência Negra
+💀 Guerreiro Amaldiçoado
+
+Drops:
+
+Metal Negro
+Arma Quebrada
+👻 Espírito Sombrio
+
+Drops:
+
+Cristal Sombrio
+Essência Fantasma
+🕷️ Aranha das Trevas
+
+Drops:
+
+Seda Negra
+Veneno Sombrio
+🦇 Morcego Infernal
+
+Drops:
+
+Asa Negra
+Presa Infernal
+👁️ Olho da Escuridão
+
+Drops:
+
+Cristal Negro
+Olho Místico
+😈 Imp Sombrio
+
+Drops:
+
+Chifre Pequeno
+Essência Demoníaca
+🔵 Mini Boss
+⚔️ Cavaleiro da Sombra Eterna
+
+Drops:
+
+Armadura Sombria
+Espada Negra
+Carta "Cavaleiro da Sombra Eterna"
+🟣 MVP
+👿 Duque Demoníaco das Sombras
+
+Drops:
+
+Chifre Demoníaco
+Cristal Abissal
+Arma Sombria
+Carta "Duque Demoníaco das Sombras"
+🔴 Boss do Andar
+👑 Rei das Sombras Eternas
+
+Drops:
+
+Coroa Sombria
+Lâmina Abissal
+Núcleo Demoníaco
+Cristal do Boss
+Carta "Rei das Sombras Eternas"
+
+🏰 46º Andar — Ruínas dos Heróis Antigos
+🟢 Monstros Comuns
+⚔️ Soldado Heroico Caído
+
+Drops:
+
+Armadura Antiga
+Espada Enferrujada
+Medalha de Herói
+🛡️ Guardião de Bronze
+
+Drops:
+
+Placa de Bronze
+Núcleo Antigo
+Fragmento Metálico
+🏹 Arqueiro das Ruínas
+
+Drops:
+
+Arco Antigo
+Flecha Reforçada
+👻 Espírito do Guerreiro Antigo
+
+Drops:
+
+Essência Heroica
+Cristal Espiritual
+🗿 Colosso de Pedra Velha
+
+Drops:
+
+Pedra Antiga
+Núcleo Mineral
+🦇 Morcego das Ruínas
+
+Drops:
+
+Asa Escura
+Presa Pequena
+🕷️ Aranha das Catacumbas
+
+Drops:
+
+Seda Antiga
+Veneno
+🔵 Mini Boss
+⚔️ Campeão das Ruínas Perdidas
+
+Drops:
+
+Espada do Campeão
+Armadura Antiga
+Medalha Heroica
+Carta "Campeão das Ruínas Perdidas"
+🟣 MVP
+👑 Herói Corrompido de Aincrad
+
+Drops:
+
+Lâmina Heroica
+Cristal de Poder
+Armadura Nobre
+Carta "Herói Corrompido de Aincrad"
+🔴 Boss do Andar
+🗿 Guardião dos Antigos Heróis
+
+Drops:
+
+Relíquia Heroica
+Núcleo Ancestral
+Arma Lendária
+Cristal do Boss
+Carta "Guardião dos Antigos Heróis"
+🏰 47º Andar — Jardim das Fadas Cristalinas
+🟢 Monstros Comuns
+🧚 Fada Cristalina
+
+Drops:
+
+Asa Cristalina
+Pó Encantado
+🦋 Borboleta Arcana
+
+Drops:
+
+Asa Colorida
+Essência Mágica
+🌸 Flor Encantada
+
+Drops:
+
+Pétala Rara
+Néctar Mágico
+🐝 Abelha Imperial
+
+Drops:
+
+Ferrão
+Mel Dourado
+🐇 Coelho Lunar
+
+Drops:
+
+Pelo Lunar
+Essência Natural
+🦌 Cervo Cristalino
+
+Drops:
+
+Chifre Cristalino
+Couro Raro
+🐍 Serpente Feérica
+
+Drops:
+
+Escama Colorida
+Veneno Leve
+🔵 Mini Boss
+🧚 Rainha das Fadas Menores
+
+Drops:
+
+Asa Real
+Cristal Feérico
+Pó Encantado Supremo
+Carta "Rainha das Fadas Menores"
+🟣 MVP
+🦄 Guardião Unicórnio Cristalino
+
+Drops:
+
+Chifre Cristalino
+Pelo Celestial
+Núcleo de Pureza
+Carta "Guardião Unicórnio Cristalino"
+🔴 Boss do Andar
+🧚‍♀️ Rainha Feérica de Cristal
+
+Drops:
+
+Coroa Feérica
+Asa Lendária
+Cristal Supremo
+Carta "Rainha Feérica de Cristal"
+🏰 48º Andar — Caverna dos Minérios Lendários
+🟢 Monstros Comuns
+⛏️ Kobold Ferreiro
+
+Drops:
+
+Minério Raro
+Ferramenta Antiga
+🪨 Golem de Mithril
+
+Drops:
+
+Fragmento de Mithril
+Núcleo Metálico
+🐛 Verme Mineral Gigante
+
+Drops:
+
+Cristal Mineral
+Pele Dura
+🦂 Escorpião Metálico
+
+Drops:
+
+Carapaça Metálica
+Ferrão
+🪲 Besouro de Ferro
+
+Drops:
+
+Quitina Metálica
+Liga de Ferro
+🐍 Cobra de Minério
+
+Drops:
+
+Escama Metálica
+Pedra Preciosa
+👁️ Cristal Guardião
+
+Drops:
+
+Cristal Pequeno
+Energia Mágica
+🔵 Mini Boss
+⛏️ Mestre Ferreiro Kobold
+
+Drops:
+
+Martelo Kobold
+Minério Especial
+Liga Rara
+Carta "Mestre Ferreiro Kobold"
+🟣 MVP
+🗿 Golem de Mithril Ancestral
+
+Drops:
+
+Mithril Puro
+Núcleo Supremo
+Cristal Mineral
+Carta "Golem de Mithril Ancestral"
+🔴 Boss do Andar
+⚒️ Colosso de Adamantita
+
+Drops:
+
+Adamantita
+Núcleo Lendário
+Armadura Mineral Suprema
+Carta "Colosso de Adamantita"
+🏰 49º Andar — Cidade Fantasma
+🟢 Monstros Comuns
+👻 Habitante Fantasma
+
+Drops:
+
+Essência Fantasma
+Moeda Antiga
+🧟 Morador Morto-Vivo
+
+Drops:
+
+Osso Antigo
+Fragmento Sombrio
+🦇 Morcego Fantasma
+
+Drops:
+
+Asa Espectral
+Presa
+🕷️ Aranha Fantasma
+
+Drops:
+
+Seda Fantasma
+Veneno
+🗡️ Assassino Espectral
+
+Drops:
+
+Adaga Antiga
+Essência Sombria
+🏚️ Guardião da Cidade
+
+Drops:
+
+Metal Velho
+Armadura Quebrada
+👁️ Olho Fantasma
+
+Drops:
+
+Cristal Espiritual
+Olho Mágico
+🔵 Mini Boss
+🗡️ Assassino da Cidade Perdida
+
+Drops:
+
+Duas Adagas Fantasmas
+Manto Sombrio
+Carta "Assassino da Cidade Perdida"
+🟣 MVP
+👑 Prefeito Fantasma da Cidade
+
+Drops:
+
+Chave Antiga
+Anel Fantasma
+Cristal Espiritual
+Carta "Prefeito Fantasma da Cidade"
+🔴 Boss do Andar
+👑 Rei Fantasma da Cidade Perdida
+
+Drops:
+
+Coroa Espectral
+Espada Fantasma
+Núcleo Espiritual
+Cristal do Boss
+Carta "Rei Fantasma da Cidade Perdida"
+🏰 50º Andar — Torre dos Cavaleiros Celestes
+🟢 Monstros Comuns
+⚔️ Cavaleiro Celestial Menor
+
+Drops:
+
+Metal Sagrado
+Espada Celestial
+🪽 Soldado Alado
+
+Drops:
+
+Pena Celestial
+Armadura Leve
+🏹 Arqueiro Celestial
+
+Drops:
+
+Arco Celestial
+Flecha Sagrada
+🛡️ Guardião Angelical
+
+Drops:
+
+Escudo Sagrado
+Fragmento Divino
+🧙 Sacerdote Celestial
+
+Drops:
+
+Livro Sagrado
+Essência Divina
+🦅 Águia Celestial
+
+Drops:
+
+Pena Brilhante
+Garra
+🗿 Estátua Angelical
+
+Drops:
+
+Pedra Divina
+Núcleo Celestial
+🔵 Mini Boss
+⚔️ Capitão dos Cavaleiros Celestes
+
+Drops:
+
+Armadura Celestial
+Espada Sagrada
+Medalha Celestial
+Carta "Capitão dos Cavaleiros Celestes"
+🟣 MVP
+👼 Arcanjo Guerreiro
+
+Drops:
+
+Asa de Arcanjo
+Lâmina Celestial
+Cristal Divino
+Carta "Arcanjo Guerreiro"
+🔴 Boss do Andar
+👑 Serafim Guardião Supremo
+
+Drops:
+
+Coroa Celestial
+Espada dos Céus
+Núcleo Divino Supremo
+Cristal do Boss
+Carta "Serafim Guardião Supremo"

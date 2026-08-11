@@ -25,10 +25,19 @@ cobre o roster inteiro até o andar 50.
   `docs/pipeline.md` documenta que só o Andar 1 levou "várias rodadas" pra
   chegar no volume que tem hoje (45 monstros, 50 NPCs, 60+ quests).
 
-## Preciso saber
+## ✅ Resolvido (10/08) — roster extraído e importado (escopo P, como decidido)
 
-- Pra esta rodada, você quer só o **roster extraído** (rápido, dá pra fazer
-  já) ou já quer decidir a ordem de quais andares viram conteúdo jogável de
-  verdade primeiro (isso vira um plano de vários meses, não uma tarefa)?
-- As outras 9 imagens seguem o mesmo padrão de layout da que eu vi? (Só pra
-  eu não presumir errado ao processar em lote.)
+Achado no caminho: as imagens nunca precisaram ser lidas de novo —
+`dolist/🐉 Bestiário de Aincrad.txt` já era a transcrição completa dos 50
+andares (feita numa sessão anterior), só nunca tinha virado dado
+estruturado. Parseado e importado pra tabela nova `bestiario_roster`
+(`scripts/db/schema_bestiario_roster.sql` + `scripts/db/_importar_bestiario.py`,
+reaproveitável se o `.txt` mudar): **500 monstros, 50 andares, 4
+categorias** (comum/mini_boss/mvp/boss — 350/50/50/50). Fica separado de
+`monstros` de propósito — é roster, não ficha jogável completa (a
+diferença que este arquivo já explicava). Também alimentou direto o item 7
+(cartas/cristais) — ver `07_drops_e_cartas.md`.
+
+Vira ficha jogável de verdade (o trabalho de vários meses que este arquivo
+já avisava) continua em aberto — não é algo que "faça tudo" cobre numa
+tarde.

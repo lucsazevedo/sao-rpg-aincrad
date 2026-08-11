@@ -1,0 +1,243 @@
+🧪 Categoria: Consumíveis de SAO
+🟢 Dificuldade 6-
+Consumíveis Pequenos
+🧪 Poção Pequena de HP
+
+Profissão: Alquimista • Dificuldade: 6-
+
+Materiais
+2x Erva Curativa
+1x Água Purificada
+1x Frasco Vazio
+Efeito
+
+Recupera uma pequena quantidade de vida.
+
+🧪 Poção Pequena de Regeneração
+Materiais
+2x Erva Vital
+1x Mel Natural
+1x Frasco Vazio
+Efeito
+
+Recupera vida aos poucos durante uma cena.
+
+💎 Cristal de Cura
+
+Profissão: Alquimista Cristalista
+
+Materiais
+1x Cristal Verde
+2x Erva Curativa
+1x Essência Vital
+Efeito
+
+Ao quebrar o cristal:
+
+Recupera vida imediatamente.
+Pode ser usado em aliados.
+💎 Cristal de Purificação
+Materiais
+1x Cristal Branco
+2x Erva Purificadora
+1x Água Sagrada
+Efeito
+
+Remove:
+
+Veneno simples.
+Efeitos negativos leves.
+💎 Cristal de Luz
+Materiais
+1x Cristal Luminoso
+1x Fragmento Mágico
+Efeito
+
+Cria uma fonte de luz por uma cena.
+
+🥤 Poção de Energia
+Materiais
+2x Erva Azul
+1x Cristal Pequeno
+1x Frasco
+Efeito
+
+Recupera energia para técnicas.
+
+🍖 Carne Assada de Monstro
+
+Profissão: Cozinheiro
+
+Materiais
+1x Carne de Monstro
+1x Tempero Natural
+Efeito
+
+Concede bônus temporário de resistência.
+
+🍞 Pão de Aventureiro
+Materiais
+2x Trigo
+1x Mel
+Efeito
+
+Remove fadiga e mantém o grupo preparado.
+
+🧭 Cristal de Localização
+Materiais
+1x Cristal Azul
+1x Fragmento Mágico
+Efeito
+
+Mostra a localização aproximada de um ponto conhecido.
+
+🔥 Cristal de Calor
+Materiais
+1x Cristal Vermelho
+1x Essência Flamejante
+Efeito
+
+Protege contra frio extremo.
+
+🔵 Dificuldade 7-9
+Consumíveis Médios
+🧪 Poção Média de HP
+Materiais
+3x Erva Curativa Rara
+1x Cristal Vital
+1x Frasco Reforçado
+Efeito
+
+Recupera grande quantidade de vida.
+
+💎 Cristal de Teleporte
+
+(Inspirado nos cristais usados em SAO)
+
+Materiais
+2x Cristal Azul
+1x Essência Espacial
+1x Fragmento de Teleporte
+Efeito
+
+Permite teleportar para uma cidade ou ponto registrado.
+
+💎 Cristal de Retorno
+Materiais
+2x Cristal Azul
+1x Essência Espacial
+Efeito
+
+Retorna o usuário para uma área segura.
+
+🧪 Poção de Velocidade
+Materiais
+2x Planta Veloz
+1x Cristal de Vento
+1x Frasco Reforçado
+Efeito
+
+Aumenta movimentação durante uma cena.
+
+🧪 Poção de Força
+Materiais
+2x Raiz Gigante
+1x Sangue de Monstro
+1x Frasco Reforçado
+Efeito
+
+Melhora ataques físicos temporariamente.
+
+🧪 Poção de Resistência
+Materiais
+2x Cristal de Defesa
+2x Erva Forte
+Efeito
+
+Reduz efeitos de dano recebido.
+
+💎 Cristal de Visão
+Materiais
+2x Cristal Claro
+1x Essência Lunar
+Efeito
+
+Permite enxergar:
+
+Áreas escuras.
+Rastros.
+Pequenas ilusões.
+🍲 Refeição do Guerreiro
+Materiais
+Carne Rara
+Ervas Especiais
+Tempero Premium
+Efeito
+
+Aumenta resistência e recuperação.
+
+🔴 Dificuldade 10+
+Consumíveis Grandes
+💎 Cristal de Ressurreição
+
+(Item extremamente raro inspirado nos sistemas de MMORPG)
+
+Materiais
+3x Cristal Prismático
+1x Essência da Vida
+1x Núcleo de Chefe
+✨ Efeito — Última Esperança
+
+Pode impedir uma consequência fatal.
+
+Uso extremamente limitado.
+
+💎 Cristal Supremo de Teleporte
+Materiais
+3x Cristal Azul
+2x Essência Espacial
+1x Núcleo Ancestral
+✨ Efeito — Portal Absoluto
+
+Permite teleportar:
+
+Grandes distâncias.
+Grupos inteiros.
+Para locais previamente registrados.
+🧪 Elixir da Vida
+Materiais
+5x Erva Lendária
+2x Cristal Vital
+1x Essência Lendária
+✨ Efeito — Vida Renovada
+
+Recupera completamente o potencial físico do usuário.
+
+💎 Cristal do Herói
+Materiais
+2x Cristal Prismático
+1x Núcleo de Chefe
+1x Essência Lendária
+✨ Efeito — Limite Quebrado
+
+Durante uma cena:
+
+Aumenta capacidades do usuário.
+Permite realizar feitos extraordinários.
+Fortalece habilidades especiais.
+🧪 Elixir Elemental Supremo
+Materiais
+3x Cristal Elemental
+1x Essência Ancestral
+1x Núcleo de Guardião
+✨ Efeito — Domínio Elemental
+
+Escolha um elemento:
+
+🔥 Fogo
+❄️ Gelo
+⚡ Raio
+🌪️ Vento
+🌎 Terra
+
+O usuário ganha afinidade temporária.

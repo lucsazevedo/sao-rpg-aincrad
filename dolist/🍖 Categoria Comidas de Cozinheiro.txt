@@ -1,0 +1,237 @@
+🍖 Categoria: Comidas de Cozinheiro
+
+As comidas em Sword Art Online funcionam como itens de preparação antes de batalhas e exploração. Diferente das poções, elas não recuperam instantaneamente, mas concedem efeitos temporários, ideais para grupos que vão enfrentar áreas perigosas, chefes ou missões longas.
+
+Distribuição:
+
+🟢 Dificuldade 6- → Refeições Simples
+🔵 Dificuldade 7-9 → Refeições Especiais
+🔴 Dificuldade 10+ → Pratos Lendários
+
+🟢 Dificuldade 6-
+🍞 Refeições Simples
+🍖 Carne Assada de Monstro
+
+Profissão: Cozinheiro • Dificuldade: 6-
+
+Materiais
+1x Carne de Monstro
+1x Sal
+1x Erva Aromática
+Efeito
+
+Buff: Resistência Física
+
+Durante uma cena:
+
+O usuário suporta melhor esforços físicos.
+Recebe vantagem em ações de resistência corporal.
+🍞 Pão do Aventureiro
+
+Profissão: Cozinheiro • Dificuldade: 6-
+
+Materiais
+2x Trigo
+1x Mel Natural
+1x Erva Doce
+Efeito
+
+Buff: Energia Renovada
+
+Durante uma cena:
+
+Reduz efeitos de fadiga.
+Ajuda em viagens longas.
+🍲 Sopa de Ervas Curativas
+Materiais
+3x Ervas Medicinais
+1x Água Limpa
+1x Tempero Natural
+Efeito
+
+Buff: Recuperação
+
+Durante uma cena:
+
+Pequena recuperação após descanso.
+Melhora efeitos de cura recebida.
+🍗 Espetinho de Caça
+Materiais
+1x Carne de Animal
+1x Madeira de Carvalho
+1x Tempero Simples
+Efeito
+
+Buff: Instinto de Caçador
+
+Durante uma cena:
+
+Melhora rastreamento.
+Ajuda a encontrar criaturas.
+🍎 Frutas Cristalizadas
+Materiais
+3x Frutas Raras
+1x Açúcar Natural
+Efeito
+
+Buff: Foco Mental
+
+Durante uma cena:
+
+Melhora concentração.
+Ajuda no uso de técnicas.
+🥛 Leite Fortificado
+Materiais
+1x Leite Fresco
+1x Erva Forte
+Efeito
+
+Buff: Vitalidade
+
+Durante uma cena:
+
+Melhora resistência contra cansaço.
+🍪 Biscoito de Energia
+Materiais
+2x Farinha
+1x Mel
+1x Cristal Pequeno
+Efeito
+
+Buff: Recuperação de Energia
+
+Durante uma cena:
+
+Ajuda a manter habilidades.
+🍵 Chá Calmante
+Materiais
+2x Ervas Tranquilas
+1x Água Pura
+Efeito
+
+Buff: Controle
+
+Durante uma cena:
+
+Ajuda em ações de concentração e precisão.
+🔵 Dificuldade 7-9
+🍽️ Refeições Especiais
+🥩 Bife do Guerreiro
+Materiais
+2x Carne de Monstro Raro
+1x Tempero Especial
+1x Erva Forte
+Efeito
+
+Buff: Poder Físico
+
+Durante uma cena:
+
+Aumenta impacto de ataques.
+Melhora ações de força.
+🍣 Prato do Mestre Espadachim
+Materiais
+1x Peixe Raro
+2x Ervas Especiais
+1x Molho Raro
+Efeito
+
+Buff: Precisão Absoluta
+
+Durante uma cena:
+
+Melhora ataques técnicos.
+Ajuda em golpes precisos.
+🍲 Ensopado do Guardião
+Materiais
+2x Carne Resistente
+1x Cristal de Defesa
+1x Erva Vital
+Efeito
+
+Buff: Defesa Superior
+
+Durante uma cena:
+
+Reduz impactos recebidos.
+Aumenta resistência.
+🍰 Bolo de Cristal
+Materiais
+2x Açúcar Raro
+1x Cristal Pequeno
+1x Fruta Rara
+Efeito
+
+Buff: Recuperação Mental
+
+Durante uma cena:
+
+Melhora foco.
+Ajuda no uso de habilidades.
+🥘 Prato do Explorador
+Materiais
+Carne de Caça Rara
+Ervas Selvagens
+Cogumelo Especial
+Efeito
+
+Buff: Sobrevivência
+
+Durante uma cena:
+
+Facilita exploração.
+Ajuda contra ambientes perigosos.
+🔴 Dificuldade 10+
+👑 Pratos Lendários
+🥘 Banquete dos Heróis
+Materiais
+3x Carne Lendária
+2x Ervas Ancestrais
+1x Essência Vital
+✨ Efeito — Espírito de Herói
+
+Durante uma cena:
+
+O grupo recebe coragem extra.
+Permite enfrentar grandes ameaças sem hesitação.
+Fortalece ações em equipe.
+🍖 Carne do Monstro Supremo
+Materiais
+2x Carne de Chefe
+2x Tempero Lendário
+1x Cristal Vital
+✨ Efeito — Instinto Supremo
+
+Durante uma cena:
+
+Melhora percepção de batalha.
+Permite reagir rapidamente a ameaças.
+Aumenta eficiência em combate.
+🍷 Néctar de Aincrad
+Materiais
+3x Frutas Lendárias
+2x Cristais Puros
+1x Essência Ancestral
+✨ Efeito — Harmonia Perfeita
+
+Durante uma cena:
+
+Corpo e mente entram em equilíbrio.
+Melhora qualquer tipo de ação importante.
+🍱 Prato Lendário do Cozinheiro
+Materiais
+1x Ingrediente Único
+2x Cristal Prismático
+1x Núcleo de Chefe
+✨ Efeito — Sabor da Vitória
+
+Durante uma cena:
+
+Escolha um atributo:
+Corpo
+Reflexos
+Conhecimento
+Técnica
+Espírito
+
+O prato fortalece temporariamente esse aspecto.

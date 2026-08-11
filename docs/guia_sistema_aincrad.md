@@ -350,7 +350,7 @@ Exclusivo**. Nesta mesa, cada profissão concede:
 ### Domador (TEC)
 
 **Marca:** você anda com vida ao lado; isso atrai curiosidade, inveja e medo.
-**Move de Ofício — Doma:** quando você tenta amansar criatura domável criando vínculo e não só controle, role 2d6+Técnica. 10+ você avança sem reação violenta e define o tom do vínculo. 7-9 você avança, mas a criatura cobra (fuga, dano leve, exigência).
+**Move de Ofício — Ovo de Fera** (substitui a antiga "Doma" — amansar bicho adulto foi removido, o vínculo agora nasce do ovo): quando você encontra, cuida ou tenta chocar um ovo de criatura, descreva como prepara o ambiente e role 2d6+Técnica. 10+ escolha 2: o ovo choca com segurança e a fera nasce saudável, ela reconhece você como cuidador e cria vínculo imediato, você descobre uma característica especial dela, ou preserva os materiais usados no cuidado. 7-9 escolha 1: choca mas exige cuidados constantes por um tempo, a fera ainda precisa de confiança antes de aceitar você, ou nasce saudável só que assustada e difícil de controlar. 6- o mestre escolhe: o ovo não choca sem um local/item/condição especial, a criatura nasce agressiva ou desconfiada, o processo chama atenção da mãe da fera ou de outros monstros, ou o ovo tem doença/maldição/característica inesperada.
 **Move de Cena — Ordem Clara:** quando você dá uma ordem ao aliado domado para resolver um obstáculo ou mudar uma cena, role 2d6+Técnica. 10+ escolha 1: proteger alguém, abrir caminho, ou evitar uma ameaça. 7-9 ele faz, mas cria consequência (barulho, risco, ciúme, custo).
 
 ### Ferreiro (TEC)

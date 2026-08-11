@@ -1,0 +1,224 @@
+🥾 Categoria: Botas
+
+Distribuição:
+
+🟢 10 Botas — Dificuldade 6-
+🔵 3 Botas — Dificuldade 7-9
+🔴 2 Botas — Dificuldade 10+ com efeitos únicos
+🟢 Dificuldade 6-
+1. Botas Simples
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro Cru
+1x Linha Resistente
+1x Fibra Vegetal
+Ferramentas
+Bancada de Trabalho
+Agulha de Coureiro
+Produz
+1x Botas Simples
+2. Botas de Couro
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+4x Couro Curtido
+1x Linha Reforçada
+1x Resina Natural
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Botas de Couro
+3. Botas do Viajante
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro Grosso
+1x Fibra Forte
+1x Tecido Resistente
+Ferramentas
+Bancada de Trabalho
+Agulha de Coureiro
+Produz
+1x Botas do Viajante
+4. Botas do Caçador
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+4x Couro de Lobo
+1x Pena Rara
+1x Linha Reforçada
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Botas do Caçador
+5. Botas Reforçadas
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+3x Couro Grosso
+2x Placa de Ferro Pequena
+1x Linha de Aço
+Ferramentas
+Bancada de Trabalho
+Martelo Pequeno
+Produz
+1x Botas Reforçadas
+6. Botas de Ferro Leve
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+3x Barra de Ferro
+2x Couro Curtido
+1x Rebite de Ferro
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Botas de Ferro Leve
+7. Botas do Soldado
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+3x Barra de Ferro
+1x Couro Reforçado
+1x Tecido Resistente
+Ferramentas
+Bigorna
+Martelo de Ferreiro
+Produz
+1x Botas do Soldado
+8. Botas Escamadas
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+4x Escama de Monstro
+2x Couro Grosso
+1x Linha Resistente
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Coureiro
+Produz
+1x Botas Escamadas
+9. Botas do Explorador
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+3x Couro Nobre
+1x Cristal de Detecção
+1x Fibra Forte
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Precisão
+Produz
+1x Botas do Explorador
+10. Botas de Batalha
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+4x Barra de Ferro
+2x Couro Reforçado
+1x Pedra de Amolar
+Ferramentas
+Bigorna
+Fornalha
+Produz
+1x Botas de Batalha
+🔵 Dificuldade 7-9
+11. Botas de Aço
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+5x Barra de Aço
+2x Couro Nobre
+1x Carvão Refinado
+Ferramentas
+Bigorna Pesada
+Fornalha Avançada
+Produz
+1x Botas de Aço
+12. Botas do Cavaleiro
+
+Profissão: Ferreiro • Dificuldade: 7-9
+
+Materiais
+5x Placa de Aço
+1x Cristal de Defesa
+1x Couro Reforçado
+Ferramentas
+Bigorna
+Martelo de Precisão
+Produz
+1x Botas do Cavaleiro
+13. Botas do Assassino
+
+Profissão: Coureiro • Dificuldade: 7-9
+
+Materiais
+5x Couro Sombrio
+1x Cristal de Furtividade
+1x Seda Rara
+Ferramentas
+Bancada de Trabalho
+Ferramentas de Precisão
+Produz
+1x Botas do Assassino
+🔴 Dificuldade 10+
+14. Botas do Vento Celestial
+
+Profissão: Artesão • Dificuldade: 10+
+
+Materiais
+5x Liga de Mithril
+2x Cristal de Vento
+1x Essência Elemental
+Ferramentas
+Bancada Rúnica
+Ferramentas Ancestrais
+Produz
+1x Botas do Vento Celestial
+✨ Efeito das Botas — Passo do Vendaval
+
+As botas respondem aos movimentos do usuário.
+
+Quando realizar ações de movimento:
+
+Pode atravessar rapidamente uma área.
+Pode mudar sua posição de forma inesperada.
+Pode criar vantagens usando velocidade.
+15. Botas Lendárias de Aincrad
+
+Profissão: Artesão • Dificuldade: 10+
+
+Materiais
+6x Liga de Mithril
+2x Cristal Prismático
+1x Núcleo de Chefe
+1x Essência Lendária
+Ferramentas
+Bancada Ancestral
+Ferramentas Lendárias
+Produz
+1x Botas Lendárias de Aincrad
+✨ Efeito das Botas — Caminho Impossível
+
+Um equipamento criado para aventureiros que desafiam limites.
+
+Quando explorar ou enfrentar perigos:
+
+Pode encontrar caminhos alternativos.
+Pode superar obstáculos difíceis.
+Pode realizar movimentos que parecem impossíveis.

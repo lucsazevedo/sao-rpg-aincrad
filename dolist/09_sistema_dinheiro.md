@@ -30,7 +30,9 @@ sobe.
 
 ## Preciso saber
 
-- O limite diário é em **Col ganho** (não importa como) ou **por
-  atividade** (X de missão + Y de venda, tetos separados)?
-- Preço no mercado é **livre** (cada jogador define) ou tem faixa
-  sugerida/máxima pro mestre não perder controle da economia?
+- **Decidido (ATUALIZADO):** Não existe limite diário de Col! A régua de grind do jogo online é **Fôlego** (já existe coluna `folego` int no schema — teto 20, recupera +1 a cada 30 minutos, ou totalmente com 6h de descanso). Atividades (missão de combate = 5, missão de coleta = 4, ofício = 6, contrato arriscado = 10, craft = 1-3 dependendo da dificuldade) gastam Fôlego; **Mercado (comprar, vender, criar anúncio, remover anúncio) NÃO gasta Fôlego NUNCA** — se o jogador estiver sem Fôlego, ele só para de fazer missão/craft, mas continua usando o mercado normalmente.
+- **Decidido (ATUALIZADO):** Preço no mercado é **LIVRE** (estilo Mercado Livre); **NÃO EXISTE TAXA NENHUMA** — vendedor recebe 100% do valor do anúncio (zero custo pra anunciar, zero custo pra vender). Jogo é mesa pequena com poucos jogadores — não precisa de pia de dinheiro.
+- **Loja por vendedor:** cada jogador tem página "Loja de [NomePersonagem]" listando todos os anúncios ativos + quantos itens já vendeu + ranking de reputação de vendedor (estrelas 1-5 por transação concluída sem reclamação).
+- **Anúncio expira em 7 dias** (corridos). Expirou, item volta pro inventário do vendedor automático. Remover anúncio antes de expirar também é 100% livre sem penalidade.
+- **Fluxo compra:** 1 clique em Comprar → confirmação → desconta Col do comprador → adiciona item no inventário do comprador → envia 100% Col pro vendedor → log em transacoes. Tudo atomicamente via função SQL.
+- **Log transação:** tabela `transacoes` já existe no schema, campos: data, tipo (compra_mercado / venda_mercado / missao_recompensa / craft), personagem_id, outro_personagem_id (null se for NPC/missão), valor_col, observacao (id do anúncio, nome da missão, etc). Mestre pode auditar tudo via admin.

@@ -1,0 +1,210 @@
+💍 Categoria: Acessórios
+
+Distribuição:
+
+🟢 10 Acessórios — Dificuldade 6-
+🔵 3 Acessórios — Dificuldade 7-9
+🔴 2 Acessórios — Dificuldade 10+ com efeitos únicos
+🟢 Dificuldade 6-
+1. Anel de Ferro Simples
+
+Profissão: Joalheiro • Dificuldade: 6-
+
+Materiais
+2x Barra de Ferro
+1x Pedra Comum
+Ferramentas
+Bancada de Joalheria
+Alicate de Precisão
+Produz
+1x Anel de Ferro Simples
+2. Colar de Couro
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+2x Couro Curtido
+1x Linha Resistente
+1x Cristal Pequeno
+Ferramentas
+Bancada de Trabalho
+Produz
+1x Colar de Couro
+3. Pulseira de Ferro
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+2x Barra de Ferro
+1x Couro Cru
+Ferramentas
+Bigorna
+Martelo Pequeno
+Produz
+1x Pulseira de Ferro
+4. Pingente de Proteção
+
+Profissão: Joalheiro • Dificuldade: 6-
+
+Materiais
+1x Cristal de Defesa
+1x Barra de Bronze
+1x Corrente Simples
+Ferramentas
+Bancada de Joalheria
+Produz
+1x Pingente de Proteção
+5. Anel do Viajante
+
+Profissão: Joalheiro • Dificuldade: 6-
+
+Materiais
+1x Prata Bruta
+1x Cristal Claro
+1x Couro Fino
+Ferramentas
+Ferramentas de Precisão
+Produz
+1x Anel do Viajante
+6. Brinco de Cristal
+
+Profissão: Joalheiro • Dificuldade: 6-
+
+Materiais
+2x Cristal Pequeno
+1x Prata Bruta
+Ferramentas
+Bancada de Joalheria
+Produz
+1x Brinco de Cristal
+7. Medalhão do Explorador
+
+Profissão: Artesão • Dificuldade: 6-
+
+Materiais
+1x Cristal de Detecção
+2x Barra de Ferro
+1x Couro Nobre
+Ferramentas
+Bancada de Trabalho
+Produz
+1x Medalhão do Explorador
+8. Cinto Reforçado
+
+Profissão: Coureiro • Dificuldade: 6-
+
+Materiais
+3x Couro Grosso
+1x Fivela de Ferro
+1x Linha Reforçada
+Ferramentas
+Bancada de Coureiro
+Produz
+1x Cinto Reforçado
+9. Broche do Guerreiro
+
+Profissão: Ferreiro • Dificuldade: 6-
+
+Materiais
+1x Barra de Ferro
+1x Cristal de Impacto
+1x Couro Curtido
+Ferramentas
+Bigorna
+Produz
+1x Broche do Guerreiro
+10. Amuleto Simples
+
+Profissão: Joalheiro • Dificuldade: 6-
+
+Materiais
+1x Cristal Natural
+1x Madeira Nobre
+1x Linha Mística
+Ferramentas
+Bancada de Joalheria
+Produz
+1x Amuleto Simples
+🔵 Dificuldade 7-9
+11. Anel do Cavaleiro
+
+Profissão: Joalheiro • Dificuldade: 7-9
+
+Materiais
+2x Prata Refinada
+1x Cristal de Defesa
+1x Barra de Aço
+Ferramentas
+Bancada Avançada de Joalheria
+Produz
+1x Anel do Cavaleiro
+12. Colar Elemental
+
+Profissão: Joalheiro • Dificuldade: 7-9
+
+Materiais
+2x Cristal Elemental
+1x Ouro Refinado
+1x Corrente de Aço
+Ferramentas
+Ferramentas de Precisão
+Produz
+1x Colar Elemental
+13. Bracelete do Guardião
+
+Profissão: Joalheiro • Dificuldade: 7-9
+
+Materiais
+2x Barra de Aço
+1x Cristal de Defesa
+1x Núcleo de Monstro
+Ferramentas
+Bancada Avançada
+Produz
+1x Bracelete do Guardião
+🔴 Dificuldade 10+
+14. Anel do Infinito
+
+Profissão: Joalheiro • Dificuldade: 10+
+
+Materiais
+2x Liga de Mithril
+2x Cristal Prismático
+1x Essência Elemental
+Ferramentas
+Bancada Ancestral
+Ferramentas Rúnicas
+Produz
+1x Anel do Infinito
+✨ Efeito do Acessório — Energia Inesgotável
+
+O anel mantém uma conexão constante com a energia do usuário.
+
+Quando realizar uma ação importante:
+
+Pode recuperar concentração rapidamente.
+Pode manter uma técnica por mais tempo.
+Pode superar limitações momentâneas.
+15. Colar Lendário de Aincrad
+
+Profissão: Joalheiro • Dificuldade: 10+
+
+Materiais
+3x Liga de Mithril
+2x Cristal Prismático
+1x Núcleo de Chefe
+1x Essência Lendária
+Ferramentas
+Bancada Ancestral
+Ferramentas Lendárias
+Produz
+1x Colar Lendário de Aincrad
+✨ Efeito do Acessório — Herança dos Heróis
+
+Um símbolo carregado pelas maiores lendas de Aincrad.
+
+Quando enfrentar desafios decisivos:
+
+Pode fortalecer uma escolha importante.
+Pode proteger contra consequências graves.
+Pode inspirar aliados próximos.
