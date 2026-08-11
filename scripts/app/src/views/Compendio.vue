@@ -8,13 +8,13 @@
       aba Mesa & Sessão.
     </p>
     <div class="tabs" style="margin:8px 0;flex-wrap:wrap">
-      <div class="tab" :class="{on: abaAtiva==='mapa'}" @click="selecionar('mapa')">🗺️ Mapa</div>
-      <div v-for="t in TABS" :key="t.k" class="tab" :class="{on: abaAtiva===t.k}" @click="selecionar(t.k)">{{ t.ico }} {{ t.label }}</div>
+      <button type="button" class="tab" :class="{on: abaAtiva==='mapa'}" @click="selecionar('mapa')">🗺️ Mapa</button>
+      <button type="button" v-for="t in TABS" :key="t.k" class="tab" :class="{on: abaAtiva===t.k}" @click="selecionar(t.k)">{{ t.ico }} {{ t.label }}</button>
     </div>
 
     <!-- ===== Mapa (pontos reais, sem o terreno artístico do HTML legado) ===== -->
     <div v-if="abaAtiva==='mapa'">
-      <div v-if="carregandoMapa" class="msg info">Carregando mapa…</div>
+      <div v-if="carregandoMapa" class="msg info carregando">Carregando mapa…</div>
       <div v-else>
         <div style="display:flex;gap:10px;flex-wrap:wrap;margin:0 0 10px;align-items:center">
           <select v-model="regiaoFiltro" style="background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:8px 10px;border-radius:6px;font:inherit">
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div v-else-if="carregando" class="msg info">Carregando…</div>
+    <div v-else-if="carregando" class="msg info carregando">Carregando…</div>
     <div v-else-if="!itensFiltrados.length" class="msg warn">Nada encontrado.</div>
     <div v-else>
       <div style="display:flex;gap:10px;flex-wrap:wrap;margin:10px 0 14px">

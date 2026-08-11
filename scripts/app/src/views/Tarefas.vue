@@ -272,7 +272,7 @@
         </div>
       </div>
 
-      <div v-if="carregando" class="msg info">Carregando tarefas…</div>
+      <div v-if="carregando" class="msg info carregando">Carregando tarefas…</div>
       <div v-else-if="!tarefas.length" class="msg info">
         Nenhuma tarefa no quadro. Clique em "🎲 Sortear 5".
       </div>

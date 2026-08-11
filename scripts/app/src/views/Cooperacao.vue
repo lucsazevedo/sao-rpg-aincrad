@@ -12,7 +12,7 @@
     <div v-else-if="!auth.temPersonagem" class="msg warn">Sem ficha vinculada — fale com o mestre.</div>
     <div v-else>
       <div class="tabs" style="margin:8px 0">
-        <div v-for="t in abas" :key="t.k" class="tab" :class="{on: aba===t.k}" @click="aba=t.k">{{ t.label }}</div>
+        <button type="button" v-for="t in abas" :key="t.k" class="tab" :class="{on: aba===t.k}" @click="aba=t.k">{{ t.label }}</button>
       </div>
 
       <!-- ===== Correio (18A) ===== -->

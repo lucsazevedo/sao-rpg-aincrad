@@ -103,7 +103,7 @@
             >
           </label>
         </div>
-        <div v-if="carregando" class="msg info">Carregando…</div>
+        <div v-if="carregando" class="msg info carregando">Carregando…</div>
         <div v-else-if="!receitas.length" class="msg warn">
           Ainda não há receitas para esta profissão no banco. Se for Domador, as
           receitas incluem também incubadoras.
@@ -148,7 +148,7 @@
 
       <!-- Aba Meus Materiais (SÓ QUE TEM, NÃO MOSTRA CATÁLOGO TODO) -->
       <div v-if="aba === 'materiais'">
-        <div v-if="carregandoMat" class="msg info">
+        <div v-if="carregandoMat" class="msg info carregando">
           Carregando seus materiais…
         </div>
         <div v-else-if="!meusMateriais.length" class="msg warn">

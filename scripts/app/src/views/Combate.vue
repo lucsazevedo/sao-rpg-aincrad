@@ -62,7 +62,7 @@
         </select>
       </div>
 
-      <div v-if="carregando" class="msg info">Carregando bestiário…</div>
+      <div v-if="carregando" class="msg info carregando">Carregando bestiário…</div>
       <div v-else class="grid">
         <div v-for="m in monstrosFiltrados" :key="m.id" class="card">
           <img v-if="m.img" :src="m.img" :alt="m.nome" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">

@@ -3,9 +3,9 @@
     <StatusBar v-if="auth.temPersonagem" />
     <TituloHUD icone="🥚" titulo="Incubadora do Domador" trilha="Sistema · Pets" />
     <div class="tabs" style="margin:0 0 12px">
-      <div class="tab" :class="{on:tab==='ativos'}" @click="tab='ativos'">🐾 Ativos</div>
-      <div class="tab" :class="{on:tab==='incub'}" @click="tab='incub'">🥚 Incubando <span v-if="incubando.length">({{ incubando.length }})</span></div>
-      <div class="tab" :class="{on:tab==='ovos'}" @click="tab='ovos'">🎒 Meus Ovos</div>
+      <button type="button" class="tab" :class="{on:tab==='ativos'}" @click="tab='ativos'">🐾 Ativos</button>
+      <button type="button" class="tab" :class="{on:tab==='incub'}" @click="tab='incub'">🥚 Incubando <span v-if="incubando.length">({{ incubando.length }})</span></button>
+      <button type="button" class="tab" :class="{on:tab==='ovos'}" @click="tab='ovos'">🎒 Meus Ovos</button>
     </div>
     <div v-if="tab==='ovos'">
       <div v-if="!meusOvos.length" class="msg info">Você não tem nenhum ovo. Consiga ovos em missões, drops ou crie no Mercado.</div>
