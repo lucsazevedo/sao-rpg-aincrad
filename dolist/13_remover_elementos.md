@@ -29,7 +29,15 @@ mesa. Detalhe da mecânica nova em `12_sistema_de_poder.md`; este item é só
 - Ficha de monstro (`monstros/_modelo_monstro.md`) — tirar campo de
   elemento do molde pra quem for escrever monstro novo não usar mais.
 
-## Preciso saber
+## ✅ Fechado — conferido 10/08, já estava 100% feito
+
+Achado ao auditar o dolist: isso já tinha sido concluído numa rodada
+anterior e nunca foi marcado aqui. Conferido direto no banco agora —
+`monstros.atributo_fraqueza` preenchido em **54 de 54** monstros, nenhuma
+coluna `elemento_*` sobrando no schema (`elemento_resistencia` já tinha
+sido derrubada). Nada pendente neste item.
+
+## Preciso saber (histórico, já resolvido)
 
 - Reescrever os 50 monstros existentes é prioridade **antes** de eu
   desenhar o sistema de Poder/fraqueza de vez, ou dá pra desenhar o

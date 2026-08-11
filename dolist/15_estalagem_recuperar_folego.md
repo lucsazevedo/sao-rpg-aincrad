@@ -48,7 +48,18 @@ uso: mestre
 
 - Nenhuma forte — pode fazer antes ou depois de missões_diarias.html. Fica melhor com missões_diarias pra jogador ter pra que gastar o fôlego recém comprado.
 
-## Preciso saber
+## ✅ Fechado — construído dentro do item 17 (Combate.vue)
+
+RPC `comprar_folego(p_qtd)` existe e funciona (SECURITY DEFINER, valida
+saldo, atualiza `col_mao`/`folego` atomicamente, loga em `transacoes`).
+UI: 3 botões (+1/+5/encher) dentro de `Combate.vue` — não virou página
+separada, ficou junto de onde o jogador realmente gasta o Fôlego (fazia
+mais sentido que uma `estalagem.html` isolada). Sem teto diário de
+compra implementado (jogador rico pode encher quantas vezes quiser —
+nunca foi confirmado que isso precisava de limite; fácil de adicionar
+depois se virar problema de balanceamento na mesa).
+
+## Preciso saber (histórico, já resolvido)
 
 1. **Preço base:** quanto vale +1 Fôlego em Col? As 3 opções (5, 30, 150) o mestre acha ok ou quer outro valor?
 2. **Preço proporcional ou bloqueio?** Jogador com 19/20 clica no pacote +5 → cobra só 5 Col pelo +1, ou bloqueia o botão dizendo "você não precisa de todo esse pacote"?
