@@ -1182,7 +1182,12 @@ async function carregarMesa(){
       supa.from('mesa_raid_prep').select('*').order('categoria'),
       supa.from('mesa_relacoes').select('*').order('nome'),
       supa.from('mesa_sessoes').select('*').order('criado_em', {ascending:false}).limit(12),
-      supa.from('monstros').select('id,nome,ameaca,golpes').eq('excluido',false).order('nome'),
+      // monstros_publico: mesmo motivo do pontos_publico logo abaixo — a
+      // tabela base "monstros" nunca teve GRANT SELECT pra "authenticated"
+      // (só a view resolve com segurança); essa linha ficou pra trás quando
+      // o fix foi aplicado no resto do arquivo (achado 11/08 revendo
+      // Combate.vue, que tinha o mesmo bug pro jogador comum).
+      supa.from('monstros_publico').select('id,nome,ameaca,golpes').order('nome'),
       supa.from('mesa_combate').select('*').eq('ativo', true).order('criado_em', {ascending:false}),
       // pontos_publico: a coluna "mestre" nunca teve GRANT SELECT na tabela
       // base pra "authenticated" — só a view resolve com segurança via

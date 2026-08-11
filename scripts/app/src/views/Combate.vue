@@ -186,7 +186,12 @@ function corResultado(r) {
 async function carregarMonstros() {
   carregando.value = true
   try {
-    const r = await supa.from('monstros').select('id,nome,img,nivel_recomendado,ameaca,zona,atributo_fraqueza,min_contribuintes').eq('visivel', true).eq('excluido', false).order('nome')
+    // monstros_publico, não a tabela base: "monstros" nunca teve GRANT
+    // SELECT pra "authenticated" (só INSERT/UPDATE/DELETE, pro editor do
+    // mestre) — só a view resolve com segurança via RLS+CASE WHEN
+    // is_mestre(). Bug achado 11/08: grade de monstros ficava vazia pra
+    // qualquer jogador, silencioso (erro só aparecia no console).
+    const r = await supa.from('monstros_publico').select('id,nome,img,nivel_recomendado,ameaca,zona,atributo_fraqueza,min_contribuintes').eq('visivel', true).order('nome')
     monstros.value = r.data || []
     await carregarChefes()
   } catch (e) { console.warn(e) }
