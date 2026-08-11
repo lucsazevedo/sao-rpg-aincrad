@@ -14,12 +14,12 @@
     <div v-else-if="!auth.temPersonagem" class="msg warn">Sem ficha vinculada — fale com o mestre.</div>
     <div v-else>
       <div class="tabs" style="margin:8px 0">
-        <div v-for="t in abas" :key="t.k" class="tab" :class="{on: aba===t.k}" @click="aba=t.k">{{ t.label }}</div>
+        <button type="button" v-for="t in abas" :key="t.k" class="tab" :class="{on: aba===t.k}" @click="aba=t.k">{{ t.label }}</button>
       </div>
 
       <!-- ========== Aba 1: EQUIPADOS AGORA (paper doll, 10 slots decididos) ========== -->
       <div v-if="aba==='equipados'">
-        <div v-if="carregando" class="msg info">Carregando…</div>
+        <div v-if="carregando" class="msg info carregando">Carregando…</div>
         <div v-else class="grid">
           <div v-for="e in paperDoll" :key="e.key" class="card">
             <div class="ct">{{ e.emoji }} {{ e.label }}</div>
@@ -36,7 +36,7 @@
 
       <!-- ========== Aba 2: INVENTÁRIO / MOCHILA (grid 8×8) ========== -->
       <div v-if="aba==='inventario'">
-        <div v-if="carregando" class="msg info">Carregando inventário…</div>
+        <div v-if="carregando" class="msg info carregando">Carregando inventário…</div>
         <div v-else-if="!mochila.length" class="msg warn">
           Mochila vazia. Use <router-link to="/tarefas" style="color:var(--gold-bright)">missões</router-link>,
           <router-link to="/combate" style="color:var(--gold-bright)">combate</router-link> e
@@ -79,7 +79,7 @@
 
       <!-- ========== Aba 3: BAÚ / STASH ========== -->
       <div v-if="aba==='stash'">
-        <div v-if="carregando" class="msg info">Carregando baú…</div>
+        <div v-if="carregando" class="msg info carregando">Carregando baú…</div>
         <div v-else-if="!stash.length" class="msg warn">
           Baú vazio. Guarde item da mochila aqui pra abrir espaço — não conta nos 64 slots da mochila.
         </div>

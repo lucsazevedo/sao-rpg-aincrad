@@ -91,7 +91,7 @@
           <div class="admin-twocol">
             <div class="card" style="background:var(--panel-2)">
               <h4 style="margin:0 0 12px;color:var(--azul-bright)">🎲 Últimos personagens criados</h4>
-              <div v-if="carregandoPers" class="msg info">Carregando…</div>
+              <div v-if="carregandoPers" class="msg info carregando">Carregando…</div>
               <div v-else-if="!jogadores.length" class="msg warn">Nenhum personagem criado ainda.</div>
               <div v-else class="admin-list">
                 <div v-for="p in jogadores.slice(0,6)" :key="p.nome" class="admin-row" role="button" tabindex="0"
@@ -146,7 +146,7 @@
             <div class="card" style="background:var(--panel-2)">
               <h4 style="margin:0 0 4px;color:var(--azul-bright)">🕰️ Relógios narrativos</h4>
               <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">Progresso 0-6 de ameaças e tramas de fundo. Suba quando a ficção empurrar.</p>
-              <div v-if="carregandoMesa" class="msg info">Carregando…</div>
+              <div v-if="carregandoMesa" class="msg info carregando">Carregando…</div>
               <div v-else style="display:grid;gap:12px">
                 <div v-for="r in relogios" :key="r.id">
                   <div class="row-nome">{{ r.nome }} <span class="pill" style="margin-left:6px">{{ r.valor }}/6</span></div>
@@ -332,7 +332,7 @@
             </select>
             <button class="btn" @click="buscaJog=''; filtroProf=''">Limpar filtros</button>
           </div>
-          <div v-if="carregandoPers" class="msg info">Carregando lista de jogadores…</div>
+          <div v-if="carregandoPers" class="msg info carregando">Carregando lista de jogadores…</div>
           <div v-else-if="!jogadoresFiltrados.length" class="msg warn">Nenhum personagem com esses filtros.</div>
           <div v-else class="card" style="background:var(--panel-2);padding:0;overflow:hidden">
             <table class="admin-table">
@@ -699,7 +699,7 @@
           <div class="card" style="background:var(--panel-2)">
             <h4 style="margin:0 0 12px;color:var(--azul-bright)">🏪 Anúncios do mercado</h4>
             <button class="btn" style="margin-bottom:10px" @click="carregarMercado()">🔄 Atualizar</button>
-            <div v-if="carregandoMercado" class="msg info">Carregando mercado…</div>
+            <div v-if="carregandoMercado" class="msg info carregando">Carregando mercado…</div>
             <div v-else-if="!anuncios.length" class="msg warn">Nenhum anúncio no mercado.</div>
             <div v-else class="admin-list">
               <div v-for="a in anuncios" :key="a.id" class="admin-row">
@@ -728,7 +728,7 @@
               </select>
               <button class="btn" :disabled="!invPers" @click="carregarInventarioJog()">🔄 Carregar inventário</button>
             </div>
-            <div v-if="carregandoInvJog" class="msg info" style="margin-top:10px">Carregando inventário…</div>
+            <div v-if="carregandoInvJog" class="msg info carregando" style="margin-top:10px">Carregando inventário…</div>
             <div v-else-if="invPers && !invItens.length" class="msg warn" style="margin-top:10px">Inventário vazio para esse jogador.</div>
             <div v-else-if="invItens.length" class="admin-list" style="margin-top:10px">
               <div v-for="it in invItens" :key="it.id" class="admin-row">

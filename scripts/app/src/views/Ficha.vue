@@ -146,7 +146,7 @@
           </div>
         </div>
         <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">Reputação</h3>
-        <div v-if="carregandoRep" class="msg info">Carregando…</div>
+        <div v-if="carregandoRep" class="msg info carregando">Carregando…</div>
         <div v-else-if="!reputacoes.length" class="msg warn">
           Nenhuma reputação registrada ainda — sobe conforme você ajuda cidades, vilas, NPCs e o mestre reconhece.
         </div>

@@ -3,14 +3,14 @@
     <StatusBar v-if="auth.temPersonagem"/>
     <TituloHUD icone="🏪" titulo="Mercado" trilha="Sistema · Comércio entre Jogadores" />
     <div class="tabs" style="margin:12px 0">
-      <div class="tab" :class="{on:tab=='vitrine'}" @click="tab='vitrine'">📦 Vitrine</div>
-      <div class="tab" :class="{on:tab=='meus'}" @click="tab='meus'">📢 Meus Anúncios</div>
-      <div v-if="auth.temPersonagem" class="tab" :class="{on:tab=='meuinv'}" @click="tab='meuinv'">🎒 Meu inventário</div>
+      <button type="button" class="tab" :class="{on:tab=='vitrine'}" @click="tab='vitrine'">📦 Vitrine</button>
+      <button type="button" class="tab" :class="{on:tab=='meus'}" @click="tab='meus'">📢 Meus Anúncios</button>
+      <button type="button" v-if="auth.temPersonagem" class="tab" :class="{on:tab=='meuinv'}" @click="tab='meuinv'">🎒 Meu inventário</button>
     </div>
 
     <!-- Vitrine -->
     <div v-if="tab==='vitrine'">
-      <div v-if="carregandoV" class="msg info">Carregando vitrine…</div>
+      <div v-if="carregandoV" class="msg info carregando">Carregando vitrine…</div>
       <div v-else-if="!vitrine.length" class="msg warn">Nenhum anúncio publicado no momento.</div>
       <div v-else class="grid">
         <div v-for="a in vitrine" :key="a.id" class="card">
@@ -31,7 +31,7 @@
     <!-- Meus anuncios -->
     <div v-if="tab==='meus'">
       <div v-if="!auth.temPersonagem" class="msg info">🔒 <a href="#" @click.prevent="$emit('pedir-login')">Entra</a> pra ver seus anúncios.</div>
-      <div v-else-if="carregandoM" class="msg info">Carregando…</div>
+      <div v-else-if="carregandoM" class="msg info carregando">Carregando…</div>
       <div v-else-if="!meus.length" class="msg warn">Você não publicou nenhum anúncio ainda. Vá em "Meu inventário" → "Publicar".</div>
       <div v-else class="grid">
         <div v-for="a in meus" :key="a.id" class="card">
@@ -45,7 +45,7 @@
 
     <!-- Meu inventário (publicação) -->
     <div v-if="tab==='meuinv'">
-      <div v-if="carregandoI" class="msg info">Carregando inventário…</div>
+      <div v-if="carregandoI" class="msg info carregando">Carregando inventário…</div>
       <div v-else-if="!meuInv.length" class="msg warn">Inventário vazio. Faça missões para obter itens e materiais.</div>
       <div v-else class="grid">
         <div v-for="it in meuInv" :key="it.id" class="card">
