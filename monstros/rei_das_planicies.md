@@ -9,15 +9,13 @@ regioes: [campos_oeste, colinas_pedra, campos_leste]
 nivel_recomendado: "9-10"
 nivel_ameaca: chefe
 golpes_para_derrotar: "3x5"
-atributo_fraqueza: a galhada, quando ele a baixa para investir — e ela é a única coisa que ele protege
-elemento_fraqueza: Trovão
-elemento_resistencia: Gelo
+abertura: a galhada, quando ele a baixa para investir — e ela é a única coisa que ele protege
+atributo_fraqueza: Conhecimento
 resistencias: [frio, veneno, impacto]
 vulnerabilidades: [trovão, terreno fechado]
 imagem: ../imagens/monstro_rei_das_planicies.png
 canonico: nao
 fonte:
-domavel: nao
 ---
 
 ## Habitat
@@ -65,11 +63,10 @@ que não parece calculado, e é o único que precede violência.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** o cristal de descarga da Gruta de Lumis é o item
-  desenhado para esta luta. Em 10+ ele perde a investida coroada pelo resto da
-  cena, e sem ela a arena inteira muda de dono.
-- **Resiste a Gelo e a Veneno** — não adianta, e o grupo deve descobrir isso
-  antes pelo Guardião, não aqui.
+- **Atributo — Conhecimento:** a escrita que cobre ele inteiro é o segredo
+  e a brecha — arma de Conhecimento, na mão de quem leu o padrão, é a
+  resposta desenhada para esta luta. Em 10+ ele perde a investida coroada
+  pelo resto da cena, e sem ela a arena inteira muda de dono.
 - A galhada fica aberta depois do giro, e é a única parte dele que importa.
 - Terreno fechado o anula: entre pedras, ele não corre, e sem corrida ele é
   grande e lento.
@@ -101,6 +98,11 @@ carregada por um animal que não devia saber escrever.
 | Casco Polido | Incomum | 2 | 70% | Artesão |
 | Núcleo Selvagem | Raro | 1-2 | 60% | Joalheiro, item Único |
 | Galhada Escrita | Raro | 1 | 100% | Bibliotecário — texto longo e legível |
+| Pele Real | **Incomum** | 1-2 | 50% | Coureiro (acessório/armadura especial) |
+| Garra do Rei | **Raro** | 2 | 35% | Ferreiro (arma pontuda/garra) |
+| Núcleo de Fera | **Raro** | 1 | 40% | Alquimista (poções/cristais de poder) |
+| Cristal de Força | **Raro** | 1 | 25% | Cristalista, socket de força em arma |
+| Carta "Rei das Planícies" | **Épico** | 1 | ~0.8% | Drop exclusivo do MVP (0.8% ≈ 1/125); 1 carta equipável |
 | Coroa do Campo | **Épico** | 1 | 100% | Torna Raro em Único na bancada |
 | Col | — | 2200-3200 | 100% | — |
 
@@ -127,9 +129,10 @@ para alguém que ainda espera entregá-lo.
   entregar, e não traduza tudo de uma vez.
 - **Como usar em transmissão:** a pausa da terceira barra. Segure o silêncio
   mais tempo do que é confortável — inclusive para você.
-- **Erro comum do grupo:** chegar sem Trovão. O caminho estava dado: Guardião
-  resiste a Gelo, o cristal está na Gruta, os Corretores de Tolbana vendem a
-  informação. Se chegarem sem, deixe a luta ser dura e honesta.
+- **Erro comum do grupo:** chegar sem ninguém de arma de Conhecimento. O
+  caminho estava dado: as marcas na pelagem do Guardião, a escrita na
+  galhada, os Corretores de Tolbana vendem a informação. Se chegarem sem,
+  deixe a luta ser dura e honesta.
 - **Como a cena encerra sem HP:** sair do circuito. Ele nunca persegue para
   fora da rota, e um grupo que entende isso pode encerrar o encontro andando
   em linha reta para o sul. Ninguém ganha nada, e todo mundo se lembra.

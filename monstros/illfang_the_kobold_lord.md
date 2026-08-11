@@ -9,16 +9,14 @@ regioes: [sala_chefe, labirinto_entrada]
 nivel_recomendado: "8-10"
 nivel_ameaca: chefe
 golpes_para_derrotar: "4x6-8"
-atributo_fraqueza: previsibilidade — os golpes de machado têm tempo de leitura, e o nodachi não
-elemento_fraqueza: Fogo
-elemento_resistencia: Trovão
+abertura: previsibilidade — os golpes de machado têm tempo de leitura, e o nodachi não
+atributo_fraqueza: Reflexo
 resistencias: [fase 1 — golpes frontais bloqueados pelo broquel, trovão]
 vulnerabilidades: [fogo, fase 2 — perde a defesa do escudo ao trocar pro nodachi, isolamento dos Sentinels]
 imagem: ../imagens/monstro_illfang_the_kobold_lord.png
 carta: ../imagens/carta_illfang_the_kobold_lord.png
 canonico: sim
 fonte: https://swordartonline.fandom.com/wiki/Illfang_the_Kobold_Lord
-domavel: nao
 ---
 
 ## Habitat
@@ -66,10 +64,10 @@ aparecer.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** as correias e o estandarte queimam. Em 10+ ele perde a
-  convocação de Sentinels pelo resto da luta, e é a diferença entre raid e
-  massacre.
-- **Resiste a Trovão** — a couraça de placas soltas dispersa a descarga.
+- **Atributo — Reflexo:** os golpes de machado têm tempo de leitura, e arma
+  de Reflexo vive nesse tempo — mesmo o nodachi abre janela entre um corte
+  e outro. Em 10+ ele perde a convocação de Sentinels pelo resto da luta,
+  e é a diferença entre raid e massacre.
 - Magia e ataque de área causam dano dobrado nos lacaios, nunca nele.
 - Depende dos kobolds: isolá-lo enfraquece a defesa dele de verdade, e os
   golpes físicos dele são previsíveis o bastante para serem aparados.
@@ -95,9 +93,14 @@ em mecânica real, e faz o último golpe parecer decisão, não matemática.
 | Escama Dura | Comum | 4-6 | 100% | Ferreiro, Costureiro |
 | Moeda Antiga de Aincrad | Incomum | 2-3 | 80% | Corretores, Bibliotecário |
 | Coroa de Ossos de Illfang | Raro | 1 | 100% | Troféu de raid, 1 unidade |
-| Cristal de Comando | Raro | 1 | 60% | Joalheiro, elemento Trovão |
+| Cristal de Comando | Raro | 1 | 60% | Joalheiro |
 | Nodachi de Illfang | Raro | 1 | 100% | Arma Única, só pro raid vencedor |
 | Última Cravação | Raro | 1 | 15% | Item de bônus de atributo |
+| Espada do Lorde Kobold | **Raro** | 1 | 60% | Arma (espada curta) para classe guerreiro |
+| Couro Kobold Real | **Incomum** | 2 | 50% | Coureiro (armadura de chefe leve) |
+| Cristal do Boss | **Raro** | 1 | 100% | Socket permanente de chefe em qualquer equipamento |
+| Núcleo de Chefe | **Épico** | 1 | 100% | Craft de armas/armaduras de chefe nos andares altos |
+| Carta "Illfang, o Lorde Kobold" | **Épico** | 1 | ~0.8% | Drop exclusivo do Boss de Andar; 1 carta equipável |
 | Essência Kobold | **Épico** | 1 | 100% | Torna Raro em Único na bancada |
 | Col | — | ~2000 dividido pelo raid | 100% | — |
 

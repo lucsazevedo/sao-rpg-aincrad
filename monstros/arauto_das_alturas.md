@@ -9,17 +9,13 @@ regioes: [montanhas, penhascos_vento]
 nivel_recomendado: "7-8"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: golpe nas asas em pleno voo
-elemento_fraqueza: Trovão
-elemento_resistencia: Gelo
+abertura: golpe nas asas em pleno voo
+atributo_fraqueza: Reflexo
 resistencias: [vento]
 vulnerabilidades: []
 imagem: ../imagens/monstro_arauto_das_alturas.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 10
-doma_requisito: Ritual de oferenda de penas próprias, coletadas de outro Arauto
 ---
 
 ## Habitat
@@ -49,8 +45,7 @@ A terceira volta. Não há outra advertência e não há necessidade de outra �
 
 ## Fraquezas
 
-- **Elemento — Trovão:** a descarga durante o giro a derruba. Em 10+ ela perde o voo pelo resto da cena, e no chão ela não sabe lutar.
-- **Resiste a Gelo** — nasceu acima da linha da neve.
+- **Atributo — Reflexo:** arma de Reflexo, golpe dado durante o giro, no tempo em que ela não pode corrigir a rota. Em 10+ ela perde o voo pelo resto da cena, e no chão ela não sabe lutar.
 - As asas abertas em pleno voo são alvo enorme, e ela não as fecha durante o giro.
 - Ela cumpre o ritual das três voltas mesmo quando isso a prejudica. É previsível de propósito.
 

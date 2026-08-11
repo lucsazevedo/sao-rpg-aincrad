@@ -9,17 +9,13 @@ regioes: [campo_batalha, necropole, castelo_ferro_negro]
 nivel_recomendado: "2-3"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
-atributo_fraqueza: golpe em pouso
-elemento_fraqueza: Fogo
-elemento_resistencia: 
+abertura: golpe em pouso
+atributo_fraqueza: Conhecimento
 resistencias: []
 vulnerabilidades: []
 imagem: ../imagens/monstro_corvo_das_ruinas.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 2
-doma_requisito: Item pequeno e brilhante como oferenda (qualquer bugiganga Comum)
 ---
 
 ## Habitat
@@ -48,7 +44,7 @@ O grasnado em cadeia. Se ele repete duas vezes rápido, alguma coisa maior está
 
 ## Fraquezas
 
-- **Elemento — Fogo:** fumaça dispersa o bando. Em 10+ eles param de anunciar a posição do grupo pelo resto da cena.
+- **Atributo — Conhecimento:** o bando só é perigoso porque informa — arma de Conhecimento, de quem entendeu a cadeia de grasnados, corta a corrente. Em 10+ eles param de anunciar a posição do grupo pelo resto da cena.
 - Frágil no pouso: no ar é impossível, parado é trivial.
 - Bugiganga brilhante desvia a atenção de todo o bando.
 - Sem os outros, um corvo sozinho não se aproxima.

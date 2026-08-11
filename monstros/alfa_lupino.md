@@ -9,15 +9,13 @@ regioes: [campos_leste, floresta_horunka, bosque_sussurrante]
 nivel_recomendado: "8-9"
 nivel_ameaca: chefe
 golpes_para_derrotar: "2x5"
-atributo_fraqueza: a garganta, exposta só no uivo — e o uivo é o que convoca a matilha
-elemento_fraqueza: Veneno
-elemento_resistencia: Gelo
+abertura: a garganta, exposta só no uivo — e o uivo é o que convoca a matilha
+atributo_fraqueza: Espírito
 resistencias: [frio, escuridão]
 vulnerabilidades: [veneno, luz forte]
 imagem: ../imagens/monstro_alfa_lupino.png
 canonico: nao
 fonte:
-domavel: nao
 ---
 
 ## Habitat
@@ -59,8 +57,7 @@ Ele senta. Um lobo que senta na frente de um grupo armado não está descansando
 
 ## Fraquezas
 
-- **Elemento — Veneno:** duas barras de fôlego é o que ele tem, e o veneno cobra as duas. Em 10+ ele perde o uivo pelo resto da cena — e sem uivo o encontro vira um duelo, que é o que ele não quer.
-- **Resiste a Gelo** — passou invernos demais para isso funcionar.
+- **Atributo — Espírito:** o que sustenta ele é a autoridade sobre a matilha, e golpe de arma de Espírito bate exatamente nela. Em 10+ ele perde o uivo pelo resto da cena — e sem uivo o encontro vira um duelo, que é o que ele não quer.
 - A garganta fica exposta durante o uivo. É a janela, e é curta, e é a mesma
   coisa que ele precisa fazer para vencer.
 - Luz forte na cara interrompe o recuo em círculo: ele precisa enxergar para
@@ -88,6 +85,10 @@ perceber que o inimigo é a decisão, não a criatura.
 | Garra Curva | Incomum | 2 | 70% | Ferreiro |
 | Essência Lupina | Raro | 1-2 | 55% | Alquimista, item Único |
 | Orelha Cortada do Alfa | Raro | 1 | 100% | Prova de feito, Corretores de Tolbana |
+| Pele de Lobo Alfa | **Incomum** | 1 | 40% | Coureiro (armadura/roupa de profissão) |
+| Presa de Alfa | **Raro** | 2-3 | 30% | Joalheiro (pingente/amuleto) |
+| Cristal Selvagem | **Raro** | 1 | 20% | Cristalista, socket leve em acessório |
+| Carta "Alfa Lupino" | **Épico** | 1 | 5% | Drop exclusivo do Mini Boss; 1 carta equipável por personagem |
 | Coração da Matilha | **Épico** | 1 | 100% | Torna Raro em Único na bancada |
 | Col | — | 1800-2600 | 100% | — |
 

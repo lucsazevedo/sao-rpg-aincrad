@@ -9,15 +9,13 @@ regioes: []
 nivel_recomendado: "3-4"
 nivel_ameaca: forte
 golpes_para_derrotar: 4
-atributo_fraqueza: cabeça exposta e teia incendiada
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: cabeça exposta e teia incendiada
+atributo_fraqueza: Conhecimento
 resistencias: [veneno]
 vulnerabilidades: [luz intensa, fogo, ataques à cabeça]
 imagem: ../imagens/monstro_aranha_de_luz_velada.png
 canonico: nao
 fonte:
-domavel: nao
 ---
 
 ## Habitat
@@ -42,18 +40,18 @@ O ar fica pesado e úmido; gotas de água na teia começam a cintilar e deslizar
 
 - **Rajada de Teia** — prende uma personagem até ela gastar uma ação para se soltar. Se falhar, sofre dano leve e perde posição.
 - **Salto das Sombras** — salta do teto para o centro da roda, causando dano médio e empurrando para trás.
-- **Sangue Venenoso** — se não for queimada ou iluminada, seu veneno enfraquece a próxima reação do grupo.
+- **Sangue Venenoso** — se não for mantida sob luz, seu veneno enfraquece a próxima reação do grupo.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** chama e calor queimam a teia. Em 10+ ela perde a rede e fica exposta pelo resto da cena.
+- **Atributo — Conhecimento:** arma de Conhecimento, usada por quem leu o padrão da teia antes de atacar. Em 10+ ela perde a rede e fica exposta pelo resto da cena.
 - Sua teia é frágil à **luz intensa**; lanternas e tochas de fôlego curto a deixam desorientada.
 - **Abertura de posição:** se alguém atacar a cabeça ou a parte superior do peito enquanto ela está presa na teia, ela não reage à primeira tentativa.
 - **Fraqueza de contexto:** em espaço aberto, longe do teto baixo, ela não consegue usar o salto surpresa.
 
 ## O que torna este encontro memorável
 
-A luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A criatura transforma o cenário em armadilha viva e força o grupo a usar fogo e movimento para não ser derrubado.
+A luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A criatura transforma o cenário em armadilha viva e força o grupo a usar luz e movimento para não ser derrubado.
 
 ## Complicações úteis
 
@@ -79,5 +77,5 @@ A Aranha de Luz Velada é um predador do bosque que aprendeu a caçar com lanter
 
 - **Onde entra:** em entradas de cavernas florestais e passagens úmidas, antes de um corredor mais largo.
 - **Como usar em transmissão:** o brilho tênue da teia e o estalo súbito do salto fazem um momento visual forte.
-- **Erro comum do grupo:** tentar cortar a teia com ataques leves em vez de incendiar ou usar iluminação.
+- **Erro comum do grupo:** tentar cortar a teia com ataques leves em vez de iluminar a sala.
 - **Como a cena encerra sem HP:** destruir a rede e forçar a aranha a fugir para outra câmara, deixando o grupo com um rastro de teia para seguir.

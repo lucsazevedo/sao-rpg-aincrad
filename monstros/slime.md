@@ -9,17 +9,13 @@ regioes: [vale_moinhos]
 nivel_recomendado: "2-6"
 nivel_ameaca: fraco
 golpes_para_derrotar: "2 (individual) / 4-5 (fundido, ver Variantes)"
-atributo_fraqueza: ponto de fusão exposto no centro, antes de se juntar a outro
-elemento_fraqueza: Gelo
-elemento_resistencia: Veneno
+abertura: ponto de fusão exposto no centro, antes de se juntar a outro
+atributo_fraqueza: Conhecimento
 resistencias: [veneno]
 vulnerabilidades: []
 imagem: ../imagens/monstro_slime.png
 canonico: nao
 fonte:
-domavel: sim
-doma_sucessos: 3
-doma_requisito: Núcleo de Slime intacto (obtido sem destruir a colônia inteira)
 ---
 
 ## Habitat
@@ -67,9 +63,10 @@ ou agir antes que aconteça.
 
 ## Fraquezas
 
-- **Elemento — Gelo:** um golpe de Gelo bem-sucedido (10+) endurece o slime
-  atingido por um turno inteiro, impedindo-o de se fundir com outro
-  enquanto durar o efeito — a melhor ferramenta pra conter uma fusão em
+- **Atributo — Conhecimento:** a fusão é o único truque, e quem entendeu o
+  ponto de fusão sabe onde bater — arma de Conhecimento, de quem leu o
+  comportamento, morde. Em 10+ o slime atingido perde a capacidade de se
+  fundir pelo resto da cena — a melhor ferramenta pra conter uma fusão em
   andamento.
 - Atacar o ponto de fusão exposto no centro impede a divisão acidental
   (atacar em outro ponto pode fazer um slime comum **se dividir em dois**

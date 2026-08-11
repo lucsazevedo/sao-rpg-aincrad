@@ -9,15 +9,13 @@ regioes: [floresta_horunka, bosque_sussurrante, jardim_selvagem]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe na base do caule
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: golpe na base do caule
+atributo_fraqueza: Reflexo
 resistencias: [perfuração]
 vulnerabilidades: [fogo]
 imagem: ../imagens/monstro_trepadeira_estranguladora.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ Folha caindo sem vento, na sua frente. É a vinha ajustando o peso lá em cima.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** a vinha seca por fora pega rápido. Em 10+ ela solta o alvo e perde o agarrão pelo resto da cena.
-- **Resiste a Veneno** — é planta.
+- **Atributo — Reflexo:** ela depende de imobilizar quem é lento — arma de Reflexo corta a vinha antes do enlace fechar. Em 10+ ela solta o alvo e perde o agarrão pelo resto da cena.
 - A base do caule é o único ponto vivo, e fica no tronco, ao alcance da mão.
 - Ela só pega quem anda por último. Uma fila que fecha atrás não é atacada.
 
@@ -58,7 +55,7 @@ Folha caindo sem vento, na sua frente. É a vinha ajustando o peso lá em cima.
 |---|---|---|---|---|
 | Vinha Resistente | Comum | 2-3 | 55% | Costureiro, Artesão |
 | Espinho Curvo | Comum | 1-2 | 30% | Ferreiro, Alquimista |
-| Seiva Escura | Incomum | 1 | 20% | Alquimista (elemento Veneno) |
+| Seiva Escura | Incomum | 1 | 20% | Alquimista |
 | Col | — | 65-110 | 100% | — |
 
 ## Lore

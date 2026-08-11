@@ -9,9 +9,8 @@ regioes: [lago, ilha_lago, charco_ras]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
 golpes_para_derrotar: 4
-atributo_fraqueza: golpe na cabeça
-elemento_fraqueza: Trovão
-elemento_resistencia: Gelo
+abertura: golpe na cabeça
+atributo_fraqueza: Reflexo
 resistencias: [dano hídrico]
 vulnerabilidades: [fogo, luz intensa]
 imagem: ../imagens/monstro_lacustre_vagador.png
@@ -49,8 +48,7 @@ Um ser aquático de cerca de 2 metros, com uma silhueta similar a um peixe-gato 
 
 ## Fraquezas
 
-- **Elemento — Trovão:** a água conduz. Em 10+ ele perde a capacidade de afundar e recomeçar pelo resto da cena.
-- **Resiste a Gelo** — passa a vida em água fria.
+- **Atributo — Reflexo:** as investidas aquáticas são rápidas, mas vêm uma de cada vez — arma de Reflexo, lida no deslocamento errado da superfície, pega a janela. Em 10+ ele perde a capacidade de afundar e recomeçar pelo resto da cena.
 - A cabeça é o alvo e ela quebra a superfície antes do resto do corpo.
 - Ele não sai da água. Um passo para o barranco encerra o encontro.
 
@@ -73,12 +71,12 @@ apenas lutando contra um bicho.
 |---|---|---|---|---|
 | Escama Prateada | Comum | 2-3 | 50% | Costureiro, Joalheiro |
 | Garras Aquáticas | Incomum | 1 | 25% | Ferreiro |
-| Cristal de Gelo | Raro | 1 | 10% | Joalheiro (elemento Gelo) |
+| Cristal de Gelo | Raro | 1 | 10% | Joalheiro |
 | Col | — | 150-220 | 100% | — |
 
 ## Lore
 
-É a fonte mais acessível de Cristal de Gelo do andar, e é por isso que existe uma fila informal de gente disposta a entrar no Sylvaine ao entardecer. Os pescadores de Brenmoor acham isso idiota e cobram caro para levar quem insiste. Eles nunca entram na água junto.
+É a fonte mais acessível de Cristal de Gelo do andar — matéria-prima rara de Joalheiro — e é por isso que existe uma fila informal de gente disposta a entrar no Sylvaine ao entardecer. Os pescadores de Brenmoor acham isso idiota e cobram caro para levar quem insiste. Eles nunca entram na água junto.
 
 *Ele não persegue ninguém até a margem. Só espera você voltar.*
 

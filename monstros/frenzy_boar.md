@@ -9,9 +9,8 @@ regioes: [campos_oeste, campos_leste, floresta_horunka]
 nivel_recomendado: "1-2"
 nivel_ameaca: fraco
 golpes_para_derrotar: 1 (2 se errar a nuca)
-atributo_fraqueza: golpe preciso na nuca
-elemento_fraqueza: Fogo
-elemento_resistencia: 
+abertura: golpe preciso na nuca
+atributo_fraqueza: Reflexo
 resistencias: []
 vulnerabilidades: [ataque na nuca — sucesso automático]
 imagem: ../imagens/monstro_frenzy_boar.png
@@ -49,7 +48,7 @@ dois lados da boca.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** a pelagem azulada é seca. Em 10+ ele desvia da investida pelo resto da cena e passa a circular em vez de avançar.
+- **Atributo — Reflexo:** a investida é rápida e reta — arma de Reflexo, lida no último instante, aproveita a abertura que ele mesmo cria. Em 10+ ele desvia da investida pelo resto da cena e passa a circular em vez de avançar.
 - Golpe preciso na nuca resolve em um. Errar a nuca custa o dobro de trabalho.
 - A investida é reta e comprometida: sair da linha basta.
 - Sozinho e sem alvo em linha, ele volta a pastar e esquece o grupo.

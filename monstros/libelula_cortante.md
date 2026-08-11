@@ -9,17 +9,13 @@ regioes: [rio_serpente, charco_ras, lago]
 nivel_recomendado: "2-3"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
-atributo_fraqueza: golpe em voo reto
-elemento_fraqueza: Gelo
-elemento_resistencia: 
+abertura: golpe em voo reto
+atributo_fraqueza: Reflexo
 resistencias: []
 vulnerabilidades: [vento forte]
 imagem: ../imagens/monstro_libelula_cortante.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 2
-doma_requisito: Nenhum item — só paciência e um teste de Reflexo pra acompanhar o voo
 ---
 
 ## Habitat
@@ -48,7 +44,7 @@ O junco cortado. Se há um talho diagonal limpo no mato à frente, ela usa aquel
 
 ## Fraquezas
 
-- **Elemento — Gelo:** as asas travam no ar frio. Em 10+ ela perde o voo reto pelo resto da cena.
+- **Atributo — Reflexo:** o voo é rápido e reto — arma de Reflexo, lida no corredor previsível, encontra ela no meio do caminho. Em 10+ ela perde o voo reto pelo resto da cena.
 - Frágil: um golpe qualquer resolve, se acertar.
 - Ela só voa reto. O corredor de voo é previsível e dá para sair dele.
 - Agachar já basta. Ela não desce.

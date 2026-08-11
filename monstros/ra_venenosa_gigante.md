@@ -9,15 +9,13 @@ regioes: [charco_ras, pantano_sombrio, lago]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe antes do salto
-elemento_fraqueza: Gelo
-elemento_resistencia: Veneno
+abertura: golpe antes do salto
+atributo_fraqueza: Reflexo
 resistencias: [veneno próprio]
 vulnerabilidades: []
 imagem: ../imagens/monstro_ra_venenosa_gigante.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ Os olhos afundam. Não é fuga — é ela recolhendo o corpo para o impulso.
 
 ## Fraquezas
 
-- **Elemento — Gelo:** o frio trava o salto. Em 10+ ela perde o bote pelo resto da cena e vira alvo parado.
-- **Resiste a Veneno** — a pele é a fonte.
+- **Atributo — Reflexo:** o salto é rápido, mas anunciado — arma de Reflexo, no instante em que ela se encolhe, chega primeiro. Em 10+ ela perde o bote pelo resto da cena e vira alvo parado.
 - Ela se encolhe visivelmente antes do salto, e o salto é o único ataque real.
 - Fora do alcance da língua não existe encontro. Contornar a poça é sempre possível.
 
@@ -56,7 +53,7 @@ Os olhos afundam. Não é fuga — é ela recolhendo o corpo para o impulso.
 
 | Item | Raridade | Qtd | Chance | Serve pra |
 |---|---|---|---|---|
-| Glândula de Veneno | Comum | 1 | 65% | Médico, Alquimista (elemento Veneno) |
+| Glândula de Veneno | Comum | 1 | 65% | Médico, Alquimista |
 | Pele Viscosa | Comum | 1-2 | 35% | Costureiro, Alquimista |
 | Ova de Charco | Incomum | 2-3 | 20% | Cozinheiro, Alquimista |
 | Col | — | 60-100 | 100% | — |

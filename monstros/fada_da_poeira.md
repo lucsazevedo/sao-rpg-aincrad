@@ -9,17 +9,13 @@ regioes: [jardim_selvagem, bosque_sussurrante, campos_oeste]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: agarrar durante o pouso, quando as asas param
-elemento_fraqueza: Fogo
-elemento_resistencia: 
+abertura: agarrar durante o pouso, quando as asas param
+atributo_fraqueza: Conhecimento
 resistencias: [veneno]
 vulnerabilidades: [água, fumaça]
 imagem: ../imagens/monstro_fada_da_poeira.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 4
-doma_requisito: Néctar de Flor Rara (coletado no próprio Jardim de Fenwyth)
 ---
 
 ## Habitat
@@ -58,7 +54,7 @@ O pó dourado no ar parado. Se ele está ali, elas passaram há pouco — e volt
 
 ## Fraquezas
 
-- **Elemento — Fogo:** o pó é inflamável e elas sabem. Em 10+ elas fogem do canteiro pelo resto da cena e devolvem o que roubaram.
+- **Atributo — Conhecimento:** o truque delas é distrair — arma de Conhecimento, de quem acompanhou o rastro de pó em vez do brilho, não se deixa enganar. Em 10+ elas fogem do canteiro pelo resto da cena e devolvem o que roubaram.
 - As asas param no pouso, e no pouso dá para agarrar.
 - Não sabem recusar coisa brilhante oferecida de propósito.
 - Sozinha, uma fada não rouba nada. Elas precisam de três.

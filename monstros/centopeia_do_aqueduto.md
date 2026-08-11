@@ -9,17 +9,13 @@ regioes: []
 nivel_recomendado: "3-5 (andar 2)"
 nivel_ameaca: comum
 golpes_para_derrotar: 4
-atributo_fraqueza: segmento central, exposto quando ela se ergue pra atacar
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: segmento central, exposto quando ela se ergue pra atacar
+atributo_fraqueza: Reflexo
 resistencias: [água, escuridão]
 vulnerabilidades: []
 imagem: ../imagens/monstro_centopeia_do_aqueduto.png
 canonico: nao
 fonte:
-domavel: nao
-doma_sucessos:
-doma_requisito:
 ---
 
 ## Habitat
@@ -54,8 +50,10 @@ segundos antes dela sair da fenda.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** ela evita fogo ativamente — mesmo uma tocha
-  acesa perto da fenda a mantém recuada.
+- **Atributo — Reflexo:** ela depende da emboscada no espaço apertado, e
+  arma de Reflexo bate no intervalo em que ela se ergue pra atacar. Em 10+
+  ela perde a emboscada pelo resto da cena e passa a lutar recuada, sem
+  sair da beira da fenda.
 - O segmento central fica exposto quando ela se ergue pra atacar — ponto de
   golpe mais eficaz que a cabeça.
 - Fora da própria galeria (arrastada ou empurrada pra fora), fica
@@ -97,5 +95,6 @@ mas nunca entra nas galerias sem escolta.
 - **Como usar em transmissão:** a mudança sutil no ritmo do gotejamento.
 - **Erro comum do grupo:** tentar lutar em linha reta num corredor estreito
   sem pensar em quem fica exposto primeiro.
-- **Como a cena encerra sem HP:** afastar a criatura da própria fenda com
-  fogo ativo já basta pra encerrar o encontro sem golpe final.
+- **Como a cena encerra sem HP:** afastar a criatura da própria fenda já
+  basta — ela não persegue longe de casa, e o encontro encerra sem golpe
+  final.

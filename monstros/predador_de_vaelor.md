@@ -9,15 +9,13 @@ regioes: [penhascos_vento, colinas_pedra]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
 golpes_para_derrotar: 4
-atributo_fraqueza: golpe certeiro ao pousar
-elemento_fraqueza: Veneno
-elemento_resistencia: Gelo
+abertura: golpe certeiro ao pousar
+atributo_fraqueza: Reflexo
 resistencias: [vento]
 vulnerabilidades: []
 imagem: ../imagens/monstro_predador_de_vaelor.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ Cascalho caindo. Sempre cai um pouco de pedrisco antes de ele se soltar, e sempr
 
 ## Fraquezas
 
-- **Elemento — Veneno:** ele volta para a parede depois de atacar e leva o veneno junto. Em 10+ perde a emboscada vertical pelo resto da cena e não consegue mais subir.
-- **Resiste a Gelo** — vive exposto ao vento.
+- **Atributo — Reflexo:** ele é rápido, mas o ciclo é previsível — arma de Reflexo pega o instante em que ele se solta da parede. Em 10+ perde a emboscada vertical pelo resto da cena e não consegue mais subir.
 - No instante do pouso ele está totalmente descoberto.
 - Longe da parede ele é lento e desconfortável. Puxar a luta para o descampado o anula.
 

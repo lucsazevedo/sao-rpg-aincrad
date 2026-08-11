@@ -9,9 +9,8 @@ regioes: [floresta_horunka, bosque_sussurrante]
 nivel_recomendado: "2-3"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: destruir a "boca" central expõe o núcleo
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: destruir a "boca" central expõe o núcleo
+atributo_fraqueza: Reflexo
 resistencias: [ataques nas vinhas — dano reduzido]
 vulnerabilidades: [fogo]
 imagem: ../imagens/monstro_little_nepenthes.png
@@ -53,8 +52,7 @@ A vegetação se mexendo na direção errada. Onde não há vento e o mato balan
 
 ## Fraquezas
 
-- **Elemento — Fogo:** pega imediatamente. Em 10+ as vizinhas param de se aproximar pelo resto da cena.
-- **Resiste a Veneno** — a planta é a fonte.
+- **Atributo — Reflexo:** o spray corrosivo prende o pé de quem é lento — arma de Reflexo bate e sai antes da vinha voltar. Em 10+ as vizinhas param de se aproximar pelo resto da cena.
 - Destruir a boca central expõe o núcleo e encerra em um golpe.
 - Elas são lentas. Andar resolve o que lutar não resolve.
 

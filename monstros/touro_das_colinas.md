@@ -9,17 +9,13 @@ regioes: []
 nivel_recomendado: "1-3 (andar 2)"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
-atributo_fraqueza: investida cega — desviar no último instante deixa o flanco exposto
-elemento_fraqueza: Trovão
-elemento_resistencia:
+abertura: investida cega — desviar no último instante deixa o flanco exposto
+atributo_fraqueza: Reflexo
 resistencias: []
 vulnerabilidades: [espaço aberto sem obstáculo pra desviar]
 imagem: ../imagens/monstro_touro_das_colinas.png
 canonico: nao
 fonte:
-domavel: sim
-doma_sucessos: 3
-doma_requisito: Feno da Faixa Verde (coletado nas fazendas de Urbus)
 ---
 
 ## Habitat
@@ -55,8 +51,9 @@ investida.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** atordoa por um turno, interrompendo a investida em
-  andamento.
+- **Atributo — Reflexo:** a investida é direta e comprometida — arma de
+  Reflexo, no último instante, vira a força dele contra ele. Em 10+ ele
+  fica atordoado por um turno, com a investida em andamento interrompida.
 - Desviar da investida no último instante deixa o flanco totalmente exposto
   ao contra-ataque.
 - Terreno com obstáculo (pedra, cerca) quebra a investida sozinho.

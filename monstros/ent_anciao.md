@@ -9,16 +9,14 @@ regioes: [bosque_sussurrante, floresta_horunka, jardim_selvagem]
 nivel_recomendado: "7-8"
 nivel_ameaca: elite
 golpes_para_derrotar: 8
-atributo_fraqueza: a fenda de casca no tronco, aberta quando ele se inclina para golpear
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: a fenda de casca no tronco, aberta quando ele se inclina para golpear
+atributo_fraqueza: Conhecimento
 resistencias: [veneno, corte superficial, impacto]
 vulnerabilidades: [fogo, corte profundo]
 imagem: ../imagens/monstro_ent_anciao.png
 carta: ../imagens/carta_ent_anciao.png
 canonico: nao
 fonte:
-domavel: nao
 ---
 
 ## Habitat
@@ -60,9 +58,8 @@ de pé.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** a hera seca pega primeiro. Em 10+ ele solta as raízes
+- **Atributo — Conhecimento:** ele é velho demais pra improvisar — arma de Conhecimento, de quem leu o ritmo lento dos golpes, encontra a fenda. Em 10+ ele solta as raízes
   para se proteger e perde a capacidade de imobilizar pelo resto da cena.
-- **Resiste a Veneno** — não respira, e o Alquimista precisa saber disso antes.
 - A fenda de casca no tronco abre quando ele se inclina para golpear.
 - Lento: quem se move de verdade nunca é acertado duas vezes seguidas.
 
@@ -76,7 +73,8 @@ pontos de coleta de madeira de Horunka rendem menos por várias sessões.
 ## Complicações úteis
 
 - Vencem, e o Lenhador do grupo perde acesso à Árvore Marcada.
-- O fogo funciona e o bosque inteiro começa a queimar.
+- O grupo ateia fogo no bosque pra encurtar a luta — e o bosque inteiro
+  começa a queimar.
 - Ele não morre: afunda as raízes e para de se mexer. Voltará.
 - Alguém corta a hera e descobre que há coisas presas nela há muito tempo.
 

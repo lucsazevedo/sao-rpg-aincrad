@@ -9,9 +9,8 @@ regioes: [labirinto_entrada, sala_chefe]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: ""
-elemento_fraqueza: Fogo
-elemento_resistencia: 
+abertura: ""
+atributo_fraqueza: Técnica
 resistencias: []
 vulnerabilidades: [sem armadura — qualquer golpe direto é efetivo]
 imagem: ../imagens/monstro_ruin_kobold_trooper.png
@@ -44,7 +43,7 @@ Os passos casados. Dois pares de pés no mesmo ritmo, e o ritmo não muda nem qu
 
 ## Fraquezas
 
-- **Elemento — Fogo:** couro velho e mal curtido. Em 10+ eles quebram a dupla pelo resto da cena e passam a atacar isolados.
+- **Atributo — Técnica:** o equipamento é rudimentar e a técnica deles é nula — arma de Técnica, de quem luta com ofício, desmonta a dupla. Em 10+ eles quebram a dupla pelo resto da cena e passam a atacar isolados.
 - Sozinho, um Trooper não avança: espera o par.
 - A ronda é cronometrada. Um grupo que conte o intervalo escolhe a hora da luta.
 - Eles não saem do corredor designado. Uma sala lateral é território neutro.

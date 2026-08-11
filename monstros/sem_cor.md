@@ -9,17 +9,13 @@ regioes: []
 nivel_recomendado: "—"
 nivel_ameaca: comum
 golpes_para_derrotar: não se aplica — foge; só é "contido" ao ser cercado em grupo
-atributo_fraqueza: velocidade cai bruscamente se cercado por mais de um lado ao mesmo tempo
-elemento_fraqueza:
-elemento_resistencia:
+abertura: velocidade cai bruscamente se cercado por mais de um lado ao mesmo tempo
+atributo_fraqueza: Conhecimento
 resistencias: []
 vulnerabilidades: []
 imagem: ../imagens/monstro_sem_cor.png
 canonico: nao
 fonte:
-domavel: nao
-doma_sucessos:
-doma_requisito:
 ---
 
 ## Habitat
@@ -60,7 +56,7 @@ ter sido visto.
 
 ## Fraquezas
 
-- **Elemento:** não se aplica — este não é um monstro elemental.
+- **Atributo — Conhecimento:** ele não emite sinal nenhum que a interface leia — quem o enfrenta com arma de Conhecimento está contando com estudo, não com sistema. Em 10+ a velocidade de fuga cai pelo resto da cena, e o cerco finalmente fecha.
 - Velocidade de fuga cai bruscamente se cercado por mais de um lado
   simultaneamente (exige coordenação de grupo, não perseguição individual).
 - Perseguição direta e isolada sempre falha — ele acelera na mesma

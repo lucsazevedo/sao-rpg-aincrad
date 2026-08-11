@@ -9,15 +9,13 @@ regioes: [gruta_cristal, pedreira, caverna_ecos]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
 golpes_para_derrotar: 4
-atributo_fraqueza: golpe na cabeça mole
-elemento_fraqueza: Trovão
-elemento_resistencia: Gelo
+abertura: golpe na cabeça mole
+atributo_fraqueza: Espírito
 resistencias: [cristal, impacto]
 vulnerabilidades: [vibração forte]
 imagem: ../imagens/monstro_verme_de_cristal.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ As lascas caindo do veio. O cristal racha antes de ele romper a parede.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** o cristal do corpo conduz e estilhaça. Em 10+ ele perde a capacidade de escavar pelo resto da cena e fica preso na galeria.
-- **Resiste a Gelo** — a gruta já é fria.
+- **Atributo — Espírito:** ele é estático e quase geológico — não há foco nenhum sustentando a caçada, e arma de Espírito bate nessa ausência. Em 10+ ele perde a capacidade de escavar pelo resto da cena e fica preso na galeria.
 - A cabeça é mole e sem placa; o resto do corpo não é.
 - Ele rastreia vibração. Ficar imóvel o faz passar direto.
 
@@ -58,12 +55,12 @@ As lascas caindo do veio. O cristal racha antes de ele romper a parede.
 |---|---|---|---|---|
 | Fragmento de Cristal Vivo | Comum | 2-3 | 60% | Joalheiro, Alquimista |
 | Placa Quebrada | Comum | 1-2 | 30% | Ferreiro |
-| Cristal de Descarga | Raro | 1 | 12% | Joalheiro (elemento Trovão) |
+| Cristal de Descarga | Raro | 1 | 12% | Joalheiro |
 | Col | — | 160-240 | 100% | — |
 
 ## Lore
 
-É a fonte primária de Cristal de Descarga do andar, e o Cristal de Descarga é o que derruba o Rei das Planícies. A cadeia inteira está aí, escrita no mapa, e ninguém precisa dizer nada: os Corretores de Tolbana vendem essa informação por um preço justo, e quem não comprar vai chegar ao descampado de Verrun com a ferramenta errada.
+É a fonte primária de Cristal de Descarga do andar — matéria-prima das peças mais raras do Joalheiro — e a cadeia inteira está aí, escrita no mapa, e ninguém precisa dizer nada: os Corretores de Tolbana vendem essa informação por um preço justo, e quem não comprar vai passar a semana cavando veio pobre.
 
 *Ele não caça pelo cheiro nem pelo som. Caça pelos seus passos.*
 

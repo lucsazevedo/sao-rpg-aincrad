@@ -9,15 +9,13 @@ regioes: [caverna_ecos]
 nivel_recomendado: "8-9"
 nivel_ameaca: elite
 golpes_para_derrotar: 9
-atributo_fraqueza: golpe no ventre exposto quando se ergue
-elemento_fraqueza: Veneno
-elemento_resistencia: Trovão
+abertura: golpe no ventre exposto quando se ergue
+atributo_fraqueza: Espírito
 resistencias: [escuridão, impacto]
 vulnerabilidades: [luz intensa]
 imagem: ../imagens/monstro_guardiao_de_mournhall.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -48,8 +46,7 @@ Ele para de respirar. O ruído grave que enchia a câmara some, e o silêncio é
 
 ## Fraquezas
 
-- **Elemento — Veneno:** lâmina untada ou glândula. Nove golpes é muito para qualquer grupo, e o veneno é a única coisa no andar que encurta essa conta. Em 10+ ele perde o rugido pelo resto da cena.
-- **Resiste a Trovão** — décadas comendo o que aparece.
+- **Atributo — Espírito:** décadas de teimosia pura são o que o mantém de pé, e arma de Espírito bate exatamente aí. Nove golpes é muito para qualquer grupo, e essa é a única coisa no andar que encurta essa conta. Em 10+ ele perde o rugido pelo resto da cena.
 - Ele se ergue e expõe o ventre sem pelagem grossa um instante antes de rugir.
 - Luz intensa o desorienta: viveu a vida inteira no escuro e nunca se adaptou.
 

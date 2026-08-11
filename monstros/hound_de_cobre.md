@@ -9,9 +9,8 @@ regioes: [campos_oeste, posto_guilda, estrada_velha]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: Técnica — interromper a investida coordenada
-elemento_fraqueza: Trovão
-elemento_resistencia: 
+abertura: Técnica — interromper a investida coordenada
+atributo_fraqueza: Reflexo
 resistencias: [investida frontal]
 vulnerabilidades: [flanco, som metálico irregular]
 imagem: ../imagens/monstro_hound_de_cobre.png
@@ -47,7 +46,7 @@ dois escolhem o flanco e a rota de fuga.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** as placas de cobre conduzem. Em 10+ os três perdem a investida coordenada pelo resto da cena e passam a atacar isolados.
+- **Atributo — Reflexo:** a força do trio é a sincronia — arma de Reflexo, no tempo da investida em revezamento, desencontra os três. Em 10+ os três perdem a investida coordenada pelo resto da cena e passam a atacar isolados.
 - Interromper a investida coordenada com **Técnica** desmonta o trio inteiro.
 - O terceiro só entra depois dos dois primeiros. Derrubar um cancela o terceiro.
 - Fora da estrada eles não seguem. O mato não é território deles.

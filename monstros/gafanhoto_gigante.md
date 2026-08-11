@@ -9,17 +9,13 @@ regioes: [terracos, vale_moinhos, campos_leste]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe nas patas traseiras antes do salto
-elemento_fraqueza: Fogo
-elemento_resistencia: 
+abertura: golpe nas patas traseiras antes do salto
+atributo_fraqueza: Reflexo
 resistencias: []
 vulnerabilidades: [fogo, ataque em área]
 imagem: ../imagens/monstro_gafanhoto_gigante.png
 canonico: nao
 fonte: 
-domavel: nao
-doma_sucessos: 
-doma_requisito: 
 ---
 
 ## Habitat
@@ -59,7 +55,7 @@ O ruído de serra vindo do mato. Uma perna esfregando é curiosidade; dez esfreg
 
 ## Fraquezas
 
-- **Elemento — Fogo:** a casca quitinosa estala e eles se dispersam. Em 10+ a ninhada perde o salto coordenado pelo resto da cena.
+- **Atributo — Reflexo:** a força deles é o salto em massa — arma de Reflexo, reagindo no tempo do salto, quebra a coordenação. Em 10+ a ninhada perde o salto coordenado pelo resto da cena.
 - As patas traseiras se dobram antes do salto, e nesse instante ele está preso ao chão.
 - Movimento devagar não dispara nada. O grupo controla quando a luta começa.
 - Na ninhada, destruir as ovas encerra tudo sem lutar contra nenhum adulto.

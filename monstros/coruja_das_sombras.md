@@ -9,15 +9,13 @@ regioes: [floresta_horunka, bosque_sussurrante, jardim_selvagem]
 nivel_recomendado: "2-3"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
-atributo_fraqueza: golpe em pleno voo, antes do ataque
-elemento_fraqueza: Gelo
-elemento_resistencia: 
+abertura: golpe em pleno voo, antes do ataque
+atributo_fraqueza: Conhecimento
 resistencias: []
 vulnerabilidades: [ruído súbito]
 imagem: ../imagens/monstro_coruja_das_sombras.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,7 +45,7 @@ O silêncio do voo. Coruja não faz barulho ao decolar, e essa não faz mesmo �
 
 ## Fraquezas
 
-- **Elemento — Gelo:** ela voa em silêncio e o frio tira isso. Em 10+ ela abandona o grupo pelo resto da cena e para de seguir.
+- **Atributo — Conhecimento:** ela depende de não ser entendida — arma de Conhecimento, na mão de quem percebeu o padrão de galho em galho, quebra o encanto. Em 10+ ela abandona o grupo pelo resto da cena e para de seguir.
 - Frágil: um golpe que acerte resolve.
 - Ela ataca em pleno voo e só de cima; sob cobertura, não desce.
 - Não enfrenta quem está acompanhado. Fechar o grupo cancela o encontro.

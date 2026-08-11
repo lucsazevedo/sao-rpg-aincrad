@@ -9,16 +9,14 @@ regioes: [labirinto_entrada, sala_chefe, castelo_ferro_negro]
 nivel_recomendado: "7-8"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: guarda aberta no tempo morto depois da machadada pesada
-elemento_fraqueza: Fogo
-elemento_resistencia: Trovão
+abertura: guarda aberta no tempo morto depois da machadada pesada
+atributo_fraqueza: Reflexo
 resistencias: [impacto, intimidação]
 vulnerabilidades: [fogo, flanco, isolamento]
 imagem: ../imagens/monstro_guerreiro_kobold.png
 carta: ../imagens/carta_guerreiro_kobold.png
 canonico: nao
 fonte:
-domavel: nao
 ---
 
 ## Habitat
@@ -60,10 +58,10 @@ são antes de ver o primeiro.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** as correias de couro da couraça queimam. Em 10+ a
-  armadura remendada se solta e a muralha de escudos deixa de funcionar pelo
-  resto da cena.
-- **Resiste a Trovão** — a couraça é sucata mal aterrada e dispersa a descarga.
+- **Atributo — Reflexo:** a machadada é lenta e a guarda abre no tempo
+  morto depois dela — arma de Reflexo vive nesse intervalo. Em 10+ a
+  armadura remendada se solta e a muralha de escudos deixa de funcionar
+  pelo resto da cena.
 - Separado do grupo, a defesa cai: ele foi treinado para formação, não para
   duelo.
 - Ataques rápidos pelas laterais rompem a guarda; ele só cobre a frente.
@@ -110,7 +108,7 @@ visto sozinho por vontade própria.
 - **Como usar em transmissão:** a batida no escudo e as respostas no escuro.
   Conte as respostas em voz alta e deixe o chat contar junto.
 - **Erro comum do grupo:** tentar romper a muralha de escudos pela força. Ela
-  é objetivo, não inimigo — contornar, incendiar ou fazer barulho em outro
+  é objetivo, não inimigo — contornar ou fazer barulho em outro
   corredor resolve mais barato.
 - **Como a cena encerra sem HP:** a Insígnia. Quem mostrar uma insígnia de
   patente superior faz a formação abrir. Funciona uma vez, e depois eles

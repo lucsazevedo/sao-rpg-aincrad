@@ -9,17 +9,13 @@ regioes: [montanhas, colinas_pedra, caverna_ecos]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: golpe no focinho
-elemento_fraqueza: Veneno
-elemento_resistencia: Gelo
+abertura: golpe no focinho
+atributo_fraqueza: Corpo
 resistencias: [impacto]
 vulnerabilidades: [fogo]
 imagem: ../imagens/monstro_urso_de_pedra.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 6
-doma_requisito: Grande quantidade de comida oferecida de uma vez (não repetida)
 ---
 
 ## Habitat
@@ -49,8 +45,7 @@ A pelagem range. É cascalho preso no pelo há tanto tempo que virou parte dele,
 
 ## Fraquezas
 
-- **Elemento — Veneno:** lâmina untada. Ele é grande demais para cair rápido e é exatamente por isso que o veneno morde. Em 10+ ele perde a investida pelo resto da cena.
-- **Resiste a Gelo** — hiberna em rocha nua.
+- **Atributo — Corpo:** ele é grande demais para cair rápido, e é exatamente por isso que força bruta bem posta morde — arma de Corpo bate de igual pra igual. Em 10+ ele perde a investida pelo resto da cena.
 - O focinho é o ponto sensível, e ele o expõe quando fica de pé.
 - Ele dá um aviso completo. Recuar durante o aviso encerra o encontro sem uma rolagem.
 

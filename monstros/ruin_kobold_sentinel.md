@@ -9,9 +9,8 @@ regioes: [sala_chefe, labirinto_entrada]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: garganta (único ponto sem armadura)
-elemento_fraqueza: Fogo
-elemento_resistencia: Trovão
+abertura: garganta (único ponto sem armadura)
+atributo_fraqueza: Reflexo
 resistencias: [golpes no corpo/armadura — dano bem reduzido]
 vulnerabilidades: [golpe preciso na garganta — ignora a resistência da armadura]
 imagem: ../imagens/monstro_ruin_kobold_sentinel.png
@@ -50,8 +49,7 @@ armadura de metal pesada.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** as correias da armadura pesada queimam. Em 10+ ele perde a capacidade de segurar formação pelo resto da cena.
-- **Resiste a Trovão** — a armadura é grossa e mal condutora.
+- **Atributo — Reflexo:** a armadura pesa e a alabarda é lenta — arma de Reflexo entra na janela que a placa não cobre. Em 10+ ele perde a capacidade de segurar formação pelo resto da cena.
 - A garganta é o único ponto sem placa, e ele a expõe ao erguer a alabarda.
 - Ele não sai da posição designada. O terreno fora dela é seguro, sempre.
 

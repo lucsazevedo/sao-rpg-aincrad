@@ -9,9 +9,8 @@ regioes: [campos_leste, campos_oeste, floresta_horunka]
 nivel_recomendado: "2-3"
 nivel_ameaca: comum
 golpes_para_derrotar: 2
-atributo_fraqueza: ""
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: ""
+atributo_fraqueza: Reflexo
 resistencias: [ataques corpo-a-corpo contra alvo voador — chance de errar maior]
 vulnerabilidades: []
 imagem: ../imagens/monstro_stabbing_wasp.png
@@ -44,8 +43,7 @@ Ela circula antes de picar. Uma vespa que orbita já decidiu, e o círculo apert
 
 ## Fraquezas
 
-- **Elemento — Fogo:** fumaça no ninho. Em 10+ o ninho inteiro se dispersa pelo resto da cena.
-- **Resiste a Veneno** — o ferrão é dela.
+- **Atributo — Reflexo:** o ferrão é rápido e em sequência — arma de Reflexo acompanha a órbita e bate na passagem. Em 10+ o ninho inteiro se dispersa pelo resto da cena.
 - Frágil: qualquer golpe que acerte resolve, e ela é grande o bastante para acertar.
 - Fora do raio do ninho ela não persegue. Vinte passos bastam.
 

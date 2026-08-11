@@ -9,17 +9,13 @@ regioes: [lago, ilha_lago, rio_serpente]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
 golpes_para_derrotar: 4
-atributo_fraqueza: golpe atrás da cabeça enquanto ela está enrolada, antes do bote
-elemento_fraqueza: Gelo
-elemento_resistencia: Veneno
+abertura: golpe atrás da cabeça enquanto ela está enrolada, antes do bote
+atributo_fraqueza: Reflexo
 resistencias: [água, dano hídrico]
 vulnerabilidades: [frio, ser tirada da água]
 imagem: ../imagens/monstro_serpente_das_aguas_rasas.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 6
-doma_requisito: Isca de peixe fresco deixada por 3 dias seguidos no mesmo ponto da margem
 ---
 
 ## Habitat
@@ -59,8 +55,7 @@ O corpo se comprime. A espiral aperta meio palmo antes do bote, e é o único av
 
 ## Fraquezas
 
-- **Elemento — Gelo:** trava o bote. Em 10+ ela perde o ataque explosivo pelo resto da cena.
-- **Resiste a Veneno** — a peçonha é dela.
+- **Atributo — Reflexo:** o bote é explosivo e único — arma de Reflexo, lida na compressão da espiral, chega antes. Em 10+ ela perde o ataque explosivo pelo resto da cena.
 - Enrolada, antes do bote, a nuca fica descoberta e imóvel.
 - Ela dá um bote por aproximação. Depois dele, recuar é seguro.
 

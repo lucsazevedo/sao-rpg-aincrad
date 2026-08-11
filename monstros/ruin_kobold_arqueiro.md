@@ -9,15 +9,13 @@ regioes: [labirinto_entrada, sala_chefe]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe ao recarregar
-elemento_fraqueza: Fogo
-elemento_resistencia: Trovão
+abertura: golpe ao recarregar
+atributo_fraqueza: Técnica
 resistencias: []
 vulnerabilidades: [combate corpo a corpo próximo]
 imagem: ../imagens/monstro_ruin_kobold_arqueiro.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ O rangido da corda no vão. Chega meio segundo antes da flecha e só é audível
 
 ## Fraquezas
 
-- **Elemento — Fogo:** as flechas dele têm empenagem de pena seca e a aljava queima. Em 10+ ele perde o ataque à distância pelo resto da cena.
-- **Resiste a Trovão** — pouco metal no corpo.
+- **Atributo — Técnica:** a perícia dele é o arco, e é uma perícia só — arma de Técnica, de quem atira melhor que ele, vence o duelo de precisão. Em 10+ ele perde o ataque à distância pelo resto da cena.
 - Ele fica exposto ao recarregar, e recarrega devagar.
 - De perto ele não luta: recua ou se rende. Fechar a distância encerra.
 

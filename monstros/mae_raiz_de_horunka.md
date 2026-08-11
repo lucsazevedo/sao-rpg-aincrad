@@ -9,15 +9,13 @@ regioes: [floresta_horunka]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: cortar os cordões-âncora enquanto ela recolhe as mudas
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: cortar os cordões-âncora enquanto ela recolhe as mudas
+atributo_fraqueza: Reflexo
 resistencias: [corte superficial, veneno]
 vulnerabilidades: [fogo, Espírito]
 imagem: ../imagens/monstro_mae_raiz_de_horunka.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -58,8 +56,7 @@ dura o tempo de uma frase — ela está recolhendo as mudas para dentro.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** os cordões secos pegam primeiro. Em 10+ ela perde o agarrão pelo resto da cena e vira uma boca imóvel.
-- **Resiste a Veneno** — a seiva é dela.
+- **Atributo — Reflexo:** os cordões desorientam e prendem o pé de quem é lento — arma de Reflexo corta no tempo em que eles esticam. Em 10+ ela perde o agarrão pelo resto da cena e vira uma boca imóvel.
 - Os cordões-âncora ficam esticados e expostos enquanto ela recolhe as mudas; nesses segundos são cordas, não músculos.
 - O sopro de seiva é teste de **Espírito**, não de Corpo — a luta inteira é uma discussão sobre querer ir embora.
 
@@ -79,7 +76,8 @@ reta na floresta de Horunka.
   novo em três semanas.
 - Alguém é arrastado até a borda e precisa ser puxado de volta: dois de vocês
   ficam ocupados enquanto a luta continua.
-- O fogo funciona bem demais e a clareira inteira começa a queimar.
+- Alguém ateia fogo nos cordões secos pra encurtar a luta — e a clareira
+  inteira começa a queimar.
 - Ela se fecha e finge estar morta. Não está.
 
 ## Tabela de drop

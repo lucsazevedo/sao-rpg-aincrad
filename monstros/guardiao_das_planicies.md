@@ -9,18 +9,14 @@ regioes: [campos_oeste, campos_leste, colinas_pedra, posto_guilda]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: as pernas traseiras, descobertas enquanto ele corre reto
-elemento_fraqueza: Trovão
-elemento_resistencia: Gelo
+abertura: as pernas traseiras, descobertas enquanto ele corre reto
+atributo_fraqueza: Conhecimento
 resistencias: [frio, impacto]
 vulnerabilidades: [trovão, mudança brusca de direção]
 imagem: ../imagens/monstro_guardiao_das_planicies.png
 carta: ../imagens/carta_guardiao_das_planicies.png
 canonico: nao
 fonte:
-domavel: sim
-doma_sucessos: 7
-doma_requisito: Carne Nobre e o Rei das Planícies já derrotado — antes disso, nenhum aceita vínculo
 ---
 
 ## Habitat
@@ -59,9 +55,10 @@ imobilidade completa antes da corrida. Quem estiver olhando o chão perde.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** cristal de descarga ou metal na água. Em 10+ ele
-  perde a investida pelo resto da cena, e sem investida ele é um alvo grande.
-- **Resiste a Gelo** — a pelagem de inverno é feita para isso.
+- **Atributo — Conhecimento:** as marcas na pelagem são escrita, e quem as
+  lê entende o padrão da corrida — arma de Conhecimento bate onde o avanço
+  abre. Em 10+ ele perde a investida pelo resto da cena, e sem investida
+  ele é um alvo grande.
 - As pernas traseiras ficam descobertas durante a corrida.
 - Mudança brusca de direção quebra o avanço: ele não vira, ele contorna.
 

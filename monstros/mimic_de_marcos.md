@@ -9,9 +9,8 @@ regioes: [labirinto_entrada, campo_batalha, castelo_ferro_negro]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
 golpes_para_derrotar: 5
-atributo_fraqueza: Conhecimento — identificar a inscrição falsa
-elemento_fraqueza: Trovão
-elemento_resistencia: Veneno
+abertura: Conhecimento — identificar a inscrição falsa
+atributo_fraqueza: Conhecimento
 resistencias: [golpes apressados, ilusões de rota]
 vulnerabilidades: [luz direta, leitura cuidadosa de símbolos]
 imagem: ../imagens/monstro_mimic_de_marcos.png
@@ -48,8 +47,7 @@ corre, óbvia para quem para e compara com um mapa.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** o núcleo de bronze conduz. Em 10+ ele perde a forma de pedra pelo resto da cena e não consegue mais se disfarçar.
-- **Resiste a Veneno** — é construto.
+- **Atributo — Conhecimento:** o disfarce dele é informação falsa — arma de Conhecimento, de quem leu a inscrição e viu o erro, não se deixa enganar. Em 10+ ele perde a forma de pedra pelo resto da cena e não consegue mais se disfarçar.
 - **Conhecimento** identifica a inscrição falsa: a letra é regular demais e não tem desgaste.
 - Sem alguém a menos de um braço, ele não abre. Ler de longe é seguro.
 

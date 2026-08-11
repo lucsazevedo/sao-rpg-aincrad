@@ -9,18 +9,14 @@ regioes: [campos_leste, campos_oeste, floresta_horunka, bosque_sussurrante]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
 golpes_para_derrotar: 4
-atributo_fraqueza: costelas expostas no fim da investida
-elemento_fraqueza: Fogo
-elemento_resistencia:
+abertura: costelas expostas no fim da investida
+atributo_fraqueza: Reflexo
 resistencias: []
 vulnerabilidades: [fogo, isolamento da matilha]
 imagem: ../imagens/monstro_lobo_da_alcateia.png
 carta: ../imagens/carta_lobo_da_alcateia.png
 canonico: nao
 fonte:
-domavel: sim
-doma_sucessos: 5
-doma_requisito: Carne Crua e o lobo separado da matilha — com o Alfa por perto, não há doma
 ---
 
 ## Habitat
@@ -60,8 +56,9 @@ coordenação, e chega tarde demais para servir de aviso.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** tocha ou óleo. Em 10+ a matilha perde a coordenação
-  pelo resto da cena: eles atacam, mas cada um por si.
+- **Atributo — Reflexo:** a investida reta é onde eles se expõem — arma de
+  Reflexo, no fim da corrida, desfaz a formação. Em 10+ a matilha perde a
+  coordenação pelo resto da cena: eles atacam, mas cada um por si.
 - Sozinho, um lobo recua. Quebrar o cerco vale mais que matar qualquer um.
 - Ataque perfurante nas costelas, no fim da investida, encerra rápido.
 - Depois de duas investidas seguidas ele perde precisão e erra o bote.

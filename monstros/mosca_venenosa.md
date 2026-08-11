@@ -9,16 +9,14 @@ regioes: [charco_ras, pantano_sombrio, lago, rio_serpente, floresta_horunka]
 nivel_recomendado: "2-3"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
-atributo_fraqueza: o enxame ainda não formado — cada mosca isolada morre de um golpe
-elemento_fraqueza: Fogo
-elemento_resistencia:
+abertura: o enxame ainda não formado — cada mosca isolada morre de um golpe
+atributo_fraqueza: Conhecimento
 resistencias: [veneno]
 vulnerabilidades: [fogo, ataque em área]
 imagem: ../imagens/monstro_mosca_venenosa.png
 carta: ../imagens/carta_mosca_venenosa.png
 canonico: nao
 fonte:
-domavel: nao
 ---
 
 ## Habitat
@@ -60,9 +58,10 @@ escolher lutar ou não.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** tocha, óleo ou brasa. Em 10+ o enxame se desfaz pelo
-  resto da cena e elas voltam a ser moscas soltas — a capacidade de formar
-  nuvem some.
+- **Atributo — Conhecimento:** a confusão visual é o truque delas — arma de
+  Conhecimento, de quem leu o tom do zumbido e achou o enxame se formando,
+  desfaz o enxame. Em 10+ o enxame se desfaz pelo resto da cena e elas
+  voltam a ser moscas soltas — a capacidade de formar nuvem some.
 - Baixa defesa: qualquer golpe que acerte, mata. O problema nunca é matar uma.
 - Ataques de área valem mais que ataques precisos, e é o único encontro do
   andar em que isso é verdade tão cedo.
@@ -79,16 +78,16 @@ envenenado. A mesa aprende aqui que **agir cedo vale mais que agir bem**.
 - O grupo vence, mas alguém carrega a Condição de Veneno até a Cidade.
 - O enxame se forma sobre o único caminho de volta.
 - Uma delas pousa na mochila e viaja junto até a próxima cena.
-- O fogo funciona e queima o junco seco em volta.
+- O grupo usa fogo pra afastar o enxame — e queima o junco seco em volta.
 
 ## Tabela de drop
 
 | Item | Raridade | Qtd | Chance | Serve pra |
 |---|---|---|---|---|
-| Glândula Venenosa | Comum | 1-2 | 65% | Alquimista (elemento Veneno) |
+| Glândula Venenosa | Comum | 1-2 | 65% | Alquimista |
 | Asa Frágil | Comum | 2-4 | 55% | Costureiro, Artesão |
 | Essência Tóxica | Incomum | 1 | 25% | Alquimista, Médico |
-| Cristal Pequeno | Raro | 1 | 8% | Joalheiro (base de Trovão e Gelo) |
+| Cristal Pequeno | Raro | 1 | 8% | Joalheiro |
 | Col | — | 30-60 | 100% | — |
 
 ## Lore

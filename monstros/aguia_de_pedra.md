@@ -9,17 +9,13 @@ regioes: [penhascos_vento, colinas_pedra, montanhas]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: golpe nas asas em voo baixo
-elemento_fraqueza: Trovão
-elemento_resistencia: Gelo
+abertura: golpe nas asas em voo baixo
+atributo_fraqueza: Reflexo
 resistencias: [vento]
 vulnerabilidades: []
 imagem: ../imagens/monstro_aguia_de_pedra.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 6
-doma_requisito: Mesma lógica ritual do Arauto das Alturas, em escala menor
 ---
 
 ## Habitat
@@ -49,8 +45,7 @@ O vento muda. Ela dobra as asas e o ar para de assobiar entre as penas — o sil
 
 ## Fraquezas
 
-- **Elemento — Trovão:** cristal de descarga em voo. Em 10+ ela perde o mergulho pelo resto da cena e passa a lutar no chão, onde é desajeitada.
-- **Resiste a Gelo** — vive no alto e a pena é isolante.
+- **Atributo — Reflexo:** arma de Reflexo, batida no tempo do mergulho dela. Em 10+ ela perde o mergulho pelo resto da cena e passa a lutar no chão, onde é desajeitada.
 - As asas ficam expostas no voo baixo, no fim do mergulho.
 - Sem altura ela não recomeça: obrigar a luta sob teto ou saliência a anula.
 

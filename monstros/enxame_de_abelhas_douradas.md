@@ -9,17 +9,13 @@ regioes: [floresta_horunka]
 nivel_recomendado: "3-5"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: disperso ao primeiro sinal de fumaça, some do golpe individual
-elemento_fraqueza: Fogo
-elemento_resistencia:
+abertura: disperso ao primeiro sinal de fumaça, some do golpe individual
+atributo_fraqueza: Reflexo
 resistencias: []
 vulnerabilidades: [fumaça]
 imagem: ../imagens/monstro_enxame_de_abelhas_douradas.png
 canonico: nao
 fonte:
-domavel: nao
-doma_sucessos:
-doma_requisito:
 ---
 
 ## Habitat
@@ -64,10 +60,10 @@ reage.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** fumaça ou fogo controlado dispersa o enxame inteiro
-  em 10+ (sem matar a colônia — ela volta a se formar em dias). Matar a
-  colônia com fogo direto rende mais mel de uma vez, mas destrói o recurso
-  permanentemente.
+- **Atributo — Reflexo:** a nuvem cega-olhos pune ação precisa — arma de
+  Reflexo, golpeada em reação pura, dispersa a onda. Em 10+ o enxame
+  inteiro se dispersa pelo resto da cena (sem matar a colônia — ela volta
+  a se formar em dias).
 - Golpes individuais dispersam abelhas isoladas, mas não afetam o enxame
   como um todo — é preciso tratar como grupo, não como inimigos únicos.
 - Longe da colmeia (mais de alguns metros), o enxame perde o ímpeto de
@@ -118,6 +114,6 @@ caçadores têm paciência pra colher sem destruir.
   adensando — bom efeito sonoro/visual antes de qualquer dano acontecer.
 - **Erro comum do grupo:** tratar o enxame como "um monstro só" e atacar a
   colmeia direto — funciona, mas acaba com o recurso de vez.
-- **Como a cena encerra sem HP:** dispersar com fumaça/fogo controlado e
+- **Como a cena encerra sem HP:** dispersar com fumaça e
   coletar o mel que já caiu no processo, sem necessidade de "vencer" a
   colônia inteira.

@@ -9,17 +9,13 @@ regioes: []
 nivel_recomendado: "2-4 (andar 2)"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe durante o mergulho, antes de recuperar altitude
-elemento_fraqueza: Gelo
-elemento_resistencia:
+abertura: golpe durante o mergulho, antes de recuperar altitude
+atributo_fraqueza: Reflexo
 resistencias: [vento, projétil leve]
 vulnerabilidades: []
 imagem: ../imagens/monstro_aguia_do_planalto.png
 canonico: nao
 fonte:
-domavel: sim
-doma_sucessos: 4
-doma_requisito: Pena de Águia intacta (drop raro desta própria criatura)
 ---
 
 ## Habitat
@@ -57,8 +53,9 @@ mergulho.
 
 ## Fraquezas
 
-- **Elemento — Gelo:** trava as asas por um turno, impedindo nova
-  decolagem.
+- **Atributo — Reflexo:** arma de Reflexo, lida no instante em que ela
+  mergulha. Em 10+ as asas falham na recuperação e ela não decola de novo
+  pelo resto da cena.
 - O único momento em que ela está ao alcance de golpe corpo a corpo é
   durante o mergulho, antes de recuperar altitude.
 - Ataques à distância (arco, adaga de arremesso) funcionam a qualquer
@@ -101,5 +98,5 @@ augúrio pra expedição — mais superstição prática que fato comprovado.
   clara da criatura.
 - **Erro comum do grupo:** tentar combate corpo a corpo constante em vez de
   usar ataque à distância ou esperar o mergulho.
-- **Como a cena encerra sem HP:** afugentar com Gelo ou dano à distância
+- **Como a cena encerra sem HP:** dano à distância
   suficiente faz ela abandonar a caça sem precisar morrer.

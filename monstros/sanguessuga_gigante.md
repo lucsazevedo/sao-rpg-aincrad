@@ -9,15 +9,13 @@ regioes: [pantano_sombrio, charco_ras, rio_serpente]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe antes de grudar
-elemento_fraqueza: Gelo
-elemento_resistencia: Veneno
+abertura: golpe antes de grudar
+atributo_fraqueza: Reflexo
 resistencias: [dano perfurante após grudar]
 vulnerabilidades: [sal, fogo]
 imagem: ../imagens/monstro_sanguessuga_gigante.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -46,8 +44,7 @@ Bolhas subindo em fila. Se a lama solta bolha na sua direção, alguma coisa se 
 
 ## Fraquezas
 
-- **Elemento — Gelo:** ela solta imediatamente. Em 10+ perde a capacidade de grudar pelo resto da cena.
-- **Resiste a Veneno** — vive na água podre.
+- **Atributo — Reflexo:** ela depende da surpresa pra grudar — arma de Reflexo, no instante em que ela emerge, impede o grude. Em 10+ perde a capacidade de grudar pelo resto da cena.
 - Antes de grudar ela precisa emergir, e emergindo é lenta.
 - Fora da lama ela não se locomove. Terreno firme é imunidade.
 

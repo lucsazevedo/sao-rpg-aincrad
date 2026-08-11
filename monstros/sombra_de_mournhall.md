@@ -9,17 +9,13 @@ regioes: [caverna_ecos, gruta_cristal]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
 golpes_para_derrotar: 5
-atributo_fraqueza: golpe nos olhos sensíveis à luz
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: golpe nos olhos sensíveis à luz
+atributo_fraqueza: Espírito
 resistencias: [escuridão]
 vulnerabilidades: [luz intensa]
 imagem: ../imagens/monstro_sombra_de_mournhall.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 5
-doma_requisito: Isca com Musgo Luminoso, luz fraca e constante
 ---
 
 ## Habitat
@@ -49,8 +45,7 @@ O cheiro antes do som — almíscar úmido, forte, e vindo do lado errado da gal
 
 ## Fraquezas
 
-- **Elemento — Fogo:** tocha na cara. Em 10+ a dupla perde a coordenação pelo resto da cena e as duas atacam de frente.
-- **Resiste a Veneno** — come o que aparece há muito tempo.
+- **Atributo — Espírito:** o truque da dupla é medo coordenado — arma de Espírito, de quem não cai na isca, quebra a sincronia. Em 10+ a dupla perde a coordenação pelo resto da cena e as duas atacam de frente.
 - Os olhos são sensíveis à luz e ela não os fecha a tempo.
 - Sob luz constante ela não se aproxima. Uma tocha fincada no chão cria zona segura.
 

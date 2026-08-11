@@ -9,15 +9,13 @@ regioes: [rio_serpente, lago, vila_ribeirinha]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe em área
-elemento_fraqueza: Trovão
-elemento_resistencia: Gelo
+abertura: golpe em área
+atributo_fraqueza: Reflexo
 resistencias: [água]
 vulnerabilidades: [fogo]
 imagem: ../imagens/monstro_enxame_do_rio.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ A água para de refletir. O cardume subindo à superfície tira o brilho antes d
 
 ## Fraquezas
 
-- **Elemento — Trovão:** a descarga na água atinge o enxame todo. Em 10+ ele se dispersa pelo resto da cena e a travessia fica livre.
-- **Resiste a Gelo** — a água já é fria.
+- **Atributo — Reflexo:** o cerco e a mordida em massa punem quem é lento — arma de Reflexo, reagindo no instante em que a mancha vira, quebra o ritmo do cardume. Em 10+ ele se dispersa pelo resto da cena e a travessia fica livre.
 - Ataque em área vale mais que precisão; golpe único não resolve nada.
 - Fora da água ele não existe. Um passo para a margem encerra o encontro.
 

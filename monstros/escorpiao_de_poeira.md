@@ -9,15 +9,13 @@ regioes: [campos_leste, campos_oeste, pedreira]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
-atributo_fraqueza: golpe na cauda antes da picada
-elemento_fraqueza: Gelo
-elemento_resistencia: Veneno
+abertura: golpe na cauda antes da picada
+atributo_fraqueza: Conhecimento
 resistencias: [veneno próprio]
 vulnerabilidades: [água]
 imagem: ../imagens/monstro_escorpiao_de_poeira.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ A cauda sai primeiro, e sai devagar. Quem estiver olhando o chão a vinte passos
 
 ## Fraquezas
 
-- **Elemento — Gelo:** o frio o deixa lento. Em 10+ ele perde a capacidade de se enterrar pelo resto da cena e passa a lutar exposto.
-- **Resiste a Veneno** — o veneno é dele.
+- **Atributo — Conhecimento:** a camuflagem dele é um truque só, e quem desvenda o relevo errado na poeira não é pego — arma de Conhecimento bate onde ele se escondeu. Em 10+ ele perde a capacidade de se enterrar pelo resto da cena e passa a lutar exposto.
 - A cauda é o alvo, e ela se ergue antes da picada.
 - Em terreno duro ele não se enterra. Puxar a luta para a pedra nua o anula.
 
@@ -56,7 +53,7 @@ A cauda sai primeiro, e sai devagar. Quem estiver olhando o chão a vinte passos
 
 | Item | Raridade | Qtd | Chance | Serve pra |
 |---|---|---|---|---|
-| Ferrão Venenoso | Comum | 1 | 70% | Médico, Alquimista (elemento Veneno) |
+| Ferrão Venenoso | Comum | 1 | 70% | Médico, Alquimista |
 | Carapaça de Areia | Comum | 1-2 | 40% | Ferreiro, Costureiro |
 | Glândula Seca | Incomum | 1 | 20% | Alquimista |
 | Col | — | 80-130 | 100% | — |

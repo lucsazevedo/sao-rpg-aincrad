@@ -9,17 +9,13 @@ regioes: [caverna_ecos, gruta_cristal, pedreira]
 nivel_recomendado: "1-2"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
-atributo_fraqueza: golpe em pouso
-elemento_fraqueza: Fogo
-elemento_resistencia: 
+abertura: golpe em pouso
+atributo_fraqueza: Conhecimento
 resistencias: [escuridão]
 vulnerabilidades: [ruído alto]
 imagem: ../imagens/monstro_morcego_ecoante.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 2
-doma_requisito: Silêncio total durante a aproximação
 ---
 
 ## Habitat
@@ -48,7 +44,7 @@ Um guincho agudo, único, de algum lugar do teto. É o primeiro acordando, e ele
 
 ## Fraquezas
 
-- **Elemento — Fogo:** a fumaça esvazia a galeria. Em 10+ a colônia inteira desocupa a passagem pelo resto da cena.
+- **Atributo — Conhecimento:** eles navegam por eco — arma de Conhecimento, de quem entendeu isso e usou o som da galeria contra eles, desorienta o bando. Em 10+ a colônia inteira desocupa a passagem pelo resto da cena.
 - Frágil individualmente; o problema nunca é um.
 - Eles pousam para atacar e no pouso são triviais.
 - Silêncio absoluto os mantém dormindo. A passagem é atravessável sem uma rolagem.

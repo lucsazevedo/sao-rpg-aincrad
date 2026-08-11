@@ -9,17 +9,13 @@ regioes: [] # ids de dados_mapa.js onde ele aparece de verdade
 nivel_recomendado: # faixa, ex "4-5" -- o andar 1 vai até 10
 nivel_ameaca: # fraco | comum | forte | elite | chefe
 golpes_para_derrotar: # numero (ou "4x6-8" pra chefes com barras)
-atributo_fraqueza: # a abertura concreta, ex "garganta exposta no fim da investida"
-elemento_fraqueza: # Fogo | Trovão | Gelo | Veneno -- ver docs/elementos_andar1.md
-elemento_resistencia: # opcional; 10+ vira 7-9 contra este elemento
+abertura: # a abertura concreta, ex "garganta exposta no fim da investida"
+atributo_fraqueza: # Corpo | Reflexo | Conhecimento | Espírito | Técnica — ver docs/elementos_andar1.md
 resistencias: []
 vulnerabilidades: []
 imagem: # ../imagens/monstro_<slug>.png
 canonico: # sim (wiki/anime) | nao (homebrew)
 fonte: # link da fandom wiki, se canonico
-domavel: # sim | nao
-doma_sucessos: # se domável
-doma_requisito: # se domável
 ---
 
 ## Habitat
@@ -49,11 +45,13 @@ eco, luz, animal sumindo. Toda criatura entra em cena antes de aparecer.
 
 ## Fraquezas
 
-Quatro, sempre. A primeira é a elemental; as outras três são posicionais ou
-táticas — coisas que a mesa descobre olhando, não rolando.
+Quatro, sempre. A primeira é a de atributo; as outras três são posicionais
+ou táticas — coisas que a mesa descobre olhando, não rolando.
 
-- **Elemento — <Fogo/Trovão/Gelo/Veneno>:** o que 10+ tira dele pelo resto da
-  cena (ver `docs/elementos_andar1.md`).
+- **Atributo — <Corpo/Reflexo/Conhecimento/Espírito/Técnica>:** por que uma
+  arma cujo atributo principal é esse morde nele. Acertar a fraqueza faz
+  7-9 virar 10+ funcional (a criatura não reage), e 10+ tira dele uma
+  capacidade pelo resto da cena — diga qual (ver `docs/elementos_andar1.md`).
 - Abertura de posição.
 - Abertura de ritmo (depois de que ação ele fica exposto).
 - Fraqueza de contexto (sozinho, no escuro, na água, longe do grupo).

@@ -9,15 +9,13 @@ regioes: [labirinto_entrada, castelo_ferro_negro, sala_chefe]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 5
-atributo_fraqueza: golpe na junta interna, sem placa
-elemento_fraqueza: Trovão
-elemento_resistencia: Veneno
+abertura: golpe na junta interna, sem placa
+atributo_fraqueza: Conhecimento
 resistencias: [corte, perfuração]
 vulnerabilidades: [impacto]
 imagem: ../imagens/monstro_armadura_animada.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -47,8 +45,7 @@ Um chiado curto de metal contra metal, meio segundo antes — é o peso mudando 
 
 ## Fraquezas
 
-- **Elemento — Trovão:** metal em cima de metal. Em 10+ as juntas travam e ela perde a capacidade de bloquear pelo resto da cena.
-- **Resiste a Veneno** — não há nada dentro para envenenar.
+- **Atributo — Conhecimento:** ela segue um padrão mecânico e previsível — arma de Conhecimento, na mão de quem leu o padrão, bate onde a placa não cobre. Em 10+ as juntas travam e ela perde a capacidade de bloquear pelo resto da cena.
 - As juntas internas não têm placa: joelho, cotovelo, a dobra do braço.
 - Ela não sai da linha que guarda. Recuar três passos encerra a luta, sempre.
 

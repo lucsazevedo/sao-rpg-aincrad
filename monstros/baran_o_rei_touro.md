@@ -9,17 +9,13 @@ regioes: []
 nivel_recomendado: "andar 2, conteúdo de raid"
 nivel_ameaca: chefe
 golpes_para_derrotar: "3 barras x 6-8 golpes cada (18-24 total)"
-atributo_fraqueza: martelo cravado no chão após o golpe giratório — abertura curta e real
-elemento_fraqueza: Trovão
-elemento_resistencia: Corpo (ataques físicos diretos sem elemento fazem menos efeito na Fase 1)
+abertura: martelo cravado no chão após o golpe giratório — abertura curta e real
+atributo_fraqueza: Reflexo
 resistencias: [investida corpo a corpo sem preparo]
 vulnerabilidades: []
 imagem: ../imagens/monstro_baran_o_rei_touro.png
 canonico: sim
 fonte: https://swordartonline.fandom.com/wiki/2nd_Floor
-domavel: nao
-doma_sucessos:
-doma_requisito:
 ---
 
 ## Habitat
@@ -66,13 +62,15 @@ golpe grande.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** atordoa por um turno inteiro, interrompendo
-  qualquer ataque em andamento — o melhor jeito de negar uma fase de dano.
+- **Atributo — Reflexo:** chefe pesado de investida — arma de Reflexo
+  explora as aberturas que ele deixa entre um golpe grande e outro. Em 10+
+  ele fica atordoado por um turno inteiro, com o ataque em andamento
+  interrompido — o melhor jeito de negar uma fase de dano.
 - O martelo cravado no chão após o golpe giratório (Fase 2+) é a abertura
   real: alguém precisa estar posicionado pra aproveitar antes dele erguer o
   martelo de novo.
-- Ataques físicos sem elemento na Fase 1 fazem menos efeito — o grupo
-  precisa de pelo menos uma fonte de Trovão pra abrir a luta direito.
+- Força bruta não abre a Fase 1 — o grupo precisa de pelo menos uma arma
+  de Reflexo pra aproveitar as aberturas entre os golpes grandes.
 - Na Fase 3, a imprevisibilidade da investida dupla é, paradoxalmente, uma
   fraqueza: ele para de "ler" o grupo e fica mais fácil prever onde NÃO
   estar.
@@ -118,9 +116,9 @@ junto com a seca", guardião e causa do problema de água ao mesmo tempo.
 - **Como usar em transmissão:** a poeira caindo do teto a cada golpe
   grande — mesmo recurso visual de "o mundo reage à luta", já usado com
   Illfang.
-- **Erro comum do grupo:** entrar na Fase 1 sem fonte de Trovão disponível
-  — planeje isso na cadeia de preparação de raid do andar 2 (equivalente a
-  `tolbana_09_abastecendo_o_grupo`).
+- **Erro comum do grupo:** entrar na Fase 1 sem ninguém de arma de Reflexo
+  no grupo — planeje isso na cadeia de preparação de raid do andar 2
+  (equivalente a `tolbana_09_abastecendo_o_grupo`).
 - **Como a cena encerra sem HP:** não há saída sem combate — é chefe de
   andar. A única "saída" é decidir quem lidera a formação e quando recuar
   uma fase mal preparada (Preparação de Raid, `docs/regras_nucleares_campanha.md`).

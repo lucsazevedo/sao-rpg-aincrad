@@ -9,15 +9,13 @@ regioes: [campo_batalha, necropole, castelo_ferro_negro]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
-atributo_fraqueza: golpe na junta do "pescoço"
-elemento_fraqueza: Trovão
-elemento_resistencia: Veneno
+abertura: golpe na junta do "pescoço"
+atributo_fraqueza: Reflexo
 resistencias: [perfuração]
 vulnerabilidades: [impacto]
 imagem: ../imagens/monstro_sentinela_esquecida.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -53,8 +51,7 @@ chegar perto.
 
 ## Fraquezas
 
-- **Elemento — Trovão:** o corpo é metal antigo. Em 10+ o núcleo falha e ela perde a capacidade de andar pelo resto da cena.
-- **Resiste a Veneno** — é construto.
+- **Atributo — Reflexo:** ela é lenta e estática — arma de Reflexo entra e sai antes do braço pesado voltar. Em 10+ o núcleo falha e ela perde a capacidade de andar pelo resto da cena.
 - A junta do pescoço é o ponto solto: dá para ver o vão de longe.
 - Ela é lenta e anuncia o destino. Sair da rota dela sempre funciona.
 

@@ -9,15 +9,13 @@ regioes: [labirinto_entrada]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 7
-atributo_fraqueza: derrubar o estandarte antes de encarar o portador
-elemento_fraqueza: Fogo
-elemento_resistencia: Trovão
+abertura: derrubar o estandarte antes de encarar o portador
+atributo_fraqueza: Espírito
 resistencias: [impacto, intimidação]
 vulnerabilidades: [ataque ao mastro, flanco esquerdo]
 imagem: ../imagens/monstro_porta_estandarte_de_illfang.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -57,8 +55,7 @@ estandarte em vez do machado ganha o aviso.
 
 ## Fraquezas
 
-- **Elemento — Fogo:** o pano e as correias queimam. Em 10+ o chamado morre pelo resto da cena e os reforços param de chegar.
-- **Resiste a Trovão** — a couraça remendada dispersa a descarga.
+- **Atributo — Espírito:** a ligação dele com o estandarte é devoção, não tática — arma de Espírito bate na determinação que sustenta o chamado. Em 10+ o chamado morre pelo resto da cena e os reforços param de chegar.
 - O mastro está fincado, não segurado: é alvo parado, e derrubá-lo é teste de **Técnica**.
 - O flanco esquerdo fica descoberto o tempo todo, porque a mão esquerda nunca solta o mastro.
 

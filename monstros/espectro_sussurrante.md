@@ -9,15 +9,13 @@ regioes: [necropole, campo_batalha, castelo_ferro_negro]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 5
-atributo_fraqueza: teste de Espírito em vez de dano físico
-elemento_fraqueza: Fogo
-elemento_resistencia: Veneno
+abertura: teste de Espírito em vez de dano físico
+atributo_fraqueza: Espírito
 resistencias: [dano físico]
 vulnerabilidades: [Espírito alto, itens do Coveiro]
 imagem: ../imagens/monstro_espectro_sussurrante.png
 canonico: nao
 fonte: 
-domavel: nao
 ---
 
 ## Habitat
@@ -48,9 +46,8 @@ O frio na nuca, e o som das outras pessoas do grupo ficando abafado, como se ela
 
 ## Fraquezas
 
-- **Elemento — Fogo:** luz e calor de tocha. Em 10+ ele perde a voz pelo resto da cena, e sem voz ele não é nada.
-- **Resiste a Veneno** — não tem corpo para envenenar.
-- Não se resolve com dano: é teste de **Espírito**, e a arma não importa.
+- **Atributo — Espírito:** é o que ele ataca e é onde ele aguenta menos — golpe de arma de Espírito é uma contestação direta. Em 10+ ele perde a voz pelo resto da cena, e sem voz ele não é nada.
+- Não se resolve com dano: é teste de **Espírito**.
 - Ninguém que não responda é atingido. O silêncio é imunidade total.
 
 ## Tabela de drop

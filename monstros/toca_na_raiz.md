@@ -9,17 +9,13 @@ regioes: [floresta_horunka, bosque_sussurrante, jardim_selvagem]
 nivel_recomendado: "1-2"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
-atributo_fraqueza: golpe nas costas expostas
-elemento_fraqueza: Fogo
-elemento_resistencia: 
+abertura: golpe nas costas expostas
+atributo_fraqueza: Reflexo
 resistencias: []
 vulnerabilidades: [ruído alto]
 imagem: ../imagens/monstro_toca_na_raiz.png
 canonico: nao
 fonte: 
-domavel: sim
-doma_sucessos: 2
-doma_requisito: Ervas comuns oferecidas repetidamente
 ---
 
 ## Habitat
@@ -49,7 +45,7 @@ Ele para e olha. Um bicho pequeno que para de correr e encara já entendeu que n
 
 ## Fraquezas
 
-- **Elemento — Fogo:** ele abandona a toca. Em 10+ perde a vontade de brigar pelo resto da cena e some.
+- **Atributo — Reflexo:** a sobrevivência dele é fuga pura — arma de Reflexo fecha a rota antes dele decidir pra onde correr. Em 10+ perde a vontade de brigar pelo resto da cena e some.
 - Frágil, e o dorso fica exposto quando ele se vira para a toca.
 - Ele quer fugir, não lutar. Abrir caminho encerra o encontro.
 - Erva comum oferecida repetidamente o aproxima em vez de espantar.
