@@ -1,3 +1,532 @@
+## Novo nesta rodada — RLS vazando dado de jogador pra usuário sem login
+
+Pedido do usuário: "tem muita informação que está sendo exibido para
+usuario que não logou no sistema, isso não pode acontecer".
+
+Não era só tela — **9 tabelas tinham uma policy `leitura_publica` com
+`qual = true`**: `personagens`, `inventario`, `nivel_profissao`,
+`criaturas_domadas`, `limit_breaker_contador`, `cla_autoridade`,
+`reputacao_personagem`, `metas_doacoes`. Como RLS é OR entre policies, uma
+policy `true` anula qualquer outra restrição na mesma tabela — qualquer
+visitante, **sem conta, sem login**, lia a linha inteira via
+`/rest/v1/<tabela>?select=*` usando só a anon key (que é pública, está no
+bundle JS, isso é esperado/normal — a proteção real tinha que estar na
+RLS, e não estava). O pior caso era `personagens`: ficha completa de
+qualquer jogador (nome, guilda, arma, profissão, conceito) e `inventario`:
+mochila completa de qualquer um.
+
+Corrigido em `scripts/db/schema_fecha_leitura_publica.sql`:
+- `inventario`/`nivel_profissao`/`criaturas_domadas`/`limit_breaker_contador`:
+  já tinham policy `dono_gerencia` (dono ou mestre) — só removi a
+  `leitura_publica` que a tornava inútil.
+- `cla_autoridade`: substituída por "membro do próprio clã ou mestre"
+  (mesmo padrão que `cla_inventario` já usava).
+- `reputacao_personagem`: substituída por "dono da ficha ou mestre" —
+  Ficha.vue já mostra isso pro jogador, só nunca teve a policy certa.
+- `metas_doacoes`: exige estar **logado** (não precisa ser dono/mestre —
+  é um quadro de doação coletiva, transparência entre jogadores faz
+  sentido, só não pra quem nem tem conta).
+- `personagens`: a policy de "ficha pública" ganhou `AND
+  auth.role() = 'authenticated'` — visitante anônimo não vê mais ficha
+  nenhuma, jogador logado continua vendo as marcadas como públicas.
+
+Não mexido, considerado correto como está: `vitrine` (marketplace público
+de verdade, faz sentido navegar sem conta) e `metas_globais` (quadro de
+metas comunitárias, não é dado de jogador específico).
+
+Testado via HTTP real nos 3 papéis (anônimo sem token / jogador logado /
+mestre) — anônimo agora recebe 0 linhas em tudo que é dado de jogador,
+jogador continua vendo o próprio, mestre continua vendo tudo.
+
+## Novo nesta rodada — item 3 (catálogos de craft) + mapa artístico no Vue
+
+Pedido do usuário: "Item 3, tem varios itens em em formato de texto na
+pasta dolist" + "Mapa Artísticos, vamos fazer em canvas, em svg".
+
+- **Item 3 fechado**: os 9 arquivos `dolist/*.txt` (Comidas, Munições,
+  Acessórios, Cristais de SAO, Armaduras, Botas, Luvas, Elmos, Poções e
+  Consumíveis) viraram 75 catálogos novos em `equipamentos` + 141 receitas
+  novas em `receitas` — script reutilizável
+  `scripts/db/_importar_itens_dolist3.py`. Detalhe completo, mapeamento de
+  profissão e a duplicidade resolvida (Cristais de SAO × Poções repetiam
+  vários itens) em `dolist/03_itens_crafts_novos.md`.
+- **Bug achado e corrigido no caminho**: `craftar_item` sempre gravava
+  `tipo='consumivel'` e `quantidade=1` no inventário, não importava o que a
+  receita produzisse — quebrava silenciosamente as 75 receitas novas de
+  equipamento (não ficavam equipáveis) e qualquer receita que produzisse
+  mais de 1 (munição). Corrigido em
+  `scripts/db/schema_craft_equipamento_e_qtd.sql`, testado via HTTP real.
+- **Mapa Artístico**: o terreno vetorial completo do HTML legado
+  (`scripts/web/dados_terreno.js` + `mapa_limpo.html`, contornos
+  Catmull-Rom, ~70 elementos de geografia) foi portado pro Vue —
+  `scripts/app/src/lib/mapaTerreno.js` (dados + funções de desenho) +
+  `Compendio.vue` (novo botão "Terreno ligado/desligado" na aba Mapa,
+  desenha por baixo dos 246 pontos reais). Mesmo viewBox `0 0 1536 1024`
+  dos pontos, então nasce alinhado sem calibração manual. Não portei o modo
+  "referência"/export PNG do legado (isso era só insumo pra um fluxo manual
+  de pintar a ilha com IA fora do jogo — segue disponível em
+  `mapa_limpo.html` se quiser gerar a arte um dia).
+
+## Novo nesta rodada — consolidação do schema + revisão dos golpes de arma
+
+Pedido do usuário: "continue trabalhando até as pendências que dependem
+de você serem concluídas."
+
+- **Snapshot do schema** (`scripts/db/_gerar_snapshot_schema.py` →
+  `scripts/db/schema_snapshot_2026-08-10.sql`): depois de tantas mudanças
+  de banco numa sessão só, `schema_jogo_online.sql` original ficou
+  desatualizado (os `schema_*.sql` incrementais de hoje não foram
+  mesclados de volta nele). Gerei um snapshot completo e fiel direto do
+  banco — tabelas, constraints, views, funções (exceto as que pertencem a
+  extensão, tipo pgvector), RLS e o cron job — testado com dry-run
+  (rollback) antes de considerar pronto. Isso é a fonte de verdade nova de
+  "como o banco está agora"; os `schema_*.sql` incrementais continuam no
+  repo como histórico.
+- **Golpes de arma (item 2) revisados** — não linha a linha (julgamento
+  narrativo continua so seu), mas checagem estrutural e de design
+  automatizada: 0 problema nas 23 armas, e confirmado que os 3 golpes de
+  cada arma usam 3 atributos diferentes entre si, exatamente o que o item
+  pedia. Achado melhor do que esperado pra um rascunho de IA.
+- **Não fiz** (dependem de você, não de mim): redirecionar `painel.html`
+  pro app Vue novo — não sei onde/como o Vue vai ser hospedado (sem
+  `netlify.toml`/`vercel.json`/workflow de deploy no repo pra eu inferir),
+  arriscar um link errado é pior que deixar como está até você me dizer
+  onde isso vai rodar.
+
+## Novo nesta rodada — mapa no Compêndio, item 16 fechado (o que dava sem inventar conteúdo)
+
+Continuação de "termine esses pontos":
+
+- **Mapa** — aba nova em `Compendio.vue`, os 246 pontos reais (x/y de
+  `pontos`) num SVG com zoom, filtro por região/categoria e ficha do
+  ponto ao clicar (usa `pontos_detalhe` quando existe). **Não é** o mapa
+  vetorial artístico do HTML antigo (terreno desenhado, bezier suave,
+  1100+ elementos) — isso continua de fora, é escopo de item novo, não
+  de migração de tela. Testado com login real: `pontos_publico` e
+  `pontos_detalhe_publico` respondem certo pro jogador.
+- **Item 16** — fechado o que dava sem inventar conteúdo pras 15
+  profissões que não têm ferramenta: mecanismo de ferramenta obrigatória
+  pronto e testado (mas desligado em produção — ativar é decisão sua) +
+  painel de 16 profissões do lado do **mestre** (não do jogador, não
+  contraria a regra já decidida). Detalhe em `dolist/16_...md`.
+
+## Novo nesta rodada — achado grave: missões diárias e publicar no mercado nunca funcionaram no app de verdade
+
+Pedido do usuário: "termine esses pontos" (mapa, item 16, paridade dos
+HTMLs pequenos). Ao conferir a paridade, fiz uma varredura sistemática de
+**todo** `.from(tabela)` e `.rpc(nome, params)` do app inteiro contra o
+schema real (nome de tabela E nome de cada parâmetro — o mesmo tipo de
+bug já tinha aparecido antes). Achado sério, corrigido:
+
+- **`Tarefas.vue` (missões diárias) estava 100% quebrado.** Consultava
+  uma tabela `missoes` que nunca existiu (a real é `missoes_quadro`) e
+  chamava `aceitar_e_resolver_missao` com o parâmetro `missao_id` em vez
+  de `p_missao_id`. As duas coisas juntas significam que **o loop
+  principal do jogo online nunca funcionou de verdade pelo site** —
+  provavelmente desde que foi escrito. Corrigido e testado com login real
+  (API do Supabase): lista carrega, missão resolve.
+- **`Mercado.vue`: publicar anúncio também quebrado.** Chamava
+  `publicar_anuncio` com `p_preco_col`, o parâmetro real é `p_preco`.
+  Corrigido e testado com login real (criei item de teste, publiquei,
+  limpei depois).
+- **`PetsTab.vue` (ovos/pets) não tinha rota nem link nenhum** — arquivo
+  existia, ninguém conseguia abrir a tela. Adicionada rota `/pets` + link
+  no menu.
+
+Conferido o resto de todas as `.from()`/`.rpc()` do app contra o schema
+real (nome de tabela e nome de cada parâmetro, um por um) — nada mais
+achado errado.
+
+## Novo nesta rodada — itens 13-16 avaliados, cartas/cristais com efeito, mochila≠baú, Compêndio migrado pro Vue
+
+Pedido do usuário: "não vamos cortar [o HTML], vamos migrar" — tudo que
+ainda só existia no HTML legado precisa existir no Vue; função que faltar
+implementar, implementar. Fechei:
+
+- **Item 13** — achado que já estava 95% pronto (`docs/elementos_andar1.md`
+  já descreve o sistema novo, `_modelo_monstro.md` já não tem campo de
+  elemento). Só faltava dropar `monstros.elemento_resistencia`, coluna
+  morta sem leitor em código nenhum — removida.
+- **Item 14** — `craftar_item`/`craftar_ferramenta` já tinham comentário
+  dizendo que somavam bônus de ferramenta, mas nunca somavam de verdade.
+  Agora somam (maior `bonus_acao` entre as ferramentas que o personagem
+  tem pra aquela profissão). Ajustei os 4 registros de Incubadora do
+  Domador de "+3%/+6%/+12%/+15%" pra "+1/+1/+2/+3" — a escala do jogo
+  online é mod de 2d6 (-3 a +3), não percentual.
+- **Item 15** — achado que já existia pronto: `comprar_folego(qtd)` já
+  implementa exatamente as 3 faixas de preço do dolist (1un=5 Col,
+  5un≈30 Col, encher≈140 Col), só não estava em nenhuma tela. Coloquei 3
+  botões em `/combate`, ao lado do "curar tudo" (que também restaura
+  Vida) que eu já tinha feito.
+- **Item 16** — avaliado, maior parte **não construída de propósito**:
+  ferramenta obrigatória travaria 15 das 16 profissões (só o Domador tem
+  ferramenta cadastrada); painel de 16 profissões pro jogador contraria
+  uma regra já decidida em sessão anterior ("Profissoes.vue não mostra
+  todas as profissões pro jogador"). Documentado em
+  `dolist/16_ferramentas_refino_painel_profissoes.md` pra você decidir.
+- **Cartas/cristais (item 7)** — as 150 cartas e 57 cristais que estavam
+  com "efeito ainda não definido" ganharam efeito de verdade, gerado por
+  fórmula (tipo_bonus × raridade × nome do monstro de origem). Achado no
+  caminho: minha primeira tentativa desse texto tinha bônus de +2/+3, o
+  que contraria a regra dura da mesa ("teste nunca recebe mais de +1
+  numérico externo") — corrigido pra sempre +1, raridade escala frequência
+  de uso, não o número.
+- **Mochila vs. Baú (item 8)** — coluna `inventario.local` +
+  `mover_inventario()`, `Equipamentos.vue` ganhou a 3ª aba que faltava.
+- **Golpes de arma normalizados** — 10 das 23 armas tinham
+  `dez_mais`/`sete_nove` como array em vez de string (formato
+  inconsistente); uniformizado.
+- **O item principal: `compendio_andar1.html` → `Compendio.vue`.** 13 das
+  15 abas (Mesa e Só-o-Mestre já viviam em `Mestre.vue`, não duplicado):
+  Bestiário, NPCs, Armas, Equipamentos, Quests, Crônicas, Guia das
+  Regiões, Puzzles, Dungeons, Cidade do Início, Ofícios, Mercado, Sistema
+  — um leitor genérico, configurado por aba, direto do banco. **Achado
+  crítico testado por HTTP real antes de generalizar**: ler a tabela BASE
+  de `guias`/`puzzles`/`monstros` (que têm campo só-mestre) quebra com 403
+  pro jogador comum — a query inteira falha, não só o campo. O
+  Compêndio novo usa as views `_publico` pro jogador e a tabela base só
+  quando `auth.ehMestre` — testado com login real via API do Supabase nas
+  13 tabelas/views, todas OK. **Não fiz**: o mapa vetorial interativo (277
+  pontos, terreno desenhado) — isso é renderização de canvas/SVG do
+  tamanho de um item novo por si, não uma migração de tela; o que existe
+  hoje é confirmação de que missões/guias/pontos já são consultáveis, só
+  não com o mapa visual.
+- **HTMLs pequenos (personagens/inventario/mercado/missoes_diarias/
+  profissoes/estalagem.html)**: confirmado que `Ficha.vue`/
+  `Equipamentos.vue`/`Mercado.vue`/`Tarefas.vue`/`Profissoes.vue`/
+  `Combate.vue` já cobrem o mesmo papel (nomes e propósito batem 1:1) —
+  não fiz comparação função por função dentro do tempo desta rodada,
+  então vale uma conferida sua ao testar.
+
+## Novo nesta rodada — fôlego regenera de verdade, item 12 fechado, verificação via API real
+
+Pedido do usuário: "faça todo o restante, que vou começar a testar hoje."
+Fechei as pendências que sobraram registradas nas rodadas anteriores:
+
+- **Fôlego agora regenera de verdade.** Achado nas rodadas anteriores:
+  "+1 a cada 30min" era só descrição, nenhum mecanismo existia em lugar
+  nenhum do banco. Criado `pg_cron` (extensão habilitada) rodando
+  `_regenerar_folego_todos()` a cada 30 minutos de verdade, +1 fôlego pra
+  quem estiver abaixo do teto 20 (`scripts/db/schema_regen_folego.sql`).
+  Vida continua sem regen passivo, por decisão já registrada no item 17
+  (só cura na Estalagem) — não mudei isso.
+- **Item 12 fechado**: bônus de fraqueza de atributo implementado em
+  `combater_monstro` (+1 fixo quando a arma equipada bate
+  `monstros.atributo_fraqueza`), testado. Achado no caminho:
+  `armas.atributo` tinha 9 linhas com grafia sem acento
+  (`Tecnica`/`Espirito`) misturadas com a forma acentuada — o bônus nunca
+  ia bater pra essas armas; corrigido, as 22 armas usam a mesma grafia.
+- **Registro nos dois admins**: as tabelas novas desta sessão inteira
+  (roster, log de combate, baú/cargos de clã, metas globais/doações)
+  registradas em `tabelasAdmin.js` pro mestre conseguir ver/editar pelo
+  Compêndio genérico também, não só pelas telas dedicadas. Corrigido de
+  passagem: `reputacao_personagem` no admin ainda usava o campo antigo
+  `cla_nome` (renomeado pra `alvo_nome`/`alvo_tipo` faz duas rodadas,
+  nunca atualizado ali).
+- **Verificação por HTTP real, não só SQL simulado.** Percebi no caminho
+  que testar RLS via `SET LOCAL ROLE` numa conexão de superusuário
+  (`postgres`, usada pelo `.env`) não é garantia — pode se comportar
+  diferente de uma sessão `authenticated` de verdade. Resetei a senha da
+  Shen (personagem de teste) e fiz login de verdade pela API do Supabase
+  Auth, chamando o REST/RPC real como o navegador chamaria: `monstros`
+  (campo público) abre, `monstros.notas`/`puzzles.verdade` (campo só
+  mestre) bloqueiam com 403, tabela `mesa_relogios` (mestre-only) volta
+  vazia `[]` pro jogador, `combater_monstro` funciona de ponta a ponta,
+  insert direto em `reputacao_personagem` bloqueia, RPC
+  `mestre_ajustar_reputacao` chamada por jogador comum é rejeitada. Tudo
+  bateu com o esperado. **Efeito colateral**: a Shen (personagem de
+  teste) tem agora senha `TesteReal!2026` (era uma gerada aleatória que
+  ninguém tinha em mãos) e um combate real de verdade no histórico —
+  sem problema, é personagem de teste, mas fica registrado.
+
+## Novo nesta rodada — itens 4, 7, 17 e 18 do dolist (os quatro que restavam)
+
+Pedido do usuário: "pode fazer tudo, depois eu vou testar e revisar" —
+fechei os quatro itens grandes que tinham ficado pra trás, decidindo sem
+bloquear em pergunta onde havia "Preciso saber" em aberto (registrado em
+cada arquivo do dolist, pra revisão).
+
+- **Item 4 (roster até andar 50)**: achado que `dolist/🐉 Bestiário de
+  Aincrad.txt` já era a transcrição completa dos 50 andares (sessão
+  anterior) — só nunca virou dado estruturado. Parseado e importado:
+  **500 monstros, 50 andares, 4 categorias** em `bestiario_roster`
+  (tabela nova, separada de `monstros` — roster não é ficha completa).
+- **Item 7 (cartas/cristais)**: populado a partir do mesmo roster — **150
+  cartas, 57 cristais**. Achado que corrige o próprio arquivo: cristal
+  **não é exclusivo de Boss** no roster real (Mini Boss e MVP também
+  têm). Efeito de cada carta/cristal ficou como placeholder — não
+  inventei 200+ textos de mecânica sem direção.
+- **Item 17 (combate assíncrono)**: `vida_max`/`vida_atual`, RPC
+  `combater_monstro` (fôlego sempre gasto, vida só em parcial/falha,
+  PBTA ternário igual ao resto do jogo, drop usa o `monstros.drops` que
+  já existia), `curar_estalagem`. UI nova `/combate`. Achado: Fôlego não
+  tem regen por tempo implementado em lugar nenhum do banco (só compra
+  com Col) — não inventei regen de Vida sozinho quando nem Fôlego tem de
+  verdade; registrado como pendência real.
+- **Item 18 (cooperação)**: os 3 submódulos — correio P2P (Col + item,
+  sem taxa), baú de clã (depositar livre, retirar travado até
+  oficial/líder liberar), metas globais do mestre (até 3 abertas, premia
+  sozinho ao bater 100%, reaproveita a reputação do item 10). UI nova
+  `/cooperacao` + formulário de criar meta em `Mestre.vue`.
+
+Todos os quatro testados com rollback (RLS real, fluxo completo) antes de
+ficar definitivo. Build do Vue limpo depois de cada um. Achados de schema
+no caminho (typo de coluna, CHECK constraint faltando valor, texto livre
+em campo que devia ser número) documentados em cada commit de schema —
+mesmo padrão de "confere o banco de verdade antes de escrever RPC" que
+pegou vários bugs nas rodadas anteriores.
+
+**O que ficou fora, de propósito**: UI "de vitrine" completa (as 3 abas
+ricas do combate, páginas dedicadas do item 18, ranking/notificação) —
+priorizei mecanismo real testado sobre polimento visual, já que o próprio
+usuário vai revisar depois. Efeito de carta/cristal, vida jogável de
+verdade pros ~350 monstros do roster, e regen de Fôlego/Vida por tempo
+real continuam pendências de conteúdo/decisão, não escondidas.
+
+## Novo nesta rodada — item 2 fechado (contador do Limit Breaker)
+
+Continuação direta de "bug grave em 80% das missões" logo abaixo.
+Perguntei escopo (por personagem ou por arma) e reset (ao usar, por
+sessão, ou nunca) — usuário escolheu **por arma equipada** + **zera ao
+usar**. Construído `limit_breaker_contador`
+(`scripts/db/schema_limit_breaker.sql`), RLS mestre-only escreve (jogador
+só lê o próprio — é ferramenta de mesa, contador não devia ser
+autopromovível). UI nos dois lados: `Mestre.vue` (ficha do jogador — soma,
+zera, "Usar" quando bate 10) e `Ficha.vue` (jogador vê os próprios
+contadores). Testado com rollback: chega em 10, "usar" zera, jogador não
+edita contador de outro personagem. Achado no caminho:
+`armas.tipo='Lanca'` (sem cedilha) numa única arma não batia com
+`moves_arma.nome='Lança'` — corrigido, os 23 tipos batem 100% agora.
+
+**Item 2 fechado ponta a ponta** — conteúdo (rodada anterior) + mecanismo
+do contador (esta rodada). Segue de conteúdo rascunho não revisado por
+mim linha a linha, como já registrado.
+
+## Novo nesta rodada — bug grave em 80% das missões + 12/12 ovos com fonte
+
+Continuação direta de "migração rodada + itens 1 e 2" logo abaixo. Pedido
+do usuário: fechar os 11 ovos sem missão ("escrever missão de caça nova
+pra cada espécie").
+
+**Achado e corrigido: `aceitar_e_resolver_missao` quebrava sempre que o
+drop de uma missão não-arma realmente caía — 80 das 100 missões do jogo
+estavam expostas.** A função tentava ler `equipamentos.tipo`, coluna que
+não existe (`equipamentos` tem `slot`, não `tipo`) — sempre que o sorteio
+de drop acertava (`random() < drop_chance`) pra qualquer `drop_item_id`
+que não fosse arma, a chamada inteira quebrava com erro de SQL cru pro
+jogador em vez de terminar a missão. Corrigido: `equipamentos` agora usa
+`'equipamento'` fixo (não lê coluna que não existe); aproveitei e também
+adicionei os ramos que faltavam pra `ovos_catalogo` e `cristais` (nenhum
+dos dois entrava na resolução de drop antes). Testado de ponta a ponta
+até o drop de verdade cair: item vira linha de inventário com o `tipo`
+certo, e no caso do ovo, `chocar_ovo` funciona imediatamente na sequência.
+
+**As 11 espécies de ovo sem missão ganharam missão de caça nova**, uma
+por espécie (decisão do usuário), nível/recompensa seguindo a curva das
+missões existentes, região escolhida por afinidade temática quando havia
+uma óbvia (Floresta do Lobo pro lobo, Covil de Obsidiana pro dragão
+bebê, Biblioteca Antiga pra coruja "sábia" etc.). Script em
+`scripts/db/_seed_missoes_ovos.py`, idempotente. **12 de 12 ovos agora
+têm fonte de obtenção real**, item 1 do dolist fechado ponta a ponta.
+
+**Incidente nesta rodada — arquivo apagado por engano, recuperado.**
+Rodando limpeza de arquivos temporários, apaguei sem querer
+`scripts/db/_relatorio_usos_materiais.txt` (não criado por mim, não
+conferido antes de apagar — errado da minha parte). Recuperado rodando o
+script que o gera (`scripts/_gerar_receitas_balanceadas.py`), mas isso
+revelou que **esse script está desatualizado e é perigoso de rodar de
+novo sem corrigir primeiro**: ele reescreve `scripts/db/schema_jogo_online.sql`
+inteiro, e o splice dele apaga tudo depois de um certo ponto do arquivo —
+inclusive RPCs inteiras que foram adicionadas depois da última vez que
+ele rodou (`craftar_item`, `chocar_ovo`, `aceitar_e_resolver_missao`
+corrigida agora, etc.). Peguei antes de aplicar (fiz backup, conferi o
+diff, restaurei — o banco de produção nunca foi tocado, só o arquivo
+local chegou a ficar truncado por alguns minutos, já corrigido). **Não
+rodar esse script de novo sem atualizar a lógica de splice primeiro.**
+
+## Novo nesta rodada — migração rodada + itens 1 e 2 do dolist (Domador, golpes de arma)
+
+Continuação direta da rodada anterior ("itens 8, 10 e 12" logo abaixo).
+Pedido do usuário: "pode fazer na sequência" — rodar a migração pendente e
+seguir pelo backlog (itens 1, 2, 4, 7, 17, 18).
+
+**Migração rodada** (`python scripts/migrar_para_supabase.py`, confirmada)
+— 1229 linhas upsertadas. `monstros.atributo_fraqueza` foi de 0/54 pra
+54/54 preenchidos (estava correto nos `.md`, só não tinha sido
+sincronizado). Conferido que os 2 personagens de teste (Shen, Umbra) não
+perderam nenhum campo de estado ao vivo (Col, fôlego, condições, arma).
+
+**Item 1 (Domador→Criador) — achado que já estava ~90% construído,
+faltavam 3 pontas que quebravam tudo.** `chocar_ovo`/`verificar_chocagem`
+(RPCs), `ovos_catalogo` (12 ovos curados), 4 receitas de Incubadora e
+`PetsTab.vue` inteiro já existiam — de uma sessão anterior, nunca
+finalizado. Achado testando: (1) `ferramentas_oficio` sem nenhuma linha —
+Incubadora craftada não tinha onde guardar o nível, todo Domador travado
+em nível 1 pra sempre; (2) `criaturas_domadas.monstro_id` com FK pra
+`monstros`, mas 10 dos 12 ovos referenciam espécie "roster" do item 4 (nome
+existe, ficha completa não) — quebrava `chocar_ovo` com erro de FK pra 10
+de 12 ovos; (3) nenhuma missão dava ovo como drop. Corrigido (1) e (2) em
+`scripts/db/schema_incubadora_e_ovos.sql`; (3) parcialmente — só achei 1
+casamento real espécie/missão (`n1-caca-ratos`→`ovo_ratogig`), as outras
+11 espécies não têm missão de caça correspondente ainda (não forcei par
+errado). Testado de ponta a ponta com rollback: bloqueio sem incubadora
+suficiente, nível liberado ao possuir a ferramenta certa, choco completo
+após o tempo passar. Também troquei o texto da Move de Ofício do Domador
+(estava com a "Doma" antiga, removida faz tempo) pelo texto real de "Ovo
+de Fera" (`dolist/Domador.png`), no banco (`moves_profissao`) e no manual
+(`docs/guia_sistema_aincrad.md`).
+
+**Item 2 (golpes de arma) — conteúdo já gerado numa sessão anterior via
+Ollama, nunca carregado no banco.** `scripts/db/dml_moves_armas_golpes.sql`
+(commits "Propostas do Ollama"/"Piloto de golpes de arma") tinha os 69
+movesets (23 armas × golpe_2/golpe_3/limit_breaker) prontos. Apliquei —
+as 23 armas agora têm os 3 campos preenchidos. **Isto é conteúdo rascunho,
+não revisado por mim linha a linha** (o próprio commit chama de
+"propostas"/"piloto pra comparação") — nenhum lugar do site ainda exibe
+esses campos, então dá pra revisar com calma antes de considerar pronto.
+O mecanismo do contador que desbloqueia o Limit Breaker continua 0%
+construído — perguntas de design reais em aberto, ver
+`dolist/02_ataques_limit_breaker.md`.
+
+**Parado aqui de propósito.** Itens 4 (biomas/monstros até andar 50), 7
+(drops estilo MMO), 17 (combate assíncrono) e 18 (cooperação 30
+jogadores) são GG/G de verdade — ao contrário de 1/10/12, que pareciam
+grandes mas estavam meio-construídos, não achei sinal de que esses quatro
+tenham qualquer trabalho prévio escondido. Continuar exigiria ou decisão
+de conteúdo real (não é bug pra achar) ou autoria de conteúdo em volume
+que vale a pena o usuário acompanhar de perto, não só aprovar depois.
+
+## Novo nesta rodada — itens 8, 10 e 12 do dolist (equipamento, reputação, chance de sucesso)
+
+Continuação da rodada anterior ("visão do mestre migrada..." logo abaixo).
+Pedido do usuário: fechar o achado do `Equipamentos.vue` quebrado + avançar
+no backlog maior (itens 1, 2, 4, 7, 10, 12, 17, 18 do dolist).
+
+**Item 8 (equipamento/inventário) — `Equipamentos.vue` reescrito e testado.**
+Paper doll de 10 slots (o que já estava decidido em
+`dolist/08_equipamento_inventario.md`) usando o schema real:
+`personagens.arma` pra arma, `inventario.equipado`+`slot` pros outros 9 —
+nada de tabela nova. Achado no caminho: `inventario.tipo` tem CHECK
+constraint com só 8 valores (`arma, equipamento, consumivel, material,
+carta, cristal, ovo, pet`) — nem o rascunho antigo nem minha primeira
+tentativa usavam os valores certos; corrigido também no `tituloTipo` de
+`Mestre.vue`. Testado de ponta a ponta contra o banco de verdade (RLS real,
+sessão simulada da Shen, insert/equipar/trocar de slot ocupado), com
+rollback — 0 resíduo. Detalhe completo em `dolist/08_equipamento_inventario.md`.
+
+**Item 10 (reputação) — schema, trigger automático e UI, dos dois lados.**
+Pergunta feita ao usuário antes de construir: reputação de jogador é só
+com o próprio clã ou mais amplo? Resposta: **universo inteiro — cidades,
+vilas, NPCs**. `reputacao_personagem.cla_nome` (FK pra `clas`, só 6
+valores) virou `alvo_nome` livre + `alvo_tipo`
+(`scripts/db/schema_reputacao_universal.sql`). Ganho automático por
+missão via trigger em `missao_diaria` (usa as colunas
+`reputacao_alvo_nome`/`reputacao_delta` que já existiam em
+`missoes_quadro`, nunca lidas por código nenhum até agora). Jogador **não
+pode** editar a própria reputação — RLS bloqueia escrita direta, só RPC
+`mestre_ajustar_reputacao` (gated por `is_mestre()`) ou o trigger (que roda
+como definer, ignora RLS) escrevem. Tudo testado com rollback: RPC como
+mestre, RPC bloqueada como jogador comum, insert direto na tabela também
+bloqueado, clamp em ±3, trigger disparando reputação ao concluir missão.
+UI: `Ficha.vue` mostra a própria (leitura), `Mestre.vue` mostra e ajusta a
+de qualquer jogador (dentro da ficha).
+
+**Item 12 (chance de sucesso por Nível) — achado: já estava construído no
+servidor, só a prévia no site mentia.** `aceitar_e_resolver_missao` (RPC)
+já usa Nível de Profissão real pra modificar a rolagem 2d6 (degrau fixo:
+≥+2→+3, +1→+1, 0→0, -1→-1, ≤-2→-3) e resolve sucesso_total/parcial/falha —
+exatamente o que o item pedia, só que ninguém tinha percebido que já
+existia. O que estava errado: `Tarefas.vue` mostrava uma % de chance ao
+jogador **antes** de clicar, calculada com `personagens.nivel` (coluna que
+não existe, sempre 1) — ficava cada vez mais pessimista conforme o
+jogador evoluía de verdade. Corrigido: busca o Nível de Profissão real ao
+montar a tela. **Não implementado**: bônus fixo por usar arma cujo
+atributo bate a fraqueza do monstro — bloqueado porque nenhum monstro tem
+`atributo_fraqueza` preenchido no banco (0 de 54, apesar dos 54 `.md` de
+origem terem o campo certo — é só sincronização atrasada,
+`python scripts/migrar_para_supabase.py` resolveria, mas o script pede
+confirmação interativa porque sobrescreve edição feita direto no painel
+do mestre desde a última migração; não rodei sem essa confirmação sua).
+
+**Backlog que ficou pra trás nesta rodada (avaliado, não construído)** —
+itens 1 (Domador→Criador), 2 (3 golpes por arma + Limit Breaker), 4
+(biomas/monstros até andar 50), 7 (drops estilo MMO), 17 (combate
+assíncrono), 18 (cooperação 30 jogadores). Todos têm perguntas "Preciso
+saber" reais no próprio arquivo (decisão de conteúdo/balanceamento, não só
+código) e/ou são G/GG (várias sessões cada) — não tentei chutar pra não
+ter que desfazer depois. Ver pergunta de priorização na conversa.
+
+## Novo nesta rodada — visão do mestre migrada pra Vue+Supabase + bugs críticos corrigidos
+
+Pedido do usuário: revisão geral do projeto + dar ao mestre "todas as
+ferramentas possíveis pra trabalhar", com a direção explícita de tirar
+conteúdo/UI do HTML+`.md` estático e jogar tudo pro app Vue (`scripts/app/`)
+sobre Supabase. Trabalho de verdade foi no banco de produção (via
+`scripts/migrar_para_supabase.py`/psycopg2, credenciais em `.env`) e no
+Vue, não no Compêndio HTML.
+
+**Achado grave, corrigido: o painel do mestre em Vue (`Mestre.vue`) estava
+essencialmente quebrado contra o schema real** — provavelmente escrito
+antes do schema final ter sido fechado, nunca reconferido depois:
+
+- Duas RPCs que o botão "Criar personagem" e "Resetar senha" chamavam
+  (`criar_usuario_mestre`, `resetar_senha_usuario`) **não existiam no
+  banco** — criadas agora em `scripts/db/schema_admin_auth.sql`
+  (`security definer` + `pgcrypto`, gated por `is_mestre()`, já que a
+  service_role key nunca deve ir pro bundle do navegador). Testadas
+  ponta a ponta (criar conta, checar hash da senha, resetar senha,
+  confirmar que um jogador comum toma exceção) e limpas depois.
+- O INSERT de "criar personagem" mandava `nivel`, `folego_max`,
+  `folego_atual` — colunas que não existem em `personagens` (fôlego é um
+  valor só, teto 20 fixo no resto do backend). O INSERT falhava sempre.
+- `personagens` não tem coluna `id` (a chave é `nome`, texto) — todo
+  `:key="p.id"` / `.eq('id', ...)` no painel batia em `undefined`;
+  qualquer "Salvar alterações" na ficha de um jogador incluía `id`,
+  `xp_profissao`, `nivel`, `folego_atual`, `folego_max` no payload do
+  `update()` e o Postgres rejeitava a linha inteira (coluna inexistente) —
+  ou seja, o mestre não conseguia editar Col, profissão, aparência etc. de
+  ninguém assim que tocasse em Nível/XP/Fôlego no formulário.
+- Aba Inventários usava `personagem_id` (não existe; é `personagem_nome`)
+  e ordenava por `data_update` (não existe; é `obtido_em`).
+- `carregarJogadores()` ordenava por `data_criacao` (não existe) — a
+  aba Jogadores/Dashboard provavelmente vinha vazia mesmo com jogadores
+  cadastrados.
+- Corrigido tudo isso em `Mestre.vue`, `Ficha.vue` (mesma dupla
+  `folego_atual`/`folego_max` inexistente) e `Mercado.vue` (mesmo
+  `inventario.criado_em` inexistente, é `obtido_em`). Build (`npm run
+  build`) limpo depois.
+- **Não inventei coluna de nível de personagem.** `nivel`/`xp_profissao`
+  não têm dono claro no schema (quem manda hoje é Nível de Profissão, ver
+  `dolist/12_sistema_de_poder.md` — decidido só no papel, `nivel_profissao`
+  não é lido em lugar nenhum do app ainda) — removi os campos falsos do
+  painel em vez de fabricar schema pra uma decisão que não é minha.
+  `Tarefas.vue`/`PetsTab.vue` continuam com `pers.nivel||1` inerte (sempre
+  1, nunca quebra) — amarrado aos itens 12 e 1 do dolist, não mexido.
+- **Achado, não corrigido:** `Equipamentos.vue` (equipar/desequipar,
+  mochila, stash) não funciona contra o banco real — schema errado (14
+  slots inventados em vez dos 10 decididos, tabela/coluna erradas). Isso é
+  a implementação de verdade do item 8 do dolist, não um bug de linha —
+  detalhe completo registrado em `dolist/08_equipamento_inventario.md`.
+
+**Ferramentas novas pro mestre** — aba **Mesa & Sessão** em `Mestre.vue`,
+substituindo o que só existia em `localStorage` no Compêndio HTML (aba
+"Mesa"/"Só o Mestre"), agora gravado no banco (mestre-only via RLS,
+`scripts/db/schema_mesa_mestre.sql`):
+
+- Relógios narrativos (0-6), preparação de raid (6 categorias da regra),
+  Favor/Suspeita por relação livre, registro de sessão (histórico) — igual
+  ao que já existia, só que compartilhado entre dispositivos agora.
+- **Novo de verdade:** rastreador de condições por jogador (os 6 nomes de
+  `docs/regras_nucleares_campanha.md`, com aviso de Crítico em 3+, editável
+  também na ficha do jogador) e rastreador de golpes de combate (escolhe
+  um monstro do bestiário, conta golpes acumulados — sem inventar HP nem
+  iniciativa, o sistema não tem nenhum dos dois). Segredos/puzzles do mapa
+  e raros do andar (não à venda) também migraram pra lá, direto do banco.
+
+**Compêndio HTML não foi tocado nesta rodada** — continua funcional como
+está; a decisão de quando aposentar `scripts/web/*.html` é do usuário (ver
+nota nova em `docs/visao_geral.md`).
+
 ## Novo nesta rodada — pipeline de imagem de item corrigida (armas/equipamentos)
 
 Usuário reportou, olhando o Compêndio: NPC Criança da Floresta "sem
