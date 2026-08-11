@@ -61,7 +61,24 @@ da ação — não é sempre a mesma moeda.
 - **Sem PvP.** Confirmado — o risco do jogo vem de arriscar contra o
   conteúdo (Poder insuficiente), nunca de outro jogador.
 
-## Preciso saber
+## ✅ Fechado (10/08) — boss/miniboss exige grupo, mas cooperativo assíncrono
+
+Pedido do usuário: miniboss precisa de 3 jogadores, chefe de 10. Como o
+jogo online é assíncrono (Combate Livre = ataca quando quiser, não existe
+sessão com todo mundo online ao mesmo tempo), virou HP compartilhado em
+vez de exigir gente simultânea — qualquer personagem ataca a qualquer
+momento, o chefe só cai quando a vida zera **e** pelo menos N personagens
+diferentes já bateram nele em algum momento (cumulativo). Schema, RPC `atacar_chefe()` e UI (barra de HP
+compartilhado + contador de contribuintes em `Combate.vue`) em
+`scripts/db/schema_chefes_cooperativos.sql` — número de contribuintes e
+HP do chefe ficam editáveis por monstro no Compêndio do Mestre.
+
+As 16 profissões: ficou respondido na prática — item 14 (fechado também
+nesta rodada) deu ferramenta pras 16 desde já, então não faz sentido
+"loop diário" só ativar um subconjunto — todas já têm o que precisam pra
+participar.
+
+## Preciso saber (histórico, já resolvido acima)
 
 - Todas as **16 profissões** entram já na v1, ou começa com um
   subconjunto (ex: Caçador, Ferreiro, Alquimista, Domador — as mais

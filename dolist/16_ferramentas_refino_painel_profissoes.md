@@ -114,6 +114,20 @@ Hoje o nível de profissão está espalhado — o jogador vê no inventário só
   conteúdo intermediário pras 15 profissões sem ferramenta, mesmo
   bloqueio de sempre.
 
+## ✅ Parte 2 fechada (10/08) — junto com o item 14
+
+O bloqueio ("precisa de conteúdo pras 15 profissões") caiu junto com o
+item 14: ao dar ferramenta própria pra cada profissão, o tier 2 de cada
+uma **é** a cadeia de refino 2 estágios — estágio 1 (matéria-prima →
+intermediário, ex: "Cabeça Balanceada" do Ferreiro) e estágio 2
+(intermediário → ferramenta final, ex: "Martelo de Precisão"), exatamente
+o padrão que a Incubadora Sagrada/Primordial do Domador já usava sozinha.
+Item intermediário não ganhou tabela própria — fica só como
+`nome_resultado` de uma receita com `receita_estagio=1`, sem entrar em
+`equipamentos` (pergunta 3 do "Preciso saber" abaixo, resolvida assim: não
+precisa de catálogo próprio, só existir como resultado de receita já
+resolve pro caso de uso real).
+
 ## Preciso saber
 
 1. **Ferramenta obrigatória = sim ou não?** MD propõe que sim (referência Syrnia). Queremos isso mesmo ou o jogador inicia sem ferramenta e mina "com a mão" mas com taxa de sucesso baixíssima (sucesso só em crítico)?
