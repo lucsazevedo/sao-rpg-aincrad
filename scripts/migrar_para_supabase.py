@@ -105,10 +105,29 @@ def sim_nao_bool(r, campo="canonico"):
     return r
 
 
+def colunas_existem(cur, tabela):
+    """Retorna set com os nomes de coluna que de fato existem na tabela no
+    Postgres, em lowercase. Usado pra que o upsert nao quebre se o markdown
+    ganhar um campo novo antes do schema.sql ser atualizado, ou se o mestre
+    adicionar/remover colunas manualmente pelo painel do Supabase — a
+    migracao ignora silenciosamente o que nao existe, ao inves de dar
+    UndefinedColumn."""
+    cur.execute(
+        "select column_name from information_schema.columns where table_schema='public' and table_name=%s",
+        (tabela,),
+    )
+    return {r[0] for r in cur.fetchall()}
+
+
 def upsert(cur, tabela, pk, linhas):
     if not linhas:
         return 0
-    cols = sorted({c for linha in linhas for c in linha.keys()})
+    cols_existem = colunas_existem(cur, tabela)
+    cols = sorted({c for linha in linhas for c in linha.keys() if c in cols_existem})
+    if pk not in cols:
+        cols = sorted(cols + [pk])
+    if not cols:
+        return 0
     cols_sql = ",".join('"%s"' % c for c in cols)
     valores_ph = ",".join(["%s"] * len(cols))
     atualiza = ",".join('"%s"=excluded."%s"' % (c, c) for c in cols if c != pk)

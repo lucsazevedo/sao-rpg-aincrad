@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Estalagem</title>
+<style>
+:root{
+  --bg:#0a0806; --panel:#15100a; --panel-2:#1d150c;
+  --line:#3d2e1a; --line-soft:#2a2013;
+  --gold:#d9ad5e; --gold-dim:#8c6f3e; --gold-bright:#f2d18a;
+  --ink:#efe5d2; --ink-dim:#a89a80; --ink-faint:#6f6450;
+  --red:#e0524a; --green:#8fd694;
+  --f-disp:"Palatino Linotype",Palatino,Georgia,serif;
+  --f-ui:-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);line-height:1.5}
+button,input,textarea,select{font:inherit;color:inherit}
+.shell{max-width:980px;margin:0 auto;padding:20px 16px 70px}
+h1{font-family:var(--f-disp);color:var(--gold-bright);font-size:28px;margin:0 0 4px}
+.sub{color:var(--ink-dim);font-size:13px;margin-bottom:18px}
+.gate{border:2px solid var(--gold-dim);border-radius:6px;padding:28px;max-width:380px;margin:80px auto;text-align:center}
+.gate input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:9px 11px;margin:8px 0;color:var(--ink)}
+.gate button{width:100%;background:var(--gold-dim);color:#150f08;border:none;border-radius:4px;padding:10px;font-weight:700;cursor:pointer;margin-top:8px}
+.gate .erro{color:var(--red);font-size:12.5px;min-height:16px}
+.status{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.status .st{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:13px;flex:1 0 calc(50% - 10px);min-width:180px}
+.status .st .k{color:var(--ink-dim);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--f-mono)}
+.status .st .v{font-family:var(--f-disp);color:var(--gold-bright);font-size:18px}
+.bar{background:var(--line);border-radius:3px;height:10px;overflow:hidden;margin-top:6px;min-width:140px}
+.bar > div{height:100%;background:linear-gradient(90deg,#4a86e6,#b184d9);transition:width .2s}
+.bar.col > div{background:linear-gradient(90deg,var(--gold-dim),var(--gold-bright))}
+.pacotes{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px;margin-top:22px}
+.pacote{background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:18px;transition:border-color .2s;position:relative}
+.pacote:hover{border-color:var(--gold-dim)}
+.pacote .ic{font-size:44px;display:block;margin-bottom:10px}
+.pacote h3{margin:0 0 4px;font-family:var(--f-disp);color:var(--gold-bright);font-size:20px}
+.pacote .desc{color:var(--ink-dim);font-size:13px;margin-bottom:14px;min-height:40px}
+.pacote .preco-linha{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.pacote .preco-un{color:var(--ink-dim);font-size:11px;font-family:var(--f-mono)}
+.pacote .preco-total{color:var(--gold-bright);font-family:var(--f-disp);font-size:24px;font-weight:700}
+.pacote .qtd{color:var(--green);font-family:var(--f-disp);font-size:14px;font-weight:700;margin-bottom:16px}
+.pacote .btn{width:100%;margin-top:4px}
+.pacote.recomendado{border-color:var(--gold-dim);box-shadow:0 0 0 2px rgba(217,173,94,.15), 0 8px 24px rgba(140,111,62,.12)}
+.pacote.recomendado .selo{position:absolute;top:-10px;right:14px;background:var(--gold-dim);color:#150f08;font-size:10px;font-family:var(--f-mono);font-weight:700;padding:2px 8px;border-radius:10px;letter-spacing:.04em}
+.btn{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:10px 16px;cursor:pointer;color:var(--ink);font-weight:600}
+.btn:hover{border-color:var(--gold-dim)}
+.btn.primary{background:linear-gradient(180deg,var(--gold-dim),#7a5e2e);color:#f6e5be;border-color:var(--gold);font-weight:800}
+.btn.primary:hover{filter:brightness(1.1)}
+.btn:disabled{opacity:.4;cursor:not-allowed!important;filter:grayscale(.4)}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.links a{color:var(--gold-dim);font-size:13px;text-decoration:none}
+.links a:hover{color:var(--gold-bright);text-decoration:underline}
+.info{background:var(--panel-2);border:1px solid var(--line-soft);border-radius:8px;padding:14px 16px;margin:22px 0;font-size:13px;color:var(--ink-dim)}
+.info b{color:var(--gold-bright)}
+.msg{font-size:13px;padding:10px 14px;border-radius:6px;margin-top:12px}
+.msg.ok{background:#1b3a1e;color:#bfe2b5;border:1px solid #3d6e41}
+.msg.erro{background:#3a1b1b;color:#e2a9a4;border:1px solid #6b2e2a}
+.msg.info{background:#1e2a3a;color:#b1c1e0;border:1px solid #3c5374}
+.timer{font-family:var(--f-mono);color:var(--green);font-size:12px;margin-left:6px}
+@media (max-width:760px){
+  .status .st{flex:1 0 100%}
+  .pacotes{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div id="gate" class="gate">
+    <h1 style="font-size:20px">🛏️ Estalagem</h1>
+    <p class="sub">Faça login com sua conta de jogador.</p>
+    <input type="text" id="gEmail" placeholder="e-mail" />
+    <input type="password" id="gSenha" placeholder="senha" />
+    <button id="gEntrar">Entrar</button>
+    <div class="erro" id="gErro"></div>
+  </div>
+
+  <div id="painel" style="display:none">
+    <h1>🛏️ Estalagem da Boa Noite</h1>
+    <div class="sub">Pague Col para recuperar Fôlego instantaneamente. Alternativa ao descanso passivo de +1 a cada 30 minutos.</div>
+
+    <div class="links">
+      <a href="painel.html">← Voltar ao Painel</a>
+      <a href="missoes_diarias.html">⚔️ Missões Diárias</a>
+      <a href="inventario.html">🎒 Inventário</a>
+      <a href="mercado.html">🏪 Mercado</a>
+      <a href="#" id="sair" style="margin-left:auto;color:var(--red)">Sair</a>
+    </div>
+
+    <div class="status" id="statusBar"></div>
+
+    <div class="info">
+      ⏱️ Passivamente você recupera <b>+1 Fôlego a cada 30 minutos</b> (cheio em 6h).
+      Aqui você acelera o processo gastando Col. Pacotes maiores são mais vantajosos por unidade.
+      <span id="proxRecuperacao" class="timer"></span>
+    </div>
+
+    <div class="pacotes">
+      <div class="pacote">
+        <span class="ic">🌱</span>
+        <h3>Pacote Básico</h3>
+        <div class="desc">Um gole de hidromel e uma descansada rápida. Ideal para completar mais 1 missão.</div>
+        <div class="qtd">⚡ +1 Fôlego</div>
+        <div class="preco-linha">
+          <span class="preco-un">5 Col / unidade</span>
+          <span class="preco-total">5 Col</span>
+        </div>
+        <button class="btn primary" data-qtd="1">Comprar +1</button>
+      </div>
+
+      <div class="pacote recomendado">
+        <span class="selo">MAIS POPULAR</span>
+        <span class="ic">🍺</span>
+        <h3>Pacote do Viajante</h3>
+        <div class="desc">Refeição completa, banho quente e cama confortável. A sessão de missões pode continuar!</div>
+        <div class="qtd">⚡ +5 Fôlego</div>
+        <div class="preco-linha">
+          <span class="preco-un">6 Col / unidade (−20% por un)</span>
+          <span class="preco-total">30 Col</span>
+        </div>
+        <button class="btn primary" data-qtd="5">Comprar +5</button>
+      </div>
+
+      <div class="pacote">
+        <span class="ic">👑</span>
+        <h3>Suíte Real (Fôlego máximo)</h3>
+        <div class="desc">Suíte nobre com mordomo e serviço de quarto. Acorda 100% disposto para grindar.</div>
+        <div class="qtd">⚡ Enche até 20/20 (o que faltar)</div>
+        <div class="preco-linha">
+          <span class="preco-un">7 Col / unidade (−44% por un)</span>
+          <span class="preco-total">~7 Col × qtd</span>
+        </div>
+        <button class="btn primary" data-qtd="20">Comprar: Encher tudo</button>
+      </div>
+    </div>
+
+    <div id="mensagem"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<script src="modo_mestre.js"></script>
+<script>
+var EU_PERS = null;
+var MEU_NIVEL = 1; var MEU_XP = 0;
+var XP_POR_NIVEL = {2:100,3:250,4:500,5:1000,6:2000,7:3500,8:6000,9:10000,10:18000};
+
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+document.getElementById("gEntrar").addEventListener("click", async function(){
+  var email=document.getElementById("gEmail").value.trim();
+  var senha=document.getElementById("gSenha").value;
+  var erro=document.getElementById("gErro"); erro.textContent="";
+  try{
+    await fazerLogin(email, senha); location.reload();
+  }catch(e){ erro.textContent = "Não deu: " + e.message; }
+});
+document.getElementById("sair").addEventListener("click", async function(e){
+  e.preventDefault(); await fazerLogout(); location.reload();
+});
+
+async function iniciar(){
+  await iniciarSessao();
+  if(!estaLogado()){ document.getElementById("gate").style.display=""; return; }
+  document.getElementById("painel").style.display="";
+  await carregarEu();
+  renderStatus();
+  iniciarTimerProxRecuperacao();
+  document.querySelectorAll('[data-qtd]').forEach(function(b){
+    b.addEventListener("click", function(){ comprarFolego(Number(b.dataset.qtd)); });
+  });
+}
+
+async function carregarEu(){
+  var r = await supaClient().from("personagens").select("*").eq("dono_id", usuarioId());
+  EU_PERS = (r.data||[])[0] || null;
+  if(!EU_PERS){ document.getElementById("painel").innerHTML = '<div class="msg erro">⚠️ Você ainda não tem personagem. Crie um em personagens.html primeiro.</div><a href="personagens.html" class="btn primary" style="display:inline-block;margin-top:10px">Criar ficha</a>'; return; }
+  var r2 = await supaClient().from("nivel_profissao").select("*").eq("personagem_nome", EU_PERS.nome).order("nivel",{ascending:false}).limit(1);
+  var np = (r2.data||[])[0];
+  MEU_NIVEL = np? np.nivel : 1;
+  MEU_XP = np? np.xp : 0;
+}
+
+function renderStatus(){
+  if(!EU_PERS) return;
+  var pctFg = Math.min(100, Math.round(((EU_PERS.folego||0)/20)*100));
+  var bar = document.getElementById("statusBar");
+  bar.innerHTML = '' +
+    '<div class="st"><div class="k">Personagem</div><div class="v" style="font-size:15px">' + esc(EU_PERS.nome) + ' · ' + esc(EU_PERS.profissao||"Aventureiro") + '</div></div>' +
+    '<div class="st"><div class="k">💰 Col (mão / guardado)</div><div class="v" style="font-size:17px">' + EU_PERS.col_mao + ' · <span style="color:var(--ink-dim);font-size:13px">' + EU_PERS.col_guardado + '</span></div><div class="bar col"><div style="width:' + Math.min(100,((Number(EU_PERS.col_mao||0)+Number(EU_PERS.col_guardado||0))/5000*100)) + '%"></div></div></div>' +
+    '<div class="st"><div class="k">🌬️ Fôlego (atual / máximo 20)</div><div class="v">' + (EU_PERS.folego||0) + ' / 20</div><div class="bar"><div id="barFolego" style="width:' + pctFg + '%"></div></div></div>';
+  var cheio = (EU_PERS.folego||0) >= 20;
+  document.querySelectorAll('[data-qtd]').forEach(function(b){
+    b.disabled = cheio;
+    if(cheio) b.textContent = "Fôlego cheio";
+  });
+}
+
+var timerInt;
+function iniciarTimerProxRecuperacao(){
+  atualizaTimer();
+  if(timerInt) clearInterval(timerInt);
+  timerInt = setInterval(atualizaTimer, 1000);
+}
+function atualizaTimer(){
+  // +1 a cada 30 min = 1800 s. Calcula "próximo" segundo cheio (updated_at + 1800*n).
+  var span = document.getElementById("proxRecuperacao");
+  if(!EU_PERS || !EU_PERS.updated_at){ span.textContent=""; return; }
+  var agora = Date.now()/1000;
+  var atualizado = new Date(EU_PERS.updated_at).getTime()/1000;
+  var decorrido = agora - atualizado;
+  var ciclo = 1800;
+  var prox = Math.max(0, ciclo - (decorrido % ciclo));
+  if(EU_PERS.folego >= 20){ span.textContent = "· Fôlego atualmente cheio."; return; }
+  var mm = Math.floor(prox/60);
+  var ss = Math.floor(prox%60);
+  span.textContent = "· Próximo +1 automático em " + String(mm).padStart(2,"0") + ":" + String(ss).padStart(2,"0");
+}
+
+async function comprarFolego(qtd){
+  var box = document.getElementById("mensagem");
+  box.innerHTML = '<div class="msg info">⏳ Processando...</div>';
+  var botoes = document.querySelectorAll('[data-qtd]');
+  botoes.forEach(function(b){ b.disabled = true; });
+  try{
+    var r = await supaClient().rpc("comprar_folego", {p_qtd: qtd});
+    if(r.error) throw new Error(r.error.message);
+    var resp = typeof r.data === "string"? JSON.parse(r.data) : r.data;
+    if(resp.erro) throw new Error(resp.erro);
+    // atualiza local
+    EU_PERS.col_mao = Number(EU_PERS.col_mao||0) - resp.folego_gasto_col;
+    EU_PERS.folego = resp.folego_agora;
+    renderStatus();
+    var titulo = qtd>=20? '👑 Suíte Real usufruída!' : (qtd>=5? '🍺 Pacote do Viajante pago!' : '🌱 Gole de hidromel bebido!');
+    box.innerHTML = '<div class="msg ok"><b>' + titulo + '</b><br/>' +
+      '⚡ Ganhou <b>' + resp.folego_ganho_qtd + ' Fôlego</b> (agora está com ' + resp.folego_agora + '/20).<br/>' +
+      '💸 Pagou <b>' + resp.folego_gasto_col + ' Col</b> — ' + resp.preco_unidade + ' Col por unidade.<br/>' +
+      'Boa sorte nas próximas missões!</div>';
+  }catch(e){
+    box.innerHTML = '<div class="msg erro">Não foi possível comprar: ' + esc(e.message) + '</div>';
+  }finally{
+    botoes.forEach(function(b){
+      if(EU_PERS && (EU_PERS.folego||0) < 20) b.disabled = false;
+    });
+  }
+}
+
+iniciar();
+</script>
+</body>
+</html>

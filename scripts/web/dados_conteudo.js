@@ -5,6 +5,85 @@
 
 var MONSTROS = [
  {
+  "id": "abelha_gigante",
+  "nome": "Abelha Gigante",
+  "epiteto": "Guarda dos Campos",
+  "arquivo": "monstros/abelha_gigante.md",
+  "img": "",
+  "carta": "",
+  "tipo": "inseto",
+  "zona": "Floresta e Planícies Iniciais",
+  "regioes": [
+   "campos_oeste",
+   "pradaria_das_flores",
+   "bosque_sussurrante"
+  ],
+  "nivelRecomendado": "3-4",
+  "ameaca": "comum",
+  "golpes": "3",
+  "local": "campo",
+  "canonico": "nao",
+  "fonte": "",
+  "fraqueza": "o abdômen mole, exposto quando ela pousa na flor para coletar néctar",
+  "atributoFraqueza": "Técnica",
+  "fraquezas": [
+   "Atributo — Técnica:** o ferrão tem uma junta no meio. Saber onde quebrar ou torcer (teste de Técnica com arma de precisão) faz ela perder o ferrão e morrer em 1 rodada. 10+ nesse ataque = morre instantaneamente.",
+   "Fogo: qualquer tocha ou chave de fogo faz ela recuar. Nunca ataca em direção ao fogo.",
+   "Fumaça: um frasco de fumaça explode e toda a colmeia dispersa por 3 minutos.",
+   "Vento: arma de vento ou ventania forte faz ela não conseguir voar direito."
+  ],
+  "resistencias": [
+   "veneno",
+   "golpe leve"
+  ],
+  "vulnerabilidades": [
+   "fogo",
+   "fumaça",
+   "vento forte"
+  ],
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
+  "resumo": "30 centímetros de comprimento. Asas transparentes com veias amarelas. Abdômen listrado amarelo-preto, ferrão do tamanho de um dedo mínimo. Faz zumbido baixo que você ouve antes de ver.",
+  "habitat": "Campos floridos da pradaria oeste, borda da floresta. Faz colmeia em oco de árvore grande ou buraco de rocha.",
+  "comportamento": "não ataca de primeira. Ataque só se o grupo chegar a menos de 5 metros da colmeia OU alguém fizer movimento brusco perto dela. Uma abelha sozinha avisa com voo rasante; depois vem o resto.",
+  "leitura": "",
+  "sinal": "O zumbido muda de frequência — fica mais agudo, mais rápido. Se uma abelha para de andar de flor em flor e fica parada no ar na sua frente, é o último aviso.",
+  "lore": "Abelhas gigantes são uma das primeiras provas de que Aincrad não é exatamente o mundo real. A mesma coisa que o mundo de baixo, só que maior. O mel delas cura mais do que deveria curar. Os aventureiros mais velhos dizem que quando você está doente e come mel de abelha gigante, a ferida fecha mais rápido. Ninguém sabe explicar por quê.",
+  "notas": "",
+  "drops": [
+   {
+    "item": "Ferrão de Abelha",
+    "raridade": "Comum",
+    "qtd": "1-2",
+    "chance": "65%",
+    "serve": "Alquimista (veneno fraco, agulhas)"
+   },
+   {
+    "item": "Mel Natural",
+    "raridade": "Comum",
+    "qtd": "1",
+    "chance": "50%",
+    "serve": "Cozinheiro (doce, refeições especiais)"
+   },
+   {
+    "item": "Asa Pequena",
+    "raridade": "Incomum",
+    "qtd": "2-4",
+    "chance": "25%",
+    "serve": "Alquimista, Flecheiro (flecha leve)"
+   },
+   {
+    "item": "Col",
+    "raridade": "—",
+    "qtd": "10-25",
+    "chance": "100%",
+    "serve": "—"
+   }
+  ],
+  "corpo": "## Habitat\n\nCampos floridos da pradaria oeste, borda da floresta. Faz colmeia em oco de árvore grande ou buraco de rocha.\n\n**Comportamento:** não ataca de primeira. Ataque só se o grupo chegar a menos de 5 metros da colmeia OU alguém fizer movimento brusco perto dela. Uma abelha sozinha avisa com voo rasante; depois vem o resto.\n\n## Aparência\n\n30 centímetros de comprimento. Asas transparentes com veias amarelas. Abdômen listrado amarelo-preto, ferrão do tamanho de um dedo mínimo. Faz zumbido baixo que você ouve antes de ver.\n\n## Leia em voz alta\n\n> Você sente o cheiro primeiro: doce, forte, flores de primavera. Depois o zumbido. Vem de cima, da macieira florida à beira do trilho. Uma abelha do tamanho do seu antebraço pousa na flor mais perto, olha para vocês por um segundo, e volta pro néctar. Atrás dela, na entrada do galho oco, você vê mais duas.\n\n## Sinal antes do ataque\n\nO zumbido muda de frequência — fica mais agudo, mais rápido. Se uma abelha para de andar de flor em flor e fica parada no ar na sua frente, é o último aviso.\n\n## Ataques\n\n- **Ferrão** — ferroada dói e incha. A primeira ferroada em cena tem 20% de chance de deixar a vítima com dor de cabeça por 1 rodada (-1 em Conhecimento).\n- **Voo rasante** — passa a 1 palmo da sua cabeça. Não acerta, mas desvia a atenção: o próximo ataque de outra abelha ganha +1 de bônus.\n\n## Fraquezas\n\n- **Atributo — Técnica:** o ferrão tem uma junta no meio. Saber onde quebrar ou torcer (teste de Técnica com arma de precisão) faz ela perder o ferrão e morrer em 1 rodada. 10+ nesse ataque = morre instantaneamente.\n- Fogo: qualquer tocha ou chave de fogo faz ela recuar. Nunca ataca em direção ao fogo.\n- Fumaça: um frasco de fumaça explode e toda a colmeia dispersa por 3 minutos.\n- Vento: arma de vento ou ventania forte faz ela não conseguir voar direito.\n\n## O que torna este encontro memorável\n\nMel da colmeia é um dos melhores ingredientes de Cozinheiro do andar 1. Todo grupo lembra da primeira vez que teve que decidir: vale a pena lutar contra 6 abelhas gigantes por um pote de Mel Natural?\n\n## Complicações úteis\n\n- O grupo mata a colmeia, mas no ninho tem larvas. Alguém do grupo tem coração mole.\n- O mel é delicioso, mas um pouco alucinógeno — quem come de mais vê coisas no caminho de volta.\n- Outro grupo também quer a colmeia. Eles chegaram primeiro.\n- Uma abelha rainha do tamanho de um braço sai da colmeia quando vocês achavam que já tinha acabado.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Ferrão de Abelha | Comum | 1-2 | 65% | Alquimista (veneno fraco, agulhas) |\n| Mel Natural | Comum | 1 | 50% | Cozinheiro (doce, refeições especiais) |\n| Asa Pequena | Incomum | 2-4 | 25% | Alquimista, Flecheiro (flecha leve) |\n| Col | — | 10-25 | 100% | — |\n\n## Lore\n\nAbelhas gigantes são uma das primeiras provas de que Aincrad não é exatamente o mundo real. A mesma coisa que o mundo de baixo, só que maior. O mel delas cura mais do que deveria curar. Os aventureiros mais velhos dizem que quando você está doente e come mel de abelha gigante, a ferida fecha mais rápido. Ninguém sabe explicar por quê.\n\n*Primeira regra do campo: não mexe na macieira florida.*\n\n## Notas para o mestre\n\n- **Onde entra:** pradarias, borda de floresta.\n- **Como usar em transmissão:** zumbido crescente, close nas asas vibrando, o cheiro doce como ambientação.\n- **Erro comum do grupo:** todos avançam pra colmeia de uma vez. A colmeia ataca em enxame.\n- **Como a cena encerra sem HP:** recuar 10 metros, devagar, sem movimentos bruscos. Ela para de seguir."
+ },
+ {
   "id": "aguia_de_pedra",
   "nome": "Águia de Pedra",
   "epiteto": "",
@@ -25,11 +104,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe nas asas em voo baixo",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** cristal de descarga em voo. Em 10+ ela perde o mergulho pelo resto da cena e passa a lutar no chão, onde é desajeitada.",
-   "Resiste a Gelo** — vive no alto e a pena é isolante.",
+   "Atributo — Reflexo:** arma de Reflexo, batida no tempo do mergulho dela. Em 10+ ela perde o mergulho pelo resto da cena e passa a lutar no chão, onde é desajeitada.",
    "As asas ficam expostas no voo baixo, no fim do mergulho.",
    "Sem altura ela não recomeça: obrigar a luta sob teto ou saliência a anula."
   ],
@@ -37,9 +114,9 @@ var MONSTROS = [
    "vento"
   ],
   "vulnerabilidades": [],
-  "domavel": "sim",
-  "domaSucessos": "6",
-  "domaRequisito": "Mesma lógica ritual do Arauto das Alturas, em escala menor",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Águia de porte grande, penas cinza-pedra que imitam a rocha dos Penhascos de Vaelor. Menor que o Arauto das Alturas, mas mais comum e menos territorial.",
   "habitat": "Os Penhascos de Vaelor e as encostas altas das Colinas de Braxhold. Faz ninho em saliência que humano nenhum alcança, e desce quando alguma coisa se move no descampado.",
   "comportamento": "agressiva com quem chega perto do ninho e indiferente com todo o resto. Ataca em mergulho, uma vez, e volta a subir — se o primeiro mergulho falhar, ela reavalia em vez de insistir.",
@@ -77,7 +154,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nOs Penhascos de Vaelor e as encostas altas das Colinas de Braxhold. Faz ninho em saliência que humano nenhum alcança, e desce quando alguma coisa se move no descampado.\n\n**Comportamento:** agressiva com quem chega perto do ninho e indiferente com todo o resto. Ataca em mergulho, uma vez, e volta a subir — se o primeiro mergulho falhar, ela reavalia em vez de insistir.\n\n## Aparência\n\nÁguia de porte grande, penas cinza-pedra que imitam a rocha dos\nPenhascos de Vaelor. Menor que o Arauto das Alturas, mas mais comum e\nmenos territorial.\n\n## Leia em voz alta\n\n> A sombra passa por cima antes de vocês ouvirem qualquer coisa, e passa rápido demais para ser nuvem. Quando ela sobe de novo, dá para ver o tamanho: envergadura maior que a de um homem deitado, e penas que batem como pedra lascando.\n\n## Sinal antes do ataque\n\nO vento muda. Ela dobra as asas e o ar para de assobiar entre as penas — o silêncio é o mergulho começando.\n\n## Ataques\n\n- Investida em voo baixo\n- Garra dupla\n\n## Fraquezas\n\n- **Elemento — Trovão:** cristal de descarga em voo. Em 10+ ela perde o mergulho pelo resto da cena e passa a lutar no chão, onde é desajeitada.\n- **Resiste a Gelo** — vive no alto e a pena é isolante.\n- As asas ficam expostas no voo baixo, no fim do mergulho.\n- Sem altura ela não recomeça: obrigar a luta sob teto ou saliência a anula.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena Cinza-Pedra | Comum | 2-3 | 60% | Costureiro, Artesão |\n| Garra Dupla | Incomum | 1 | 25% | Ferreiro, Joalheiro |\n| Olho de Longa Vista | Raro | 1 | 8% | Alquimista, Cartógrafo |\n| Col | — | 160-240 | 100% | — |\n\n## Lore\n\nAs Águias de Pedra não caçam por fome — os ninhos delas estão cheios de coisas que não se come. Metal, vidro, moeda, fivela. Escaladores que chegam a uma saliência de ninho encontram os pertences de gente que subiu antes, empilhados com cuidado, e é a única forma de saber que alguém subiu antes.\n\n*O que ela leva, ela guarda. E ela guarda no alto.*\n\n## Notas para o mestre\n\nDomável — alternativa mais rápida de conseguir que o Arauto das Alturas\n(sucessos menores), mas rende uma montaria mais limitada (voos curtos,\nnão voo sustentado). Boa opção \"intermediária\" pra quem quer voar sem\nesperar o grind completo do Arauto."
+  "corpo": "## Habitat\n\nOs Penhascos de Vaelor e as encostas altas das Colinas de Braxhold. Faz ninho em saliência que humano nenhum alcança, e desce quando alguma coisa se move no descampado.\n\n**Comportamento:** agressiva com quem chega perto do ninho e indiferente com todo o resto. Ataca em mergulho, uma vez, e volta a subir — se o primeiro mergulho falhar, ela reavalia em vez de insistir.\n\n## Aparência\n\nÁguia de porte grande, penas cinza-pedra que imitam a rocha dos\nPenhascos de Vaelor. Menor que o Arauto das Alturas, mas mais comum e\nmenos territorial.\n\n## Leia em voz alta\n\n> A sombra passa por cima antes de vocês ouvirem qualquer coisa, e passa rápido demais para ser nuvem. Quando ela sobe de novo, dá para ver o tamanho: envergadura maior que a de um homem deitado, e penas que batem como pedra lascando.\n\n## Sinal antes do ataque\n\nO vento muda. Ela dobra as asas e o ar para de assobiar entre as penas — o silêncio é o mergulho começando.\n\n## Ataques\n\n- Investida em voo baixo\n- Garra dupla\n\n## Fraquezas\n\n- **Atributo — Reflexo:** arma de Reflexo, batida no tempo do mergulho dela. Em 10+ ela perde o mergulho pelo resto da cena e passa a lutar no chão, onde é desajeitada.\n- As asas ficam expostas no voo baixo, no fim do mergulho.\n- Sem altura ela não recomeça: obrigar a luta sob teto ou saliência a anula.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena Cinza-Pedra | Comum | 2-3 | 60% | Costureiro, Artesão |\n| Garra Dupla | Incomum | 1 | 25% | Ferreiro, Joalheiro |\n| Olho de Longa Vista | Raro | 1 | 8% | Alquimista, Cartógrafo |\n| Col | — | 160-240 | 100% | — |\n\n## Lore\n\nAs Águias de Pedra não caçam por fome — os ninhos delas estão cheios de coisas que não se come. Metal, vidro, moeda, fivela. Escaladores que chegam a uma saliência de ninho encontram os pertences de gente que subiu antes, empilhados com cuidado, e é a única forma de saber que alguém subiu antes.\n\n*O que ela leva, ela guarda. E ela guarda no alto.*\n\n## Notas para o mestre\n\nDomável — alternativa mais rápida de conseguir que o Arauto das Alturas\n(sucessos menores), mas rende uma montaria mais limitada (voos curtos,\nnão voo sustentado). Boa opção \"intermediária\" pra quem quer voar sem\nesperar o grind completo do Arauto."
  },
  {
   "id": "aguia_do_planalto",
@@ -96,10 +173,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe durante o mergulho, antes de recuperar altitude",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Gelo:** trava as asas por um turno, impedindo nova",
+   "Atributo — Reflexo:** arma de Reflexo, lida no instante em que ela",
    "O único momento em que ela está ao alcance de golpe corpo a corpo é",
    "Ataques à distância (arco, adaga de arremesso) funcionam a qualquer",
    "Grupo compacto (sem ninguém isolado) reduz a chance dela escolher alvo"
@@ -109,9 +185,9 @@ var MONSTROS = [
    "projétil leve"
   ],
   "vulnerabilidades": [],
-  "domavel": "sim",
-  "domaSucessos": "4",
-  "domaRequisito": "Pena de Águia intacta (drop raro desta própria criatura)",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Envergadura grande, penas num tom bronze que reflete o sol do planalto de um jeito quase metálico — fácil de confundir com reflexo de pedra à distância.",
   "habitat": "Correntes de ar quente sobre as Colinas Secas do andar 2 — caça de cima,\nraramente pousa perto de gente.",
   "comportamento": "observa antes de atacar, sempre em círculos altos.\nAtaca de mergulho contra quem estiver isolado do grupo ou carregando algo\nbrilhante.",
@@ -142,7 +218,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCorrentes de ar quente sobre as Colinas Secas do andar 2 — caça de cima,\nraramente pousa perto de gente.\n\n**Comportamento:** observa antes de atacar, sempre em círculos altos.\nAtaca de mergulho contra quem estiver isolado do grupo ou carregando algo\nbrilhante.\n\n## Aparência\n\nEnvergadura grande, penas num tom bronze que reflete o sol do planalto de\num jeito quase metálico — fácil de confundir com reflexo de pedra à\ndistância.\n\n## Leia em voz alta\n\n> Uma sombra passa rápido demais pelo chão pra ser nuvem. O grupo olha pra\n> cima tarde demais pra ver de onde ela vem — só a certeza de que algo\n> grande está observando de uma altura que nenhuma arma alcança em repouso.\n\n## Sinal antes do ataque\n\nA sombra circulando no chão, cada vez menor e mais rápida, antes do\nmergulho.\n\n## Ataques\n\n- **Mergulho em garras** — dano moderado, alvo único, prioriza quem está\n  mais isolado do grupo.\n- **Rajada de asas** — dano leve em área curta ao recuperar altitude depois\n  do mergulho, se alguém tentar segurá-la no chão.\n\n## Fraquezas\n\n- **Elemento — Gelo:** trava as asas por um turno, impedindo nova\n  decolagem.\n- O único momento em que ela está ao alcance de golpe corpo a corpo é\n  durante o mergulho, antes de recuperar altitude.\n- Ataques à distância (arco, adaga de arremesso) funcionam a qualquer\n  momento, diferente de golpes corpo a corpo.\n- Grupo compacto (sem ninguém isolado) reduz a chance dela escolher alvo\n  fácil.\n\n## O que torna este encontro memorável\n\nEnsina a lógica de combate aéreo do andar 2: ameaça que não se pode\nalcançar o tempo todo, só em janelas curtas — recompensa timing, não força\nbruta constante.\n\n## Complicações úteis\n\n- O grupo se dispersa tentando acompanhar o voo e perde formação.\n- Um item brilhante carregado por alguém vira alvo prioritário do mergulho.\n- Ela foge pra fora de alcance se ferida antes do golpe final, obrigando\n  perseguição.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena de Águia | Incomum | 1 | 30% | Costureiro, doma de Domador |\n| Garra Afiada | Comum | 1-2 | 55% | Ferreiro |\n| Col | — | 60-100 | 100% | — |\n\n## Lore\n\nCaçadores de Urbus consideram abater uma Águia do Planalto sinal de bom\naugúrio pra expedição — mais superstição prática que fato comprovado.\n\n*Ela só ataca o que já decidiu não conseguir alcançar de volta.*\n\n## Notas para o mestre\n\n- **Onde entra:** Colinas Secas, andar 2.\n- **Como usar em transmissão:** a sombra no chão antes de qualquer visão\n  clara da criatura.\n- **Erro comum do grupo:** tentar combate corpo a corpo constante em vez de\n  usar ataque à distância ou esperar o mergulho.\n- **Como a cena encerra sem HP:** afugentar com Gelo ou dano à distância\n  suficiente faz ela abandonar a caça sem precisar morrer."
+  "corpo": "## Habitat\n\nCorrentes de ar quente sobre as Colinas Secas do andar 2 — caça de cima,\nraramente pousa perto de gente.\n\n**Comportamento:** observa antes de atacar, sempre em círculos altos.\nAtaca de mergulho contra quem estiver isolado do grupo ou carregando algo\nbrilhante.\n\n## Aparência\n\nEnvergadura grande, penas num tom bronze que reflete o sol do planalto de\num jeito quase metálico — fácil de confundir com reflexo de pedra à\ndistância.\n\n## Leia em voz alta\n\n> Uma sombra passa rápido demais pelo chão pra ser nuvem. O grupo olha pra\n> cima tarde demais pra ver de onde ela vem — só a certeza de que algo\n> grande está observando de uma altura que nenhuma arma alcança em repouso.\n\n## Sinal antes do ataque\n\nA sombra circulando no chão, cada vez menor e mais rápida, antes do\nmergulho.\n\n## Ataques\n\n- **Mergulho em garras** — dano moderado, alvo único, prioriza quem está\n  mais isolado do grupo.\n- **Rajada de asas** — dano leve em área curta ao recuperar altitude depois\n  do mergulho, se alguém tentar segurá-la no chão.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** arma de Reflexo, lida no instante em que ela\n  mergulha. Em 10+ as asas falham na recuperação e ela não decola de novo\n  pelo resto da cena.\n- O único momento em que ela está ao alcance de golpe corpo a corpo é\n  durante o mergulho, antes de recuperar altitude.\n- Ataques à distância (arco, adaga de arremesso) funcionam a qualquer\n  momento, diferente de golpes corpo a corpo.\n- Grupo compacto (sem ninguém isolado) reduz a chance dela escolher alvo\n  fácil.\n\n## O que torna este encontro memorável\n\nEnsina a lógica de combate aéreo do andar 2: ameaça que não se pode\nalcançar o tempo todo, só em janelas curtas — recompensa timing, não força\nbruta constante.\n\n## Complicações úteis\n\n- O grupo se dispersa tentando acompanhar o voo e perde formação.\n- Um item brilhante carregado por alguém vira alvo prioritário do mergulho.\n- Ela foge pra fora de alcance se ferida antes do golpe final, obrigando\n  perseguição.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena de Águia | Incomum | 1 | 30% | Costureiro, doma de Domador |\n| Garra Afiada | Comum | 1-2 | 55% | Ferreiro |\n| Col | — | 60-100 | 100% | — |\n\n## Lore\n\nCaçadores de Urbus consideram abater uma Águia do Planalto sinal de bom\naugúrio pra expedição — mais superstição prática que fato comprovado.\n\n*Ela só ataca o que já decidiu não conseguir alcançar de volta.*\n\n## Notas para o mestre\n\n- **Onde entra:** Colinas Secas, andar 2.\n- **Como usar em transmissão:** a sombra no chão antes de qualquer visão\n  clara da criatura.\n- **Erro comum do grupo:** tentar combate corpo a corpo constante em vez de\n  usar ataque à distância ou esperar o mergulho.\n- **Como a cena encerra sem HP:** dano à distância\n  suficiente faz ela abandonar a caça sem precisar morrer."
  },
  {
   "id": "alfa_lupino",
@@ -165,11 +241,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "a garganta, exposta só no uivo — e o uivo é o que convoca a matilha",
-  "elementoFraqueza": "Veneno",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Espírito",
   "fraquezas": [
-   "Elemento — Veneno:** duas barras de fôlego é o que ele tem, e o veneno cobra as duas. Em 10+ ele perde o uivo pelo resto da cena — e sem uivo o encontro vira um duelo, que é o que ele não quer.",
-   "Resiste a Gelo** — passou invernos demais para isso funcionar.",
+   "Atributo — Espírito:** o que sustenta ele é a autoridade sobre a matilha, e golpe de arma de Espírito bate exatamente nela. Em 10+ ele perde o uivo pelo resto da cena — e sem uivo o encontro vira um duelo, que é o que ele não quer.",
    "A garganta fica exposta durante o uivo. É a janela, e é curta, e é a mesma",
    "Luz forte na cara interrompe o recuo em círculo: ele precisa enxergar para"
   ],
@@ -181,7 +255,7 @@ var MONSTROS = [
    "veneno",
    "luz forte"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Um terço maior que os outros e muito mais velho. Pelagem quase branca nas costas, escura nas pernas, e uma orelha faltando inteira. Os olhos não são alaranjados como os da matilha: são claros, quase sem cor, e não piscam.",
@@ -221,6 +295,34 @@ var MONSTROS = [
     "serve": "Prova de feito, Corretores de Tolbana"
    },
    {
+    "item": "Pele de Lobo Alfa",
+    "raridade": "Incomum",
+    "qtd": "1",
+    "chance": "40%",
+    "serve": "Coureiro (armadura/roupa de profissão)"
+   },
+   {
+    "item": "Presa de Alfa",
+    "raridade": "Raro",
+    "qtd": "2-3",
+    "chance": "30%",
+    "serve": "Joalheiro (pingente/amuleto)"
+   },
+   {
+    "item": "Cristal Selvagem",
+    "raridade": "Raro",
+    "qtd": "1",
+    "chance": "20%",
+    "serve": "Cristalista, socket leve em acessório"
+   },
+   {
+    "item": "Carta \"Alfa Lupino\"",
+    "raridade": "Épico",
+    "qtd": "1",
+    "chance": "5%",
+    "serve": "Drop exclusivo do Mini Boss; 1 carta equipável por personagem"
+   },
+   {
     "item": "Coração da Matilha",
     "raridade": "Épico",
     "qtd": "1",
@@ -235,7 +337,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nField boss das Estepes de Kaldan. Não tem covil fixo: dorme onde a matilha\npara, e a matilha para onde há caça grande. Aparece quando um número suficiente\nde Lobos da Alcateia é morto no mesmo território — ele vem ver quem foi.\n\n**Comportamento:** não abre a luta e nunca ataca primeiro. Chega, senta a\ncerca de trinta metros, e uiva. O que vem depois do uivo é o encontro; ele é\nsó quem chama.\n\n## Aparência\n\nUm terço maior que os outros e muito mais velho. Pelagem quase branca nas\ncostas, escura nas pernas, e uma orelha faltando inteira. Os olhos não são\nalaranjados como os da matilha: são claros, quase sem cor, e não piscam.\n\n## Leia em voz alta\n\n> Ele não corre. Sobe na pedra mais alta que tem por perto, senta, e olha\n> vocês do jeito que uma pessoa olha um problema de conta. Vocês têm o tempo\n> de três respirações para fazer alguma coisa. Depois disso, ele levanta a\n> cabeça e enche o peito de ar.\n\n## Sinal antes do ataque\n\nEle senta. Um lobo que senta na frente de um grupo armado não está descansando\n— está contando quantos vocês são, e a matilha está esperando o número.\n\n## Ataques\n\n- **Uivo** — não fere. Traz dois Lobos da Alcateia por vez, sem limite,\n  enquanto ele estiver de pé e com fôlego.\n- **Bote da garganta** — rápido, preciso, e escolhe sempre quem está mais\n  ferido, não quem está mais perto.\n- **Recuo em círculo** — sai do alcance e volta por outro ângulo. É como ele\n  reinicia a luta quando está perdendo.\n\n## Fraquezas\n\n- **Elemento — Veneno:** duas barras de fôlego é o que ele tem, e o veneno cobra as duas. Em 10+ ele perde o uivo pelo resto da cena — e sem uivo o encontro vira um duelo, que é o que ele não quer.\n- **Resiste a Gelo** — passou invernos demais para isso funcionar.\n- A garganta fica exposta durante o uivo. É a janela, e é curta, e é a mesma\n  coisa que ele precisa fazer para vencer.\n- Luz forte na cara interrompe o recuo em círculo: ele precisa enxergar para\n  escolher o ângulo.\n\n## O que torna este encontro memorável\n\nEle é o primeiro chefe que **não é uma barra de vida**. Matar o Alfa é fácil se\no grupo aceitar lutar contra doze lobos; matar os doze é fácil se aceitarem\ndeixar o Alfa uivar. As duas barras dele existem para dar tempo de a mesa\nperceber que o inimigo é a decisão, não a criatura.\n\n## Complicações úteis\n\n- Matam o Alfa e a matilha não dispersa — ela adota outro, e o outro é pior.\n- Ele foge na primeira barra e volta na sessão seguinte, com o dobro.\n- O uivo atrai também o que estava caçando a matilha.\n- Alguém salva um filhote e agora tem um Domador com um problema.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele de Lobo | Comum | 2-3 | 100% | Costureiro |\n| Garra Curva | Incomum | 2 | 70% | Ferreiro |\n| Essência Lupina | Raro | 1-2 | 55% | Alquimista, item Único |\n| Orelha Cortada do Alfa | Raro | 1 | 100% | Prova de feito, Corretores de Tolbana |\n| Coração da Matilha | **Épico** | 1 | 100% | Torna Raro em Único na bancada |\n| Col | — | 1800-2600 | 100% | — |\n\n## Lore\n\nNinguém sabe quantos invernos ele tem, porque ninguém do lado de dentro esteve\naqui em nenhum deles. O Alfa Lupino é mais velho que o jogo, no sentido em que\nos jogadores entendem \"mais velho\": ele já estava caçando quando o primeiro\ndeles acordou na Praça, e caçava exatamente do mesmo jeito. A orelha que falta\nnão foi arrancada por um jogador. Ninguém sabe por quem.\n\n*Ele não luta contra vocês. Ele organiza a coisa que vai.*\n\n## Notas para o mestre\n\n- **Onde entra:** field boss de `campos_leste` (Estepes de Kaldan). Surge\n  depois que o grupo derrota Lobos da Alcateia três vezes na mesma região.\n- **Como usar em transmissão:** o uivo. Corte todo o áudio ambiente por dois\n  segundos antes dele.\n- **Erro comum do grupo:** correr para cima do Alfa ignorando a matilha. É a\n  leitura certa e a execução errada — deixe funcionar parcialmente, e deixe\n  custar caro.\n- **Como a cena encerra sem HP:** submissão. Um Domador que passe no teste com\n  o Alfa **na segunda barra** encerra a luta inteira sem mais um golpe. A\n  matilha vai embora com ele e o grupo não ganha loot nenhum, e essa cena vale\n  mais que qualquer item desta tabela."
+  "corpo": "## Habitat\n\nField boss das Estepes de Kaldan. Não tem covil fixo: dorme onde a matilha\npara, e a matilha para onde há caça grande. Aparece quando um número suficiente\nde Lobos da Alcateia é morto no mesmo território — ele vem ver quem foi.\n\n**Comportamento:** não abre a luta e nunca ataca primeiro. Chega, senta a\ncerca de trinta metros, e uiva. O que vem depois do uivo é o encontro; ele é\nsó quem chama.\n\n## Aparência\n\nUm terço maior que os outros e muito mais velho. Pelagem quase branca nas\ncostas, escura nas pernas, e uma orelha faltando inteira. Os olhos não são\nalaranjados como os da matilha: são claros, quase sem cor, e não piscam.\n\n## Leia em voz alta\n\n> Ele não corre. Sobe na pedra mais alta que tem por perto, senta, e olha\n> vocês do jeito que uma pessoa olha um problema de conta. Vocês têm o tempo\n> de três respirações para fazer alguma coisa. Depois disso, ele levanta a\n> cabeça e enche o peito de ar.\n\n## Sinal antes do ataque\n\nEle senta. Um lobo que senta na frente de um grupo armado não está descansando\n— está contando quantos vocês são, e a matilha está esperando o número.\n\n## Ataques\n\n- **Uivo** — não fere. Traz dois Lobos da Alcateia por vez, sem limite,\n  enquanto ele estiver de pé e com fôlego.\n- **Bote da garganta** — rápido, preciso, e escolhe sempre quem está mais\n  ferido, não quem está mais perto.\n- **Recuo em círculo** — sai do alcance e volta por outro ângulo. É como ele\n  reinicia a luta quando está perdendo.\n\n## Fraquezas\n\n- **Atributo — Espírito:** o que sustenta ele é a autoridade sobre a matilha, e golpe de arma de Espírito bate exatamente nela. Em 10+ ele perde o uivo pelo resto da cena — e sem uivo o encontro vira um duelo, que é o que ele não quer.\n- A garganta fica exposta durante o uivo. É a janela, e é curta, e é a mesma\n  coisa que ele precisa fazer para vencer.\n- Luz forte na cara interrompe o recuo em círculo: ele precisa enxergar para\n  escolher o ângulo.\n\n## O que torna este encontro memorável\n\nEle é o primeiro chefe que **não é uma barra de vida**. Matar o Alfa é fácil se\no grupo aceitar lutar contra doze lobos; matar os doze é fácil se aceitarem\ndeixar o Alfa uivar. As duas barras dele existem para dar tempo de a mesa\nperceber que o inimigo é a decisão, não a criatura.\n\n## Complicações úteis\n\n- Matam o Alfa e a matilha não dispersa — ela adota outro, e o outro é pior.\n- Ele foge na primeira barra e volta na sessão seguinte, com o dobro.\n- O uivo atrai também o que estava caçando a matilha.\n- Alguém salva um filhote e agora tem um Domador com um problema.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele de Lobo | Comum | 2-3 | 100% | Costureiro |\n| Garra Curva | Incomum | 2 | 70% | Ferreiro |\n| Essência Lupina | Raro | 1-2 | 55% | Alquimista, item Único |\n| Orelha Cortada do Alfa | Raro | 1 | 100% | Prova de feito, Corretores de Tolbana |\n| Pele de Lobo Alfa | **Incomum** | 1 | 40% | Coureiro (armadura/roupa de profissão) |\n| Presa de Alfa | **Raro** | 2-3 | 30% | Joalheiro (pingente/amuleto) |\n| Cristal Selvagem | **Raro** | 1 | 20% | Cristalista, socket leve em acessório |\n| Carta \"Alfa Lupino\" | **Épico** | 1 | 5% | Drop exclusivo do Mini Boss; 1 carta equipável por personagem |\n| Coração da Matilha | **Épico** | 1 | 100% | Torna Raro em Único na bancada |\n| Col | — | 1800-2600 | 100% | — |\n\n## Lore\n\nNinguém sabe quantos invernos ele tem, porque ninguém do lado de dentro esteve\naqui em nenhum deles. O Alfa Lupino é mais velho que o jogo, no sentido em que\nos jogadores entendem \"mais velho\": ele já estava caçando quando o primeiro\ndeles acordou na Praça, e caçava exatamente do mesmo jeito. A orelha que falta\nnão foi arrancada por um jogador. Ninguém sabe por quem.\n\n*Ele não luta contra vocês. Ele organiza a coisa que vai.*\n\n## Notas para o mestre\n\n- **Onde entra:** field boss de `campos_leste` (Estepes de Kaldan). Surge\n  depois que o grupo derrota Lobos da Alcateia três vezes na mesma região.\n- **Como usar em transmissão:** o uivo. Corte todo o áudio ambiente por dois\n  segundos antes dele.\n- **Erro comum do grupo:** correr para cima do Alfa ignorando a matilha. É a\n  leitura certa e a execução errada — deixe funcionar parcialmente, e deixe\n  custar caro.\n- **Como a cena encerra sem HP:** submissão. Um Domador que passe no teste com\n  o Alfa **na segunda barra** encerra a luta inteira sem mais um golpe. A\n  matilha vai embora com ele e o grupo não ganha loot nenhum, e essa cena vale\n  mais que qualquer item desta tabela."
  },
  {
   "id": "aranha_de_luz_velada",
@@ -254,10 +356,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "cabeça exposta e teia incendiada",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Fogo:** chama e calor queimam a teia. Em 10+ ela perde a rede e fica exposta pelo resto da cena.",
+   "Atributo — Conhecimento:** arma de Conhecimento, usada por quem leu o padrão da teia antes de atacar. Em 10+ ela perde a rede e fica exposta pelo resto da cena.",
    "Sua teia é frágil à **luz intensa**; lanternas e tochas de fôlego curto a deixam desorientada.",
    "Abertura de posição:** se alguém atacar a cabeça ou a parte superior do peito enquanto ela está presa na teia, ela não reage à primeira tentativa.",
    "Fraqueza de contexto:** em espaço aberto, longe do teto baixo, ela não consegue usar o salto surpresa."
@@ -270,7 +371,7 @@ var MONSTROS = [
    "fogo",
    "ataques à cabeça"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Corpo preto-brilhante com longas pernas translúcidas, cobertas por finos filamentos que brilham como poeira de prata. Suas teias parecem feitas de fio de cristal fosco e refletem cada chama como se fossem pequenos olhos.",
@@ -303,7 +404,86 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nVive nas cavidades úmidas do Bosque da Bruma, onde a luz do exterior chega fraca e filtrada pelas folhas. Costuma tecer suas teias entre raízes e estacas de pedra, transformando pequenas salas em armadilhas cintilantes.\n\n**Comportamento:** agressiva e territorial. Ela observa de longe e só ataca quando alguém derruba uma teia ou cruza o seu corredor de caça. Caça com paciência: deixa o grupo se aproximar antes de fechar o cerco.\n\n## Aparência\n\nCorpo preto-brilhante com longas pernas translúcidas, cobertas por finos filamentos que brilham como poeira de prata. Suas teias parecem feitas de fio de cristal fosco e refletem cada chama como se fossem pequenos olhos.\n\n## Leia em voz alta\n\n> A teia na sua frente vibra com uma luz fraca, como se uma vela tivesse sido esmagada há pouco. Um par de patas longas se abre do escuro, e algo espera, imóvel, no centro da rede.\n\n## Sinal antes do ataque\n\nO ar fica pesado e úmido; gotas de água na teia começam a cintilar e deslizar na direção do grupo.\n\n## Ataques\n\n- **Rajada de Teia** — prende uma personagem até ela gastar uma ação para se soltar. Se falhar, sofre dano leve e perde posição.\n- **Salto das Sombras** — salta do teto para o centro da roda, causando dano médio e empurrando para trás.\n- **Sangue Venenoso** — se não for queimada ou iluminada, seu veneno enfraquece a próxima reação do grupo.\n\n## Fraquezas\n\n- **Elemento — Fogo:** chama e calor queimam a teia. Em 10+ ela perde a rede e fica exposta pelo resto da cena.\n- Sua teia é frágil à **luz intensa**; lanternas e tochas de fôlego curto a deixam desorientada.\n- **Abertura de posição:** se alguém atacar a cabeça ou a parte superior do peito enquanto ela está presa na teia, ela não reage à primeira tentativa.\n- **Fraqueza de contexto:** em espaço aberto, longe do teto baixo, ela não consegue usar o salto surpresa.\n\n## O que torna este encontro memorável\n\nA luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A criatura transforma o cenário em armadilha viva e força o grupo a usar fogo e movimento para não ser derrubado.\n\n## Complicações úteis\n\n- Um aliado fica preso na teia antes da criatura aparecer.\n- A teia se rompe e derruba alguém num buraco raso; precisa reagir antes de ser cercado.\n- A criatura usa a teia para se reposicionar acima do grupo, mantendo a altura e forçando ataques à distância.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seda Velada | Incomum | 1 | 45% | Costureiro, Alquimista |\n| Pata Translúcida | Comum | 1 | 60% | Arcanista, Armadura leve |\n| Col | — | 80-120 | 100% | — |\n\n## Lore\n\nA Aranha de Luz Velada é um predador do bosque que aprendeu a caçar com lanternas apagadas. Sua teia não só prende corpos, mas aprisiona também a confiança dos aventureiros que decidem atravessar a caverna no escuro.\n\n*Ela não ataca a primeira pessoa que vê. Ataca a primeira pessoa que pisa em sua casa.*\n\n## Notas para o mestre\n\n- **Onde entra:** em entradas de cavernas florestais e passagens úmidas, antes de um corredor mais largo.\n- **Como usar em transmissão:** o brilho tênue da teia e o estalo súbito do salto fazem um momento visual forte.\n- **Erro comum do grupo:** tentar cortar a teia com ataques leves em vez de incendiar ou usar iluminação.\n- **Como a cena encerra sem HP:** destruir a rede e forçar a aranha a fugir para outra câmara, deixando o grupo com um rastro de teia para seguir."
+  "corpo": "## Habitat\n\nVive nas cavidades úmidas do Bosque da Bruma, onde a luz do exterior chega fraca e filtrada pelas folhas. Costuma tecer suas teias entre raízes e estacas de pedra, transformando pequenas salas em armadilhas cintilantes.\n\n**Comportamento:** agressiva e territorial. Ela observa de longe e só ataca quando alguém derruba uma teia ou cruza o seu corredor de caça. Caça com paciência: deixa o grupo se aproximar antes de fechar o cerco.\n\n## Aparência\n\nCorpo preto-brilhante com longas pernas translúcidas, cobertas por finos filamentos que brilham como poeira de prata. Suas teias parecem feitas de fio de cristal fosco e refletem cada chama como se fossem pequenos olhos.\n\n## Leia em voz alta\n\n> A teia na sua frente vibra com uma luz fraca, como se uma vela tivesse sido esmagada há pouco. Um par de patas longas se abre do escuro, e algo espera, imóvel, no centro da rede.\n\n## Sinal antes do ataque\n\nO ar fica pesado e úmido; gotas de água na teia começam a cintilar e deslizar na direção do grupo.\n\n## Ataques\n\n- **Rajada de Teia** — prende uma personagem até ela gastar uma ação para se soltar. Se falhar, sofre dano leve e perde posição.\n- **Salto das Sombras** — salta do teto para o centro da roda, causando dano médio e empurrando para trás.\n- **Sangue Venenoso** — se não for mantida sob luz, seu veneno enfraquece a próxima reação do grupo.\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** arma de Conhecimento, usada por quem leu o padrão da teia antes de atacar. Em 10+ ela perde a rede e fica exposta pelo resto da cena.\n- Sua teia é frágil à **luz intensa**; lanternas e tochas de fôlego curto a deixam desorientada.\n- **Abertura de posição:** se alguém atacar a cabeça ou a parte superior do peito enquanto ela está presa na teia, ela não reage à primeira tentativa.\n- **Fraqueza de contexto:** em espaço aberto, longe do teto baixo, ela não consegue usar o salto surpresa.\n\n## O que torna este encontro memorável\n\nA luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A criatura transforma o cenário em armadilha viva e força o grupo a usar luz e movimento para não ser derrubado.\n\n## Complicações úteis\n\n- Um aliado fica preso na teia antes da criatura aparecer.\n- A teia se rompe e derruba alguém num buraco raso; precisa reagir antes de ser cercado.\n- A criatura usa a teia para se reposicionar acima do grupo, mantendo a altura e forçando ataques à distância.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seda Velada | Incomum | 1 | 45% | Costureiro, Alquimista |\n| Pata Translúcida | Comum | 1 | 60% | Arcanista, Armadura leve |\n| Col | — | 80-120 | 100% | — |\n\n## Lore\n\nA Aranha de Luz Velada é um predador do bosque que aprendeu a caçar com lanternas apagadas. Sua teia não só prende corpos, mas aprisiona também a confiança dos aventureiros que decidem atravessar a caverna no escuro.\n\n*Ela não ataca a primeira pessoa que vê. Ataca a primeira pessoa que pisa em sua casa.*\n\n## Notas para o mestre\n\n- **Onde entra:** em entradas de cavernas florestais e passagens úmidas, antes de um corredor mais largo.\n- **Como usar em transmissão:** o brilho tênue da teia e o estalo súbito do salto fazem um momento visual forte.\n- **Erro comum do grupo:** tentar cortar a teia com ataques leves em vez de iluminar a sala.\n- **Como a cena encerra sem HP:** destruir a rede e forçar a aranha a fugir para outra câmara, deixando o grupo com um rastro de teia para seguir."
+ },
+ {
+  "id": "aranha_sombria",
+  "nome": "Aranha Sombria",
+  "epiteto": "Tecelã do Escuro",
+  "arquivo": "monstros/aranha_sombria.md",
+  "img": "",
+  "carta": "",
+  "tipo": "aracnideo",
+  "zona": "Floresta e Planícies Iniciais",
+  "regioes": [
+   "caverna_lumis",
+   "gruta_escura",
+   "ruinas_kobold_subterraneo"
+  ],
+  "nivelRecomendado": "3-4",
+  "ameaca": "comum",
+  "golpes": "3",
+  "local": "caverna",
+  "canonico": "nao",
+  "fonte": "",
+  "fraqueza": "o abdômen, que brilha levemente no escuro quando começa a digerir",
+  "atributoFraqueza": "Corpo",
+  "fraquezas": [
+   "Atributo — Corpo:** o abdômen dela é mole. Um golpe certeiro (ataque de Corpo, desferido com força) estoura o abdômen. Acerto de fraqueza em 10+ = morte instantânea, e ela explode um pouco de teia cola no grupo.",
+   "Luz forte: tocha na cara, luz de Cristal de Luz — ela recua e tenta fugir para o escuro.",
+   "Fogo na teia: queima rápido. Sem a teia, ela não prende ninguém, e luta muito pior.",
+   "Isolada: uma aranha sozinha não ataca grupo de mais de 3. Ela foge."
+  ],
+  "resistencias": [
+   "veneno",
+   "corte fraco"
+  ],
+  "vulnerabilidades": [
+   "fogo",
+   "luz forte",
+   "puxar com força na teia"
+  ],
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
+  "resumo": "Tamanho de um prato. Pelo cinza-escuro brilhante, pernas finas e longas com listras escuras. Oito olhos vermelhos que refletem luz de tocha de um jeito estranho. Anda de ponta de perna, sem fazer som.",
+  "habitat": "Cavernas, ruins subterrâneas, e cantos escuros de floresta que o sol nunca chega. A teia dela é a marca registrada. Anda por onde não tem gente há tempo.",
+  "comportamento": "não ataca de frente. Prepara armadilha de teia nos corredores apertados, espera o grupo passar, e desce do teto por trás do último. Solta teia cola para prender um membro, depois morde.",
+  "leitura": "",
+  "sinal": "A teia no chão não está lá por acaso. Quando você vê fios finos cruzando o corredor na altura do joelho, ela já está esperando. O silêncio em caverna não é normal — falta de gota de água, falta de vento, alguma coisa comendo os sons.",
+  "lore": "Aranhas sombrias são uma das razões pelas quais todo grupo de dungeon leva tocha. Elas existem em todo andar, vão ficando maiores e mais venenosas conforme a torre sobe. A de andar 1 é a pequena — as de andar 50 são do tamanho de carroças.",
+  "notas": "",
+  "drops": [
+   {
+    "item": "Seda de Aranha",
+    "raridade": "Comum",
+    "qtd": "1-2",
+    "chance": "70%",
+    "serve": "Costureiro (tecido especial), Alquimista"
+   },
+   {
+    "item": "Veneno Fraco",
+    "raridade": "Incomum",
+    "qtd": "1",
+    "chance": "35%",
+    "serve": "Alquimista (poções, flechas envenenadas)"
+   },
+   {
+    "item": "Presa Pequena",
+    "raridade": "Comum",
+    "qtd": "1-2",
+    "chance": "55%",
+    "serve": "Joalheiro, Ferreiro (agulhas finas)"
+   },
+   {
+    "item": "Col",
+    "raridade": "—",
+    "qtd": "12-30",
+    "chance": "100%",
+    "serve": "—"
+   }
+  ],
+  "corpo": "## Habitat\n\nCavernas, ruins subterrâneas, e cantos escuros de floresta que o sol nunca chega. A teia dela é a marca registrada. Anda por onde não tem gente há tempo.\n\n**Comportamento:** não ataca de frente. Prepara armadilha de teia nos corredores apertados, espera o grupo passar, e desce do teto por trás do último. Solta teia cola para prender um membro, depois morde.\n\n## Aparência\n\nTamanho de um prato. Pelo cinza-escuro brilhante, pernas finas e longas com listras escuras. Oito olhos vermelhos que refletem luz de tocha de um jeito estranho. Anda de ponta de perna, sem fazer som.\n\n## Leia em voz alta\n\n> O corredor é apertado e cheira a velho e a mofo. O chão tá seco, o teto tá baixo. Você sente antes de ver: algo fino e pegajoso no seu braço. Quando você puxa, a meia esquerda fica grudada na parede. No teto, três palmos acima da cabeça do último da fila, você vê os olhos vermelhos, esperando.\n\n## Sinal antes do ataque\n\nA teia no chão não está lá por acaso. Quando você vê fios finos cruzando o corredor na altura do joelho, ela já está esperando. O silêncio em caverna não é normal — falta de gota de água, falta de vento, alguma coisa comendo os sons.\n\n## Ataques\n\n- **Teia-cola** — jato de teia fina, até 3 metros. Acerto no braço ou perna = membro preso. Para soltar: Corpo 7-9 demora 1 rodada; 10+ solta imediatamente.\n- **Mordida venenosa** — só morde quem está preso ou distraído. Veneno leve: dor e dormência no membro por 1 cena.\n\n## Fraquezas\n\n- **Atributo — Corpo:** o abdômen dela é mole. Um golpe certeiro (ataque de Corpo, desferido com força) estoura o abdômen. Acerto de fraqueza em 10+ = morte instantânea, e ela explode um pouco de teia cola no grupo.\n- Luz forte: tocha na cara, luz de Cristal de Luz — ela recua e tenta fugir para o escuro.\n- Fogo na teia: queima rápido. Sem a teia, ela não prende ninguém, e luta muito pior.\n- Isolada: uma aranha sozinha não ataca grupo de mais de 3. Ela foge.\n\n## O que torna este encontro memorável\n\nAranha Sombria é o primeiro \"susto de caverna\" do grupo — o monstro que aparece do nada, no teto, atrás do último. Quando o grupo consegue reagir a tempo, todo mundo ri de nervoso depois.\n\n## Complicações úteis\n\n- Ela solta uma nuvem de teia fina no ar e foge. O grupo fica cego por 1 rodada.\n- Dois ovos aparecem no ninho, no canto da caverna.\n- A mordida tem um veneno mais forte do que o normal — efeito dura dois dias.\n- Na teia dela tem um saco de moeda de aventureiro anterior. Dentro tem item útil, mas tem mais teia colada.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seda de Aranha | Comum | 1-2 | 70% | Costureiro (tecido especial), Alquimista |\n| Veneno Fraco | Incomum | 1 | 35% | Alquimista (poções, flechas envenenadas) |\n| Presa Pequena | Comum | 1-2 | 55% | Joalheiro, Ferreiro (agulhas finas) |\n| Col | — | 12-30 | 100% | — |\n\n## Lore\n\nAranhas sombrias são uma das razões pelas quais todo grupo de dungeon leva tocha. Elas existem em todo andar, vão ficando maiores e mais venenosas conforme a torre sobe. A de andar 1 é a pequena — as de andar 50 são do tamanho de carroças.\n\n*Primeira regra da caverna: sempre olha pro teto.*\n\n## Notas para o mestre\n\n- **Onde entra:** pontos de caverna e ruínas subterrâneas.\n- **Como usar em transmissão:** o som de teia esticando (sem som nenhum, o contraste), os olhos vermelhos aparecendo na luz da tocha.\n- **Erro comum do grupo:** ninguém fica de vigia traseiro no corredor.\n- **Como a cena encerra sem HP:** ela foge pro teto e some na escuridão. O grupo pode continuar, sem derrotar ela, mas agora sabe que ela está lá."
  },
  {
   "id": "arauto_das_alturas",
@@ -325,11 +505,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe nas asas em pleno voo",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** a descarga durante o giro a derruba. Em 10+ ela perde o voo pelo resto da cena, e no chão ela não sabe lutar.",
-   "Resiste a Gelo** — nasceu acima da linha da neve.",
+   "Atributo — Reflexo:** arma de Reflexo, golpe dado durante o giro, no tempo em que ela não pode corrigir a rota. Em 10+ ela perde o voo pelo resto da cena, e no chão ela não sabe lutar.",
    "As asas abertas em pleno voo são alvo enorme, e ela não as fecha durante o giro.",
    "Ela cumpre o ritual das três voltas mesmo quando isso a prejudica. É previsível de propósito."
   ],
@@ -337,9 +515,9 @@ var MONSTROS = [
    "vento"
   ],
   "vulnerabilidades": [],
-  "domavel": "sim",
-  "domaSucessos": "10",
-  "domaRequisito": "Ritual de oferenda de penas próprias, coletadas de outro Arauto",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Ave de rapina gigante, envergadura de mais de 4 metros, penas num gradiente de cinza-azulado que se confunde com o céu nublado das Montanhas de Grauvenn. Garras longas o suficiente pra carregar uma pessoa adulta.",
   "habitat": "Os picos das Montanhas de Grauvenn, acima da linha onde a neve fica o ano inteiro. Desce uma vez por dia, sempre no mesmo horário, sempre pelo mesmo corredor de ar.",
   "comportamento": "territorial e cerimonioso. Circula três vezes antes de atacar qualquer coisa, e um grupo que fica parado durante as três voltas não é atacado — ela decide que vocês pertencem à montanha.",
@@ -377,7 +555,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nOs picos das Montanhas de Grauvenn, acima da linha onde a neve fica o ano inteiro. Desce uma vez por dia, sempre no mesmo horário, sempre pelo mesmo corredor de ar.\n\n**Comportamento:** territorial e cerimonioso. Circula três vezes antes de atacar qualquer coisa, e um grupo que fica parado durante as três voltas não é atacado — ela decide que vocês pertencem à montanha.\n\n## Aparência\n\nAve de rapina gigante, envergadura de mais de 4 metros, penas num gradiente\nde cinza-azulado que se confunde com o céu nublado das Montanhas de\nGrauvenn. Garras longas o suficiente pra carregar uma pessoa adulta.\n\n## Leia em voz alta\n\n> Ela circula. Uma vez, alto. Duas, mais baixo. A cada volta vocês veem melhor: as penas não são de uma cor só, e o padrão que fazem quando as asas abrem é regular demais para ser pena. Na terceira volta ela para de circular.\n\n## Sinal antes do ataque\n\nA terceira volta. Não há outra advertência e não há necessidade de outra — ela sempre dá as três.\n\n## Ataques\n\n- Mergulho em garra\n- Rajada de vento das asas (empurra, não fere)\n\n## Fraquezas\n\n- **Elemento — Trovão:** a descarga durante o giro a derruba. Em 10+ ela perde o voo pelo resto da cena, e no chão ela não sabe lutar.\n- **Resiste a Gelo** — nasceu acima da linha da neve.\n- As asas abertas em pleno voo são alvo enorme, e ela não as fecha durante o giro.\n- Ela cumpre o ritual das três voltas mesmo quando isso a prejudica. É previsível de propósito.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena do Arauto | Incomum | 2-3 | 70% | Costureiro, Artesão |\n| Garra Afiada | Incomum | 1-2 | 30% | Ferreiro |\n| Pena-Mestra | Raro | 1 | 12% | Item Único, doma de outro Arauto |\n| Col | — | 380-520 | 100% | — |\n\n## Lore\n\nWilbrand tem uma tese sobre o Arauto que ninguém quis ouvir até o fim: o ritual das três voltas não é comportamento animal, é protocolo. Alguma coisa ensinou àquele bicho a avisar antes, e avisar três vezes, e nenhum bicho aprende isso sozinho. Ele guarda a pena que achou no primeiro ano numa caixa e não a mostra a ninguém que ria dele.\n\n*Ela avisa três vezes. Isso não é instinto — é educação.*\n\n## Notas para o mestre\n\nA doma mais valiosa e mais difícil do andar 1 — resultado em montaria\nvoadora (ver `docs/economia_profissoes.md`). Bom prêmio de longo prazo\npra um Domador dedicado, não algo que se consegue numa sessão só."
+  "corpo": "## Habitat\n\nOs picos das Montanhas de Grauvenn, acima da linha onde a neve fica o ano inteiro. Desce uma vez por dia, sempre no mesmo horário, sempre pelo mesmo corredor de ar.\n\n**Comportamento:** territorial e cerimonioso. Circula três vezes antes de atacar qualquer coisa, e um grupo que fica parado durante as três voltas não é atacado — ela decide que vocês pertencem à montanha.\n\n## Aparência\n\nAve de rapina gigante, envergadura de mais de 4 metros, penas num gradiente\nde cinza-azulado que se confunde com o céu nublado das Montanhas de\nGrauvenn. Garras longas o suficiente pra carregar uma pessoa adulta.\n\n## Leia em voz alta\n\n> Ela circula. Uma vez, alto. Duas, mais baixo. A cada volta vocês veem melhor: as penas não são de uma cor só, e o padrão que fazem quando as asas abrem é regular demais para ser pena. Na terceira volta ela para de circular.\n\n## Sinal antes do ataque\n\nA terceira volta. Não há outra advertência e não há necessidade de outra — ela sempre dá as três.\n\n## Ataques\n\n- Mergulho em garra\n- Rajada de vento das asas (empurra, não fere)\n\n## Fraquezas\n\n- **Atributo — Reflexo:** arma de Reflexo, golpe dado durante o giro, no tempo em que ela não pode corrigir a rota. Em 10+ ela perde o voo pelo resto da cena, e no chão ela não sabe lutar.\n- As asas abertas em pleno voo são alvo enorme, e ela não as fecha durante o giro.\n- Ela cumpre o ritual das três voltas mesmo quando isso a prejudica. É previsível de propósito.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena do Arauto | Incomum | 2-3 | 70% | Costureiro, Artesão |\n| Garra Afiada | Incomum | 1-2 | 30% | Ferreiro |\n| Pena-Mestra | Raro | 1 | 12% | Item Único, doma de outro Arauto |\n| Col | — | 380-520 | 100% | — |\n\n## Lore\n\nWilbrand tem uma tese sobre o Arauto que ninguém quis ouvir até o fim: o ritual das três voltas não é comportamento animal, é protocolo. Alguma coisa ensinou àquele bicho a avisar antes, e avisar três vezes, e nenhum bicho aprende isso sozinho. Ele guarda a pena que achou no primeiro ano numa caixa e não a mostra a ninguém que ria dele.\n\n*Ela avisa três vezes. Isso não é instinto — é educação.*\n\n## Notas para o mestre\n\nA doma mais valiosa e mais difícil do andar 1 — resultado em montaria\nvoadora (ver `docs/economia_profissoes.md`). Bom prêmio de longo prazo\npra um Domador dedicado, não algo que se consegue numa sessão só."
  },
  {
   "id": "armadura_animada",
@@ -400,11 +578,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe na junta interna, sem placa",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Trovão:** metal em cima de metal. Em 10+ as juntas travam e ela perde a capacidade de bloquear pelo resto da cena.",
-   "Resiste a Veneno** — não há nada dentro para envenenar.",
+   "Atributo — Conhecimento:** ela segue um padrão mecânico e previsível — arma de Conhecimento, na mão de quem leu o padrão, bate onde a placa não cobre. Em 10+ as juntas travam e ela perde a capacidade de bloquear pelo resto da cena.",
    "As juntas internas não têm placa: joelho, cotovelo, a dobra do braço.",
    "Ela não sai da linha que guarda. Recuar três passos encerra a luta, sempre."
   ],
@@ -415,7 +591,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "impacto"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Conjunto de armadura pesada vazia, movida por algo que ninguém explica — o mais perto que o Labirinto do Andar 1 chega de um \"fantasma\", embora seja tratada como construto, não espírito.",
@@ -455,7 +631,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCorredores do Labirinto e os salões vazios do Castelo de Ferro Negro. Fica de pé, encostada na parede, entre outras armaduras que são só armaduras.\n\n**Comportamento:** imóvel até alguém passar do ponto exato onde ela decide que a passagem acabou. Não persegue além desse ponto, nem que o grupo esteja a um passo. Ela guarda uma linha, e a linha nunca é onde parece.\n\n## Aparência\n\nConjunto de armadura pesada vazia, movida por algo que ninguém explica —\no mais perto que o Labirinto do Andar 1 chega de um \"fantasma\", embora\nseja tratada como construto, não espírito.\n\n## Leia em voz alta\n\n> São seis armaduras no corredor, encostadas na parede, e todas iguais. Vocês passam pela primeira, pela segunda, pela terceira. A quarta vira a cabeça.\n\n## Sinal antes do ataque\n\nUm chiado curto de metal contra metal, meio segundo antes — é o peso mudando de perna dentro da armadura vazia.\n\n## Ataques\n\n- Golpe de espada enferrujada\n- Investida de escudo\n\n## Fraquezas\n\n- **Elemento — Trovão:** metal em cima de metal. Em 10+ as juntas travam e ela perde a capacidade de bloquear pelo resto da cena.\n- **Resiste a Veneno** — não há nada dentro para envenenar.\n- As juntas internas não têm placa: joelho, cotovelo, a dobra do braço.\n- Ela não sai da linha que guarda. Recuar três passos encerra a luta, sempre.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa de Armadura Antiga | Comum | 2-4 | 50% | Ferreiro |\n| Espada Enferrujada | Comum | 1 | 20% | Sucata de Ferreiro |\n| Núcleo Sem Função | Raro | 1 | 10% | Bibliotecário, Joalheiro |\n| Col | — | 200-320 | 100% | — |\n\n## Lore\n\nNinguém nunca encontrou nada dentro de uma. Nem osso, nem pó, nem marca de uso — o interior das placas é liso como peça nova, e o cheiro é de metal frio e mais nada. Um Ferreiro que desmontou uma inteira em Tolbana disse que a solda por dentro é melhor que qualquer coisa que ele saiba fazer, e parou de contar a história depois da terceira vez.\n\n*Não é uma armadura possuída. É uma armadura que nunca precisou de ninguém dentro.*\n\n## Notas para o mestre\n\nNão é domável — construto. Boa \"armadilha viva\" pra variar o ritmo dos\ncorredores do Labirinto sem ser sempre Ruin Kobold — o mestre pode\nposicioná-la em pontos específicos como uma armadilha ativável, não\ncomo patrulha comum."
+  "corpo": "## Habitat\n\nCorredores do Labirinto e os salões vazios do Castelo de Ferro Negro. Fica de pé, encostada na parede, entre outras armaduras que são só armaduras.\n\n**Comportamento:** imóvel até alguém passar do ponto exato onde ela decide que a passagem acabou. Não persegue além desse ponto, nem que o grupo esteja a um passo. Ela guarda uma linha, e a linha nunca é onde parece.\n\n## Aparência\n\nConjunto de armadura pesada vazia, movida por algo que ninguém explica —\no mais perto que o Labirinto do Andar 1 chega de um \"fantasma\", embora\nseja tratada como construto, não espírito.\n\n## Leia em voz alta\n\n> São seis armaduras no corredor, encostadas na parede, e todas iguais. Vocês passam pela primeira, pela segunda, pela terceira. A quarta vira a cabeça.\n\n## Sinal antes do ataque\n\nUm chiado curto de metal contra metal, meio segundo antes — é o peso mudando de perna dentro da armadura vazia.\n\n## Ataques\n\n- Golpe de espada enferrujada\n- Investida de escudo\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** ela segue um padrão mecânico e previsível — arma de Conhecimento, na mão de quem leu o padrão, bate onde a placa não cobre. Em 10+ as juntas travam e ela perde a capacidade de bloquear pelo resto da cena.\n- As juntas internas não têm placa: joelho, cotovelo, a dobra do braço.\n- Ela não sai da linha que guarda. Recuar três passos encerra a luta, sempre.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa de Armadura Antiga | Comum | 2-4 | 50% | Ferreiro |\n| Espada Enferrujada | Comum | 1 | 20% | Sucata de Ferreiro |\n| Núcleo Sem Função | Raro | 1 | 10% | Bibliotecário, Joalheiro |\n| Col | — | 200-320 | 100% | — |\n\n## Lore\n\nNinguém nunca encontrou nada dentro de uma. Nem osso, nem pó, nem marca de uso — o interior das placas é liso como peça nova, e o cheiro é de metal frio e mais nada. Um Ferreiro que desmontou uma inteira em Tolbana disse que a solda por dentro é melhor que qualquer coisa que ele saiba fazer, e parou de contar a história depois da terceira vez.\n\n*Não é uma armadura possuída. É uma armadura que nunca precisou de ninguém dentro.*\n\n## Notas para o mestre\n\nNão é domável — construto. Boa \"armadilha viva\" pra variar o ritmo dos\ncorredores do Labirinto sem ser sempre Ruin Kobold — o mestre pode\nposicioná-la em pontos específicos como uma armadilha ativável, não\ncomo patrulha comum."
  },
  {
   "id": "baran_o_rei_touro",
@@ -474,19 +650,18 @@ var MONSTROS = [
   "canonico": "sim",
   "fonte": "https://swordartonline.fandom.com/wiki/2nd_Floor",
   "fraqueza": "martelo cravado no chão após o golpe giratório — abertura curta e real",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Corpo (ataques físicos diretos sem elemento fazem menos efeito na Fase 1)",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** atordoa por um turno inteiro, interrompendo",
+   "Atributo — Reflexo:** chefe pesado de investida — arma de Reflexo",
    "O martelo cravado no chão após o golpe giratório (Fase 2+) é a abertura",
-   "Ataques físicos sem elemento na Fase 1 fazem menos efeito — o grupo",
+   "Força bruta não abre a Fase 1 — o grupo precisa de pelo menos uma arma",
    "Na Fase 3, a imprevisibilidade da investida dupla é, paradoxalmente, uma"
   ],
   "resistencias": [
    "investida corpo a corpo sem preparo"
   ],
   "vulnerabilidades": [],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Humanoide de porte descomunal com cabeça e chifres de touro, empunhando um martelo de guerra pesado demais pra qualquer arma comum de jogador segurar sem perícia dedicada. A pele tem textura de pedra rachada, não de couro.",
@@ -526,7 +701,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nA câmara final do Labirinto do Andar 2 — layout interno ainda não\ndetalhado (ver `mapas/andar_2.md`, \"o que falta\"). Nome e forma geral são\ncanônicos; a sequência de combate abaixo é homebrew, escrita no mesmo\npadrão de `monstros/illfang_the_kobold_lord.md`.\n\n**Comportamento:** paciente na Fase 1, cada vez mais errático conforme\nperde HP — o \"rei\" que começa calculista termina puro instinto de\nsobrevivência.\n\n## Aparência\n\nHumanoide de porte descomunal com cabeça e chifres de touro, empunhando um\nmartelo de guerra pesado demais pra qualquer arma comum de jogador segurar\nsem perícia dedicada. A pele tem textura de pedra rachada, não de couro.\n\n## Leia em voz alta\n\n> A câmara final é maior do que qualquer coisa que o grupo já viu no andar.\n> Baran espera parado, martelo apoiado no chão como bengala, até a força-\n> tarefa inteira estar dentro — só então ele se move, e o primeiro golpe do\n> martelo no chão faz poeira cair do teto inteiro.\n\n## Sinal antes do ataque\n\nUm bufo grave, quase idêntico ao do Touro das Colinas, mas ecoando numa\nescala muito maior — a câmara inteira vibra um instante antes de cada\ngolpe grande.\n\n## Ataques\n\n- **Golpe de martelo (Fase 1)** — dano alto em área frontal curta, quebra\n  formação de quem estiver muito próximo.\n- **Investida em linha (Fase 1)** — atravessa a câmara, ameaça quem estiver\n  no caminho.\n- **Golpe giratório (Fase 2, abaixo de 2/3 de HP)** — dano em área ampla ao\n  redor dele; termina cravando o martelo no chão, criando a abertura\n  central de fraqueza.\n- **Investida dupla (Fase 3, abaixo de 1/3 de HP)** — duas investidas\n  seguidas, cada vez mais erráticas e imprevisíveis na direção.\n\n## Fraquezas\n\n- **Elemento — Trovão:** atordoa por um turno inteiro, interrompendo\n  qualquer ataque em andamento — o melhor jeito de negar uma fase de dano.\n- O martelo cravado no chão após o golpe giratório (Fase 2+) é a abertura\n  real: alguém precisa estar posicionado pra aproveitar antes dele erguer o\n  martelo de novo.\n- Ataques físicos sem elemento na Fase 1 fazem menos efeito — o grupo\n  precisa de pelo menos uma fonte de Trovão pra abrir a luta direito.\n- Na Fase 3, a imprevisibilidade da investida dupla é, paradoxalmente, uma\n  fraqueza: ele para de \"ler\" o grupo e fica mais fácil prever onde NÃO\n  estar.\n\n## O que torna este encontro memorável\n\nÉ o segundo grande teste coletivo da campanha — mesma escala social de\n`tolbana_12_o_raid_contra_illfang`, mas com uma variável nova: ninguém sabe\nainda, coletivamente, como o andar 2 abre pro andar 3. O golpe final aqui\ncarrega o mesmo peso dramático que o Last Attack Bonus teve em Illfang (ver\n`docs/misterio_andar2.md`).\n\n## Complicações úteis\n\n- A poeira caindo do teto reduz visibilidade durante golpes grandes.\n- Um grupo de apoio mal posicionado é pego pela investida em linha.\n- A abertura do martelo cravado dura só um turno — perder a janela custa\n  caro.\n- Na Fase 3, a imprevisibilidade da investida acerta quem menos esperava.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Chifre do Rei Touro | Épico | 1 | 100% (Last Attack) | Ferreiro (arma de assinatura) |\n| Fragmento de Martelo | Raro | 1-2 | 60% | Ferreiro, Joalheiro |\n| Couro de Pedra Rachada | Incomum | 2-3 | 80% | Costureiro |\n| Col | — | 3000-4500 | 100% | — |\n\n## Lore\n\nBaran governava o planalto do andar 2 muito antes de qualquer jogador\nchegar — nas palavras dos moradores mais antigos de Urbus (o que quer que\n\"antigo\" signifique pra uma cidade que só existe há semanas), ele \"nasceu\njunto com a seca\", guardião e causa do problema de água ao mesmo tempo.\n\n*Ele não protege o andar 3. Ele só ainda não decidiu deixar ninguém passar.*\n\n## Notas para o mestre\n\n- **Onde entra:** câmara final do Labirinto do Andar 2 (layout ainda a\n  desenvolver).\n- **Como usar em transmissão:** a poeira caindo do teto a cada golpe\n  grande — mesmo recurso visual de \"o mundo reage à luta\", já usado com\n  Illfang.\n- **Erro comum do grupo:** entrar na Fase 1 sem fonte de Trovão disponível\n  — planeje isso na cadeia de preparação de raid do andar 2 (equivalente a\n  `tolbana_09_abastecendo_o_grupo`).\n- **Como a cena encerra sem HP:** não há saída sem combate — é chefe de\n  andar. A única \"saída\" é decidir quem lidera a formação e quando recuar\n  uma fase mal preparada (Preparação de Raid, `docs/regras_nucleares_campanha.md`)."
+  "corpo": "## Habitat\n\nA câmara final do Labirinto do Andar 2 — layout interno ainda não\ndetalhado (ver `mapas/andar_2.md`, \"o que falta\"). Nome e forma geral são\ncanônicos; a sequência de combate abaixo é homebrew, escrita no mesmo\npadrão de `monstros/illfang_the_kobold_lord.md`.\n\n**Comportamento:** paciente na Fase 1, cada vez mais errático conforme\nperde HP — o \"rei\" que começa calculista termina puro instinto de\nsobrevivência.\n\n## Aparência\n\nHumanoide de porte descomunal com cabeça e chifres de touro, empunhando um\nmartelo de guerra pesado demais pra qualquer arma comum de jogador segurar\nsem perícia dedicada. A pele tem textura de pedra rachada, não de couro.\n\n## Leia em voz alta\n\n> A câmara final é maior do que qualquer coisa que o grupo já viu no andar.\n> Baran espera parado, martelo apoiado no chão como bengala, até a força-\n> tarefa inteira estar dentro — só então ele se move, e o primeiro golpe do\n> martelo no chão faz poeira cair do teto inteiro.\n\n## Sinal antes do ataque\n\nUm bufo grave, quase idêntico ao do Touro das Colinas, mas ecoando numa\nescala muito maior — a câmara inteira vibra um instante antes de cada\ngolpe grande.\n\n## Ataques\n\n- **Golpe de martelo (Fase 1)** — dano alto em área frontal curta, quebra\n  formação de quem estiver muito próximo.\n- **Investida em linha (Fase 1)** — atravessa a câmara, ameaça quem estiver\n  no caminho.\n- **Golpe giratório (Fase 2, abaixo de 2/3 de HP)** — dano em área ampla ao\n  redor dele; termina cravando o martelo no chão, criando a abertura\n  central de fraqueza.\n- **Investida dupla (Fase 3, abaixo de 1/3 de HP)** — duas investidas\n  seguidas, cada vez mais erráticas e imprevisíveis na direção.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** chefe pesado de investida — arma de Reflexo\n  explora as aberturas que ele deixa entre um golpe grande e outro. Em 10+\n  ele fica atordoado por um turno inteiro, com o ataque em andamento\n  interrompido — o melhor jeito de negar uma fase de dano.\n- O martelo cravado no chão após o golpe giratório (Fase 2+) é a abertura\n  real: alguém precisa estar posicionado pra aproveitar antes dele erguer o\n  martelo de novo.\n- Força bruta não abre a Fase 1 — o grupo precisa de pelo menos uma arma\n  de Reflexo pra aproveitar as aberturas entre os golpes grandes.\n- Na Fase 3, a imprevisibilidade da investida dupla é, paradoxalmente, uma\n  fraqueza: ele para de \"ler\" o grupo e fica mais fácil prever onde NÃO\n  estar.\n\n## O que torna este encontro memorável\n\nÉ o segundo grande teste coletivo da campanha — mesma escala social de\n`tolbana_12_o_raid_contra_illfang`, mas com uma variável nova: ninguém sabe\nainda, coletivamente, como o andar 2 abre pro andar 3. O golpe final aqui\ncarrega o mesmo peso dramático que o Last Attack Bonus teve em Illfang (ver\n`docs/misterio_andar2.md`).\n\n## Complicações úteis\n\n- A poeira caindo do teto reduz visibilidade durante golpes grandes.\n- Um grupo de apoio mal posicionado é pego pela investida em linha.\n- A abertura do martelo cravado dura só um turno — perder a janela custa\n  caro.\n- Na Fase 3, a imprevisibilidade da investida acerta quem menos esperava.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Chifre do Rei Touro | Épico | 1 | 100% (Last Attack) | Ferreiro (arma de assinatura) |\n| Fragmento de Martelo | Raro | 1-2 | 60% | Ferreiro, Joalheiro |\n| Couro de Pedra Rachada | Incomum | 2-3 | 80% | Costureiro |\n| Col | — | 3000-4500 | 100% | — |\n\n## Lore\n\nBaran governava o planalto do andar 2 muito antes de qualquer jogador\nchegar — nas palavras dos moradores mais antigos de Urbus (o que quer que\n\"antigo\" signifique pra uma cidade que só existe há semanas), ele \"nasceu\njunto com a seca\", guardião e causa do problema de água ao mesmo tempo.\n\n*Ele não protege o andar 3. Ele só ainda não decidiu deixar ninguém passar.*\n\n## Notas para o mestre\n\n- **Onde entra:** câmara final do Labirinto do Andar 2 (layout ainda a\n  desenvolver).\n- **Como usar em transmissão:** a poeira caindo do teto a cada golpe\n  grande — mesmo recurso visual de \"o mundo reage à luta\", já usado com\n  Illfang.\n- **Erro comum do grupo:** entrar na Fase 1 sem ninguém de arma de Reflexo\n  no grupo — planeje isso na cadeia de preparação de raid do andar 2\n  (equivalente a `tolbana_09_abastecendo_o_grupo`).\n- **Como a cena encerra sem HP:** não há saída sem combate — é chefe de\n  andar. A única \"saída\" é decidir quem lidera a formação e quando recuar\n  uma fase mal preparada (Preparação de Raid, `docs/regras_nucleares_campanha.md`)."
  },
  {
   "id": "centopeia_do_aqueduto",
@@ -545,10 +720,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "segmento central, exposto quando ela se ergue pra atacar",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** ela evita fogo ativamente — mesmo uma tocha",
+   "Atributo — Reflexo:** ela depende da emboscada no espaço apertado, e",
    "O segmento central fica exposto quando ela se ergue pra atacar — ponto de",
    "Fora da própria galeria (arrastada ou empurrada pra fora), fica",
    "Não persegue além de um curto raio da fenda de origem."
@@ -558,7 +732,7 @@ var MONSTROS = [
    "escuridão"
   ],
   "vulnerabilidades": [],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Longa, segmentada, casca escura e brilhante de umidade constante — mais larga que uma perna humana em alguns pontos do corpo.",
@@ -591,7 +765,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nGalerias internas e canais de manutenção do Aqueduto Principal — úmidas,\nescuras, quase nunca visitadas por moradores comuns de Urbus.\n\n**Comportamento:** ataca de emboscada, saindo de fendas estreitas na pedra\nmolhada. Não persegue longe da própria galeria.\n\n## Aparência\n\nLonga, segmentada, casca escura e brilhante de umidade constante — mais\nlarga que uma perna humana em alguns pontos do corpo.\n\n## Leia em voz alta\n\n> A água pinga em ritmo constante, e por isso ninguém repara no momento\n> exato em que o ritmo muda — um pingo a mais, fora de compasso, e a fenda\n> na pedra já não está mais vazia.\n\n## Sinal antes do ataque\n\nO gotejamento muda de ritmo, e um cheiro leve de mofo fica mais forte\nsegundos antes dela sair da fenda.\n\n## Ataques\n\n- **Mordida em pinça** — dano moderado, pode agarrar o alvo por um turno.\n- **Investida em corredor estreito** — usa a galeria apertada a favor,\n  dificultando esquiva em espaço curto.\n\n## Fraquezas\n\n- **Elemento — Fogo:** ela evita fogo ativamente — mesmo uma tocha\n  acesa perto da fenda a mantém recuada.\n- O segmento central fica exposto quando ela se ergue pra atacar — ponto de\n  golpe mais eficaz que a cabeça.\n- Fora da própria galeria (arrastada ou empurrada pra fora), fica\n  visivelmente mais lenta e desorientada.\n- Não persegue além de um curto raio da fenda de origem.\n\n## O que torna este encontro memorável\n\nPrimeiro combate em espaço apertado do andar 2 — obriga o grupo a pensar em\nformatura e ordem de ataque de um jeito que o campo aberto das Colinas\nSecas não exige.\n\n## Complicações úteis\n\n- O espaço apertado impede recuo organizado.\n- A água no chão deixa piso escorregadio durante o combate.\n- Ferida mas não morta, ela recua pra uma fenda mais funda, fora de\n  alcance.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Casca Segmentada | Comum | 1-2 | 60% | Ferreiro, Costureiro |\n| Glândula Aquática | Incomum | 1 | 25% | Alquimista |\n| Col | — | 70-110 | 100% | — |\n\n## Lore\n\nA Engenheira dos Aquedutos de Urbus (`npcs/engenheira_dos_aquedutos.md`)\ntrata a presença delas como sinal de manutenção necessária, não perigo —\nmas nunca entra nas galerias sem escolta.\n\n*Ela não guarda a água. Só mora perto o bastante pra parecer que guarda.*\n\n## Notas para o mestre\n\n- **Onde entra:** galerias do Aqueduto Principal, andar 2.\n- **Como usar em transmissão:** a mudança sutil no ritmo do gotejamento.\n- **Erro comum do grupo:** tentar lutar em linha reta num corredor estreito\n  sem pensar em quem fica exposto primeiro.\n- **Como a cena encerra sem HP:** afastar a criatura da própria fenda com\n  fogo ativo já basta pra encerrar o encontro sem golpe final."
+  "corpo": "## Habitat\n\nGalerias internas e canais de manutenção do Aqueduto Principal — úmidas,\nescuras, quase nunca visitadas por moradores comuns de Urbus.\n\n**Comportamento:** ataca de emboscada, saindo de fendas estreitas na pedra\nmolhada. Não persegue longe da própria galeria.\n\n## Aparência\n\nLonga, segmentada, casca escura e brilhante de umidade constante — mais\nlarga que uma perna humana em alguns pontos do corpo.\n\n## Leia em voz alta\n\n> A água pinga em ritmo constante, e por isso ninguém repara no momento\n> exato em que o ritmo muda — um pingo a mais, fora de compasso, e a fenda\n> na pedra já não está mais vazia.\n\n## Sinal antes do ataque\n\nO gotejamento muda de ritmo, e um cheiro leve de mofo fica mais forte\nsegundos antes dela sair da fenda.\n\n## Ataques\n\n- **Mordida em pinça** — dano moderado, pode agarrar o alvo por um turno.\n- **Investida em corredor estreito** — usa a galeria apertada a favor,\n  dificultando esquiva em espaço curto.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** ela depende da emboscada no espaço apertado, e\n  arma de Reflexo bate no intervalo em que ela se ergue pra atacar. Em 10+\n  ela perde a emboscada pelo resto da cena e passa a lutar recuada, sem\n  sair da beira da fenda.\n- O segmento central fica exposto quando ela se ergue pra atacar — ponto de\n  golpe mais eficaz que a cabeça.\n- Fora da própria galeria (arrastada ou empurrada pra fora), fica\n  visivelmente mais lenta e desorientada.\n- Não persegue além de um curto raio da fenda de origem.\n\n## O que torna este encontro memorável\n\nPrimeiro combate em espaço apertado do andar 2 — obriga o grupo a pensar em\nformatura e ordem de ataque de um jeito que o campo aberto das Colinas\nSecas não exige.\n\n## Complicações úteis\n\n- O espaço apertado impede recuo organizado.\n- A água no chão deixa piso escorregadio durante o combate.\n- Ferida mas não morta, ela recua pra uma fenda mais funda, fora de\n  alcance.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Casca Segmentada | Comum | 1-2 | 60% | Ferreiro, Costureiro |\n| Glândula Aquática | Incomum | 1 | 25% | Alquimista |\n| Col | — | 70-110 | 100% | — |\n\n## Lore\n\nA Engenheira dos Aquedutos de Urbus (`npcs/engenheira_dos_aquedutos.md`)\ntrata a presença delas como sinal de manutenção necessária, não perigo —\nmas nunca entra nas galerias sem escolta.\n\n*Ela não guarda a água. Só mora perto o bastante pra parecer que guarda.*\n\n## Notas para o mestre\n\n- **Onde entra:** galerias do Aqueduto Principal, andar 2.\n- **Como usar em transmissão:** a mudança sutil no ritmo do gotejamento.\n- **Erro comum do grupo:** tentar lutar em linha reta num corredor estreito\n  sem pensar em quem fica exposto primeiro.\n- **Como a cena encerra sem HP:** afastar a criatura da própria fenda já\n  basta — ela não persegue longe de casa, e o encontro encerra sem golpe\n  final."
  },
  {
   "id": "coruja_das_sombras",
@@ -614,10 +788,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe em pleno voo, antes do ataque",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Gelo:** ela voa em silêncio e o frio tira isso. Em 10+ ela abandona o grupo pelo resto da cena e para de seguir.",
+   "Atributo — Conhecimento:** ela depende de não ser entendida — arma de Conhecimento, na mão de quem percebeu o padrão de galho em galho, quebra o encanto. Em 10+ ela abandona o grupo pelo resto da cena e para de seguir.",
    "Frágil: um golpe que acerte resolve.",
    "Ela ataca em pleno voo e só de cima; sob cobertura, não desce.",
    "Não enfrenta quem está acompanhado. Fechar o grupo cancela o encontro."
@@ -626,7 +799,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "ruído súbito"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Coruja de porte grande, penas num cinza quase preto que a torna quase invisível contra os troncos da Floresta de Horunka à noite. Olhos amarelos brilhantes são o único sinal claro de sua presença.",
@@ -659,7 +832,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCopa fechada da Floresta de Horunka e do Bosque de Ashwen. Caça no crepúsculo e some completamente durante o dia.\n\n**Comportamento:** passiva e curiosa. Segue grupos por longos trechos sem atacar, de galho em galho, e só desce se alguém se separar dos outros. Não é perigosa — é um aviso de que alguém se separou.\n\n## Aparência\n\nCoruja de porte grande, penas num cinza quase preto que a torna quase\ninvisível contra os troncos da Floresta de Horunka à noite. Olhos\namarelos brilhantes são o único sinal claro de sua presença.\n\n## Leia em voz alta\n\n> Ela está no galho há um tempo que vocês não conseguem determinar. Não pia, não se mexe, e os olhos acompanham quem anda mais atrás do grupo. Quando vocês olham de volta, ela já está num galho mais próximo.\n\n## Sinal antes do ataque\n\nO silêncio do voo. Coruja não faz barulho ao decolar, e essa não faz mesmo — o aviso é a sombra passando pelo chão à sua frente.\n\n## Ataques\n\n- Mergulho silencioso\n- Garras em passagem rasante\n\n## Fraquezas\n\n- **Elemento — Gelo:** ela voa em silêncio e o frio tira isso. Em 10+ ela abandona o grupo pelo resto da cena e para de seguir.\n- Frágil: um golpe que acerte resolve.\n- Ela ataca em pleno voo e só de cima; sob cobertura, não desce.\n- Não enfrenta quem está acompanhado. Fechar o grupo cancela o encontro.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena Escura | Comum | 1-2 | 65% | Costureiro, Alquimista |\n| Olho Noturno | Incomum | 1 | 20% | Alquimista, Médico |\n| Col | — | 40-70 | 100% | — |\n\n## Lore\n\nOs caçadores de Horunka gostam delas e não deixam ninguém matá-las por esporte. A explicação que dão é prática: onde há coruja, não há Little Nepenthes. A explicação que não dão, e que Torv conta depois de três canecas, é que corujas seguem quem vai morrer, e que ele já viu isso acontecer três vezes.\n\n*Ela não caça vocês. Ela escolhe um.*\n\n## Notas para o mestre\n\nNão é domável — solitária e evasiva demais pra formar vínculo real,\nmesmo sendo dócil. Boa criatura de ambientação noturna na Floresta de\nHorunka, mais atmosfera que ameaça."
+  "corpo": "## Habitat\n\nCopa fechada da Floresta de Horunka e do Bosque de Ashwen. Caça no crepúsculo e some completamente durante o dia.\n\n**Comportamento:** passiva e curiosa. Segue grupos por longos trechos sem atacar, de galho em galho, e só desce se alguém se separar dos outros. Não é perigosa — é um aviso de que alguém se separou.\n\n## Aparência\n\nCoruja de porte grande, penas num cinza quase preto que a torna quase\ninvisível contra os troncos da Floresta de Horunka à noite. Olhos\namarelos brilhantes são o único sinal claro de sua presença.\n\n## Leia em voz alta\n\n> Ela está no galho há um tempo que vocês não conseguem determinar. Não pia, não se mexe, e os olhos acompanham quem anda mais atrás do grupo. Quando vocês olham de volta, ela já está num galho mais próximo.\n\n## Sinal antes do ataque\n\nO silêncio do voo. Coruja não faz barulho ao decolar, e essa não faz mesmo — o aviso é a sombra passando pelo chão à sua frente.\n\n## Ataques\n\n- Mergulho silencioso\n- Garras em passagem rasante\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** ela depende de não ser entendida — arma de Conhecimento, na mão de quem percebeu o padrão de galho em galho, quebra o encanto. Em 10+ ela abandona o grupo pelo resto da cena e para de seguir.\n- Frágil: um golpe que acerte resolve.\n- Ela ataca em pleno voo e só de cima; sob cobertura, não desce.\n- Não enfrenta quem está acompanhado. Fechar o grupo cancela o encontro.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena Escura | Comum | 1-2 | 65% | Costureiro, Alquimista |\n| Olho Noturno | Incomum | 1 | 20% | Alquimista, Médico |\n| Col | — | 40-70 | 100% | — |\n\n## Lore\n\nOs caçadores de Horunka gostam delas e não deixam ninguém matá-las por esporte. A explicação que dão é prática: onde há coruja, não há Little Nepenthes. A explicação que não dão, e que Torv conta depois de três canecas, é que corujas seguem quem vai morrer, e que ele já viu isso acontecer três vezes.\n\n*Ela não caça vocês. Ela escolhe um.*\n\n## Notas para o mestre\n\nNão é domável — solitária e evasiva demais pra formar vínculo real,\nmesmo sendo dócil. Boa criatura de ambientação noturna na Floresta de\nHorunka, mais atmosfera que ameaça."
  },
  {
   "id": "corvo_das_ruinas",
@@ -682,19 +855,18 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe em pouso",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Fogo:** fumaça dispersa o bando. Em 10+ eles param de anunciar a posição do grupo pelo resto da cena.",
+   "Atributo — Conhecimento:** o bando só é perigoso porque informa — arma de Conhecimento, de quem entendeu a cadeia de grasnados, corta a corrente. Em 10+ eles param de anunciar a posição do grupo pelo resto da cena.",
    "Frágil no pouso: no ar é impossível, parado é trivial.",
    "Bugiganga brilhante desvia a atenção de todo o bando.",
    "Sem os outros, um corvo sozinho não se aproxima."
   ],
   "resistencias": [],
   "vulnerabilidades": [],
-  "domavel": "sim",
-  "domaSucessos": "2",
-  "domaRequisito": "Item pequeno e brilhante como oferenda (qualquer bugiganga Comum)",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Corvo grande, penas negras com reflexo azulado, comum entre as ruínas espalhadas do Campo de Ruyn. Costuma ser visto pousado em cima da Sentinela Esquecida, sem medo dela.",
   "habitat": "Campo de Ruyn e as fileiras da Necrópole de Voss. Pousa em pedra gravada e em lápide, sempre nas mesmas, e nunca nas outras.",
   "comportamento": "oportunista e barulhento. Não ataca primeiro: acompanha, grasna e chama os outros. Um corvo é curiosidade; oito corvos são uma informação que alguém no campo já recebeu.",
@@ -725,7 +897,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCampo de Ruyn e as fileiras da Necrópole de Voss. Pousa em pedra gravada e em lápide, sempre nas mesmas, e nunca nas outras.\n\n**Comportamento:** oportunista e barulhento. Não ataca primeiro: acompanha, grasna e chama os outros. Um corvo é curiosidade; oito corvos são uma informação que alguém no campo já recebeu.\n\n## Aparência\n\nCorvo grande, penas negras com reflexo azulado, comum entre as ruínas\nespalhadas do Campo de Ruyn. Costuma ser visto pousado em cima da\nSentinela Esquecida, sem medo dela.\n\n## Leia em voz alta\n\n> Ele está numa lápide, de lado, olhando vocês com um olho só. Quando vocês passam, ele grasna uma vez — e três lápides adiante, outro responde. E depois outro. O caminho inteiro até o portão sabe que vocês estão vindo.\n\n## Sinal antes do ataque\n\nO grasnado em cadeia. Se ele repete duas vezes rápido, alguma coisa maior está no campo.\n\n## Ataques\n\n- Bicada de rapina (só se atacado primeiro)\n\n## Fraquezas\n\n- **Elemento — Fogo:** fumaça dispersa o bando. Em 10+ eles param de anunciar a posição do grupo pelo resto da cena.\n- Frágil no pouso: no ar é impossível, parado é trivial.\n- Bugiganga brilhante desvia a atenção de todo o bando.\n- Sem os outros, um corvo sozinho não se aproxima.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena Azulada | Comum | 1-3 | 70% | Costureiro, Artesão |\n| Bugiganga Roubada | Incomum | 1 | 25% | Comerciante — item de outra pessoa |\n| Col | — | 25-50 | 100% | — |\n\n## Lore\n\nA Bugiganga Roubada é o problema. Toda vez que alguém abate um corvo do Campo de Ruyn e acha um anel, uma fivela, um pingente, a pergunta é a mesma e ninguém gosta dela: de quem era. Os Corretores de Tolbana mantêm uma lista de objetos recuperados assim, e a lista é comprida, e quase todos os nomes nela ainda estão vivos.\n\n*Ele não rouba dos mortos. Ele rouba antes.*\n\n## Notas para o mestre\n\nDomável, fácil — vira mensageiro/batedor de curto alcance. Boa\noportunidade de comédia: o corvo pode \"roubar\" um item brilhante de um\njogador antes de ser domado, criando um gancho leve de perseguição."
+  "corpo": "## Habitat\n\nCampo de Ruyn e as fileiras da Necrópole de Voss. Pousa em pedra gravada e em lápide, sempre nas mesmas, e nunca nas outras.\n\n**Comportamento:** oportunista e barulhento. Não ataca primeiro: acompanha, grasna e chama os outros. Um corvo é curiosidade; oito corvos são uma informação que alguém no campo já recebeu.\n\n## Aparência\n\nCorvo grande, penas negras com reflexo azulado, comum entre as ruínas\nespalhadas do Campo de Ruyn. Costuma ser visto pousado em cima da\nSentinela Esquecida, sem medo dela.\n\n## Leia em voz alta\n\n> Ele está numa lápide, de lado, olhando vocês com um olho só. Quando vocês passam, ele grasna uma vez — e três lápides adiante, outro responde. E depois outro. O caminho inteiro até o portão sabe que vocês estão vindo.\n\n## Sinal antes do ataque\n\nO grasnado em cadeia. Se ele repete duas vezes rápido, alguma coisa maior está no campo.\n\n## Ataques\n\n- Bicada de rapina (só se atacado primeiro)\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** o bando só é perigoso porque informa — arma de Conhecimento, de quem entendeu a cadeia de grasnados, corta a corrente. Em 10+ eles param de anunciar a posição do grupo pelo resto da cena.\n- Frágil no pouso: no ar é impossível, parado é trivial.\n- Bugiganga brilhante desvia a atenção de todo o bando.\n- Sem os outros, um corvo sozinho não se aproxima.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pena Azulada | Comum | 1-3 | 70% | Costureiro, Artesão |\n| Bugiganga Roubada | Incomum | 1 | 25% | Comerciante — item de outra pessoa |\n| Col | — | 25-50 | 100% | — |\n\n## Lore\n\nA Bugiganga Roubada é o problema. Toda vez que alguém abate um corvo do Campo de Ruyn e acha um anel, uma fivela, um pingente, a pergunta é a mesma e ninguém gosta dela: de quem era. Os Corretores de Tolbana mantêm uma lista de objetos recuperados assim, e a lista é comprida, e quase todos os nomes nela ainda estão vivos.\n\n*Ele não rouba dos mortos. Ele rouba antes.*\n\n## Notas para o mestre\n\nDomável, fácil — vira mensageiro/batedor de curto alcance. Boa\noportunidade de comédia: o corvo pode \"roubar\" um item brilhante de um\njogador antes de ser domado, criando um gancho leve de perseguição."
  },
  {
   "id": "ent_anciao",
@@ -748,11 +920,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "a fenda de casca no tronco, aberta quando ele se inclina para golpear",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Fogo:** a hera seca pega primeiro. Em 10+ ele solta as raízes",
-   "Resiste a Veneno** — não respira, e o Alquimista precisa saber disso antes.",
+   "Atributo — Conhecimento:** ele é velho demais pra improvisar — arma de Conhecimento, de quem leu o ritmo lento dos golpes, encontra a fenda. Em 10+ ele solta as raízes",
    "A fenda de casca no tronco abre quando ele se inclina para golpear.",
    "Lento: quem se move de verdade nunca é acertado duas vezes seguidas."
   ],
@@ -765,7 +935,7 @@ var MONSTROS = [
    "fogo",
    "corte profundo"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Cinco metros de tronco andando, casca cinza rachada, musgo e hera pendendo dos braços como mangas rasgadas. O rosto está na casca e só é rosto quando ele olha: dois olhos verdes fundos, e nada mais se mexe.",
@@ -819,7 +989,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nAs áreas mais profundas do Bosque de Ashwen e da Floresta de Horunka, sempre\nperto de árvores antigas. Onde há um Ent, o mato ao redor cresce diferente —\nmais limpo, mais alto, mais organizado do que floresta nenhuma tem motivo de\nser.\n\n**Comportamento:** protetor e paciente. **Não ataca quem não corta.** Um grupo\nque atravessa sem derrubar nada passa a vida inteira sem saber que ele estava\nali. Um Lenhador com machado na mão é declaração de guerra.\n\n## Aparência\n\nCinco metros de tronco andando, casca cinza rachada, musgo e hera pendendo dos\nbraços como mangas rasgadas. O rosto está na casca e só é rosto quando ele\nolha: dois olhos verdes fundos, e nada mais se mexe.\n\n## Leia em voz alta\n\n> A árvore que vocês passaram há dez minutos está mais perto agora. Não é a\n> mesma árvore — é que vocês nunca contaram quantas eram. Quando ela abre os\n> olhos, vocês entendem que estiveram andando por dentro de alguma coisa, e\n> não em cima dela.\n\n## Sinal antes do ataque\n\nOs pássaros somem primeiro, e o silêncio dura mais do que devia. Depois, um\nestalo de madeira grossa vindo de onde não há vento — ele está trocando o peso\nde pé.\n\n## Ataques\n\n- **Braço em arco** — golpe lento e enorme, cobre metade da clareira.\n- **Raízes** — sobem do chão e prendem os pés; não ferem, imobilizam.\n- **Fechar o bosque** — as árvores em volta se aproximam. A saída desaparece\n  e o grupo luta no espaço que ele escolher.\n\n## Fraquezas\n\n- **Elemento — Fogo:** a hera seca pega primeiro. Em 10+ ele solta as raízes\n  para se proteger e perde a capacidade de imobilizar pelo resto da cena.\n- **Resiste a Veneno** — não respira, e o Alquimista precisa saber disso antes.\n- A fenda de casca no tronco abre quando ele se inclina para golpear.\n- Lento: quem se move de verdade nunca é acertado duas vezes seguidas.\n\n## O que torna este encontro memorável\n\nÉ o único monstro do andar que a mesa pode **evitar para sempre por escolha\nmoral**. Ele avisa, ele espera, ele só reage. Grupos que lutam com ele lutam\nporque quiseram alguma coisa, e a floresta lembra: depois de um Ent morto, os\npontos de coleta de madeira de Horunka rendem menos por várias sessões.\n\n## Complicações úteis\n\n- Vencem, e o Lenhador do grupo perde acesso à Árvore Marcada.\n- O fogo funciona e o bosque inteiro começa a queimar.\n- Ele não morre: afunda as raízes e para de se mexer. Voltará.\n- Alguém corta a hera e descobre que há coisas presas nela há muito tempo.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Casca Resistente | Incomum | 2-3 | 60% | Ferreiro, Artesão |\n| Essência Natural | Incomum | 1-2 | 45% | Alquimista, Médico |\n| Madeira Ancestral | Raro | 1 | 20% | Lenhador, Artesão, item Único |\n| Folha de Ent | Raro | 1-2 | 15% | Médico, Alquimista |\n| Cristal de Vida | Raro | 1 | 10% | Joalheiro, Médico |\n| Col | — | 400-650 | 100% | — |\n\n## Lore\n\nOs Ents Anciões existem desde antes da construção de Aincrad — ou pelo menos é\no que dizem, e ninguém consegue provar o contrário. Guardam o equilíbrio do\nque cresce e não toleram a corrupção do próprio lar. São raros de ver e\nimpossíveis de ignorar quando despertam. Wilbrand, na Torre de Aldric, tem uma\ntese sobre eles que ele mesmo classifica como a mais fraca das suas.\n\n*Respeite a floresta, ou enfrente a fúria dela na forma mais pura.*\n\n## Notas para o mestre\n\n- **Onde entra:** fundo do Bosque de Ashwen, trechos profundos da Floresta de\n  Horunka e as bordas do Jardim de Fenwyth.\n- **Como usar em transmissão:** a revelação de que ele já estava em cena. Se\n  puder, mencione \"mais uma árvore\" duas vezes antes, sem ênfase nenhuma.\n- **Erro comum do grupo:** tratar como monstro de emboscada. Ele nunca embosca\n  — foi o grupo que entrou e cortou algo.\n- **Como a cena encerra sem HP:** devolver. Plantar a muda, largar a madeira,\n  sair andando. Ele para no meio do golpe, e isso é mais assustador do que se\n  ele continuasse."
+  "corpo": "## Habitat\n\nAs áreas mais profundas do Bosque de Ashwen e da Floresta de Horunka, sempre\nperto de árvores antigas. Onde há um Ent, o mato ao redor cresce diferente —\nmais limpo, mais alto, mais organizado do que floresta nenhuma tem motivo de\nser.\n\n**Comportamento:** protetor e paciente. **Não ataca quem não corta.** Um grupo\nque atravessa sem derrubar nada passa a vida inteira sem saber que ele estava\nali. Um Lenhador com machado na mão é declaração de guerra.\n\n## Aparência\n\nCinco metros de tronco andando, casca cinza rachada, musgo e hera pendendo dos\nbraços como mangas rasgadas. O rosto está na casca e só é rosto quando ele\nolha: dois olhos verdes fundos, e nada mais se mexe.\n\n## Leia em voz alta\n\n> A árvore que vocês passaram há dez minutos está mais perto agora. Não é a\n> mesma árvore — é que vocês nunca contaram quantas eram. Quando ela abre os\n> olhos, vocês entendem que estiveram andando por dentro de alguma coisa, e\n> não em cima dela.\n\n## Sinal antes do ataque\n\nOs pássaros somem primeiro, e o silêncio dura mais do que devia. Depois, um\nestalo de madeira grossa vindo de onde não há vento — ele está trocando o peso\nde pé.\n\n## Ataques\n\n- **Braço em arco** — golpe lento e enorme, cobre metade da clareira.\n- **Raízes** — sobem do chão e prendem os pés; não ferem, imobilizam.\n- **Fechar o bosque** — as árvores em volta se aproximam. A saída desaparece\n  e o grupo luta no espaço que ele escolher.\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** ele é velho demais pra improvisar — arma de Conhecimento, de quem leu o ritmo lento dos golpes, encontra a fenda. Em 10+ ele solta as raízes\n  para se proteger e perde a capacidade de imobilizar pelo resto da cena.\n- A fenda de casca no tronco abre quando ele se inclina para golpear.\n- Lento: quem se move de verdade nunca é acertado duas vezes seguidas.\n\n## O que torna este encontro memorável\n\nÉ o único monstro do andar que a mesa pode **evitar para sempre por escolha\nmoral**. Ele avisa, ele espera, ele só reage. Grupos que lutam com ele lutam\nporque quiseram alguma coisa, e a floresta lembra: depois de um Ent morto, os\npontos de coleta de madeira de Horunka rendem menos por várias sessões.\n\n## Complicações úteis\n\n- Vencem, e o Lenhador do grupo perde acesso à Árvore Marcada.\n- O grupo ateia fogo no bosque pra encurtar a luta — e o bosque inteiro\n  começa a queimar.\n- Ele não morre: afunda as raízes e para de se mexer. Voltará.\n- Alguém corta a hera e descobre que há coisas presas nela há muito tempo.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Casca Resistente | Incomum | 2-3 | 60% | Ferreiro, Artesão |\n| Essência Natural | Incomum | 1-2 | 45% | Alquimista, Médico |\n| Madeira Ancestral | Raro | 1 | 20% | Lenhador, Artesão, item Único |\n| Folha de Ent | Raro | 1-2 | 15% | Médico, Alquimista |\n| Cristal de Vida | Raro | 1 | 10% | Joalheiro, Médico |\n| Col | — | 400-650 | 100% | — |\n\n## Lore\n\nOs Ents Anciões existem desde antes da construção de Aincrad — ou pelo menos é\no que dizem, e ninguém consegue provar o contrário. Guardam o equilíbrio do\nque cresce e não toleram a corrupção do próprio lar. São raros de ver e\nimpossíveis de ignorar quando despertam. Wilbrand, na Torre de Aldric, tem uma\ntese sobre eles que ele mesmo classifica como a mais fraca das suas.\n\n*Respeite a floresta, ou enfrente a fúria dela na forma mais pura.*\n\n## Notas para o mestre\n\n- **Onde entra:** fundo do Bosque de Ashwen, trechos profundos da Floresta de\n  Horunka e as bordas do Jardim de Fenwyth.\n- **Como usar em transmissão:** a revelação de que ele já estava em cena. Se\n  puder, mencione \"mais uma árvore\" duas vezes antes, sem ênfase nenhuma.\n- **Erro comum do grupo:** tratar como monstro de emboscada. Ele nunca embosca\n  — foi o grupo que entrou e cortou algo.\n- **Como a cena encerra sem HP:** devolver. Plantar a muda, largar a madeira,\n  sair andando. Ele para no meio do golpe, e isso é mais assustador do que se\n  ele continuasse."
  },
  {
   "id": "enxame_de_abelhas_douradas",
@@ -840,10 +1010,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "disperso ao primeiro sinal de fumaça, some do golpe individual",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** fumaça ou fogo controlado dispersa o enxame inteiro",
+   "Atributo — Reflexo:** a nuvem cega-olhos pune ação precisa — arma de",
    "Golpes individuais dispersam abelhas isoladas, mas não afetam o enxame",
    "Longe da colmeia (mais de alguns metros), o enxame perde o ímpeto de",
    "Movimento brusco perto da colmeia (correr, golpear sem necessidade) é o"
@@ -852,7 +1021,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "fumaça"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Centenas de pequenos corpos dourados, quase indistinguíveis um do outro à distância — de perto, cada abelha é maior que o normal, com um brilho metálico nas asas que deixa um rastro de poeira dourada no ar por onde passam. A colmeia em si é maior que um jogador adulto, pendurada numa árvore alta o bastante pra exigir…",
@@ -892,7 +1061,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nA colmeia funda perto do Bosque de Coleta, na Floresta de Horunka. Não se\nespalha — o enxame defende um único ponto fixo, a colmeia em si, e raramente\npersegue quem se afasta o suficiente.\n\n**Comportamento:** territorial, não predatório. Não caça: reage a\nproximidade da colmeia e a movimento brusco perto dela. Um enxame calmo se\ntorna agressivo em segundos se a colheita for feita sem cuidado.\n\n## Aparência\n\nCentenas de pequenos corpos dourados, quase indistinguíveis um do outro à\ndistância — de perto, cada abelha é maior que o normal, com um brilho\nmetálico nas asas que deixa um rastro de poeira dourada no ar por onde\npassam. A colmeia em si é maior que um jogador adulto, pendurada numa\nárvore alta o bastante pra exigir escalada.\n\n## Leia em voz alta\n\n> O zumbido chega antes da colmeia aparecer — grave, constante, uníssono\n> demais pra ser natural. Quando a árvore certa surge entre os troncos, a\n> colmeia pulsa de leve, como se respirasse, e uma nuvem dourada se ergue\n> em resposta ao primeiro passo em falso.\n\n## Sinal antes do ataque\n\nO zumbido sobe de tom e a nuvem dourada se adensa ao redor da colmeia —\nsinal claro de que o enxame percebeu presença próxima e está decidindo se\nreage.\n\n## Ataques\n\n- **Ferroadas em enxame** — dano baixo por ferroada individual, mas conta\n  em volume: cada rodada sem controle da situação aumenta o número de\n  abelhas atacando ao mesmo tempo.\n- **Nuvem cega-olhos** — não causa dano; impõe complicação de visão e\n  obriga teste extra pra qualquer ação fina (escalada, coleta, mira) até o\n  grupo se afastar ou dispersar o enxame.\n\n## Fraquezas\n\n- **Elemento — Fogo:** fumaça ou fogo controlado dispersa o enxame inteiro\n  em 10+ (sem matar a colônia — ela volta a se formar em dias). Matar a\n  colônia com fogo direto rende mais mel de uma vez, mas destrói o recurso\n  permanentemente.\n- Golpes individuais dispersam abelhas isoladas, mas não afetam o enxame\n  como um todo — é preciso tratar como grupo, não como inimigos únicos.\n- Longe da colmeia (mais de alguns metros), o enxame perde o ímpeto de\n  perseguição rapidamente.\n- Movimento brusco perto da colmeia (correr, golpear sem necessidade) é o\n  gatilho mais comum de agressão — coleta cuidadosa raramente provoca reação.\n\n## O que torna este encontro memorável\n\nA decisão real não é \"vencer o enxame\" — é decidir entre colheita cuidadosa\n(menos mel agora, colmeia intacta pro futuro) ou colheita agressiva (mais\nmel, recurso destruído). Bom pra ensinar que nem todo \"combate\" em Aincrad\ndeveria terminar em morte do alvo.\n\n## Complicações úteis\n\n- O grupo dispersa o enxame, mas ele se reagrupa mais irritado se a coleta\n  continuar sem pausa.\n- Outro grupo de caçadores, também de olho no mel, complica a colheita\n  (ver `cenas/cronicas_de_aincrad_ep01_25.md`, EP.08).\n- A nuvem cega-olhos esconde um obstáculo de terreno (raiz, buraco) que\n  também vira problema.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Mel Comum | Comum | 1-2 | 70% | Cozinheiro |\n| Mel Dourado | Incomum | 1 | 30% | Cozinheiro (receita de Halden), Alquimista |\n| Cera Dourada | Comum | 1 | 40% | Costureiro, Joalheiro |\n| Col | — | 40-90 | 100% | — |\n\n## Lore\n\nO nome é apelido de caçador, não classificação oficial — ninguém sabe dizer\nse as abelhas sempre foram douradas ou se isso é só reflexo do próprio mel\nraro que produzem. O que se sabe é que a colônia sobrevive intacta há mais\ntempo que a maioria dos recursos do andar 1, exatamente porque poucos\ncaçadores têm paciência pra colher sem destruir.\n\n*Quem colhe com pressa leva menos mel — e a colmeia lembra disso.*\n\n## Notas para o mestre\n\n- **Onde entra:** `floresta_horunka_madeira` (Bosque de Coleta) em\n  `dados_mapa.js`.\n- **Como usar em transmissão:** o zumbido crescente e a nuvem dourada se\n  adensando — bom efeito sonoro/visual antes de qualquer dano acontecer.\n- **Erro comum do grupo:** tratar o enxame como \"um monstro só\" e atacar a\n  colmeia direto — funciona, mas acaba com o recurso de vez.\n- **Como a cena encerra sem HP:** dispersar com fumaça/fogo controlado e\n  coletar o mel que já caiu no processo, sem necessidade de \"vencer\" a\n  colônia inteira."
+  "corpo": "## Habitat\n\nA colmeia funda perto do Bosque de Coleta, na Floresta de Horunka. Não se\nespalha — o enxame defende um único ponto fixo, a colmeia em si, e raramente\npersegue quem se afasta o suficiente.\n\n**Comportamento:** territorial, não predatório. Não caça: reage a\nproximidade da colmeia e a movimento brusco perto dela. Um enxame calmo se\ntorna agressivo em segundos se a colheita for feita sem cuidado.\n\n## Aparência\n\nCentenas de pequenos corpos dourados, quase indistinguíveis um do outro à\ndistância — de perto, cada abelha é maior que o normal, com um brilho\nmetálico nas asas que deixa um rastro de poeira dourada no ar por onde\npassam. A colmeia em si é maior que um jogador adulto, pendurada numa\nárvore alta o bastante pra exigir escalada.\n\n## Leia em voz alta\n\n> O zumbido chega antes da colmeia aparecer — grave, constante, uníssono\n> demais pra ser natural. Quando a árvore certa surge entre os troncos, a\n> colmeia pulsa de leve, como se respirasse, e uma nuvem dourada se ergue\n> em resposta ao primeiro passo em falso.\n\n## Sinal antes do ataque\n\nO zumbido sobe de tom e a nuvem dourada se adensa ao redor da colmeia —\nsinal claro de que o enxame percebeu presença próxima e está decidindo se\nreage.\n\n## Ataques\n\n- **Ferroadas em enxame** — dano baixo por ferroada individual, mas conta\n  em volume: cada rodada sem controle da situação aumenta o número de\n  abelhas atacando ao mesmo tempo.\n- **Nuvem cega-olhos** — não causa dano; impõe complicação de visão e\n  obriga teste extra pra qualquer ação fina (escalada, coleta, mira) até o\n  grupo se afastar ou dispersar o enxame.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a nuvem cega-olhos pune ação precisa — arma de\n  Reflexo, golpeada em reação pura, dispersa a onda. Em 10+ o enxame\n  inteiro se dispersa pelo resto da cena (sem matar a colônia — ela volta\n  a se formar em dias).\n- Golpes individuais dispersam abelhas isoladas, mas não afetam o enxame\n  como um todo — é preciso tratar como grupo, não como inimigos únicos.\n- Longe da colmeia (mais de alguns metros), o enxame perde o ímpeto de\n  perseguição rapidamente.\n- Movimento brusco perto da colmeia (correr, golpear sem necessidade) é o\n  gatilho mais comum de agressão — coleta cuidadosa raramente provoca reação.\n\n## O que torna este encontro memorável\n\nA decisão real não é \"vencer o enxame\" — é decidir entre colheita cuidadosa\n(menos mel agora, colmeia intacta pro futuro) ou colheita agressiva (mais\nmel, recurso destruído). Bom pra ensinar que nem todo \"combate\" em Aincrad\ndeveria terminar em morte do alvo.\n\n## Complicações úteis\n\n- O grupo dispersa o enxame, mas ele se reagrupa mais irritado se a coleta\n  continuar sem pausa.\n- Outro grupo de caçadores, também de olho no mel, complica a colheita\n  (ver `cenas/cronicas_de_aincrad_ep01_25.md`, EP.08).\n- A nuvem cega-olhos esconde um obstáculo de terreno (raiz, buraco) que\n  também vira problema.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Mel Comum | Comum | 1-2 | 70% | Cozinheiro |\n| Mel Dourado | Incomum | 1 | 30% | Cozinheiro (receita de Halden), Alquimista |\n| Cera Dourada | Comum | 1 | 40% | Costureiro, Joalheiro |\n| Col | — | 40-90 | 100% | — |\n\n## Lore\n\nO nome é apelido de caçador, não classificação oficial — ninguém sabe dizer\nse as abelhas sempre foram douradas ou se isso é só reflexo do próprio mel\nraro que produzem. O que se sabe é que a colônia sobrevive intacta há mais\ntempo que a maioria dos recursos do andar 1, exatamente porque poucos\ncaçadores têm paciência pra colher sem destruir.\n\n*Quem colhe com pressa leva menos mel — e a colmeia lembra disso.*\n\n## Notas para o mestre\n\n- **Onde entra:** `floresta_horunka_madeira` (Bosque de Coleta) em\n  `dados_mapa.js`.\n- **Como usar em transmissão:** o zumbido crescente e a nuvem dourada se\n  adensando — bom efeito sonoro/visual antes de qualquer dano acontecer.\n- **Erro comum do grupo:** tratar o enxame como \"um monstro só\" e atacar a\n  colmeia direto — funciona, mas acaba com o recurso de vez.\n- **Como a cena encerra sem HP:** dispersar com fumaça e\n  coletar o mel que já caiu no processo, sem necessidade de \"vencer\" a\n  colônia inteira."
  },
  {
   "id": "enxame_do_rio",
@@ -915,11 +1084,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe em área",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** a descarga na água atinge o enxame todo. Em 10+ ele se dispersa pelo resto da cena e a travessia fica livre.",
-   "Resiste a Gelo** — a água já é fria.",
+   "Atributo — Reflexo:** o cerco e a mordida em massa punem quem é lento — arma de Reflexo, reagindo no instante em que a mancha vira, quebra o ritmo do cardume. Em 10+ ele se dispersa pelo resto da cena e a travessia fica livre.",
    "Ataque em área vale mais que precisão; golpe único não resolve nada.",
    "Fora da água ele não existe. Um passo para a margem encerra o encontro."
   ],
@@ -929,7 +1096,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "fogo"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Não é uma criatura só — é um cardume denso de peixes pequenos e translúcidos que se move e ataca como se fosse um único organismo, corpo coletivo prateado ondulando contra a correnteza do Rio Coluber.",
@@ -962,7 +1129,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nTrechos rasos e rápidos do Rio Coluber, sobretudo perto da Vila de Brenmoor, onde a água corre entre pedras.\n\n**Comportamento:** agressivo com o que entra na água e completamente inofensivo para quem fica na margem. Não sai do rio. Nunca.\n\n## Aparência\n\nNão é uma criatura só — é um cardume denso de peixes pequenos e\ntranslúcidos que se move e ataca como se fosse um único organismo, corpo\ncoletivo prateado ondulando contra a correnteza do Rio Coluber.\n\n## Leia em voz alta\n\n> A água rasa entre as pedras está mais escura do que devia num trecho de meio metro, e a mancha escura muda de forma. Quando o primeiro de vocês põe a bota na água, a mancha inteira vira na direção da bota.\n\n## Sinal antes do ataque\n\nA água para de refletir. O cardume subindo à superfície tira o brilho antes de qualquer coisa tocar em alguém.\n\n## Ataques\n\n- Mordidas em massa\n- Cerco (tenta isolar quem está na água)\n\n## Fraquezas\n\n- **Elemento — Trovão:** a descarga na água atinge o enxame todo. Em 10+ ele se dispersa pelo resto da cena e a travessia fica livre.\n- **Resiste a Gelo** — a água já é fria.\n- Ataque em área vale mais que precisão; golpe único não resolve nada.\n- Fora da água ele não existe. Um passo para a margem encerra o encontro.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escamas Miúdas | Comum | 3-5 | 70% | Cozinheiro, Alquimista |\n| Cardume Seco | Incomum | 1 | 30% | Cozinheiro, isca de Pescador |\n| Col | — | 60-110 | 100% | — |\n\n## Lore\n\nOs pescadores de Brenmoor convivem com o enxame há tanto tempo que desenvolveram um vocabulário para ele: rio limpo, rio escuro, rio virado. Ninguém de fora entende, e ninguém de dentro explica de graça. Um Pescador jogador que passe uma sessão inteira na vila aprende os três termos, e os três valem mais que qualquer mapa da correnteza.\n\n*O rio não é perigoso. Um trecho de meio metro dele é.*\n\n## Notas para o mestre\n\nNão é domável — é um cardume, não um indivíduo. Bom obstáculo pra\ntravessia do Rio Coluber sem precisar virar combate longo; o mestre pode\nresolver como um único teste de Reflexo/Corpo pra atravessar em vez de\ncombate completo."
+  "corpo": "## Habitat\n\nTrechos rasos e rápidos do Rio Coluber, sobretudo perto da Vila de Brenmoor, onde a água corre entre pedras.\n\n**Comportamento:** agressivo com o que entra na água e completamente inofensivo para quem fica na margem. Não sai do rio. Nunca.\n\n## Aparência\n\nNão é uma criatura só — é um cardume denso de peixes pequenos e\ntranslúcidos que se move e ataca como se fosse um único organismo, corpo\ncoletivo prateado ondulando contra a correnteza do Rio Coluber.\n\n## Leia em voz alta\n\n> A água rasa entre as pedras está mais escura do que devia num trecho de meio metro, e a mancha escura muda de forma. Quando o primeiro de vocês põe a bota na água, a mancha inteira vira na direção da bota.\n\n## Sinal antes do ataque\n\nA água para de refletir. O cardume subindo à superfície tira o brilho antes de qualquer coisa tocar em alguém.\n\n## Ataques\n\n- Mordidas em massa\n- Cerco (tenta isolar quem está na água)\n\n## Fraquezas\n\n- **Atributo — Reflexo:** o cerco e a mordida em massa punem quem é lento — arma de Reflexo, reagindo no instante em que a mancha vira, quebra o ritmo do cardume. Em 10+ ele se dispersa pelo resto da cena e a travessia fica livre.\n- Ataque em área vale mais que precisão; golpe único não resolve nada.\n- Fora da água ele não existe. Um passo para a margem encerra o encontro.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escamas Miúdas | Comum | 3-5 | 70% | Cozinheiro, Alquimista |\n| Cardume Seco | Incomum | 1 | 30% | Cozinheiro, isca de Pescador |\n| Col | — | 60-110 | 100% | — |\n\n## Lore\n\nOs pescadores de Brenmoor convivem com o enxame há tanto tempo que desenvolveram um vocabulário para ele: rio limpo, rio escuro, rio virado. Ninguém de fora entende, e ninguém de dentro explica de graça. Um Pescador jogador que passe uma sessão inteira na vila aprende os três termos, e os três valem mais que qualquer mapa da correnteza.\n\n*O rio não é perigoso. Um trecho de meio metro dele é.*\n\n## Notas para o mestre\n\nNão é domável — é um cardume, não um indivíduo. Bom obstáculo pra\ntravessia do Rio Coluber sem precisar virar combate longo; o mestre pode\nresolver como um único teste de Reflexo/Corpo pra atravessar em vez de\ncombate completo."
  },
  {
   "id": "escorpiao_de_poeira",
@@ -985,11 +1152,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe na cauda antes da picada",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Gelo:** o frio o deixa lento. Em 10+ ele perde a capacidade de se enterrar pelo resto da cena e passa a lutar exposto.",
-   "Resiste a Veneno** — o veneno é dele.",
+   "Atributo — Conhecimento:** a camuflagem dele é um truque só, e quem desvenda o relevo errado na poeira não é pego — arma de Conhecimento bate onde ele se escondeu. Em 10+ ele perde a capacidade de se enterrar pelo resto da cena e passa a lutar exposto.",
    "A cauda é o alvo, e ela se ergue antes da picada.",
    "Em terreno duro ele não se enterra. Puxar a luta para a pedra nua o anula."
   ],
@@ -999,7 +1164,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "água"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Escorpião cor de areia, quase invisível contra a terra seca das planícies de ruínas, com cauda longa terminada num ferrão grosso e brilhante de veneno concentrado.",
@@ -1015,7 +1180,7 @@ var MONSTROS = [
     "raridade": "Comum",
     "qtd": "1",
     "chance": "70%",
-    "serve": "Médico, Alquimista (elemento Veneno)"
+    "serve": "Médico, Alquimista"
    },
    {
     "item": "Carapaça de Areia",
@@ -1039,7 +1204,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nTerreno seco e pedregoso das Estepes de Kaldan e as bordas da Pedreira de Dunhelm. Fica enterrado sob dois dedos de poeira durante o dia.\n\n**Comportamento:** emboscador puro. Não persegue, não avisa e não sai do lugar — ele espera o pé errado. Depois do primeiro golpe, some de novo sob a poeira e recomeça.\n\n## Aparência\n\nEscorpião cor de areia, quase invisível contra a terra seca das\nplanícies de ruínas, com cauda longa terminada num ferrão grosso e\nbrilhante de veneno concentrado.\n\n## Leia em voz alta\n\n> A poeira à frente tem um relevo que não combina com o resto do chão: um arco baixo, do tamanho de um antebraço, e a poeira em cima dele está mais fina do que em volta. Ela se mexe.\n\n## Sinal antes do ataque\n\nA cauda sai primeiro, e sai devagar. Quem estiver olhando o chão a vinte passos à frente vê antes de pisar.\n\n## Ataques\n\n- Picada venenosa\n- Pinça (imobiliza antes da picada)\n\n## Fraquezas\n\n- **Elemento — Gelo:** o frio o deixa lento. Em 10+ ele perde a capacidade de se enterrar pelo resto da cena e passa a lutar exposto.\n- **Resiste a Veneno** — o veneno é dele.\n- A cauda é o alvo, e ela se ergue antes da picada.\n- Em terreno duro ele não se enterra. Puxar a luta para a pedra nua o anula.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Ferrão Venenoso | Comum | 1 | 70% | Médico, Alquimista (elemento Veneno) |\n| Carapaça de Areia | Comum | 1-2 | 40% | Ferreiro, Costureiro |\n| Glândula Seca | Incomum | 1 | 20% | Alquimista |\n| Col | — | 80-130 | 100% | — |\n\n## Lore\n\nA picada não mata ninguém e é por isso que ela funciona. O escorpião de poeira envenena, espera, e volta no dia seguinte para o mesmo ponto da trilha — porque o que ele caça não é quem passa, é quem passa devagar. As caravanas entre Kaldan e o Posto de Kaldrin trocam de rota a cada duas semanas por causa disso, e chamam isso de superstição.\n\n*Ele não precisa te matar. Só precisa que você volte mais devagar.*\n\n## Notas para o mestre\n\nNão é domável — instinto de ataque puro. Fonte primária de Ferrão\nVenenoso pro Médico produzir antídotos (ver\n`docs/economia_profissoes.md`) — profissão que ainda tinha pouco\nmaterial próprio antes desta criatura."
+  "corpo": "## Habitat\n\nTerreno seco e pedregoso das Estepes de Kaldan e as bordas da Pedreira de Dunhelm. Fica enterrado sob dois dedos de poeira durante o dia.\n\n**Comportamento:** emboscador puro. Não persegue, não avisa e não sai do lugar — ele espera o pé errado. Depois do primeiro golpe, some de novo sob a poeira e recomeça.\n\n## Aparência\n\nEscorpião cor de areia, quase invisível contra a terra seca das\nplanícies de ruínas, com cauda longa terminada num ferrão grosso e\nbrilhante de veneno concentrado.\n\n## Leia em voz alta\n\n> A poeira à frente tem um relevo que não combina com o resto do chão: um arco baixo, do tamanho de um antebraço, e a poeira em cima dele está mais fina do que em volta. Ela se mexe.\n\n## Sinal antes do ataque\n\nA cauda sai primeiro, e sai devagar. Quem estiver olhando o chão a vinte passos à frente vê antes de pisar.\n\n## Ataques\n\n- Picada venenosa\n- Pinça (imobiliza antes da picada)\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** a camuflagem dele é um truque só, e quem desvenda o relevo errado na poeira não é pego — arma de Conhecimento bate onde ele se escondeu. Em 10+ ele perde a capacidade de se enterrar pelo resto da cena e passa a lutar exposto.\n- A cauda é o alvo, e ela se ergue antes da picada.\n- Em terreno duro ele não se enterra. Puxar a luta para a pedra nua o anula.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Ferrão Venenoso | Comum | 1 | 70% | Médico, Alquimista |\n| Carapaça de Areia | Comum | 1-2 | 40% | Ferreiro, Costureiro |\n| Glândula Seca | Incomum | 1 | 20% | Alquimista |\n| Col | — | 80-130 | 100% | — |\n\n## Lore\n\nA picada não mata ninguém e é por isso que ela funciona. O escorpião de poeira envenena, espera, e volta no dia seguinte para o mesmo ponto da trilha — porque o que ele caça não é quem passa, é quem passa devagar. As caravanas entre Kaldan e o Posto de Kaldrin trocam de rota a cada duas semanas por causa disso, e chamam isso de superstição.\n\n*Ele não precisa te matar. Só precisa que você volte mais devagar.*\n\n## Notas para o mestre\n\nNão é domável — instinto de ataque puro. Fonte primária de Ferrão\nVenenoso pro Médico produzir antídotos (ver\n`docs/economia_profissoes.md`) — profissão que ainda tinha pouco\nmaterial próprio antes desta criatura."
  },
  {
   "id": "espectro_sussurrante",
@@ -1062,12 +1227,10 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "teste de Espírito em vez de dano físico",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Espírito",
   "fraquezas": [
-   "Elemento — Fogo:** luz e calor de tocha. Em 10+ ele perde a voz pelo resto da cena, e sem voz ele não é nada.",
-   "Resiste a Veneno** — não tem corpo para envenenar.",
-   "Não se resolve com dano: é teste de **Espírito**, e a arma não importa.",
+   "Atributo — Espírito:** é o que ele ataca e é onde ele aguenta menos — golpe de arma de Espírito é uma contestação direta. Em 10+ ele perde a voz pelo resto da cena, e sem voz ele não é nada.",
+   "Não se resolve com dano: é teste de **Espírito**.",
    "Ninguém que não responda é atingido. O silêncio é imunidade total."
   ],
   "resistencias": [
@@ -1077,7 +1240,7 @@ var MONSTROS = [
    "Espírito alto",
    "itens do Coveiro"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Silhueta humanoide semitransparente, quase invisível sob luz direta, mais reconhecível pelo sussurro constante e incompreensível que a acompanha do que por qualquer forma definida. Aparece só na Necrópole de Voss, e só à noite.",
@@ -1110,7 +1273,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nEntre as fileiras da Necrópole de Voss, sempre no corredor onde as lápides não têm nome. Nunca aparece nas que têm.\n\n**Comportamento:** não ataca corpo. Fala. Diz o nome de quem está ouvindo, e diz certo, e é isso que quebra a mesa. Só se torna hostil se alguém responder.\n\n## Aparência\n\nSilhueta humanoide semitransparente, quase invisível sob luz direta,\nmais reconhecível pelo sussurro constante e incompreensível que a\nacompanha do que por qualquer forma definida. Aparece só na Necrópole de\nVoss, e só à noite.\n\n## Leia em voz alta\n\n> Você ouve o seu nome. Não o do personagem — o seu. Dito baixo, do jeito certo, com a entonação de alguém que já te chamou assim antes. Vem de trás, e atrás de você só há lápide sem nome.\n\n## Sinal antes do ataque\n\nO frio na nuca, e o som das outras pessoas do grupo ficando abafado, como se elas estivessem mais longe do que estão.\n\n## Ataques\n\n- Sussurro desorientador (teste de Espírito em vez de dano)\n- Toque gélido (dano leve só se o teste falhar)\n\n## Fraquezas\n\n- **Elemento — Fogo:** luz e calor de tocha. Em 10+ ele perde a voz pelo resto da cena, e sem voz ele não é nada.\n- **Resiste a Veneno** — não tem corpo para envenenar.\n- Não se resolve com dano: é teste de **Espírito**, e a arma não importa.\n- Ninguém que não responda é atingido. O silêncio é imunidade total.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Resíduo Etéreo | Incomum | 1 | 40% | Coveiro, Alquimista |\n| Nome Devolvido | Raro | 1 | 12% | Bibliotecário — um nome que faltava numa lápide |\n| Col | — | 180-260 | 100% | — |\n\n## Lore\n\nA Lápide Sem Nome é o puzzle da Necrópole, e o Espectro é a razão de ele existir. Alguém apagou nomes daquelas pedras, um por um, com cuidado e com ferramenta boa. O Espectro sabe todos eles. Ele não os diz — ele diz o seu, e espera para ver se você entende por que isso é a mesma coisa.\n\n*Ele não quer te matar. Ele quer que você responda.*\n\n## Notas para o mestre\n\nNão é domável — não-corpóreo. Pode (ou não) estar ligado à quest\n`necropole_04_o_nome_apagado` — o mestre decide se é coincidência\natmosférica ou algo mais direto; não force a conexão se não servir à\nmesa."
+  "corpo": "## Habitat\n\nEntre as fileiras da Necrópole de Voss, sempre no corredor onde as lápides não têm nome. Nunca aparece nas que têm.\n\n**Comportamento:** não ataca corpo. Fala. Diz o nome de quem está ouvindo, e diz certo, e é isso que quebra a mesa. Só se torna hostil se alguém responder.\n\n## Aparência\n\nSilhueta humanoide semitransparente, quase invisível sob luz direta,\nmais reconhecível pelo sussurro constante e incompreensível que a\nacompanha do que por qualquer forma definida. Aparece só na Necrópole de\nVoss, e só à noite.\n\n## Leia em voz alta\n\n> Você ouve o seu nome. Não o do personagem — o seu. Dito baixo, do jeito certo, com a entonação de alguém que já te chamou assim antes. Vem de trás, e atrás de você só há lápide sem nome.\n\n## Sinal antes do ataque\n\nO frio na nuca, e o som das outras pessoas do grupo ficando abafado, como se elas estivessem mais longe do que estão.\n\n## Ataques\n\n- Sussurro desorientador (teste de Espírito em vez de dano)\n- Toque gélido (dano leve só se o teste falhar)\n\n## Fraquezas\n\n- **Atributo — Espírito:** é o que ele ataca e é onde ele aguenta menos — golpe de arma de Espírito é uma contestação direta. Em 10+ ele perde a voz pelo resto da cena, e sem voz ele não é nada.\n- Não se resolve com dano: é teste de **Espírito**.\n- Ninguém que não responda é atingido. O silêncio é imunidade total.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Resíduo Etéreo | Incomum | 1 | 40% | Coveiro, Alquimista |\n| Nome Devolvido | Raro | 1 | 12% | Bibliotecário — um nome que faltava numa lápide |\n| Col | — | 180-260 | 100% | — |\n\n## Lore\n\nA Lápide Sem Nome é o puzzle da Necrópole, e o Espectro é a razão de ele existir. Alguém apagou nomes daquelas pedras, um por um, com cuidado e com ferramenta boa. O Espectro sabe todos eles. Ele não os diz — ele diz o seu, e espera para ver se você entende por que isso é a mesma coisa.\n\n*Ele não quer te matar. Ele quer que você responda.*\n\n## Notas para o mestre\n\nNão é domável — não-corpóreo. Pode (ou não) estar ligado à quest\n`necropole_04_o_nome_apagado` — o mestre decide se é coincidência\natmosférica ou algo mais direto; não force a conexão se não servir à\nmesa."
  },
  {
   "id": "fada_da_poeira",
@@ -1133,10 +1296,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "agarrar durante o pouso, quando as asas param",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Fogo:** o pó é inflamável e elas sabem. Em 10+ elas fogem do canteiro pelo resto da cena e devolvem o que roubaram.",
+   "Atributo — Conhecimento:** o truque delas é distrair — arma de Conhecimento, de quem acompanhou o rastro de pó em vez do brilho, não se deixa enganar. Em 10+ elas fogem do canteiro pelo resto da cena e devolvem o que roubaram.",
    "As asas param no pouso, e no pouso dá para agarrar.",
    "Não sabem recusar coisa brilhante oferecida de propósito.",
    "Sozinha, uma fada não rouba nada. Elas precisam de três."
@@ -1148,9 +1310,9 @@ var MONSTROS = [
    "água",
    "fumaça"
   ],
-  "domavel": "sim",
-  "domaSucessos": "4",
-  "domaRequisito": "Néctar de Flor Rara (coletado no próprio Jardim de Fenwyth)",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Criatura do tamanho de duas mãos, com corpo alongado de inseto coberto por uma penugem clara que solta pó dourado a cada batida de asa. Quatro asas translúcidas, veias visíveis contra a luz. Não tem rosto — tem duas manchas escuras onde um rosto estaria, e é justamente isso que assusta quem esperava uma fada.",
   "habitat": "O Jardim de Fenwyth e os canteiros floridos que sobram nas bordas da Planície de Verrun. Onde há flor rara, há três delas.",
   "comportamento": "curiosa e ladra. Não fere de propósito: rouba. Item pequeno, brilhante, solto — some da mochila e reaparece a trinta metros, no chão, intacto, como convite.",
@@ -1188,7 +1350,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nO Jardim de Fenwyth e os canteiros floridos que sobram nas bordas da Planície de Verrun. Onde há flor rara, há três delas.\n\n**Comportamento:** curiosa e ladra. Não fere de propósito: rouba. Item pequeno, brilhante, solto — some da mochila e reaparece a trinta metros, no chão, intacto, como convite.\n\n## Aparência\n\nCriatura do tamanho de duas mãos, com corpo alongado de inseto coberto por\numa penugem clara que solta pó dourado a cada batida de asa. Quatro asas\ntranslúcidas, veias visíveis contra a luz. Não tem rosto — tem duas manchas\nescuras onde um rosto estaria, e é justamente isso que assusta quem esperava\numa fada.\n\nO nome é apelido de jogador, não descrição: quem viu de longe, no Jardim de\nFenwyth cheio de pólen suspenso, achou que fosse uma fada. Quem viu de perto\nparou de achar.\n\n## Leia em voz alta\n\n> A luz entre as flores não vem do sol. São três, do tamanho de um punho, e o pó que soltam fica pendurado no ar depois delas passarem. Uma delas está com a fivela do seu cinto.\n\n## Sinal antes do ataque\n\nO pó dourado no ar parado. Se ele está ali, elas passaram há pouco — e voltam pelo mesmo caminho.\n\n## Ataques\n\n- **Sopro de pó** — não causa dano; impõe complicação de visão e uma\n  contagem de barulho (espirro) que o mestre deve usar pra puxar um encontro\n  próximo\n- **Ferroada rasa** — dano leve, só se o alvo insistir em ficar embaixo da\n  nuvem\n\n## Fraquezas\n\n- **Elemento — Fogo:** o pó é inflamável e elas sabem. Em 10+ elas fogem do canteiro pelo resto da cena e devolvem o que roubaram.\n- As asas param no pouso, e no pouso dá para agarrar.\n- Não sabem recusar coisa brilhante oferecida de propósito.\n- Sozinha, uma fada não rouba nada. Elas precisam de três.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pó Dourado | Comum | 1-2 | 70% | Alquimista, Joalheiro |\n| Asa Translúcida Fina | Incomum | 1 | 30% | Costureiro |\n| Néctar de Flor Rara | Incomum | 1 | 20% | Alquimista, doma de Domador |\n| Col | — | 70-120 | 100% | — |\n\n## Lore\n\nO que elas roubam nunca é o que vale mais. É sempre o que brilha mais, e as duas coisas quase nunca coincidem — o que faz delas o melhor teste de caráter barato do andar. Um grupo descobre muito rápido quem trouxe o quê, quando uma fada leva a única coisa que alguém não queria mostrar que estava carregando.\n\n*Elas não levam o que é caro. Levam o que você estava escondendo.*\n\n## Notas para o mestre\n\nÉ a criatura de **doma utilitária** do andar: domada (4 sucessos, com Néctar\nde Flor Rara), vira uma fonte de luz viva que acompanha o Domador — ilumina\no suficiente pra ler uma inscrição ou não tropeçar, e nada mais. Não luta,\nnão carrega, não avisa de perigo. Existe pra dar ao Domador um aliado que\n**não** é de combate, porque todo o resto da tabela de doma puxa pra\ncombate ou montaria.\n\nBoa isca de puzzle: uma Fada da Poeira domada resolve a escuridão da Câmara\nda Inscrição e da Gruta de Lumis sem gastar Cristal de Luz — o que faz o\nDomador ser convidado pra expedições por um motivo que não é força.\n\nLigada a: Jardim de Fenwyth (`dados_mapa.js`), tabela de doma em\n`docs/economia_profissoes.md`, e ao Néctar de Flor Rara que o Alquimista\ntambém quer."
+  "corpo": "## Habitat\n\nO Jardim de Fenwyth e os canteiros floridos que sobram nas bordas da Planície de Verrun. Onde há flor rara, há três delas.\n\n**Comportamento:** curiosa e ladra. Não fere de propósito: rouba. Item pequeno, brilhante, solto — some da mochila e reaparece a trinta metros, no chão, intacto, como convite.\n\n## Aparência\n\nCriatura do tamanho de duas mãos, com corpo alongado de inseto coberto por\numa penugem clara que solta pó dourado a cada batida de asa. Quatro asas\ntranslúcidas, veias visíveis contra a luz. Não tem rosto — tem duas manchas\nescuras onde um rosto estaria, e é justamente isso que assusta quem esperava\numa fada.\n\nO nome é apelido de jogador, não descrição: quem viu de longe, no Jardim de\nFenwyth cheio de pólen suspenso, achou que fosse uma fada. Quem viu de perto\nparou de achar.\n\n## Leia em voz alta\n\n> A luz entre as flores não vem do sol. São três, do tamanho de um punho, e o pó que soltam fica pendurado no ar depois delas passarem. Uma delas está com a fivela do seu cinto.\n\n## Sinal antes do ataque\n\nO pó dourado no ar parado. Se ele está ali, elas passaram há pouco — e voltam pelo mesmo caminho.\n\n## Ataques\n\n- **Sopro de pó** — não causa dano; impõe complicação de visão e uma\n  contagem de barulho (espirro) que o mestre deve usar pra puxar um encontro\n  próximo\n- **Ferroada rasa** — dano leve, só se o alvo insistir em ficar embaixo da\n  nuvem\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** o truque delas é distrair — arma de Conhecimento, de quem acompanhou o rastro de pó em vez do brilho, não se deixa enganar. Em 10+ elas fogem do canteiro pelo resto da cena e devolvem o que roubaram.\n- As asas param no pouso, e no pouso dá para agarrar.\n- Não sabem recusar coisa brilhante oferecida de propósito.\n- Sozinha, uma fada não rouba nada. Elas precisam de três.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pó Dourado | Comum | 1-2 | 70% | Alquimista, Joalheiro |\n| Asa Translúcida Fina | Incomum | 1 | 30% | Costureiro |\n| Néctar de Flor Rara | Incomum | 1 | 20% | Alquimista, doma de Domador |\n| Col | — | 70-120 | 100% | — |\n\n## Lore\n\nO que elas roubam nunca é o que vale mais. É sempre o que brilha mais, e as duas coisas quase nunca coincidem — o que faz delas o melhor teste de caráter barato do andar. Um grupo descobre muito rápido quem trouxe o quê, quando uma fada leva a única coisa que alguém não queria mostrar que estava carregando.\n\n*Elas não levam o que é caro. Levam o que você estava escondendo.*\n\n## Notas para o mestre\n\nÉ a criatura de **doma utilitária** do andar: domada (4 sucessos, com Néctar\nde Flor Rara), vira uma fonte de luz viva que acompanha o Domador — ilumina\no suficiente pra ler uma inscrição ou não tropeçar, e nada mais. Não luta,\nnão carrega, não avisa de perigo. Existe pra dar ao Domador um aliado que\n**não** é de combate, porque todo o resto da tabela de doma puxa pra\ncombate ou montaria.\n\nBoa isca de puzzle: uma Fada da Poeira domada resolve a escuridão da Câmara\nda Inscrição e da Gruta de Lumis sem gastar Cristal de Luz — o que faz o\nDomador ser convidado pra expedições por um motivo que não é força.\n\nLigada a: Jardim de Fenwyth (`dados_mapa.js`), tabela de doma em\n`docs/economia_profissoes.md`, e ao Néctar de Flor Rara que o Alquimista\ntambém quer."
  },
  {
   "id": "frenzy_boar",
@@ -1211,10 +1373,9 @@ var MONSTROS = [
   "canonico": "sim",
   "fonte": "https://swordartonline.fandom.com/wiki/Frenzy_Boar",
   "fraqueza": "golpe preciso na nuca",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** a pelagem azulada é seca. Em 10+ ele desvia da investida pelo resto da cena e passa a circular em vez de avançar.",
+   "Atributo — Reflexo:** a investida é rápida e reta — arma de Reflexo, lida no último instante, aproveita a abertura que ele mesmo cria. Em 10+ ele desvia da investida pelo resto da cena e passa a circular em vez de avançar.",
    "Golpe preciso na nuca resolve em um. Errar a nuca custa o dobro de trabalho.",
    "A investida é reta e comprometida: sair da linha basta.",
    "Sozinho e sem alvo em linha, ele volta a pastar e esquece o grupo."
@@ -1263,7 +1424,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nPlanície de Verrun e as bordas abertas da Floresta de Horunka — o primeiro monstro que qualquer jogador do Andar 1 encontra.\n\n**Comportamento:** agressivo e burro, e as duas coisas na mesma medida. Investe em linha reta assim que enxerga, sem avaliar nada, e não muda de ideia no meio.\n\n## Aparência\n\nJavali de porte robusto, cerca de 120cm de comprimento, pelagem azulada,\nolhos vermelhos brilhantes, focinho achatado e presas afiadas saindo dos\ndois lados da boca.\n\n## Leia em voz alta\n\n> O javali parece banal até decidir não parecer. Cabeça baixa, casco curto no\n> barro e um tipo de peso compacto que todo jogador novo subestima uma vez.\n\n## Sinal antes do ataque\n\n- casco raspando o chão,\n- cabeça baixando um pouco demais,\n- e um meio segundo em que ele escolhe linha reta.\n\n## Ataques\n\n- Investida com as presas, curto alcance, rápida\n- Sem ataques à distância ou especiais\n\n## Fraquezas\n\n- **Elemento — Fogo:** a pelagem azulada é seca. Em 10+ ele desvia da investida pelo resto da cena e passa a circular em vez de avançar.\n- Golpe preciso na nuca resolve em um. Errar a nuca custa o dobro de trabalho.\n- A investida é reta e comprometida: sair da linha basta.\n- Sozinho e sem alvo em linha, ele volta a pastar e esquece o grupo.\n\n## O que torna este encontro memorável\n\nEle é o monstro tutorial certo: simples, legível e honesto. A mesa entende\nrápido que prestar atenção no corpo do alvo vale mais do que sair rolando sem\nler a cena.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Presa de Javali | Comum | 1 | 20% | Ferreiro, Joalheiro |\n| Pelagem Azulada | Comum | 1-2 | 15% | Costureiro |\n| Carne Crua | Comum | 1-2 | 45% | Cozinheiro, doma de Domador |\n| Col | — | 25-40 | 100% | — |\n\n## Lore\n\nÉ o monstro que ensina o sistema inteiro. Um golpe na nuca e acabou; um golpe em qualquer outro lugar e você descobre o que é uma reação. Todo jogador do Andar 1 tem uma história de Frenzy Boar, e metade dessas histórias é sobre a primeira vez que alguém errou a nuca de propósito para mostrar aos outros o que acontecia.\n\n*Ele não é o teste. Ele é o tutorial, e alguns tutoriais matam.*\n\n## Notas para o mestre\n\nEncontrado nos campos logo fora da Cidade do Início — é literalmente o\nprimeiro monstro que qualquer grupo novo vai encontrar. Bom pra ensinar a\nmesa como funciona o teste 2d6+atributo sem risco real: mesmo um 6- contra\num Frenzy Boar raramente deveria significar morte, só complicação (perder\num item, chamar atenção de outro monstro, etc.).\n\n**Como usar em transmissão:** corte rápido, leitura rápida, recompensa rápida.\nO prazer aqui é ver a mesa aprender a linguagem do jogo."
+  "corpo": "## Habitat\n\nPlanície de Verrun e as bordas abertas da Floresta de Horunka — o primeiro monstro que qualquer jogador do Andar 1 encontra.\n\n**Comportamento:** agressivo e burro, e as duas coisas na mesma medida. Investe em linha reta assim que enxerga, sem avaliar nada, e não muda de ideia no meio.\n\n## Aparência\n\nJavali de porte robusto, cerca de 120cm de comprimento, pelagem azulada,\nolhos vermelhos brilhantes, focinho achatado e presas afiadas saindo dos\ndois lados da boca.\n\n## Leia em voz alta\n\n> O javali parece banal até decidir não parecer. Cabeça baixa, casco curto no\n> barro e um tipo de peso compacto que todo jogador novo subestima uma vez.\n\n## Sinal antes do ataque\n\n- casco raspando o chão,\n- cabeça baixando um pouco demais,\n- e um meio segundo em que ele escolhe linha reta.\n\n## Ataques\n\n- Investida com as presas, curto alcance, rápida\n- Sem ataques à distância ou especiais\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a investida é rápida e reta — arma de Reflexo, lida no último instante, aproveita a abertura que ele mesmo cria. Em 10+ ele desvia da investida pelo resto da cena e passa a circular em vez de avançar.\n- Golpe preciso na nuca resolve em um. Errar a nuca custa o dobro de trabalho.\n- A investida é reta e comprometida: sair da linha basta.\n- Sozinho e sem alvo em linha, ele volta a pastar e esquece o grupo.\n\n## O que torna este encontro memorável\n\nEle é o monstro tutorial certo: simples, legível e honesto. A mesa entende\nrápido que prestar atenção no corpo do alvo vale mais do que sair rolando sem\nler a cena.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Presa de Javali | Comum | 1 | 20% | Ferreiro, Joalheiro |\n| Pelagem Azulada | Comum | 1-2 | 15% | Costureiro |\n| Carne Crua | Comum | 1-2 | 45% | Cozinheiro, doma de Domador |\n| Col | — | 25-40 | 100% | — |\n\n## Lore\n\nÉ o monstro que ensina o sistema inteiro. Um golpe na nuca e acabou; um golpe em qualquer outro lugar e você descobre o que é uma reação. Todo jogador do Andar 1 tem uma história de Frenzy Boar, e metade dessas histórias é sobre a primeira vez que alguém errou a nuca de propósito para mostrar aos outros o que acontecia.\n\n*Ele não é o teste. Ele é o tutorial, e alguns tutoriais matam.*\n\n## Notas para o mestre\n\nEncontrado nos campos logo fora da Cidade do Início — é literalmente o\nprimeiro monstro que qualquer grupo novo vai encontrar. Bom pra ensinar a\nmesa como funciona o teste 2d6+atributo sem risco real: mesmo um 6- contra\num Frenzy Boar raramente deveria significar morte, só complicação (perder\num item, chamar atenção de outro monstro, etc.).\n\n**Como usar em transmissão:** corte rápido, leitura rápida, recompensa rápida.\nO prazer aqui é ver a mesa aprender a linguagem do jogo."
  },
  {
   "id": "gafanhoto_gigante",
@@ -1286,10 +1447,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe nas patas traseiras antes do salto",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** a casca quitinosa estala e eles se dispersam. Em 10+ a ninhada perde o salto coordenado pelo resto da cena.",
+   "Atributo — Reflexo:** a força deles é o salto em massa — arma de Reflexo, reagindo no tempo do salto, quebra a coordenação. Em 10+ a ninhada perde o salto coordenado pelo resto da cena.",
    "As patas traseiras se dobram antes do salto, e nesse instante ele está preso ao chão.",
    "Movimento devagar não dispara nada. O grupo controla quando a luta começa.",
    "Na ninhada, destruir as ovas encerra tudo sem lutar contra nenhum adulto."
@@ -1299,7 +1459,7 @@ var MONSTROS = [
    "fogo",
    "ataque em área"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Do tamanho de um cão médio, verde-oliva manchado de marrom seco, com patas traseiras desproporcionalmente grandes e mandíbulas que trabalham sem parar mesmo quando ele não está comendo nada. As asas são curtas demais pra voar de verdade — servem pra planar depois de um salto de dez metros.",
@@ -1339,7 +1499,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nOs Terraços de Solveig e as lavouras do Vale de Molwyn. Onde há plantio em degrau, há ninhada — e a ninhada é o problema, não o adulto.\n\n**Comportamento:** agressivo por reflexo, não por fome. Salta na direção de qualquer movimento brusco, inclusive de outro gafanhoto, e o resultado é uma lavoura inteira saltando ao mesmo tempo quando alguém corre.\n\n## Aparência\n\nDo tamanho de um cão médio, verde-oliva manchado de marrom seco, com patas\ntraseiras desproporcionalmente grandes e mandíbulas que trabalham sem parar\nmesmo quando ele não está comendo nada. As asas são curtas demais pra voar de\nverdade — servem pra planar depois de um salto de dez metros.\n\nNunca aparece sozinho. Um Gafanhoto Gigante visível significa entre oito e\nvinte deles no mesmo terraço, e é assim que os Terraços de Solveig perdem uma\ncolheita inteira em duas noites.\n\n## Leia em voz alta\n\n> O terraço parece vazio até alguém dar um passo rápido. Aí o degrau inteiro se levanta de uma vez — dezenas deles, do tamanho de um cachorro, todos na mesma direção, e a direção é vocês.\n\n## Sinal antes do ataque\n\nO ruído de serra vindo do mato. Uma perna esfregando é curiosidade; dez esfregando ao mesmo tempo é a ninhada acordando.\n\n## Ataques\n\n- **Salto de impacto** — atinge quem estiver no ponto de queda; complicação de\n  ser derrubado, dano leve\n- **Mandíbula** — dano leve, mas destrói equipamento de tecido/couro exposto\n  (uma peça de Parte de Cima ou Baixo pode **rachar**, ver\n  `equipamentos/00_indice.md`)\n- **Debandada** — quando três ou mais são abatidos, o resto salta de uma vez;\n  qualquer teste feito nessa rodada sofre complicação\n\n## Fraquezas\n\n- **Elemento — Fogo:** a casca quitinosa estala e eles se dispersam. Em 10+ a ninhada perde o salto coordenado pelo resto da cena.\n- As patas traseiras se dobram antes do salto, e nesse instante ele está preso ao chão.\n- Movimento devagar não dispara nada. O grupo controla quando a luta começa.\n- Na ninhada, destruir as ovas encerra tudo sem lutar contra nenhum adulto.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Perna Serrilhada | Comum | 1-2 | 65% | Cozinheiro; Ferreiro usa como lima |\n| Casca Quitinosa | Comum | 2-3 | 40% | Costureiro, Alquimista |\n| Ovas de Gafanhoto | Incomum | 2-4 | 100% na ninhada | Cozinheiro, Alquimista |\n| Col | — | 70-110 | 100% | — |\n\n## Lore\n\nOs Terraços de Solveig perdem uma colheita inteira a cada poucas semanas, e a fazenda comunitária do Vale contrata quem aparecer para limpar ninhada. É o trabalho mais honesto e mais chato do Andar 1, paga pouco, e é a razão de metade dos grupos novos conhecerem o Fazendeiro Local antes de conhecerem qualquer NPC importante.\n\n*Um é comida. Trinta é uma safra perdida.*\n\n## Notas para o mestre\n\nÉ o monstro que **não deve ser resolvido por combate** — se o grupo só matar\ngafanhotos, eles voltam na sessão seguinte, e essa deve ser uma consequência\nvisível. A solução está em `bounty_05_colheita_ameacada`: achar e queimar a\nninhada nas fendas, o que exige um teste de Conhecimento (Cartógrafo/\nBibliotecário brilham) antes de qualquer teste de Corpo.\n\nTambém é a fonte prática do **Cozinheiro** no leste do mapa: Perna\nSerrilhada é proteína barata e abundante, o que dá ao Cozinheiro uma fonte\nque não depende do Caçador comprar carne de Frenzy Boar.\n\nLigado a: Terraços de Solveig e Vale de Molwyn (`dados_mapa.js`), Fazendeiro\nLocal (`npcs/fazendeiro_local.md`), `bounty_05_colheita_ameacada`."
+  "corpo": "## Habitat\n\nOs Terraços de Solveig e as lavouras do Vale de Molwyn. Onde há plantio em degrau, há ninhada — e a ninhada é o problema, não o adulto.\n\n**Comportamento:** agressivo por reflexo, não por fome. Salta na direção de qualquer movimento brusco, inclusive de outro gafanhoto, e o resultado é uma lavoura inteira saltando ao mesmo tempo quando alguém corre.\n\n## Aparência\n\nDo tamanho de um cão médio, verde-oliva manchado de marrom seco, com patas\ntraseiras desproporcionalmente grandes e mandíbulas que trabalham sem parar\nmesmo quando ele não está comendo nada. As asas são curtas demais pra voar de\nverdade — servem pra planar depois de um salto de dez metros.\n\nNunca aparece sozinho. Um Gafanhoto Gigante visível significa entre oito e\nvinte deles no mesmo terraço, e é assim que os Terraços de Solveig perdem uma\ncolheita inteira em duas noites.\n\n## Leia em voz alta\n\n> O terraço parece vazio até alguém dar um passo rápido. Aí o degrau inteiro se levanta de uma vez — dezenas deles, do tamanho de um cachorro, todos na mesma direção, e a direção é vocês.\n\n## Sinal antes do ataque\n\nO ruído de serra vindo do mato. Uma perna esfregando é curiosidade; dez esfregando ao mesmo tempo é a ninhada acordando.\n\n## Ataques\n\n- **Salto de impacto** — atinge quem estiver no ponto de queda; complicação de\n  ser derrubado, dano leve\n- **Mandíbula** — dano leve, mas destrói equipamento de tecido/couro exposto\n  (uma peça de Parte de Cima ou Baixo pode **rachar**, ver\n  `equipamentos/00_indice.md`)\n- **Debandada** — quando três ou mais são abatidos, o resto salta de uma vez;\n  qualquer teste feito nessa rodada sofre complicação\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a força deles é o salto em massa — arma de Reflexo, reagindo no tempo do salto, quebra a coordenação. Em 10+ a ninhada perde o salto coordenado pelo resto da cena.\n- As patas traseiras se dobram antes do salto, e nesse instante ele está preso ao chão.\n- Movimento devagar não dispara nada. O grupo controla quando a luta começa.\n- Na ninhada, destruir as ovas encerra tudo sem lutar contra nenhum adulto.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Perna Serrilhada | Comum | 1-2 | 65% | Cozinheiro; Ferreiro usa como lima |\n| Casca Quitinosa | Comum | 2-3 | 40% | Costureiro, Alquimista |\n| Ovas de Gafanhoto | Incomum | 2-4 | 100% na ninhada | Cozinheiro, Alquimista |\n| Col | — | 70-110 | 100% | — |\n\n## Lore\n\nOs Terraços de Solveig perdem uma colheita inteira a cada poucas semanas, e a fazenda comunitária do Vale contrata quem aparecer para limpar ninhada. É o trabalho mais honesto e mais chato do Andar 1, paga pouco, e é a razão de metade dos grupos novos conhecerem o Fazendeiro Local antes de conhecerem qualquer NPC importante.\n\n*Um é comida. Trinta é uma safra perdida.*\n\n## Notas para o mestre\n\nÉ o monstro que **não deve ser resolvido por combate** — se o grupo só matar\ngafanhotos, eles voltam na sessão seguinte, e essa deve ser uma consequência\nvisível. A solução está em `bounty_05_colheita_ameacada`: achar e queimar a\nninhada nas fendas, o que exige um teste de Conhecimento (Cartógrafo/\nBibliotecário brilham) antes de qualquer teste de Corpo.\n\nTambém é a fonte prática do **Cozinheiro** no leste do mapa: Perna\nSerrilhada é proteína barata e abundante, o que dá ao Cozinheiro uma fonte\nque não depende do Caçador comprar carne de Frenzy Boar.\n\nLigado a: Terraços de Solveig e Vale de Molwyn (`dados_mapa.js`), Fazendeiro\nLocal (`npcs/fazendeiro_local.md`), `bounty_05_colheita_ameacada`."
  },
  {
   "id": "guardiao_das_planicies",
@@ -1363,11 +1523,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "as pernas traseiras, descobertas enquanto ele corre reto",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Trovão:** cristal de descarga ou metal na água. Em 10+ ele",
-   "Resiste a Gelo** — a pelagem de inverno é feita para isso.",
+   "Atributo — Conhecimento:** as marcas na pelagem são escrita, e quem as",
    "As pernas traseiras ficam descobertas durante a corrida.",
    "Mudança brusca de direção quebra o avanço: ele não vira, ele contorna."
   ],
@@ -1379,9 +1537,9 @@ var MONSTROS = [
    "trovão",
    "mudança brusca de direção"
   ],
-  "domavel": "sim",
-  "domaSucessos": "7",
-  "domaRequisito": "Carne Nobre e o Rei das Planícies já derrotado — antes disso, nenhum aceita vínculo",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Cervo do tamanho de um cavalo de tração, galhada assimétrica e larga demais, pelagem parda com desenhos claros que parecem escrita. No pescoço, uma peça de metal trançado com uma pedra azul — que ninguém pôs ali, e que não sai.",
   "habitat": "Campos abertos, colinas altas e as rotas de migração do Andar 1 — Planície de\nVerrun, Estepes de Kaldan e as Colinas de Braxhold. Aparece perto do Posto de\nKaldrin com frequência suficiente para os guardas terem um nome para ele.",
   "comportamento": "protege o território do Rei das Planícies e reage com\nviolência a invasores. Não caça e não come nada que derruba. Vigia, avisa uma\nvez, e a segunda vez é a investida.",
@@ -1433,7 +1591,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCampos abertos, colinas altas e as rotas de migração do Andar 1 — Planície de\nVerrun, Estepes de Kaldan e as Colinas de Braxhold. Aparece perto do Posto de\nKaldrin com frequência suficiente para os guardas terem um nome para ele.\n\n**Comportamento:** protege o território do Rei das Planícies e reage com\nviolência a invasores. Não caça e não come nada que derruba. Vigia, avisa uma\nvez, e a segunda vez é a investida.\n\n## Aparência\n\nCervo do tamanho de um cavalo de tração, galhada assimétrica e larga demais,\npelagem parda com desenhos claros que parecem escrita. No pescoço, uma peça de\nmetal trançado com uma pedra azul — que ninguém pôs ali, e que não sai.\n\n## Leia em voz alta\n\n> Ele está no alto da colina e não se esconde. Fica parado tempo suficiente\n> para vocês verem os riscos brancos na pelagem, e para perceberem que os\n> riscos não são pelo: são marcas, feitas com cuidado, na mesma letra que\n> vocês viram no Círculo de Pedras. Então ele baixa a galhada.\n\n## Sinal antes do ataque\n\nEle para de mastigar. É só isso, e é sempre isso — quatro segundos de\nimobilidade completa antes da corrida. Quem estiver olhando o chão perde.\n\n## Ataques\n\n- **Investida** — reta, longa, e derruba qualquer um que não saia da linha.\n- **Galhada** — golpe de perto, larga, e empurra o grupo para o descampado.\n- **Chamado** — bate o casco duas vezes. Não fere; traz mais dois.\n\n## Fraquezas\n\n- **Elemento — Trovão:** cristal de descarga ou metal na água. Em 10+ ele\n  perde a investida pelo resto da cena, e sem investida ele é um alvo grande.\n- **Resiste a Gelo** — a pelagem de inverno é feita para isso.\n- As pernas traseiras ficam descobertas durante a corrida.\n- Mudança brusca de direção quebra o avanço: ele não vira, ele contorna.\n\n## O que torna este encontro memorável\n\nÉ o primeiro monstro do andar que **é claramente propriedade de alguém**. A\ncoleira de metal, as marcas na pelagem, a obediência a um chamado que ninguém\nouviu. Matar um Guardião não é caçar: é mexer com o que pertence ao Rei das\nPlanícies, e o andar inteiro fica sabendo.\n\n## Complicações úteis\n\n- Vencem, e a rota de migração muda — o Posto de Kaldrin perde a caça da\n  semana e sabe de quem é a culpa.\n- Ele bate o casco antes de cair, e os outros dois chegam no fim da luta.\n- Alguém tenta arrancar a coleira e não consegue, e isso deveria assustar.\n- Ele foge ferido, e o rastro leva direto ao território do Rei.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele Resistente | Comum | 1-2 | 70% | Costureiro, Ferreiro |\n| Chifre Jovem | Incomum | 1-2 | 40% | Artesão, Joalheiro |\n| Carne Nobre | Incomum | 1-2 | 40% | Cozinheiro, doma de Domador |\n| Casco Polido | Incomum | 1 | 30% | Artesão, Alquimista |\n| Núcleo Selvagem | Raro | 1 | 8% | Joalheiro, item Único |\n| Col | — | 300-480 | 100% | — |\n\n## Lore\n\nOs Guardiões das Planícies são as feras que patrulham os domínios do Rei das\nPlanícies. Menores que o soberano, ainda assim têm força suficiente para\nderrubar aventureiros despreparados numa única investida. Enfrentá-los exige\nmobilidade, leitura de terreno e coragem. As marcas na pelagem deles estão na\nmesma escrita das pedras de Kaldan, de Verrun, de Pemberton e de Braxhold — e\nninguém no Andar 1 sabe ler nenhuma das quatro.\n\n*Ele não é o dono do campo. É o aviso do dono.*\n\n## Notas para o mestre\n\n- **Onde entra:** Planície de Verrun, Estepes de Kaldan, Colinas de Braxhold e\n  as imediações do Posto de Kaldrin. Chefe da linhagem: **Rei das Planícies**.\n- **Como usar em transmissão:** as marcas na pelagem em close. Elas ligam este\n  monstro ao puzzle do Círculo de Pedras sem uma linha de explicação.\n- **Erro comum do grupo:** encarar de frente no campo aberto. O terreno é do\n  Guardião; a única resposta boa é obrigar o combate para perto de pedra.\n- **Como a cena encerra sem HP:** recuar para fora do território. Ele para na\n  linha exata e não passa dela, e ver isso vale mais que o loot."
+  "corpo": "## Habitat\n\nCampos abertos, colinas altas e as rotas de migração do Andar 1 — Planície de\nVerrun, Estepes de Kaldan e as Colinas de Braxhold. Aparece perto do Posto de\nKaldrin com frequência suficiente para os guardas terem um nome para ele.\n\n**Comportamento:** protege o território do Rei das Planícies e reage com\nviolência a invasores. Não caça e não come nada que derruba. Vigia, avisa uma\nvez, e a segunda vez é a investida.\n\n## Aparência\n\nCervo do tamanho de um cavalo de tração, galhada assimétrica e larga demais,\npelagem parda com desenhos claros que parecem escrita. No pescoço, uma peça de\nmetal trançado com uma pedra azul — que ninguém pôs ali, e que não sai.\n\n## Leia em voz alta\n\n> Ele está no alto da colina e não se esconde. Fica parado tempo suficiente\n> para vocês verem os riscos brancos na pelagem, e para perceberem que os\n> riscos não são pelo: são marcas, feitas com cuidado, na mesma letra que\n> vocês viram no Círculo de Pedras. Então ele baixa a galhada.\n\n## Sinal antes do ataque\n\nEle para de mastigar. É só isso, e é sempre isso — quatro segundos de\nimobilidade completa antes da corrida. Quem estiver olhando o chão perde.\n\n## Ataques\n\n- **Investida** — reta, longa, e derruba qualquer um que não saia da linha.\n- **Galhada** — golpe de perto, larga, e empurra o grupo para o descampado.\n- **Chamado** — bate o casco duas vezes. Não fere; traz mais dois.\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** as marcas na pelagem são escrita, e quem as\n  lê entende o padrão da corrida — arma de Conhecimento bate onde o avanço\n  abre. Em 10+ ele perde a investida pelo resto da cena, e sem investida\n  ele é um alvo grande.\n- As pernas traseiras ficam descobertas durante a corrida.\n- Mudança brusca de direção quebra o avanço: ele não vira, ele contorna.\n\n## O que torna este encontro memorável\n\nÉ o primeiro monstro do andar que **é claramente propriedade de alguém**. A\ncoleira de metal, as marcas na pelagem, a obediência a um chamado que ninguém\nouviu. Matar um Guardião não é caçar: é mexer com o que pertence ao Rei das\nPlanícies, e o andar inteiro fica sabendo.\n\n## Complicações úteis\n\n- Vencem, e a rota de migração muda — o Posto de Kaldrin perde a caça da\n  semana e sabe de quem é a culpa.\n- Ele bate o casco antes de cair, e os outros dois chegam no fim da luta.\n- Alguém tenta arrancar a coleira e não consegue, e isso deveria assustar.\n- Ele foge ferido, e o rastro leva direto ao território do Rei.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele Resistente | Comum | 1-2 | 70% | Costureiro, Ferreiro |\n| Chifre Jovem | Incomum | 1-2 | 40% | Artesão, Joalheiro |\n| Carne Nobre | Incomum | 1-2 | 40% | Cozinheiro, doma de Domador |\n| Casco Polido | Incomum | 1 | 30% | Artesão, Alquimista |\n| Núcleo Selvagem | Raro | 1 | 8% | Joalheiro, item Único |\n| Col | — | 300-480 | 100% | — |\n\n## Lore\n\nOs Guardiões das Planícies são as feras que patrulham os domínios do Rei das\nPlanícies. Menores que o soberano, ainda assim têm força suficiente para\nderrubar aventureiros despreparados numa única investida. Enfrentá-los exige\nmobilidade, leitura de terreno e coragem. As marcas na pelagem deles estão na\nmesma escrita das pedras de Kaldan, de Verrun, de Pemberton e de Braxhold — e\nninguém no Andar 1 sabe ler nenhuma das quatro.\n\n*Ele não é o dono do campo. É o aviso do dono.*\n\n## Notas para o mestre\n\n- **Onde entra:** Planície de Verrun, Estepes de Kaldan, Colinas de Braxhold e\n  as imediações do Posto de Kaldrin. Chefe da linhagem: **Rei das Planícies**.\n- **Como usar em transmissão:** as marcas na pelagem em close. Elas ligam este\n  monstro ao puzzle do Círculo de Pedras sem uma linha de explicação.\n- **Erro comum do grupo:** encarar de frente no campo aberto. O terreno é do\n  Guardião; a única resposta boa é obrigar o combate para perto de pedra.\n- **Como a cena encerra sem HP:** recuar para fora do território. Ele para na\n  linha exata e não passa dela, e ver isso vale mais que o loot."
  },
  {
   "id": "guardiao_de_mournhall",
@@ -1454,11 +1612,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe no ventre exposto quando se ergue",
-  "elementoFraqueza": "Veneno",
-  "elementoResistencia": "Trovão",
+  "atributoFraqueza": "Espírito",
   "fraquezas": [
-   "Elemento — Veneno:** lâmina untada ou glândula. Nove golpes é muito para qualquer grupo, e o veneno é a única coisa no andar que encurta essa conta. Em 10+ ele perde o rugido pelo resto da cena.",
-   "Resiste a Trovão** — décadas comendo o que aparece.",
+   "Atributo — Espírito:** décadas de teimosia pura são o que o mantém de pé, e arma de Espírito bate exatamente aí. Nove golpes é muito para qualquer grupo, e essa é a única coisa no andar que encurta essa conta. Em 10+ ele perde o rugido pelo resto da cena.",
    "Ele se ergue e expõe o ventre sem pelagem grossa um instante antes de rugir.",
    "Luz intensa o desorienta: viveu a vida inteira no escuro e nunca se adaptou."
   ],
@@ -1469,7 +1625,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "luz intensa"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Versão muito maior e mais velha da Sombra de Mournhall — quase 4 metros de comprimento, pelagem grisalha em vez de negra, cicatrizes visíveis de décadas sobreviveu no fundo da caverna. Guarda a passagem mais profunda sozinho.",
@@ -1516,7 +1672,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nA câmara mais funda da Caverna dos Ecos, e só ela. Não sai de lá desde antes de qualquer jogador chegar ao andar.\n\n**Comportamento:** territorial ao extremo e absolutamente estático. Não caça, não patrulha, não persegue até a boca da caverna. Ele ocupa a passagem, e a passagem é tudo o que ele quer.\n\n## Aparência\n\nVersão muito maior e mais velha da Sombra de Mournhall — quase 4 metros\nde comprimento, pelagem grisalha em vez de negra, cicatrizes visíveis de\ndécadas sobreviveu no fundo da caverna. Guarda a passagem mais profunda\nsozinho.\n\n## Leia em voz alta\n\n> A galeria se abre numa câmara e a câmara está ocupada. Não por alguma coisa no fundo: pela coisa inteira. Quatro metros de pelagem cinza que ocupam a passagem de parede a parede, e que estavam ali antes de vocês nascerem para este mundo.\n\n## Sinal antes do ataque\n\nEle para de respirar. O ruído grave que enchia a câmara some, e o silêncio é ele se erguendo.\n\n## Ataques\n\n- Investida devastadora\n- Rugido que atordoa brevemente\n\n## Fraquezas\n\n- **Elemento — Veneno:** lâmina untada ou glândula. Nove golpes é muito para qualquer grupo, e o veneno é a única coisa no andar que encurta essa conta. Em 10+ ele perde o rugido pelo resto da cena.\n- **Resiste a Trovão** — décadas comendo o que aparece.\n- Ele se ergue e expõe o ventre sem pelagem grossa um instante antes de rugir.\n- Luz intensa o desorienta: viveu a vida inteira no escuro e nunca se adaptou.\n\n## O que torna este encontro memorável\n\nÉ o único monstro do andar que não quer nada. Não come o que mata, não guarda tesouro, não protege ninhada. Ele chegou primeiro numa câmara sem saída e decidiu que aquilo era dele, e defende isso há décadas contra os próprios parentes.\n\n## Complicações úteis\n\n- Vencem, e descobrem que a câmara não tem nada.\n- O rugido derruba cascalho e fecha a galeria de volta.\n- Ele não morre: recua para o fundo e bloqueia a passagem com o corpo.\n- Alguém percebe as cicatrizes e entende de quem elas são.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Grisalha | Raro | 1-2 | 100% | Costureiro, item Único |\n| Presa do Guardião | Incomum | 1-2 | 40% | Ferreiro, Joalheiro |\n| Olho Leitoso | Incomum | 1 | 25% | Alquimista — `pocoes/00_catalogo_pocoes_alquimista.md` |\n| Núcleo Vital | Raro | 1 | 100%, mas só sai **intacto** com um Caçador tirando 10+ na extração (`docs/receitas_cacador.md`) | Cozinheiro **ou** Coveiro — as duas receitas Lendárias concorrem pela mesma unidade, a mesa escolhe uma |\n| Col | — | 900-1400 | 100% | — |\n\n**Sobre o Núcleo Vital:** sem um Caçador tirando 10+, ele se perde no combate\n(não existe sem sucesso) — é o único material deste andar que depende de uma\nAção de Ofício de outra profissão pra existir, de propósito: o Guardião só\nmorre uma vez, e o grupo decide junto, na hora, se aquele núcleo vira\n`Carne do Monstro Supremo` (Cozinheiro) ou `Chamado do Guardião` (Coveiro).\n\n## Lore\n\nÉ uma Sombra de Mournhall que ficou velha demais para sair. As cicatrizes nele são de décadas e nenhuma é de arma — passou a vida inteira lutando contra os próprios parentes por uma câmara sem saída e sem nada dentro. Não guarda tesouro. Guarda o fundo de uma caverna, porque em algum momento decidiu que aquilo era dele.\n\n*Ele não protege nada. Ele só chegou primeiro, há muito tempo.*\n\n## Notas para o mestre\n\nNão é domável — miniboss, força incompatível com vínculo de Domador. É o\nconteúdo de recompensa de exploração citado em\n`docs/quests_andar1.md`/`cenas/quests_andar1.md` (`caverna_miniboss` no\nmapa) — não ligado ao mistério do andar 2."
+  "corpo": "## Habitat\n\nA câmara mais funda da Caverna dos Ecos, e só ela. Não sai de lá desde antes de qualquer jogador chegar ao andar.\n\n**Comportamento:** territorial ao extremo e absolutamente estático. Não caça, não patrulha, não persegue até a boca da caverna. Ele ocupa a passagem, e a passagem é tudo o que ele quer.\n\n## Aparência\n\nVersão muito maior e mais velha da Sombra de Mournhall — quase 4 metros\nde comprimento, pelagem grisalha em vez de negra, cicatrizes visíveis de\ndécadas sobreviveu no fundo da caverna. Guarda a passagem mais profunda\nsozinho.\n\n## Leia em voz alta\n\n> A galeria se abre numa câmara e a câmara está ocupada. Não por alguma coisa no fundo: pela coisa inteira. Quatro metros de pelagem cinza que ocupam a passagem de parede a parede, e que estavam ali antes de vocês nascerem para este mundo.\n\n## Sinal antes do ataque\n\nEle para de respirar. O ruído grave que enchia a câmara some, e o silêncio é ele se erguendo.\n\n## Ataques\n\n- Investida devastadora\n- Rugido que atordoa brevemente\n\n## Fraquezas\n\n- **Atributo — Espírito:** décadas de teimosia pura são o que o mantém de pé, e arma de Espírito bate exatamente aí. Nove golpes é muito para qualquer grupo, e essa é a única coisa no andar que encurta essa conta. Em 10+ ele perde o rugido pelo resto da cena.\n- Ele se ergue e expõe o ventre sem pelagem grossa um instante antes de rugir.\n- Luz intensa o desorienta: viveu a vida inteira no escuro e nunca se adaptou.\n\n## O que torna este encontro memorável\n\nÉ o único monstro do andar que não quer nada. Não come o que mata, não guarda tesouro, não protege ninhada. Ele chegou primeiro numa câmara sem saída e decidiu que aquilo era dele, e defende isso há décadas contra os próprios parentes.\n\n## Complicações úteis\n\n- Vencem, e descobrem que a câmara não tem nada.\n- O rugido derruba cascalho e fecha a galeria de volta.\n- Ele não morre: recua para o fundo e bloqueia a passagem com o corpo.\n- Alguém percebe as cicatrizes e entende de quem elas são.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Grisalha | Raro | 1-2 | 100% | Costureiro, item Único |\n| Presa do Guardião | Incomum | 1-2 | 40% | Ferreiro, Joalheiro |\n| Olho Leitoso | Incomum | 1 | 25% | Alquimista — `pocoes/00_catalogo_pocoes_alquimista.md` |\n| Núcleo Vital | Raro | 1 | 100%, mas só sai **intacto** com um Caçador tirando 10+ na extração (`docs/receitas_cacador.md`) | Cozinheiro **ou** Coveiro — as duas receitas Lendárias concorrem pela mesma unidade, a mesa escolhe uma |\n| Col | — | 900-1400 | 100% | — |\n\n**Sobre o Núcleo Vital:** sem um Caçador tirando 10+, ele se perde no combate\n(não existe sem sucesso) — é o único material deste andar que depende de uma\nAção de Ofício de outra profissão pra existir, de propósito: o Guardião só\nmorre uma vez, e o grupo decide junto, na hora, se aquele núcleo vira\n`Carne do Monstro Supremo` (Cozinheiro) ou `Chamado do Guardião` (Coveiro).\n\n## Lore\n\nÉ uma Sombra de Mournhall que ficou velha demais para sair. As cicatrizes nele são de décadas e nenhuma é de arma — passou a vida inteira lutando contra os próprios parentes por uma câmara sem saída e sem nada dentro. Não guarda tesouro. Guarda o fundo de uma caverna, porque em algum momento decidiu que aquilo era dele.\n\n*Ele não protege nada. Ele só chegou primeiro, há muito tempo.*\n\n## Notas para o mestre\n\nNão é domável — miniboss, força incompatível com vínculo de Domador. É o\nconteúdo de recompensa de exploração citado em\n`docs/quests_andar1.md`/`cenas/quests_andar1.md` (`caverna_miniboss` no\nmapa) — não ligado ao mistério do andar 2."
  },
  {
   "id": "guerreiro_kobold",
@@ -1539,11 +1695,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "guarda aberta no tempo morto depois da machadada pesada",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Trovão",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** as correias de couro da couraça queimam. Em 10+ a",
-   "Resiste a Trovão** — a couraça é sucata mal aterrada e dispersa a descarga.",
+   "Atributo — Reflexo:** a machadada é lenta e a guarda abre no tempo",
    "Separado do grupo, a defesa cai: ele foi treinado para formação, não para",
    "Ataques rápidos pelas laterais rompem a guarda; ele só cobre a frente."
   ],
@@ -1556,7 +1710,7 @@ var MONSTROS = [
    "flanco",
    "isolamento"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Dois metros de humanoide reptiliano, escamas cinza-esverdeadas e uma couraça montada com placas de três armaduras diferentes. Machado pesado numa mão, escudo redondo de madeira com a marca da tribo na outra. As presas não cabem na boca.",
@@ -1610,7 +1764,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nRuínas fortificadas, acampamentos kobold e toda a rota que leva ao covil de\nIllfang — o Limiar do Labirinto e os corredores externos. Aparecem também no\nCastelo de Ferro Negro, onde não deviam estar, e isso importa.\n\n**Comportamento:** serve ao Lorde Kobold com fanatismo. Ataca em grupo para\ndefender o chefe e o território, e não persegue além do limite da área que\nguarda. Disciplinado: recua em ordem, e recuar em ordem é pior que fugir.\n\n## Aparência\n\nDois metros de humanoide reptiliano, escamas cinza-esverdeadas e uma couraça\nmontada com placas de três armaduras diferentes. Machado pesado numa mão,\nescudo redondo de madeira com a marca da tribo na outra. As presas não cabem\nna boca.\n\n## Leia em voz alta\n\n> Ele bate o machado no escudo uma vez, e o som volta pelo corredor inteiro.\n> Não é ameaça — é aviso, e não é para vocês. Atrás dele, mais fundo no\n> escuro, outros três batem de volta. A marca branca no escudo é a mesma que\n> vocês viram no estandarte lá fora.\n\n## Sinal antes do ataque\n\nA batida no escudo. Sempre uma só, e sempre antes de qualquer movimento — é\ncomo eles pedem posição uns aos outros. Quem contar as respostas sabe quantos\nsão antes de ver o primeiro.\n\n## Ataques\n\n- **Machadada pesada** — forte e lenta, e deixa a guarda aberta depois.\n- **Muralha de escudos** — dois ou mais fecham o corredor. Não fere: nega\n  passagem, e enquanto a muralha existe ninguém passa sem quebrá-la.\n- **Empurrão de escudo** — devolve o grupo para o ponto onde ele quer.\n\n## Fraquezas\n\n- **Elemento — Fogo:** as correias de couro da couraça queimam. Em 10+ a\n  armadura remendada se solta e a muralha de escudos deixa de funcionar pelo\n  resto da cena.\n- **Resiste a Trovão** — a couraça é sucata mal aterrada e dispersa a descarga.\n- Separado do grupo, a defesa cai: ele foi treinado para formação, não para\n  duelo.\n- Ataques rápidos pelas laterais rompem a guarda; ele só cobre a frente.\n\n## O que torna este encontro memorável\n\nÉ onde o Andar 1 para de ser fauna e passa a ser **exército**. Eles têm\ninsígnia, hierarquia, ordem de recuo e alguém dando ordens. A mesa que\nenfrentou javali e lobo até aqui entende, sem uma linha de exposição, que a\ntorre não é um covil — é uma guarnição.\n\n## Complicações úteis\n\n- O grupo vence, mas a batida de escudo já chamou a patrulha seguinte.\n- Um recua vivo e em ordem, e leva o número exato do grupo.\n- A muralha de escudos fecha atrás do grupo, não na frente.\n- Alguém pega a insígnia e não entende o que isso significa até Tolbana.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Couro Kobold | Comum | 1-2 | 70% | Costureiro |\n| Presa Serrilhada | Comum | 1-2 | 60% | Ferreiro, Joalheiro |\n| Machadinha Rústica | Incomum | 1 | 30% | Arma Comum, ou sucata de Ferreiro |\n| Insígnia Kobold | Incomum | 1 | 25% | Corretores de Tolbana, prova de hierarquia |\n| Fragmento de Comando | Raro | 1 | 6% | Joalheiro, base do Cristal de Comando |\n| Col | — | 250-400 | 100% | — |\n\n## Lore\n\nOs Guerreiros Kobold são os soldados mais fiéis de Illfang. Agressivos e\ndisciplinados, cercam invasores, protegem passagens e abrem caminho para o\navanço do senhor deles. Sozinhos já são perigosos; em grupo tornam-se uma\nmuralha brutal contra aventureiros despreparados. Nenhum deles jamais foi\nvisto sozinho por vontade própria.\n\n*Não é um bicho no corredor. É um posto de guarda, e alguém o colocou ali.*\n\n## Notas para o mestre\n\n- **Onde entra:** `labirinto_entrada`, corredores da `sala_chefe`, e uma\n  aparição isolada no Castelo de Ferro Negro que ninguém consegue explicar.\n- **Como usar em transmissão:** a batida no escudo e as respostas no escuro.\n  Conte as respostas em voz alta e deixe o chat contar junto.\n- **Erro comum do grupo:** tentar romper a muralha de escudos pela força. Ela\n  é objetivo, não inimigo — contornar, incendiar ou fazer barulho em outro\n  corredor resolve mais barato.\n- **Como a cena encerra sem HP:** a Insígnia. Quem mostrar uma insígnia de\n  patente superior faz a formação abrir. Funciona uma vez, e depois eles\n  aprendem o rosto."
+  "corpo": "## Habitat\n\nRuínas fortificadas, acampamentos kobold e toda a rota que leva ao covil de\nIllfang — o Limiar do Labirinto e os corredores externos. Aparecem também no\nCastelo de Ferro Negro, onde não deviam estar, e isso importa.\n\n**Comportamento:** serve ao Lorde Kobold com fanatismo. Ataca em grupo para\ndefender o chefe e o território, e não persegue além do limite da área que\nguarda. Disciplinado: recua em ordem, e recuar em ordem é pior que fugir.\n\n## Aparência\n\nDois metros de humanoide reptiliano, escamas cinza-esverdeadas e uma couraça\nmontada com placas de três armaduras diferentes. Machado pesado numa mão,\nescudo redondo de madeira com a marca da tribo na outra. As presas não cabem\nna boca.\n\n## Leia em voz alta\n\n> Ele bate o machado no escudo uma vez, e o som volta pelo corredor inteiro.\n> Não é ameaça — é aviso, e não é para vocês. Atrás dele, mais fundo no\n> escuro, outros três batem de volta. A marca branca no escudo é a mesma que\n> vocês viram no estandarte lá fora.\n\n## Sinal antes do ataque\n\nA batida no escudo. Sempre uma só, e sempre antes de qualquer movimento — é\ncomo eles pedem posição uns aos outros. Quem contar as respostas sabe quantos\nsão antes de ver o primeiro.\n\n## Ataques\n\n- **Machadada pesada** — forte e lenta, e deixa a guarda aberta depois.\n- **Muralha de escudos** — dois ou mais fecham o corredor. Não fere: nega\n  passagem, e enquanto a muralha existe ninguém passa sem quebrá-la.\n- **Empurrão de escudo** — devolve o grupo para o ponto onde ele quer.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a machadada é lenta e a guarda abre no tempo\n  morto depois dela — arma de Reflexo vive nesse intervalo. Em 10+ a\n  armadura remendada se solta e a muralha de escudos deixa de funcionar\n  pelo resto da cena.\n- Separado do grupo, a defesa cai: ele foi treinado para formação, não para\n  duelo.\n- Ataques rápidos pelas laterais rompem a guarda; ele só cobre a frente.\n\n## O que torna este encontro memorável\n\nÉ onde o Andar 1 para de ser fauna e passa a ser **exército**. Eles têm\ninsígnia, hierarquia, ordem de recuo e alguém dando ordens. A mesa que\nenfrentou javali e lobo até aqui entende, sem uma linha de exposição, que a\ntorre não é um covil — é uma guarnição.\n\n## Complicações úteis\n\n- O grupo vence, mas a batida de escudo já chamou a patrulha seguinte.\n- Um recua vivo e em ordem, e leva o número exato do grupo.\n- A muralha de escudos fecha atrás do grupo, não na frente.\n- Alguém pega a insígnia e não entende o que isso significa até Tolbana.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Couro Kobold | Comum | 1-2 | 70% | Costureiro |\n| Presa Serrilhada | Comum | 1-2 | 60% | Ferreiro, Joalheiro |\n| Machadinha Rústica | Incomum | 1 | 30% | Arma Comum, ou sucata de Ferreiro |\n| Insígnia Kobold | Incomum | 1 | 25% | Corretores de Tolbana, prova de hierarquia |\n| Fragmento de Comando | Raro | 1 | 6% | Joalheiro, base do Cristal de Comando |\n| Col | — | 250-400 | 100% | — |\n\n## Lore\n\nOs Guerreiros Kobold são os soldados mais fiéis de Illfang. Agressivos e\ndisciplinados, cercam invasores, protegem passagens e abrem caminho para o\navanço do senhor deles. Sozinhos já são perigosos; em grupo tornam-se uma\nmuralha brutal contra aventureiros despreparados. Nenhum deles jamais foi\nvisto sozinho por vontade própria.\n\n*Não é um bicho no corredor. É um posto de guarda, e alguém o colocou ali.*\n\n## Notas para o mestre\n\n- **Onde entra:** `labirinto_entrada`, corredores da `sala_chefe`, e uma\n  aparição isolada no Castelo de Ferro Negro que ninguém consegue explicar.\n- **Como usar em transmissão:** a batida no escudo e as respostas no escuro.\n  Conte as respostas em voz alta e deixe o chat contar junto.\n- **Erro comum do grupo:** tentar romper a muralha de escudos pela força. Ela\n  é objetivo, não inimigo — contornar ou fazer barulho em outro\n  corredor resolve mais barato.\n- **Como a cena encerra sem HP:** a Insígnia. Quem mostrar uma insígnia de\n  patente superior faz a formação abrir. Funciona uma vez, e depois eles\n  aprendem o rosto."
  },
  {
   "id": "hound_de_cobre",
@@ -1633,10 +1787,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "Técnica — interromper a investida coordenada",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** as placas de cobre conduzem. Em 10+ os três perdem a investida coordenada pelo resto da cena e passam a atacar isolados.",
+   "Atributo — Reflexo:** a força do trio é a sincronia — arma de Reflexo, no tempo da investida em revezamento, desencontra os três. Em 10+ os três perdem a investida coordenada pelo resto da cena e passam a atacar isolados.",
    "Interromper a investida coordenada com **Técnica** desmonta o trio inteiro.",
    "O terceiro só entra depois dos dois primeiros. Derrubar um cancela o terceiro.",
    "Fora da estrada eles não seguem. O mato não é território deles."
@@ -1688,7 +1841,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nAo longo da Estrada de Ombric e nas imediações do Posto de Kaldrin. Andam em três, sempre em três, e sempre pela estrada — nunca pelo mato.\n\n**Comportamento:** coordenado e silencioso. Não rosnam e não avisam: um corta a frente, um corta a retaguarda, e o terceiro só ataca quando os dois primeiros já prenderam alguém.\n\n## Aparência\n\nCanídeo baixo de pelo ferrugem e placas de cobre fosco crescendo pelo dorso.\nAs placas tilintam quando a matilha muda de direção.\n\n## Leia em voz alta\n\n> Primeiro vem o som: moeda batendo em moeda sob a grama. Depois, três pares\n> de olhos baixos acompanham a carroça como se já soubessem onde ela vai parar.\n\n## Sinal antes do ataque\n\nUm dos animais aparece de propósito. Enquanto o grupo o observa, os outros\ndois escolhem o flanco e a rota de fuga.\n\n## Ataques\n\n- **Mordida de arrasto:** puxa alvo ou carga para fora da formação.\n- **Investida em revezamento:** outro hound reage quando o primeiro é atacado.\n\n## Fraquezas\n\n- **Elemento — Trovão:** as placas de cobre conduzem. Em 10+ os três perdem a investida coordenada pelo resto da cena e passam a atacar isolados.\n- Interromper a investida coordenada com **Técnica** desmonta o trio inteiro.\n- O terceiro só entra depois dos dois primeiros. Derrubar um cancela o terceiro.\n- Fora da estrada eles não seguem. O mato não é território deles.\n\n## O que torna este encontro memorável\n\nO dilema é sempre a carga ou a pessoa. Eles são ideais para escoltas: não\npedem dano alto, pedem formação e escolha.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa de Cobre Fosco | Comum | 1-2 | 55% | Ferreiro |\n| Dente de Matilha | Incomum | 1 | 30% | Mercenário, Joalheiro |\n| Elo de Coleira | Raro | 1 | 8% | Bibliotecário — alguém fez essa coleira |\n| Col | — | 35-55 | 100% | — |\n\n## Lore\n\nA placa de cobre nas costas deles não cresceu ali. É rebitada, e os rebites estão do lado de dentro. Nenhum comerciante do Andar 1 vende rebite daquele tamanho, nenhum ferreiro reconhece o trabalho, e o Elo de Coleira que às vezes cai junto tem um fecho que só abre por fora. Kazuo olhou uma vez, devolveu, e disse que não queria falar sobre aquilo.\n\n*Cachorro de estrada não usa coleira por acaso.*\n\n## Notas para o mestre\n\nUse dois ou três, nunca um só. Se a carroça for abandonada, eles levam a\ncarga e somem: derrota com continuação, não combate até a morte."
+  "corpo": "## Habitat\n\nAo longo da Estrada de Ombric e nas imediações do Posto de Kaldrin. Andam em três, sempre em três, e sempre pela estrada — nunca pelo mato.\n\n**Comportamento:** coordenado e silencioso. Não rosnam e não avisam: um corta a frente, um corta a retaguarda, e o terceiro só ataca quando os dois primeiros já prenderam alguém.\n\n## Aparência\n\nCanídeo baixo de pelo ferrugem e placas de cobre fosco crescendo pelo dorso.\nAs placas tilintam quando a matilha muda de direção.\n\n## Leia em voz alta\n\n> Primeiro vem o som: moeda batendo em moeda sob a grama. Depois, três pares\n> de olhos baixos acompanham a carroça como se já soubessem onde ela vai parar.\n\n## Sinal antes do ataque\n\nUm dos animais aparece de propósito. Enquanto o grupo o observa, os outros\ndois escolhem o flanco e a rota de fuga.\n\n## Ataques\n\n- **Mordida de arrasto:** puxa alvo ou carga para fora da formação.\n- **Investida em revezamento:** outro hound reage quando o primeiro é atacado.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a força do trio é a sincronia — arma de Reflexo, no tempo da investida em revezamento, desencontra os três. Em 10+ os três perdem a investida coordenada pelo resto da cena e passam a atacar isolados.\n- Interromper a investida coordenada com **Técnica** desmonta o trio inteiro.\n- O terceiro só entra depois dos dois primeiros. Derrubar um cancela o terceiro.\n- Fora da estrada eles não seguem. O mato não é território deles.\n\n## O que torna este encontro memorável\n\nO dilema é sempre a carga ou a pessoa. Eles são ideais para escoltas: não\npedem dano alto, pedem formação e escolha.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa de Cobre Fosco | Comum | 1-2 | 55% | Ferreiro |\n| Dente de Matilha | Incomum | 1 | 30% | Mercenário, Joalheiro |\n| Elo de Coleira | Raro | 1 | 8% | Bibliotecário — alguém fez essa coleira |\n| Col | — | 35-55 | 100% | — |\n\n## Lore\n\nA placa de cobre nas costas deles não cresceu ali. É rebitada, e os rebites estão do lado de dentro. Nenhum comerciante do Andar 1 vende rebite daquele tamanho, nenhum ferreiro reconhece o trabalho, e o Elo de Coleira que às vezes cai junto tem um fecho que só abre por fora. Kazuo olhou uma vez, devolveu, e disse que não queria falar sobre aquilo.\n\n*Cachorro de estrada não usa coleira por acaso.*\n\n## Notas para o mestre\n\nUse dois ou três, nunca um só. Se a carroça for abandonada, eles levam a\ncarga e somem: derrota com continuação, não combate até a morte."
  },
  {
   "id": "illfang_the_kobold_lord",
@@ -1710,11 +1863,9 @@ var MONSTROS = [
   "canonico": "sim",
   "fonte": "https://swordartonline.fandom.com/wiki/Illfang_the_Kobold_Lord",
   "fraqueza": "previsibilidade — os golpes de machado têm tempo de leitura, e o nodachi não",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Trovão",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** as correias e o estandarte queimam. Em 10+ ele perde a",
-   "Resiste a Trovão** — a couraça de placas soltas dispersa a descarga.",
+   "Atributo — Reflexo:** os golpes de machado têm tempo de leitura, e arma",
    "Magia e ataque de área causam dano dobrado nos lacaios, nunca nele.",
    "Depende dos kobolds: isolá-lo enfraquece a defesa dele de verdade, e os"
   ],
@@ -1727,7 +1878,7 @@ var MONSTROS = [
    "fase 2 — perde a defesa do escudo ao trocar pro nodachi",
    "isolamento dos Sentinels"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Kobold gigante, escamas grossas e couraça de placas, coroa de ossos e um estandarte com crânio fincado ao lado do trono. É a única criatura do andar cuja postura em repouso já é uma ameaça.",
@@ -1764,7 +1915,7 @@ var MONSTROS = [
     "raridade": "Raro",
     "qtd": "1",
     "chance": "60%",
-    "serve": "Joalheiro, elemento Trovão"
+    "serve": "Joalheiro"
    },
    {
     "item": "Nodachi de Illfang",
@@ -1781,6 +1932,41 @@ var MONSTROS = [
     "serve": "Item de bônus de atributo"
    },
    {
+    "item": "Espada do Lorde Kobold",
+    "raridade": "Raro",
+    "qtd": "1",
+    "chance": "60%",
+    "serve": "Arma (espada curta) para classe guerreiro"
+   },
+   {
+    "item": "Couro Kobold Real",
+    "raridade": "Incomum",
+    "qtd": "2",
+    "chance": "50%",
+    "serve": "Coureiro (armadura de chefe leve)"
+   },
+   {
+    "item": "Cristal do Boss",
+    "raridade": "Raro",
+    "qtd": "1",
+    "chance": "100%",
+    "serve": "Socket permanente de chefe em qualquer equipamento"
+   },
+   {
+    "item": "Núcleo de Chefe",
+    "raridade": "Épico",
+    "qtd": "1",
+    "chance": "100%",
+    "serve": "Craft de armas/armaduras de chefe nos andares altos"
+   },
+   {
+    "item": "Carta \"Illfang, o Lorde Kobold\"",
+    "raridade": "Épico",
+    "qtd": "1",
+    "chance": "~0.8%",
+    "serve": "Drop exclusivo do Boss de Andar; 1 carta equipável"
+   },
+   {
     "item": "Essência Kobold",
     "raridade": "Épico",
     "qtd": "1",
@@ -1795,7 +1981,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nHabita o acampamento kobold no vigésimo sub-nível do Labirinto, na sala do\nchefe. Não sai de lá e não precisa: tudo que vive na torre trabalha para\nmanter o caminho até ele longo.\n\n**Comportamento:** líder supremo dos kobolds do Andar 1. Comanda com astúcia e\ncrueldade, usa táticas de emboscada e desgaste antes de encarar pessoalmente,\ne protege território e tesouro nessa ordem. Ambicioso — sonha em ser rei de\nAincrad, e age como quem tem tempo para isso.\n\n## Aparência\n\nKobold gigante, escamas grossas e couraça de placas, coroa de ossos e um\nestandarte com crânio fincado ao lado do trono. É a única criatura do andar\ncuja postura em repouso já é uma ameaça.\n\n## Leia em voz alta\n\n> A sala é grande demais para qualquer coisa que vive nela. O teto some cedo,\n> o ar parece limpo demais e o silêncio dura só até Illfang se mexer. Quando o\n> escudo sobe e o machado ajusta no ombro, não parece que um chefe entrou em\n> combate. Parece que a sala inteira decidiu lutar.\n\n**Fala:** *\"Hraaah! Este território é meu! Nenhum intruso sairá vivo!\"*\n\n## Sinal antes do ataque\n\nIllfang quase nunca surpreende do nada — o aviso vem no peso. O escudo gira um\npouco antes do bloqueio bruto, o machado desce um ombro antes da varrida, e na\ntransição de fase o corpo inteiro muda de distância antes de o nodachi\naparecer.\n\n## Ataques\n\n- **Fase 1 — machado e broquel:** curto alcance, padrão de tanque, bloqueia\n  tudo que vem de frente.\n- **Fase 2 — nodachi:** gatilho é a última barra cair a um terço. Descarta\n  machado e escudo, ganha alcance e velocidade e acesso a Skills de katana. O\n  padrão muda por completo.\n- **Convocar Sentinels:** 3 Ruin Kobold Sentinels no início e mais 3 a cada\n  barra esvaziada — até 12 ao longo da luta.\n\n## Fraquezas\n\n- **Elemento — Fogo:** as correias e o estandarte queimam. Em 10+ ele perde a\n  convocação de Sentinels pelo resto da luta, e é a diferença entre raid e\n  massacre.\n- **Resiste a Trovão** — a couraça de placas soltas dispersa a descarga.\n- Magia e ataque de área causam dano dobrado nos lacaios, nunca nele.\n- Depende dos kobolds: isolá-lo enfraquece a defesa dele de verdade, e os\n  golpes físicos dele são previsíveis o bastante para serem aparados.\n\n## O que torna este encontro memorável\n\nMuda de fase de um jeito que pune confiança preguiçosa. Obriga o grupo a\npensar em chefe **e** reforço ao mesmo tempo, transforma organização de raid\nem mecânica real, e faz o último golpe parecer decisão, não matemática.\n\n## Complicações úteis\n\n- Um Sentinel atravessa a linha e força o grupo a dividir foco.\n- Um grupo aliado quebra formação cedo demais.\n- A troca para o nodachi acerta o personagem errado na posição errada.\n- Illfang recua um passo só para abrir espaço de combo.\n- O golpe final vira disputa entre necessidade e ego.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Dura | Comum | 4-6 | 100% | Ferreiro, Costureiro |\n| Moeda Antiga de Aincrad | Incomum | 2-3 | 80% | Corretores, Bibliotecário |\n| Coroa de Ossos de Illfang | Raro | 1 | 100% | Troféu de raid, 1 unidade |\n| Cristal de Comando | Raro | 1 | 60% | Joalheiro, elemento Trovão |\n| Nodachi de Illfang | Raro | 1 | 100% | Arma Única, só pro raid vencedor |\n| Última Cravação | Raro | 1 | 15% | Item de bônus de atributo |\n| Essência Kobold | **Épico** | 1 | 100% | Torna Raro em Único na bancada |\n| Col | — | ~2000 dividido pelo raid | 100% | — |\n\n**Também libera:** acesso ao Labirinto do Andar 2, para toda a guilda.\n\n## Lore\n\nIllfang é o líder supremo dos kobolds do Andar 1. Ambicioso e astuto, usa\ntáticas ardilosas e emboscadas para enfraquecer os inimigos antes de enfrentá-\nlos pessoalmente. Derrotá-lo enfraquece os kobolds e garante o controle da\nregião central. O que ninguém explica é por que uma criatura desenhada para\nguardar uma porta desenvolveu hierarquia, insígnia, ordem de recuo e um\nporta-estandarte que é substituído toda vez que morre.\n\n*Ele não guarda a passagem. Ele a administra.*\n\n## Notas para o mestre\n\n- **Onde entra:** `chefe_illfang`, na Sala do Chefe.\n- **Não é conteúdo de primeira sessão de grupo pequeno.** No anime é Diavel\n  quem descobre a sala e convoca uma reunião geral com informação comprada de\n  corretores — é assim que a luta é vencida. Trate como clímax de um arco de\n  várias sessões: a primeira aventura deveria terminar com o grupo *perto* da\n  porta, não *contra* ela.\n- **Erro comum do grupo:** focar o chefe e ignorar o resto.\n- **Como usar em transmissão:** guarde três imagens e volte a elas — a porta\n  abrindo, o nodachi aparecendo, o silêncio depois do último golpe.\n- **Ligação com o mistério:** a Essência Kobold e a linha interrompida da\n  Câmara da Inscrição falam da mesma coisa. Ver `docs/misterio_andar2.md`."
+  "corpo": "## Habitat\n\nHabita o acampamento kobold no vigésimo sub-nível do Labirinto, na sala do\nchefe. Não sai de lá e não precisa: tudo que vive na torre trabalha para\nmanter o caminho até ele longo.\n\n**Comportamento:** líder supremo dos kobolds do Andar 1. Comanda com astúcia e\ncrueldade, usa táticas de emboscada e desgaste antes de encarar pessoalmente,\ne protege território e tesouro nessa ordem. Ambicioso — sonha em ser rei de\nAincrad, e age como quem tem tempo para isso.\n\n## Aparência\n\nKobold gigante, escamas grossas e couraça de placas, coroa de ossos e um\nestandarte com crânio fincado ao lado do trono. É a única criatura do andar\ncuja postura em repouso já é uma ameaça.\n\n## Leia em voz alta\n\n> A sala é grande demais para qualquer coisa que vive nela. O teto some cedo,\n> o ar parece limpo demais e o silêncio dura só até Illfang se mexer. Quando o\n> escudo sobe e o machado ajusta no ombro, não parece que um chefe entrou em\n> combate. Parece que a sala inteira decidiu lutar.\n\n**Fala:** *\"Hraaah! Este território é meu! Nenhum intruso sairá vivo!\"*\n\n## Sinal antes do ataque\n\nIllfang quase nunca surpreende do nada — o aviso vem no peso. O escudo gira um\npouco antes do bloqueio bruto, o machado desce um ombro antes da varrida, e na\ntransição de fase o corpo inteiro muda de distância antes de o nodachi\naparecer.\n\n## Ataques\n\n- **Fase 1 — machado e broquel:** curto alcance, padrão de tanque, bloqueia\n  tudo que vem de frente.\n- **Fase 2 — nodachi:** gatilho é a última barra cair a um terço. Descarta\n  machado e escudo, ganha alcance e velocidade e acesso a Skills de katana. O\n  padrão muda por completo.\n- **Convocar Sentinels:** 3 Ruin Kobold Sentinels no início e mais 3 a cada\n  barra esvaziada — até 12 ao longo da luta.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** os golpes de machado têm tempo de leitura, e arma\n  de Reflexo vive nesse tempo — mesmo o nodachi abre janela entre um corte\n  e outro. Em 10+ ele perde a convocação de Sentinels pelo resto da luta,\n  e é a diferença entre raid e massacre.\n- Magia e ataque de área causam dano dobrado nos lacaios, nunca nele.\n- Depende dos kobolds: isolá-lo enfraquece a defesa dele de verdade, e os\n  golpes físicos dele são previsíveis o bastante para serem aparados.\n\n## O que torna este encontro memorável\n\nMuda de fase de um jeito que pune confiança preguiçosa. Obriga o grupo a\npensar em chefe **e** reforço ao mesmo tempo, transforma organização de raid\nem mecânica real, e faz o último golpe parecer decisão, não matemática.\n\n## Complicações úteis\n\n- Um Sentinel atravessa a linha e força o grupo a dividir foco.\n- Um grupo aliado quebra formação cedo demais.\n- A troca para o nodachi acerta o personagem errado na posição errada.\n- Illfang recua um passo só para abrir espaço de combo.\n- O golpe final vira disputa entre necessidade e ego.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Dura | Comum | 4-6 | 100% | Ferreiro, Costureiro |\n| Moeda Antiga de Aincrad | Incomum | 2-3 | 80% | Corretores, Bibliotecário |\n| Coroa de Ossos de Illfang | Raro | 1 | 100% | Troféu de raid, 1 unidade |\n| Cristal de Comando | Raro | 1 | 60% | Joalheiro |\n| Nodachi de Illfang | Raro | 1 | 100% | Arma Única, só pro raid vencedor |\n| Última Cravação | Raro | 1 | 15% | Item de bônus de atributo |\n| Espada do Lorde Kobold | **Raro** | 1 | 60% | Arma (espada curta) para classe guerreiro |\n| Couro Kobold Real | **Incomum** | 2 | 50% | Coureiro (armadura de chefe leve) |\n| Cristal do Boss | **Raro** | 1 | 100% | Socket permanente de chefe em qualquer equipamento |\n| Núcleo de Chefe | **Épico** | 1 | 100% | Craft de armas/armaduras de chefe nos andares altos |\n| Carta \"Illfang, o Lorde Kobold\" | **Épico** | 1 | ~0.8% | Drop exclusivo do Boss de Andar; 1 carta equipável |\n| Essência Kobold | **Épico** | 1 | 100% | Torna Raro em Único na bancada |\n| Col | — | ~2000 dividido pelo raid | 100% | — |\n\n**Também libera:** acesso ao Labirinto do Andar 2, para toda a guilda.\n\n## Lore\n\nIllfang é o líder supremo dos kobolds do Andar 1. Ambicioso e astuto, usa\ntáticas ardilosas e emboscadas para enfraquecer os inimigos antes de enfrentá-\nlos pessoalmente. Derrotá-lo enfraquece os kobolds e garante o controle da\nregião central. O que ninguém explica é por que uma criatura desenhada para\nguardar uma porta desenvolveu hierarquia, insígnia, ordem de recuo e um\nporta-estandarte que é substituído toda vez que morre.\n\n*Ele não guarda a passagem. Ele a administra.*\n\n## Notas para o mestre\n\n- **Onde entra:** `chefe_illfang`, na Sala do Chefe.\n- **Não é conteúdo de primeira sessão de grupo pequeno.** No anime é Diavel\n  quem descobre a sala e convoca uma reunião geral com informação comprada de\n  corretores — é assim que a luta é vencida. Trate como clímax de um arco de\n  várias sessões: a primeira aventura deveria terminar com o grupo *perto* da\n  porta, não *contra* ela.\n- **Erro comum do grupo:** focar o chefe e ignorar o resto.\n- **Como usar em transmissão:** guarde três imagens e volte a elas — a porta\n  abrindo, o nodachi aparecendo, o silêncio depois do último golpe.\n- **Ligação com o mistério:** a Essência Kobold e a linha interrompida da\n  Câmara da Inscrição falam da mesma coisa. Ver `docs/misterio_andar2.md`."
  },
  {
   "id": "lacustre_vagador",
@@ -1818,11 +2004,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe na cabeça",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** a água conduz. Em 10+ ele perde a capacidade de afundar e recomeçar pelo resto da cena.",
-   "Resiste a Gelo** — passa a vida em água fria.",
+   "Atributo — Reflexo:** as investidas aquáticas são rápidas, mas vêm uma de cada vez — arma de Reflexo, lida no deslocamento errado da superfície, pega a janela. Em 10+ ele perde a capacidade de afundar e recomeçar pelo resto da cena.",
    "A cabeça é o alvo e ela quebra a superfície antes do resto do corpo.",
    "Ele não sai da água. Um passo para o barranco encerra o encontro."
   ],
@@ -1841,7 +2025,7 @@ var MONSTROS = [
   "comportamento": "agressivo com o que está na água e indiferente com o que está em terra. Ataca de baixo, uma vez, e afunda de novo — o encontro é uma sequência de investidas isoladas, não uma luta contínua.",
   "leitura": "",
   "sinal": "",
-  "lore": "É a fonte mais acessível de Cristal de Gelo do andar, e é por isso que existe uma fila informal de gente disposta a entrar no Sylvaine ao entardecer. Os pescadores de Brenmoor acham isso idiota e cobram caro para levar quem insiste. Eles nunca entram na água junto.",
+  "lore": "É a fonte mais acessível de Cristal de Gelo do andar — matéria-prima rara de Joalheiro — e é por isso que existe uma fila informal de gente disposta a entrar no Sylvaine ao entardecer. Os pescadores de Brenmoor acham isso idiota e cobram caro para levar quem insiste. Eles nunca entram na água junto.",
   "notas": "O Lacustre Vagador é mais eficaz em ambientes aquáticos. Use som e superfície como ferramenta: o medo bom aqui é \"a água não está se comportando direito\".",
   "drops": [
    {
@@ -1863,7 +2047,7 @@ var MONSTROS = [
     "raridade": "Raro",
     "qtd": "1",
     "chance": "10%",
-    "serve": "Joalheiro (elemento Gelo)"
+    "serve": "Joalheiro"
    },
    {
     "item": "Col",
@@ -1873,7 +2057,85 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nAs águas profundas do Lago Sylvaine e as margens da Ilha de Pemberton. Sobe à superfície ao entardecer e passa a noite inteira em água rasa.\n\n**Comportamento:** agressivo com o que está na água e indiferente com o que está em terra. Ataca de baixo, uma vez, e afunda de novo — o encontro é uma sequência de investidas isoladas, não uma luta contínua.\n\n## Aparência\n\nUm ser aquático de cerca de 2 metros, com uma silhueta similar a um peixe-gato mas com escamas prateadas e olhos grandes e brilhantes. Possui braços curtos e finos terminados em garras e pernas traseiras poderosas que podem se mover rapidamente na água.\n\n## Leia em voz alta\n\n> A água entrega o Vagador antes do corpo inteiro aparecer. Não por espuma ou\n> onda grande, mas por um deslocamento errado, uma linha na superfície que vem\n> na direção de vocês como se o lago tivesse decidido andar.\n\n## Sinal antes do ataque\n\n- peixe some da margem,\n- água parece calma demais,\n- um círculo pequeno nasce onde não havia vento,\n- e o primeiro movimento sempre parece menor do que realmente é.\n\n## Ataques\n\n- Investida aquática\n- Jato de água\n\n## Fraquezas\n\n- **Elemento — Trovão:** a água conduz. Em 10+ ele perde a capacidade de afundar e recomeçar pelo resto da cena.\n- **Resiste a Gelo** — passa a vida em água fria.\n- A cabeça é o alvo e ela quebra a superfície antes do resto do corpo.\n- Ele não sai da água. Um passo para o barranco encerra o encontro.\n\n## O que torna este encontro memorável\n\nO Vagador muda a leitura do lago. Depois dele, margem nunca mais parece só\nmargem. O encontro fica forte quando o grupo sente que está lendo água, não\napenas lutando contra um bicho.\n\n## Complicações úteis\n\n- O grupo vê o movimento cedo, mas no ponto errado.\n- A criatura aceita a isca, mas rejeita proximidade humana.\n- Um personagem escorrega e muda o eixo da cena inteira.\n- O Vagador recua, some e reaparece em outro ângulo.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Prateada | Comum | 2-3 | 50% | Costureiro, Joalheiro |\n| Garras Aquáticas | Incomum | 1 | 25% | Ferreiro |\n| Cristal de Gelo | Raro | 1 | 10% | Joalheiro (elemento Gelo) |\n| Col | — | 150-220 | 100% | — |\n\n## Lore\n\nÉ a fonte mais acessível de Cristal de Gelo do andar, e é por isso que existe uma fila informal de gente disposta a entrar no Sylvaine ao entardecer. Os pescadores de Brenmoor acham isso idiota e cobram caro para levar quem insiste. Eles nunca entram na água junto.\n\n*Ele não persegue ninguém até a margem. Só espera você voltar.*\n\n## Notas para o mestre\n\nO Lacustre Vagador é mais eficaz em ambientes aquáticos. Use som e superfície\ncomo ferramenta: o medo bom aqui é \"a água não está se comportando direito\".\n\n**Erro comum do grupo:** tratar o primeiro encontro como combate normal.\n\n**Como usar em transmissão:** segure a revelação do corpo inteiro o máximo que\nder; superfície, silêncio e reação vendem melhor o monstro do que exposição."
+  "corpo": "## Habitat\n\nAs águas profundas do Lago Sylvaine e as margens da Ilha de Pemberton. Sobe à superfície ao entardecer e passa a noite inteira em água rasa.\n\n**Comportamento:** agressivo com o que está na água e indiferente com o que está em terra. Ataca de baixo, uma vez, e afunda de novo — o encontro é uma sequência de investidas isoladas, não uma luta contínua.\n\n## Aparência\n\nUm ser aquático de cerca de 2 metros, com uma silhueta similar a um peixe-gato mas com escamas prateadas e olhos grandes e brilhantes. Possui braços curtos e finos terminados em garras e pernas traseiras poderosas que podem se mover rapidamente na água.\n\n## Leia em voz alta\n\n> A água entrega o Vagador antes do corpo inteiro aparecer. Não por espuma ou\n> onda grande, mas por um deslocamento errado, uma linha na superfície que vem\n> na direção de vocês como se o lago tivesse decidido andar.\n\n## Sinal antes do ataque\n\n- peixe some da margem,\n- água parece calma demais,\n- um círculo pequeno nasce onde não havia vento,\n- e o primeiro movimento sempre parece menor do que realmente é.\n\n## Ataques\n\n- Investida aquática\n- Jato de água\n\n## Fraquezas\n\n- **Atributo — Reflexo:** as investidas aquáticas são rápidas, mas vêm uma de cada vez — arma de Reflexo, lida no deslocamento errado da superfície, pega a janela. Em 10+ ele perde a capacidade de afundar e recomeçar pelo resto da cena.\n- A cabeça é o alvo e ela quebra a superfície antes do resto do corpo.\n- Ele não sai da água. Um passo para o barranco encerra o encontro.\n\n## O que torna este encontro memorável\n\nO Vagador muda a leitura do lago. Depois dele, margem nunca mais parece só\nmargem. O encontro fica forte quando o grupo sente que está lendo água, não\napenas lutando contra um bicho.\n\n## Complicações úteis\n\n- O grupo vê o movimento cedo, mas no ponto errado.\n- A criatura aceita a isca, mas rejeita proximidade humana.\n- Um personagem escorrega e muda o eixo da cena inteira.\n- O Vagador recua, some e reaparece em outro ângulo.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Prateada | Comum | 2-3 | 50% | Costureiro, Joalheiro |\n| Garras Aquáticas | Incomum | 1 | 25% | Ferreiro |\n| Cristal de Gelo | Raro | 1 | 10% | Joalheiro |\n| Col | — | 150-220 | 100% | — |\n\n## Lore\n\nÉ a fonte mais acessível de Cristal de Gelo do andar — matéria-prima rara de Joalheiro — e é por isso que existe uma fila informal de gente disposta a entrar no Sylvaine ao entardecer. Os pescadores de Brenmoor acham isso idiota e cobram caro para levar quem insiste. Eles nunca entram na água junto.\n\n*Ele não persegue ninguém até a margem. Só espera você voltar.*\n\n## Notas para o mestre\n\nO Lacustre Vagador é mais eficaz em ambientes aquáticos. Use som e superfície\ncomo ferramenta: o medo bom aqui é \"a água não está se comportando direito\".\n\n**Erro comum do grupo:** tratar o primeiro encontro como combate normal.\n\n**Como usar em transmissão:** segure a revelação do corpo inteiro o máximo que\nder; superfície, silêncio e reação vendem melhor o monstro do que exposição."
+ },
+ {
+  "id": "lagarto_da_floresta",
+  "nome": "Lagarto da Floresta",
+  "epiteto": "Corredor de Trilhas",
+  "arquivo": "monstros/lagarto_da_floresta.md",
+  "img": "",
+  "carta": "",
+  "tipo": "besta",
+  "zona": "Floresta e Planícies Iniciais",
+  "regioes": [
+   "floresta_horunka",
+   "bosque_sussurrante",
+   "margens_rio_coluber"
+  ],
+  "nivelRecomendado": "2-3",
+  "ameaca": "comum",
+  "golpes": "3",
+  "local": "campo",
+  "canonico": "nao",
+  "fonte": "",
+  "fraqueza": "o pescoço, exposto quando ele ergue a cabeça para farejar o ar",
+  "atributoFraqueza": "Reflexo",
+  "fraquezas": [
+   "Atributo — Reflexo:** ele depende de rajada curta. Desviar do primeiro pulo quebra o ritmo dele. Acertar a fraqueza de atributo em 10+ faz ele se enrolar e parar de atacar por 1 rodada.",
+   "Pé quente: se o chão estiver frio ou molhado, ele não corre.",
+   "Sem cobertura: fora da floresta, ele exposto e foge.",
+   "Sozinho: não luta se houver mais de 3 pessoas no grupo."
+  ],
+  "resistencias": [
+   "veneno leve"
+  ],
+  "vulnerabilidades": [
+   "frio",
+   "isolamento",
+   "água fria"
+  ],
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
+  "resumo": "Um metro e meio de comprimento, cauda igual ao corpo. Escamas verdes-musgo com listras amarelas claras. Olhos dourados que se movem independentes. Anda baixo, rente ao chão.",
+  "habitat": "Trilhas ensolaradas da Floresta de Horunka e margens do Rio Coluber, onde o sol esquenta as pedras. Toma sol de manhã, caça à tarde.",
+  "comportamento": "solitário, territorial, mas não agressivo de primeira. Só ataca se você chegar perto do ninho (um buraco entre raízes). Foge se perder 2 golpes antes de você.",
+  "leitura": "",
+  "sinal": "A cauda bate leve na pedra, duas vezes. É o aviso. Terceira batida ele corre.",
+  "lore": "Lagarto da Floresta é a primeira criatura que os aventureiros aprendem a abater com confiança. Tem gosto de frango com terra. Escamas são usadas em tudo. Dizem que um lagarto velho sobrevive a 3 primaveras já tem mais experiência de caça do que metade dos aventureiros de andar 1.",
+  "notas": "",
+  "drops": [
+   {
+    "item": "Escama Pequena",
+    "raridade": "Comum",
+    "qtd": "2-3",
+    "chance": "70%",
+    "serve": "Costureiro, Alquimista (escudo de escamas)"
+   },
+   {
+    "item": "Pele de Lagarto",
+    "raridade": "Comum",
+    "qtd": "1",
+    "chance": "55%",
+    "serve": "Coureiro (luvas, botas leves)"
+   },
+   {
+    "item": "Garra de Réptil",
+    "raridade": "Incomum",
+    "qtd": "1",
+    "chance": "30%",
+    "serve": "Ferreiro (arranhões, ponta de adaga)"
+   },
+   {
+    "item": "Col",
+    "raridade": "—",
+    "qtd": "15-35",
+    "chance": "100%",
+    "serve": "—"
+   }
+  ],
+  "corpo": "## Habitat\n\nTrilhas ensolaradas da Floresta de Horunka e margens do Rio Coluber, onde o sol esquenta as pedras. Toma sol de manhã, caça à tarde.\n\n**Comportamento:** solitário, territorial, mas não agressivo de primeira. Só ataca se você chegar perto do ninho (um buraco entre raízes). Foge se perder 2 golpes antes de você.\n\n## Aparência\n\nUm metro e meio de comprimento, cauda igual ao corpo. Escamas verdes-musgo com listras amarelas claras. Olhos dourados que se movem independentes. Anda baixo, rente ao chão.\n\n## Leia em voz alta\n\n> Ele está parado na pedra do trilho, tomando sol, e não se mexe quando vocês passam. Apenas os olhos giram, seguindo vocês. Quando a ponta da cauda começa a bater devagar na pedra, ele já decidiu se vocês são problema.\n\n## Sinal antes do ataque\n\nA cauda bate leve na pedra, duas vezes. É o aviso. Terceira batida ele corre.\n\n## Ataques\n\n- **Mordida rápida** — dente pequeno mas afiado, agarra e não larga. Teste de Reflexo para tirar a mão a tempo.\n- **Investida de cauda** — balança a cauda dura como pau na altura do joelho. Derruba quem não pula.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** ele depende de rajada curta. Desviar do primeiro pulo quebra o ritmo dele. Acertar a fraqueza de atributo em 10+ faz ele se enrolar e parar de atacar por 1 rodada.\n- Pé quente: se o chão estiver frio ou molhado, ele não corre.\n- Sem cobertura: fora da floresta, ele exposto e foge.\n- Sozinho: não luta se houver mais de 3 pessoas no grupo.\n\n## O que torna este encontro memorável\n\nEle não é perigoso, mas o primeiro monstro que a maioria dos grupos consegue abater sem levar dano — a primeira vitória \"fácil\" de Aincrad. Quando ele morre, a cauda continua batendo por uns 10 segundos, e o grupo ri pela primeira vez.\n\n## Complicações úteis\n\n- O grupo ganha, mas ele morde uma bolsa e rasga — algum material cai na terra molhada.\n- O lagarto era um filhote; a mãe aparece no dia seguinte no mesmo lugar.\n- Ele foge para o ninho, e dentro tem ovos. O que o grupo faz?\n- Ele passa veneno leve na mordida — nada grave, mas coça por 3 dias.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Pequena | Comum | 2-3 | 70% | Costureiro, Alquimista (escudo de escamas) |\n| Pele de Lagarto | Comum | 1 | 55% | Coureiro (luvas, botas leves) |\n| Garra de Réptil | Incomum | 1 | 30% | Ferreiro (arranhões, ponta de adaga) |\n| Col | — | 15-35 | 100% | — |\n\n## Lore\n\nLagarto da Floresta é a primeira criatura que os aventureiros aprendem a abater com confiança. Tem gosto de frango com terra. Escamas são usadas em tudo. Dizem que um lagarto velho sobrevive a 3 primaveras já tem mais experiência de caça do que metade dos aventureiros de andar 1.\n\n*O primeiro a matar um lagarto sem levar mordida é o primeiro a crescer.*\n\n## Notas para o mestre\n\n- **Onde entra:** regioes de floresta, margem de rio.\n- **Como usar em transmissão:** som de cauda em pedra; close no olho dourado girando.\n- **Erro comum do grupo:** tratar como besta perigosa. Ele foge mais do que ataca.\n- **Como a cena encerra sem HP:** deixar ele ir. Ele lembra do grupo e não ataca na próxima vez."
  },
  {
   "id": "libelula_cortante",
@@ -1896,10 +2158,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe em voo reto",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Gelo:** as asas travam no ar frio. Em 10+ ela perde o voo reto pelo resto da cena.",
+   "Atributo — Reflexo:** o voo é rápido e reto — arma de Reflexo, lida no corredor previsível, encontra ela no meio do caminho. Em 10+ ela perde o voo reto pelo resto da cena.",
    "Frágil: um golpe qualquer resolve, se acertar.",
    "Ela só voa reto. O corredor de voo é previsível e dá para sair dele.",
    "Agachar já basta. Ela não desce."
@@ -1908,9 +2169,9 @@ var MONSTROS = [
   "vulnerabilidades": [
    "vento forte"
   ],
-  "domavel": "sim",
-  "domaSucessos": "2",
-  "domaRequisito": "Nenhum item — só paciência e um teste de Reflexo pra acompanhar o voo",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Libélula do tamanho de um antebraço, asas translúcidas com veios metálicos que refletem luz, corpo azul-turquesa. Comum ao longo de todo o Rio Coluber.",
   "habitat": "Sobre a água corrente do Rio Coluber e nos juncos do Charco de Grenna. Voa sempre em linha reta, nunca em curva, e sempre à altura do peito.",
   "comportamento": "agressiva por acidente. Não ataca de propósito: atravessa, e quem estiver no caminho é cortado. Não muda de rota por causa de ninguém.",
@@ -1941,7 +2202,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nSobre a água corrente do Rio Coluber e nos juncos do Charco de Grenna. Voa sempre em linha reta, nunca em curva, e sempre à altura do peito.\n\n**Comportamento:** agressiva por acidente. Não ataca de propósito: atravessa, e quem estiver no caminho é cortado. Não muda de rota por causa de ninguém.\n\n## Aparência\n\nLibélula do tamanho de um antebraço, asas translúcidas com veios\nmetálicos que refletem luz, corpo azul-turquesa. Comum ao longo de todo o\nRio Coluber.\n\n## Leia em voz alta\n\n> Ela cruza o rio em linha reta e o som que faz é de papel rasgando. O junco por onde ela passou fica cortado na diagonal, limpo, na altura exata do peito de vocês.\n\n## Sinal antes do ataque\n\nO junco cortado. Se há um talho diagonal limpo no mato à frente, ela usa aquele corredor — e vai usar de novo.\n\n## Ataques\n\n- Corte de asa em passagem rasante (dano mínimo)\n\n## Fraquezas\n\n- **Elemento — Gelo:** as asas travam no ar frio. Em 10+ ela perde o voo reto pelo resto da cena.\n- Frágil: um golpe qualquer resolve, se acertar.\n- Ela só voa reto. O corredor de voo é previsível e dá para sair dele.\n- Agachar já basta. Ela não desce.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Asa Translúcida | Comum | 2 | 80% | Costureiro, Artesão |\n| Lâmina de Asa | Incomum | 1 | 20% | Ferreiro — corta melhor que faca |\n| Col | — | 35-60 | 100% | — |\n\n## Lore\n\nA Lâmina de Asa é a melhor faca de descamar do Andar 1 e não pode ser comprada em lugar nenhum. Os pescadores de Brenmoor têm uma cada, herdada ou trocada, e nenhum deles vende. Quem quiser uma tem que ficar parado num corredor de voo esperando levar um talho, e todos eles acham isso muito engraçado.\n\n*Ela não está atacando vocês. Vocês é que estão no corredor.*\n\n## Notas para o mestre\n\nDomável — uma das doma mais fáceis do andar 1, resultado é um batedor\nrápido (bônus em percepção de área aberta), não um combatente. Boa\nopção de \"primeiro bicho\" alternativa ao Toca na Raiz, pra quem prefere\num companheiro não-combatente."
+  "corpo": "## Habitat\n\nSobre a água corrente do Rio Coluber e nos juncos do Charco de Grenna. Voa sempre em linha reta, nunca em curva, e sempre à altura do peito.\n\n**Comportamento:** agressiva por acidente. Não ataca de propósito: atravessa, e quem estiver no caminho é cortado. Não muda de rota por causa de ninguém.\n\n## Aparência\n\nLibélula do tamanho de um antebraço, asas translúcidas com veios\nmetálicos que refletem luz, corpo azul-turquesa. Comum ao longo de todo o\nRio Coluber.\n\n## Leia em voz alta\n\n> Ela cruza o rio em linha reta e o som que faz é de papel rasgando. O junco por onde ela passou fica cortado na diagonal, limpo, na altura exata do peito de vocês.\n\n## Sinal antes do ataque\n\nO junco cortado. Se há um talho diagonal limpo no mato à frente, ela usa aquele corredor — e vai usar de novo.\n\n## Ataques\n\n- Corte de asa em passagem rasante (dano mínimo)\n\n## Fraquezas\n\n- **Atributo — Reflexo:** o voo é rápido e reto — arma de Reflexo, lida no corredor previsível, encontra ela no meio do caminho. Em 10+ ela perde o voo reto pelo resto da cena.\n- Frágil: um golpe qualquer resolve, se acertar.\n- Ela só voa reto. O corredor de voo é previsível e dá para sair dele.\n- Agachar já basta. Ela não desce.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Asa Translúcida | Comum | 2 | 80% | Costureiro, Artesão |\n| Lâmina de Asa | Incomum | 1 | 20% | Ferreiro — corta melhor que faca |\n| Col | — | 35-60 | 100% | — |\n\n## Lore\n\nA Lâmina de Asa é a melhor faca de descamar do Andar 1 e não pode ser comprada em lugar nenhum. Os pescadores de Brenmoor têm uma cada, herdada ou trocada, e nenhum deles vende. Quem quiser uma tem que ficar parado num corredor de voo esperando levar um talho, e todos eles acham isso muito engraçado.\n\n*Ela não está atacando vocês. Vocês é que estão no corredor.*\n\n## Notas para o mestre\n\nDomável — uma das doma mais fáceis do andar 1, resultado é um batedor\nrápido (bônus em percepção de área aberta), não um combatente. Boa\nopção de \"primeiro bicho\" alternativa ao Toca na Raiz, pra quem prefere\num companheiro não-combatente."
  },
  {
   "id": "little_nepenthes",
@@ -1963,11 +2224,9 @@ var MONSTROS = [
   "canonico": "sim",
   "fonte": "https://swordartonline.fandom.com/wiki/Little_Nepenthes",
   "fraqueza": "destruir a \"boca\" central expõe o núcleo",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** pega imediatamente. Em 10+ as vizinhas param de se aproximar pelo resto da cena.",
-   "Resiste a Veneno** — a planta é a fonte.",
+   "Atributo — Reflexo:** o spray corrosivo prende o pé de quem é lento — arma de Reflexo bate e sai antes da vinha voltar. Em 10+ as vizinhas param de se aproximar pelo resto da cena.",
    "Destruir a boca central expõe o núcleo e encerra em um golpe.",
    "Elas são lentas. Andar resolve o que lutar não resolve."
   ],
@@ -2017,7 +2276,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nFloresta de Horunka, sempre a menos de trinta metros de uma Mãe-Raiz — e é por isso que aparecem em grupos que ninguém consegue explicar.\n\n**Comportamento:** agressiva e lenta. Anda, o que já é errado para uma planta, mas anda mal. Cerca em vez de perseguir, e o cerco só funciona se o grupo ficar parado discutindo.\n\n## Aparência\n\nPlanta predadora de ~1,5m de altura (nada \"little\" apesar do nome). O\ncorpo inferior é uma massa de raízes usada pra se locomover; duas\nvinhas-braço com folhas pontudas tipo adaga saem dos dois lados, acima\ndas raízes; no centro da \"cabeça\" fica uma boca vermelha larga, pingando\num líquido viscoso enquanto abre e fecha.\n\nExiste uma variante rara com uma flor vermelha brotando do topo — essa\nvariante dropa um item especial, o \"Little Nepenthes's Ovule\".\n\n## Leia em voz alta\n\n> O mato à frente se mexe contra o vento. Uma delas sai da vegetação andando — planta, com boca, andando — e atrás dela outras três fazem a mesma coisa, mais devagar, fechando um semicírculo folgado à volta de vocês.\n\n## Sinal antes do ataque\n\nA vegetação se mexendo na direção errada. Onde não há vento e o mato balança, elas estão vindo.\n\n## Ataques\n\n- Golpe/investida com as vinhas-folha (curto alcance, tipo adaga)\n- **Spray corrosivo** — alcança até ~5 metros; dano tanto no HP quanto na\n  **durabilidade do equipamento**, e deixa o alvo grudento/lento por um\n  tempo\n\n## Fraquezas\n\n- **Elemento — Fogo:** pega imediatamente. Em 10+ as vizinhas param de se aproximar pelo resto da cena.\n- **Resiste a Veneno** — a planta é a fonte.\n- Destruir a boca central expõe o núcleo e encerra em um golpe.\n- Elas são lentas. Andar resolve o que lutar não resolve.\n\n## O que torna este encontro memorável\n\nÉ onde a mesa aprende que nem toda luta precisa acontecer. Elas são lentas o suficiente para o grupo ir embora a qualquer momento, e lentas o suficiente para o grupo perceber isso tarde demais, depois de já ter gastado meia hora e um frasco.\n\n## Complicações úteis\n\n- Vencem, e uma com flor escapa — o Ovule vai embora com ela.\n- O cerco fecha em cima do único caminho de volta.\n- O ácido acerta a mochila, não a pessoa.\n- Alguém repara que todas as que têm flor apontam para o mesmo lado.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seiva de Nepenthes | Comum | 1-2 | 60% | Alquimista, Médico |\n| Fibra de Caule | Comum | 1-2 | 45% | Costureiro |\n| Little Nepenthes's Ovule | Raro | 1 | 10% | Quest de Horunka — só na variante com flor |\n| Col | — | 45-70 | 100% | — |\n\n## Lore\n\nO Ovule é o item de quest mais famoso do Andar 1 e a razão de metade dos grupos novos passarem uma tarde arrancando planta em Horunka. O que quase ninguém percebe é que as Nepenthes com flor ficam sempre voltadas para a mesma direção, e que a direção aponta para a clareira da Mãe-Raiz. O grupo que percebe isso encontra o Covil Escondido sem procurar.\n\n*Elas não crescem espalhadas. Elas crescem em volta de alguma coisa.*\n\n## Notas para o mestre\n\nBom pra uma quest de **coleta** (ex: um alquimista quer amostras da seiva/\nvinha pra uma receita) — o spray corrosivo dá um motivo mecânico real pra\njogadores testarem Reflexo pra não estragar o equipamento, e não só Corpo\npra bater mais forte."
+  "corpo": "## Habitat\n\nFloresta de Horunka, sempre a menos de trinta metros de uma Mãe-Raiz — e é por isso que aparecem em grupos que ninguém consegue explicar.\n\n**Comportamento:** agressiva e lenta. Anda, o que já é errado para uma planta, mas anda mal. Cerca em vez de perseguir, e o cerco só funciona se o grupo ficar parado discutindo.\n\n## Aparência\n\nPlanta predadora de ~1,5m de altura (nada \"little\" apesar do nome). O\ncorpo inferior é uma massa de raízes usada pra se locomover; duas\nvinhas-braço com folhas pontudas tipo adaga saem dos dois lados, acima\ndas raízes; no centro da \"cabeça\" fica uma boca vermelha larga, pingando\num líquido viscoso enquanto abre e fecha.\n\nExiste uma variante rara com uma flor vermelha brotando do topo — essa\nvariante dropa um item especial, o \"Little Nepenthes's Ovule\".\n\n## Leia em voz alta\n\n> O mato à frente se mexe contra o vento. Uma delas sai da vegetação andando — planta, com boca, andando — e atrás dela outras três fazem a mesma coisa, mais devagar, fechando um semicírculo folgado à volta de vocês.\n\n## Sinal antes do ataque\n\nA vegetação se mexendo na direção errada. Onde não há vento e o mato balança, elas estão vindo.\n\n## Ataques\n\n- Golpe/investida com as vinhas-folha (curto alcance, tipo adaga)\n- **Spray corrosivo** — alcança até ~5 metros; dano tanto no HP quanto na\n  **durabilidade do equipamento**, e deixa o alvo grudento/lento por um\n  tempo\n\n## Fraquezas\n\n- **Atributo — Reflexo:** o spray corrosivo prende o pé de quem é lento — arma de Reflexo bate e sai antes da vinha voltar. Em 10+ as vizinhas param de se aproximar pelo resto da cena.\n- Destruir a boca central expõe o núcleo e encerra em um golpe.\n- Elas são lentas. Andar resolve o que lutar não resolve.\n\n## O que torna este encontro memorável\n\nÉ onde a mesa aprende que nem toda luta precisa acontecer. Elas são lentas o suficiente para o grupo ir embora a qualquer momento, e lentas o suficiente para o grupo perceber isso tarde demais, depois de já ter gastado meia hora e um frasco.\n\n## Complicações úteis\n\n- Vencem, e uma com flor escapa — o Ovule vai embora com ela.\n- O cerco fecha em cima do único caminho de volta.\n- O ácido acerta a mochila, não a pessoa.\n- Alguém repara que todas as que têm flor apontam para o mesmo lado.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seiva de Nepenthes | Comum | 1-2 | 60% | Alquimista, Médico |\n| Fibra de Caule | Comum | 1-2 | 45% | Costureiro |\n| Little Nepenthes's Ovule | Raro | 1 | 10% | Quest de Horunka — só na variante com flor |\n| Col | — | 45-70 | 100% | — |\n\n## Lore\n\nO Ovule é o item de quest mais famoso do Andar 1 e a razão de metade dos grupos novos passarem uma tarde arrancando planta em Horunka. O que quase ninguém percebe é que as Nepenthes com flor ficam sempre voltadas para a mesma direção, e que a direção aponta para a clareira da Mãe-Raiz. O grupo que percebe isso encontra o Covil Escondido sem procurar.\n\n*Elas não crescem espalhadas. Elas crescem em volta de alguma coisa.*\n\n## Notas para o mestre\n\nBom pra uma quest de **coleta** (ex: um alquimista quer amostras da seiva/\nvinha pra uma receita) — o spray corrosivo dá um motivo mecânico real pra\njogadores testarem Reflexo pra não estragar o equipamento, e não só Corpo\npra bater mais forte."
  },
  {
   "id": "lobo_da_alcateia",
@@ -2041,10 +2300,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "costelas expostas no fim da investida",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** tocha ou óleo. Em 10+ a matilha perde a coordenação",
+   "Atributo — Reflexo:** a investida reta é onde eles se expõem — arma de",
    "Sozinho, um lobo recua. Quebrar o cerco vale mais que matar qualquer um.",
    "Ataque perfurante nas costelas, no fim da investida, encerra rápido.",
    "Depois de duas investidas seguidas ele perde precisão e erra o bote."
@@ -2054,9 +2312,9 @@ var MONSTROS = [
    "fogo",
    "isolamento da matilha"
   ],
-  "domavel": "sim",
-  "domaSucessos": "5",
-  "domaRequisito": "Carne Crua e o lobo separado da matilha — com o Alfa por perto, não há doma",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Grande, pelagem cinza-escura riscada de cicatrizes finas, olhos alaranjados que refletem qualquer luz. Anda com a cabeça baixa e o lombo alto, e quando para, para com uma pata suspensa, sem completar o passo.",
   "habitat": "Trilhas profundas da Floresta de Horunka, o Bosque de Ashwen e as planícies de\ncaça das Estepes de Kaldan. Andam por onde há rastro de presa grande.",
   "comportamento": "caça em matilha de três a cinco e responde aos uivos do\nAlfa Lupino. Cercam antes de avançar e nunca atacam de frente primeiro — o\nprimeiro a se mexer é sempre o que está atrás de você.",
@@ -2108,7 +2366,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nTrilhas profundas da Floresta de Horunka, o Bosque de Ashwen e as planícies de\ncaça das Estepes de Kaldan. Andam por onde há rastro de presa grande.\n\n**Comportamento:** caça em matilha de três a cinco e responde aos uivos do\nAlfa Lupino. Cercam antes de avançar e nunca atacam de frente primeiro — o\nprimeiro a se mexer é sempre o que está atrás de você.\n\n## Aparência\n\nGrande, pelagem cinza-escura riscada de cicatrizes finas, olhos alaranjados\nque refletem qualquer luz. Anda com a cabeça baixa e o lombo alto, e quando\npara, para com uma pata suspensa, sem completar o passo.\n\n## Leia em voz alta\n\n> O primeiro vocês veem: cabeça baixa, olhos laranja, andando devagar pela\n> trilha molhada. É o segundo e o terceiro, parados entre as árvores atrás\n> dele, que dizem o que está acontecendo. Nenhum rosna. Eles estão esperando\n> vocês decidirem para onde correr.\n\n## Sinal antes do ataque\n\nO silêncio. A floresta de Horunka é barulhenta; quando o mato para de fazer\nsom, a matilha já está posicionada. O uivo não é aviso de ataque — é\ncoordenação, e chega tarde demais para servir de aviso.\n\n## Ataques\n\n- **Mordida coordenada** — dois lobos no mesmo alvo. O segundo ataque não\n  sofre reação, porque o primeiro já prendeu.\n- **Cerco** — não fere: separa. Isolar um membro do grupo é o objetivo real.\n- **Investida** — corrida curta e reta, e é onde eles ficam expostos.\n\n## Fraquezas\n\n- **Elemento — Fogo:** tocha ou óleo. Em 10+ a matilha perde a coordenação\n  pelo resto da cena: eles atacam, mas cada um por si.\n- Sozinho, um lobo recua. Quebrar o cerco vale mais que matar qualquer um.\n- Ataque perfurante nas costelas, no fim da investida, encerra rápido.\n- Depois de duas investidas seguidas ele perde precisão e erra o bote.\n\n## O que torna este encontro memorável\n\nÉ o primeiro monstro que **usa formação**. A mesa não vence contando golpes:\nvence percebendo que está sendo posicionada, e recusando a posição. Um grupo\nque encosta as costas numa pedra transforma a luta inteira.\n\n## Complicações úteis\n\n- O grupo vence, mas a matilha levou alguém para longe da trilha.\n- Um lobo foge ferido e leva o cheiro do grupo até o Alfa.\n- A luta acontece em cima do rastro de outra coisa maior.\n- Matam todos menos um filhote, e agora existe uma escolha.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele de Lobo | Comum | 1 | 70% | Costureiro |\n| Presa Serrilhada | Comum | 1-2 | 55% | Ferreiro, Joalheiro |\n| Carne Crua | Comum | 1-2 | 50% | Cozinheiro, doma de Domador |\n| Garra Curva | Incomum | 1 | 25% | Ferreiro |\n| Essência Lupina | Raro | 1 | 7% | Alquimista, item Único |\n| Col | — | 120-180 | 100% | — |\n\n## Lore\n\nOs Lobos da Alcateia são os caçadores leais do Alfa Lupino. Rápidos,\nobedientes e implacáveis, avançam em conjunto para cercar o alvo antes do\ngolpe final do líder — que quase nunca aparece. Eles não caçam para comer:\ncaçam para entregar. E o que entregam raramente é encontrado depois.\n\n*Quem enfrenta um deles raramente luta contra apenas um.*\n\n## Notas para o mestre\n\n- **Onde entra:** Estepes de Kaldan, Planície de Verrun, trilhas da Floresta\n  de Horunka e o Bosque de Ashwen. Chefe da linhagem: **Alfa Lupino**.\n- **Como usar em transmissão:** os olhos entre as árvores, sempre em número\n  maior do que o grupo contou. Mostre dois; diga que são cinco.\n- **Erro comum do grupo:** focar no lobo da frente. Ele é a isca, e é o que\n  está menos exposto.\n- **Como a cena encerra sem HP:** carne. Largar a caça do dia compra passagem,\n  e a matilha aceita a troca sem rancor — o que é pior de assistir."
+  "corpo": "## Habitat\n\nTrilhas profundas da Floresta de Horunka, o Bosque de Ashwen e as planícies de\ncaça das Estepes de Kaldan. Andam por onde há rastro de presa grande.\n\n**Comportamento:** caça em matilha de três a cinco e responde aos uivos do\nAlfa Lupino. Cercam antes de avançar e nunca atacam de frente primeiro — o\nprimeiro a se mexer é sempre o que está atrás de você.\n\n## Aparência\n\nGrande, pelagem cinza-escura riscada de cicatrizes finas, olhos alaranjados\nque refletem qualquer luz. Anda com a cabeça baixa e o lombo alto, e quando\npara, para com uma pata suspensa, sem completar o passo.\n\n## Leia em voz alta\n\n> O primeiro vocês veem: cabeça baixa, olhos laranja, andando devagar pela\n> trilha molhada. É o segundo e o terceiro, parados entre as árvores atrás\n> dele, que dizem o que está acontecendo. Nenhum rosna. Eles estão esperando\n> vocês decidirem para onde correr.\n\n## Sinal antes do ataque\n\nO silêncio. A floresta de Horunka é barulhenta; quando o mato para de fazer\nsom, a matilha já está posicionada. O uivo não é aviso de ataque — é\ncoordenação, e chega tarde demais para servir de aviso.\n\n## Ataques\n\n- **Mordida coordenada** — dois lobos no mesmo alvo. O segundo ataque não\n  sofre reação, porque o primeiro já prendeu.\n- **Cerco** — não fere: separa. Isolar um membro do grupo é o objetivo real.\n- **Investida** — corrida curta e reta, e é onde eles ficam expostos.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a investida reta é onde eles se expõem — arma de\n  Reflexo, no fim da corrida, desfaz a formação. Em 10+ a matilha perde a\n  coordenação pelo resto da cena: eles atacam, mas cada um por si.\n- Sozinho, um lobo recua. Quebrar o cerco vale mais que matar qualquer um.\n- Ataque perfurante nas costelas, no fim da investida, encerra rápido.\n- Depois de duas investidas seguidas ele perde precisão e erra o bote.\n\n## O que torna este encontro memorável\n\nÉ o primeiro monstro que **usa formação**. A mesa não vence contando golpes:\nvence percebendo que está sendo posicionada, e recusando a posição. Um grupo\nque encosta as costas numa pedra transforma a luta inteira.\n\n## Complicações úteis\n\n- O grupo vence, mas a matilha levou alguém para longe da trilha.\n- Um lobo foge ferido e leva o cheiro do grupo até o Alfa.\n- A luta acontece em cima do rastro de outra coisa maior.\n- Matam todos menos um filhote, e agora existe uma escolha.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele de Lobo | Comum | 1 | 70% | Costureiro |\n| Presa Serrilhada | Comum | 1-2 | 55% | Ferreiro, Joalheiro |\n| Carne Crua | Comum | 1-2 | 50% | Cozinheiro, doma de Domador |\n| Garra Curva | Incomum | 1 | 25% | Ferreiro |\n| Essência Lupina | Raro | 1 | 7% | Alquimista, item Único |\n| Col | — | 120-180 | 100% | — |\n\n## Lore\n\nOs Lobos da Alcateia são os caçadores leais do Alfa Lupino. Rápidos,\nobedientes e implacáveis, avançam em conjunto para cercar o alvo antes do\ngolpe final do líder — que quase nunca aparece. Eles não caçam para comer:\ncaçam para entregar. E o que entregam raramente é encontrado depois.\n\n*Quem enfrenta um deles raramente luta contra apenas um.*\n\n## Notas para o mestre\n\n- **Onde entra:** Estepes de Kaldan, Planície de Verrun, trilhas da Floresta\n  de Horunka e o Bosque de Ashwen. Chefe da linhagem: **Alfa Lupino**.\n- **Como usar em transmissão:** os olhos entre as árvores, sempre em número\n  maior do que o grupo contou. Mostre dois; diga que são cinco.\n- **Erro comum do grupo:** focar no lobo da frente. Ele é a isca, e é o que\n  está menos exposto.\n- **Como a cena encerra sem HP:** carne. Largar a caça do dia compra passagem,\n  e a matilha aceita a troca sem rancor — o que é pior de assistir."
  },
  {
   "id": "mae_raiz_de_horunka",
@@ -2129,11 +2387,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "cortar os cordões-âncora enquanto ela recolhe as mudas",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** os cordões secos pegam primeiro. Em 10+ ela perde o agarrão pelo resto da cena e vira uma boca imóvel.",
-   "Resiste a Veneno** — a seiva é dela.",
+   "Atributo — Reflexo:** os cordões desorientam e prendem o pé de quem é lento — arma de Reflexo corta no tempo em que eles esticam. Em 10+ ela perde o agarrão pelo resto da cena e vira uma boca imóvel.",
    "Os cordões-âncora ficam esticados e expostos enquanto ela recolhe as mudas; nesses segundos são cordas, não músculos.",
    "O sopro de seiva é teste de **Espírito**, não de Corpo — a luta inteira é uma discussão sobre querer ir embora."
   ],
@@ -2145,7 +2401,7 @@ var MONSTROS = [
    "fogo",
    "Espírito"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Uma clareira que parece uma clareira até você reparar que o chão respira. No centro há uma cavidade de tronco aberta como uma boca de sino, com dois metros de diâmetro, forrada de veludo verde-escuro e cheia até a metade de um líquido âmbar parado. Ao redor dela, meia dúzia de Little Nepenthes pequenos demais para…",
@@ -2185,7 +2441,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nUma clareira única na Floresta de Horunka, e ela nunca muda de lugar. Tudo que é Little Nepenthes no andar cresce num raio de trinta metros dela.\n\n**Comportamento:** passiva enquanto ninguém toca nas mudas. Se um Little Nepenthes é ferido perto, ela recolhe os filhotes e abre os cordões-âncora — e a partir daí ataca qualquer coisa que se mexa, inclusive outros monstros. Não persegue: os cordões alcançam vinte metros e ela sabe onde o chão está mais fofo.\n\n## Aparência\n\nUma clareira que parece uma clareira até você reparar que o chão respira.\nNo centro há uma cavidade de tronco aberta como uma boca de sino, com dois\nmetros de diâmetro, forrada de veludo verde-escuro e cheia até a metade de\num líquido âmbar parado. Ao redor dela, meia dúzia de Little Nepenthes\npequenos demais para andar longe balançam presos por cordões de raiz.\n\nA Mãe-Raiz não anda. Ela puxa.\n\n## Leia em voz alta\n\n> O cheiro chega antes de tudo: doce, quente, o cheiro de fruta que passou\n> do ponto. A clareira está silenciosa do jeito errado — nenhum inseto. No\n> centro, uma boca de tronco cheia de mel escuro, e em volta dela seis\n> mudas pequenas que se viram todas ao mesmo tempo para olhar vocês.\n\n## Sinal antes do ataque\n\nO líquido âmbar para de refletir a luz e fica opaco. É o único aviso, e\ndura o tempo de uma frase — ela está recolhendo as mudas para dentro.\n\n## Ataques\n\n- **Cordão-âncora** — uma raiz sai do chão sob os pés e prende o tornozelo.\n  Quem é preso não cai: é arrastado, devagar, na direção da cavidade.\n- **Sopro de seiva** — vapor doce e morno na cara. Não fere; faz a pessoa\n  querer sentar um pouco.\n- **Fechar a boca** — se alguém chega à borda da cavidade, ela se fecha.\n\n## Fraquezas\n\n- **Elemento — Fogo:** os cordões secos pegam primeiro. Em 10+ ela perde o agarrão pelo resto da cena e vira uma boca imóvel.\n- **Resiste a Veneno** — a seiva é dela.\n- Os cordões-âncora ficam esticados e expostos enquanto ela recolhe as mudas; nesses segundos são cordas, não músculos.\n- O sopro de seiva é teste de **Espírito**, não de Corpo — a luta inteira é uma discussão sobre querer ir embora.\n\n## O que torna este encontro memorável\n\nEla não persegue ninguém — quem sai da clareira está a salvo, e ela sabe\ndisso. O encontro é inteiramente opcional a cada segundo em que acontece,\ne todo mundo na mesa percebe isso. Ficar é escolha, e a Mãe-Raiz oferece\numa saída honesta o tempo todo: basta largar o que se veio buscar.\n\nTambém muda o chão. Depois do primeiro cordão, ninguém mais corre em linha\nreta na floresta de Horunka.\n\n## Complicações úteis\n\n- O grupo vence, mas uma muda escapa para o mato — e Horunka tem um problema\n  novo em três semanas.\n- Alguém é arrastado até a borda e precisa ser puxado de volta: dois de vocês\n  ficam ocupados enquanto a luta continua.\n- O fogo funciona bem demais e a clareira inteira começa a queimar.\n- Ela se fecha e finge estar morta. Não está.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seiva-Mãe | Incomum | 1 | 100% | Alquimista, Médico — o que a Mulher Aflita pede |\n| Cordão-Âncora Seco | Raro | 1-2 | 45% | Costureiro, item Único |\n| Semente Dormente | Raro | 1 | 20% | Vendável caro; não gera vínculo de Domador |\n| Col | — | 900-1400 | 100% | — |\n\n## Lore\n\nNinguém em Horunka chama aquilo de monstro. Chamam de a clareira, e evitam sem explicar. Torv Machadeiro sabe o caminho e não leva ninguém por menos de um favor grande — não porque tenha medo dela, mas porque já viu o que acontece com quem chega lá querendo cortar primeiro e perguntar depois.\n\n*Ela oferece uma saída honesta o tempo todo. Basta largar o que você veio buscar.*\n\n## Notas para o mestre\n\n**Onde entra:** `floresta_covil` — Covil Escondido, Floresta de Horunka.\nMiniboss opcional de exploração; **não** tem ligação com o mistério do andar\n2, e é bom que não tenha. Serve de recompensa para quem explora por explorar.\n\n**Como usar em transmissão:** o plano do líquido âmbar ficando opaco. É um\ndetalhe de um segundo que quem assiste aprende a reconhecer, e da segunda vez\no chat percebe antes dos jogadores.\n\n**Erro comum do grupo:** atacar as mudas primeiro. É o que acorda a Mãe-Raiz\ne ainda gasta golpes em alvos que não importam.\n\n**Como a cena encerra sem HP:** a Seiva-Mãe é o que a Mulher Aflita (Alambique,\nCidade do Início) precisa. Um grupo esperto colhe do reservatório com a\ncavidade fechada e vai embora sem lutar — teste de Técnica, e vale a mesma\nrecompensa. Deixe isso funcionar. A luta é a opção cara.\n\n**Ligações:** a Árvore Marcada (`floresta_horunka_madeira_rara`) só é revelada\ndepois deste ponto — é ela que os cordões estavam protegendo."
+  "corpo": "## Habitat\n\nUma clareira única na Floresta de Horunka, e ela nunca muda de lugar. Tudo que é Little Nepenthes no andar cresce num raio de trinta metros dela.\n\n**Comportamento:** passiva enquanto ninguém toca nas mudas. Se um Little Nepenthes é ferido perto, ela recolhe os filhotes e abre os cordões-âncora — e a partir daí ataca qualquer coisa que se mexa, inclusive outros monstros. Não persegue: os cordões alcançam vinte metros e ela sabe onde o chão está mais fofo.\n\n## Aparência\n\nUma clareira que parece uma clareira até você reparar que o chão respira.\nNo centro há uma cavidade de tronco aberta como uma boca de sino, com dois\nmetros de diâmetro, forrada de veludo verde-escuro e cheia até a metade de\num líquido âmbar parado. Ao redor dela, meia dúzia de Little Nepenthes\npequenos demais para andar longe balançam presos por cordões de raiz.\n\nA Mãe-Raiz não anda. Ela puxa.\n\n## Leia em voz alta\n\n> O cheiro chega antes de tudo: doce, quente, o cheiro de fruta que passou\n> do ponto. A clareira está silenciosa do jeito errado — nenhum inseto. No\n> centro, uma boca de tronco cheia de mel escuro, e em volta dela seis\n> mudas pequenas que se viram todas ao mesmo tempo para olhar vocês.\n\n## Sinal antes do ataque\n\nO líquido âmbar para de refletir a luz e fica opaco. É o único aviso, e\ndura o tempo de uma frase — ela está recolhendo as mudas para dentro.\n\n## Ataques\n\n- **Cordão-âncora** — uma raiz sai do chão sob os pés e prende o tornozelo.\n  Quem é preso não cai: é arrastado, devagar, na direção da cavidade.\n- **Sopro de seiva** — vapor doce e morno na cara. Não fere; faz a pessoa\n  querer sentar um pouco.\n- **Fechar a boca** — se alguém chega à borda da cavidade, ela se fecha.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** os cordões desorientam e prendem o pé de quem é lento — arma de Reflexo corta no tempo em que eles esticam. Em 10+ ela perde o agarrão pelo resto da cena e vira uma boca imóvel.\n- Os cordões-âncora ficam esticados e expostos enquanto ela recolhe as mudas; nesses segundos são cordas, não músculos.\n- O sopro de seiva é teste de **Espírito**, não de Corpo — a luta inteira é uma discussão sobre querer ir embora.\n\n## O que torna este encontro memorável\n\nEla não persegue ninguém — quem sai da clareira está a salvo, e ela sabe\ndisso. O encontro é inteiramente opcional a cada segundo em que acontece,\ne todo mundo na mesa percebe isso. Ficar é escolha, e a Mãe-Raiz oferece\numa saída honesta o tempo todo: basta largar o que se veio buscar.\n\nTambém muda o chão. Depois do primeiro cordão, ninguém mais corre em linha\nreta na floresta de Horunka.\n\n## Complicações úteis\n\n- O grupo vence, mas uma muda escapa para o mato — e Horunka tem um problema\n  novo em três semanas.\n- Alguém é arrastado até a borda e precisa ser puxado de volta: dois de vocês\n  ficam ocupados enquanto a luta continua.\n- Alguém ateia fogo nos cordões secos pra encurtar a luta — e a clareira\n  inteira começa a queimar.\n- Ela se fecha e finge estar morta. Não está.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Seiva-Mãe | Incomum | 1 | 100% | Alquimista, Médico — o que a Mulher Aflita pede |\n| Cordão-Âncora Seco | Raro | 1-2 | 45% | Costureiro, item Único |\n| Semente Dormente | Raro | 1 | 20% | Vendável caro; não gera vínculo de Domador |\n| Col | — | 900-1400 | 100% | — |\n\n## Lore\n\nNinguém em Horunka chama aquilo de monstro. Chamam de a clareira, e evitam sem explicar. Torv Machadeiro sabe o caminho e não leva ninguém por menos de um favor grande — não porque tenha medo dela, mas porque já viu o que acontece com quem chega lá querendo cortar primeiro e perguntar depois.\n\n*Ela oferece uma saída honesta o tempo todo. Basta largar o que você veio buscar.*\n\n## Notas para o mestre\n\n**Onde entra:** `floresta_covil` — Covil Escondido, Floresta de Horunka.\nMiniboss opcional de exploração; **não** tem ligação com o mistério do andar\n2, e é bom que não tenha. Serve de recompensa para quem explora por explorar.\n\n**Como usar em transmissão:** o plano do líquido âmbar ficando opaco. É um\ndetalhe de um segundo que quem assiste aprende a reconhecer, e da segunda vez\no chat percebe antes dos jogadores.\n\n**Erro comum do grupo:** atacar as mudas primeiro. É o que acorda a Mãe-Raiz\ne ainda gasta golpes em alvos que não importam.\n\n**Como a cena encerra sem HP:** a Seiva-Mãe é o que a Mulher Aflita (Alambique,\nCidade do Início) precisa. Um grupo esperto colhe do reservatório com a\ncavidade fechada e vai embora sem lutar — teste de Técnica, e vale a mesma\nrecompensa. Deixe isso funcionar. A luta é a opção cara.\n\n**Ligações:** a Árvore Marcada (`floresta_horunka_madeira_rara`) só é revelada\ndepois deste ponto — é ela que os cordões estavam protegendo."
  },
  {
   "id": "mimic_de_marcos",
@@ -2208,11 +2464,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "Conhecimento — identificar a inscrição falsa",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Trovão:** o núcleo de bronze conduz. Em 10+ ele perde a forma de pedra pelo resto da cena e não consegue mais se disfarçar.",
-   "Resiste a Veneno** — é construto.",
+   "Atributo — Conhecimento:** o disfarce dele é informação falsa — arma de Conhecimento, de quem leu a inscrição e viu o erro, não se deixa enganar. Em 10+ ele perde a forma de pedra pelo resto da cena e não consegue mais se disfarçar.",
    "Conhecimento** identifica a inscrição falsa: a letra é regular demais e não tem desgaste.",
    "Sem alguém a menos de um braço, ele não abre. Ler de longe é seguro."
   ],
@@ -2264,7 +2518,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nOnde há marco de pedra gravada: o Limiar do Labirinto, o Campo de Ruyn e os pátios do Castelo de Ferro Negro. Fica exatamente onde um marco de verdade estaria.\n\n**Comportamento:** paciente e imóvel. Não ataca quem passa: ataca quem lê. O gatilho é alguém encostar a mão na inscrição, e todo cartógrafo encosta a mão na inscrição.\n\n## Aparência\n\nÀ primeira vista, é uma placa de orientação de pedra com letras douradas. A\nseta aponta para uma rota segura. Quando se move, a base se abre em quatro\npernas de metal e a inscrição apaga o próprio nome.\n\n## Leia em voz alta\n\n> A seta dourada parece familiar demais. Por um segundo, a marca de cinzel\n> acompanha a respiração de quem a está lendo.\n\n## Sinal antes do ataque\n\nO nome da região está escrito com uma letra errada — pequena demais para quem\ncorre, óbvia para quem para e compara com um mapa.\n\n## Ataques\n\n- **Seta convincente:** cria urgência ficcional; seguir sem conferir separa o grupo.\n- **Base articulada:** golpe pesado e curto quando alguém toca na placa.\n\n## Fraquezas\n\n- **Elemento — Trovão:** o núcleo de bronze conduz. Em 10+ ele perde a forma de pedra pelo resto da cena e não consegue mais se disfarçar.\n- **Resiste a Veneno** — é construto.\n- **Conhecimento** identifica a inscrição falsa: a letra é regular demais e não tem desgaste.\n- Sem alguém a menos de um braço, ele não abre. Ler de longe é seguro.\n\n## O que torna este encontro memorável\n\nÉ um combate contra confiança. O jogador que lê mapa ou símbolo pode salvar a\nmesa antes da primeira rolagem de ataque.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Runa Móvel | Incomum | 1 | 100% | Bibliotecário, Cartógrafo |\n| Núcleo de Bronze Frio | Incomum | 1 | 35% | Ferreiro, Joalheiro |\n| Marca Copiada | Raro | 1 | 10% | Bibliotecário — a cópia de um marco real |\n| Col | — | 90-140 | 100% | — |\n\n## Lore\n\nExistem cinco marcos de pedra gravada verdadeiros no Andar 1: Verrun, Kaldan, Pemberton, Braxhold e a parede da Câmara da Inscrição. Os Mimics copiam a letra deles com precisão suficiente para enganar qualquer um que não tenha visto os dois lado a lado. A pergunta que Wilbrand não consegue responder é como um construto copia uma escrita que ninguém no andar sabe ler.\n\n*Ele imita a letra certa. Isso é pior do que ele imitar a pedra.*\n\n## Notas para o mestre\n\nColoque-o após uma escolha cansativa, não como susto aleatório. Se escapar,\nele muda uma placa de rota e cria uma quest de consequência no próximo grupo."
+  "corpo": "## Habitat\n\nOnde há marco de pedra gravada: o Limiar do Labirinto, o Campo de Ruyn e os pátios do Castelo de Ferro Negro. Fica exatamente onde um marco de verdade estaria.\n\n**Comportamento:** paciente e imóvel. Não ataca quem passa: ataca quem lê. O gatilho é alguém encostar a mão na inscrição, e todo cartógrafo encosta a mão na inscrição.\n\n## Aparência\n\nÀ primeira vista, é uma placa de orientação de pedra com letras douradas. A\nseta aponta para uma rota segura. Quando se move, a base se abre em quatro\npernas de metal e a inscrição apaga o próprio nome.\n\n## Leia em voz alta\n\n> A seta dourada parece familiar demais. Por um segundo, a marca de cinzel\n> acompanha a respiração de quem a está lendo.\n\n## Sinal antes do ataque\n\nO nome da região está escrito com uma letra errada — pequena demais para quem\ncorre, óbvia para quem para e compara com um mapa.\n\n## Ataques\n\n- **Seta convincente:** cria urgência ficcional; seguir sem conferir separa o grupo.\n- **Base articulada:** golpe pesado e curto quando alguém toca na placa.\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** o disfarce dele é informação falsa — arma de Conhecimento, de quem leu a inscrição e viu o erro, não se deixa enganar. Em 10+ ele perde a forma de pedra pelo resto da cena e não consegue mais se disfarçar.\n- **Conhecimento** identifica a inscrição falsa: a letra é regular demais e não tem desgaste.\n- Sem alguém a menos de um braço, ele não abre. Ler de longe é seguro.\n\n## O que torna este encontro memorável\n\nÉ um combate contra confiança. O jogador que lê mapa ou símbolo pode salvar a\nmesa antes da primeira rolagem de ataque.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Runa Móvel | Incomum | 1 | 100% | Bibliotecário, Cartógrafo |\n| Núcleo de Bronze Frio | Incomum | 1 | 35% | Ferreiro, Joalheiro |\n| Marca Copiada | Raro | 1 | 10% | Bibliotecário — a cópia de um marco real |\n| Col | — | 90-140 | 100% | — |\n\n## Lore\n\nExistem cinco marcos de pedra gravada verdadeiros no Andar 1: Verrun, Kaldan, Pemberton, Braxhold e a parede da Câmara da Inscrição. Os Mimics copiam a letra deles com precisão suficiente para enganar qualquer um que não tenha visto os dois lado a lado. A pergunta que Wilbrand não consegue responder é como um construto copia uma escrita que ninguém no andar sabe ler.\n\n*Ele imita a letra certa. Isso é pior do que ele imitar a pedra.*\n\n## Notas para o mestre\n\nColoque-o após uma escolha cansativa, não como susto aleatório. Se escapar,\nele muda uma placa de rota e cria uma quest de consequência no próximo grupo."
  },
  {
   "id": "morcego_ecoante",
@@ -2287,10 +2541,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe em pouso",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Fogo:** a fumaça esvazia a galeria. Em 10+ a colônia inteira desocupa a passagem pelo resto da cena.",
+   "Atributo — Conhecimento:** eles navegam por eco — arma de Conhecimento, de quem entendeu isso e usou o som da galeria contra eles, desorienta o bando. Em 10+ a colônia inteira desocupa a passagem pelo resto da cena.",
    "Frágil individualmente; o problema nunca é um.",
    "Eles pousam para atacar e no pouso são triviais.",
    "Silêncio absoluto os mantém dormindo. A passagem é atravessável sem uma rolagem."
@@ -2301,9 +2554,9 @@ var MONSTROS = [
   "vulnerabilidades": [
    "ruído alto"
   ],
-  "domavel": "sim",
-  "domaSucessos": "2",
-  "domaRequisito": "Silêncio total durante a aproximação",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Morcego de porte médio, pelagem cinza-clara, orelhas desproporcionalmente grandes adaptadas a ecolocalização. Vive em pequenos bandos nas partes mais altas da Caverna de Mournhall.",
   "habitat": "Teto da Caverna dos Ecos e as galerias altas da Gruta de Lumis. Dorme empilhado, às centenas, e acorda todo junto.",
   "comportamento": "passivo até o barulho. Não ataca por fome — reage a som alto, e reage em massa. Uma tocha caindo no chão de pedra é suficiente.",
@@ -2334,7 +2587,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nTeto da Caverna dos Ecos e as galerias altas da Gruta de Lumis. Dorme empilhado, às centenas, e acorda todo junto.\n\n**Comportamento:** passivo até o barulho. Não ataca por fome — reage a som alto, e reage em massa. Uma tocha caindo no chão de pedra é suficiente.\n\n## Aparência\n\nMorcego de porte médio, pelagem cinza-clara, orelhas desproporcionalmente\ngrandes adaptadas a ecolocalização. Vive em pequenos bandos nas partes\nmais altas da Caverna de Mournhall.\n\n## Leia em voz alta\n\n> O teto está mais baixo do que parecia, e o que vocês tomaram por rocha irregular se mexe quando a luz sobe. São centenas, pendurados, e o mais próximo abre um olho.\n\n## Sinal antes do ataque\n\nUm guincho agudo, único, de algum lugar do teto. É o primeiro acordando, e ele acorda os outros.\n\n## Ataques\n\n- Mordida de pânico (só quando encurralado)\n\n## Fraquezas\n\n- **Elemento — Fogo:** a fumaça esvazia a galeria. Em 10+ a colônia inteira desocupa a passagem pelo resto da cena.\n- Frágil individualmente; o problema nunca é um.\n- Eles pousam para atacar e no pouso são triviais.\n- Silêncio absoluto os mantém dormindo. A passagem é atravessável sem uma rolagem.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Membrana de Asa | Comum | 1-2 | 50% | Costureiro, Alquimista |\n| Guano de Gruta | Comum | 2-3 | 60% | Alquimista, Fazendeiro |\n| Col | — | 20-40 | 100% | — |\n\n## Lore\n\nÉ o monstro que ensina silêncio, e ensina rápido. Grupos que atravessam a Caverna dos Ecos gritando aprendem na primeira galeria; grupos que aprendem na primeira galeria chegam ao Guardião com equipamento intacto. Os que não aprendem chegam sem tocha, sem óleo e sem paciência, e o Guardião não perdoa nenhuma das três faltas.\n\n*Eles não caçam vocês. Vocês é que estão fazendo barulho.*\n\n## Notas para o mestre\n\nDomável, fácil — aliado de reconhecimento em dungeon, ajuda a detectar\ncorredores/armadilhas por eco. Boa opção temática pra grupos que vão\nenfrentar o Labirinto — dá ao Domador relevância direta na cadeia H."
+  "corpo": "## Habitat\n\nTeto da Caverna dos Ecos e as galerias altas da Gruta de Lumis. Dorme empilhado, às centenas, e acorda todo junto.\n\n**Comportamento:** passivo até o barulho. Não ataca por fome — reage a som alto, e reage em massa. Uma tocha caindo no chão de pedra é suficiente.\n\n## Aparência\n\nMorcego de porte médio, pelagem cinza-clara, orelhas desproporcionalmente\ngrandes adaptadas a ecolocalização. Vive em pequenos bandos nas partes\nmais altas da Caverna de Mournhall.\n\n## Leia em voz alta\n\n> O teto está mais baixo do que parecia, e o que vocês tomaram por rocha irregular se mexe quando a luz sobe. São centenas, pendurados, e o mais próximo abre um olho.\n\n## Sinal antes do ataque\n\nUm guincho agudo, único, de algum lugar do teto. É o primeiro acordando, e ele acorda os outros.\n\n## Ataques\n\n- Mordida de pânico (só quando encurralado)\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** eles navegam por eco — arma de Conhecimento, de quem entendeu isso e usou o som da galeria contra eles, desorienta o bando. Em 10+ a colônia inteira desocupa a passagem pelo resto da cena.\n- Frágil individualmente; o problema nunca é um.\n- Eles pousam para atacar e no pouso são triviais.\n- Silêncio absoluto os mantém dormindo. A passagem é atravessável sem uma rolagem.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Membrana de Asa | Comum | 1-2 | 50% | Costureiro, Alquimista |\n| Guano de Gruta | Comum | 2-3 | 60% | Alquimista, Fazendeiro |\n| Col | — | 20-40 | 100% | — |\n\n## Lore\n\nÉ o monstro que ensina silêncio, e ensina rápido. Grupos que atravessam a Caverna dos Ecos gritando aprendem na primeira galeria; grupos que aprendem na primeira galeria chegam ao Guardião com equipamento intacto. Os que não aprendem chegam sem tocha, sem óleo e sem paciência, e o Guardião não perdoa nenhuma das três faltas.\n\n*Eles não caçam vocês. Vocês é que estão fazendo barulho.*\n\n## Notas para o mestre\n\nDomável, fácil — aliado de reconhecimento em dungeon, ajuda a detectar\ncorredores/armadilhas por eco. Boa opção temática pra grupos que vão\nenfrentar o Labirinto — dá ao Domador relevância direta na cadeia H."
  },
  {
   "id": "mosca_venenosa",
@@ -2359,10 +2612,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "o enxame ainda não formado — cada mosca isolada morre de um golpe",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Fogo:** tocha, óleo ou brasa. Em 10+ o enxame se desfaz pelo",
+   "Atributo — Conhecimento:** a confusão visual é o truque delas — arma de",
    "Baixa defesa: qualquer golpe que acerte, mata. O problema nunca é matar uma.",
    "Ataques de área valem mais que ataques precisos, e é o único encontro do",
    "Os ataques delas são lentos: quem prioriza Reflexo passa sem ser tocado."
@@ -2374,7 +2626,7 @@ var MONSTROS = [
    "fogo",
    "ataque em área"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Do tamanho de um antebraço. Tórax verde-azulado metálico, asas com nervura grossa e olhos vermelho-escuros grandes demais para a cabeça. Da probóscide pinga um fio de líquido amarelo-esverdeado que fumega ao encostar em folha.",
@@ -2390,7 +2642,7 @@ var MONSTROS = [
     "raridade": "Comum",
     "qtd": "1-2",
     "chance": "65%",
-    "serve": "Alquimista (elemento Veneno)"
+    "serve": "Alquimista"
    },
    {
     "item": "Asa Frágil",
@@ -2411,7 +2663,7 @@ var MONSTROS = [
     "raridade": "Raro",
     "qtd": "1",
     "chance": "8%",
-    "serve": "Joalheiro (base de Trovão e Gelo)"
+    "serve": "Joalheiro"
    },
    {
     "item": "Col",
@@ -2421,7 +2673,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nComum em áreas úmidas, pântanos e perto de qualquer corpo d'água do Andar 1 —\nCharco de Grenna, Pântano de Kavir, as margens rasas do Lago Sylvaine e os\ntrechos parados do Rio Coluber. Onde a água não corre, elas estão.\n\n**Comportamento:** agressiva, mas burra. Voa em enxames e ataca em grupo; uma\nmosca sozinha é um inseto grande e nada mais. O perigo é sempre a quantidade,\ne a quantidade cresce enquanto o grupo hesita.\n\n## Aparência\n\nDo tamanho de um antebraço. Tórax verde-azulado metálico, asas com nervura\ngrossa e olhos vermelho-escuros grandes demais para a cabeça. Da probóscide\npinga um fio de líquido amarelo-esverdeado que fumega ao encostar em folha.\n\n## Leia em voz alta\n\n> O zumbido chega antes: grave, e mais alto do que um inseto tem direito de\n> ser. Uma delas passa perto o bastante para vocês verem o fio de líquido\n> amarelo pingando da boca — a folha onde ele cai enrola e escurece. Atrás\n> dela, no meio das árvores, o zumbido está ficando mais grosso.\n\n## Sinal antes do ataque\n\nO zumbido muda de tom. Enquanto está agudo e disperso, são moscas. Quando\ngrava e vira um som só, o enxame se formou — e a partir daí não dá mais para\nescolher lutar ou não.\n\n## Ataques\n\n- **Picada corrosiva** — dói pouco e marca Condição de Veneno, que piora\n  sozinha se ninguém tratar.\n- **Nuvem** — o enxame cerca e tira visão. Ninguém é ferido; todo mundo perde\n  a noção de onde os outros estão.\n- **Pouso** — grudam na roupa e no equipamento. Descolar custa uma vez.\n\n## Fraquezas\n\n- **Elemento — Fogo:** tocha, óleo ou brasa. Em 10+ o enxame se desfaz pelo\n  resto da cena e elas voltam a ser moscas soltas — a capacidade de formar\n  nuvem some.\n- Baixa defesa: qualquer golpe que acerte, mata. O problema nunca é matar uma.\n- Ataques de área valem mais que ataques precisos, e é o único encontro do\n  andar em que isso é verdade tão cedo.\n- Os ataques delas são lentos: quem prioriza Reflexo passa sem ser tocado.\n\n## O que torna este encontro memorável\n\nÉ a primeira lição de economia de ação do andar. Matar uma mosca é trivial;\nmatar catorze, uma de cada vez, é como o grupo perde a tarde e alguém sai\nenvenenado. A mesa aprende aqui que **agir cedo vale mais que agir bem**.\n\n## Complicações úteis\n\n- O grupo vence, mas alguém carrega a Condição de Veneno até a Cidade.\n- O enxame se forma sobre o único caminho de volta.\n- Uma delas pousa na mochila e viaja junto até a próxima cena.\n- O fogo funciona e queima o junco seco em volta.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Glândula Venenosa | Comum | 1-2 | 65% | Alquimista (elemento Veneno) |\n| Asa Frágil | Comum | 2-4 | 55% | Costureiro, Artesão |\n| Essência Tóxica | Incomum | 1 | 25% | Alquimista, Médico |\n| Cristal Pequeno | Raro | 1 | 8% | Joalheiro (base de Trovão e Gelo) |\n| Col | — | 30-60 | 100% | — |\n\n## Lore\n\nNinguém desenhou as moscas para serem um desafio. Elas são o que Aincrad pôs\nna água parada para que a água parada parecesse viva, e funcionaram bem demais\n— multiplicaram-se para além do que qualquer mapa previa. Os primeiros mortos\ndo Andar 1 não caíram para kobolds. Caíram para pequenos venenos acumulados,\nlonge de qualquer coisa que valesse a pena.\n\n*Não subestime o pequeno: o veneno não precisa de tamanho para ser fatal.*\n\n## Notas para o mestre\n\n- **Onde entra:** margens do Charco de Grenna, Pântano de Kavir, Lago Sylvaine\n  e os trechos parados do Rio Coluber.\n- **Como usar em transmissão:** o som. Suba o zumbido devagar por baixo da\n  conversa e deixe a mesa perceber sozinha.\n- **Erro comum do grupo:** tratar uma a uma com ataque preciso. Deixe custar\n  tempo, e deixe o enxame se formar como consequência honesta.\n- **Como a cena encerra sem HP:** fumaça. Qualquer fogo com folha verde por\n  cima faz o enxame ir embora sem uma rolagem de combate."
+  "corpo": "## Habitat\n\nComum em áreas úmidas, pântanos e perto de qualquer corpo d'água do Andar 1 —\nCharco de Grenna, Pântano de Kavir, as margens rasas do Lago Sylvaine e os\ntrechos parados do Rio Coluber. Onde a água não corre, elas estão.\n\n**Comportamento:** agressiva, mas burra. Voa em enxames e ataca em grupo; uma\nmosca sozinha é um inseto grande e nada mais. O perigo é sempre a quantidade,\ne a quantidade cresce enquanto o grupo hesita.\n\n## Aparência\n\nDo tamanho de um antebraço. Tórax verde-azulado metálico, asas com nervura\ngrossa e olhos vermelho-escuros grandes demais para a cabeça. Da probóscide\npinga um fio de líquido amarelo-esverdeado que fumega ao encostar em folha.\n\n## Leia em voz alta\n\n> O zumbido chega antes: grave, e mais alto do que um inseto tem direito de\n> ser. Uma delas passa perto o bastante para vocês verem o fio de líquido\n> amarelo pingando da boca — a folha onde ele cai enrola e escurece. Atrás\n> dela, no meio das árvores, o zumbido está ficando mais grosso.\n\n## Sinal antes do ataque\n\nO zumbido muda de tom. Enquanto está agudo e disperso, são moscas. Quando\ngrava e vira um som só, o enxame se formou — e a partir daí não dá mais para\nescolher lutar ou não.\n\n## Ataques\n\n- **Picada corrosiva** — dói pouco e marca Condição de Veneno, que piora\n  sozinha se ninguém tratar.\n- **Nuvem** — o enxame cerca e tira visão. Ninguém é ferido; todo mundo perde\n  a noção de onde os outros estão.\n- **Pouso** — grudam na roupa e no equipamento. Descolar custa uma vez.\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** a confusão visual é o truque delas — arma de\n  Conhecimento, de quem leu o tom do zumbido e achou o enxame se formando,\n  desfaz o enxame. Em 10+ o enxame se desfaz pelo resto da cena e elas\n  voltam a ser moscas soltas — a capacidade de formar nuvem some.\n- Baixa defesa: qualquer golpe que acerte, mata. O problema nunca é matar uma.\n- Ataques de área valem mais que ataques precisos, e é o único encontro do\n  andar em que isso é verdade tão cedo.\n- Os ataques delas são lentos: quem prioriza Reflexo passa sem ser tocado.\n\n## O que torna este encontro memorável\n\nÉ a primeira lição de economia de ação do andar. Matar uma mosca é trivial;\nmatar catorze, uma de cada vez, é como o grupo perde a tarde e alguém sai\nenvenenado. A mesa aprende aqui que **agir cedo vale mais que agir bem**.\n\n## Complicações úteis\n\n- O grupo vence, mas alguém carrega a Condição de Veneno até a Cidade.\n- O enxame se forma sobre o único caminho de volta.\n- Uma delas pousa na mochila e viaja junto até a próxima cena.\n- O grupo usa fogo pra afastar o enxame — e queima o junco seco em volta.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Glândula Venenosa | Comum | 1-2 | 65% | Alquimista |\n| Asa Frágil | Comum | 2-4 | 55% | Costureiro, Artesão |\n| Essência Tóxica | Incomum | 1 | 25% | Alquimista, Médico |\n| Cristal Pequeno | Raro | 1 | 8% | Joalheiro |\n| Col | — | 30-60 | 100% | — |\n\n## Lore\n\nNinguém desenhou as moscas para serem um desafio. Elas são o que Aincrad pôs\nna água parada para que a água parada parecesse viva, e funcionaram bem demais\n— multiplicaram-se para além do que qualquer mapa previa. Os primeiros mortos\ndo Andar 1 não caíram para kobolds. Caíram para pequenos venenos acumulados,\nlonge de qualquer coisa que valesse a pena.\n\n*Não subestime o pequeno: o veneno não precisa de tamanho para ser fatal.*\n\n## Notas para o mestre\n\n- **Onde entra:** margens do Charco de Grenna, Pântano de Kavir, Lago Sylvaine\n  e os trechos parados do Rio Coluber.\n- **Como usar em transmissão:** o som. Suba o zumbido devagar por baixo da\n  conversa e deixe a mesa perceber sozinha.\n- **Erro comum do grupo:** tratar uma a uma com ataque preciso. Deixe custar\n  tempo, e deixe o enxame se formar como consequência honesta.\n- **Como a cena encerra sem HP:** fumaça. Qualquer fogo com folha verde por\n  cima faz o enxame ir embora sem uma rolagem de combate."
  },
  {
   "id": "porta_estandarte_de_illfang",
@@ -2442,11 +2694,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "derrubar o estandarte antes de encarar o portador",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Trovão",
+  "atributoFraqueza": "Espírito",
   "fraquezas": [
-   "Elemento — Fogo:** o pano e as correias queimam. Em 10+ o chamado morre pelo resto da cena e os reforços param de chegar.",
-   "Resiste a Trovão** — a couraça remendada dispersa a descarga.",
+   "Atributo — Espírito:** a ligação dele com o estandarte é devoção, não tática — arma de Espírito bate na determinação que sustenta o chamado. Em 10+ o chamado morre pelo resto da cena e os reforços param de chegar.",
    "O mastro está fincado, não segurado: é alvo parado, e derrubá-lo é teste de **Técnica**.",
    "O flanco esquerdo fica descoberto o tempo todo, porque a mão esquerda nunca solta o mastro."
   ],
@@ -2458,7 +2708,7 @@ var MONSTROS = [
    "ataque ao mastro",
    "flanco esquerdo"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Um Ruin Kobold de cabeça e meia a mais que os outros, com couraça de placas mal ajustadas tiradas de três armaduras diferentes. Na mão esquerda carrega um mastro de dois metros e meio com um pano vermelho-escuro preso no alto — pesado, malfeito, e obviamente importante para ele.",
@@ -2498,7 +2748,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nO descampado na base da torre, no Limiar do Labirinto. Patrulha em linha reta, ida e volta, sempre o mesmo trajeto.\n\n**Comportamento:** vigia, não caça. Ao avistar intrusos finca o estandarte no chão primeiro e só depois pega o machado — e enquanto o pano estiver de pé, Ruin Kobold Troopers chegam do escuro em duplas, sem fim. Ele não tenta vencer sozinho: tenta fazer a luta durar.\n\n## Aparência\n\nUm Ruin Kobold de cabeça e meia a mais que os outros, com couraça de placas\nmal ajustadas tiradas de três armaduras diferentes. Na mão esquerda carrega\num mastro de dois metros e meio com um pano vermelho-escuro preso no alto —\npesado, malfeito, e obviamente importante para ele.\n\nNa mão direita, um machado curto que ele quase não usa.\n\n## Leia em voz alta\n\n> Ele vê vocês antes de vocês o verem. Não corre, não grita. Enfia o mastro\n> no chão com as duas mãos, com o cuidado de quem já fez isso mil vezes, e\n> o pano vermelho abre no vento. Só então ele pega o machado. Atrás dele, no\n> escuro da base da torre, alguma coisa responde — muitos pés, ainda longe.\n\n## Sinal antes do ataque\n\nO pano. Ele para de tremular e fica reto por um instante, apontando, um\nsegundo antes de os primeiros Troopers aparecerem. Quem estiver olhando o\nestandarte em vez do machado ganha o aviso.\n\n## Ataques\n\n- **Chamado** — finca o estandarte. Não causa dano; convoca.\n- **Machadada de guarda** — golpe curto, defensivo, para segurar posição.\n- **Empurrão de mastro** — usa o estandarte deitado como barra e empurra o\n  grupo para longe do mastro. Ele protege o objeto, não a si mesmo.\n\n## Fraquezas\n\n- **Elemento — Fogo:** o pano e as correias queimam. Em 10+ o chamado morre pelo resto da cena e os reforços param de chegar.\n- **Resiste a Trovão** — a couraça remendada dispersa a descarga.\n- O mastro está fincado, não segurado: é alvo parado, e derrubá-lo é teste de **Técnica**.\n- O flanco esquerdo fica descoberto o tempo todo, porque a mão esquerda nunca solta o mastro.\n\n## O que torna este encontro memorável\n\nEle ensina, sem nenhuma linha de diálogo, que **objetivo não é a mesma coisa\nque inimigo**. Grupos que atacam o kobold ganham uma luta que não acaba;\ngrupos que atacam um pedaço de pano ganham a cena em dois turnos.\n\nE é o primeiro monstro do andar que deixa claro que os Kobolds do Labirinto\ntêm hierarquia, ordens e alguém no topo dando as ordens.\n\n## Complicações úteis\n\n- O grupo derruba o estandarte, mas os Troopers que já chegaram continuam ali.\n- Ele arranca o mastro do chão e sai correndo com ele em vez de lutar — a\n  notícia da presença do grupo chega antes deles no Limiar do Labirinto.\n- Alguém pega o estandarte caído. Agora carrega uma coisa que outros kobolds\n  reconhecem de longe.\n- O grupo vence rápido demais e volta em quatro horas achando que será igual.\n  Não é: o cargo aprendeu, e o novo portador finca o mastro atrás de cobertura.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa Remendada | Incomum | 1-2 | 100% | Ferreiro |\n| Pano do Estandarte | Incomum | 1 | 60% | Corretores de Tolbana — ver Notas |\n| Machado Curto de Kobold | Comum | 1 | 35% | Arma Comum, sucata de Ferreiro |\n| Col | — | 700-1100 | 100% | — |\n\n## Lore\n\nSome quatro horas depois de morto, e nunca é o mesmo indivíduo: é o cargo que volta, com outro kobold dentro da couraça e o mesmo pano remendado de novo. É a primeira prova concreta de que o Labirinto tem hierarquia, e os Corretores de Tolbana pagam bem por uma descrição precisa do estandarte.\n\n*Ele ensina, sem uma linha de diálogo, que objetivo não é a mesma coisa que inimigo.*\n\n## Notas para o mestre\n\n**Onde entra:** `labirinto_fieldboss` — Field Boss do Limiar do Labirinto,\nrespawn de 4 horas. É o degrau entre os mobs de corredor e Illfang: mostra\nque existe comando sem ainda mostrar o comandante.\n\n**O Pano do Estandarte** não é um item de status. Quem o carrega à vista é\ntratado por Ruin Kobolds como provocação — eles atacam esse alvo primeiro e\nignoram os outros. Isso é uma ferramenta tática ótima e um problema social\npéssimo, e o grupo deve descobrir os dois na prática.\n\n**Como usar em transmissão:** o mastro sendo fincado. É o gesto de abertura\ndo encontro e funciona como cortina subindo — dá para cortar a música ali.\n\n**Erro comum do grupo:** tratar como luta de atrito e gastar Impulso cedo.\nOs reforços são infinitos de propósito. Se a mesa não perceber em três ou\nquatro rodadas, deixe um Trooper tropeçar no mastro e quase derrubá-lo — é\ndica suficiente sem entregar de graça.\n\n**Ligações:** revela `labirinto_entrada_xmarca_de_garras_na_parede`. Os\nCorretores de Informação de Tolbana pagam por uma descrição precisa do\nestandarte — é a primeira prova concreta de que o Labirinto é organizado, e\n`docs/misterio_andar2.md` depende disso ser público antes do dia 10."
+  "corpo": "## Habitat\n\nO descampado na base da torre, no Limiar do Labirinto. Patrulha em linha reta, ida e volta, sempre o mesmo trajeto.\n\n**Comportamento:** vigia, não caça. Ao avistar intrusos finca o estandarte no chão primeiro e só depois pega o machado — e enquanto o pano estiver de pé, Ruin Kobold Troopers chegam do escuro em duplas, sem fim. Ele não tenta vencer sozinho: tenta fazer a luta durar.\n\n## Aparência\n\nUm Ruin Kobold de cabeça e meia a mais que os outros, com couraça de placas\nmal ajustadas tiradas de três armaduras diferentes. Na mão esquerda carrega\num mastro de dois metros e meio com um pano vermelho-escuro preso no alto —\npesado, malfeito, e obviamente importante para ele.\n\nNa mão direita, um machado curto que ele quase não usa.\n\n## Leia em voz alta\n\n> Ele vê vocês antes de vocês o verem. Não corre, não grita. Enfia o mastro\n> no chão com as duas mãos, com o cuidado de quem já fez isso mil vezes, e\n> o pano vermelho abre no vento. Só então ele pega o machado. Atrás dele, no\n> escuro da base da torre, alguma coisa responde — muitos pés, ainda longe.\n\n## Sinal antes do ataque\n\nO pano. Ele para de tremular e fica reto por um instante, apontando, um\nsegundo antes de os primeiros Troopers aparecerem. Quem estiver olhando o\nestandarte em vez do machado ganha o aviso.\n\n## Ataques\n\n- **Chamado** — finca o estandarte. Não causa dano; convoca.\n- **Machadada de guarda** — golpe curto, defensivo, para segurar posição.\n- **Empurrão de mastro** — usa o estandarte deitado como barra e empurra o\n  grupo para longe do mastro. Ele protege o objeto, não a si mesmo.\n\n## Fraquezas\n\n- **Atributo — Espírito:** a ligação dele com o estandarte é devoção, não tática — arma de Espírito bate na determinação que sustenta o chamado. Em 10+ o chamado morre pelo resto da cena e os reforços param de chegar.\n- O mastro está fincado, não segurado: é alvo parado, e derrubá-lo é teste de **Técnica**.\n- O flanco esquerdo fica descoberto o tempo todo, porque a mão esquerda nunca solta o mastro.\n\n## O que torna este encontro memorável\n\nEle ensina, sem nenhuma linha de diálogo, que **objetivo não é a mesma coisa\nque inimigo**. Grupos que atacam o kobold ganham uma luta que não acaba;\ngrupos que atacam um pedaço de pano ganham a cena em dois turnos.\n\nE é o primeiro monstro do andar que deixa claro que os Kobolds do Labirinto\ntêm hierarquia, ordens e alguém no topo dando as ordens.\n\n## Complicações úteis\n\n- O grupo derruba o estandarte, mas os Troopers que já chegaram continuam ali.\n- Ele arranca o mastro do chão e sai correndo com ele em vez de lutar — a\n  notícia da presença do grupo chega antes deles no Limiar do Labirinto.\n- Alguém pega o estandarte caído. Agora carrega uma coisa que outros kobolds\n  reconhecem de longe.\n- O grupo vence rápido demais e volta em quatro horas achando que será igual.\n  Não é: o cargo aprendeu, e o novo portador finca o mastro atrás de cobertura.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa Remendada | Incomum | 1-2 | 100% | Ferreiro |\n| Pano do Estandarte | Incomum | 1 | 60% | Corretores de Tolbana — ver Notas |\n| Machado Curto de Kobold | Comum | 1 | 35% | Arma Comum, sucata de Ferreiro |\n| Col | — | 700-1100 | 100% | — |\n\n## Lore\n\nSome quatro horas depois de morto, e nunca é o mesmo indivíduo: é o cargo que volta, com outro kobold dentro da couraça e o mesmo pano remendado de novo. É a primeira prova concreta de que o Labirinto tem hierarquia, e os Corretores de Tolbana pagam bem por uma descrição precisa do estandarte.\n\n*Ele ensina, sem uma linha de diálogo, que objetivo não é a mesma coisa que inimigo.*\n\n## Notas para o mestre\n\n**Onde entra:** `labirinto_fieldboss` — Field Boss do Limiar do Labirinto,\nrespawn de 4 horas. É o degrau entre os mobs de corredor e Illfang: mostra\nque existe comando sem ainda mostrar o comandante.\n\n**O Pano do Estandarte** não é um item de status. Quem o carrega à vista é\ntratado por Ruin Kobolds como provocação — eles atacam esse alvo primeiro e\nignoram os outros. Isso é uma ferramenta tática ótima e um problema social\npéssimo, e o grupo deve descobrir os dois na prática.\n\n**Como usar em transmissão:** o mastro sendo fincado. É o gesto de abertura\ndo encontro e funciona como cortina subindo — dá para cortar a música ali.\n\n**Erro comum do grupo:** tratar como luta de atrito e gastar Impulso cedo.\nOs reforços são infinitos de propósito. Se a mesa não perceber em três ou\nquatro rodadas, deixe um Trooper tropeçar no mastro e quase derrubá-lo — é\ndica suficiente sem entregar de graça.\n\n**Ligações:** revela `labirinto_entrada_xmarca_de_garras_na_parede`. Os\nCorretores de Informação de Tolbana pagam por uma descrição precisa do\nestandarte — é a primeira prova concreta de que o Labirinto é organizado, e\n`docs/misterio_andar2.md` depende disso ser público antes do dia 10."
  },
  {
   "id": "predador_de_vaelor",
@@ -2520,11 +2770,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe certeiro ao pousar",
-  "elementoFraqueza": "Veneno",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Veneno:** ele volta para a parede depois de atacar e leva o veneno junto. Em 10+ perde a emboscada vertical pelo resto da cena e não consegue mais subir.",
-   "Resiste a Gelo** — vive exposto ao vento.",
+   "Atributo — Reflexo:** ele é rápido, mas o ciclo é previsível — arma de Reflexo pega o instante em que ele se solta da parede. Em 10+ perde a emboscada vertical pelo resto da cena e não consegue mais subir.",
    "No instante do pouso ele está totalmente descoberto.",
    "Longe da parede ele é lento e desconfortável. Puxar a luta para o descampado o anula."
   ],
@@ -2532,7 +2780,7 @@ var MONSTROS = [
    "vento"
   ],
   "vulnerabilidades": [],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Réptil alado de porte médio, escamas cinza-esverdeadas que se camuflam contra a rocha dos Penhascos de Vaelor. Menor e mais ágil que o Arauto das Alturas, mas muito mais agressivo territorialmente.",
@@ -2572,7 +2820,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nAs paredes verticais dos Penhascos de Vaelor. Vive de lado, agarrado à rocha, e passa o dia inteiro sem tocar em chão plano.\n\n**Comportamento:** emboscador vertical. Espera alguém passar por baixo e se solta — o ataque é uma queda controlada, e depois dela ele volta a subir pela parede sem pressa nenhuma.\n\n## Aparência\n\nRéptil alado de porte médio, escamas cinza-esverdeadas que se camuflam\ncontra a rocha dos Penhascos de Vaelor. Menor e mais ágil que o Arauto das\nAlturas, mas muito mais agressivo territorialmente.\n\n## Leia em voz alta\n\n> A parede do penhasco tem uma mancha escura a uns quinze metros de altura que vocês vinham ignorando. Ela desgruda.\n\n## Sinal antes do ataque\n\nCascalho caindo. Sempre cai um pouco de pedrisco antes de ele se soltar, e sempre cai à frente de quem vai ser atingido.\n\n## Ataques\n\n- Investida rasante\n- Rasgo de garra em movimento\n\n## Fraquezas\n\n- **Elemento — Veneno:** ele volta para a parede depois de atacar e leva o veneno junto. Em 10+ perde a emboscada vertical pelo resto da cena e não consegue mais subir.\n- **Resiste a Gelo** — vive exposto ao vento.\n- No instante do pouso ele está totalmente descoberto.\n- Longe da parede ele é lento e desconfortável. Puxar a luta para o descampado o anula.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Cinza-Esverdeada | Comum | 2-3 | 50% | Costureiro, Ferreiro |\n| Garra Curva | Incomum | 1 | 25% | Ferreiro |\n| Ventosa Seca | Incomum | 1 | 20% | Artesão — melhora corda de escalada |\n| Col | — | 140-200 | 100% | — |\n\n## Lore\n\nA Ventosa Seca é o motivo de qualquer escalador sério dos Penhascos ter matado pelo menos um. Amarrada na ponta de uma corda, ela agarra rocha molhada — e rocha molhada é tudo que existe em Vaelor depois do meio-dia. É o único item do andar em que o material vale mais que o monstro, e todo mundo sabe disso.\n\n*A parede tem quinze manchas escuras. Uma delas não é mancha.*\n\n## Notas para o mestre\n\nNão é domável — territorial demais e sem o temperamento observador do\nArauto das Alturas. Boa ameaça pra `bounty_04_vista_do_topo`, se o\nmestre quiser dar risco real à subida."
+  "corpo": "## Habitat\n\nAs paredes verticais dos Penhascos de Vaelor. Vive de lado, agarrado à rocha, e passa o dia inteiro sem tocar em chão plano.\n\n**Comportamento:** emboscador vertical. Espera alguém passar por baixo e se solta — o ataque é uma queda controlada, e depois dela ele volta a subir pela parede sem pressa nenhuma.\n\n## Aparência\n\nRéptil alado de porte médio, escamas cinza-esverdeadas que se camuflam\ncontra a rocha dos Penhascos de Vaelor. Menor e mais ágil que o Arauto das\nAlturas, mas muito mais agressivo territorialmente.\n\n## Leia em voz alta\n\n> A parede do penhasco tem uma mancha escura a uns quinze metros de altura que vocês vinham ignorando. Ela desgruda.\n\n## Sinal antes do ataque\n\nCascalho caindo. Sempre cai um pouco de pedrisco antes de ele se soltar, e sempre cai à frente de quem vai ser atingido.\n\n## Ataques\n\n- Investida rasante\n- Rasgo de garra em movimento\n\n## Fraquezas\n\n- **Atributo — Reflexo:** ele é rápido, mas o ciclo é previsível — arma de Reflexo pega o instante em que ele se solta da parede. Em 10+ perde a emboscada vertical pelo resto da cena e não consegue mais subir.\n- No instante do pouso ele está totalmente descoberto.\n- Longe da parede ele é lento e desconfortável. Puxar a luta para o descampado o anula.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Cinza-Esverdeada | Comum | 2-3 | 50% | Costureiro, Ferreiro |\n| Garra Curva | Incomum | 1 | 25% | Ferreiro |\n| Ventosa Seca | Incomum | 1 | 20% | Artesão — melhora corda de escalada |\n| Col | — | 140-200 | 100% | — |\n\n## Lore\n\nA Ventosa Seca é o motivo de qualquer escalador sério dos Penhascos ter matado pelo menos um. Amarrada na ponta de uma corda, ela agarra rocha molhada — e rocha molhada é tudo que existe em Vaelor depois do meio-dia. É o único item do andar em que o material vale mais que o monstro, e todo mundo sabe disso.\n\n*A parede tem quinze manchas escuras. Uma delas não é mancha.*\n\n## Notas para o mestre\n\nNão é domável — territorial demais e sem o temperamento observador do\nArauto das Alturas. Boa ameaça pra `bounty_04_vista_do_topo`, se o\nmestre quiser dar risco real à subida."
  },
  {
   "id": "ra_venenosa_gigante",
@@ -2595,11 +2843,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe antes do salto",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Gelo:** o frio trava o salto. Em 10+ ela perde o bote pelo resto da cena e vira alvo parado.",
-   "Resiste a Veneno** — a pele é a fonte.",
+   "Atributo — Reflexo:** o salto é rápido, mas anunciado — arma de Reflexo, no instante em que ela se encolhe, chega primeiro. Em 10+ ela perde o bote pelo resto da cena e vira alvo parado.",
    "Ela se encolhe visivelmente antes do salto, e o salto é o único ataque real.",
    "Fora do alcance da língua não existe encontro. Contornar a poça é sempre possível."
   ],
@@ -2607,7 +2853,7 @@ var MONSTROS = [
    "veneno próprio"
   ],
   "vulnerabilidades": [],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Rã do tamanho de um cão pequeno, pele viscosa em tons de verde e amarelo vivos — cor de aviso, não decoração. Vive nas águas rasas do Charco de Grenna.",
@@ -2623,7 +2869,7 @@ var MONSTROS = [
     "raridade": "Comum",
     "qtd": "1",
     "chance": "65%",
-    "serve": "Médico, Alquimista (elemento Veneno)"
+    "serve": "Médico, Alquimista"
    },
    {
     "item": "Pele Viscosa",
@@ -2647,7 +2893,87 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nO Charco de Grenna, que leva o nome delas, e as poças paradas do Pântano de Kavir. Ficam submersas com só os olhos de fora.\n\n**Comportamento:** passiva e paciente até alguém chegar ao alcance da língua. Não persegue e não sai da poça — o território dela tem o raio exato do bote.\n\n## Aparência\n\nRã do tamanho de um cão pequeno, pele viscosa em tons de verde e amarelo\nvivos — cor de aviso, não decoração. Vive nas águas rasas do Charco de\nGrenna.\n\n## Leia em voz alta\n\n> São dois pares de olhos na superfície da poça, sem corpo visível, e eles não piscam junto. A água em volta está mais parada do que o resto do charco.\n\n## Sinal antes do ataque\n\nOs olhos afundam. Não é fuga — é ela recolhendo o corpo para o impulso.\n\n## Ataques\n\n- Lambida venenosa (distância curta)\n- Salto com impacto\n\n## Fraquezas\n\n- **Elemento — Gelo:** o frio trava o salto. Em 10+ ela perde o bote pelo resto da cena e vira alvo parado.\n- **Resiste a Veneno** — a pele é a fonte.\n- Ela se encolhe visivelmente antes do salto, e o salto é o único ataque real.\n- Fora do alcance da língua não existe encontro. Contornar a poça é sempre possível.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Glândula de Veneno | Comum | 1 | 65% | Médico, Alquimista (elemento Veneno) |\n| Pele Viscosa | Comum | 1-2 | 35% | Costureiro, Alquimista |\n| Ova de Charco | Incomum | 2-3 | 20% | Cozinheiro, Alquimista |\n| Col | — | 60-100 | 100% | — |\n\n## Lore\n\nA Glândula de Veneno é a base de metade dos antídotos do andar, o que é uma piada que a Mulher Aflita conta sem sorrir: o que envenena e o que cura saem do mesmo bicho, e ela precisa dos dois. Quem trouxer glândulas limpas para o Alambique sai com crédito permanente, e crédito com ela vale mais que desconto.\n\n*Ela não vai atrás de ninguém. O charco inteiro é o alcance dela.*\n\n## Notas para o mestre\n\nNão é domável — glândulas ativas demais pra aproximação segura. Mais uma\nfonte de material pro Médico, junto com o Escorpião de Poeira — a ideia\né o Charco de Grenna e as planícies darem ao Médico uma cadeia de\nprodução própria, sem depender só do Alquimista."
+  "corpo": "## Habitat\n\nO Charco de Grenna, que leva o nome delas, e as poças paradas do Pântano de Kavir. Ficam submersas com só os olhos de fora.\n\n**Comportamento:** passiva e paciente até alguém chegar ao alcance da língua. Não persegue e não sai da poça — o território dela tem o raio exato do bote.\n\n## Aparência\n\nRã do tamanho de um cão pequeno, pele viscosa em tons de verde e amarelo\nvivos — cor de aviso, não decoração. Vive nas águas rasas do Charco de\nGrenna.\n\n## Leia em voz alta\n\n> São dois pares de olhos na superfície da poça, sem corpo visível, e eles não piscam junto. A água em volta está mais parada do que o resto do charco.\n\n## Sinal antes do ataque\n\nOs olhos afundam. Não é fuga — é ela recolhendo o corpo para o impulso.\n\n## Ataques\n\n- Lambida venenosa (distância curta)\n- Salto com impacto\n\n## Fraquezas\n\n- **Atributo — Reflexo:** o salto é rápido, mas anunciado — arma de Reflexo, no instante em que ela se encolhe, chega primeiro. Em 10+ ela perde o bote pelo resto da cena e vira alvo parado.\n- Ela se encolhe visivelmente antes do salto, e o salto é o único ataque real.\n- Fora do alcance da língua não existe encontro. Contornar a poça é sempre possível.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Glândula de Veneno | Comum | 1 | 65% | Médico, Alquimista |\n| Pele Viscosa | Comum | 1-2 | 35% | Costureiro, Alquimista |\n| Ova de Charco | Incomum | 2-3 | 20% | Cozinheiro, Alquimista |\n| Col | — | 60-100 | 100% | — |\n\n## Lore\n\nA Glândula de Veneno é a base de metade dos antídotos do andar, o que é uma piada que a Mulher Aflita conta sem sorrir: o que envenena e o que cura saem do mesmo bicho, e ela precisa dos dois. Quem trouxer glândulas limpas para o Alambique sai com crédito permanente, e crédito com ela vale mais que desconto.\n\n*Ela não vai atrás de ninguém. O charco inteiro é o alcance dela.*\n\n## Notas para o mestre\n\nNão é domável — glândulas ativas demais pra aproximação segura. Mais uma\nfonte de material pro Médico, junto com o Escorpião de Poeira — a ideia\né o Charco de Grenna e as planícies darem ao Médico uma cadeia de\nprodução própria, sem depender só do Alquimista."
+ },
+ {
+  "id": "rato_gigante",
+  "nome": "Rato Gigante",
+  "epiteto": "Limpador de Ruínas",
+  "arquivo": "monstros/rato_gigante.md",
+  "img": "",
+  "carta": "",
+  "tipo": "besta",
+  "zona": "Ruínas e Necrópole",
+  "regioes": [
+   "esgoto_cidade_inicio",
+   "ruinas_kobold",
+   "porao_taverna",
+   "necrópole_voss"
+  ],
+  "nivelRecomendado": "1-2",
+  "ameaca": "fraco",
+  "golpes": "2",
+  "local": "dungeon/labirinto",
+  "canonico": "nao",
+  "fonte": "",
+  "fraqueza": "a barriga, exposta quando ele para de correr para farejar um pedaço de comida",
+  "atributoFraqueza": "Reflexo",
+  "fraquezas": [
+   "Atributo — Reflexo:** ele corre em linha reta quando vai morder. Um golpe no tempo do pulo (Reflexo + arma de área) quebra a coluna. Acerto de fraqueza em 10+ = mata um e assusta os outros por 1 rodada.",
+   "Luz forte: tocha na cara ou gritos fortes assustam rato sozinho.",
+   "Comida: um pedaço de carne jogado longe distrai toda a matilha por tempo suficiente pra passar.",
+   "Sozinho: nunca ataca grupo de 3 pessoas se for menos de 3 ratos."
+  ],
+  "resistencias": [
+   "doença",
+   "veneno leve"
+  ],
+  "vulnerabilidades": [
+   "tudo que é golpe forte",
+   "isolado",
+   "luz"
+  ],
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
+  "resumo": "O tamanho de um cachorro pequeno. Pelo cinza-grosso, cheio de nós e sujeira. Dentes amarelos que aparecem mesmo com a boca fechada. Rabo longo sem pelo, rosna em silêncio quase — só o barulho da garra no chão.",
+  "habitat": "Esgotos, porões, ruínas abandonadas. Onde tem gente, tem resto de comida, onde tem resto de comida, tem Rato Gigante.",
+  "comportamento": "medroso de primeira, ataca em grupo se tiver muitos. Um rato sozinho foge; 3 ratos atacam quem parece fraco; 7+ ratos atacam todo mundo. Sempre ataca as costas ou a perna ferida.",
+  "leitura": "",
+  "sinal": "Cheiro forte de urina e velhice no ar. Antes de ver, você ouve: barulho pequeno de unha em pedra, muitas vezes, de todo lado. Quando um rato rosna de verdade, é porque já não tem medo — e os outros vêm atrás.",
+  "lore": "Os ratos gigantes são os primeiros moradores de Aincrad. Chegaram antes dos jogadores, vão ficar depois. Tudo o que sobra vira comida de rato. Os aventureiros mais velhos dizem: quando você não vê rato gigante há tempo, é pior do que quando vê.",
+  "notas": "",
+  "drops": [
+   {
+    "item": "Pele Rústica",
+    "raridade": "Comum",
+    "qtd": "1",
+    "chance": "55%",
+    "serve": "Coureiro (couro barato, itens simples)"
+   },
+   {
+    "item": "Dente Pequeno",
+    "raridade": "Comum",
+    "qtd": "1-4",
+    "chance": "60%",
+    "serve": "Joalheiro, Alquimista (pó de dente, amuletos)"
+   },
+   {
+    "item": "Carne Simples",
+    "raridade": "Comum",
+    "qtd": "1",
+    "chance": "40%",
+    "serve": "Cozinheiro (refeições baratas)"
+   },
+   {
+    "item": "Col",
+    "raridade": "—",
+    "qtd": "5-18",
+    "chance": "100%",
+    "serve": "—"
+   }
+  ],
+  "corpo": "## Habitat\n\nEsgotos, porões, ruínas abandonadas. Onde tem gente, tem resto de comida, onde tem resto de comida, tem Rato Gigante.\n\n**Comportamento:** medroso de primeira, ataca em grupo se tiver muitos. Um rato sozinho foge; 3 ratos atacam quem parece fraco; 7+ ratos atacam todo mundo. Sempre ataca as costas ou a perna ferida.\n\n## Aparência\n\nO tamanho de um cachorro pequeno. Pelo cinza-grosso, cheio de nós e sujeira. Dentes amarelos que aparecem mesmo com a boca fechada. Rabo longo sem pelo, rosna em silêncio quase — só o barulho da garra no chão.\n\n## Leia em voz alta\n\n> O porão está escuro e a luz da tocha dança na parede molhada. Você vê o primeiro no canto: tamanho do seu joelho, olhando pra você, com um pedaço de pão na boca. Ele larga o pão devagar. Depois você ouve a garra. Muitas garras. Vindo de todo lado.\n\n## Sinal antes do ataque\n\nCheiro forte de urina e velhice no ar. Antes de ver, você ouve: barulho pequeno de unha em pedra, muitas vezes, de todo lado. Quando um rato rosna de verdade, é porque já não tem medo — e os outros vêm atrás.\n\n## Ataques\n\n- **Mordida de tornozelo** — agarra a perna e não larga. Reduz velocidade de movimento do alvo pela metade enquanto está agarrado.\n- **Enxame pequeno** — mais de 3 ratos = um deles sempre ataca a pessoa que está mais ferida ou mais distraída.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** ele corre em linha reta quando vai morder. Um golpe no tempo do pulo (Reflexo + arma de área) quebra a coluna. Acerto de fraqueza em 10+ = mata um e assusta os outros por 1 rodada.\n- Luz forte: tocha na cara ou gritos fortes assustam rato sozinho.\n- Comida: um pedaço de carne jogado longe distrai toda a matilha por tempo suficiente pra passar.\n- Sozinho: nunca ataca grupo de 3 pessoas se for menos de 3 ratos.\n\n## O que torna este encontro memorável\n\nRato Gigante é o primeiro monstro que NINGUÉM tem medo. É também o primeiro monstro que já pegou um aventureiro distraído de perna ferida e mandou ele pro hospital. Nada engraçado depois que um te morde.\n\n## Complicações úteis\n\n- A mordida infecciona — no dia seguinte, a pessoa acorda com febre.\n- Os ratos fugiram com um item pequeno do grupo (chave, cristal de cura). Tem que seguir pro ninho.\n- No ninho tem um bebê rato, órfão. Alguém do grupo quer criar?\n- A \"toca\" dos ratos é a parede de trás do quarto de um NPC. O NPC não sabia.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele Rústica | Comum | 1 | 55% | Coureiro (couro barato, itens simples) |\n| Dente Pequeno | Comum | 1-4 | 60% | Joalheiro, Alquimista (pó de dente, amuletos) |\n| Carne Simples | Comum | 1 | 40% | Cozinheiro (refeições baratas) |\n| Col | — | 5-18 | 100% | — |\n\n## Lore\n\nOs ratos gigantes são os primeiros moradores de Aincrad. Chegaram antes dos jogadores, vão ficar depois. Tudo o que sobra vira comida de rato. Os aventureiros mais velhos dizem: quando você não vê rato gigante há tempo, é pior do que quando vê.\n\n*Se o rato te tem medo, você ainda é inexperiente. Se o rato não tem medo, você já está morto.*\n\n## Notas para o mestre\n\n- **Onde entra:** qualquer lugar escuro e sujo da cidade e ruínas.\n- **Como usar em transmissão:** barulho de muitas garras em pedra, cheiro como ambientação, a revelação de que são MUITOS.\n- **Erro comum do grupo:** \"é só rato\". Não respeita. Vira complicação de verdade.\n- **Como a cena encerra sem HP:** jogar comida, eles comem e param de atacar por um minuto. Grupo passa."
  },
  {
   "id": "rei_das_planicies",
@@ -2670,11 +2996,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "a galhada, quando ele a baixa para investir — e ela é a única coisa que ele protege",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Trovão:** o cristal de descarga da Gruta de Lumis é o item",
-   "Resiste a Gelo e a Veneno** — não adianta, e o grupo deve descobrir isso",
+   "Atributo — Conhecimento:** a escrita que cobre ele inteiro é o segredo",
    "A galhada fica aberta depois do giro, e é a única parte dele que importa.",
    "Terreno fechado o anula: entre pedras, ele não corre, e sem corrida ele é"
   ],
@@ -2687,7 +3011,7 @@ var MONSTROS = [
    "trovão",
    "terreno fechado"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Grande como uma carroça. A galhada tem envergadura de três metros e não é simétrica de nenhum jeito natural — os galhos crescem em ângulos que repetem, e o padrão que repetem é escrita. A pelagem inteira é coberta das mesmas marcas claras dos Guardiões, mas nele elas são densas, sem espaço em branco.",
@@ -2734,6 +3058,41 @@ var MONSTROS = [
     "serve": "Bibliotecário — texto longo e legível"
    },
    {
+    "item": "Pele Real",
+    "raridade": "Incomum",
+    "qtd": "1-2",
+    "chance": "50%",
+    "serve": "Coureiro (acessório/armadura especial)"
+   },
+   {
+    "item": "Garra do Rei",
+    "raridade": "Raro",
+    "qtd": "2",
+    "chance": "35%",
+    "serve": "Ferreiro (arma pontuda/garra)"
+   },
+   {
+    "item": "Núcleo de Fera",
+    "raridade": "Raro",
+    "qtd": "1",
+    "chance": "40%",
+    "serve": "Alquimista (poções/cristais de poder)"
+   },
+   {
+    "item": "Cristal de Força",
+    "raridade": "Raro",
+    "qtd": "1",
+    "chance": "25%",
+    "serve": "Cristalista, socket de força em arma"
+   },
+   {
+    "item": "Carta \"Rei das Planícies\"",
+    "raridade": "Épico",
+    "qtd": "1",
+    "chance": "~0.8%",
+    "serve": "Drop exclusivo do MVP (0.8% ≈ 1/125); 1 carta equipável"
+   },
+   {
     "item": "Coroa do Campo",
     "raridade": "Épico",
     "qtd": "1",
@@ -2748,7 +3107,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nField boss da Planície de Verrun. Não fica num lugar: ele **percorre** um\ncircuito entre Verrun, Kaldan e as Colinas de Braxhold, e o circuito passa\nexatamente pelos quatro pontos onde há pedra gravada no andar.\n\n**Comportamento:** ignora completamente quem não incomodou os Guardiões. Se o\ngrupo matou um Guardião das Planícies, ele aparece na sessão seguinte, no\ndescampado, e não vai embora sem o encontro acontecer.\n\n## Aparência\n\nGrande como uma carroça. A galhada tem envergadura de três metros e não é\nsimétrica de nenhum jeito natural — os galhos crescem em ângulos que repetem,\ne o padrão que repetem é escrita. A pelagem inteira é coberta das mesmas\nmarcas claras dos Guardiões, mas nele elas são densas, sem espaço em branco.\n\nNos olhos não há nada de animal.\n\n## Leia em voz alta\n\n> Ele atravessa o descampado num passo só, sem pressa, e para de frente para\n> vocês a uns quarenta metros. A galhada é maior que uma carroça e está\n> escrita. A pelagem está escrita. Ele espera, e enquanto espera vocês\n> percebem que a escrita da galhada continua na do corpo, e que é uma frase\n> só, e que ela dá a volta nele inteiro.\n\n## Sinal antes do ataque\n\nEle abaixa a galhada até a ponta encostar no chão. É o único movimento dele\nque não parece calculado, e é o único que precede violência.\n\n## Ataques\n\n- **Investida coroada** — atravessa o campo inteiro. Quem não sair da linha\n  não fica de pé.\n- **Convocar o rebanho** — bate o casco três vezes e traz dois Guardiões das\n  Planícies. Só faz isso na segunda barra, e só uma vez.\n- **Girar a galhada** — golpe amplo que limpa tudo num raio de cinco metros e\n  deixa a galhada exposta logo depois.\n- **Parar** — na terceira barra ele simplesmente para de atacar por uma rodada\n  e olha o grupo. Isso não é misericórdia e não é bug.\n\n## Fraquezas\n\n- **Elemento — Trovão:** o cristal de descarga da Gruta de Lumis é o item\n  desenhado para esta luta. Em 10+ ele perde a investida coroada pelo resto da\n  cena, e sem ela a arena inteira muda de dono.\n- **Resiste a Gelo e a Veneno** — não adianta, e o grupo deve descobrir isso\n  antes pelo Guardião, não aqui.\n- A galhada fica aberta depois do giro, e é a única parte dele que importa.\n- Terreno fechado o anula: entre pedras, ele não corre, e sem corrida ele é\n  grande e lento.\n\n## O que torna este encontro memorável\n\nA pausa da terceira barra. Um chefe que para de lutar e olha, no meio da luta,\nsem explicação nenhuma, é a coisa mais perturbadora que o Andar 1 tem — e a\nmesa vai discutir o que aquilo significa por sessões. Não responda.\n\nE há a galhada: a única fonte de texto longo e legível do andar inteiro,\ncarregada por um animal que não devia saber escrever.\n\n## Complicações úteis\n\n- Vencem, e a rota de migração some. Verrun e Kaldan ficam sem caça grande, e\n  Horunka sente no mês seguinte.\n- Ele para na terceira barra e alguém baixa a arma. Deixe acontecer.\n- A galhada quebra na luta e o texto fica incompleto para sempre.\n- Ele recua vivo, e a partir daí o circuito dele evita o grupo — o que é pior,\n  porque significa que ele aprendeu os rostos.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele Resistente | Comum | 3-4 | 100% | Costureiro, Ferreiro |\n| Carne Nobre | Incomum | 2-3 | 80% | Cozinheiro |\n| Casco Polido | Incomum | 2 | 70% | Artesão |\n| Núcleo Selvagem | Raro | 1-2 | 60% | Joalheiro, item Único |\n| Galhada Escrita | Raro | 1 | 100% | Bibliotecário — texto longo e legível |\n| Coroa do Campo | **Épico** | 1 | 100% | Torna Raro em Único na bancada |\n| Col | — | 2200-3200 | 100% | — |\n\n## Lore\n\nOs quatro pontos de pedra gravada do Andar 1 — Verrun, Kaldan, Pemberton,\nBraxhold — estão nas quatro pontas de um circuito, e o Rei das Planícies\ncaminha esse circuito desde antes de qualquer jogador acordar aqui. Wilbrand\nacha que ele é anterior ao andar. Wilbrand acha isso de tudo, e nesse caso\nespecífico pode estar certo, porque a escrita da galhada é a mesma das pedras\ne as pedras não foram escritas por ninguém que ainda esteja aqui.\n\nEle não guarda um tesouro. Ele carrega um recado, e o carrega há tempo demais\npara alguém que ainda espera entregá-lo.\n\n*Se ele parar e olhar para vocês, não é sobre a luta.*\n\n## Notas para o mestre\n\n- **Onde entra:** field boss de `campos_oeste` (Planície de Verrun). Aparece\n  na sessão seguinte à morte de um Guardião das Planícies.\n- **A Galhada Escrita** é conteúdo do mistério: o texto dela é a mesma frase\n  do mural do Castelo, completa. Ver `docs/misterio_andar2.md` antes de\n  entregar, e não traduza tudo de uma vez.\n- **Como usar em transmissão:** a pausa da terceira barra. Segure o silêncio\n  mais tempo do que é confortável — inclusive para você.\n- **Erro comum do grupo:** chegar sem Trovão. O caminho estava dado: Guardião\n  resiste a Gelo, o cristal está na Gruta, os Corretores de Tolbana vendem a\n  informação. Se chegarem sem, deixe a luta ser dura e honesta.\n- **Como a cena encerra sem HP:** sair do circuito. Ele nunca persegue para\n  fora da rota, e um grupo que entende isso pode encerrar o encontro andando\n  em linha reta para o sul. Ninguém ganha nada, e todo mundo se lembra."
+  "corpo": "## Habitat\n\nField boss da Planície de Verrun. Não fica num lugar: ele **percorre** um\ncircuito entre Verrun, Kaldan e as Colinas de Braxhold, e o circuito passa\nexatamente pelos quatro pontos onde há pedra gravada no andar.\n\n**Comportamento:** ignora completamente quem não incomodou os Guardiões. Se o\ngrupo matou um Guardião das Planícies, ele aparece na sessão seguinte, no\ndescampado, e não vai embora sem o encontro acontecer.\n\n## Aparência\n\nGrande como uma carroça. A galhada tem envergadura de três metros e não é\nsimétrica de nenhum jeito natural — os galhos crescem em ângulos que repetem,\ne o padrão que repetem é escrita. A pelagem inteira é coberta das mesmas\nmarcas claras dos Guardiões, mas nele elas são densas, sem espaço em branco.\n\nNos olhos não há nada de animal.\n\n## Leia em voz alta\n\n> Ele atravessa o descampado num passo só, sem pressa, e para de frente para\n> vocês a uns quarenta metros. A galhada é maior que uma carroça e está\n> escrita. A pelagem está escrita. Ele espera, e enquanto espera vocês\n> percebem que a escrita da galhada continua na do corpo, e que é uma frase\n> só, e que ela dá a volta nele inteiro.\n\n## Sinal antes do ataque\n\nEle abaixa a galhada até a ponta encostar no chão. É o único movimento dele\nque não parece calculado, e é o único que precede violência.\n\n## Ataques\n\n- **Investida coroada** — atravessa o campo inteiro. Quem não sair da linha\n  não fica de pé.\n- **Convocar o rebanho** — bate o casco três vezes e traz dois Guardiões das\n  Planícies. Só faz isso na segunda barra, e só uma vez.\n- **Girar a galhada** — golpe amplo que limpa tudo num raio de cinco metros e\n  deixa a galhada exposta logo depois.\n- **Parar** — na terceira barra ele simplesmente para de atacar por uma rodada\n  e olha o grupo. Isso não é misericórdia e não é bug.\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** a escrita que cobre ele inteiro é o segredo\n  e a brecha — arma de Conhecimento, na mão de quem leu o padrão, é a\n  resposta desenhada para esta luta. Em 10+ ele perde a investida coroada\n  pelo resto da cena, e sem ela a arena inteira muda de dono.\n- A galhada fica aberta depois do giro, e é a única parte dele que importa.\n- Terreno fechado o anula: entre pedras, ele não corre, e sem corrida ele é\n  grande e lento.\n\n## O que torna este encontro memorável\n\nA pausa da terceira barra. Um chefe que para de lutar e olha, no meio da luta,\nsem explicação nenhuma, é a coisa mais perturbadora que o Andar 1 tem — e a\nmesa vai discutir o que aquilo significa por sessões. Não responda.\n\nE há a galhada: a única fonte de texto longo e legível do andar inteiro,\ncarregada por um animal que não devia saber escrever.\n\n## Complicações úteis\n\n- Vencem, e a rota de migração some. Verrun e Kaldan ficam sem caça grande, e\n  Horunka sente no mês seguinte.\n- Ele para na terceira barra e alguém baixa a arma. Deixe acontecer.\n- A galhada quebra na luta e o texto fica incompleto para sempre.\n- Ele recua vivo, e a partir daí o circuito dele evita o grupo — o que é pior,\n  porque significa que ele aprendeu os rostos.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pele Resistente | Comum | 3-4 | 100% | Costureiro, Ferreiro |\n| Carne Nobre | Incomum | 2-3 | 80% | Cozinheiro |\n| Casco Polido | Incomum | 2 | 70% | Artesão |\n| Núcleo Selvagem | Raro | 1-2 | 60% | Joalheiro, item Único |\n| Galhada Escrita | Raro | 1 | 100% | Bibliotecário — texto longo e legível |\n| Pele Real | **Incomum** | 1-2 | 50% | Coureiro (acessório/armadura especial) |\n| Garra do Rei | **Raro** | 2 | 35% | Ferreiro (arma pontuda/garra) |\n| Núcleo de Fera | **Raro** | 1 | 40% | Alquimista (poções/cristais de poder) |\n| Cristal de Força | **Raro** | 1 | 25% | Cristalista, socket de força em arma |\n| Carta \"Rei das Planícies\" | **Épico** | 1 | ~0.8% | Drop exclusivo do MVP (0.8% ≈ 1/125); 1 carta equipável |\n| Coroa do Campo | **Épico** | 1 | 100% | Torna Raro em Único na bancada |\n| Col | — | 2200-3200 | 100% | — |\n\n## Lore\n\nOs quatro pontos de pedra gravada do Andar 1 — Verrun, Kaldan, Pemberton,\nBraxhold — estão nas quatro pontas de um circuito, e o Rei das Planícies\ncaminha esse circuito desde antes de qualquer jogador acordar aqui. Wilbrand\nacha que ele é anterior ao andar. Wilbrand acha isso de tudo, e nesse caso\nespecífico pode estar certo, porque a escrita da galhada é a mesma das pedras\ne as pedras não foram escritas por ninguém que ainda esteja aqui.\n\nEle não guarda um tesouro. Ele carrega um recado, e o carrega há tempo demais\npara alguém que ainda espera entregá-lo.\n\n*Se ele parar e olhar para vocês, não é sobre a luta.*\n\n## Notas para o mestre\n\n- **Onde entra:** field boss de `campos_oeste` (Planície de Verrun). Aparece\n  na sessão seguinte à morte de um Guardião das Planícies.\n- **A Galhada Escrita** é conteúdo do mistério: o texto dela é a mesma frase\n  do mural do Castelo, completa. Ver `docs/misterio_andar2.md` antes de\n  entregar, e não traduza tudo de uma vez.\n- **Como usar em transmissão:** a pausa da terceira barra. Segure o silêncio\n  mais tempo do que é confortável — inclusive para você.\n- **Erro comum do grupo:** chegar sem ninguém de arma de Conhecimento. O\n  caminho estava dado: as marcas na pelagem do Guardião, a escrita na\n  galhada, os Corretores de Tolbana vendem a informação. Se chegarem sem,\n  deixe a luta ser dura e honesta.\n- **Como a cena encerra sem HP:** sair do circuito. Ele nunca persegue para\n  fora da rota, e um grupo que entende isso pode encerrar o encontro andando\n  em linha reta para o sul. Ninguém ganha nada, e todo mundo se lembra."
  },
  {
   "id": "ruin_kobold_arqueiro",
@@ -2770,11 +3129,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe ao recarregar",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Trovão",
+  "atributoFraqueza": "Técnica",
   "fraquezas": [
-   "Elemento — Fogo:** as flechas dele têm empenagem de pena seca e a aljava queima. Em 10+ ele perde o ataque à distância pelo resto da cena.",
-   "Resiste a Trovão** — pouco metal no corpo.",
+   "Atributo — Técnica:** a perícia dele é o arco, e é uma perícia só — arma de Técnica, de quem atira melhor que ele, vence o duelo de precisão. Em 10+ ele perde o ataque à distância pelo resto da cena.",
    "Ele fica exposto ao recarregar, e recarrega devagar.",
    "De perto ele não luta: recua ou se rende. Fechar a distância encerra."
   ],
@@ -2782,7 +3139,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "combate corpo a corpo próximo"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Mesma linhagem visual do Ruin Kobold Trooper (corpo robusto, cauda grande, orelhas compridas), mas mais magro e com um arco curto rústico no lugar do machado. Fica em posições elevadas ou recuadas no Labirinto.",
@@ -2822,7 +3179,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCorredores altos e vãos do Labirinto, sempre acima do nível onde o grupo anda. Nunca no chão.\n\n**Comportamento:** covarde e disciplinado, e é uma combinação ruim para quem enfrenta. Atira, recua, atira de outro ângulo, e nunca deixa que a distância caia abaixo do alcance dele.\n\n## Aparência\n\nMesma linhagem visual do Ruin Kobold Trooper (corpo robusto, cauda\ngrande, orelhas compridas), mas mais magro e com um arco curto rústico\nno lugar do machado. Fica em posições elevadas ou recuadas no Labirinto.\n\n## Leia em voz alta\n\n> A flecha bate na pedra ao lado da cabeça de alguém antes de qualquer um ouvir a corda. Quando vocês localizam o vão de onde ela veio, ele já não está lá.\n\n## Sinal antes do ataque\n\nO rangido da corda no vão. Chega meio segundo antes da flecha e só é audível se o corredor estiver em silêncio.\n\n## Ataques\n\n- Disparo de flecha\n- Recuo tático (evita combate corpo a corpo quando possível)\n\n## Fraquezas\n\n- **Elemento — Fogo:** as flechas dele têm empenagem de pena seca e a aljava queima. Em 10+ ele perde o ataque à distância pelo resto da cena.\n- **Resiste a Trovão** — pouco metal no corpo.\n- Ele fica exposto ao recarregar, e recarrega devagar.\n- De perto ele não luta: recua ou se rende. Fechar a distância encerra.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Armadura Kobold | Comum | 1-2 | 45% | Ferreiro |\n| Arco Rústico Kobold | Incomum | 1 | 20% | Arma Comum, sucata de Artesão |\n| Flecha Marcada | Incomum | 2-4 | 30% | Corretores — a marca diz de qual esquadrão |\n| Col | — | 70-120 | 100% | — |\n\n## Lore\n\nAs flechas são marcadas. Não com o nome do arqueiro, mas com um símbolo de esquadrão que se repete, e os Corretores de Tolbana já catalogaram seis símbolos diferentes. Seis esquadrões significa seis oficiais, e seis oficiais significa que a torre tem uma estrutura de comando maior do que a de qualquer guilda de jogadores do andar.\n\n*Ele não erra por incompetência. Erra porque atira para te mover.*\n\n## Notas para o mestre\n\nNão é domável — tropa estruturada, igual o Trooper e o Sentinel. Use pra\ndar variedade tática aos corredores do Labirinto: um grupo com Arqueiro\n+ Trooper obriga a decidir entre fechar distância rápido ou lidar com\ndano à distância primeiro."
+  "corpo": "## Habitat\n\nCorredores altos e vãos do Labirinto, sempre acima do nível onde o grupo anda. Nunca no chão.\n\n**Comportamento:** covarde e disciplinado, e é uma combinação ruim para quem enfrenta. Atira, recua, atira de outro ângulo, e nunca deixa que a distância caia abaixo do alcance dele.\n\n## Aparência\n\nMesma linhagem visual do Ruin Kobold Trooper (corpo robusto, cauda\ngrande, orelhas compridas), mas mais magro e com um arco curto rústico\nno lugar do machado. Fica em posições elevadas ou recuadas no Labirinto.\n\n## Leia em voz alta\n\n> A flecha bate na pedra ao lado da cabeça de alguém antes de qualquer um ouvir a corda. Quando vocês localizam o vão de onde ela veio, ele já não está lá.\n\n## Sinal antes do ataque\n\nO rangido da corda no vão. Chega meio segundo antes da flecha e só é audível se o corredor estiver em silêncio.\n\n## Ataques\n\n- Disparo de flecha\n- Recuo tático (evita combate corpo a corpo quando possível)\n\n## Fraquezas\n\n- **Atributo — Técnica:** a perícia dele é o arco, e é uma perícia só — arma de Técnica, de quem atira melhor que ele, vence o duelo de precisão. Em 10+ ele perde o ataque à distância pelo resto da cena.\n- Ele fica exposto ao recarregar, e recarrega devagar.\n- De perto ele não luta: recua ou se rende. Fechar a distância encerra.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Armadura Kobold | Comum | 1-2 | 45% | Ferreiro |\n| Arco Rústico Kobold | Incomum | 1 | 20% | Arma Comum, sucata de Artesão |\n| Flecha Marcada | Incomum | 2-4 | 30% | Corretores — a marca diz de qual esquadrão |\n| Col | — | 70-120 | 100% | — |\n\n## Lore\n\nAs flechas são marcadas. Não com o nome do arqueiro, mas com um símbolo de esquadrão que se repete, e os Corretores de Tolbana já catalogaram seis símbolos diferentes. Seis esquadrões significa seis oficiais, e seis oficiais significa que a torre tem uma estrutura de comando maior do que a de qualquer guilda de jogadores do andar.\n\n*Ele não erra por incompetência. Erra porque atira para te mover.*\n\n## Notas para o mestre\n\nNão é domável — tropa estruturada, igual o Trooper e o Sentinel. Use pra\ndar variedade tática aos corredores do Labirinto: um grupo com Arqueiro\n+ Trooper obriga a decidir entre fechar distância rápido ou lidar com\ndano à distância primeiro."
  },
  {
   "id": "ruin_kobold_sentinel",
@@ -2844,11 +3201,9 @@ var MONSTROS = [
   "canonico": "sim",
   "fonte": "https://swordartonline.fandom.com/wiki/Ruin_Kobold_Sentinel",
   "fraqueza": "garganta (único ponto sem armadura)",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Trovão",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** as correias da armadura pesada queimam. Em 10+ ele perde a capacidade de segurar formação pelo resto da cena.",
-   "Resiste a Trovão** — a armadura é grossa e mal condutora.",
+   "Atributo — Reflexo:** a armadura pesa e a alabarda é lenta — arma de Reflexo entra na janela que a placa não cobre. Em 10+ ele perde a capacidade de segurar formação pelo resto da cena.",
    "A garganta é o único ponto sem placa, e ele a expõe ao erguer a alabarda.",
    "Ele não sai da posição designada. O terreno fora dela é seguro, sempre."
   ],
@@ -2898,7 +3253,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nA sala do chefe e os corredores imediatamente anteriores. É o reforço que Illfang convoca, e fora da luta dele quase não aparece.\n\n**Comportamento:** disciplinado até o fim. Não recua, não foge e não persegue além da sala. Ocupa posição e mantém posição, mesmo quando manter posição é claramente a decisão errada.\n\n## Aparência\n\nHumanoide vermelho, orelhas longas e finas saindo por baixo do capacete,\ncauda vermelha grande. Corpo e cabeça quase totalmente cobertos por\narmadura de metal pesada.\n\n## Leia em voz alta\n\n> O Sentinel não parece guarda de corredor. Parece pedaço da sala do chefe que\n> aprendeu a andar. Armadura demais, carne de menos, e um tipo de disciplina\n> que faz o Trooper comum parecer animal assustado em comparação.\n\n## Sinal antes do ataque\n\n- arma levantando antes do passo,\n- formação fechando ângulo,\n- e nenhum Sentinel atacando sozinho se puder atacar em conjunto.\n\n## Ataques\n\n- Golpe de alabarda (light novels) ou maça (anime) — dano pesado, alcance\n  médio\n\n## Fraquezas\n\n- **Elemento — Fogo:** as correias da armadura pesada queimam. Em 10+ ele perde a capacidade de segurar formação pelo resto da cena.\n- **Resiste a Trovão** — a armadura é grossa e mal condutora.\n- A garganta é o único ponto sem placa, e ele a expõe ao erguer a alabarda.\n- Ele não sai da posição designada. O terreno fora dela é seguro, sempre.\n\n## O que torna este encontro memorável\n\nO Sentinel existe para mostrar que “chefe com reforço” não é detalhe. Quando\nele aparece, a luta deixa de ser sobre bravura individual e vira teste de\ncoordenação.\n\n## Complicações úteis\n\n- O grupo lê a garganta tarde demais e perde uma rodada valiosa.\n- Dois Sentinels fecham alguém num ângulo ruim.\n- A arma deles controla espaço mais do que causa dano.\n- Um Sentinel cai, mas o resto da linha melhora por causa disso.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Armadura Kobold | Comum | 2-3 | 60% | Ferreiro |\n| Alabarda de Sentinel | Incomum | 1 | 25% | Arma Comum, sucata de Ferreiro |\n| Placa de Peito Inteira | Raro | 1 | 10% | Ferreiro, base de armadura Rara |\n| Col | — | 55-90 | 100% | — |\n\n## Lore\n\nSão eles que morrem primeiro na luta de Illfang, aos doze, e é fácil esquecer que cada um deles estava de pé num corredor antes disso, esperando uma ordem que veio de alguém. Um Sentinel isolado nunca abandona o posto — há relatos de grupos que voltaram semanas depois e encontraram o mesmo Sentinel, no mesmo vão, na mesma posição.\n\n*Ele não está lutando por Illfang. Está cumprindo uma ordem que ninguém revogou.*\n\n## Notas para o mestre\n\nNão aparece sozinho fora da sala do chefe: 3 Sentinels entram na luta\ncontra Illfang logo no início, e mais 3 a cada barra de HP dele esvaziada\n(até 12 no total). Fora desse contexto, um único Sentinel isolado (ex:\npatrulhando um corredor perto da sala do chefe) já é um bom \"miniboss\" de\naviso de que o grupo está perto do objetivo final da masmorra.\n\n**Erro comum do grupo:** insistir em dano bruto no peitoral.\n\n**Como usar em transmissão:** venda formação e peso. Sentinel bom entra em\ncena como parede móvel, não como kobold comum com número maior."
+  "corpo": "## Habitat\n\nA sala do chefe e os corredores imediatamente anteriores. É o reforço que Illfang convoca, e fora da luta dele quase não aparece.\n\n**Comportamento:** disciplinado até o fim. Não recua, não foge e não persegue além da sala. Ocupa posição e mantém posição, mesmo quando manter posição é claramente a decisão errada.\n\n## Aparência\n\nHumanoide vermelho, orelhas longas e finas saindo por baixo do capacete,\ncauda vermelha grande. Corpo e cabeça quase totalmente cobertos por\narmadura de metal pesada.\n\n## Leia em voz alta\n\n> O Sentinel não parece guarda de corredor. Parece pedaço da sala do chefe que\n> aprendeu a andar. Armadura demais, carne de menos, e um tipo de disciplina\n> que faz o Trooper comum parecer animal assustado em comparação.\n\n## Sinal antes do ataque\n\n- arma levantando antes do passo,\n- formação fechando ângulo,\n- e nenhum Sentinel atacando sozinho se puder atacar em conjunto.\n\n## Ataques\n\n- Golpe de alabarda (light novels) ou maça (anime) — dano pesado, alcance\n  médio\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a armadura pesa e a alabarda é lenta — arma de Reflexo entra na janela que a placa não cobre. Em 10+ ele perde a capacidade de segurar formação pelo resto da cena.\n- A garganta é o único ponto sem placa, e ele a expõe ao erguer a alabarda.\n- Ele não sai da posição designada. O terreno fora dela é seguro, sempre.\n\n## O que torna este encontro memorável\n\nO Sentinel existe para mostrar que “chefe com reforço” não é detalhe. Quando\nele aparece, a luta deixa de ser sobre bravura individual e vira teste de\ncoordenação.\n\n## Complicações úteis\n\n- O grupo lê a garganta tarde demais e perde uma rodada valiosa.\n- Dois Sentinels fecham alguém num ângulo ruim.\n- A arma deles controla espaço mais do que causa dano.\n- Um Sentinel cai, mas o resto da linha melhora por causa disso.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Armadura Kobold | Comum | 2-3 | 60% | Ferreiro |\n| Alabarda de Sentinel | Incomum | 1 | 25% | Arma Comum, sucata de Ferreiro |\n| Placa de Peito Inteira | Raro | 1 | 10% | Ferreiro, base de armadura Rara |\n| Col | — | 55-90 | 100% | — |\n\n## Lore\n\nSão eles que morrem primeiro na luta de Illfang, aos doze, e é fácil esquecer que cada um deles estava de pé num corredor antes disso, esperando uma ordem que veio de alguém. Um Sentinel isolado nunca abandona o posto — há relatos de grupos que voltaram semanas depois e encontraram o mesmo Sentinel, no mesmo vão, na mesma posição.\n\n*Ele não está lutando por Illfang. Está cumprindo uma ordem que ninguém revogou.*\n\n## Notas para o mestre\n\nNão aparece sozinho fora da sala do chefe: 3 Sentinels entram na luta\ncontra Illfang logo no início, e mais 3 a cada barra de HP dele esvaziada\n(até 12 no total). Fora desse contexto, um único Sentinel isolado (ex:\npatrulhando um corredor perto da sala do chefe) já é um bom \"miniboss\" de\naviso de que o grupo está perto do objetivo final da masmorra.\n\n**Erro comum do grupo:** insistir em dano bruto no peitoral.\n\n**Como usar em transmissão:** venda formação e peso. Sentinel bom entra em\ncena como parede móvel, não como kobold comum com número maior."
  },
  {
   "id": "ruin_kobold_trooper",
@@ -2920,10 +3275,9 @@ var MONSTROS = [
   "canonico": "sim",
   "fonte": "https://swordartonline.fandom.com/wiki/Ruin_Kobold_Trooper",
   "fraqueza": "",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Técnica",
   "fraquezas": [
-   "Elemento — Fogo:** couro velho e mal curtido. Em 10+ eles quebram a dupla pelo resto da cena e passam a atacar isolados.",
+   "Atributo — Técnica:** o equipamento é rudimentar e a técnica deles é nula — arma de Técnica, de quem luta com ofício, desmonta a dupla. Em 10+ eles quebram a dupla pelo resto da cena e passam a atacar isolados.",
    "Sozinho, um Trooper não avança: espera o par.",
    "A ronda é cronometrada. Um grupo que conte o intervalo escolhe a hora da luta.",
    "Eles não saem do corredor designado. Uma sala lateral é território neutro."
@@ -2972,7 +3326,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCorredores externos do Labirinto, em ronda. Fazem sempre o mesmo trajeto, no mesmo intervalo, e o intervalo é curto o bastante para ser contado.\n\n**Comportamento:** agressivo e previsível. Ataca em dupla, sempre em dupla, e a segunda dupla chega três minutos depois da primeira, sem exceção.\n\n## Aparência\n\nHumanoide de corpo robusto, cauda grande, orelhas parecidas com as de um\ncoelho. Sem armadura — torso nu, só veste uma calça simples.\n\n## Leia em voz alta\n\n> Dois deles vêm pelo corredor, lado a lado, no mesmo passo. Não estão procurando vocês — estão andando o trajeto de sempre, e vocês estão no trajeto.\n\n## Sinal antes do ataque\n\nOs passos casados. Dois pares de pés no mesmo ritmo, e o ritmo não muda nem quando eles avistam alguém.\n\n## Ataques\n\n- Golpe com machado de mão rústico, curto alcance\n\n## Fraquezas\n\n- **Elemento — Fogo:** couro velho e mal curtido. Em 10+ eles quebram a dupla pelo resto da cena e passam a atacar isolados.\n- Sozinho, um Trooper não avança: espera o par.\n- A ronda é cronometrada. Um grupo que conte o intervalo escolhe a hora da luta.\n- Eles não saem do corredor designado. Uma sala lateral é território neutro.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Couro Kobold | Comum | 1-2 | 55% | Costureiro |\n| Machado Rústico | Comum | 1 | 15% | Sucata de Ferreiro |\n| Ração de Ronda | Incomum | 1 | 25% | Cozinheiro — e prova de que eles comem |\n| Col | — | 18-30 | 100% | — |\n\n## Lore\n\nA Ração de Ronda é uma tira de carne seca embrulhada em folha, e a folha é amarrada com nó. Nó feito por dedos. É a evidência mais barata e mais perturbadora do Andar 1 de que os kobolds do Labirinto não são fauna: alguém prepara comida para eles, e alguém decide quanto cada um leva.\n\n*Eles não patrulham por instinto. Alguém fez a escala.*\n\n## Notas para o mestre\n\nIdeal pra uma cena de \"primeiro combate real dentro do Labirinto\" — dá\npra jogar 2-3 Troopers numa emboscada de corredor sem ameaçar a vida do\ngrupo, estabelecendo o clima da masmorra antes de qualquer coisa mais séria."
+  "corpo": "## Habitat\n\nCorredores externos do Labirinto, em ronda. Fazem sempre o mesmo trajeto, no mesmo intervalo, e o intervalo é curto o bastante para ser contado.\n\n**Comportamento:** agressivo e previsível. Ataca em dupla, sempre em dupla, e a segunda dupla chega três minutos depois da primeira, sem exceção.\n\n## Aparência\n\nHumanoide de corpo robusto, cauda grande, orelhas parecidas com as de um\ncoelho. Sem armadura — torso nu, só veste uma calça simples.\n\n## Leia em voz alta\n\n> Dois deles vêm pelo corredor, lado a lado, no mesmo passo. Não estão procurando vocês — estão andando o trajeto de sempre, e vocês estão no trajeto.\n\n## Sinal antes do ataque\n\nOs passos casados. Dois pares de pés no mesmo ritmo, e o ritmo não muda nem quando eles avistam alguém.\n\n## Ataques\n\n- Golpe com machado de mão rústico, curto alcance\n\n## Fraquezas\n\n- **Atributo — Técnica:** o equipamento é rudimentar e a técnica deles é nula — arma de Técnica, de quem luta com ofício, desmonta a dupla. Em 10+ eles quebram a dupla pelo resto da cena e passam a atacar isolados.\n- Sozinho, um Trooper não avança: espera o par.\n- A ronda é cronometrada. Um grupo que conte o intervalo escolhe a hora da luta.\n- Eles não saem do corredor designado. Uma sala lateral é território neutro.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Couro Kobold | Comum | 1-2 | 55% | Costureiro |\n| Machado Rústico | Comum | 1 | 15% | Sucata de Ferreiro |\n| Ração de Ronda | Incomum | 1 | 25% | Cozinheiro — e prova de que eles comem |\n| Col | — | 18-30 | 100% | — |\n\n## Lore\n\nA Ração de Ronda é uma tira de carne seca embrulhada em folha, e a folha é amarrada com nó. Nó feito por dedos. É a evidência mais barata e mais perturbadora do Andar 1 de que os kobolds do Labirinto não são fauna: alguém prepara comida para eles, e alguém decide quanto cada um leva.\n\n*Eles não patrulham por instinto. Alguém fez a escala.*\n\n## Notas para o mestre\n\nIdeal pra uma cena de \"primeiro combate real dentro do Labirinto\" — dá\npra jogar 2-3 Troopers numa emboscada de corredor sem ameaçar a vida do\ngrupo, estabelecendo o clima da masmorra antes de qualquer coisa mais séria."
  },
  {
   "id": "sanguessuga_gigante",
@@ -2995,11 +3349,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe antes de grudar",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Gelo:** ela solta imediatamente. Em 10+ perde a capacidade de grudar pelo resto da cena.",
-   "Resiste a Veneno** — vive na água podre.",
+   "Atributo — Reflexo:** ela depende da surpresa pra grudar — arma de Reflexo, no instante em que ela emerge, impede o grude. Em 10+ perde a capacidade de grudar pelo resto da cena.",
    "Antes de grudar ela precisa emergir, e emergindo é lenta.",
    "Fora da lama ela não se locomove. Terreno firme é imunidade."
   ],
@@ -3010,7 +3362,7 @@ var MONSTROS = [
    "sal",
    "fogo"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Sanguessuga do tamanho de um antebraço, corpo negro-avermelhado brilhante, vive submersa na lama do Pântano de Kavir até sentir movimento próximo.",
@@ -3050,7 +3402,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nA lama funda do Pântano de Kavir e os trechos parados do Charco de Grenna. Ficam sob a superfície, imóveis, até alguém pisar por perto.\n\n**Comportamento:** passiva e insidiosa. Não ataca de frente: gruda, e a vítima costuma perceber tarde. O dano não vem do golpe, vem do tempo.\n\n## Aparência\n\nSanguessuga do tamanho de um antebraço, corpo negro-avermelhado\nbrilhante, vive submersa na lama do Pântano de Kavir até sentir\nmovimento próximo.\n\n## Leia em voz alta\n\n> A lama sobe até o joelho e não há nada para ver, o que é exatamente o problema. Alguém sente um peso na perna e não é lama.\n\n## Sinal antes do ataque\n\nBolhas subindo em fila. Se a lama solta bolha na sua direção, alguma coisa se moveu por baixo.\n\n## Ataques\n\n- Grude e sucção (dano contínuo enquanto grudada)\n\n## Fraquezas\n\n- **Elemento — Gelo:** ela solta imediatamente. Em 10+ perde a capacidade de grudar pelo resto da cena.\n- **Resiste a Veneno** — vive na água podre.\n- Antes de grudar ela precisa emergir, e emergindo é lenta.\n- Fora da lama ela não se locomove. Terreno firme é imunidade.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Glândula Anticoagulante | Comum | 1 | 55% | Médico, Alquimista |\n| Pele Elástica | Comum | 1-2 | 40% | Costureiro |\n| Sangue Guardado | Incomum | 1 | 15% | Médico — de quem passou antes |\n| Col | — | 50-90 | 100% | — |\n\n## Lore\n\nO Sangue Guardado é o item que ninguém quer explicar. Uma sanguessuga que não foi morta logo depois de se alimentar carrega o sangue de outra pessoa, e o Médico do grupo consegue dizer coisas sobre essa pessoa: se estava doente, se estava envenenada, há quanto tempo passou por ali. É a melhor ferramenta de rastreamento do andar e ninguém a usa duas vezes sem pensar.\n\n*Ela não te mata. Ela te faz chegar em casa mais fraco.*\n\n## Notas para o mestre\n\nNão é domável — sem inteligência suficiente pra reconhecer um \"dono\".\nTerceira fonte de material pro Médico (junto com Escorpião de Poeira e\nRã Venenosa Gigante) — a ideia é que profissões de suporte tenham cadeia\nde produção própria espalhada pelo mapa, não só uma fonte isolada."
+  "corpo": "## Habitat\n\nA lama funda do Pântano de Kavir e os trechos parados do Charco de Grenna. Ficam sob a superfície, imóveis, até alguém pisar por perto.\n\n**Comportamento:** passiva e insidiosa. Não ataca de frente: gruda, e a vítima costuma perceber tarde. O dano não vem do golpe, vem do tempo.\n\n## Aparência\n\nSanguessuga do tamanho de um antebraço, corpo negro-avermelhado\nbrilhante, vive submersa na lama do Pântano de Kavir até sentir\nmovimento próximo.\n\n## Leia em voz alta\n\n> A lama sobe até o joelho e não há nada para ver, o que é exatamente o problema. Alguém sente um peso na perna e não é lama.\n\n## Sinal antes do ataque\n\nBolhas subindo em fila. Se a lama solta bolha na sua direção, alguma coisa se moveu por baixo.\n\n## Ataques\n\n- Grude e sucção (dano contínuo enquanto grudada)\n\n## Fraquezas\n\n- **Atributo — Reflexo:** ela depende da surpresa pra grudar — arma de Reflexo, no instante em que ela emerge, impede o grude. Em 10+ perde a capacidade de grudar pelo resto da cena.\n- Antes de grudar ela precisa emergir, e emergindo é lenta.\n- Fora da lama ela não se locomove. Terreno firme é imunidade.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Glândula Anticoagulante | Comum | 1 | 55% | Médico, Alquimista |\n| Pele Elástica | Comum | 1-2 | 40% | Costureiro |\n| Sangue Guardado | Incomum | 1 | 15% | Médico — de quem passou antes |\n| Col | — | 50-90 | 100% | — |\n\n## Lore\n\nO Sangue Guardado é o item que ninguém quer explicar. Uma sanguessuga que não foi morta logo depois de se alimentar carrega o sangue de outra pessoa, e o Médico do grupo consegue dizer coisas sobre essa pessoa: se estava doente, se estava envenenada, há quanto tempo passou por ali. É a melhor ferramenta de rastreamento do andar e ninguém a usa duas vezes sem pensar.\n\n*Ela não te mata. Ela te faz chegar em casa mais fraco.*\n\n## Notas para o mestre\n\nNão é domável — sem inteligência suficiente pra reconhecer um \"dono\".\nTerceira fonte de material pro Médico (junto com Escorpião de Poeira e\nRã Venenosa Gigante) — a ideia é que profissões de suporte tenham cadeia\nde produção própria espalhada pelo mapa, não só uma fonte isolada."
  },
  {
   "id": "sem_cor",
@@ -3069,17 +3421,16 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "velocidade cai bruscamente se cercado por mais de um lado ao mesmo tempo",
-  "elementoFraqueza": "",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento:** não se aplica — este não é um monstro elemental.",
+   "Atributo — Conhecimento:** ele não emite sinal nenhum que a interface leia — quem o enfrenta com arma de Conhecimento está contando com estudo, não com sistema. Em 10+ a velocidade de fuga cai pelo resto da cena, e o cerco finalmente fecha.",
    "Velocidade de fuga cai bruscamente se cercado por mais de um lado",
    "Perseguição direta e isolada sempre falha — ele acelera na mesma",
    "Uma emboscada calculada (cercar em vez de correr atrás) é o único método"
   ],
   "resistencias": [],
   "vulnerabilidades": [],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Uma silhueta com formato e movimento de avatar de jogador comum, mas sem nenhum dos indicadores visuais que todo avatar carrega: sem cursor colorido acima da cabeça (nem verde de jogador, nem vermelho de PK, nem amarelo de NPC), sem nome, sem indicador de guilda. De longe, passa por jogador qualquer. De perto, a…",
@@ -3105,7 +3456,7 @@ var MONSTROS = [
     "serve": "não derruba Col; não é monstro de farm"
    }
   ],
-  "corpo": "## Habitat\n\nSem local fixo — avistamentos relatados em pontos espalhados do andar 1,\nquase sempre à noite, e quase sempre perto de locais já ligados a outros\nfenômenos do arco Cardinal (ver `cenas/cronicas_de_aincrad_indice.md`).\n\n**Comportamento:** evasivo, nunca ofensivo por iniciativa própria. Aparece\nà distância, observa por alguns segundos e desaparece assim que percebe\nperseguição direta — nunca ataca primeiro.\n\n## Aparência\n\nUma silhueta com formato e movimento de avatar de jogador comum, mas sem\nnenhum dos indicadores visuais que todo avatar carrega: sem cursor colorido\nacima da cabeça (nem verde de jogador, nem vermelho de PK, nem amarelo de\nNPC), sem nome, sem indicador de guilda. De longe, passa por jogador\nqualquer. De perto, a ausência incomoda antes de qualquer outra coisa.\n\n## Leia em voz alta\n\n> Ninguém consegue clicar nele pra ver nome ou guilda — a interface\n> simplesmente não retorna nada. Ele se move como gente, olha como gente,\n> e desaparece do jeito que gente não desaparece: sem efeito de log-out,\n> sem partícula, só ausência onde um instante antes havia presença.\n\n## Sinal antes do ataque\n\nNão há sinal de ataque — Sem-Cores nunca iniciam combate. O único \"sinal\"\nrelevante é perceber um deles observando à distância antes que ele note\nter sido visto.\n\n## Ataques\n\n- **(nenhum ofensivo)** — não possui repertório de combate conhecido. Se\n  encurralado, tenta apenas escapar, nunca revidar.\n\n## Fraquezas\n\n- **Elemento:** não se aplica — este não é um monstro elemental.\n- Velocidade de fuga cai bruscamente se cercado por mais de um lado\n  simultaneamente (exige coordenação de grupo, não perseguição individual).\n- Perseguição direta e isolada sempre falha — ele acelera na mesma\n  proporção que é seguido.\n- Uma emboscada calculada (cercar em vez de correr atrás) é o único método\n  já registrado de contato bem-sucedido.\n\n## O que torna este encontro memorável\n\nNão é combate — é cerco. A tensão vem inteiramente da dificuldade de\nalcançar algo que nunca luta e sempre escapa, e do desconforto de encarar\numa \"pessoa\" sem nenhum dos identificadores básicos que todo jogador\ncarrega.\n\n## Complicações úteis\n\n- A primeira tentativa de emboscada quase sempre falha, exigindo\n  replanejamento.\n- Outro grupo, também caçando Sem-Cores, complica (ou ajuda, por acaso) a\n  aproximação.\n- Ao \"desaparecer\" quando efetivamente cercado, um Sem-Cor pode deixar cair\n  um item real — evento raro e o único jeito conhecido de obter prova\n  física do fenômeno (ver `EP.42 — Os Sem-Cor`,\n  `cenas/cronicas_de_aincrad_ep26_50.md`).\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Item de origem desconhecida | Raro/Épico (tratar como singular) | 1 | só se efetivamente cercado | gancho de mestre — nunca replicável |\n| Col | — | 0 | — | não derruba Col; não é monstro de farm |\n\n## Lore\n\nA teoria mais consistente — nunca confirmada em cena — é que os Sem-Cor não\nsão jogadores nem NPCs no sentido convencional, mas avatares de\nmonitoramento do próprio sistema que administra Aincrad. Ver nota de\nmestre em `EP.46 — Cardinal`: nunca declare isso como fato estabelecido\npra mesa, deixe como a interpretação mais provável, não a resposta final.\n\n*Não têm cor porque não deveriam ter sido vistos.*\n\n## Notas para o mestre\n\n- **Onde entra:** sem ponto fixo em `dados_mapa.js` — use como avistamento\n  ambiental em qualquer região, de preferência à noite.\n- **Como usar em transmissão:** a ausência de cursor/nome é o detalhe mais\n  forte — reforce isso verbalmente toda vez que for mencionado em cena.\n- **Erro comum do grupo:** perseguir em linha reta em vez de cercar — reforce\n  a mecânica de emboscada coordenada como o único caminho funcional.\n- **Como a cena encerra sem HP:** o grupo cerca com sucesso, o Sem-Cor\n  \"desaparece\" e (opcionalmente) deixa cair um item — sem necessidade de\n  qualquer dano ser causado."
+  "corpo": "## Habitat\n\nSem local fixo — avistamentos relatados em pontos espalhados do andar 1,\nquase sempre à noite, e quase sempre perto de locais já ligados a outros\nfenômenos do arco Cardinal (ver `cenas/cronicas_de_aincrad_indice.md`).\n\n**Comportamento:** evasivo, nunca ofensivo por iniciativa própria. Aparece\nà distância, observa por alguns segundos e desaparece assim que percebe\nperseguição direta — nunca ataca primeiro.\n\n## Aparência\n\nUma silhueta com formato e movimento de avatar de jogador comum, mas sem\nnenhum dos indicadores visuais que todo avatar carrega: sem cursor colorido\nacima da cabeça (nem verde de jogador, nem vermelho de PK, nem amarelo de\nNPC), sem nome, sem indicador de guilda. De longe, passa por jogador\nqualquer. De perto, a ausência incomoda antes de qualquer outra coisa.\n\n## Leia em voz alta\n\n> Ninguém consegue clicar nele pra ver nome ou guilda — a interface\n> simplesmente não retorna nada. Ele se move como gente, olha como gente,\n> e desaparece do jeito que gente não desaparece: sem efeito de log-out,\n> sem partícula, só ausência onde um instante antes havia presença.\n\n## Sinal antes do ataque\n\nNão há sinal de ataque — Sem-Cores nunca iniciam combate. O único \"sinal\"\nrelevante é perceber um deles observando à distância antes que ele note\nter sido visto.\n\n## Ataques\n\n- **(nenhum ofensivo)** — não possui repertório de combate conhecido. Se\n  encurralado, tenta apenas escapar, nunca revidar.\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** ele não emite sinal nenhum que a interface leia — quem o enfrenta com arma de Conhecimento está contando com estudo, não com sistema. Em 10+ a velocidade de fuga cai pelo resto da cena, e o cerco finalmente fecha.\n- Velocidade de fuga cai bruscamente se cercado por mais de um lado\n  simultaneamente (exige coordenação de grupo, não perseguição individual).\n- Perseguição direta e isolada sempre falha — ele acelera na mesma\n  proporção que é seguido.\n- Uma emboscada calculada (cercar em vez de correr atrás) é o único método\n  já registrado de contato bem-sucedido.\n\n## O que torna este encontro memorável\n\nNão é combate — é cerco. A tensão vem inteiramente da dificuldade de\nalcançar algo que nunca luta e sempre escapa, e do desconforto de encarar\numa \"pessoa\" sem nenhum dos identificadores básicos que todo jogador\ncarrega.\n\n## Complicações úteis\n\n- A primeira tentativa de emboscada quase sempre falha, exigindo\n  replanejamento.\n- Outro grupo, também caçando Sem-Cores, complica (ou ajuda, por acaso) a\n  aproximação.\n- Ao \"desaparecer\" quando efetivamente cercado, um Sem-Cor pode deixar cair\n  um item real — evento raro e o único jeito conhecido de obter prova\n  física do fenômeno (ver `EP.42 — Os Sem-Cor`,\n  `cenas/cronicas_de_aincrad_ep26_50.md`).\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Item de origem desconhecida | Raro/Épico (tratar como singular) | 1 | só se efetivamente cercado | gancho de mestre — nunca replicável |\n| Col | — | 0 | — | não derruba Col; não é monstro de farm |\n\n## Lore\n\nA teoria mais consistente — nunca confirmada em cena — é que os Sem-Cor não\nsão jogadores nem NPCs no sentido convencional, mas avatares de\nmonitoramento do próprio sistema que administra Aincrad. Ver nota de\nmestre em `EP.46 — Cardinal`: nunca declare isso como fato estabelecido\npra mesa, deixe como a interpretação mais provável, não a resposta final.\n\n*Não têm cor porque não deveriam ter sido vistos.*\n\n## Notas para o mestre\n\n- **Onde entra:** sem ponto fixo em `dados_mapa.js` — use como avistamento\n  ambiental em qualquer região, de preferência à noite.\n- **Como usar em transmissão:** a ausência de cursor/nome é o detalhe mais\n  forte — reforce isso verbalmente toda vez que for mencionado em cena.\n- **Erro comum do grupo:** perseguir em linha reta em vez de cercar — reforce\n  a mecânica de emboscada coordenada como o único caminho funcional.\n- **Como a cena encerra sem HP:** o grupo cerca com sucesso, o Sem-Cor\n  \"desaparece\" e (opcionalmente) deixa cair um item — sem necessidade de\n  qualquer dano ser causado."
  },
  {
   "id": "sentinela_esquecida",
@@ -3128,11 +3479,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe na junta do \"pescoço",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** o corpo é metal antigo. Em 10+ o núcleo falha e ela perde a capacidade de andar pelo resto da cena.",
-   "Resiste a Veneno** — é construto.",
+   "Atributo — Reflexo:** ela é lenta e estática — arma de Reflexo entra e sai antes do braço pesado voltar. Em 10+ o núcleo falha e ela perde a capacidade de andar pelo resto da cena.",
    "A junta do pescoço é o ponto solto: dá para ver o vão de longe.",
    "Ela é lenta e anuncia o destino. Sair da rota dela sempre funciona."
   ],
@@ -3142,7 +3491,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "impacto"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Silhueta humanoide alta demais e proporções erradas demais pra ser qualquer coisa viva — placas de metal escurecido, cobertas de vegetação que cresceu ao redor dela ao longo do tempo. Fica imóvel até alguém chegar perto.",
@@ -3182,7 +3531,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nDe pé no meio do Campo de Ruyn, entre as ruínas, há tempo suficiente para o mato ter crescido em volta dos pés. Não se move de onde está.\n\n**Comportamento:** inerte até alguém tocar em qualquer pedra gravada num raio de vinte passos. Aí ela caminha até o ponto, e caminha devagar, e não para até chegar.\n\n## Aparência\n\nSilhueta humanoide alta demais e proporções erradas demais pra ser\nqualquer coisa viva — placas de metal escurecido, cobertas de vegetação\nque cresceu ao redor dela ao longo do tempo. Fica imóvel até alguém\nchegar perto.\n\n## Leia em voz alta\n\n> No Campo de Ruyn, a primeira impressão da Sentinela é sempre “estátua”.\n> A segunda é “não”. O problema é que a segunda impressão costuma vir tarde\n> demais, no instante em que a coisa imóvel escolhe um intruso e deixa claro\n> que estava parada por vontade, não por abandono.\n\n## Sinal antes do ataque\n\n- um deslocamento seco demais para parecer orgânico,\n- poeira caindo de uma junta antes do resto mexer,\n- silêncio de campo aberto ficando concentrado demais num ponto só.\n\n## Ataques\n\n- Golpe de braço pesado\n- Investida de carga curta\n\n## Fraquezas\n\n- **Elemento — Trovão:** o corpo é metal antigo. Em 10+ o núcleo falha e ela perde a capacidade de andar pelo resto da cena.\n- **Resiste a Veneno** — é construto.\n- A junta do pescoço é o ponto solto: dá para ver o vão de longe.\n- Ela é lenta e anuncia o destino. Sair da rota dela sempre funciona.\n\n## O que torna este encontro memorável\n\nEla transforma ruína em vigia. A cena fica forte quando o grupo percebe que o\ncampo já parecia pós-batalha antes de uma nova batalha começar.\n\n## Complicações úteis\n\n- A Sentinela acorda no pior alcance possível para quem usa arma longa.\n- O grupo percebe a fraqueza tarde demais e gasta troca à toa.\n- O construto recua um passo para carregar peso, não para fugir.\n- A luta termina, mas o campo parece menos morto e mais observado.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa de Metal Antigo | Comum | 2-4 | 60% | Ferreiro |\n| Núcleo Sem Função | Raro | 1 | 15% | Bibliotecário, Joalheiro |\n| Ordem Gravada | Raro | 1 | 8% | Bibliotecário — a instrução que ela cumpre |\n| Col | — | 220-340 | 100% | — |\n\n## Lore\n\nA Ordem Gravada é uma placa fina do tamanho de uma mão, presa por dentro do peito, e tem três linhas na mesma escrita das pedras. Wilbrand tem quatro delas. Ele diz que as quatro são o mesmo texto e que o texto é curto, e quando perguntam o que ele acha que está escrito ele responde que provavelmente é uma lista de coisas que não podem ser tocadas.\n\n*Ela guarda as pedras. Nenhuma delas foi feita para ser guardada por ela.*\n\n## Notas para o mestre\n\nNão é domável — construto, não animal, sem instinto de vínculo. Origem\ndeliberadamente não explicada (ver `bounty_01_sentinela_esquecida`) —\nboa peça de tempero de mundo sem precisar virar mistério grande.\n\n**Como usar em transmissão:** jogue com o atraso entre “isso é cenário” e\n“isso está olhando de volta”."
+  "corpo": "## Habitat\n\nDe pé no meio do Campo de Ruyn, entre as ruínas, há tempo suficiente para o mato ter crescido em volta dos pés. Não se move de onde está.\n\n**Comportamento:** inerte até alguém tocar em qualquer pedra gravada num raio de vinte passos. Aí ela caminha até o ponto, e caminha devagar, e não para até chegar.\n\n## Aparência\n\nSilhueta humanoide alta demais e proporções erradas demais pra ser\nqualquer coisa viva — placas de metal escurecido, cobertas de vegetação\nque cresceu ao redor dela ao longo do tempo. Fica imóvel até alguém\nchegar perto.\n\n## Leia em voz alta\n\n> No Campo de Ruyn, a primeira impressão da Sentinela é sempre “estátua”.\n> A segunda é “não”. O problema é que a segunda impressão costuma vir tarde\n> demais, no instante em que a coisa imóvel escolhe um intruso e deixa claro\n> que estava parada por vontade, não por abandono.\n\n## Sinal antes do ataque\n\n- um deslocamento seco demais para parecer orgânico,\n- poeira caindo de uma junta antes do resto mexer,\n- silêncio de campo aberto ficando concentrado demais num ponto só.\n\n## Ataques\n\n- Golpe de braço pesado\n- Investida de carga curta\n\n## Fraquezas\n\n- **Atributo — Reflexo:** ela é lenta e estática — arma de Reflexo entra e sai antes do braço pesado voltar. Em 10+ o núcleo falha e ela perde a capacidade de andar pelo resto da cena.\n- A junta do pescoço é o ponto solto: dá para ver o vão de longe.\n- Ela é lenta e anuncia o destino. Sair da rota dela sempre funciona.\n\n## O que torna este encontro memorável\n\nEla transforma ruína em vigia. A cena fica forte quando o grupo percebe que o\ncampo já parecia pós-batalha antes de uma nova batalha começar.\n\n## Complicações úteis\n\n- A Sentinela acorda no pior alcance possível para quem usa arma longa.\n- O grupo percebe a fraqueza tarde demais e gasta troca à toa.\n- O construto recua um passo para carregar peso, não para fugir.\n- A luta termina, mas o campo parece menos morto e mais observado.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Placa de Metal Antigo | Comum | 2-4 | 60% | Ferreiro |\n| Núcleo Sem Função | Raro | 1 | 15% | Bibliotecário, Joalheiro |\n| Ordem Gravada | Raro | 1 | 8% | Bibliotecário — a instrução que ela cumpre |\n| Col | — | 220-340 | 100% | — |\n\n## Lore\n\nA Ordem Gravada é uma placa fina do tamanho de uma mão, presa por dentro do peito, e tem três linhas na mesma escrita das pedras. Wilbrand tem quatro delas. Ele diz que as quatro são o mesmo texto e que o texto é curto, e quando perguntam o que ele acha que está escrito ele responde que provavelmente é uma lista de coisas que não podem ser tocadas.\n\n*Ela guarda as pedras. Nenhuma delas foi feita para ser guardada por ela.*\n\n## Notas para o mestre\n\nNão é domável — construto, não animal, sem instinto de vínculo. Origem\ndeliberadamente não explicada (ver `bounty_01_sentinela_esquecida`) —\nboa peça de tempero de mundo sem precisar virar mistério grande.\n\n**Como usar em transmissão:** jogue com o atraso entre “isso é cenário” e\n“isso está olhando de volta”."
  },
  {
   "id": "serpente_das_aguas_rasas",
@@ -3205,11 +3554,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe atrás da cabeça enquanto ela está enrolada, antes do bote",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Gelo:** trava o bote. Em 10+ ela perde o ataque explosivo pelo resto da cena.",
-   "Resiste a Veneno** — a peçonha é dela.",
+   "Atributo — Reflexo:** o bote é explosivo e único — arma de Reflexo, lida na compressão da espiral, chega antes. Em 10+ ela perde o ataque explosivo pelo resto da cena.",
    "Enrolada, antes do bote, a nuca fica descoberta e imóvel.",
    "Ela dá um bote por aproximação. Depois dele, recuar é seguro."
   ],
@@ -3221,9 +3568,9 @@ var MONSTROS = [
    "frio",
    "ser tirada da água"
   ],
-  "domavel": "sim",
-  "domaSucessos": "6",
-  "domaRequisito": "Isca de peixe fresco deixada por 3 dias seguidos no mesmo ponto da margem",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Dois metros e meio de corpo achatado lateralmente, escamas verde-escuras nas costas e amarelo-pálidas na barriga, com uma faixa prateada correndo do focinho até a cauda. Nada com o corpo quase todo submerso — só a faixa prateada aparece, e à distância parece o reflexo do sol na água.",
   "habitat": "Margens rasas do Lago Sylvaine e a orla da Ilha de Pemberton. Fica enrolada em raiz submersa, na altura do tornozelo, onde ninguém procura.",
   "comportamento": "passiva enrolada e explosiva quando não está. Só dá o bote uma vez por aproximação; se errar, desenrola e recua para outra raiz.",
@@ -3261,7 +3608,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nMargens rasas do Lago Sylvaine e a orla da Ilha de Pemberton. Fica enrolada em raiz submersa, na altura do tornozelo, onde ninguém procura.\n\n**Comportamento:** passiva enrolada e explosiva quando não está. Só dá o bote uma vez por aproximação; se errar, desenrola e recua para outra raiz.\n\n## Aparência\n\nDois metros e meio de corpo achatado lateralmente, escamas verde-escuras nas\ncostas e amarelo-pálidas na barriga, com uma faixa prateada correndo do\nfocinho até a cauda. Nada com o corpo quase todo submerso — só a faixa\nprateada aparece, e à distância parece o reflexo do sol na água.\n\nVive nas rasas ao redor da **Ilha de Pemberton**, no Lago Sylvaine, onde a\nágua bate na altura do joelho por dezenas de metros. É exatamente a\nprofundidade em que um jogador se sente seguro.\n\n## Leia em voz alta\n\n> A água bate no tornozelo e é limpa o bastante para ver o fundo. O que parecia raiz enrolada na pedra à sua esquerda tem um desenho regular demais nas escamas, e a ponta dela acabou de se ajustar.\n\n## Sinal antes do ataque\n\nO corpo se comprime. A espiral aperta meio palmo antes do bote, e é o único aviso.\n\n## Ataques\n\n- **Bote das rasas** — surge de baixo, dano moderado; contra alvo que não\n  sabia que ela estava lá, conta como 2 golpes\n- **Enrolar** — imobiliza uma perna; o alvo precisa de teste de Corpo pra se\n  soltar antes do próximo bote\n- **Puxar para o fundo** — só contra alvo já imobilizado e em água acima da\n  cintura. É a complicação séria: o mestre deve deixar claro que ela está\n  arrastando, e dar uma rodada pro grupo reagir\n\n## Fraquezas\n\n- **Elemento — Gelo:** trava o bote. Em 10+ ela perde o ataque explosivo pelo resto da cena.\n- **Resiste a Veneno** — a peçonha é dela.\n- Enrolada, antes do bote, a nuca fica descoberta e imóvel.\n- Ela dá um bote por aproximação. Depois dele, recuar é seguro.\n\n## O que torna este encontro memorável\n\nÉ a lição de que água rasa não é água segura. O Lago Sylvaine parece o lugar mais tranquilo do andar até alguém aprender a olhar as raízes submersas — e depois disso ninguém atravessa a margem sem olhar de novo.\n\n## Complicações úteis\n\n- Vencem, e a puxada levou alguém para a parte funda.\n- Ela recua ferida e a próxima aproximação já é em outro ponto.\n- O bote acerta a bolsa de coleta em vez da perna.\n- Um Pescador percebe que a horta está pisada demais e pergunta por quê.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Prateada | Comum | 2-3 | 55% | Costureiro, Joalheiro |\n| Pele Lisa de Serpente | Comum | 1-2 | 40% | Costureiro |\n| Presa Curva | Incomum | 1 | 25% | Joalheiro, Médico |\n| Col | — | 130-190 | 100% | — |\n\n## Lore\n\nÉ a fonte alternativa de Escama Prateada do andar, e a única acessível a quem não quer entrar em água funda atrás do Lacustre Vagador. Isso a torna o monstro mais caçado do Sylvaine e o motivo de a margem rasa perto de Pemberton estar sempre pisada. Os pescadores chamam aquele trecho de a horta, e não é elogio.\n\n*Ela não está escondida. Está enrolada exatamente onde você vai pisar.*\n\n## Notas para o mestre\n\nExiste por duas razões de design:\n\n1. **Segunda fonte de Escama Prateada.** Antes dela, todo Joalheiro do andar\n   dependia exclusivamente do Lacustre Vagador (`docs/economia_profissoes.md`)\n   — o que travava a profissão inteira atrás de uma criatura só. Agora existem\n   duas rotas, em pontos diferentes do lago.\n2. **Doma intermediária.** Com 6 sucessos, ela fica entre o Lobo das Estepes\n   (4) e o Lacustre Vagador (8) — o degrau que faltava. Domada, é um aliado\n   aquático mais ágil e mais frágil que o Lacustre: alcança lugares no lago\n   que ninguém alcança, mas cai rápido se entrar em combate aberto.\n\nA doma dela é a mais **lenta** do andar de propósito: a isca precisa ser\ndeixada por três dias no mesmo ponto, o que significa três sessões (ou três\nretornos) antes do primeiro teste de Técnica. Domador que se compromete com\nela está fazendo um investimento visível pro resto da mesa.\n\nLigada a: Ilha de Pemberton e Lago Sylvaine (`dados_mapa.js`), Pescador\nVeterano (`npcs/pescador_veterano.md`), cadeia C (`Águas de Sylvaine`)."
+  "corpo": "## Habitat\n\nMargens rasas do Lago Sylvaine e a orla da Ilha de Pemberton. Fica enrolada em raiz submersa, na altura do tornozelo, onde ninguém procura.\n\n**Comportamento:** passiva enrolada e explosiva quando não está. Só dá o bote uma vez por aproximação; se errar, desenrola e recua para outra raiz.\n\n## Aparência\n\nDois metros e meio de corpo achatado lateralmente, escamas verde-escuras nas\ncostas e amarelo-pálidas na barriga, com uma faixa prateada correndo do\nfocinho até a cauda. Nada com o corpo quase todo submerso — só a faixa\nprateada aparece, e à distância parece o reflexo do sol na água.\n\nVive nas rasas ao redor da **Ilha de Pemberton**, no Lago Sylvaine, onde a\nágua bate na altura do joelho por dezenas de metros. É exatamente a\nprofundidade em que um jogador se sente seguro.\n\n## Leia em voz alta\n\n> A água bate no tornozelo e é limpa o bastante para ver o fundo. O que parecia raiz enrolada na pedra à sua esquerda tem um desenho regular demais nas escamas, e a ponta dela acabou de se ajustar.\n\n## Sinal antes do ataque\n\nO corpo se comprime. A espiral aperta meio palmo antes do bote, e é o único aviso.\n\n## Ataques\n\n- **Bote das rasas** — surge de baixo, dano moderado; contra alvo que não\n  sabia que ela estava lá, conta como 2 golpes\n- **Enrolar** — imobiliza uma perna; o alvo precisa de teste de Corpo pra se\n  soltar antes do próximo bote\n- **Puxar para o fundo** — só contra alvo já imobilizado e em água acima da\n  cintura. É a complicação séria: o mestre deve deixar claro que ela está\n  arrastando, e dar uma rodada pro grupo reagir\n\n## Fraquezas\n\n- **Atributo — Reflexo:** o bote é explosivo e único — arma de Reflexo, lida na compressão da espiral, chega antes. Em 10+ ela perde o ataque explosivo pelo resto da cena.\n- Enrolada, antes do bote, a nuca fica descoberta e imóvel.\n- Ela dá um bote por aproximação. Depois dele, recuar é seguro.\n\n## O que torna este encontro memorável\n\nÉ a lição de que água rasa não é água segura. O Lago Sylvaine parece o lugar mais tranquilo do andar até alguém aprender a olhar as raízes submersas — e depois disso ninguém atravessa a margem sem olhar de novo.\n\n## Complicações úteis\n\n- Vencem, e a puxada levou alguém para a parte funda.\n- Ela recua ferida e a próxima aproximação já é em outro ponto.\n- O bote acerta a bolsa de coleta em vez da perna.\n- Um Pescador percebe que a horta está pisada demais e pergunta por quê.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Escama Prateada | Comum | 2-3 | 55% | Costureiro, Joalheiro |\n| Pele Lisa de Serpente | Comum | 1-2 | 40% | Costureiro |\n| Presa Curva | Incomum | 1 | 25% | Joalheiro, Médico |\n| Col | — | 130-190 | 100% | — |\n\n## Lore\n\nÉ a fonte alternativa de Escama Prateada do andar, e a única acessível a quem não quer entrar em água funda atrás do Lacustre Vagador. Isso a torna o monstro mais caçado do Sylvaine e o motivo de a margem rasa perto de Pemberton estar sempre pisada. Os pescadores chamam aquele trecho de a horta, e não é elogio.\n\n*Ela não está escondida. Está enrolada exatamente onde você vai pisar.*\n\n## Notas para o mestre\n\nExiste por duas razões de design:\n\n1. **Segunda fonte de Escama Prateada.** Antes dela, todo Joalheiro do andar\n   dependia exclusivamente do Lacustre Vagador (`docs/economia_profissoes.md`)\n   — o que travava a profissão inteira atrás de uma criatura só. Agora existem\n   duas rotas, em pontos diferentes do lago.\n2. **Doma intermediária.** Com 6 sucessos, ela fica entre o Lobo das Estepes\n   (4) e o Lacustre Vagador (8) — o degrau que faltava. Domada, é um aliado\n   aquático mais ágil e mais frágil que o Lacustre: alcança lugares no lago\n   que ninguém alcança, mas cai rápido se entrar em combate aberto.\n\nA doma dela é a mais **lenta** do andar de propósito: a isca precisa ser\ndeixada por três dias no mesmo ponto, o que significa três sessões (ou três\nretornos) antes do primeiro teste de Técnica. Domador que se compromete com\nela está fazendo um investimento visível pro resto da mesa.\n\nLigada a: Ilha de Pemberton e Lago Sylvaine (`dados_mapa.js`), Pescador\nVeterano (`npcs/pescador_veterano.md`), cadeia C (`Águas de Sylvaine`)."
  },
  {
   "id": "slime",
@@ -3282,10 +3629,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "ponto de fusão exposto no centro, antes de se juntar a outro",
-  "elementoFraqueza": "Gelo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Conhecimento",
   "fraquezas": [
-   "Elemento — Gelo:** um golpe de Gelo bem-sucedido (10+) endurece o slime",
+   "Atributo — Conhecimento:** a fusão é o único truque, e quem entendeu o",
    "Atacar o ponto de fusão exposto no centro impede a divisão acidental",
    "Separar fisicamente dois slimes antes do contato evita a fusão sem",
    "O Núcleo de Slime (catalisador, ver Lore) é sempre o ponto mais fraco:"
@@ -3294,9 +3640,9 @@ var MONSTROS = [
    "veneno"
   ],
   "vulnerabilidades": [],
-  "domavel": "sim",
-  "domaSucessos": "3",
-  "domaRequisito": "Núcleo de Slime intacto (obtido sem destruir a colônia inteira)",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Uma massa gelatinosa translúcida, colorida (a cor varia — o evento de Molwyn produziu tons vivos, quase festivos), do tamanho de uma bola grande. Ao se fundir, dois slimes formam uma massa maior, mais escura no centro, com uma segunda \"camada\" visível sob a translucidez — o início do que vira, depois de fusões…",
   "habitat": "Aparece em eventos súbitos e localizados — o mais registrado até hoje foi\nno Vale de Molwyn (ver `EP.29 — A Noite dos Slimes`,\n`cenas/cronicas_de_aincrad_ep26_50.md`). Fora de evento, slimes isolados\npodem surgir em qualquer zona úmida ou agrícola do andar 1.",
   "comportamento": "individualmente passivo, quase brincalhão — pula,\nreflete luz, reage a toque com curiosidade, não hostilidade. O\ncomportamento muda por completo quando dois slimes se tocam: em vez de se\nrepelirem, **se fundem**, e o resultado é sempre mais agressivo que a soma\ndas partes.",
@@ -3327,7 +3673,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nAparece em eventos súbitos e localizados — o mais registrado até hoje foi\nno Vale de Molwyn (ver `EP.29 — A Noite dos Slimes`,\n`cenas/cronicas_de_aincrad_ep26_50.md`). Fora de evento, slimes isolados\npodem surgir em qualquer zona úmida ou agrícola do andar 1.\n\n**Comportamento:** individualmente passivo, quase brincalhão — pula,\nreflete luz, reage a toque com curiosidade, não hostilidade. O\ncomportamento muda por completo quando dois slimes se tocam: em vez de se\nrepelirem, **se fundem**, e o resultado é sempre mais agressivo que a soma\ndas partes.\n\n## Aparência\n\nUma massa gelatinosa translúcida, colorida (a cor varia — o evento de\nMolwyn produziu tons vivos, quase festivos), do tamanho de uma bola grande.\nAo se fundir, dois slimes formam uma massa maior, mais escura no centro, com\numa segunda \"camada\" visível sob a translucidez — o início do que vira,\ndepois de fusões suficientes, um Slime Grande.\n\n## Leia em voz alta\n\n> No começo é quase engraçado — bolhas coloridas pulando entre as pernas,\n> refletindo o sol em tons que não deveriam existir na natureza. Então duas\n> se tocam. Em vez de se separarem, elas **se fundem**, e o som que fazem ao\n> virar uma coisa só não tem nada de engraçado.\n\n## Sinal antes do ataque\n\nSlimes individuais nunca atacam por conta própria — o sinal de perigo real\né a **proximidade entre dois ou mais**: se estão se aproximando um do\noutro, uma fusão está a caminho, e o grupo tem poucos segundos pra separar\nou agir antes que aconteça.\n\n## Ataques\n\n- **Investida gelatinosa** (Slime comum) — dano baixo, empurra o alvo.\n- **Esmagamento** (Slime Médio, pós-1ª fusão) — dano moderado, pode prender\n  brevemente quem for atingido.\n- **Onda de impacto** (Slime Grande, pós-2ª+ fusão) — dano alto em área\n  curta, ameaça estruturas leves (cercas, barracas, portas de madeira).\n\n## Fraquezas\n\n- **Elemento — Gelo:** um golpe de Gelo bem-sucedido (10+) endurece o slime\n  atingido por um turno inteiro, impedindo-o de se fundir com outro\n  enquanto durar o efeito — a melhor ferramenta pra conter uma fusão em\n  andamento.\n- Atacar o ponto de fusão exposto no centro impede a divisão acidental\n  (atacar em outro ponto pode fazer um slime comum **se dividir em dois**\n  em vez de morrer, multiplicando o problema).\n- Separar fisicamente dois slimes antes do contato evita a fusão sem\n  precisar de combate algum.\n- O Núcleo de Slime (catalisador, ver Lore) é sempre o ponto mais fraco:\n  destruí-lo encerra qualquer evento de fusão em andamento, não importa o\n  tamanho já alcançado pelos slimes fundidos.\n\n## Variantes por fusão\n\n| Estágio | Origem | Golpes p/ derrotar | Ameaça | Observação |\n|---|---|---|---|---|\n| Slime (base) | spawn inicial | 2 | fraco | não ataca sozinho |\n| Slime Médio | fusão de 2-3 | 3-4 | comum | investida + esmagamento |\n| Slime Grande | fusão de 4+ | 5-7 | forte | ameaça estrutura; onda de impacto |\n\n## O que torna este encontro memorável\n\nA decisão tática real não é \"quanto dano causar\", é \"quando intervir\": um\nevento de slimes ignorado cedo é fácil; ignorado até o pico vira ameaça de\nverdade. É um dos poucos encontros do andar 1 em que **esperar** é\nliteralmente a pior escolha possível.\n\n## Complicações úteis\n\n- Atacar no ponto errado divide um slime em dois em vez de eliminá-lo.\n- Uma criança (NPC) se aproxima querendo \"brincar\" com um slime no meio do\n  evento, forçando resgate.\n- O Núcleo de Slime catalisador está protegido por uma concentração maior\n  de slimes ao redor, dificultando acesso direto.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Gel Comum | Comum | 1-2 | 70% | Alquimista |\n| Núcleo de Slime | Incomum | 1 | 20% (garantido se poupar a colônia) | Alquimista, doma de Domador |\n| Col | — | 20-60 (por slime) | 100% | — |\n\n## Lore\n\nNinguém sabe explicar por que slimes se fundem em vez de se repelirem — não\nbate com nenhum comportamento catalogado de criatura territorial do andar\n1. O fenômeno de Molwyn (`EP.29`) foi o primeiro registrado em escala, mas\ncaçadores isolados já relatam slimes soltos, sempre sozinhos, em zonas\nagrícolas do mapa.\n\n*Um slime sozinho é curiosidade. Dois juntos são decisão. Quatro juntos são\nproblema.*\n\n## Notas para o mestre\n\n- **Onde entra:** `vale_moinhos` (Vale de Molwyn) em `dados_mapa.js`;\n  fora de evento, pode aparecer isolado em qualquer zona agrícola/úmida.\n- **Como usar em transmissão:** a escalada visual de \"fofo\" pra \"ameaça\n  real\" é o próprio arco da cena — deixe o momento da primeira fusão\n  pesar na mesa.\n- **Erro comum do grupo:** atacar cada slime individualmente sem perceber\n  que o problema real é impedir contato entre eles.\n- **Como a cena encerra sem HP:** destruir o Núcleo de Slime catalisador\n  encerra o evento imediatamente, independente do tamanho já alcançado\n  pelos slimes fundidos — mais rápido (e mais interessante) que abater\n  cada massa uma a uma.\n- Domado (3 sucessos, com Núcleo de Slime intacto), vira companheiro\n  inofensivo que absorve pequenos itens perdidos e os devolve intactos —\n  bom gancho de Domador não-combatente, no mesmo espírito da\n  `monstros/fada_da_poeira.md`."
+  "corpo": "## Habitat\n\nAparece em eventos súbitos e localizados — o mais registrado até hoje foi\nno Vale de Molwyn (ver `EP.29 — A Noite dos Slimes`,\n`cenas/cronicas_de_aincrad_ep26_50.md`). Fora de evento, slimes isolados\npodem surgir em qualquer zona úmida ou agrícola do andar 1.\n\n**Comportamento:** individualmente passivo, quase brincalhão — pula,\nreflete luz, reage a toque com curiosidade, não hostilidade. O\ncomportamento muda por completo quando dois slimes se tocam: em vez de se\nrepelirem, **se fundem**, e o resultado é sempre mais agressivo que a soma\ndas partes.\n\n## Aparência\n\nUma massa gelatinosa translúcida, colorida (a cor varia — o evento de\nMolwyn produziu tons vivos, quase festivos), do tamanho de uma bola grande.\nAo se fundir, dois slimes formam uma massa maior, mais escura no centro, com\numa segunda \"camada\" visível sob a translucidez — o início do que vira,\ndepois de fusões suficientes, um Slime Grande.\n\n## Leia em voz alta\n\n> No começo é quase engraçado — bolhas coloridas pulando entre as pernas,\n> refletindo o sol em tons que não deveriam existir na natureza. Então duas\n> se tocam. Em vez de se separarem, elas **se fundem**, e o som que fazem ao\n> virar uma coisa só não tem nada de engraçado.\n\n## Sinal antes do ataque\n\nSlimes individuais nunca atacam por conta própria — o sinal de perigo real\né a **proximidade entre dois ou mais**: se estão se aproximando um do\noutro, uma fusão está a caminho, e o grupo tem poucos segundos pra separar\nou agir antes que aconteça.\n\n## Ataques\n\n- **Investida gelatinosa** (Slime comum) — dano baixo, empurra o alvo.\n- **Esmagamento** (Slime Médio, pós-1ª fusão) — dano moderado, pode prender\n  brevemente quem for atingido.\n- **Onda de impacto** (Slime Grande, pós-2ª+ fusão) — dano alto em área\n  curta, ameaça estruturas leves (cercas, barracas, portas de madeira).\n\n## Fraquezas\n\n- **Atributo — Conhecimento:** a fusão é o único truque, e quem entendeu o\n  ponto de fusão sabe onde bater — arma de Conhecimento, de quem leu o\n  comportamento, morde. Em 10+ o slime atingido perde a capacidade de se\n  fundir pelo resto da cena — a melhor ferramenta pra conter uma fusão em\n  andamento.\n- Atacar o ponto de fusão exposto no centro impede a divisão acidental\n  (atacar em outro ponto pode fazer um slime comum **se dividir em dois**\n  em vez de morrer, multiplicando o problema).\n- Separar fisicamente dois slimes antes do contato evita a fusão sem\n  precisar de combate algum.\n- O Núcleo de Slime (catalisador, ver Lore) é sempre o ponto mais fraco:\n  destruí-lo encerra qualquer evento de fusão em andamento, não importa o\n  tamanho já alcançado pelos slimes fundidos.\n\n## Variantes por fusão\n\n| Estágio | Origem | Golpes p/ derrotar | Ameaça | Observação |\n|---|---|---|---|---|\n| Slime (base) | spawn inicial | 2 | fraco | não ataca sozinho |\n| Slime Médio | fusão de 2-3 | 3-4 | comum | investida + esmagamento |\n| Slime Grande | fusão de 4+ | 5-7 | forte | ameaça estrutura; onda de impacto |\n\n## O que torna este encontro memorável\n\nA decisão tática real não é \"quanto dano causar\", é \"quando intervir\": um\nevento de slimes ignorado cedo é fácil; ignorado até o pico vira ameaça de\nverdade. É um dos poucos encontros do andar 1 em que **esperar** é\nliteralmente a pior escolha possível.\n\n## Complicações úteis\n\n- Atacar no ponto errado divide um slime em dois em vez de eliminá-lo.\n- Uma criança (NPC) se aproxima querendo \"brincar\" com um slime no meio do\n  evento, forçando resgate.\n- O Núcleo de Slime catalisador está protegido por uma concentração maior\n  de slimes ao redor, dificultando acesso direto.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Gel Comum | Comum | 1-2 | 70% | Alquimista |\n| Núcleo de Slime | Incomum | 1 | 20% (garantido se poupar a colônia) | Alquimista, doma de Domador |\n| Col | — | 20-60 (por slime) | 100% | — |\n\n## Lore\n\nNinguém sabe explicar por que slimes se fundem em vez de se repelirem — não\nbate com nenhum comportamento catalogado de criatura territorial do andar\n1. O fenômeno de Molwyn (`EP.29`) foi o primeiro registrado em escala, mas\ncaçadores isolados já relatam slimes soltos, sempre sozinhos, em zonas\nagrícolas do mapa.\n\n*Um slime sozinho é curiosidade. Dois juntos são decisão. Quatro juntos são\nproblema.*\n\n## Notas para o mestre\n\n- **Onde entra:** `vale_moinhos` (Vale de Molwyn) em `dados_mapa.js`;\n  fora de evento, pode aparecer isolado em qualquer zona agrícola/úmida.\n- **Como usar em transmissão:** a escalada visual de \"fofo\" pra \"ameaça\n  real\" é o próprio arco da cena — deixe o momento da primeira fusão\n  pesar na mesa.\n- **Erro comum do grupo:** atacar cada slime individualmente sem perceber\n  que o problema real é impedir contato entre eles.\n- **Como a cena encerra sem HP:** destruir o Núcleo de Slime catalisador\n  encerra o evento imediatamente, independente do tamanho já alcançado\n  pelos slimes fundidos — mais rápido (e mais interessante) que abater\n  cada massa uma a uma.\n- Domado (3 sucessos, com Núcleo de Slime intacto), vira companheiro\n  inofensivo que absorve pequenos itens perdidos e os devolve intactos —\n  bom gancho de Domador não-combatente, no mesmo espírito da\n  `monstros/fada_da_poeira.md`."
  },
  {
   "id": "sombra_de_mournhall",
@@ -3349,11 +3695,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe nos olhos sensíveis à luz",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Espírito",
   "fraquezas": [
-   "Elemento — Fogo:** tocha na cara. Em 10+ a dupla perde a coordenação pelo resto da cena e as duas atacam de frente.",
-   "Resiste a Veneno** — come o que aparece há muito tempo.",
+   "Atributo — Espírito:** o truque da dupla é medo coordenado — arma de Espírito, de quem não cai na isca, quebra a sincronia. Em 10+ a dupla perde a coordenação pelo resto da cena e as duas atacam de frente.",
    "Os olhos são sensíveis à luz e ela não os fecha a tempo.",
    "Sob luz constante ela não se aproxima. Uma tocha fincada no chão cria zona segura."
   ],
@@ -3363,9 +3707,9 @@ var MONSTROS = [
   "vulnerabilidades": [
    "luz intensa"
   ],
-  "domavel": "sim",
-  "domaSucessos": "5",
-  "domaRequisito": "Isca com Musgo Luminoso, luz fraca e constante",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Predador quadrúpede de pelagem negra fosca que absorve a pouca luz da Caverna de Mournhall, com seis olhos pequenos e leitosos adaptados à escuridão total. Move-se quase sem som.",
   "habitat": "Galerias médias da Caverna dos Ecos, entre a boca e a câmara funda. Caçam no escuro absoluto e evitam qualquer galeria que receba luz de fora.",
   "comportamento": "agressiva e coordenada em duplas. Uma se mostra e a outra não — a que aparece é sempre a isca, e a que ataca vem do lado oposto.",
@@ -3403,7 +3747,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nGalerias médias da Caverna dos Ecos, entre a boca e a câmara funda. Caçam no escuro absoluto e evitam qualquer galeria que receba luz de fora.\n\n**Comportamento:** agressiva e coordenada em duplas. Uma se mostra e a outra não — a que aparece é sempre a isca, e a que ataca vem do lado oposto.\n\n## Aparência\n\nPredador quadrúpede de pelagem negra fosca que absorve a pouca luz da\nCaverna de Mournhall, com seis olhos pequenos e leitosos adaptados à\nescuridão total. Move-se quase sem som.\n\n## Leia em voz alta\n\n> A tocha alcança uns seis metros e no limite da luz há dois olhos parados, à sua frente, sem piscar. Eles não se aproximam. Não é a que está na sua frente que vocês precisam encontrar.\n\n## Sinal antes do ataque\n\nO cheiro antes do som — almíscar úmido, forte, e vindo do lado errado da galeria.\n\n## Ataques\n\n- Investida silenciosa\n- Mordida em sequência\n\n## Fraquezas\n\n- **Elemento — Fogo:** tocha na cara. Em 10+ a dupla perde a coordenação pelo resto da cena e as duas atacam de frente.\n- **Resiste a Veneno** — come o que aparece há muito tempo.\n- Os olhos são sensíveis à luz e ela não os fecha a tempo.\n- Sob luz constante ela não se aproxima. Uma tocha fincada no chão cria zona segura.\n\n## O que torna este encontro memorável\n\nÉ a primeira vez que o Andar 1 usa a luz como recurso finito. Um grupo que gasta tocha errado nas galerias médias chega ao Guardião sem nada, e o Guardião é onde a luz decide a luta.\n\n## Complicações úteis\n\n- Vencem uma e a outra some — e volta na galeria seguinte.\n- A tocha cai na água e o encontro recomeça no escuro.\n- Elas empurram o grupo para a câmara funda em vez de para a saída.\n- Alguém percebe que a pelagem escurece com a idade e faz a conta certa.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Negra | Comum | 1-2 | 55% | Costureiro |\n| Olho Leitoso | Incomum | 1 | 20% | Alquimista |\n| Presa Fina | Incomum | 1-2 | 30% | Joalheiro, Ferreiro |\n| Col | — | 180-260 | 100% | — |\n\n## Lore\n\nSão os parentes novos do Guardião, e é isso que torna a Caverna dos Ecos uma dungeon honesta: o grupo enfrenta a versão pequena por três galerias antes de encontrar a que ficou velha. Quem prestar atenção percebe que a pelagem escurece com a idade, e quem perceber isso não se surpreende com o tamanho do que está no fundo.\n\n*Se você está vendo uma, a outra já se moveu.*\n\n## Notas para o mestre\n\nExplica o eco estranho documentado em `bounty_03_eco_estranho` — o\nmestre pode revelar que a criatura é a fonte real do fenômeno, se quiser\nfechar aquele gancho. Domável com Musgo Luminoso (ver\n`docs/economia_profissoes.md`)."
+  "corpo": "## Habitat\n\nGalerias médias da Caverna dos Ecos, entre a boca e a câmara funda. Caçam no escuro absoluto e evitam qualquer galeria que receba luz de fora.\n\n**Comportamento:** agressiva e coordenada em duplas. Uma se mostra e a outra não — a que aparece é sempre a isca, e a que ataca vem do lado oposto.\n\n## Aparência\n\nPredador quadrúpede de pelagem negra fosca que absorve a pouca luz da\nCaverna de Mournhall, com seis olhos pequenos e leitosos adaptados à\nescuridão total. Move-se quase sem som.\n\n## Leia em voz alta\n\n> A tocha alcança uns seis metros e no limite da luz há dois olhos parados, à sua frente, sem piscar. Eles não se aproximam. Não é a que está na sua frente que vocês precisam encontrar.\n\n## Sinal antes do ataque\n\nO cheiro antes do som — almíscar úmido, forte, e vindo do lado errado da galeria.\n\n## Ataques\n\n- Investida silenciosa\n- Mordida em sequência\n\n## Fraquezas\n\n- **Atributo — Espírito:** o truque da dupla é medo coordenado — arma de Espírito, de quem não cai na isca, quebra a sincronia. Em 10+ a dupla perde a coordenação pelo resto da cena e as duas atacam de frente.\n- Os olhos são sensíveis à luz e ela não os fecha a tempo.\n- Sob luz constante ela não se aproxima. Uma tocha fincada no chão cria zona segura.\n\n## O que torna este encontro memorável\n\nÉ a primeira vez que o Andar 1 usa a luz como recurso finito. Um grupo que gasta tocha errado nas galerias médias chega ao Guardião sem nada, e o Guardião é onde a luz decide a luta.\n\n## Complicações úteis\n\n- Vencem uma e a outra some — e volta na galeria seguinte.\n- A tocha cai na água e o encontro recomeça no escuro.\n- Elas empurram o grupo para a câmara funda em vez de para a saída.\n- Alguém percebe que a pelagem escurece com a idade e faz a conta certa.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Negra | Comum | 1-2 | 55% | Costureiro |\n| Olho Leitoso | Incomum | 1 | 20% | Alquimista |\n| Presa Fina | Incomum | 1-2 | 30% | Joalheiro, Ferreiro |\n| Col | — | 180-260 | 100% | — |\n\n## Lore\n\nSão os parentes novos do Guardião, e é isso que torna a Caverna dos Ecos uma dungeon honesta: o grupo enfrenta a versão pequena por três galerias antes de encontrar a que ficou velha. Quem prestar atenção percebe que a pelagem escurece com a idade, e quem perceber isso não se surpreende com o tamanho do que está no fundo.\n\n*Se você está vendo uma, a outra já se moveu.*\n\n## Notas para o mestre\n\nExplica o eco estranho documentado em `bounty_03_eco_estranho` — o\nmestre pode revelar que a criatura é a fonte real do fenômeno, se quiser\nfechar aquele gancho. Domável com Musgo Luminoso (ver\n`docs/economia_profissoes.md`)."
  },
  {
   "id": "stabbing_wasp",
@@ -3426,11 +3770,9 @@ var MONSTROS = [
   "canonico": "sim",
   "fonte": "https://saointegralfactor.fandom.com/wiki/Stabbing_Wasp",
   "fraqueza": "",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** fumaça no ninho. Em 10+ o ninho inteiro se dispersa pelo resto da cena.",
-   "Resiste a Veneno** — o ferrão é dela.",
+   "Atributo — Reflexo:** o ferrão é rápido e em sequência — arma de Reflexo acompanha a órbita e bate na passagem. Em 10+ o ninho inteiro se dispersa pelo resto da cena.",
    "Frágil: qualquer golpe que acerte resolve, e ela é grande o bastante para acertar.",
    "Fora do raio do ninho ela não persegue. Vinte passos bastam."
   ],
@@ -3478,7 +3820,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nEstepes de Kaldan e Planície de Verrun, sempre perto de um ninho — e o ninho está sempre mais perto do que o grupo imagina.\n\n**Comportamento:** agressiva e territorial num raio curto. Uma vespa é irritação; o ninho é o encontro, e mexer no ninho é a única forma de o encontro ficar sério.\n\n## Aparência\n\nVespa de porte médio, ferrão perfurante proeminente — o nome já entrega\no estilo de ataque.\n\n## Leia em voz alta\n\n> Uma passa zunindo perto da orelha de alguém e volta. Ela não vai embora e não ataca — fica rodando o grupo a três passos de distância, e o zumbido dela está ficando acompanhado.\n\n## Sinal antes do ataque\n\nEla circula antes de picar. Uma vespa que orbita já decidiu, e o círculo aperta a cada volta.\n\n## Ataques\n\n- Perfuração com o ferrão, rápida, pode acertar vários golpes seguidos\n\n## Fraquezas\n\n- **Elemento — Fogo:** fumaça no ninho. Em 10+ o ninho inteiro se dispersa pelo resto da cena.\n- **Resiste a Veneno** — o ferrão é dela.\n- Frágil: qualquer golpe que acerte resolve, e ela é grande o bastante para acertar.\n- Fora do raio do ninho ela não persegue. Vinte passos bastam.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Ferrão de Vespa | Comum | 1 | 45% | Alquimista, Joalheiro |\n| Casca de Ninho | Comum | 1-2 | 35% | Artesão, Alquimista |\n| Mel Amargo | Incomum | 1 | 20% | Cozinheiro, Médico |\n| Col | — | 22-40 | 100% | — |\n\n## Lore\n\nJunto com o Frenzy Boar, é o monstro que todo jogador do Andar 1 mata na primeira semana. A diferença é que o javali ensina a acertar e a vespa ensina a recuar — e é a segunda lição que mantém gente viva, e a que os grupos aprendem mais tarde.\n\n*Uma é um incômodo. O ninho é uma decisão.*\n\n## Notas para o mestre\n\nFonte: material do jogo **Sword Art Online: Integral Factor** (uma\ncontinuidade de jogo oficial, não o anime) — adaptado aqui pros campos do\nandar 1. Bom pra variar o combate de campo (Frenzy Boar de perto, Stabbing\nWasp de longe) sem introduzir nada fora do tom do jogo."
+  "corpo": "## Habitat\n\nEstepes de Kaldan e Planície de Verrun, sempre perto de um ninho — e o ninho está sempre mais perto do que o grupo imagina.\n\n**Comportamento:** agressiva e territorial num raio curto. Uma vespa é irritação; o ninho é o encontro, e mexer no ninho é a única forma de o encontro ficar sério.\n\n## Aparência\n\nVespa de porte médio, ferrão perfurante proeminente — o nome já entrega\no estilo de ataque.\n\n## Leia em voz alta\n\n> Uma passa zunindo perto da orelha de alguém e volta. Ela não vai embora e não ataca — fica rodando o grupo a três passos de distância, e o zumbido dela está ficando acompanhado.\n\n## Sinal antes do ataque\n\nEla circula antes de picar. Uma vespa que orbita já decidiu, e o círculo aperta a cada volta.\n\n## Ataques\n\n- Perfuração com o ferrão, rápida, pode acertar vários golpes seguidos\n\n## Fraquezas\n\n- **Atributo — Reflexo:** o ferrão é rápido e em sequência — arma de Reflexo acompanha a órbita e bate na passagem. Em 10+ o ninho inteiro se dispersa pelo resto da cena.\n- Frágil: qualquer golpe que acerte resolve, e ela é grande o bastante para acertar.\n- Fora do raio do ninho ela não persegue. Vinte passos bastam.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Ferrão de Vespa | Comum | 1 | 45% | Alquimista, Joalheiro |\n| Casca de Ninho | Comum | 1-2 | 35% | Artesão, Alquimista |\n| Mel Amargo | Incomum | 1 | 20% | Cozinheiro, Médico |\n| Col | — | 22-40 | 100% | — |\n\n## Lore\n\nJunto com o Frenzy Boar, é o monstro que todo jogador do Andar 1 mata na primeira semana. A diferença é que o javali ensina a acertar e a vespa ensina a recuar — e é a segunda lição que mantém gente viva, e a que os grupos aprendem mais tarde.\n\n*Uma é um incômodo. O ninho é uma decisão.*\n\n## Notas para o mestre\n\nFonte: material do jogo **Sword Art Online: Integral Factor** (uma\ncontinuidade de jogo oficial, não o anime) — adaptado aqui pros campos do\nandar 1. Bom pra variar o combate de campo (Frenzy Boar de perto, Stabbing\nWasp de longe) sem introduzir nada fora do tom do jogo."
  },
  {
   "id": "toca_na_raiz",
@@ -3501,10 +3843,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe nas costas expostas",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** ele abandona a toca. Em 10+ perde a vontade de brigar pelo resto da cena e some.",
+   "Atributo — Reflexo:** a sobrevivência dele é fuga pura — arma de Reflexo fecha a rota antes dele decidir pra onde correr. Em 10+ perde a vontade de brigar pelo resto da cena e some.",
    "Frágil, e o dorso fica exposto quando ele se vira para a toca.",
    "Ele quer fugir, não lutar. Abrir caminho encerra o encontro.",
    "Erva comum oferecida repetidamente o aproxima em vez de espantar."
@@ -3513,9 +3854,9 @@ var MONSTROS = [
   "vulnerabilidades": [
    "ruído alto"
   ],
-  "domavel": "sim",
-  "domaSucessos": "2",
-  "domaRequisito": "Ervas comuns oferecidas repetidamente",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Pequeno mamífero de pelagem parda-avermelhada, do tamanho de um cão médio, com garras curtas adaptadas pra cavar e orelhas grandes sempre alertas. Vive em tocas entre as raízes grossas das árvores da Floresta de Horunka.",
   "habitat": "Sob as raízes expostas das árvores grandes de Horunka. A toca é sempre entre duas raízes, sempre no lado sombreado, e sempre tem duas saídas.",
   "comportamento": "passivo e assustado. Só ataca encurralado, e encurralado é fácil de evitar — ele foge pela segunda saída se alguém deixar.",
@@ -3546,7 +3887,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nSob as raízes expostas das árvores grandes de Horunka. A toca é sempre entre duas raízes, sempre no lado sombreado, e sempre tem duas saídas.\n\n**Comportamento:** passivo e assustado. Só ataca encurralado, e encurralado é fácil de evitar — ele foge pela segunda saída se alguém deixar.\n\n## Aparência\n\nPequeno mamífero de pelagem parda-avermelhada, do tamanho de um cão médio,\ncom garras curtas adaptadas pra cavar e orelhas grandes sempre alertas.\nVive em tocas entre as raízes grossas das árvores da Floresta de Horunka.\n\n## Leia em voz alta\n\n> Alguma coisa pequena e cinza sai correndo de baixo da raiz, para no meio do caminho, e olha para trás. Ela está entre vocês e o buraco.\n\n## Sinal antes do ataque\n\nEle para e olha. Um bicho pequeno que para de correr e encara já entendeu que não tem para onde ir.\n\n## Ataques\n\n- Mordida rasteira\n- Arranhão de fuga (usado só pra escapar, não pra ferir)\n\n## Fraquezas\n\n- **Elemento — Fogo:** ele abandona a toca. Em 10+ perde a vontade de brigar pelo resto da cena e some.\n- Frágil, e o dorso fica exposto quando ele se vira para a toca.\n- Ele quer fugir, não lutar. Abrir caminho encerra o encontro.\n- Erva comum oferecida repetidamente o aproxima em vez de espantar.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Comum | Comum | 1 | 60% | Costureiro |\n| Raiz Roída | Comum | 1-2 | 40% | Cozinheiro, Alquimista |\n| Col | — | 12-25 | 100% | — |\n\n## Lore\n\nÉ o companheiro de doma mais comum do Andar 1 e o mais desprezado. Não luta, não carrega peso, não faz nada de útil — mas encontra toca, e toca no Bosque de Ashwen quer dizer passagem. Mais de um grupo perdido saiu de Ashwen atrás de um bicho de meio quilo que sabia para onde ir.\n\n*Não vale nada em combate. Vale muito quando você não sabe onde está.*\n\n## Notas para o mestre\n\nBom monstro pra ensinar o sistema de doma sem risco real — usado em\n`horunka_01_primeira_cacada` como um dos alvos possíveis, e é a criatura\nmais fácil de amansar do andar 1 (ver `docs/economia_profissoes.md`)."
+  "corpo": "## Habitat\n\nSob as raízes expostas das árvores grandes de Horunka. A toca é sempre entre duas raízes, sempre no lado sombreado, e sempre tem duas saídas.\n\n**Comportamento:** passivo e assustado. Só ataca encurralado, e encurralado é fácil de evitar — ele foge pela segunda saída se alguém deixar.\n\n## Aparência\n\nPequeno mamífero de pelagem parda-avermelhada, do tamanho de um cão médio,\ncom garras curtas adaptadas pra cavar e orelhas grandes sempre alertas.\nVive em tocas entre as raízes grossas das árvores da Floresta de Horunka.\n\n## Leia em voz alta\n\n> Alguma coisa pequena e cinza sai correndo de baixo da raiz, para no meio do caminho, e olha para trás. Ela está entre vocês e o buraco.\n\n## Sinal antes do ataque\n\nEle para e olha. Um bicho pequeno que para de correr e encara já entendeu que não tem para onde ir.\n\n## Ataques\n\n- Mordida rasteira\n- Arranhão de fuga (usado só pra escapar, não pra ferir)\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a sobrevivência dele é fuga pura — arma de Reflexo fecha a rota antes dele decidir pra onde correr. Em 10+ perde a vontade de brigar pelo resto da cena e some.\n- Frágil, e o dorso fica exposto quando ele se vira para a toca.\n- Ele quer fugir, não lutar. Abrir caminho encerra o encontro.\n- Erva comum oferecida repetidamente o aproxima em vez de espantar.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Comum | Comum | 1 | 60% | Costureiro |\n| Raiz Roída | Comum | 1-2 | 40% | Cozinheiro, Alquimista |\n| Col | — | 12-25 | 100% | — |\n\n## Lore\n\nÉ o companheiro de doma mais comum do Andar 1 e o mais desprezado. Não luta, não carrega peso, não faz nada de útil — mas encontra toca, e toca no Bosque de Ashwen quer dizer passagem. Mais de um grupo perdido saiu de Ashwen atrás de um bicho de meio quilo que sabia para onde ir.\n\n*Não vale nada em combate. Vale muito quando você não sabe onde está.*\n\n## Notas para o mestre\n\nBom monstro pra ensinar o sistema de doma sem risco real — usado em\n`horunka_01_primeira_cacada` como um dos alvos possíveis, e é a criatura\nmais fácil de amansar do andar 1 (ver `docs/economia_profissoes.md`)."
  },
  {
   "id": "touro_das_colinas",
@@ -3565,10 +3906,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "investida cega — desviar no último instante deixa o flanco exposto",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Trovão:** atordoa por um turno, interrompendo a investida em",
+   "Atributo — Reflexo:** a investida é direta e comprometida — arma de",
    "Desviar da investida no último instante deixa o flanco totalmente exposto",
    "Terreno com obstáculo (pedra, cerca) quebra a investida sozinho.",
    "Sozinho (separado do pequeno grupo), fica mais hesitante e menos agressivo."
@@ -3577,9 +3917,9 @@ var MONSTROS = [
   "vulnerabilidades": [
    "espaço aberto sem obstáculo pra desviar"
   ],
-  "domavel": "sim",
-  "domaSucessos": "3",
-  "domaRequisito": "Feno da Faixa Verde (coletado nas fazendas de Urbus)",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Porte robusto, chifres curtos e grossos, pelagem parda que se confunde com a terra seca das colinas — só percebido de perto por quem já sabe olhar.",
   "habitat": "Pastagem esparsa das Colinas Secas, ao norte de Urbus — primeiro terreno de\ncombate de quem chega ao andar 2.",
   "comportamento": "territorial, não predatório. Pasta em pequenos grupos de\n2-3; carrega quando algo se aproxima demais do território, não por fome.",
@@ -3610,7 +3950,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nPastagem esparsa das Colinas Secas, ao norte de Urbus — primeiro terreno de\ncombate de quem chega ao andar 2.\n\n**Comportamento:** territorial, não predatório. Pasta em pequenos grupos de\n2-3; carrega quando algo se aproxima demais do território, não por fome.\n\n## Aparência\n\nPorte robusto, chifres curtos e grossos, pelagem parda que se confunde com\na terra seca das colinas — só percebido de perto por quem já sabe olhar.\n\n## Leia em voz alta\n\n> A colina parece vazia até um som fundo, quase geológico, avisar que não\n> está. O touro ergue a cabeça devagar, sem pressa — ele decide o ritmo do\n> confronto, não o grupo.\n\n## Sinal antes do ataque\n\nBufo grave e uma pata raspando o chão seco, levantando poeira antes da\ninvestida.\n\n## Ataques\n\n- **Investida** — dano moderado direto; se não desviado a tempo, empurra o\n  alvo pra trás.\n- **Chifrada em recuo** — golpe secundário se o grupo se posicionar atrás\n  dele depois de desviar mal.\n\n## Fraquezas\n\n- **Elemento — Trovão:** atordoa por um turno, interrompendo a investida em\n  andamento.\n- Desviar da investida no último instante deixa o flanco totalmente exposto\n  ao contra-ataque.\n- Terreno com obstáculo (pedra, cerca) quebra a investida sozinho.\n- Sozinho (separado do pequeno grupo), fica mais hesitante e menos agressivo.\n\n## O que torna este encontro memorável\n\nÉ o combate-tutorial do andar 2, equivalente ao Frenzy Boar no andar 1 —\nensina que terreno aberto muda a lógica de combate: sem obstáculo, a\ninvestida é sempre uma ameaça real, não só cosmética.\n\n## Complicações úteis\n\n- O grupo vence, mas alguém é empurrado pra dentro do território de outro touro.\n- A poeira levantada atrapalha visão por uma rodada.\n- Um touro do pequeno grupo foge pra avisar (efeito narrativo, não mecânico).\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Couro Grosso | Comum | 1-2 | 65% | Costureiro |\n| Chifre Curto | Comum | 1 | 40% | Ferreiro, Joalheiro |\n| Col | — | 40-80 | 100% | — |\n\n## Lore\n\nOs moradores de Urbus tratam o Touro das Colinas como praga administrável,\nnão ameaça — o problema real do planalto nunca foi ele.\n\n*Ele não caça. Só não recua.*\n\n## Notas para o mestre\n\n- **Onde entra:** Colinas Secas, ao norte de Urbus (ver `mapas/andar_2.md`).\n- **Como usar em transmissão:** o bufo grave antes de qualquer investida.\n- **Erro comum do grupo:** tentar \"tankar\" a investida em vez de desviar —\n  funciona, mas custa mais do que deveria.\n- **Como a cena encerra sem HP:** afastar-se o suficiente do pequeno grupo\n  território encerra a perseguição sozinho."
+  "corpo": "## Habitat\n\nPastagem esparsa das Colinas Secas, ao norte de Urbus — primeiro terreno de\ncombate de quem chega ao andar 2.\n\n**Comportamento:** territorial, não predatório. Pasta em pequenos grupos de\n2-3; carrega quando algo se aproxima demais do território, não por fome.\n\n## Aparência\n\nPorte robusto, chifres curtos e grossos, pelagem parda que se confunde com\na terra seca das colinas — só percebido de perto por quem já sabe olhar.\n\n## Leia em voz alta\n\n> A colina parece vazia até um som fundo, quase geológico, avisar que não\n> está. O touro ergue a cabeça devagar, sem pressa — ele decide o ritmo do\n> confronto, não o grupo.\n\n## Sinal antes do ataque\n\nBufo grave e uma pata raspando o chão seco, levantando poeira antes da\ninvestida.\n\n## Ataques\n\n- **Investida** — dano moderado direto; se não desviado a tempo, empurra o\n  alvo pra trás.\n- **Chifrada em recuo** — golpe secundário se o grupo se posicionar atrás\n  dele depois de desviar mal.\n\n## Fraquezas\n\n- **Atributo — Reflexo:** a investida é direta e comprometida — arma de\n  Reflexo, no último instante, vira a força dele contra ele. Em 10+ ele\n  fica atordoado por um turno, com a investida em andamento interrompida.\n- Desviar da investida no último instante deixa o flanco totalmente exposto\n  ao contra-ataque.\n- Terreno com obstáculo (pedra, cerca) quebra a investida sozinho.\n- Sozinho (separado do pequeno grupo), fica mais hesitante e menos agressivo.\n\n## O que torna este encontro memorável\n\nÉ o combate-tutorial do andar 2, equivalente ao Frenzy Boar no andar 1 —\nensina que terreno aberto muda a lógica de combate: sem obstáculo, a\ninvestida é sempre uma ameaça real, não só cosmética.\n\n## Complicações úteis\n\n- O grupo vence, mas alguém é empurrado pra dentro do território de outro touro.\n- A poeira levantada atrapalha visão por uma rodada.\n- Um touro do pequeno grupo foge pra avisar (efeito narrativo, não mecânico).\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Couro Grosso | Comum | 1-2 | 65% | Costureiro |\n| Chifre Curto | Comum | 1 | 40% | Ferreiro, Joalheiro |\n| Col | — | 40-80 | 100% | — |\n\n## Lore\n\nOs moradores de Urbus tratam o Touro das Colinas como praga administrável,\nnão ameaça — o problema real do planalto nunca foi ele.\n\n*Ele não caça. Só não recua.*\n\n## Notas para o mestre\n\n- **Onde entra:** Colinas Secas, ao norte de Urbus (ver `mapas/andar_2.md`).\n- **Como usar em transmissão:** o bufo grave antes de qualquer investida.\n- **Erro comum do grupo:** tentar \"tankar\" a investida em vez de desviar —\n  funciona, mas custa mais do que deveria.\n- **Como a cena encerra sem HP:** afastar-se o suficiente do pequeno grupo\n  território encerra a perseguição sozinho."
  },
  {
   "id": "trepadeira_estranguladora",
@@ -3633,11 +3973,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe na base do caule",
-  "elementoFraqueza": "Fogo",
-  "elementoResistencia": "Veneno",
+  "atributoFraqueza": "Reflexo",
   "fraquezas": [
-   "Elemento — Fogo:** a vinha seca por fora pega rápido. Em 10+ ela solta o alvo e perde o agarrão pelo resto da cena.",
-   "Resiste a Veneno** — é planta.",
+   "Atributo — Reflexo:** ela depende de imobilizar quem é lento — arma de Reflexo corta a vinha antes do enlace fechar. Em 10+ ela solta o alvo e perde o agarrão pelo resto da cena.",
    "A base do caule é o único ponto vivo, e fica no tronco, ao alcance da mão.",
    "Ela só pega quem anda por último. Uma fila que fecha atrás não é atacada."
   ],
@@ -3647,7 +3985,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "fogo"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Diferente da Little Nepenthes — não ataca com spray, prende. Vinhas grossas cobertas de espinhos curtos, enroladas em troncos da Floresta de Horunka, quase indistinguíveis de vegetação comum até se moverem.",
@@ -3677,7 +4015,7 @@ var MONSTROS = [
     "raridade": "Incomum",
     "qtd": "1",
     "chance": "20%",
-    "serve": "Alquimista (elemento Veneno)"
+    "serve": "Alquimista"
    },
    {
     "item": "Col",
@@ -3687,7 +4025,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nCopa fechada de Horunka e Ashwen, pendurada. Nunca no chão, e nunca em árvore isolada — sempre onde os galhos se tocam.\n\n**Comportamento:** emboscadora imóvel. Deixa passar quantos quiser e fecha no último da fila. Não escolhe o mais fraco: escolhe o que anda por último, sempre.\n\n## Aparência\n\nDiferente da Little Nepenthes — não ataca com spray, prende. Vinhas\ngrossas cobertas de espinhos curtos, enroladas em troncos da Floresta de\nHorunka, quase indistinguíveis de vegetação comum até se moverem.\n\n## Leia em voz alta\n\n> A trilha está fechada de cipó em cima, o que é normal na floresta. O que não é normal é que o cipó atrás de vocês está mais baixo do que estava quando passaram.\n\n## Sinal antes do ataque\n\nFolha caindo sem vento, na sua frente. É a vinha ajustando o peso lá em cima.\n\n## Ataques\n\n- Enlace (tenta imobilizar antes de qualquer outra coisa)\n- Aperto (dano contínuo enquanto imobilizado)\n\n## Fraquezas\n\n- **Elemento — Fogo:** a vinha seca por fora pega rápido. Em 10+ ela solta o alvo e perde o agarrão pelo resto da cena.\n- **Resiste a Veneno** — é planta.\n- A base do caule é o único ponto vivo, e fica no tronco, ao alcance da mão.\n- Ela só pega quem anda por último. Uma fila que fecha atrás não é atacada.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Vinha Resistente | Comum | 2-3 | 55% | Costureiro, Artesão |\n| Espinho Curvo | Comum | 1-2 | 30% | Ferreiro, Alquimista |\n| Seiva Escura | Incomum | 1 | 20% | Alquimista (elemento Veneno) |\n| Col | — | 65-110 | 100% | — |\n\n## Lore\n\nA Vinha Resistente é a melhor corda barata do andar e o Artesão do grupo aprende isso na primeira vez. O detalhe que os guias de Horunka não escrevem é que a trepadeira cresce onde alguma coisa grande morreu — ela precisa do solo rico. Quando um grupo encontra três juntas, encontrou o lugar de alguma coisa, e não sabe de quê.\n\n*Ela deixa o grupo passar inteiro. Ela quer o último.*\n\n## Notas para o mestre\n\nNão é domável — planta. Boa criatura pra variar o ritmo de combate na\nfloresta: o perigo real é ficar imobilizado enquanto outra ameaça se\naproxima, não o dano direto dela."
+  "corpo": "## Habitat\n\nCopa fechada de Horunka e Ashwen, pendurada. Nunca no chão, e nunca em árvore isolada — sempre onde os galhos se tocam.\n\n**Comportamento:** emboscadora imóvel. Deixa passar quantos quiser e fecha no último da fila. Não escolhe o mais fraco: escolhe o que anda por último, sempre.\n\n## Aparência\n\nDiferente da Little Nepenthes — não ataca com spray, prende. Vinhas\ngrossas cobertas de espinhos curtos, enroladas em troncos da Floresta de\nHorunka, quase indistinguíveis de vegetação comum até se moverem.\n\n## Leia em voz alta\n\n> A trilha está fechada de cipó em cima, o que é normal na floresta. O que não é normal é que o cipó atrás de vocês está mais baixo do que estava quando passaram.\n\n## Sinal antes do ataque\n\nFolha caindo sem vento, na sua frente. É a vinha ajustando o peso lá em cima.\n\n## Ataques\n\n- Enlace (tenta imobilizar antes de qualquer outra coisa)\n- Aperto (dano contínuo enquanto imobilizado)\n\n## Fraquezas\n\n- **Atributo — Reflexo:** ela depende de imobilizar quem é lento — arma de Reflexo corta a vinha antes do enlace fechar. Em 10+ ela solta o alvo e perde o agarrão pelo resto da cena.\n- A base do caule é o único ponto vivo, e fica no tronco, ao alcance da mão.\n- Ela só pega quem anda por último. Uma fila que fecha atrás não é atacada.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Vinha Resistente | Comum | 2-3 | 55% | Costureiro, Artesão |\n| Espinho Curvo | Comum | 1-2 | 30% | Ferreiro, Alquimista |\n| Seiva Escura | Incomum | 1 | 20% | Alquimista |\n| Col | — | 65-110 | 100% | — |\n\n## Lore\n\nA Vinha Resistente é a melhor corda barata do andar e o Artesão do grupo aprende isso na primeira vez. O detalhe que os guias de Horunka não escrevem é que a trepadeira cresce onde alguma coisa grande morreu — ela precisa do solo rico. Quando um grupo encontra três juntas, encontrou o lugar de alguma coisa, e não sabe de quê.\n\n*Ela deixa o grupo passar inteiro. Ela quer o último.*\n\n## Notas para o mestre\n\nNão é domável — planta. Boa criatura pra variar o ritmo de combate na\nfloresta: o perigo real é ficar imobilizado enquanto outra ameaça se\naproxima, não o dano direto dela."
  },
  {
   "id": "urso_de_pedra",
@@ -3710,11 +4048,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe no focinho",
-  "elementoFraqueza": "Veneno",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Corpo",
   "fraquezas": [
-   "Elemento — Veneno:** lâmina untada. Ele é grande demais para cair rápido e é exatamente por isso que o veneno morde. Em 10+ ele perde a investida pelo resto da cena.",
-   "Resiste a Gelo** — hiberna em rocha nua.",
+   "Atributo — Corpo:** ele é grande demais para cair rápido, e é exatamente por isso que força bruta bem posta morde — arma de Corpo bate de igual pra igual. Em 10+ ele perde a investida pelo resto da cena.",
    "O focinho é o ponto sensível, e ele o expõe quando fica de pé.",
    "Ele dá um aviso completo. Recuar durante o aviso encerra o encontro sem uma rolagem."
   ],
@@ -3724,9 +4060,9 @@ var MONSTROS = [
   "vulnerabilidades": [
    "fogo"
   ],
-  "domavel": "sim",
-  "domaSucessos": "6",
-  "domaRequisito": "Grande quantidade de comida oferecida de uma vez (não repetida)",
+  "domavel": "",
+  "domaSucessos": "",
+  "domaRequisito": "",
   "resumo": "Urso enorme cuja pelagem grossa e acinzentada, cheia de detritos e poeira, o faz parecer parte da própria montanha até se mover. Um dos maiores mamíferos das Montanhas de Grauvenn.",
   "habitat": "Encostas baixas das Montanhas de Grauvenn e as tocas de pedra das Colinas de Braxhold. Dorme meses e acorda com fome de meses.",
   "comportamento": "territorial e direto. Avisa uma vez, de pé, alto, e a advertência é honesta — quem recua nos primeiros segundos não é perseguido. Quem não recua descobre o resto.",
@@ -3764,7 +4100,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nEncostas baixas das Montanhas de Grauvenn e as tocas de pedra das Colinas de Braxhold. Dorme meses e acorda com fome de meses.\n\n**Comportamento:** territorial e direto. Avisa uma vez, de pé, alto, e a advertência é honesta — quem recua nos primeiros segundos não é perseguido. Quem não recua descobre o resto.\n\n## Aparência\n\nUrso enorme cuja pelagem grossa e acinzentada, cheia de detritos e\npoeira, o faz parecer parte da própria montanha até se mover. Um dos\nmaiores mamíferos das Montanhas de Grauvenn.\n\n## Leia em voz alta\n\n> Ele se levanta nas patas traseiras e fica maior do que qualquer coisa que vocês enfrentaram. Não avança. Fica ali, de pé, esperando vocês decidirem, e a pedra na pelagem dele range quando ele respira.\n\n## Sinal antes do ataque\n\nA pelagem range. É cascalho preso no pelo há tanto tempo que virou parte dele, e ele chacoalha antes de cair de quatro para investir.\n\n## Ataques\n\n- Golpe de pata pesado\n- Investida de corpo inteiro\n\n## Fraquezas\n\n- **Elemento — Veneno:** lâmina untada. Ele é grande demais para cair rápido e é exatamente por isso que o veneno morde. Em 10+ ele perde a investida pelo resto da cena.\n- **Resiste a Gelo** — hiberna em rocha nua.\n- O focinho é o ponto sensível, e ele o expõe quando fica de pé.\n- Ele dá um aviso completo. Recuar durante o aviso encerra o encontro sem uma rolagem.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Grossa | Comum | 2-3 | 60% | Costureiro |\n| Garra Pesada | Incomum | 1-2 | 35% | Ferreiro |\n| Cascalho Incrustado | Incomum | 1-2 | 30% | Joalheiro, Ferreiro |\n| Col | — | 280-420 | 100% | — |\n\n## Lore\n\nÉ o monstro mais justo do Andar 1 e quase ninguém aceita a oferta. Ele fica de pé, ele espera, e ele deixa ir embora — e mesmo assim grupos inteiros morrem nas encostas de Grauvenn porque alguém decidiu que aquilo era hesitação. Os caçadores de Horunka chamam isso de a conta do orgulho, e cobram para não guiar ninguém até lá.\n\n*Ele te dá a chance de ir embora. Só uma.*\n\n## Notas para o mestre\n\nDomável, mas caro — exige uma oferenda grande de comida de uma vez (não\npetisco repetido). Resultado é um aliado tanque, o oposto do perfil\nágil do Lobo das Estepes ou da Libélula Cortante — dá ao Domador opções\nde \"arquétipo\" de aliado, não só um caminho único."
+  "corpo": "## Habitat\n\nEncostas baixas das Montanhas de Grauvenn e as tocas de pedra das Colinas de Braxhold. Dorme meses e acorda com fome de meses.\n\n**Comportamento:** territorial e direto. Avisa uma vez, de pé, alto, e a advertência é honesta — quem recua nos primeiros segundos não é perseguido. Quem não recua descobre o resto.\n\n## Aparência\n\nUrso enorme cuja pelagem grossa e acinzentada, cheia de detritos e\npoeira, o faz parecer parte da própria montanha até se mover. Um dos\nmaiores mamíferos das Montanhas de Grauvenn.\n\n## Leia em voz alta\n\n> Ele se levanta nas patas traseiras e fica maior do que qualquer coisa que vocês enfrentaram. Não avança. Fica ali, de pé, esperando vocês decidirem, e a pedra na pelagem dele range quando ele respira.\n\n## Sinal antes do ataque\n\nA pelagem range. É cascalho preso no pelo há tanto tempo que virou parte dele, e ele chacoalha antes de cair de quatro para investir.\n\n## Ataques\n\n- Golpe de pata pesado\n- Investida de corpo inteiro\n\n## Fraquezas\n\n- **Atributo — Corpo:** ele é grande demais para cair rápido, e é exatamente por isso que força bruta bem posta morde — arma de Corpo bate de igual pra igual. Em 10+ ele perde a investida pelo resto da cena.\n- O focinho é o ponto sensível, e ele o expõe quando fica de pé.\n- Ele dá um aviso completo. Recuar durante o aviso encerra o encontro sem uma rolagem.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Pelagem Grossa | Comum | 2-3 | 60% | Costureiro |\n| Garra Pesada | Incomum | 1-2 | 35% | Ferreiro |\n| Cascalho Incrustado | Incomum | 1-2 | 30% | Joalheiro, Ferreiro |\n| Col | — | 280-420 | 100% | — |\n\n## Lore\n\nÉ o monstro mais justo do Andar 1 e quase ninguém aceita a oferta. Ele fica de pé, ele espera, e ele deixa ir embora — e mesmo assim grupos inteiros morrem nas encostas de Grauvenn porque alguém decidiu que aquilo era hesitação. Os caçadores de Horunka chamam isso de a conta do orgulho, e cobram para não guiar ninguém até lá.\n\n*Ele te dá a chance de ir embora. Só uma.*\n\n## Notas para o mestre\n\nDomável, mas caro — exige uma oferenda grande de comida de uma vez (não\npetisco repetido). Resultado é um aliado tanque, o oposto do perfil\nágil do Lobo das Estepes ou da Libélula Cortante — dá ao Domador opções\nde \"arquétipo\" de aliado, não só um caminho único."
  },
  {
   "id": "verme_de_cristal",
@@ -3787,11 +4123,9 @@ var MONSTROS = [
   "canonico": "nao",
   "fonte": "",
   "fraqueza": "golpe na cabeça mole",
-  "elementoFraqueza": "Trovão",
-  "elementoResistencia": "Gelo",
+  "atributoFraqueza": "Espírito",
   "fraquezas": [
-   "Elemento — Trovão:** o cristal do corpo conduz e estilhaça. Em 10+ ele perde a capacidade de escavar pelo resto da cena e fica preso na galeria.",
-   "Resiste a Gelo** — a gruta já é fria.",
+   "Atributo — Espírito:** ele é estático e quase geológico — não há foco nenhum sustentando a caçada, e arma de Espírito bate nessa ausência. Em 10+ ele perde a capacidade de escavar pelo resto da cena e fica preso na galeria.",
    "A cabeça é mole e sem placa; o resto do corpo não é.",
    "Ele rastreia vibração. Ficar imóvel o faz passar direto."
   ],
@@ -3802,7 +4136,7 @@ var MONSTROS = [
   "vulnerabilidades": [
    "vibração forte"
   ],
-  "domavel": "nao",
+  "domavel": "",
   "domaSucessos": "",
   "domaRequisito": "",
   "resumo": "Verme longo (quase 2 metros) com placas de cristal bruto crescendo diretamente da pele ao longo do corpo — parece parte geológica da Gruta de Lumis até se mover.",
@@ -3810,7 +4144,7 @@ var MONSTROS = [
   "comportamento": "agressivo com vibração, cego para o resto. Não enxerga e não ouve: sente o chão. Um grupo parado é invisível; um grupo correndo é um jantar anunciado.",
   "leitura": "",
   "sinal": "As lascas caindo do veio. O cristal racha antes de ele romper a parede.",
-  "lore": "É a fonte primária de Cristal de Descarga do andar, e o Cristal de Descarga é o que derruba o Rei das Planícies. A cadeia inteira está aí, escrita no mapa, e ninguém precisa dizer nada: os Corretores de Tolbana vendem essa informação por um preço justo, e quem não comprar vai chegar ao descampado de Verrun com a ferramenta errada.",
+  "lore": "É a fonte primária de Cristal de Descarga do andar — matéria-prima das peças mais raras do Joalheiro — e a cadeia inteira está aí, escrita no mapa, e ninguém precisa dizer nada: os Corretores de Tolbana vendem essa informação por um preço justo, e quem não comprar vai passar a semana cavando veio pobre.",
   "notas": "Não é domável — reage só a vibração, não reconhece presença. Funciona como guardião natural dos veios de Cristal Bruto da Gruta de Lumis — boa razão pra mineração ali exigir cuidado (teste de Reflexo pra não fazer barulho), não só o teste de Técnica de extração.",
   "drops": [
    {
@@ -3832,7 +4166,7 @@ var MONSTROS = [
     "raridade": "Raro",
     "qtd": "1",
     "chance": "12%",
-    "serve": "Joalheiro (elemento Trovão)"
+    "serve": "Joalheiro"
    },
    {
     "item": "Col",
@@ -3842,7 +4176,7 @@ var MONSTROS = [
     "serve": "—"
    }
   ],
-  "corpo": "## Habitat\n\nDentro das galerias da Gruta de Lumis, escavando entre os veios. Onde o cristal é mais grosso, ele está mais perto.\n\n**Comportamento:** agressivo com vibração, cego para o resto. Não enxerga e não ouve: sente o chão. Um grupo parado é invisível; um grupo correndo é um jantar anunciado.\n\n## Aparência\n\nVerme longo (quase 2 metros) com placas de cristal bruto crescendo\ndiretamente da pele ao longo do corpo — parece parte geológica da Gruta\nde Lumis até se mover.\n\n## Leia em voz alta\n\n> O veio de cristal na parede treme e solta lascas. O tremor vem de dentro da rocha, e está vindo na direção de vocês, e é rápido.\n\n## Sinal antes do ataque\n\nAs lascas caindo do veio. O cristal racha antes de ele romper a parede.\n\n## Ataques\n\n- Investida perfurante\n- Chicote de cauda cristalizada\n\n## Fraquezas\n\n- **Elemento — Trovão:** o cristal do corpo conduz e estilhaça. Em 10+ ele perde a capacidade de escavar pelo resto da cena e fica preso na galeria.\n- **Resiste a Gelo** — a gruta já é fria.\n- A cabeça é mole e sem placa; o resto do corpo não é.\n- Ele rastreia vibração. Ficar imóvel o faz passar direto.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Cristal Vivo | Comum | 2-3 | 60% | Joalheiro, Alquimista |\n| Placa Quebrada | Comum | 1-2 | 30% | Ferreiro |\n| Cristal de Descarga | Raro | 1 | 12% | Joalheiro (elemento Trovão) |\n| Col | — | 160-240 | 100% | — |\n\n## Lore\n\nÉ a fonte primária de Cristal de Descarga do andar, e o Cristal de Descarga é o que derruba o Rei das Planícies. A cadeia inteira está aí, escrita no mapa, e ninguém precisa dizer nada: os Corretores de Tolbana vendem essa informação por um preço justo, e quem não comprar vai chegar ao descampado de Verrun com a ferramenta errada.\n\n*Ele não caça pelo cheiro nem pelo som. Caça pelos seus passos.*\n\n## Notas para o mestre\n\nNão é domável — reage só a vibração, não reconhece presença. Funciona\ncomo guardião natural dos veios de Cristal Bruto da Gruta de Lumis — boa\nrazão pra mineração ali exigir cuidado (teste de Reflexo pra não fazer\nbarulho), não só o teste de Técnica de extração."
+  "corpo": "## Habitat\n\nDentro das galerias da Gruta de Lumis, escavando entre os veios. Onde o cristal é mais grosso, ele está mais perto.\n\n**Comportamento:** agressivo com vibração, cego para o resto. Não enxerga e não ouve: sente o chão. Um grupo parado é invisível; um grupo correndo é um jantar anunciado.\n\n## Aparência\n\nVerme longo (quase 2 metros) com placas de cristal bruto crescendo\ndiretamente da pele ao longo do corpo — parece parte geológica da Gruta\nde Lumis até se mover.\n\n## Leia em voz alta\n\n> O veio de cristal na parede treme e solta lascas. O tremor vem de dentro da rocha, e está vindo na direção de vocês, e é rápido.\n\n## Sinal antes do ataque\n\nAs lascas caindo do veio. O cristal racha antes de ele romper a parede.\n\n## Ataques\n\n- Investida perfurante\n- Chicote de cauda cristalizada\n\n## Fraquezas\n\n- **Atributo — Espírito:** ele é estático e quase geológico — não há foco nenhum sustentando a caçada, e arma de Espírito bate nessa ausência. Em 10+ ele perde a capacidade de escavar pelo resto da cena e fica preso na galeria.\n- A cabeça é mole e sem placa; o resto do corpo não é.\n- Ele rastreia vibração. Ficar imóvel o faz passar direto.\n\n## Tabela de drop\n\n| Item | Raridade | Qtd | Chance | Serve pra |\n|---|---|---|---|---|\n| Fragmento de Cristal Vivo | Comum | 2-3 | 60% | Joalheiro, Alquimista |\n| Placa Quebrada | Comum | 1-2 | 30% | Ferreiro |\n| Cristal de Descarga | Raro | 1 | 12% | Joalheiro |\n| Col | — | 160-240 | 100% | — |\n\n## Lore\n\nÉ a fonte primária de Cristal de Descarga do andar — matéria-prima das peças mais raras do Joalheiro — e a cadeia inteira está aí, escrita no mapa, e ninguém precisa dizer nada: os Corretores de Tolbana vendem essa informação por um preço justo, e quem não comprar vai passar a semana cavando veio pobre.\n\n*Ele não caça pelo cheiro nem pelo som. Caça pelos seus passos.*\n\n## Notas para o mestre\n\nNão é domável — reage só a vibração, não reconhece presença. Funciona\ncomo guardião natural dos veios de Cristal Bruto da Gruta de Lumis — boa\nrazão pra mineração ali exigir cuidado (teste de Reflexo pra não fazer\nbarulho), não só o teste de Técnica de extração."
  }
 ];
 
@@ -6910,6 +7244,231 @@ var EQUIPAMENTOS = [
   "obter": "resolver o puzzle do mural dos 5 cristais no Castelo de Ferro Negro (docs/interacoes_e_segredos.md, cadeia G) e entrar na Câmara da Inscrição. Está na câmara, no chão, como se alguém tivesse deixado cair saindo com pressa."
  },
  {
+  "id": "anel_de_ferro",
+  "nome": "Anel de Ferro",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "—",
+  "preco": 50,
+  "precoTxt": "50 Col",
+  "resumo": "Aro de ferro simples, polido. Nenhum enfeite. Quem usa não se engana com aparência.",
+  "efeito": "Nenhum bônus numérico. Utilidade: é o \"anel de casamento\" improvisado do aventureiro. NPCs sabem que não é joalheria fina.",
+  "obter": "Craft de Joalheiro (Ferro x1. Ferramentas: Alicate, Polidor. Dificuldade: 6-.)"
+ },
+ {
+  "id": "colar_de_couro",
+  "nome": "Colar de Couro",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "—",
+  "preco": 60,
+  "precoTxt": "60 Col",
+  "resumo": "Couro cru, pingente de osso ou pedra. O \"colar do guerreiro\" iniciante.",
+  "efeito": "Nenhum bônus. Utilidade: pingente pode ser trocado — cada pingente representa um clã, guilda, família. Muda interação social.",
+  "obter": "Craft de Coureiro (Couro Fino x1, Pingente x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "pulseira_de_contas_de_madeira",
+  "nome": "Pulseira de Contas de Madeira",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col",
+  "resumo": "Contas de madeira, um pingente de cada cor. Cada cor = um membro do grupo.",
+  "efeito": "+1 em testes de Espírito para proteger aliado mentalmente quando ele estiver em apuros e o usuário estiver olhando para a pulseira.",
+  "obter": "Craft de Artesão (Madeira Leve x10, Corda x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "pingente_de_protecao",
+  "nome": "Pingente de Proteção",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "—",
+  "preco": 90,
+  "precoTxt": "90 Col",
+  "resumo": "Pingente de prata com símbolo de proteção. Quem acredita funciona melhor.",
+  "efeito": "+1 em testes de Espírito para resistir a medo sobrenatural (sussurros, aparições, presságios).",
+  "obter": "Craft de Joalheiro (Prata x1, Símbolo Gravado x1. Ferramentas: Gravador. Dificuldade: 6-.)"
+ },
+ {
+  "id": "anel_do_viajante",
+  "nome": "Anel do Viajante",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "—",
+  "preco": 110,
+  "precoTxt": "110 Col",
+  "resumo": "Anel com mapa miniatura de um andar inteiro, gravado em relevo. A roda e mostra o mapa.",
+  "efeito": "+1 em testes de Conhecimento para se localizar ou lembrar rota no andar que o mapa representa.",
+  "obter": "Craft de Joalheiro + Cartógrafo (Prata x1, Tinta Esmalte x1, Mapa x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "brinco_de_cristal",
+  "nome": "Brinco de Cristal",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "—",
+  "preco": 120,
+  "precoTxt": "120 Col",
+  "resumo": "Brinco com pequeno cristal lapidado. Brilha quando está perto de outro cristal.",
+  "efeito": "+1 em testes de Reflexo para detectar presença sobrenatural — o cristal vibra ou esquenta.",
+  "obter": "Craft de Joalheiro (Cristal Lapidado x1, Prata x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "medalhao_do_explorador",
+  "nome": "Medalhão do Explorador",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Conhecimento -1+",
+  "preco": 150,
+  "precoTxt": "150 Col",
+  "resumo": "Medalhão de bronze, com bússola em miniatura embutida + pequeno frasco de tinta.",
+  "efeito": "+1 em testes de Conhecimento para mapear ou documentar lugar novo.",
+  "obter": "Craft de Joalheiro + Cartógrafo (Bronze x1, Bússola Mini x1, Tinta x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cinto_de_porta_tudo",
+  "nome": "Cinto de Porta-Tudo",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Técnica -1+",
+  "preco": 140,
+  "precoTxt": "140 Col",
+  "resumo": "Cinto de couro com 8 bolsos pequenos, cada um com fecho diferente. Tem lugar pra tudo.",
+  "efeito": "+1 em testes de Técnica para ter o item certo na mão na hora certa. Em vez de \"não tem isso na mochila\", com 7-9 acha um parecido.",
+  "obter": "Craft de Coureiro + Artesão (Couro Resistente x2, Fivela x8, Fechos x5. Dificuldade: 6-.)"
+ },
+ {
+  "id": "broche_do_guerreiro",
+  "nome": "Broche do Guerreiro",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Corpo -1+",
+  "preco": 130,
+  "precoTxt": "130 Col",
+  "resumo": "Broche de bronze com espada e escudo cruzados. Dado por veterano a quem sobreviveu a primeiro raid.",
+  "efeito": "+1 em testes de Corpo para encorajar aliados depois de sofrer dano. O veterano não recua.",
+  "obter": "Craft de Ferreiro + Joalheiro (Bronze x2, Gravura x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "amuleto_sorte",
+  "nome": "Amuleto Sorte",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "—",
+  "preco": 160,
+  "precoTxt": "160 Col",
+  "resumo": "Sapo de jade, pata de coelho, trevo de 4 folhas — amuleto sortido da sorte.",
+  "efeito": "Uma vez por sessão, pode rerrolar 1 dado de um 6- que acabou de sair. Usa e acaba, volta no dia seguinte.",
+  "obter": "Craft de Joalheiro (Jade x1, Cordão x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "anel_do_cavaleiro",
+  "nome": "Anel do Cavaleiro",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Corpo 0+",
+  "preco": 400,
+  "precoTxt": "400 Col",
+  "resumo": "Aço nobre, insígnia de cavalaria, selada com brasão da ordem. Não pode ser falsificado facilmente.",
+  "efeito": "+1 em testes de Corpo para desafiar chefe ou criatura poderosa em combate individual. Efeito social: portadores de anel de ordem reconhecem uns aos outros.",
+  "obter": "Craft de Joalheiro + Ferreiro (Aço Nobre x2, Símbolo Ordem x1, Esmalte x1. Dificuldade: 7.)"
+ },
+ {
+  "id": "colar_elemental",
+  "nome": "Colar Elemental",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Espírito 0+",
+  "preco": 480,
+  "precoTxt": "480 Col",
+  "resumo": "Cinco pequenos cristais de elementos diferentes, alternados no colar. Cada um brilha com sua cor.",
+  "efeito": "+1 em testes de Espírito para resistir a dano elemental (qualquer dos 5 tipos — escolhe o mais forte no momento).",
+  "obter": "Craft de Joalheiro + Cristalista (Prata x2, 5 Cristais Elementais x1 cada. Dificuldade: 8.)"
+ },
+ {
+  "id": "bracelete_guardiao",
+  "nome": "Bracelete Guardião",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Corpo 0+",
+  "preco": 440,
+  "precoTxt": "440 Col",
+  "resumo": "Bracelete largo de aço, com placas de proteção e encaixe de escudo pequeno.",
+  "efeito": "+1 em testes de Corpo para bloquear golpe com o braço quando não tem escudo à mão. Com o braço, reduz 1 dano.",
+  "obter": "Craft de Ferreiro (Chapa Aço x2, Couro x1, Rebites x5. Dificuldade: 8.)"
+ },
+ {
+  "id": "anel_do_infinito",
+  "nome": "Anel do Infinito",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Espírito 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Aro de material desconhecido, preto sem reflexo. Dentro dele, as estrelas parecem se mover.",
+  "efeito": "Energia Inesgotável — O usuário nunca fica sem Fôlego. Recupera 1 de Fôlego a cada cena, em vez de 6 horas. Limite: não soma com regeneração de outras fontes, e não passa de 20.",
+  "obter": "Enigma final do andar 50; ou craft lendário (Material Desconhecido x1, Joalheiro nível 5 + Encantador nível 5. Dificuldade: 10+.)"
+ },
+ {
+  "id": "colar_lendario_heranca_herois",
+  "nome": "Colar Lendário Herança Heróis",
+  "img": "",
+  "slot": "Acessórios",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/acessorios_novos.md",
+  "requisito": "Espírito 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Pingente com as 5 runas lendárias, doadas pelos 5 primeiros heróis que subiram o andar 100. Dizem que tem alma dentro.",
+  "efeito": "+2 em testes de Espírito para TODOS os aliados em 5 metros, enquanto o colar estiver ao ar livre (exceção ao teto, mas só afeta Espírito). Efeito único — Legado: uma vez por sessão, o grupo inteiro pode rerrolar 1 dado de 6- de qualquer um, narrando como se inspira no legado dos heróis.",
+  "obter": "Recebido em recompensa por completar a campanha principal; ou craft lendário (5 Runas Lendárias x1 cada, Herói nível 5. Dificuldade: impossível sem todas as runas.)"
+ },
+ {
   "id": "gibao_de_estopa",
   "nome": "Gibão de Estopa",
   "img": "imagens/equip_gibao_de_estopa.png",
@@ -7060,6 +7619,471 @@ var EQUIPAMENTOS = [
   "obter": "dado (não vendido) pelo Zelador do Memorial a quem concluir voss_04 sem ter profanado nenhuma sepultura. Ele não explica por que tinha um."
  },
  {
+  "id": "vestimenta_de_aventureiro",
+  "nome": "Vestimenta de Aventureiro",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "—",
+  "preco": 30,
+  "precoTxt": "30 Col",
+  "resumo": "Roupas simples de algodão, calça larga, blusa de manga. Não é proteção, só roupa.",
+  "efeito": "Nenhum bônus. Utilidade: \"estar vestido\" — sem nada, o mestre cobra interações sociais estranhas em cidade.",
+  "obter": "Loja de Roupas da Cidade do Início (Algodão x2. Costureiro. Dificuldade: 6-.)"
+ },
+ {
+  "id": "couro_simples",
+  "nome": "Couro Simples",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "—",
+  "preco": 80,
+  "precoTxt": "80 Col",
+  "resumo": "Jaqueta de couro cru, calça de couro, botas incluídas às vezes. O básico.",
+  "efeito": "+1 em testes de Corpo para resistir a corte superficial (garra pequena, estilhaço, navalha).",
+  "obter": "Coureiro (Couro Cru x3, Linha x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "couro_reforcado",
+  "nome": "Couro Reforçado",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo -1+",
+  "preco": 160,
+  "precoTxt": "160 Col",
+  "resumo": "Couro curtido com placas de metal pequenas rebitadas nos pontos críticos (ombro, cotovelo, peito).",
+  "efeito": "+1 em testes de Corpo para aguentar golpe físico leve (soco, bastão, tacape).",
+  "obter": "Coureiro + Ferreiro (Couro Curtido x3, Placas Metal x4, Rebites x6. Dificuldade: 6-.)"
+ },
+ {
+  "id": "colete_de_cacador",
+  "nome": "Colete de Caçador",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Reflexo -1+",
+  "preco": 140,
+  "precoTxt": "140 Col",
+  "resumo": "Couro leve, verde musgo, com muitos bolsos e cordão. Não brilha, não faz barulho.",
+  "efeito": "+1 em testes de Reflexo para se camuflar em floresta ou mato.",
+  "obter": "Coureiro especializado de Horunka (Couro Verde x3, Corda x2, Fivela x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "armadura_de_ferro_leve",
+  "nome": "Armadura de Ferro Leve",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 220,
+  "precoTxt": "220 Col",
+  "resumo": "Placas finas de ferro, articuladas nos ombros e cotovelos. Leve, não atrapalha.",
+  "efeito": "+1 em testes de Corpo para resistir a corte de espada ou golpe de lança.",
+  "obter": "Ferreiro (Chapa Ferro x5, Couro x2, Rebites x8. Dificuldade: 6-.)"
+ },
+ {
+  "id": "armadura_de_soldado",
+  "nome": "Armadura de Soldado",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 260,
+  "precoTxt": "260 Col",
+  "resumo": "Modelo padrão da guarda. Placas interligadas, proteção de tronco + ombros.",
+  "efeito": "+1 em testes de Corpo para aguentar flecha ou projétil leve.",
+  "obter": "Ferreiro Militar (Ferro Fundido x4, Malha x2, Couro x2. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cota_de_malha",
+  "nome": "Cota de Malha",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 300,
+  "precoTxt": "300 Col",
+  "resumo": "Malha de anéis de ferro, sobre acolchoado. Protege bem de corte, pesa.",
+  "efeito": "+1 em testes de Corpo para resistir a qualquer golpe perfurante leve. Custo: -1 em furtividade em superfície que faça barulho.",
+  "obter": "Ferreiro (Anel Ferro x200, Acabamento Couro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "armadura_escamada",
+  "nome": "Armadura Escamada",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo -1+",
+  "preco": 280,
+  "precoTxt": "280 Col",
+  "resumo": "Escamas de criatura (peixe, réptil, dragão bebê) costuradas em couro. Brilha.",
+  "efeito": "+1 em testes de Corpo para resistir a mordida ou garra de criatura.",
+  "obter": "Costureiro (Escamas x30, Couro Tratado x2, Linha x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "peitoral_do_guarda",
+  "nome": "Peitoral do Guarda",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 320,
+  "precoTxt": "320 Col",
+  "resumo": "Placa de peito única, de aço médio, com emblema da guarda. Protege bem peito e costas.",
+  "efeito": "+1 em testes de Corpo para aguentar golpe que vai direto no peito.",
+  "obter": "Ferreiro da Guarda (Chapa Aço x2, Rebites x6, Couro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "armadura_mercenaria",
+  "nome": "Armadura Mercenária",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 340,
+  "precoTxt": "340 Col",
+  "resumo": "Sem insígnia, peças misturadas. O que importa é cobrir bem.",
+  "efeito": "+1 em testes de Corpo para resistir a golpe de arma improvisada ou mordida. Efeito social: ninguém sabe de que lado você está.",
+  "obter": "Mercado Negro (Partes Usadas x5, Couro x2, Rebites x5. Dificuldade: 6-.)"
+ },
+ {
+  "id": "armadura_de_batalha_inicial",
+  "nome": "Armadura de Batalha Inicial",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 1+",
+  "preco": 380,
+  "precoTxt": "380 Col",
+  "resumo": "Kit completo iniciante de aventureiro sério. Cobre tronco, ombro, coxas.",
+  "efeito": "+1 em testes de Corpo para aguentar 1 golpe que passaria de chefe leve.",
+  "obter": "Ferreiro (Aço x3, Couro x3, Rebites x10. Dificuldade: 6-.)"
+ },
+ {
+  "id": "armadura_de_aco",
+  "nome": "Armadura de Aço",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 600,
+  "precoTxt": "600 Col",
+  "resumo": "Placas temperadas, articulações precisas. Equilíbrio perfeito entre proteção e peso.",
+  "efeito": "+1 em testes de Corpo para QUALQUER golpe físico. Efeito único: se você desferir um ataque que seria crítico no oponente e ele errar o desvio, a armadura funciona como bônus — seu próximo teste de Corpo ganha +1 adicional.",
+  "obter": "Ferreiro mestre (Chapa Aço x5, Liga x2, Couro Nobre x2. Ferramentas: Fornalha, Bigorna, Rebitador. Dificuldade: 7.)"
+ },
+ {
+  "id": "armadura_do_cavaleiro",
+  "nome": "Armadura do Cavaleiro",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 1+",
+  "preco": 680,
+  "precoTxt": "680 Col",
+  "resumo": "Aço nobre polido, emblema gravado, capa de tecido nobre. O cavaleiro parece brilhar.",
+  "efeito": "+1 em testes de Corpo para defesa. +1 em testes de Espírito para inspirar aliados. Efeito de conjunto: com Elmo + Botas de Cavaleiro, o grupo todo ganha +1 em iniciativa no primeiro round se o cavaleiro liderar o grito de guerra.",
+  "obter": "Ferreiro da Guilda Militar (Aço Nobre x5, Liga x3, Couro Nobre x2. Dificuldade: 8.)"
+ },
+ {
+  "id": "armadura_guardia",
+  "nome": "Armadura Guardiã",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 1+",
+  "preco": 650,
+  "precoTxt": "650 Col",
+  "resumo": "Placas grossas nas costas e peito. Feita pra quem fica na linha de frente e não sai.",
+  "efeito": "+1 em testes de Corpo para receber golpe no lugar de aliado. Efeito único: uma vez por combate, você pode \"absorver\" um golpe que iria matar um aliado — ele cai em 0, você cai em 1 golpe de vida restante.",
+  "obter": "Ferreiro da Ordem dos Guardiões (Aço Grosso x4, Liga x2, Couro x3. Dificuldade: 8.)"
+ },
+ {
+  "id": "armadura_celestial",
+  "nome": "Armadura Celestial",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Espírito 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Aço prateado forjado com luz de estrela. Brilha no escuro como a lua cheia. Não reflete rosto de quem merece morrer.",
+  "efeito": "Luz Protetora — Todo aliado em 2 metros ao redor ganha +1 em testes de Espírito para resistir a medo ou possessão. Efeito único — Coração de Luz: uma vez por sessão, você pode concentrar por 1 rodada inteira (sem atacar, sem mover) e liberar uma onda de luz que dissipa 1 efeito sombrio/criatura sobrenatural pequena (fantasma, sombra, enxame de insetos sombrios).",
+  "obter": "Templo da Luz dos andares 30+; ou craft lendário (Aço Prateado x5, Estrela Cadente x1, Cristal Luz x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "armadura_lendaria_de_aincrad",
+  "nome": "Armadura Lendária de Aincrad",
+  "img": "",
+  "slot": "Armaduras",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/armaduras_novas.md",
+  "requisito": "Corpo 2+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Preta com detalhes em vermelho escuro. Não tem marca, não tem dono anterior, aparece só pra quem merece.",
+  "efeito": "Vontade Inquebrável — Quando você está em 1 golpe restante, sua armadura brilha. Você NÃO cai de 0, fica em 1 golpe por 2 rodadas. +1 em TODO teste durante essas 2 rodadas. Limite: só funciona uma vez por dia.",
+  "obter": "Forja Lendária nos andares 90+; ou recompensa final do 1º chefe de andar 100."
+ },
+ {
+  "id": "botas_simples",
+  "nome": "Botas Simples",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col",
+  "resumo": "Par de couro cru, solado grosso, cadarço de barata. Nada especial, não cai pé.",
+  "efeito": "Nenhum bônus numérico. Utilidade: sem botas, o mestre cobra pé machucado em qualquer caminhada fora da estrada — com elas, não cobra.",
+  "obter": "Loja de Calçados da Cidade do Início; crafting de Coureiro (Couro Simples x1, Cadarço x1. Ferramentas: Agulha, Linha. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_de_couro",
+  "nome": "Botas de Couro",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "—",
+  "preco": 80,
+  "precoTxt": "80 Col",
+  "resumo": "Couro curtido, solado reforçado com pregos pequenos. Dura semanas de estrada.",
+  "efeito": "Nenhum bônus. Utilidade: impede \"resbalar\" como complicação em falha de movimento em terreno úmido ou escorregadio.",
+  "obter": "Coureiro da Cidade do Início (Couro Curtido x2, Prego x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_do_viajante",
+  "nome": "Botas do Viajante",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "—",
+  "preco": 120,
+  "precoTxt": "120 Col",
+  "resumo": "Leve, acolchoada por dentro, cano médio pra barro não entrar. A favorita de comerciantes e mensageiros.",
+  "efeito": "Nenhum bônus. Utilidade: em jornada de 1 dia inteiro, quem usa sente cansaço 1 \"nível\" a menos (o mestre não cobra fadiga se não for forçado).",
+  "obter": "Comerciante da Estrada de Ombric (Couro Curtido x2, Espuma x1, Corda x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_do_cacador",
+  "nome": "Botas do Caçador",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Reflexo -1+",
+  "preco": 150,
+  "precoTxt": "150 Col",
+  "resumo": "Solado com desenho de serrilha para não deixar pegada clara. Cano curto pra agilidade em mato fechado.",
+  "efeito": "+1 em testes de Reflexo para caminhar em silêncio ou deixar de ser ouvido em floresta ou mato.",
+  "obter": "Loja de Horunka (Couro de Javali x2, Fio de Náilon x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_reforcadas",
+  "nome": "Botas Reforçadas",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "—",
+  "preco": 110,
+  "precoTxt": "110 Col",
+  "resumo": "Ponta e salto com proteção de metal, pra chutar pedra ou porta sem quebrar dedo.",
+  "efeito": "Nenhum bônus. Utilidade: permite chutar objetos duros (porta, caixa, pedra) sem dano no pé. Um chute em porta de madeira simples já abre na maioria das vezes.",
+  "obter": "Ferreiro (Couro Grosso x1, Placa de Metal x1, Pregos x2. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_de_ferro_leve",
+  "nome": "Botas de Ferro Leve",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Corpo -1+",
+  "preco": 180,
+  "precoTxt": "180 Col",
+  "resumo": "Placas finas de ferro cobrindo o peito do pé e a canela. Pesadas, seguras.",
+  "efeito": "+1 em testes de Corpo para bloquear golpe baixo (garra, rasteira, corte no tornozelo) em combate corpo a corpo.",
+  "obter": "Ferreiro de Tolbana (Couro Grosso x2, Lâmina Fina x2, Rebites x3. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_de_soldado",
+  "nome": "Botas de Soldado",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "—",
+  "preco": 160,
+  "precoTxt": "160 Col",
+  "resumo": "Modelo padrão da guarda da cidade. Marca do governo na lateral. Couro tratado contra chuva.",
+  "efeito": "Nenhum bônus. Utilidade: em cidade, NPCs de guarda param menos o usuário — ele parece \"um dos nossos\" à primeira vista.",
+  "obter": "Loja Militar da Cidade do Início (Couro Tratado x2, Solado Borracha x1, Fivela x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_escamadas",
+  "nome": "Botas Escamadas",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Corpo -1+",
+  "preco": 200,
+  "precoTxt": "200 Col",
+  "resumo": "Escamas pequenas de criatura marítima costuradas no couro. Brilham de um jeito esquisito quando molhadas.",
+  "efeito": "+1 em testes de Corpo para resistir a corte baixo ou veneno de picada no pé.",
+  "obter": "Costureiro especializado (Escama de Peixe x6, Couro Tratado x2. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_do_explorador",
+  "nome": "Botas do Explorador",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Reflexo -1+",
+  "preco": 170,
+  "precoTxt": "170 Col",
+  "resumo": "Solado com perfil profundo, cano alto, amarração forte. Feitas pra escalar e andar em pedras.",
+  "efeito": "+1 em testes de Reflexo para escalada ou caminhada em terreno acidentado.",
+  "obter": "Loja de Ferramentas de Grauvenn (Couro de Cabra x2, Solado Borracha x2, Corda x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_de_batalha",
+  "nome": "Botas de Batalha",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Corpo 0+",
+  "preco": 220,
+  "precoTxt": "220 Col",
+  "resumo": "Modelo pesado, cano alto, caneleira de metal integrada. O padrão de quem sabe que vai lutar.",
+  "efeito": "+1 em testes de Corpo para manter a pé sob investida ou empurrão forte.",
+  "obter": "Ferreiro militar (Couro Grosso x3, Placa Metal x2, Rebites x5. Dificuldade: 6-.)"
+ },
+ {
+  "id": "botas_de_aco",
+  "nome": "Botas de Aço",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Corpo 0+",
+  "preco": 480,
+  "precoTxt": "480 Col",
+  "resumo": "Aço leve temperado, articulado nos tornozelos. A proteção mais cara sem sacrificar mobilidade.",
+  "efeito": "+1 em testes de Corpo para resistir a golpe no pé ou perna. Efeito único: chute armado pode ser usado como \"arma improvisada\" de curto alcance em teste de Corpo, com dano equivalente a adaga.",
+  "obter": "Ferreiro mestre (Chapa de Aço x3, Couro Nobre x2, Rebites Liga x5. Ferramentas: Bigorna, Fornalha, Alicate. Dificuldade: 7.)"
+ },
+ {
+  "id": "botas_do_cavaleiro",
+  "nome": "Botas do Cavaleiro",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Corpo 0+",
+  "preco": 520,
+  "precoTxt": "520 Col",
+  "resumo": "Combinação de couro nobre, placa de aço e esporão de prata. O modelo das ordens de cavaleiros dos andares altos.",
+  "efeito": "+1 em testes de Espírito para intimidar criaturas que conheçam a insígnia. Efeito de conjunto: com Armadura de Cavaleiro + Elmo de Cavaleiro, ganha desvios \"inspirados\" — um 7-9 em Reflexo de defesa vira 10+ se o usuário narrar a armadura brilhando.",
+  "obter": "Ferreiro da guilda militar (Placa Aço x2, Couro Nobre x3, Fivela Prata x2. Dificuldade: 8.)"
+ },
+ {
+  "id": "botas_do_assassino",
+  "nome": "Botas do Assassino",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Reflexo 0+",
+  "preco": 460,
+  "precoTxt": "460 Col",
+  "resumo": "Couro preto, solado de feltro grosso, sem nenhuma peça de metal que faça barulho. Quem veste parece não ter pés.",
+  "efeito": "+1 em testes de Reflexo para furtividade de TUDO — não só floresta: cidade, telhado, interior de prédio. Efeito único: andar em cima de telhado ou chão de madeira velha sem range.",
+  "obter": "Mercado Negro (Couro Preto x2, Feltro x2, Linha Invisível x1. Dificuldade: 8.)"
+ },
+ {
+  "id": "botas_vento_celestial",
+  "nome": "Botas Vento Celestial",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Reflexo 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Penas de pássaro lendário costuradas em couro encantado. Pesam menos do que deveriam. Dizem que o dono quase voa.",
+  "efeito": "+2 em testes de Reflexo para movimento (exceção ao teto). Efeito único — Passo Vendaval: uma vez por sessão, o usuário pode cobrir distância \"impossível\" numa jogada: atravessar sala inteira sem levar golpe, alcançar alguém que já caiu do penhasco, pegar item que voou pro ar. Limite: o movimento é em linha reta e não para mudar de direção.",
+  "obter": "Craft de Coureiro nível 5 (Pena Dourada x3, Couro Encantado x2, Fio de Seda x1. Ferramentas: Agulha de Prata, Linha Lendária. Dificuldade: 10+.)"
+ },
+ {
+  "id": "botas_lendarias_aincrad",
+  "nome": "Botas Lendárias Aincrad",
+  "img": "",
+  "slot": "Botas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/botas.md",
+  "requisito": "Reflexo 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Par negro-azulado, com detalhes em metal escuro. A marca do Arrependido, o primeiro jogador que completou o andar 100.",
+  "efeito": "+1 em testes de Reflexo para desvio em combate. Efeito único — Caminho Impossível: uma vez por sessão, o usuário pode \"andar sobre ar\" por 3 segundos — atravessar um abismo, evitar uma armadilha de chão, ficar de pé onde não tem apoio. Aviso: acaba rápido, tem que saber exatamente onde pousar.",
+  "obter": "Drop 0.1% de chefe de andar 100; ou receita secreta em puzzle dos andares altos (ainda não documentado)."
+ },
+ {
   "id": "capuz_de_la_puida",
   "nome": "Capuz de Lã Puída",
   "img": "imagens/equip_capuz_de_la_puida.png",
@@ -7193,6 +8217,771 @@ var EQUIPAMENTOS = [
   "resumo": "Capuz de tecido cinza-fumaça, sem costura visível, com uma faixa interna onde alguém bordou um nome e depois desfez o bordado ponto a ponto. Os furos ficaram.",
   "efeito": "+1 em testes de Espírito para manter a calma sob qualquer pressão (medo, ilusão, sussurro, luto, pânico de raid).",
   "obter": "concluir a cadeia F (Memorial de Voss) inteira, incluindo descobrir de quem era a lápide sem nome. O Zelador entrega e não aceita nada em troca."
+ },
+ {
+  "id": "carne_assada_de_monstro",
+  "nome": "Carne Assada de Monstro",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 30,
+  "precoTxt": "30 Col",
+  "resumo": "Carne de monstro comum temperada com sal grosso e grelhada na brasa. O cheiro atrai criaturas famintas em áreas abertas.",
+  "efeito": "+1 em testes de Corpo para aguentar cansaço ou fome durante a cena. Recupera 1 \"fôlego narrativo\" se o grupo tiver descansado menos do que devia.",
+  "obter": "Craft de Cozinheiro (Carne Crua x2, Sal x1. Ferramentas: Panela de Ferro, Faca de Cozinha. Dificuldade: 6-.)"
+ },
+ {
+  "id": "pao_do_aventureiro",
+  "nome": "Pão do Aventureiro",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 20,
+  "precoTxt": "20 Col",
+  "resumo": "Pão denso e duro, assado pra durar semanas na mochila. Molha bem em ensopado, machuca se jogar em alguém.",
+  "efeito": "Nenhum bônus numérico. Utilidade: é o único alimento que não estraga em 3 dias de jornada — comidas mais frescas apodrecem e o mestre cobra isso.",
+  "obter": "Craft de Cozinheiro (Farinha x3, Água x1, Sal x1. Ferramentas: Forno, Amassador. Dificuldade: 6-.); ou padaria da Cidade do Início."
+ },
+ {
+  "id": "ensopado_de_legumes",
+  "nome": "Ensopado de Legumes",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 45,
+  "precoTxt": "45 Col",
+  "resumo": "Legumes colhidos na região, cozidos lentamente numa panela de barro. O vapor é tão bom quanto o gosto.",
+  "efeito": "+1 em testes de Espírito para acalmar ânimo ou manter moral alta numa cena onde o grupo está abatido.",
+  "obter": "Craft de Cozinheiro (Legumes x3, Ervas x1, Água x1. Ferramentas: Panela de Barro, Fogo. Dificuldade: 6-.)"
+ },
+ {
+  "id": "salsicha_de_caca",
+  "nome": "Salsicha de Caça",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 55,
+  "precoTxt": "55 Col",
+  "resumo": "Tubo de carne moída temperada, defumada sobre a brasa. Dura dias sem estragar.",
+  "efeito": "+1 em testes de Reflexo para viagem rápida ou corrida na cena seguinte. Quem come sente energia extra imediata.",
+  "obter": "Craft de Cozinheiro (Carne Moída x2, Tripa x1, Temperos x1. Ferramentas: Faca, Corda de Defumação. Dificuldade: 6-.)"
+ },
+ {
+  "id": "ovos_mexidos_com_ervas",
+  "nome": "Ovos Mexidos com Ervas",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 35,
+  "precoTxt": "35 Col",
+  "resumo": "Ovos de aves de campo, mexidos com ervas frescas colhidas na hora. O café da manhã clássico do aventureiro.",
+  "efeito": "+1 em testes de Conhecimento para lembrar detalhes ou notar padrão durante exploração após a refeição.",
+  "obter": "Craft de Cozinheiro (Ovos x3, Ervas x1, Manteiga x1. Ferramentas: Frigideira. Dificuldade: 6-.)"
+ },
+ {
+  "id": "torrada_com_mel",
+  "nome": "Torrada com Mel",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 25,
+  "precoTxt": "25 Col",
+  "resumo": "Fatia de pão tostada, coberta com mel das abelhas gigantes da floresta. Doce e pegajoso.",
+  "efeito": "+1 em testes de Espírito para resistir a medo ou pânico na cena seguinte. O doce acalma antes do susto.",
+  "obter": "Craft de Cozinheiro (Pão x1, Mel x1. Ferramentas: Fogo, Prato. Dificuldade: 6-.)"
+ },
+ {
+  "id": "frutas_assadas",
+  "nome": "Frutas Assadas",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 30,
+  "precoTxt": "30 Col",
+  "resumo": "Frutas da estação assadas em brasa leve, polvilhadas com canela. Fica quente por muito tempo embrulhada em folha.",
+  "efeito": "Nenhum bônus numérico. Utilidade: quem segura uma fruta assada na mão ganha 1 \"conforto narrativo\" — numa cena de frio extremo, isso conta como estar preparado.",
+  "obter": "Craft de Cozinheiro (Frutas x3, Canela x1. Ferramentas: Brasa, Folha. Dificuldade: 6-.)"
+ },
+ {
+  "id": "bolacha_de_viagem",
+  "nome": "Bolacha de Viagem",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 15,
+  "precoTxt": "15 Col (lote de 6)",
+  "resumo": "Bolacha dura, seca, quase sem gosto. Inventada por comerciantes pra durar travessias longas.",
+  "efeito": "Nenhum bônus. Utilidade: 1 bolacha = 1 refeição mínima — não enche, mas impede complicação de fome. É o racionamento de emergência.",
+  "obter": "Craft de Cozinheiro (Farinha x5, Água x1, Sal x1. Ferramentas: Forno, Rolo. Dificuldade: 6-. Produz: 6 por lote.)"
+ },
+ {
+  "id": "bife_do_guerreiro",
+  "nome": "Bife do Guerreiro",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 180,
+  "precoTxt": "180 Col",
+  "resumo": "Corte grosso de carne de monstro forte, selado na panela quente e servido malpassado. Quem come quer brigar.",
+  "efeito": "+1 em testes de Corpo para causar dano físico em combate durante a cena inteira. Efeito colateral: o usuário fica impaciente — numa falha de negociação ou furtividade, o mestre pode cobrar que ele ataque primeiro sem pensar.",
+  "obter": "Craft de Cozinheiro (Bife Nobre x2, Manteiga x1, Temperos x2. Ferramentas: Panela de Ferro Pesada, Faca Chefe. Dificuldade: 7.)"
+ },
+ {
+  "id": "sopa_de_ervas_curativas",
+  "nome": "Sopa de Ervas Curativas",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 220,
+  "precoTxt": "220 Col",
+  "resumo": "Infusão lenta de 3 tipos de erva medicinal, coada três vezes. Quente, amarga, eficaz.",
+  "efeito": "+1 em testes de Espírito para testes de resistência a veneno ou doença na cena. Se o usuário já estiver envenenado, reduz um grau o efeito no mesmo momento em que bebe.",
+  "obter": "Craft de Cozinheiro (Ervas Medicinais x3, Água x2, Mel x1. Ferramentas: Caldeirão, Coador. Dificuldade: 7.)"
+ },
+ {
+  "id": "racao_de_elite",
+  "nome": "Ração de Elite",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 200,
+  "precoTxt": "200 Col",
+  "resumo": "Pacote de 3 refeições balanceadas, embaladas individualmente e pensadas para grupos de raid. O padrão da guilda.",
+  "efeito": "+1 em testes de Reflexo para iniciativa no primeiro round de combate se quem comeu abriu a refeição 5 minutos antes da luta. Funciona em todo o grupo que comer a mesma ração juntos.",
+  "obter": "Craft de Cozinheiro (Carne Seca x2, Frutas Secas x2, Pão Duro x2. Ferramentas: Embalagem de Tecido, Balança. Dificuldade: 8. Produz: 3 porções.)"
+ },
+ {
+  "id": "creme_de_cogumelos_da_floresta",
+  "nome": "Creme de Cogumelos da Floresta",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 240,
+  "precoTxt": "240 Col",
+  "resumo": "Creme espesso feito com 4 tipos de cogumelo, colhidos no lugar certo na hora certa. Errado envenena, certo dá foco.",
+  "efeito": "+1 em testes de Conhecimento para identificar criatura, armadilha ou mecanismo na cena seguinte.",
+  "obter": "Craft de Cozinheiro (Cogumelos Variados x4, Creme x1, Ervas x1. Ferramentas: Caldeirão, Colher Pau. Dificuldade: 8.)"
+ },
+ {
+  "id": "peixe_assado_com_molho_de_ervas",
+  "nome": "Peixe Assado com Molho de Ervas",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "—",
+  "preco": 190,
+  "precoTxt": "190 Col",
+  "resumo": "Peixe fresco de rio ou lago, assado inteiro com ervas e limão. Sabor delicado, sensação de leveza.",
+  "efeito": "+1 em testes de Reflexo para movimento ou desvio em espaço aberto durante a cena.",
+  "obter": "Craft de Cozinheiro (Peixe Fresco x2, Limão x1, Ervas x2. Ferramentas: Grelha, Faca Filé. Dificuldade: 7.)"
+ },
+ {
+  "id": "banquete_dos_herois",
+  "nome": "Banquete dos Heróis",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "Cozinheiro nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Refeição de 7 pratos, preparada com ingredientes raros de 5 andares diferentes. Servida em mesa grande, para todo o grupo de uma vez.",
+  "efeito": "TODO o grupo ganha +1 em TODOS os testes da próxima cena. Efeito único — Brinde dos Heróis: um personagem à mesa pode, uma vez na cena seguinte, transformar um 6- em 7-9 narrando por quê aquele prato lembrou sua motivação. Limite: um banquete por sessão, e todo mundo do grupo tem que comer junto.",
+  "obter": "Craft de Cozinheiro nível 5 (Carne de Chefe x2, Peixe Lendário x1, Legumes Raros x3, Ervas Únicas x2, Especiarias Antigas x1. Ferramentas: Cozinha Completa da Cidade, Conjunto Chefe de Mestre. Dificuldade: 10+.)"
+ },
+ {
+  "id": "nectar_de_aincrad",
+  "nome": "Néctar de Aincrad",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "Cozinheiro nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Bebida dourada, espessa, feita com mel de abelha do andar alto + néctar de flor rara + gotas de água sagrada. Brilha levemente no copo.",
+  "efeito": "+2 em testes de Espírito para a cena toda (ignora teto de +1, é uma exceção escrita). Efeito único — Sopro do Norte: beber antes de um combate faz com que o primeiro golpe recebido cause 1 \"golpe a menos\" do que deveria.",
+  "obter": "Craft de Cozinheiro nível 5 (Mel Dourado x1, Néctar de Flor x1, Água Sagrada x1. Ferramentas: Caldeirão de Prata. Dificuldade: 10+.)"
+ },
+ {
+  "id": "guloseimas_do_chef",
+  "nome": "Guloseimas do Chef",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "Cozinheiro nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Bandeja de pequenos doces, salgados e petiscos elaborados, cada um decorado diferente. Parece arte mais que comida.",
+  "efeito": "+1 em testes de Conhecimento para interação social na cena seguinte. Efeito único — Palavra Gentil: oferecer uma guloseima a um NPC hostil antes de falar faz o mestre abrir uma janela de diálogo que não existiria (sem teste), mesmo se o NPC devia atacar.",
+  "obter": "Craft de Cozinheiro nível 5 (Farinha Nobre x2, Mel Dourado x1, Frutas Cristalizadas x3, Chocolate x2. Ferramentas: Confeiteiro Profissional, Moldes. Dificuldade: 10+.)"
+ },
+ {
+  "id": "estrogonofe_do_mestre",
+  "nome": "Estrogonofe do Mestre",
+  "img": "",
+  "slot": "Comidas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/comidas_cozinheiro.md",
+  "requisito": "Cozinheiro nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Receita secreta passada só de mestre pra aprendiz. Carne desfiada lentamente, molho cremoso, tempero que lembra casa.",
+  "efeito": "+1 em testes de Corpo para aguentar dor na cena seguinte. Efeito único — Memória de Casa: se um personagem estiver em condição \"Ferido Grave\", comer uma porção imediatamente estabiliza (não cura, mas impede piorar) sem teste de primeiro socorro.",
+  "obter": "Craft de Cozinheiro nível 5 (Carne Desfiada x3, Creme de Leite x2, Cogumelos Nobres x2, Especiarias x2. Ferramentas: Panela Grande de Barro, Fogo Lento. Dificuldade: 10+.)"
+ },
+ {
+  "id": "cristal_de_cura",
+  "nome": "Cristal de Cura",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 60,
+  "precoTxt": "60 Col (unidade)",
+  "resumo": "Cristal verde claro. Esfarela na mão e libera energia de cura.",
+  "efeito": "Recupera 2 \"golpes\" de vida de quem aperta na mão.",
+  "obter": "Craft de Cristalista (Cristal Verde x1, Erva Medicinal x1. Ferramentas: Amolador, Energia Suave. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_purificacao",
+  "nome": "Cristal de Purificação",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 70,
+  "precoTxt": "70 Col",
+  "resumo": "Cristal azul esbranquiçado. Limpa veneno, maldição leve, doença comum.",
+  "efeito": "Usa no corpo ou em líquido. Remove 1 efeito de veneno/doença leve; purifica 1 litro de água suja.",
+  "obter": "Craft de Cristalista + Alquimista (Cristal Azul x1, Água Benta x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_luz",
+  "nome": "Cristal de Luz",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col",
+  "resumo": "Cristal branco. Esfrega com os dedos, acende uma luz suave de lanterna.",
+  "efeito": "Dura 1 hora. Luz fraca, mas ilumina 3 metros ao redor. Não acende fogo.",
+  "obter": "Craft de Cristalista (Cristal Quartzo x1, Luz Solar x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_mensagem",
+  "nome": "Cristal de Mensagem",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 100,
+  "precoTxt": "100 Col (par)",
+  "resumo": "Par de cristais idênticos, sincronizados. Fala em um, sai som no outro.",
+  "efeito": "Comunicação de voz entre dois cristais sincronizados, distância máxima de 500 metros. Dura 3 mensagens de 1 minuto cada por par.",
+  "obter": "Craft de Cristalista (2 Cristais Gêmeos x1, Energia Sincronizada x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_visao",
+  "nome": "Cristal de Visão",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Conhecimento -1+",
+  "preco": 80,
+  "precoTxt": "80 Col",
+  "resumo": "Cristal transparente. Olha através dele e enxerga no escuro por pouco tempo.",
+  "efeito": "Visão noturna por 5 minutos. Enxerga 10m no escuro total (não mágico).",
+  "obter": "Craft de Cristalista (Cristal Transparente x1, Tinta Noturna x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_respiracao_aquatica",
+  "nome": "Cristal de Respiração Aquática",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 110,
+  "precoTxt": "110 Col",
+  "resumo": "Cristal azul-água. Coloca na boca, pode respirar debaixo d'água.",
+  "efeito": "Respira debaixo d'água por 10 minutos. Não permite nadar mais rápido.",
+  "obter": "Craft de Cristalista (Cristal Azul Marinho x1, Brânquia de Peixe x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_calor",
+  "nome": "Cristal de Calor",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 50,
+  "precoTxt": "50 Col",
+  "resumo": "Cristal laranja. Aperta, esquenta. Bom pra noites de frio ou descongelar.",
+  "efeito": "Dura 30 minutos. Esquenta o suficiente pra não sofrer com frio extremo leve. Também derrama 1 litro de água congelada.",
+  "obter": "Craft de Cristalista (Cristal Laranja x1, Carvão x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_agua_fresca",
+  "nome": "Cristal de Água Fresca",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col",
+  "resumo": "Cristal azul pálido. Mergulha em poça de água suja, ela fica bebível.",
+  "efeito": "Purifica um recipiente de até 2 litros de água. Não remove produtos químicos fortes.",
+  "obter": "Craft de Cristalista (Cristal Azul Claro x1, Filtro Carvão x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_armazenamento",
+  "nome": "Cristal de Armazenamento",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Técnica -1+",
+  "preco": 120,
+  "precoTxt": "120 Col",
+  "resumo": "Cristal grande, plano como prato. Coloca objeto em cima some, some do mundo físico.",
+  "efeito": "Armazena 1 objeto de tamanho \"pequeno\" (até tamanho de espada) dentro. Capacidade: 1 item por cristal. Extrai o item a qualquer momento.",
+  "obter": "Craft de Cristalista (Cristal Plano x1, Energia Espaço x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_retorno",
+  "nome": "Cristal de Retorno",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 150,
+  "precoTxt": "150 Col",
+  "resumo": "Cristal roxo claro. Esfrega, teleporta de volta pro ponto de salvamento (última cidade visitada).",
+  "efeito": "Teleporta o usuário + 1 item grande (se carregando). Aviso: não teleporta grupo. Grupo todo precisa do seu cristal.",
+  "obter": "Craft de Cristalista (Cristal Roxo x1, Marcador Ponto x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_teleporte",
+  "nome": "Cristal de Teleporte",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "—",
+  "preco": 300,
+  "precoTxt": "300 Col",
+  "resumo": "Cristal roxo escuro. Pode ir a qualquer lugar que o usuário já visitou e marcou antes.",
+  "efeito": "Teleporta pro lugar marcado (precisa marcar com antecedência gastando um outro cristal). Distância: dentro do mesmo andar.",
+  "obter": "Craft de Cristalista nível 3 (Cristal Roxo Escuro x1, Marcador Lugar x1. Dificuldade: 7.)"
+ },
+ {
+  "id": "cristal_de_teleporte_de_grupo",
+  "nome": "Cristal de Teleporte de Grupo",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Conhecimento 0+",
+  "preco": 800,
+  "precoTxt": "800 Col",
+  "resumo": "Cristal gigante roxo. 5 ranhuras em volta, encaixa dedo de 5 pessoas.",
+  "efeito": "Teleporta grupo de até 5 pessoas para um ponto marcado dentro do mesmo andar. Aviso: todo mundo tem que estar junto e tocar no cristal ao mesmo tempo.",
+  "obter": "Craft de Cristalista nível 3 (Cristal Gigante Roxo x1, 5 Pequenos Cristais x1 cada. Dificuldade: 8.)"
+ },
+ {
+  "id": "cristal_de_deteccao",
+  "nome": "Cristal de Detecção",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Conhecimento 0+",
+  "preco": 350,
+  "precoTxt": "350 Col",
+  "resumo": "Cristal branco leitoso. Flutua a 1 palmo da palma, aponta pro tipo de coisa que procura.",
+  "efeito": "Especifica antes: \"tesouro\", \"criatura\", \"armadilha\", \"cristal\". 1 minuto de uso, aponta direção até 20 metros. Não diz distância exata.",
+  "obter": "Craft de Cristalista nível 3 (Cristal Leitoso x1, Amostra Alvo x1. Dificuldade: 7.)"
+ },
+ {
+  "id": "cristal_de_barreira",
+  "nome": "Cristal de Barreira",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Espírito 0+",
+  "preco": 400,
+  "precoTxt": "400 Col",
+  "resumo": "Cristal ciano. Bate no chão, cria barreira de luz dura como parede.",
+  "efeito": "Parede de 2x2 metros, dura 1 minuto. Aguenta até 5 \"golpes\" de dano total. Impede passagem e projéteis.",
+  "obter": "Craft de Cristalista nível 3 (Cristal Ciano x2, Energia Estrutura x1. Dificuldade: 8.)"
+ },
+ {
+  "id": "cristal_de_camuflagem",
+  "nome": "Cristal de Camuflagem",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Reflexo 0+",
+  "preco": 380,
+  "precoTxt": "380 Col",
+  "resumo": "Cristal cinza-esverdeado. Segura na mão, você e suas roupas ficam da cor do ambiente.",
+  "efeito": "Camuflagem perfeita parado. Andando devagar, ninguém nota a mais de 5 metros. Correndo quebra. Dura 3 minutos.",
+  "obter": "Craft de Cristalista nível 3 (Cristal Camaleão x1, Pigmentos x5. Dificuldade: 8.)"
+ },
+ {
+  "id": "cristal_ressurreicao",
+  "nome": "Cristal Ressurreição",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Alquimista nível 5 + Cristalista nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Cristal dourado, brilhante. Última esperança de quem caiu.",
+  "efeito": "Última Esperança — Pode ser usado de 2 formas: (1) Esfrega em aliado morto a menos de 1 minuto, ele volta com 1 golpe de vida. (2) Você morre, o cristal auto-ativa se estiver no bolso, mas só funciona 1 vez na vida do usuário.",
+  "obter": "Craft duplo de Alquimista + Cristalista nível 5 (Cristal Dourado x1, Cinzas Fênix x1, Essência Vida x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "cristal_do_administrador",
+  "nome": "Cristal do Administrador",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Conhecimento 2+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Cristal vermelho-escuro com linhas de código aparecendo e sumindo. Parece uma tela do sistema.",
+  "efeito": "Controle do Sistema — Uma vez por sessão, pode \"alterar 1 detalhe pequeno\" da cena: destrancar 1 porta, acender 1 luz, desativar 1 armadilha de sistema, apagar 1 objeto do chão. Limite: NÃO pode matar, criar vida, curar, mudar atributo.",
+  "obter": "Drop único do Chefe Final do andar 90; ou craft impossível (Código Fonte x1, Cristal Kernel x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "cristal_da_alma",
+  "nome": "Cristal da Alma",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Espírito 2+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Cristal branco-rosado, quente como pele. Pulsando como coração.",
+  "efeito": "Espírito Inquebrável — Enquanto estiver na mochila, uma vez por sessão, o usuário pode ignorar 1 efeito de medo, paralisia, possessão, dreno de espírito. Ativa sozinho. Efeito extra: pode falar 1 vez com espírito de alguém morto a menos de 1 dia, 1 pergunta e 1 resposta.",
+  "obter": "Craft de Cristalista nível 5 (Cristal de Coração x1, Alma Gentil x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "cristal_do_heroi_de_aincrad",
+  "nome": "Cristal do Herói de Aincrad",
+  "img": "",
+  "slot": "Cristais de Uso",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/cristais_uso.md",
+  "requisito": "Nível 10+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Cristal arco-íris, com todos os tons da torre de Aincrad. O cristal da recompensa final.",
+  "efeito": "Legado do Jogador — +3 em TESTE ÚNICO. Uma vez por sessão, você escolhe 1 dado que acabou de rolar e declara \"Herói de Aincrad\". O resultado é 12 automaticamente, não importa o que rolou. Limite: 1 por sessão.",
+  "obter": "Concedido pelo sistema a quem completa a campanha."
+ },
+ {
+  "id": "elmo_simples",
+  "nome": "Elmo Simples",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "—",
+  "preco": 50,
+  "precoTxt": "50 Col",
+  "resumo": "Capacete de ferro batido, sem detalhe, cinto de couro pra ajustar. Cobre topo e lateral.",
+  "efeito": "Nenhum bônus. Utilidade: sem proteção na cabeça, uma falha crítica (duplo 1) em combate pode cobrar atordoamento curto. Com este elmo, não cobra.",
+  "obter": "Loja Militar da Cidade do Início; Ferreiro (Chapa Ferro x1, Couro x1. Ferramentas: Bigorna. Dificuldade: 6-.)"
+ },
+ {
+  "id": "capuz_de_couro",
+  "nome": "Capuz de Couro",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col",
+  "resumo": "Capuz de couro macio, proteção leve, aba pra proteger do sol. Misto com o slot Capuz.",
+  "efeito": "+1 em testes de Reflexo para não ser visto de longe em campo aberto.",
+  "obter": "Costureiro (Couro Simples x1, Corda x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_de_bronze",
+  "nome": "Elmo de Bronze",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "—",
+  "preco": 120,
+  "precoTxt": "120 Col",
+  "resumo": "Ligas antigas de bronze, forjadas no modelo de gladiador. Crista de cavalo em algumas cores.",
+  "efeito": "+1 em testes de Corpo para resistir a golpe de corte leve na cabeça.",
+  "obter": "Ferreiro (Placa Bronze x2, Couro x1, Rebites x3. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_de_soldado",
+  "nome": "Elmo de Soldado",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Corpo -1+",
+  "preco": 160,
+  "precoTxt": "160 Col",
+  "resumo": "Modelo padrão da guarda, forjado em ferro, viseira móvel de malha fina.",
+  "efeito": "+1 em testes de Corpo para resistir a estilhaço, flecha leve ou pedra na cabeça.",
+  "obter": "Forja da Guarda (Ferro Fundido x2, Malha x1, Couro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_do_cacador",
+  "nome": "Elmo do Caçador",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Reflexo -1+",
+  "preco": 140,
+  "precoTxt": "140 Col",
+  "resumo": "Couro reforçado com placas finas, viseira pequena, orelhas de fora pra ouvir.",
+  "efeito": "+1 em testes de Reflexo para ouvir passos ou detectar presença em floresta.",
+  "obter": "Loja de Horunka (Couro Grosso x2, Chapa Fina x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_reforcado",
+  "nome": "Elmo Reforçado",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "—",
+  "preco": 180,
+  "precoTxt": "180 Col",
+  "resumo": "Topo reforçado com barra de aço cruzada, para impacto de cima.",
+  "efeito": "+1 em testes de Corpo para resistir a desabamento, pedra que cai ou golpe de cima para baixo.",
+  "obter": "Ferreiro (Chapa Aço x2, Tira Aço x3, Couro x2. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_do_guarda",
+  "nome": "Elmo do Guarda",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Corpo -1+",
+  "preco": 200,
+  "precoTxt": "200 Col",
+  "resumo": "Modelo com viseira de rosto inteiro, emblema da cidade gravado. Pesa, mas protege tudo.",
+  "efeito": "+1 em testes de Corpo para resistir a golpe de adaga ou estilete no rosto.",
+  "obter": "Ferreiro da Guarda (Ferro Batido x3, Malha x2, Couro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_escamado",
+  "nome": "Elmo Escamado",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "—",
+  "preco": 170,
+  "precoTxt": "170 Col",
+  "resumo": "Malha fina + escamas de criatura marinha. Flexível, protege bem de picada.",
+  "efeito": "+1 em testes de Corpo para resistir a veneno de aranha ou picada na face/pescoço.",
+  "obter": "Costureiro especializado (Escamas x6, Malha Leve x1, Couro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_mercenario",
+  "nome": "Elmo Mercenário",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Corpo -1+",
+  "preco": 210,
+  "precoTxt": "210 Col",
+  "resumo": "Sem insígnia, tinta preta fosca, viseira entalhada pra olhar de cima pra baixo.",
+  "efeito": "Nenhum bônus numérico. Efeito social: em briga de rua ou encontro com mercenários, o usuário é tratado como \"profissional\" — não é provocado à toa.",
+  "obter": "Mercado Negro (Chapa Aço Usada x2, Pintura x1, Couro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_de_batalha",
+  "nome": "Elmo de Batalha",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Corpo 0+",
+  "preco": 240,
+  "precoTxt": "240 Col",
+  "resumo": "Modelo pesado, viseira de fenda estreita, proteção de nuca integrada.",
+  "efeito": "+1 em testes de Corpo para resistir a golpe forte na cabeça.",
+  "obter": "Ferreiro Militar (Chapa Aço x3, Malha x2, Couro Nobre x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "elmo_de_aco",
+  "nome": "Elmo de Aço",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Corpo 0+",
+  "preco": 490,
+  "precoTxt": "490 Col",
+  "resumo": "Aço temperado, articulação de viseira precisa, acolchoado interno de espuma de criatura.",
+  "efeito": "+1 em testes de Corpo para resistir a ESTILHAÇO ou PROJÉTIL na cabeça. Efeito único: estilhaço de bomba ou flecha de chefe que seria crítico vira só dano normal.",
+  "obter": "Ferreiro mestre (Chapa Aço x4, Espuma x2, Tira Liga x3. Ferramentas: Fornalha, Bigorna. Dificuldade: 7.)"
+ },
+ {
+  "id": "elmo_do_cavaleiro",
+  "nome": "Elmo do Cavaleiro",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Corpo 0+",
+  "preco": 550,
+  "precoTxt": "550 Col",
+  "resumo": "Elegante, viseira móvel, insígnia de ordem gravada na crista. O status em aço.",
+  "efeito": "+1 em testes de Espírito para dar ordem inspiradora ou comando de grupo. Efeito de conjunto: com Armadura de Cavaleiro + Botas de Cavaleiro, o grupo ganha +1 no primeiro round de iniciativa (se o cavaleiro liderar).",
+  "obter": "Ferreiro da Guilda Militar (Aço Nobre x3, Liga x2, Couro Nobre x2. Dificuldade: 8.)"
+ },
+ {
+  "id": "elmo_guardiao",
+  "nome": "Elmo Guardião",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Corpo 0+",
+  "preco": 520,
+  "precoTxt": "520 Col",
+  "resumo": "Aletas de proteção lateral e traseira integradas, viseira ampla pra visão de 180 graus. Projetado pra quem protege grupo.",
+  "efeito": "+1 em testes de Corpo para bloquear golpe que ia em ALIADO quando o usuário se coloca na frente.",
+  "obter": "Ferreiro da ordem de guardiões (Chapa Aço x4, Couro Nobre x2, Articulações Liga x3. Dificuldade: 8.)"
+ },
+ {
+  "id": "elmo_dragao_ancestral",
+  "nome": "Elmo Dragão Ancestral",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Espírito 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Escamas de dragão verdadeiro, incrustadas sobre estrutura de aço lendário. O elmo parece \"ver\" antes do dono.",
+  "efeito": "+2 em testes de Espírito para detectar intenção hostil à distância (exceção ao teto). Efeito único — Instinto Dracônico: uma vez por sessão, antes de rolar iniciativa, o usuário \"sente\" um perigo que o grupo não tinha percebido — o mestre revela uma armadilha escondida, um emboscador ou a fraqueza do chefe do combate. Aviso: a sensação vem sem explicação.",
+  "obter": "Drop de dragão dos andares 40+; ou receita secreta (Escama de Dragão x5, Aço Lendário x2, Cristal Poder x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "elmo_lendario_aincrad",
+  "nome": "Elmo Lendário Aincrad",
+  "img": "",
+  "slot": "Elmos",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/elmos.md",
+  "requisito": "Conhecimento 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Preto com detalhes de ouro. Lente fina sobre os olhos que ampliam a visão. Tem a inscrição: \"O que está escrito é verdade\".",
+  "efeito": "+1 em testes de Conhecimento para identificar fraqueza de criatura. Efeito único — Visão Herói: uma vez por sessão, olhar fixamente para um monstro por 3 segundos sem ser atacado revela sua abertura exata (quando e onde atacar) pro grupo inteiro, sem teste. Preço: enquanto olha, o usuário não pode se mover ou defender.",
+  "obter": "Enigma final do andar 75; ou forja lendária (Aço Negro x3, Cristal da Visão x2, Ouro Lendário x1. Dificuldade: 10+.)"
  },
  {
   "id": "broquel_de_tabua",
@@ -7448,6 +9237,531 @@ var EQUIPAMENTOS = [
   "resumo": "Luvas de placas retiradas de uma Sentinela Esquecida do Campo de Ruyn. As juntas ainda se movem sozinhas por meio segundo depois que a mão para. Todo mundo repara.",
   "efeito": "+1 em testes de Corpo ou Técnica para qualquer coisa feita com as mãos sob pressão — agarrar, aparar, forçar, escalar, segurar.",
   "obter": "derrotar a Sentinela Esquecida (forte, 6 golpes) e levar as manoplas a um Ferreiro. Duas placas sempre faltam — o Ferreiro cobra Fragmento de Armadura Kobold x2 pra completar."
+ },
+ {
+  "id": "luvas_simples",
+  "nome": "Luvas Simples",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "—",
+  "preco": 30,
+  "precoTxt": "30 Col",
+  "resumo": "Tecido de algodão, sem dedo. Pra quem não quer chamar atenção.",
+  "efeito": "Nenhum bônus. Utilidade: impede mão machucar em caminhada com mochila pesada.",
+  "obter": "Costureiro (Tecido x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_de_couro",
+  "nome": "Luvas de Couro",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "—",
+  "preco": 60,
+  "precoTxt": "60 Col",
+  "resumo": "Couro fino, dedos completos. Ajusta bem na mão.",
+  "efeito": "Nenhum bônus. Utilidade: segura lâmina com a mão sem cortar MUITO (ainda corta, mas não prostra).",
+  "obter": "Coureiro (Couro Fino x1, Linha x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_do_trabalhador",
+  "nome": "Luvas do Trabalhador",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Técnica -1+",
+  "preco": 80,
+  "precoTxt": "80 Col",
+  "resumo": "Palma grossa, dedos reforçados, anti-deslizante. Para quem trabalha com ferramenta.",
+  "efeito": "+1 em testes de Técnica para forjar, costurar, construir ou reparar usando ferramenta.",
+  "obter": "Coureiro (Couro Grosso x1, Palma Borracha x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_do_cacador",
+  "nome": "Luvas do Caçador",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Reflexo -1+",
+  "preco": 100,
+  "precoTxt": "100 Col",
+  "resumo": "Palma fina pra sentir corda, dedos livres na ponta pra mexer miúdo.",
+  "efeito": "+1 em testes de Reflexo ou Técnica para extrair material ou preparar armadilha.",
+  "obter": "Loja de Horunka (Couro Fino x1, Corda x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_reforcadas",
+  "nome": "Luvas Reforçadas",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Corpo -1+",
+  "preco": 110,
+  "precoTxt": "110 Col",
+  "resumo": "Dedos, palma e dorso com placa fina de metal. Pra socar sem quebrar mão.",
+  "efeito": "+1 em testes de Corpo para socar ou agarrar coisa afiada.",
+  "obter": "Ferreiro + Coureiro (Couro x1, Placa Metal x5. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_de_ferro_leve",
+  "nome": "Luvas de Ferro Leve",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Corpo -1+",
+  "preco": 140,
+  "precoTxt": "140 Col",
+  "resumo": "Placas leves cobrindo toda a mão. Dedo ainda mexe.",
+  "efeito": "+1 em testes de Corpo para bloquear golpe de adaga ou faca com a mão.",
+  "obter": "Ferreiro (Placa Fina x3, Couro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_de_soldado",
+  "nome": "Luvas de Soldado",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "—",
+  "preco": 130,
+  "precoTxt": "130 Col",
+  "resumo": "Couro tratado, proteção leve em nós dos dedos. Padrão da guarda.",
+  "efeito": "+1 em testes de Corpo para agarrar braço de inimigo ou desarmar.",
+  "obter": "Ferreiro Militar (Couro Tratado x1, Nós Dedo x5. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_escamadas",
+  "nome": "Luvas Escamadas",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Corpo -1+",
+  "preco": 160,
+  "precoTxt": "160 Col",
+  "resumo": "Escamas pequenas sobre couro. Parece pele de réptil.",
+  "efeito": "+1 em testes de Corpo para resistir a queimadura leve ou corte de navalha.",
+  "obter": "Costureiro especializado (Escamas x15, Couro Fino x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_do_ladrao",
+  "nome": "Luvas do Ladrão",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Reflexo 0+",
+  "preco": 180,
+  "precoTxt": "180 Col",
+  "resumo": "Couro preto, dedos revestidos com feltro. Não deixa impressão digital.",
+  "efeito": "+1 em testes de Reflexo para abrir fechadura, pegar coisa sem ser visto, ou desarmar. Efeito social: se for descoberto usando, já está implícito o que você fazia.",
+  "obter": "Mercado Negro (Couro Preto x1, Feltro x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_de_batalha",
+  "nome": "Luvas de Batalha",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 200,
+  "precoTxt": "200 Col",
+  "resumo": "Completa proteção de mão com articulação de aço. Para combate pesado.",
+  "efeito": "+1 em testes de Corpo para socar ou receber golpe na mão sem ficar inutilizado.",
+  "obter": "Ferreiro (Aço x2, Couro Nobre x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "luvas_de_aco",
+  "nome": "Luvas de Aço",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 450,
+  "precoTxt": "450 Col",
+  "resumo": "Aço temperado, articulado em cada dedo. Fecha com clique.",
+  "efeito": "+1 em testes de Corpo para defender com a mão. Efeito único: soco armado agora causa dano igual a porrete (golpe médio), sem precisar de arma.",
+  "obter": "Ferreiro mestre (Chapa Aço x4, Articulações Liga x5, Couro x2. Dificuldade: 7.)"
+ },
+ {
+  "id": "luvas_do_duelista",
+  "nome": "Luvas do Duelista",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Reflexo 0+",
+  "preco": 480,
+  "precoTxt": "480 Col",
+  "resumo": "Aço fino + couro nobre. Dedo totalmente livre nas pontas. Pra quem precisa de precisão e velocidade.",
+  "efeito": "+1 em testes de Reflexo para desferir golpe rápido, sacar arma rápido, ou mudar de arma no meio do combate. Efeito único: pode sacar 2 armas ao invés de 1 no primeiro round, sem penalidade.",
+  "obter": "Ferreiro mestre + Coureiro (Aço Fino x2, Couro Nobre x2. Dificuldade: 8.)"
+ },
+ {
+  "id": "luvas_guardias",
+  "nome": "Luvas Guardiãs",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Corpo 0+",
+  "preco": 460,
+  "precoTxt": "460 Col",
+  "resumo": "Palma e costas reforçadas com 3 camadas. A parte mais importante da armadura do guardião.",
+  "efeito": "+1 em testes de Corpo para agarrar lâmina de espada com a palma nua sem sofrer dano permanente (uma vez por combate).",
+  "obter": "Ferreiro da Ordem (Aço x3, Liga x2, Camadas Couro x3. Dificuldade: 8.)"
+ },
+ {
+  "id": "luvas_de_tita",
+  "nome": "Luvas de Titã",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Corpo 2+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Couro de pele de Titã + placas de osso de gigante. Parecem pequenas. Quando você veste, parecem feitas pra você.",
+  "efeito": "Força Colossal — +2 em TODO teste de Corpo que envolve LEVANTAR, CARREGAR ou EMPURRAR coisa pesada (exceção ao teto). Efeito único: uma vez por sessão, você pode \"segurar\" uma coisa que deveria te esmagar (porta caindo, parede desabando, pé gigante) por 2 rodadas completas enquanto o grupo reage.",
+  "obter": "Drop de Titã nos andares 60+; ou craft lendário (Pele de Titã x1, Osso Gigante x2, Couro Nobre x2. Dificuldade: 10+.)"
+ },
+ {
+  "id": "luvas_lendarias_aincrad",
+  "nome": "Luvas Lendárias Aincrad",
+  "img": "",
+  "slot": "Luvas",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/luvas_novas.md",
+  "requisito": "Técnica 2+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Fibra de aço, palma de cristal, costuras invisíveis. Parecem não existir.",
+  "efeito": "Domínio Perfeito — +1 em TODO teste de Técnica. Efeito único — Sem Errar: uma vez por sessão, um 6- que você acabou de rolar em Técnica vira 10 automaticamente. Serve para abrir fechadura impossível, desarmar armadilha de chefe, forjar item perfeito, acertar movimento difícil.",
+  "obter": "Oficina Lendária nos andares 80+; ou recompensa de puzzle final do Ferreiro Lendário."
+ },
+ {
+  "id": "flechas_simples",
+  "nome": "Flechas Simples",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 20,
+  "precoTxt": "20 Col (lote de 10)",
+  "resumo": "Flecha de madeira comum, ponta de ferro, pena de ave campestre.",
+  "efeito": "Munição base para arco e besta. Nenhum bônus extra. Produz: 10 por lote.",
+  "obter": "Craft de Flecheiro (Vara Madeira x2, Ponta Ferro x1, Pena x2. Ferramentas: Serra, Faca. Dificuldade: 6-.)"
+ },
+ {
+  "id": "flechas_perfurantes",
+  "nome": "Flechas Perfurantes",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col (lote de 10)",
+  "resumo": "Ponta de aço afiada tri-lâmina, penas estabilizadas. Perfuram couro grosso.",
+  "efeito": "+1 no dano de flecha contra alvo com armadura de couro ou inferior. Produz: 10 por lote.",
+  "obter": "Craft de Flecheiro (Vara Bambu x2, Ponta Aço x1, Pena Grande x2. Dificuldade: 6-.)"
+ },
+ {
+  "id": "flechas_incendiarias",
+  "nome": "Flechas Incendiárias",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 50,
+  "precoTxt": "50 Col (lote de 10)",
+  "resumo": "Ponta envolta em pano embebido em óleo. Atira fogo.",
+  "efeito": "Acerto causa 1 dano de fogo adicional + chance de atear fogo em material inflamável. Produz: 10 por lote.",
+  "obter": "Craft de Flecheiro + Alquimista (Flecha Simples x10, Pano x5, Óleo x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "virotes_de_besta_simples",
+  "nome": "Virotes de Besta Simples",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 30,
+  "precoTxt": "30 Col (lote de 10)",
+  "resumo": "Virote curto e grosso, para besta leve ou pesada.",
+  "efeito": "Munição base para besta. Nenhum bônus. Produz: 10 por lote.",
+  "obter": "Craft de Flecheiro (Vara Curta x2, Ponta Grossa x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "bombas_de_fumaca",
+  "nome": "Bombas de Fumaça",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 60,
+  "precoTxt": "60 Col (unidade)",
+  "resumo": "Frágil esfera de vidro, pólvora + açúcar + colorante. Quebra no impacto, libera fumaça densa.",
+  "efeito": "Cria nuvem de fumaça densa de 3 metros de raio. Ninguém vê ninguém dentro. Dura 2 rodadas ou até vento dispersar.",
+  "obter": "Craft de Alquimista (Vidro x1, Pólvora x1, Açúcar x2. Ferramentas: Cadinho, Fogo. Dificuldade: 6-.)"
+ },
+ {
+  "id": "bombas_cegantes",
+  "nome": "Bombas Cegantes",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 70,
+  "precoTxt": "70 Col (unidade)",
+  "resumo": "Esfera de vidro com magnésio em pó + oxidante. Brilho cegante no impacto.",
+  "efeito": "Todo mundo em 2m de raio (exceto quem jogou, se fechou os olhos) fica cego por 1 rodada. Teste de Reflexo 10+ evita.",
+  "obter": "Craft de Alquimista (Vidro x1, Magnésio x2, Oxidante x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "armadilha_de_urso_simples",
+  "nome": "Armadilha de Urso Simples",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Técnica -1+",
+  "preco": 100,
+  "precoTxt": "100 Col (unidade)",
+  "resumo": "Mola de ferro + dentes afiados. Pressionar placa, morde o pé.",
+  "efeito": "Armadilha de solo. Alvo pisa e leva 2 dano direto + fica imobilizado. Teste de Corpo 7-9 solta com 1 dano extra; 10+ solta sem dano.",
+  "obter": "Craft de Caçador (Mola Ferro x1, Dentes Aço x4, Corrente x1. Ferramentas: Alicate, Bigorna. Dificuldade: 6-.)"
+ },
+ {
+  "id": "frasco_de_acido_fraco",
+  "nome": "Frasco de Ácido Fraco",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 80,
+  "precoTxt": "80 Col (unidade)",
+  "resumo": "Frasco de vidro com ácido diluído. Queima metal e carne.",
+  "efeito": "Arremesso a 5m. Acerto causa 1 dano corrosivo + 1 dano no round seguinte.",
+  "obter": "Craft de Alquimista (Vidro x1, Ácido x2. Ferramentas: Frasco, EPI. Dificuldade: 6-.)"
+ },
+ {
+  "id": "oleo_lubrificante",
+  "nome": "Óleo Lubrificante",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col (frasco)",
+  "resumo": "Frasco de óleo refinado, super escorregadio.",
+  "efeito": "Joga no chão de 2x2m. Todo mundo que passa tem que passar em Reflexo ou cai. Também serve pra lubrificar fechadura, mecanismo, arma.",
+  "obter": "Craft de Alquimista + Ferreiro (Frasco x1, Óleo x2. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_impacto",
+  "nome": "Cristal de Impacto",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 90,
+  "precoTxt": "90 Col (unidade)",
+  "resumo": "Pequeno cristal de quartzo, carregado com leve descarga. Impacto = pequena explosão.",
+  "efeito": "Arremesso curto. Acerto causa 1 dano de impacto + 1 de estruendo (surdez temporária). Bom pra quebrar porta ou caixa.",
+  "obter": "Craft de Cristalista (Cristal Quartzo x1, Fio Cobre x1. Ferramentas: Amolador, Bateria. Dificuldade: 6-.)"
+ },
+ {
+  "id": "flechas_elementais",
+  "nome": "Flechas Elementais",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 90,
+  "precoTxt": "90 Col (lote de 10)",
+  "resumo": "Ponta de flecha com cristal elemental embutido. Vem em 5 opções: Fogo, Gelo, Trovão, Natureza, Sombra.",
+  "efeito": "Escolhe 1 elemento ao craftar. Acerto +1 dano do tipo + chance de efeito colateral (queimar, congelar, chocar, prender, atordoar). Produz: 10 por lote.",
+  "obter": "Craft de Flecheiro + Cristalista (Flecha Perfurante x10, Cristal Elemental x1. Ferramentas: Amolador, Fio Prata. Dificuldade: 7.)"
+ },
+ {
+  "id": "flechas_rastreadoras",
+  "nome": "Flechas Rastreadoras",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Conhecimento -1+",
+  "preco": 120,
+  "precoTxt": "120 Col (lote de 5)",
+  "resumo": "Ponta com pena mágica + farelo luminoso. Deixa rastro invisível pra maioria dos olhos.",
+  "efeito": "Acerto (ou até erro próximo) deixa rastro que o dono da flecha vê por 24h. Funciona mesmo se o alvo fugir. Produz: 5 por lote.",
+  "obter": "Craft de Flecheiro + Caçador (Flecha Simples x5, Pena Mística x1, Farelo Luminoso x1. Dificuldade: 8.)"
+ },
+ {
+  "id": "bombas_congelantes",
+  "nome": "Bombas Congelantes",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 120,
+  "precoTxt": "120 Col (unidade)",
+  "resumo": "Esfera com composto super-frio. Libera temperatura negativa extrema.",
+  "efeito": "2m raio. Alvos congelam levemente — -1 em Reflexo por 2 rodadas. Super eficaz contra criaturas de fogo ou planta.",
+  "obter": "Craft de Alquimista (Vidro x1, Gelo Seco x1, Composto Estável x2. Dificuldade: 7.)"
+ },
+ {
+  "id": "bombas_de_caos",
+  "nome": "Bombas de Caos",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "—",
+  "preco": 150,
+  "precoTxt": "150 Col (unidade)",
+  "resumo": "Mistura explosiva instável de 5 compostos diferentes. Nunca dá a mesma coisa duas vezes.",
+  "efeito": "Rola d10 no impacto. 1-2 nada acontece. 3-4 fogo. 5-6 fumaça colorida. 7-8 gás do sono leve. 9 confusão. 10 pequena explosão dano 2.",
+  "obter": "Craft de Alquimista Maluco (Vidro x1, 5 ingredientes aleatórios. Dificuldade: 8.)"
+ },
+ {
+  "id": "armadilha_de_rede_elastica",
+  "nome": "Armadilha de Rede Elástica",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Técnica -1+",
+  "preco": 180,
+  "precoTxt": "180 Col (unidade)",
+  "resumo": "Rede de fibra elástica, disparada por mola quando pisa na placa. Prende o alvo inteiro.",
+  "efeito": "Alvo fica completamente preso (não se move, não usa armas). Reflexo 10+ evita; Corpo 10+ rompe a rede em 2 rodadas.",
+  "obter": "Craft de Caçador (Fibra Elástica x5, Mola x3, Placa Pressão x1. Dificuldade: 8.)"
+ },
+ {
+  "id": "flechas_do_dragao",
+  "nome": "Flechas do Dragão",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Reflexo 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço (lote de 3)",
+  "resumo": "Escamas de dragão esmagadas + vara de árvore milenar + pena de fênix. A flecha brilha antes de sair da corda.",
+  "efeito": "+3 dano perfurante + 2 de fogo. Ignora 1 nível de armadura. Produz: 3 por lote. Único: lote só pode ser feito 1 vez por mês.",
+  "obter": "Craft de Flecheiro nível 5 (Vara Milenar x1, Escama Dragão x1, Pena Fênix x1. Ferramentas: Arco Forjado, Fio Lendário. Dificuldade: 10+.)"
+ },
+ {
+  "id": "flechas_fantasma",
+  "nome": "Flechas Fantasma",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Reflexo 1+",
+  "preco": 0,
+  "precoTxt": "não tem preço (lote de 3)",
+  "resumo": "Tecido de sombra + ponta de obsidiana. A flecha some no meio do ar e reaparece no alvo.",
+  "efeito": "Não pode ser bloqueado, nem desviado por escudo ou parada. Atinge sempre. Dano base 2 + 1 sombra (atordoamento leve). Produz: 3 por lote.",
+  "obter": "Craft de Flecheiro nível 5 + Sombra (Tecido Sombra x2, Obsidiana x1, Cristal Sombra x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "bomba_de_dano_em_massa",
+  "nome": "Bomba de Dano em Massa",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Alquimista nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Papelote grosso envolvendo 10 camadas de composto explosivo. Pesado, instável, proibido em cidades.",
+  "efeito": "Raio de 6 metros. Todo mundo na área (exceto quem lançou e está atrás de cobertura) leva 3 dano de explosão + 2 de estilhaço. Aviso: se cair no chão sem querer, explode em 3 segundos.",
+  "obter": "Craft de Alquimista nível 5 (Composto Alto Explosivo x5, Estilhaço Aço x10, Mecha lenta x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "cristal_de_impacto_explosivo",
+  "nome": "Cristal de Impacto Explosivo",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Cristalista nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Cristal de quartzo gigante, carregado até o limite com energia cinética. Brilha muito.",
+  "efeito": "Arremessado ou colocado. Ativação por comando. Explosão de 4 metros. 4 dano + 2 concussão. Serve pra destruir parede de pedra inteira.",
+  "obter": "Craft de Cristalista nível 5 (Cristal Gigante x1, Energia Cinética x5, Fio Liga x2. Dificuldade: 10+.)"
+ },
+ {
+  "id": "armadilha_espiritual",
+  "nome": "Armadilha Espiritual",
+  "img": "",
+  "slot": "Munições",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/municoes.md",
+  "requisito": "Caçador nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Glyph desenhado no chão com sangue de criatura espiritual. Não pode ser visto com olhos comuns.",
+  "efeito": "Quem pisa tem alma temporariamente puxada pra fora — fica paralisado por 3 rodadas. Mesmo criaturas mortas-vivas ou espirituais são afetadas.",
+  "obter": "Craft de Caçador nível 5 (Sangue Espiritual x2, Giz de Obsidiana x1, Ritual de Invocação x1. Dificuldade: 10+.)"
  },
  {
   "id": "calca_de_sarja_padrao",
@@ -7718,6 +10032,351 @@ var EQUIPAMENTOS = [
   "resumo": "Manto feito das penas do Arauto das Alturas, sobrepostas como escamas. Pesa quase nada. Em corrente de ar, as penas se levantam sozinhas na direção do vento antes do vento chegar.",
   "efeito": "+1 em testes de Reflexo para qualquer coisa envolvendo queda, salto, escalada ou vento (Penhascos de Vaelor, Montanhas de Grauvenn, telhados de Tolbana).",
   "obter": "duas rotas, e elas são incompatíveis entre si: (a) abater um Arauto das Alturas (forte, 6 golpes, no topo das Montanhas de Grauvenn) e levar as penas ao Costureiro; ou (b) domar um (10 sucessos — a doma mais difícil do andar) e receber as penas que ele solta naturalmente ao longo de três sessões. A rota (b) leva mais tempo real de mesa e é a única que mantém o vínculo de Domador ativo."
+ },
+ {
+  "id": "pocao_de_hp_pequena",
+  "nome": "Poção de HP Pequena",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 80,
+  "precoTxt": "80 Col",
+  "resumo": "Frasco pequeno, líquido vermelho claro. Gosto de fruta doce.",
+  "efeito": "Recupera 2 \"golpes\" de vida imediatamente ao beber.",
+  "obter": "Craft de Alquimista (Erva Medicinal x2, Água Destilada x1, Açúcar x1. Ferramentas: Frasco, Alambique. Dificuldade: 6-.)"
+ },
+ {
+  "id": "pocao_de_regeneracao",
+  "nome": "Poção de Regeneração",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 100,
+  "precoTxt": "100 Col",
+  "resumo": "Líquido verde claro. Dorme melhor depois de beber.",
+  "efeito": "Bebe antes de descansar 1 hora. Recupera 3 \"golpes\" durante o descanso, ao invés de 2.",
+  "obter": "Craft de Alquimista (Ervas Verdes x3, Água x1, Mel x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "pocao_de_energia",
+  "nome": "Poção de Energia",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 90,
+  "precoTxt": "90 Col",
+  "resumo": "Líquido amarelo claro. Gosto amargo forte, mas acorda mesmo.",
+  "efeito": "Recupera 5 de Fôlego imediatamente. Efeito colateral: se usar mais de 1 por dia, a próxima dormida demora mais pra recuperar.",
+  "obter": "Craft de Alquimista (Erva Cafeína x2, Água x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_cura",
+  "nome": "Cristal de Cura",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 60,
+  "precoTxt": "60 Col",
+  "resumo": "Cristal verde claro. (Também listado em `cristais_uso.md` — mesmo item.)",
+  "efeito": "Esfarela na palma, recupera 2 \"golpes\" de vida. (Alternativa sem beber.)",
+  "obter": "Craft de Cristalista (Cristal Verde x1, Erva Medicinal x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_purificacao",
+  "nome": "Cristal de Purificação",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 70,
+  "precoTxt": "70 Col",
+  "resumo": "Cristal azul-esbranquiçado. (Também em `cristais_uso.md`.)",
+  "efeito": "Remove veneno/doença leve; purifica água.",
+  "obter": "Craft de Cristalista + Alquimista (Cristal Azul x1, Água Benta x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_luz",
+  "nome": "Cristal de Luz",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 40,
+  "precoTxt": "40 Col",
+  "resumo": "Cristal branco. (Também em `cristais_uso.md`.)",
+  "efeito": "Lanterna de bolso, 1 hora de luz fraca.",
+  "obter": "Craft de Cristalista (Cristal Quartzo x1, Luz Solar x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_localizacao",
+  "nome": "Cristal de Localização",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "Conhecimento -1+",
+  "preco": 100,
+  "precoTxt": "100 Col",
+  "resumo": "Cristal cinza com mapa em miniatura.",
+  "efeito": "Mostra sua localização no andar atual, em qualquer mapa que você já tiver mapeado. Não revela lugares não mapeados.",
+  "obter": "Craft de Cristalista + Cartógrafo (Cristal Cinza x1, Mapa x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "cristal_de_calor",
+  "nome": "Cristal de Calor",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 50,
+  "precoTxt": "50 Col",
+  "resumo": "Cristal laranja. (Também em `cristais_uso.md`.)",
+  "efeito": "Esquenta por 30 minutos, protege do frio leve.",
+  "obter": "Craft de Cristalista (Cristal Laranja x1, Carvão x1. Dificuldade: 6-.)"
+ },
+ {
+  "id": "carne_assada_de_monstro",
+  "nome": "Carne Assada de Monstro",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 30,
+  "precoTxt": "30 Col",
+  "resumo": "(Também em `comidas_cozinheiro.md` — mesma refeição, aqui como alquimia/consumível rápido.)",
+  "efeito": "+1 Corpo cena seguinte, cansaço/fome.",
+  "obter": "Cozinheiro. Dificuldade 6-."
+ },
+ {
+  "id": "pao_do_aventureiro",
+  "nome": "Pão do Aventureiro",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Comum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 20,
+  "precoTxt": "20 Col",
+  "resumo": "(Também em `comidas_cozinheiro.md`.)",
+  "efeito": "Racionamento de emergência. Não estraga.",
+  "obter": "Cozinheiro. Dificuldade 6-."
+ },
+ {
+  "id": "pocao_de_hp_media",
+  "nome": "Poção de HP Média",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 220,
+  "precoTxt": "220 Col",
+  "resumo": "Frasco médio, vermelho escuro. Gosto forte.",
+  "efeito": "Recupera 5 \"golpes\" de vida imediatamente.",
+  "obter": "Craft de Alquimista nível 3 (Erva Medicinal Forte x3, Água Destilada x1, Essência Vida x1. Dificuldade: 7.)"
+ },
+ {
+  "id": "pocao_de_velocidade",
+  "nome": "Poção de Velocidade",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 250,
+  "precoTxt": "250 Col",
+  "resumo": "Líquido azul claro. Dá agulha na pele depois.",
+  "efeito": "2 rodadas de +1 em Reflexo para movimento e iniciativa.",
+  "obter": "Craft de Alquimista nível 3 (Folha Leve x2, Água x1, Essência Vento x1. Dificuldade: 7.)"
+ },
+ {
+  "id": "pocao_de_forca",
+  "nome": "Poção de Força",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 260,
+  "precoTxt": "260 Col",
+  "resumo": "Líquido vermelho escuro. Dormência muscular temporária.",
+  "efeito": "2 rodadas de +1 em Corpo para dano físico.",
+  "obter": "Craft de Alquimista nível 3 (Raiz Força x2, Extrato Carne x1. Dificuldade: 7.)"
+ },
+ {
+  "id": "pocao_de_resistencia",
+  "nome": "Poção de Resistência",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 240,
+  "precoTxt": "240 Col",
+  "resumo": "Líquido marrom. Gosto de terra.",
+  "efeito": "Cena inteira de +1 em Corpo para resistir a dano (qualquer tipo).",
+  "obter": "Craft de Alquimista nível 3 (Casca Árvore x3, Argila Medicinal x1. Dificuldade: 7.)"
+ },
+ {
+  "id": "cristal_de_teleporte",
+  "nome": "Cristal de Teleporte",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 300,
+  "precoTxt": "300 Col",
+  "resumo": "(Também em `cristais_uso.md`.)",
+  "efeito": "Teleporta pra ponto marcado, mesmo andar.",
+  "obter": "Cristalista nível 3. Dificuldade 7."
+ },
+ {
+  "id": "cristal_de_retorno",
+  "nome": "Cristal de Retorno",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 150,
+  "precoTxt": "150 Col",
+  "resumo": "(Também em `cristais_uso.md`.)",
+  "efeito": "Volta pra última cidade visitada.",
+  "obter": "Cristalista. Dificuldade 6-."
+ },
+ {
+  "id": "cristal_de_visao",
+  "nome": "Cristal de Visão",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "Conhecimento -1+",
+  "preco": 80,
+  "precoTxt": "80 Col",
+  "resumo": "(Também em `cristais_uso.md`.)",
+  "efeito": "Visão noturna 5 minutos, 10 metros.",
+  "obter": "Cristalista. Dificuldade 6-."
+ },
+ {
+  "id": "refeicao_do_guerreiro",
+  "nome": "Refeição do Guerreiro",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Incomum",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "—",
+  "preco": 190,
+  "precoTxt": "190 Col",
+  "resumo": "(Também em `comidas_cozinheiro.md` como \"Bife do Guerreiro\" — mesma ideia.)",
+  "efeito": "Cena inteira +1 Corpo dano físico; colateral de impaciência.",
+  "obter": "Cozinheiro. Dificuldade 7."
+ },
+ {
+  "id": "pocao_de_ressurreicao",
+  "nome": "Poção de Ressurreição",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "Alquimista nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Frasco transparente. Contém uma nuvem de luz, não líquido. O item mais raro do alquimista.",
+  "efeito": "Última Esperança — Mesmo efeito do Cristal de Ressurreição: aliado morto a menos de 1 minuto volta com 1 golpe; ou auto-ativa em você 1 vez na vida. Vantagem sobre o cristal: pode curar MÚLTIPLOS ferimentos (drenos, doenças, maldições leves) junto com a ressurreição.",
+  "obter": "Craft de Alquimista nível 5 (Essência Vida x3, Cinzas Fênix x1, Água Benta x1, Frasco Lendário x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "cristal_do_supremo_teleporte",
+  "nome": "Cristal do Supremo Teleporte",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "Cristalista nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Cristal roxo brilhante. (Também em `cristais_uso.md`.)",
+  "efeito": "Portal Supremo — Teleporta o grupo TODO pra QUALQUER ponto já visitado em QUALQUER andar (exceto o 100). Abre portal e o grupo caminha através. Não funciona pra lugares que ninguém nunca foi.",
+  "obter": "Cristalista nível 5. Dificuldade 10+."
+ },
+ {
+  "id": "elixir_da_vida",
+  "nome": "Elixir da Vida",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "Alquimista nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Líquido dourado. Vai colocando gota por gota, e parece não acabar no frasco.",
+  "efeito": "Cura COMPLETAMENTE (100%) todos os ferimentos, doenças, venenos, fadigas de 1 pessoa. Bebe de uma vez, recupera tudo. Efeito único: retarda o envelhecimento em 1 ano se bebido devagar, 1 gota por dia, durante 1 mês.",
+  "obter": "Craft de Alquimista nível 5 (Essência Pura Vida x5, Orvalho Lunar x1, Cristal Dourado x1. Dificuldade: 10+.)"
+ },
+ {
+  "id": "cristal_do_heroi_limite_quebrado",
+  "nome": "Cristal do Herói \"Limite Quebrado\"",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "Nível 10+",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Cristal arco-íris claro. (Também em `cristais_uso.md` como \"Cristal do Herói de Aincrad\" — mesmo item, versão em pó.)",
+  "efeito": "Limite Quebrado — Uma vez por dia, escolhe 1 teste, rola 3d6 e fica com os 2 MELHORES resultados. (É o \"advantage\" de SAO.)",
+  "obter": "Drop 0.1% de chefes de andar 70+."
+ },
+ {
+  "id": "elixir_elemental",
+  "nome": "Elixir Elemental",
+  "img": "",
+  "slot": "Poções",
+  "raridade": "Lendário",
+  "conjunto": false,
+  "arquivo": "equipamentos/pocoes.md",
+  "requisito": "Alquimista nível 5 + Cristalista nível 5",
+  "preco": 0,
+  "precoTxt": "não tem preço",
+  "resumo": "Elixir de cor variável. Escolhe o elemento quando bebe. 5 opções: Fogo, Gelo, Trovão, Natureza, Sombra.",
+  "efeito": "Cena inteira. +2 em testes de ataque com o elemento escolhido. Imunidade a dano desse elemento. Efeito colateral: fraco contra o elemento oposto por 1 dia depois.",
+  "obter": "Craft duplo nível 5 (Essência de 5 Elementos x1 cada, Cristal Poder x5, Frasco Lendário x1. Dificuldade: 10+.)"
  }
 ];
 
@@ -14136,6 +16795,245 @@ var PRODUCAO = {
 };
 
 var PONTOS_DETALHE = {
+ "batalha_relíquias": {
+  "nome": "Campo de Relíquias",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "O mato baixo não esconde tudo: pontas de metal escurecido saem da terra em ângulos que não são de ferramenta de fazenda. Um elmo grande demais pra cabeça de jogador, uma manopla que serviria num braço de dois metros. Tudo quieto, tudo muito antigo — e nada disso consta em nenhum mapa de quest que alguém já tenha visto.",
+  "oque": "o coração da região — o trecho onde a batalha esquecida de Ruyn deixou mais restos à mostra. Ponto de coleta de curiosidades de lore (sem uso mecânico de crafting) e porta de entrada narrativa pro resto do campo.",
+  "acoes": [
+   {
+    "acao": "Vasculhar os restos",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Identifica que é anterior ao próprio jogo — curiosidade de lore, não material de crafting comum",
+    "parcial": "Recolhe sem entender o que é",
+    "falha": "Parece só sucata; deixa pra lá"
+   },
+   {
+    "acao": "Procurar uma pá de trincheira",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Acha uma que ainda presta",
+    "parcial": "Acha uma torta",
+    "falha": "Só ferro podre"
+   }
+  ],
+  "mestre": "a recompensa é Curiosidade — item de lore, sem uso mecânico. Deixe isso aparecer na ficção: se um Ferreiro do grupo tentar forjar com esse metal, não vai conseguir, e a frustração em si é a pista. Quem investiga aqui tende a notar o estandarte, as trincheiras e os fragmentos em seguida — é a ordem natural de descoberta do campo.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   }
+  ]
+ },
+ "batalha_estandarte": {
+  "nome": "Estandarte Caído",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "A haste torta ainda segura um retângulo de pano que o vento abre e fecha, devagar. O símbolo bordado não é de guilda nenhuma que alguém reconheça — e no dia 10 todo mundo já decorou os símbolos que importam. Ao redor, o chão afunda numa depressão comprida, e o mato cresce desigual por cima dela. Em cima da haste, três corvos parados. Nenhum voa.",
+  "oque": "marco nomeado da região — o estandarte de heráldica desconhecida e a depressão de terreno ao redor dele. Segredo de leitura ambiental: quem presta atenção percebe a escala do confronto que houve aqui.",
+  "acoes": [
+   {
+    "acao": "Ler o terreno ao redor",
+    "teste": "2d6+Espírito",
+    "sucesso": "Reconhece que aqui houve um confronto grande — não um evento de jogo comum",
+    "parcial": "Percebe só que o terreno é estranho ali",
+    "falha": "Passa direto"
+   },
+   {
+    "acao": "Estudar a heráldica do pano",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Reconhece que não é de nenhuma guilda atual — nem de facção conhecida",
+    "parcial": "Percebe que é antiga",
+    "falha": "\"Pano velho\""
+   },
+   {
+    "acao": "Atrair um dos corvos",
+    "teste": "2d6+Técnica",
+    "sucesso": "Um Corvo das Ruínas desce até uma bugiganga brilhante (1 de 2 sucessos pra domar)",
+    "parcial": "Desce, mas bica a mão antes de pegar",
+    "falha": "Todos levantam voo de uma vez"
+   }
+  ],
+  "mestre": "a heráldica é mistério sem resposta por design — não improvise explicação, quanto mais o grupo investiga menos sentido a batalha faz no cânone do jogo. Os corvos seguem quem usa a Coroa de Penas do Corvo (equip da região, ver `guias/02_oeste_e_sul.md`); se alguém no grupo tiver uma, mude a cena inteira — todos descem de uma vez.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   },
+   {
+    "tipo": "monstro",
+    "id": "corvo_das_ruinas"
+   }
+  ]
+ },
+ "campo_batalha_xfragmento_de_arma_antiga": {
+  "nome": "Fragmento de Arma Antiga",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "Meio enterrada no chão batido, uma lâmina quebrada aponta pro céu num ângulo teimoso. O desenho do fio e da guarda não parece nada que os ferreiros da Cidade do Início saibam fazer.",
+  "oque": "ponto de coleta de curiosidade — fragmento de arma anterior ao jogo, sem uso de crafting comum. Respawn de 6h.",
+  "acoes": [
+   {
+    "acao": "Examinar a lâmina",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum",
+    "parcial": "Recolhe sem entender o que é",
+    "falha": "Parece só sucata; deixa pra lá"
+   }
+  ],
+  "mestre": "mesmo tipo de item de lore do Campo de Relíquias — se o grupo já identificou a natureza das relíquias lá, poupe o teste e entregue o fragmento direto.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   }
+  ]
+ },
+ "campo_batalha_xtrincheira_coberta": {
+  "nome": "Trincheira Coberta",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "A vala comprida quase se esconde debaixo do mato — só a linha reta demais da depressão entrega que não é obra do vento. Lá embaixo ainda há espaço entre as paredes de terra, e espaço guarda coisas.",
+  "oque": "trincheira da batalha antiga, tomada de vegetação — esconderijo natural com chance de achado e de teto ceder.",
+  "acoes": [
+   {
+    "acao": "Ler o terreno antes de descer",
+    "teste": "2d6+Espírito",
+    "sucesso": "Reconhece que foi um confronto grande, não um evento de jogo comum",
+    "parcial": "Percebe só que o terreno é estranho ali",
+    "falha": "Passa direto"
+   },
+   {
+    "acao": "Explorar o interior",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Acha um esconderijo intacto — e o que tem dentro",
+    "parcial": "Acha, mas o teto cede atrás de você",
+    "falha": "Cai; complicação e barulho"
+   }
+  ],
+  "mestre": "o barulho do 6- é gancho legítimo pra atrair a Sentinela mais próxima — `campo_batalha_xsentinela_esquecida` fica a poucos metros. O \"que tem dentro\" fica a seu critério: provisões apodrecidas, uma Ordem Gravada solta (ver drop da Sentinela), ou nada.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   }
+  ]
+ },
+ "campo_batalha_xsentinela_esquecida": {
+  "nome": "Sentinela Esquecida",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "A silhueta está parada no meio do campo aberto há tempo suficiente pro mato crescer em volta dos pés. Alta demais, proporções erradas demais — e imóvel do jeito errado: não como ruína, mas como vigia. Ela só se move se alguém chegar perto.",
+  "oque": "spawn da Sentinela Esquecida (ficha completa em `monstros/sentinela_esquecida.md`) — construto que ainda patrulha uma linha que não existe mais. Ameaça forte, 5-7 golpes, fraqueza em Técnica (a junta do \"pescoço\") e Trovão.",
+  "acoes": [
+   {
+    "acao": "Perceber o que ela é antes de chegar perto",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Nota a postura de vigia a distância segura — o grupo escolhe o engajamento",
+    "parcial": "Nota em cima da hora; ela já escolheu alguém",
+    "falha": "Confunde com cenário até ela se mover"
+   },
+   {
+    "acao": "Enfrentar (combate)",
+    "teste": "2d6+Corpo ou Técnica",
+    "sucesso": "Golpe na junta do pescoço conta 2",
+    "parcial": "Troca de golpes equilibrada",
+    "falha": "Ela te marca como intruso de linha — e não para mais"
+   }
+  ],
+  "mestre": "aqui mora a `bounty_01_sentinela_esquecida` — o melhor medo é o atraso entre \"isso é cenário\" e \"isso está olhando de volta\". Ela reage a proximidade e a pedra gravada tocada, não a barulho. Recompensa: Col + material incomum (Placa de Metal Antigo; raro, Núcleo Sem Função ou Ordem Gravada — ver tabela de drop da ficha).",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "sentinela_esquecida"
+   },
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_01_sentinela_esquecida"
+   }
+  ]
+ },
+ "campo_batalha_xfragmento_de_arma_antiga_2": {
+  "nome": "Fragmento de Arma Antiga 2",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "Desta vez é um pedaço de lâmina curva, cravado na terra de ponta-cabeça, como se tivesse caído do céu. A corrosão comeu o desenho, mas o formato da guarda continua sendo de ninguém.",
+  "oque": "segundo ponto de coleta de curiosidade da região — mesmo tipo de fragmento, outro canto do campo. Respawn de 6h.",
+  "acoes": [
+   {
+    "acao": "Examinar a lâmina",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum",
+    "parcial": "Recolhe sem entender o que é",
+    "falha": "Parece só sucata; deixa pra lá"
+   }
+  ],
+  "mestre": "puramente mecânico — a posição mais a oeste espalha a exploração; quem vem até aqui em geral já cruzou com a segunda Sentinela ao norte.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   }
+  ]
+ },
+ "campo_batalha_xsentinela_esquecida_2": {
+  "nome": "Sentinela Esquecida 2",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "Esta está mais perto da borda do campo, de frente pra uma direção onde não tem nada — e mesmo assim continua de guarda. Poeira cai de uma junta do ombro quando o vento bate mais forte. É o único movimento que ela faz por vontade própria. Até não ser.",
+  "oque": "segundo spawn de Sentinela Esquecida — mesma mecânica, mesma ameaça forte (5-7 golpes). Guarda o trecho norte do campo. Respawn de 3h.",
+  "acoes": [
+   {
+    "acao": "Enfrentar (combate)",
+    "teste": "2d6+Corpo ou Técnica",
+    "sucesso": "Golpe na junta do pescoço conta 2",
+    "parcial": "Troca de golpes equilibrada",
+    "falha": "Ela marca o grupo como intruso de linha — e não para mais"
+   }
+  ],
+  "mestre": "de noite, Sentinelas acendem o \"olho\" e andam a linha antiga sem atacar quem não a cruzar (ver \"Se o grupo demorar\" no guia da região) — esta, pela posição exposta, é boa candidata pra essa cena. Vale como alvo da `bounty_01` se o grupo evitou a primeira.",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "sentinela_esquecida"
+   },
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_01_sentinela_esquecida"
+   }
+  ]
+ },
+ "campo_batalha_xfragmento_de_arma_antiga_3": {
+  "nome": "Fragmento de Arma Antiga 3",
+  "regiao": "campo_batalha",
+  "arquivo": "guias/pontos/campo_batalha.md",
+  "leitura": "O terceiro fragmento só aparece porque a chuva abriu uma falha no mato: meia empunhadura de metal negro, com ranhuras que já foram inscrição. O que estava escrito ali, ninguém vai saber.",
+  "oque": "terceiro e último ponto de coleta de curiosidade — fecha a varredura do campo. Respawn de 6h.",
+  "acoes": [
+   {
+    "acao": "Examinar a empunhadura",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum",
+    "parcial": "Recolhe sem entender o que é",
+    "falha": "Parece só sucata; deixa pra lá"
+   }
+  ],
+  "mestre": "último ponto da cadeia natural de descoberta do Campo de Ruyn — bom marco pra avisar o grupo (fora de ficção) que a região já mostrou o que tinha pra mostrar nesta visita.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "campo_batalha"
+   }
+  ]
+ },
  "chefe_alfa_lupino": {
   "nome": "Alfa Lupino (field boss)",
   "regiao": "campos_leste",
@@ -15772,6 +18670,224 @@ var PONTOS_DETALHE = {
    }
   ]
  },
+ "estrada_marco": {
+  "nome": "Marco Quilométrico",
+  "regiao": "estrada_velha",
+  "arquivo": "guias/pontos/estrada_velha.md",
+  "leitura": "A pedra é baixa, gasta nos cantos, e o número gravado nela não bate com distância nenhuma que faça sentido — nem com o marco anterior, nem com o próximo. Musgo cobre a base, mas a face dos algarismos está limpa, como se alguém passasse o dedo ali com frequência.",
+  "oque": "um dos marcos de pedra da Estrada de Ombric, com distâncias quase apagadas de tão antigas — ponto de referência da rota e o primeiro lugar onde a estrada mostra que guarda algo inexplicado.",
+  "acoes": [
+   {
+    "acao": "Ler os números gravados",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Percebe que a sequência não é distância — é outra coisa",
+    "parcial": "Percebe que está errado, sem saber o porquê",
+    "falha": "\"Deve ser decoração\""
+   },
+   {
+    "acao": "Usar o marco pra se orientar",
+    "teste": "—",
+    "sucesso": "Sem teste — a partir daqui o grupo sabe em que trecho da rota está e o que vem adiante",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "os números errados são mistério de fundo que ninguém explica — o guia manda deixar assim, então não improvise resposta. Como marco narrativo, é a parada natural pra apresentar a região: quem lê a pedra aqui passa a reparar nos sinais de assalto mais adiante.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "estrada_velha"
+   }
+  ]
+ },
+ "estrada_emboscada": {
+  "nome": "Ponto de Assalto",
+  "regiao": "estrada_velha",
+  "arquivo": "guias/pontos/estrada_velha.md",
+  "leitura": "A curva fecha entre dois barrancos e o chão conta o resto: sulco de roda que termina rápido demais, madeira lascada varrida pra beira da estrada, terra revirada em mais de uma lua. Quem passa aqui diminui o passo sem saber por quê.",
+  "oque": "o trecho onde caravanas já foram atacadas — encontro de estrada com risco real. Uma matilha de Hounds de Cobre mede a rota daqui (respawn de 3h), e é neste ponto que `bounty_06_caravana_emboscada` se passa.",
+  "acoes": [
+   {
+    "acao": "Perceber o sinal antes do ataque",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Vê o hound isca e entende o padrão antes dos outros dois fecharem",
+    "parcial": "Vê tarde demais pra escolher posição — o combate começa emparelhado",
+    "falha": "A matilha escolhe o flanco e o primeiro alvo"
+   },
+   {
+    "acao": "Enfrentar a matilha",
+    "teste": "2d6+Corpo",
+    "sucesso": "Derruba um hound e cancela a entrada do terceiro",
+    "parcial": "Troca golpes no ritmo deles",
+    "falha": "Mordida de arrasto puxa alvo ou carga pra fora da formação"
+   },
+   {
+    "acao": "Recolher o que sobrou depois",
+    "teste": "—",
+    "sucesso": "Col + informação sobre quem anda assaltando a rota",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "ameaça comum, 3-4 golpes. Use dois ou três hounds, nunca um só — e lembre que Técnica desmonta a investida coordenada do trio (ver `monstros/hound_de_cobre.md`). Se a carroça for abandonada, eles levam a carga e somem: derrota com continuação, não combate até a morte. A informação de recompensa é gancho pra usar depois em Tolbana.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "estrada_velha"
+   },
+   {
+    "tipo": "monstro",
+    "id": "hound_de_cobre"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_06_caravana_emboscada"
+   }
+  ]
+ },
+ "estrada_velha_xcaravana_de_passagem": {
+  "nome": "Caravana de Passagem",
+  "regiao": "estrada_velha",
+  "arquivo": "guias/pontos/estrada_velha.md",
+  "leitura": "Duas carroças paradas pra descanso, animais mastigando devagar, guardas de olho no caminho nos dois sentidos. O condutor avalia o grupo de cima do banco antes de qualquer cumprimento: \"Fechamos negócio rápido. Rota longa, tempo é o que menos sobra.\"",
+  "oque": "comércio itinerante — estoque de importados no meio do caminho, com preços variando conforme o humor do mestre. A parada de descanso mais movimentada da rota.",
+  "acoes": [
+   {
+    "acao": "Comprar importados",
+    "teste": "—",
+    "sucesso": "Sem teste — estoque variado, preço de Comerciante da praça +10%",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Pechinchar com o condutor",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Preço de atacado (20% abaixo)",
+    "parcial": "Preço normal",
+    "falha": "Ele fecha a carroça"
+   },
+   {
+    "acao": "Pedir notícia da estrada",
+    "teste": "2d6+Espírito",
+    "sucesso": "Conta o que viu adiante — inclusive movimento estranho perto do ponto de assalto",
+    "parcial": "Conta só o trecho que já passou",
+    "falha": "\"Notícia se vende, não se dá\""
+   }
+  ],
+  "mestre": "bom ponto pra entregar rumor de região sem custo de cena — a caravana vem no sentido contrário e viu o que o grupo ainda não viu. Se houver entrega urgente em andamento (tipo `tolbana_e01_encomenda_urgente`), é aqui que o relógio aperta.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "estrada_velha"
+   }
+  ]
+ },
+ "estrada_velha_xponto_de_assalto_conhecido": {
+  "nome": "Ponto de Assalto Conhecido",
+  "regiao": "estrada_velha",
+  "arquivo": "guias/pontos/estrada_velha.md",
+  "leitura": "Marcas de luta antigas na terra, e ninguém arrumou direito: estaca quebrada, pedra escura de ferrugem — ou de outra coisa — e uma faixa de chão onde nada cresce de novo. Todo mundo que usa a rota sabe onde é. Ninguém resolveu.",
+  "oque": "o local de um assalto antigo, visível pra quem parar pra olhar — segredo de superfície que paga uma pista solta a quem ler o chão com atenção.",
+  "acoes": [
+   {
+    "acao": "Examinar as marcas de luta",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Reconhece o padrão de um assalto recente, não um evento aleatório",
+    "parcial": "Percebe só que teve briga ali",
+    "falha": "Passa direto"
+   }
+  ],
+  "mestre": "é o beat de investigação de `bounty_06_caravana_emboscada` — quem tira 10+ aqui chega ao Ponto de Assalto sabendo que a ameaça é ativa e organizada, não bicho de passagem. Se o grupo demorar na estrada e anoitecer, este ponto deixa de ser \"conhecido\" e passa a ser experimentado (ver \"Se o grupo demorar\" no guia).",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "estrada_velha"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_06_caravana_emboscada"
+   }
+  ]
+ },
+ "estrada_roan": {
+  "nome": "Carroça de Roan",
+  "regiao": "estrada_velha",
+  "arquivo": "guias/pontos/estrada_velha.md",
+  "leitura": "Uma carroça de metal coberta por lona espera sem seguir viagem. O condutor tem ombros largos, uma lança curta presa na lateral e um lenço vermelho no pulso, cujos nós ele conta enquanto vigia os dois lados da estrada. \"Se a rota está vazia, alguém pagou para ela ficar vazia.\"",
+  "oque": "Roan, carregador e mercenário avesso a heroísmo barato, parado com um lote de metal que precisa chegar a Kaldrin sem chamar os clãs que querem taxar a rota. Oferece contrato de escolta com escolha real: proteger carga, pessoas ou reputação — nunca os três.",
+  "acoes": [
+   {
+    "acao": "Negociar o contrato de escolta",
+    "teste": "2d6+Espírito",
+    "sucesso": "Termos bons, e a prioridade (carga, pessoas ou reputação) é definida junto com o grupo",
+    "parcial": "Contrato fechado, mas a prioridade fica na mão dele",
+    "falha": "Ele desconfia — o preço sobe ou a vaga fecha"
+   },
+   {
+    "acao": "Perguntar sobre a rota",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Rotas, custo real de uma escolta e quem costuma mexer em carga",
+    "parcial": "Só o custo e a rota",
+    "falha": "\"Pergunta de graça é a que mais custa\""
+   },
+   {
+    "acao": "Escoltar a carroça até Kaldrin",
+    "teste": "2d6+Corpo/Reflexo",
+    "sucesso": "Carga e gente inteiras; ele para de cobrar em Col e passa a pedir presença",
+    "parcial": "Salvam a carga com perda pelo caminho",
+    "falha": "Carga perdida — e ele guarda rancor de quem sugeriu trocar gente por mercadoria"
+   }
+  ],
+  "mestre": "a carga pode virar equipamento de raid — escoltar dá crédito a um clã, revelar o destino impede o clã rival de tentar tomá-la (ver `npcs/roan_carregador.md`). O contrato dele é a porta natural pra `tolbana_e07_guarda_costas_por_um_dia`, que deságua no mesmo encontro de `bounty_06_caravana_emboscada` se as duas estiverem em jogo.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "estrada_velha"
+   },
+   {
+    "tipo": "npc",
+    "id": "roan"
+   },
+   {
+    "tipo": "quest",
+    "id": "tolbana_e07_guarda_costas_por_um_dia"
+   }
+  ]
+ },
+ "estrada_hounds_cobre": {
+  "nome": "Trilha dos Hounds de Cobre",
+  "regiao": "estrada_velha",
+  "arquivo": "guias/pontos/estrada_velha.md",
+  "leitura": "Pegadas em trio e pequenos riscos de metal se cruzam na relva, sempre paralelos à estrada, nunca pelo mato. Em algum ponto à frente, uma matilha está medindo a distância até a próxima carroça — e o tilintar baixo de moeda contra moeda vem na direção do vento.",
+  "oque": "trilha ativa da matilha de Hounds de Cobre (respawn de 4h) — a leitura certa aqui decide se o encontro começa no terreno do grupo ou no deles.",
+  "acoes": [
+   {
+    "acao": "Ler a trilha e prever a emboscada",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Prevê a emboscada e escolhe o terreno",
+    "parcial": "Prevê, mas a carga ou alguém fica exposto",
+    "falha": "A matilha escolhe o primeiro alvo"
+   },
+   {
+    "acao": "Enfrentar a matilha",
+    "teste": "2d6+Corpo",
+    "sucesso": "Ver monstros/hound_de_cobre.md — Técnica desmonta o trio inteiro",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "ameaça comum, 3 golpes. Recompensa: Placa de Cobre Fosco (Ferreiro) + Col. Se cair um Elo de Coleira, guarde o detalhe — os rebites das placas estão do lado de dentro e nenhum ferreiro do andar reconhece o trabalho; Kazuo já se recusou a falar sobre isso.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "estrada_velha"
+   },
+   {
+    "tipo": "monstro",
+    "id": "hound_de_cobre"
+   }
+  ]
+ },
  "horunka_vila": {
   "nome": "Vila de Horunka",
   "regiao": "floresta_horunka",
@@ -16102,6 +19218,321 @@ var PONTOS_DETALHE = {
    {
     "tipo": "quest",
     "id": "horunka_04_o_eremita_sabe"
+   }
+  ]
+ },
+ "jardim_ervas_raras": {
+  "nome": "Canteiro de Ervas Raras",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "A faixa de cor aparece antes do cheiro — roxo e branco no meio do verde, pétalas abertas num horário em que toda flor do vale já devia ter fechado. O ar aqui é adocicado de um jeito que fica na garganta. É o canteiro mais farto do vale, e o mais pisado: dá pra ver onde outra gente já ajoelhou antes de vocês.",
+  "oque": "principal ponto de coleta do Jardim de Fenwyth — Flor Rara, ingrediente de Alquimista e Joalheiro, e a razão de nove entre dez visitas ao vale.",
+  "acoes": [
+   {
+    "acao": "Colher flores raras",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 flores intactas",
+    "parcial": "Colhe 1",
+    "falha": "Amassa tudo sem querer — nada aproveitável"
+   },
+   {
+    "acao": "Identificar espécies úteis (Alquimista)",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Três ingredientes diferentes catalogados",
+    "parcial": "Um ingrediente",
+    "falha": "Colhe algo inútil e perde a tarde"
+   }
+  ],
+  "mestre": "o Néctar de Flor Rara em si não sai da colheita comum — vem das Fadas da Poeira (drop ou doma, ver `monstros/fada_da_poeira.md`) ou da ação regional da tabela do guia. Um 6- aqui não só estraga a colheita: \"amassar tudo\" conta como saquear a área com falha, e é o gatilho que acorda o Guardião mais próximo. Respawn de 6h — ponto natural de downtime de coleta entre sessões.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   }
+  ]
+ },
+ "jardim_selvagem_xfada_da_poeira": {
+  "nome": "Fada da Poeira (spawn)",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "A luz entre as flores não vem do sol. São três, do tamanho de um punho, girando devagar sobre o canteiro, e o pó dourado que soltam fica pendurado no ar depois delas passarem. Uma delas está segurando alguma coisa pequena e brilhante — e não é dela.",
+  "oque": "spawn da criatura-símbolo do vale — ladras de coisa brilhante, não agressivas. Ver ficha completa em `monstros/fada_da_poeira.md`.",
+  "acoes": [
+   {
+    "acao": "Domar uma fada (4 sucessos, exige Néctar de Flor Rara)",
+    "teste": "2d6+Técnica",
+    "sucesso": "1 sucesso limpo",
+    "parcial": "1 sucesso, mas ela se afasta irritada",
+    "falha": "Sem sucesso; a segunda falha encerra a tentativa"
+   },
+   {
+    "acao": "Abater uma no pouso",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Abate sem levantar pó nenhum",
+    "parcial": "Abate, mas a nuvem desce",
+    "falha": "Erra — e a nuvem inteira reage"
+   }
+  ],
+  "mestre": "elas não ferem de propósito — o perigo é o espirro. Use o sopro de pó pra puxar um encontro de **fora** do vale, nunca de dentro: nenhum monstro forte spawna em Fenwyth, então a ameaça tem que ter seguido o grupo até aqui. Fada domada vira luz portátil viva — abre a Câmara da Inscrição e a Gruta de Lumis sem gastar Cristal de Luz, então vale lembrar o Domador do grupo de que este ponto existe. Drops: Pó Dourado, Asa Translúcida Fina, Néctar de Flor Rara, Col.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   },
+   {
+    "tipo": "monstro",
+    "id": "fada_da_poeira"
+   }
+  ]
+ },
+ "jardim_selvagem_xcampo_de_flores_raras": {
+  "nome": "Campo de Flores Raras",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "Mais adiante no vale, uma segunda faixa de cor — menor que o canteiro central, mas intocada. Nenhuma marca de joelho, nenhum caule cortado. Ou ninguém achou ainda, ou alguma coisa fez questão de que ninguém mexesse.",
+  "oque": "segundo ponto de coleta de Flor Rara do vale, logo ao lado de um Guardião do Jardim — a primeira vez que a mesa percebe que Fenwyth também tem dono.",
+  "acoes": [
+   {
+    "acao": "Colher flores raras",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 flores intactas",
+    "parcial": "Colhe 1",
+    "falha": "Amassa tudo sem querer — nada aproveitável"
+   }
+  ],
+  "mestre": "um 6- aqui (\"amassa tudo\") é exatamente o que acorda o Guardião ao lado. Se o grupo colher limpo, deixe colher limpo: Fenwyth não cobra de quem respeita o lugar.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   }
+  ]
+ },
+ "jardim_selvagem_xguardiao_do_jardim": {
+  "nome": "Guardião do Jardim",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "Entre as flores tem um feixe de cipó grosso demais, escuro demais, parado demais. Não balança com o vento que mexe o resto do canteiro. Ele só se move uma vez — quando alguém pisa onde não devia.",
+  "oque": "uma Trepadeira Estranguladora enraizada no meio do canteiro, em versão fraca (1-2 golpes) — ver ficha completa em `monstros/trepadeira_estranguladora.md`. Não caça: só reage se a área for saqueada com falha.",
+  "acoes": [
+   {
+    "acao": "Perceber que não é vegetação comum",
+    "teste": "2d6+Espírito",
+    "sucesso": "Nota o caule vivo e passa sem provocar",
+    "parcial": "Nota tarde demais — recua no limite",
+    "falha": "Trata como planta comum; o enlace vem de graça"
+   },
+   {
+    "acao": "Arrancar pela base do caule",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo, a vinha solta",
+    "parcial": "Mata, mas o aperto fecha antes",
+    "falha": "Fica preso no enlace"
+   }
+  ],
+  "mestre": "o gatilho é a falha na colheita, não a presença do grupo — um grupo que colhe direito nunca luta aqui. É o único \"combate\" da região e é evitável por inteiro; mantenha assim. Vinha Resistente e Espinho Curvo só caem se derrubarem a planta de verdade.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   },
+   {
+    "tipo": "monstro",
+    "id": "trepadeira_estranguladora"
+   }
+  ]
+ },
+ "jardim_selvagem_xcampo_de_flores_raras_2": {
+  "nome": "Campo de Flores Raras 2",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "Na parte baixa do vale o pólen fica suspenso em faixas mais grossas, e as flores aqui crescem em espiral apertada, como se tivessem sido plantadas por uma mão paciente. O cheiro é mais forte que no primeiro canteiro — doce a ponto de enjoar.",
+  "oque": "terceiro ponto de coleta de Flor Rara do vale — mesma mecânica, outro cenário.",
+  "acoes": [
+   {
+    "acao": "Colher flores raras",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 flores intactas",
+    "parcial": "Colhe 1",
+    "falha": "Amassa tudo sem querer — nada aproveitável"
+   }
+  ],
+  "mestre": "se o grupo já colheu em outro canteiro, jogue só na descrição (espiral, cheiro que enjoa) sem mudar a mecânica — é o mesmo teste, outra pintura.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   }
+  ]
+ },
+ "jardim_selvagem_xguardiao_do_jardim_2": {
+  "nome": "Guardião do Jardim 2",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "Deste lado do vale o cipó se espalhou mais: três feixes em vez de um, cobrindo quase um terço do canteiro. As flores crescem por cima dele sem problema nenhum — o que, em Fenwyth, é o problema.",
+  "oque": "segunda Trepadeira Estranguladora do vale, mesmo papel de sentinela — fraca (1-2 golpes), imóvel, reage só a saque com falha.",
+  "acoes": [
+   {
+    "acao": "Perceber que não é vegetação comum",
+    "teste": "2d6+Espírito",
+    "sucesso": "Nota o caule vivo e passa sem provocar",
+    "parcial": "Nota tarde demais — recua no limite",
+    "falha": "Trata como planta comum; o enlace vem de graça"
+   },
+   {
+    "acao": "Arrancar pela base do caule",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo, a vinha solta",
+    "parcial": "Mata, mas o aperto fecha antes",
+    "falha": "Fica preso no enlace"
+   }
+  ],
+  "mestre": "se já usou o primeiro Guardião, varie descrevendo o peso do cipó caindo sobre o tornozelo de quem anda por último na fila — a trepadeira sempre escolhe o último, nunca o mais fraco.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   },
+   {
+    "tipo": "monstro",
+    "id": "trepadeira_estranguladora"
+   }
+  ]
+ },
+ "jardim_selvagem_xcampo_de_flores_raras_3": {
+  "nome": "Campo de Flores Raras 3",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "O terceiro canteiro fica na borda oeste, onde o vale começa a apertar. As flores aqui são quase todas de uma cor só — branco fechado — e o vento que desce da encosta mantém o pólen baixo, rente ao chão, como uma névoa rasa.",
+  "oque": "quarto ponto de coleta de Flor Rara do vale — mesma mecânica, outro cenário.",
+  "acoes": [
+   {
+    "acao": "Colher flores raras",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 flores intactas",
+    "parcial": "Colhe 1",
+    "falha": "Amassa tudo sem querer — nada aproveitável"
+   }
+  ],
+  "mestre": "o pólen baixo é um bom preâmbulo de mudança de tempo — se você pretende puxar algo de fora do vale na sequência (perseguidor, chuva), comece a sinalizar aqui.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   }
+  ]
+ },
+ "jardim_selvagem_xguardiao_do_jardim_3": {
+  "nome": "Guardião do Jardim 3",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "Aqui o feixe de cipó escolheu o trecho mais feio do vale: um ponto onde a encosta joga sombra até o meio da tarde. As flores em volta dele murcharam num círculo perfeito, e o resto do canteiro segue florido como se nada tivesse acontecido.",
+  "oque": "terceira Trepadeira Estranguladora do vale — fraca (1-2 golpes), mesmo gatilho de sempre: só reage a saque com falha.",
+  "acoes": [
+   {
+    "acao": "Perceber que não é vegetação comum",
+    "teste": "2d6+Espírito",
+    "sucesso": "Nota o caule vivo e passa sem provocar",
+    "parcial": "Nota tarde demais — recua no limite",
+    "falha": "Trata como planta comum; o enlace vem de graça"
+   },
+   {
+    "acao": "Arrancar pela base do caule",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo, a vinha solta",
+    "parcial": "Mata, mas o aperto fecha antes",
+    "falha": "Fica preso no enlace"
+   }
+  ],
+  "mestre": "lore da ficha — a trepadeira cresce onde o solo é rico, ou onde alguma coisa grande morreu embaixo. O círculo murcho é só isso. Deixe a dúvida na mesa sem confirmar nada.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   },
+   {
+    "tipo": "monstro",
+    "id": "trepadeira_estranguladora"
+   }
+  ]
+ },
+ "jardim_selvagem_xcampo_de_flores_raras_4": {
+  "nome": "Campo de Flores Raras 4",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "Encosta acima, o quarto canteiro é o mais exposto: sem sombra, sem árvore, flores abertas pro sol o dia inteiro. O perfume aqui é mais fraco, mas as pétalas são as maiores do vale — o tipo de detalhe que um Alquimista percebe antes de qualquer um.",
+  "oque": "quinto ponto de coleta de Flor Rara do vale — o mais longe da entrada, costuma ser achado por último.",
+  "acoes": [
+   {
+    "acao": "Colher flores raras",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 flores intactas",
+    "parcial": "Colhe 1",
+    "falha": "Amassa tudo sem querer — nada aproveitável"
+   }
+  ],
+  "mestre": "recompensa de exploração completa — grupo que sobe até aqui já viu o vale inteiro. Se houver um Joalheiro na mesa, as pétalas maiores são desculpa pra ele perguntar preço na cidade depois.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   }
+  ]
+ },
+ "jardim_selvagem_xguardiao_do_jardim_4": {
+  "nome": "Guardião do Jardim 4",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "O último feixe é o mais alto: enrolado num resto de cerca de pedra que o vale engoliu, a meio metro do chão, com as pontas das vinhas soltas sobre as flores como dedos entreabertos.",
+  "oque": "quarta e última Trepadeira Estranguladora do vale — fraca (1-2 golpes), mesmo gatilho: só reage a saque com falha.",
+  "acoes": [
+   {
+    "acao": "Perceber que não é vegetação comum",
+    "teste": "2d6+Espírito",
+    "sucesso": "Nota o caule vivo e passa sem provocar",
+    "parcial": "Nota tarde demais — recua no limite",
+    "falha": "Trata como planta comum; o enlace vem de graça"
+   },
+   {
+    "acao": "Arrancar pela base do caule",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo, a vinha solta",
+    "parcial": "Mata, mas o aperto fecha antes",
+    "falha": "Fica preso no enlace"
+   }
+  ],
+  "mestre": "se o grupo já derrubou um Guardião antes, este não precisa nem virar cena — descreva o cipó recuando devagar enquanto eles colhem, e pronto: Fenwyth também aprende.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
+   },
+   {
+    "tipo": "monstro",
+    "id": "trepadeira_estranguladora"
+   }
+  ]
+ },
+ "jardim_selvagem_xcampo_de_flores_raras_5": {
+  "nome": "Campo de Flores Raras 5",
+  "regiao": "jardim_selvagem",
+  "arquivo": "guias/pontos/jardim_selvagem.md",
+  "leitura": "O quinto canteiro é o mais escondido: atrás de uma elevação rasa, fora da linha de visão de quem entra no vale. As flores aqui fecham tarde e abrem cedo, e o chão em volta está coberto de pétalas caídas — colheita que ninguém veio buscar.",
+  "oque": "sexto e último ponto de coleta de Flor Rara do vale — encerra a rota natural da região.",
+  "acoes": [
+   {
+    "acao": "Colher flores raras",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 flores intactas",
+    "parcial": "Colhe 1",
+    "falha": "Amassa tudo sem querer — nada aproveitável"
+   }
+  ],
+  "mestre": "bom lugar pra fechar a visita — se o grupo já viu tudo, diga fora de ficção que Fenwyth não tem mais nada pra mostrar nesta passada. \"Nada de ruim acontecer aqui\" é a informação da região, não um suspense mal resolvido.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "jardim_selvagem"
    }
   ]
  },
@@ -16551,6 +19982,837 @@ var PONTOS_DETALHE = {
    }
   ]
  },
+ "pedreira_veio": {
+  "nome": "Veio Abandonado",
+  "regiao": "pedreira",
+  "arquivo": "guias/pontos/pedreira.md",
+  "leitura": "No primeiro patamar, uma pilha de metal largada à beira do trilho: vigas retorcidas, chapas comidas pela ferrugem, um guincho sem corrente. Dá pra ver onde a ferrugem é casca e onde é o metal inteiro — e dá pra ver que alguém, algum dia, já separou essa pilha peça por peça antes de ir embora.",
+  "oque": "ponto de coleta principal de Sucata da pedreira — material de Ferreiro de qualidade inferior, mas abundante e fácil de carregar. A porta de entrada da região: quem chega em Dunhelm quase sempre para aqui primeiro.",
+  "acoes": [
+   {
+    "acao": "Separar sucata aproveitável",
+    "teste": "2d6+Técnica",
+    "sucesso": "Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior)",
+    "parcial": "Separa 1 peça",
+    "falha": "Tudo enferrujado demais, nada aproveitável — e uma lasca corta a mão de quem insistiu sem Luvas"
+   },
+   {
+    "acao": "Rastrear quem trabalhou aqui",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Descobre que ninguém esteve — as marcas de ferramenta e o desgaste são anteriores ao lançamento",
+    "parcial": "Descobre que o desgaste não bate com dez dias de uso",
+    "falha": "Conclui que teve gente trabalhando aqui até pouco tempo"
+   }
+  ],
+  "mestre": "é aqui que o mistério da pedreira começa, antes de qualquer engrenagem: dez dias de jogadores não explicam décadas de desgaste. Deixe a conclusão pesada pro segundo teste — se o grupo só fizer a coleta, a pilha \"já separada por alguém\" fica como detalhe plantado. Respawn de 6h — bom pra downtime de coleta (ver `docs/regras_nucleares_campanha.md`).",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "pedreira"
+   },
+   {
+    "tipo": "monstro",
+    "id": "escorpiao_de_poeira"
+   }
+  ]
+ },
+ "pedreira_maquinario": {
+  "nome": "Maquinário Enferrujado",
+  "regiao": "pedreira",
+  "arquivo": "guias/pontos/pedreira.md",
+  "leitura": "No terceiro patamar, encostado na parede da cratera, está a coisa errada. Por fora é uma carcaça de ferrugem como qualquer outra. Mas uma das chapas cedeu, e pela abertura o mecanismo lá dentro está intacto — nem poeira. As engrenagens são grandes demais. Finas demais. Maiores do que qualquer coisa que este andar precisaria mover.",
+  "oque": "o coração do mistério de Dunhelm — maquinário que não corresponde a nada que a pedreira faria, ponto único. É o local central de `bounty_08_o_que_a_pedreira_escondia`.",
+  "acoes": [
+   {
+    "acao": "Analisar o maquinário",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Reconhece que a tecnologia destoa do resto de Aincrad — e que as engrenagens têm o tamanho certo pra mover uma estrutura da escala de um andar inteiro",
+    "parcial": "Percebe só que é estranho, grande demais pro contexto",
+    "falha": "Ignora, parece só entulho — \"máquina velha de pedreira\""
+   }
+  ],
+  "mestre": "a revelação da bounty não é um objeto, é uma **conclusão** — o que fazer com ela é problema do grupo, e você não deve ajudar. Se o grupo demorar demais no local, o maquinário faz um som: um estalo grave e único, vindo de dentro da carcaça. Aconteceu. Não acontece de novo naquela sessão. Fio direto pro arco do andar 2 (`docs/misterio_andar2.md`).",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "pedreira"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_08_o_que_a_pedreira_escondia"
+   }
+  ]
+ },
+ "pedreira_xsucata_aproveitavel": {
+  "nome": "Sucata Aproveitável",
+  "regiao": "pedreira",
+  "arquivo": "guias/pontos/pedreira.md",
+  "leitura": "Junto ao trilho que corta o segundo patamar, outra pilha: roda de carrinho, rebites soltos, uma pá sem cabo. A ferrugem aqui é mais nova que a do veio de cima — como se a pilha tivesse sido revirada mais vezes.",
+  "oque": "ponto de coleta de Sucata com respawn (6h), a poucos passos do veio principal — mesma mecânica, pra grupo que quer mais material sem esperar.",
+  "acoes": [
+   {
+    "acao": "Separar sucata aproveitável",
+    "teste": "2d6+Técnica",
+    "sucesso": "Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior)",
+    "parcial": "Separa 1 peça",
+    "falha": "Tudo enferrujado demais, nada aproveitável"
+   }
+  ],
+  "mestre": "a ferrugem \"mais nova\" é só textura — se o grupo quiser investigar quem revirou a pilha, improvise: ninguém revirou. Mais um detalhe que não bate.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "pedreira"
+   }
+  ]
+ },
+ "pedreira_xmaquinario_sem_origem": {
+  "nome": "Maquinário Sem Origem",
+  "regiao": "pedreira",
+  "arquivo": "guias/pontos/pedreira.md",
+  "leitura": "Espalhadas num patamar lateral, longe da carcaça principal: engrenagens soltas, um eixo partido com corte limpo demais, uma peça curva que não encaixa em nenhum equipamento de mineração que alguém do grupo já tenha visto. Nada aqui combina com nada ao redor — nem com a pedreira, nem com o andar.",
+  "oque": "o segundo conjunto de peças do mesmo maquinário impossível, ponto único — reforça o padrão pra quem já examinou o Maquinário Enferrujado e ainda duvida da própria conclusão.",
+  "acoes": [
+   {
+    "acao": "Analisar as peças soltas",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Reconhece que a tecnologia destoa do resto de Aincrad — mesmo conjunto, mesma escala errada",
+    "parcial": "Percebe só que é estranho",
+    "falha": "Ignora, parece só entulho"
+   }
+  ],
+  "mestre": "duas evidências na mesma região formam padrão — se o grupo já viu a carcaça do terceiro patamar, trate o teste como confirmação, não descoberta. Levar uma peça embora é permitido, mas muda a leitura do local (complicação prevista na bounty); quem leva uma engrenagem carrega a pergunta junto.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "pedreira"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_08_o_que_a_pedreira_escondia"
+   }
+  ]
+ },
+ "pedreira_xsucata_aproveitavel_2": {
+  "nome": "Sucata Aproveitável 2",
+  "regiao": "pedreira",
+  "arquivo": "guias/pontos/pedreira.md",
+  "leitura": "Num patamar mais baixo, onde a rampa faz a curva: um carrinho de minério tombado de lado, a carga derramada e esquecida. O que era pedra virou cascalho; o que era metal ainda pode virar alguma coisa.",
+  "oque": "segundo ponto de coleta de Sucata com respawn (6h) — mesmo teste, mais fundo na cratera, com o fundo alagado visível daqui.",
+  "acoes": [
+   {
+    "acao": "Separar sucata aproveitável",
+    "teste": "2d6+Técnica",
+    "sucesso": "Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior)",
+    "parcial": "Separa 1 peça",
+    "falha": "Tudo enferrujado demais, nada aproveitável"
+   }
+  ],
+  "mestre": "daqui o grupo enxerga a água parada do fundo — se alguém quiser descer, use a tabela da região em `guias/03_leste_e_aguas.md` (2d6+Reflexo, rampa que cede).",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "pedreira"
+   }
+  ]
+ },
+ "pedreira_xsucata_aproveitavel_3": {
+  "nome": "Sucata Aproveitável 3",
+  "regiao": "pedreira",
+  "arquivo": "guias/pontos/pedreira.md",
+  "leitura": "Perto da borda oeste da cratera, uma fileira de ferramentas encostadas na parede como quem guarda pra amanhã — cabo de picareta apodrecido, martelo sem cunha, lanterna vazia. Amanhã nunca veio.",
+  "oque": "terceiro ponto de coleta de Sucata com respawn (6h) — a variação mais quieta da região, boa pra ritmo de exploração lenta.",
+  "acoes": [
+   {
+    "acao": "Separar sucata aproveitável",
+    "teste": "2d6+Técnica",
+    "sucesso": "Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior)",
+    "parcial": "Separa 1 peça",
+    "falha": "Tudo enferrujado demais, nada aproveitável"
+   }
+  ],
+  "mestre": "a fileira \"guardada pra amanhã\" é o eco mais humano do mistério da pedreira — ferramentas deixadas por trabalhadores que, pelo calendário do jogo, nunca existiram. Só sublinhe se o grupo notar.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "pedreira"
+   }
+  ]
+ },
+ "pedreira_xsucata_aproveitavel_4": {
+  "nome": "Sucata Aproveitável 4",
+  "regiao": "pedreira",
+  "arquivo": "guias/pontos/pedreira.md",
+  "leitura": "Na borda de cima, onde a poeira é mais funda que o resto da cratera, o metal aparece em montículos baixos que o vento cobriu e descobriu mil vezes. Cada passo levanta uma nuvem fina, cor de areia.",
+  "oque": "quarto ponto de coleta de Sucata com respawn (6h) — o mais exposto, na borda superior da cratera.",
+  "acoes": [
+   {
+    "acao": "Separar sucata aproveitável",
+    "teste": "2d6+Técnica",
+    "sucesso": "Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior)",
+    "parcial": "Separa 1 peça",
+    "falha": "Tudo enferrujado demais, nada aproveitável"
+   },
+   {
+    "acao": "Revirar os montículos de poeira",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Percebe a poeira mais fina se mexendo antes de pisar",
+    "parcial": "Percebe no limite — recua sem coletar nada",
+    "falha": "Pisa no arco errado: Escorpião de Poeira, primeiro golpe dele"
+   }
+  ],
+  "mestre": "as bordas da pedreira são habitat de Escorpião de Poeira (`monstros/escorpiao_de_poeira.md`) — enterrado sob dois dedos de poeira durante o dia, emboscador que espera o pé errado. Use a segunda linha só se o grupo insistir em revirar os montículos; coleta normal passa ileso.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "pedreira"
+   },
+   {
+    "tipo": "monstro",
+    "id": "escorpiao_de_poeira"
+   }
+  ]
+ },
+ "posto_guilda_acampamento": {
+  "nome": "Acampamento de Guilda",
+  "regiao": "posto_guilda",
+  "arquivo": "guias/pontos/posto_guilda.md",
+  "leitura": "Umas quinze barracas dividindo o alto do terreno sem nenhum desenho combinado — cada guilda fincou o estandarte onde coube, e as cores se encostam sem se misturar. Cheiro de comida, metal sendo martelado em algum lugar, e três conversas acontecendo em volumes que competem entre si. Um homem de tabardo dobra um mapa com calma demais enquanto observa vocês chegarem.",
+  "oque": "o núcleo do Posto de Kaldrin — entreposto onde as guildas do andar (Sindicato, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds) se cruzam sem entrar em cidade. Não é zona segura de sistema: ninguém briga porque ninguém quer ser o primeiro. É o melhor palco de roleplay de facção do andar.",
+  "acoes": [
+   {
+    "acao": "Sondar o clima entre as guildas",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Sabe quem está de mal com quem, e por quê",
+    "parcial": "Sabe que há atrito, não a causa",
+    "falha": "Pergunta pra pessoa errada e vira assunto"
+   },
+   {
+    "acao": "Negociar entrada numa expedição",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Aceitos, com parte justa do espólio",
+    "parcial": "Aceitos, mas na parte pior da divisão",
+    "falha": "Recusados, e a recusa circula"
+   },
+   {
+    "acao": "Ouvir a proposta do homem de tabardo",
+    "teste": "2d6+Espírito",
+    "sucesso": "Ele abre o jogo: a guilda paga por informação de campo, sem perguntas",
+    "parcial": "Ele oferece, mas cobra sigilo e prazo",
+    "falha": "Ele desconversa — \"volta quando tiver nome\""
+   }
+  ],
+  "mestre": "a fala dele é a do JSON — \"Minha guilda paga bem por informação de campo. Não preciso saber por quê você precisa saber disso.\" — e é gancho de sessão puro: entregue a missão em nome de uma guilda local e deixe o grupo escolher se quer se envolver. O Selo de Trégua tem seis sulcos e só quatro preenchidos; as duas guildas que faltam são conteúdo em aberto seu. No mural de contratos há um aviso sobre caravana atacada na estrada — é o gancho de `bounty_06_caravana_emboscada`, que se resolve na Estrada de Ombric, não aqui.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "posto_guilda"
+   },
+   {
+    "tipo": "quest",
+    "id": "tolbana_e05_rivalidade_de_guildas"
+   }
+  ]
+ },
+ "posto_guilda_xrecruta_da_guilda": {
+  "nome": "Recruta da Guilda",
+  "regiao": "posto_guilda",
+  "arquivo": "guias/pontos/posto_guilda.md",
+  "leitura": "No canto mais maltratado do acampamento, um rapaz magro tenta armar uma barraca sozinho há tempo demais — a lona escorrega, ele repete em voz baixa uma frase decorada sobre a guilda \"pagar bem por informação de campo\", e erra o nó de novo. O equipamento dele é organizado demais pra quem claramente nunca usou nada daquilo.",
+  "oque": "recruta novo de uma guilda local (à escolha do mestre entre as presentes no posto), precisando provar valor pros veteranos. Ele não pede ajuda — precisa, e essa diferença é a cena.",
+  "acoes": [
+   {
+    "acao": "Ajudar com a barraca",
+    "teste": "—",
+    "sucesso": "Sem teste — ele vira contato, e contato aqui vale mais que Col",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Ajudar a armar a prova de competência",
+    "teste": "2d6+Espírito",
+    "sucesso": "Ele confia no grupo e a prova sai limpa",
+    "parcial": "A prova sai, mas um veterano aparece cedo demais pra avaliar",
+    "falha": "Ele quer impressionar e quase estraga algo simples"
+   }
+  ],
+  "mestre": "este é o gancho de `bounty_07_recruta_precisa_de_prova` — funciona melhor como cena de vínculo do que como tarefa; reaproveite qualquer combate ou coleta da sessão como \"a prova\" em vez de inventar trabalho novo. Recompensa: Col 30 + reputação com a guilda escolhida, que pode virar convite futuro pra atividades dela.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "posto_guilda"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_07_recruta_precisa_de_prova"
+   }
+  ]
+ },
+ "posto_guilda_xprovisoes_de_campanha": {
+  "nome": "Provisões de Campanha",
+  "regiao": "posto_guilda",
+  "arquivo": "guias/pontos/posto_guilda.md",
+  "leitura": "Ao lado de uma fogueira apagada, um baú reforçado aberto exibe o estoque em fileiras certinhas: ração, corda enrolada, tochas amarradas em lotes. Uma placa de madeira pendurada na tampa lista preços à mão, e a letra não deixa espaço pra discussão.",
+  "oque": "barraca de suprimento do posto — preço fixo, sem pechincha, na mesma tabela de qualquer Provisões de Campanha do andar (`docs/mercado_andar1.md`): ração de viagem, odre, corda, tocha, Ervas Comuns, Frasco Vazio, bandagem.",
+  "acoes": [
+   {
+    "acao": "Comprar suprimento básico de expedição",
+    "teste": "—",
+    "sucesso": "Sem teste — tabela fixa, Col 20–50 conforme o item",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Perguntar o que está em falta",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Descobre o que acabou e por quê — pista sobre movimento recente no posto",
+    "parcial": "Só descobre o que acabou",
+    "falha": "\"Tá na placa o que tem\""
+   }
+  ],
+  "mestre": "estoque limitado de verdade — reabastece só depois de um tempo (você define), e o que falta na prateleira é termômetro gratuito de quem passou por Kaldrin antes do grupo. Se tudo sumiu de uma vez, alguma guilda está montando expedição grande.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "posto_guilda"
+   }
+  ]
+ },
+ "corredor_final": {
+  "nome": "Corredor Final",
+  "regiao": "sala_chefe",
+  "arquivo": "guias/pontos/sala_chefe.md",
+  "leitura": "Trinta metros de quase nada. As tochas ficam cada vez mais espaçadas até sumir, e a luz que sobra vem do outro lado, por baixo da porta. O silêncio é do tipo pesado: o som dos próprios passos volta maior do que deveria, como se o corredor fosse mais largo do que os olhos dizem. Nas paredes, símbolos kobold riscados por cima uns dos outros, muitas vezes, pela mesma mão. E no fim, uma porta de seis metros — e, do outro lado, respiração.",
+  "oque": "o último trecho antes da sala do chefe, no vigésimo sub-nível do Labirinto — a antessala do raid. O vazio é o aviso, e a porta é a tese do andar dita em pedra: ninguém sobe sozinho.",
+  "acoes": [
+   {
+    "acao": "Ler os símbolos kobold",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "São contagens, e a última linha está incompleta — alguém parou de contar recentemente",
+    "parcial": "Reconhece que são contagens, sem conseguir ler o número",
+    "falha": "Parece pichação de monstro; o grupo passa direto"
+   },
+   {
+    "acao": "Parar e ouvir antes de decidir",
+    "teste": "2d6+Espírito",
+    "sucesso": "Respiração grande, lenta, paciente — ele sabe que tem gente aqui, e não tem pressa",
+    "parcial": "Ouve a respiração, sem saber se é de um ou de vários",
+    "falha": "O silêncio parece seguro — leitura errada"
+   },
+   {
+    "acao": "Empurrar a porta do chefe",
+    "teste": "—",
+    "sucesso": "Sem teste — abre com quatro pessoas empurrando ao mesmo tempo; com menos, não abre",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "é a última chance de recuar com dignidade — trate o corredor como cena, não como passagem. Se houver um Marco ou uma dívida pendente entre personagens, é aqui que ela vem à tona; o eco dos passos é a desculpa perfeita pra uma cena curta e silenciosa. A contagem interrompida é uma pergunta que nenhum NPC do andar consegue responder — ver `docs/misterio_andar2.md` antes de responder qualquer coisa sobre ela. É depois daqui que os ecos e os símbolos rituais dos corredores laterais aparecem com naturalidade.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "sala_chefe"
+   },
+   {
+    "tipo": "npc",
+    "id": "marco"
+   },
+   {
+    "tipo": "quest",
+    "id": "tolbana_11_formacao_da_estrategia"
+   }
+  ]
+ },
+ "chefe_illfang": {
+  "nome": "Illfang the Kobold Lord",
+  "regiao": "sala_chefe",
+  "arquivo": "guias/pontos/sala_chefe.md",
+  "leitura": "A sala é redonda e enorme, com o teto perdido no escuro. No fundo, num trono baixo de pedra, um kobold de dois metros e meio, pelo escuro, talwar numa mão e broquel na outra. Atrás dele, encostado no trono, algo comprido enrolado em pano. Illfang não está esperando na porta: está sentado, e levanta. Devagar. Ele não tem pressa nenhuma.",
+  "oque": "o chefe do Andar 1 — 4 barras de 6-8 golpes (24-32 no total) e Ruin Kobold Sentinels de apoio. Conteúdo de raid organizado, não encontro de grupo pequeno recém-formado — e a sala deixa isso claro antes de qualquer golpe, pelo tamanho.",
+  "acoes": [
+   {
+    "acao": "Entrar com a formação combinada",
+    "teste": "2d6+Espírito",
+    "sucesso": "O raid entra na ordem combinada e ninguém quebra a fileira no primeiro rugido",
+    "parcial": "Entram organizados, mas alguém avança cedo demais e a formação leva uma rodada pra se refazer",
+    "falha": "A sala é maior do que qualquer plano feito do lado de fora — o plano morre na porta"
+   },
+   {
+    "acao": "Atacar nas barras 1-3 (talwar e broquel)",
+    "teste": "2d6 + arma",
+    "sucesso": "1 golpe + você abre a guarda dele pro próximo",
+    "parcial": "1 golpe",
+    "falha": "Bloqueado pelo broquel; ele contra-ataca"
+   },
+   {
+    "acao": "Reconhecer a troca pro nodachi",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Avisa o raid a tempo: ninguém é pego na primeira investida",
+    "parcial": "Avisa tarde: uma equipe é atingida",
+    "falha": "Ninguém percebe — é onde as pessoas morrem"
+   },
+   {
+    "acao": "Tirar um aliado caído da linha",
+    "teste": "2d6+Corpo",
+    "sucesso": "Salva a pessoa e volta pra linha",
+    "parcial": "Salva, mas leva o golpe no lugar",
+    "falha": "Os dois ficam expostos"
+   }
+  ],
+  "mestre": "não use este ponto como encontro avulso — ele existe pra ser marcado, planejado e discutido em mesa por sessões; é o pagamento de `tolbana_12_o_raid_contra_illfang`. Barras, convocação de Sentinels, drops e a troca de arma em `monstros/illfang_the_kobold_lord.md`; na barra 4 ele larga talwar e broquel, saca o nodachi e perde a defesa do escudo. Se alguém comprou de corretor que é \"talwar e broquel até o fim\", deixe a informação estar errada — é canônico. Recompensa: ~2000 Col dividido, XP alto dividido e uma unidade do `Nodachi de Illfang` — quem fica com ela é discussão de mesa, de propósito. O Last Attack Bonus é justamente o que a linha interrompida da Câmara da Inscrição menciona, e o andar 2 não abre sozinho — ver `docs/misterio_andar2.md`.",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "illfang_the_kobold_lord"
+   },
+   {
+    "tipo": "npc",
+    "id": "diavel"
+   },
+   {
+    "tipo": "quest",
+    "id": "tolbana_11_formacao_da_estrategia"
+   },
+   {
+    "tipo": "quest",
+    "id": "tolbana_12_o_raid_contra_illfang"
+   },
+   {
+    "tipo": "regiao",
+    "id": "sala_chefe"
+   }
+  ]
+ },
+ "sala_chefe_xeco_de_passos": {
+  "nome": "Eco de Passos",
+  "regiao": "sala_chefe",
+  "arquivo": "guias/pontos/sala_chefe.md",
+  "leitura": "O corredor estreita de novo, e o som chega antes da fonte: metal arrastando pedra, no ritmo exato de um passo que não tem pressa. Quando ele aparece na borda da luz, já está parado — placa de metal dos pés à garganta, alabarda apoiada no chão como quem espera há muito tempo.",
+  "oque": "um Ruin Kobold Sentinel isolado de guarda num corredor lateral da antessala — respawn de 3h. Fora da luta de Illfang, um Sentinel sozinho é o aviso de que o grupo está perto do fim do Labirinto.",
+  "acoes": [
+   {
+    "acao": "Enfrentar",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo antes dele fechar a guarda",
+    "parcial": "Acerta, mas a armadura absorve quase tudo",
+    "falha": "A alabarda já está no ar quando você chega"
+   },
+   {
+    "acao": "Mirar a garganta",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Acerta o único ponto sem placa — o golpe conta dobrado",
+    "parcial": "Acerta, mas ele cobre a garganta em seguida",
+    "falha": "O colar de couro desvia a lâmina"
+   },
+   {
+    "acao": "Contornar e seguir",
+    "teste": "—",
+    "sucesso": "Sem teste — ele não sai da posição designada; o terreno fora dela é seguro",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "ameaça comum aqui (3-4 golpes); drop de Col + Fragmento de Armadura Kobold. Use como termômetro: se o grupo sofre pra passar de um Sentinel isolado, a porta do chefe não é pra eles ainda.",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "ruin_kobold_sentinel"
+   },
+   {
+    "tipo": "regiao",
+    "id": "sala_chefe"
+   }
+  ]
+ },
+ "sala_chefe_xsimbolo_kobold": {
+  "nome": "Símbolo Kobold",
+  "regiao": "sala_chefe",
+  "arquivo": "guias/pontos/sala_chefe.md",
+  "leitura": "Na parede do corredor, um desenho ritual riscado na pedra — tinta escura, seca, traços que se repetem em ângulos certinhos. Não é arranhão de garra. Alguém parou aqui, mediu, e marcou.",
+  "oque": "marcação ritual kobold feita recentemente — pista solta da mesma heráldica organizada dos estandartes do Trecho V.",
+  "acoes": [
+   {
+    "acao": "Sentir o peso do símbolo",
+    "teste": "2d6+Espírito",
+    "sucesso": "Sente que o símbolo foi feito recentemente — não é decoração antiga",
+    "parcial": "Reconhece só que é um símbolo, nada além",
+    "falha": "Parece sujeira; o grupo ignora"
+   },
+   {
+    "acao": "Estudar a heráldica",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Lê o padrão: é organizado, é sucessão — os kobolds não são nativos deste andar",
+    "parcial": "Vê que é organizado, não selvagem",
+    "falha": "\"Rabisco de bicho\""
+   }
+  ],
+  "mestre": "conecta com o Salão dos Estandartes (Trecho V-1) e com a contagem incompleta do `corredor_final`; levada ao Estudioso Obcecado, alimenta a tese dele. Não explique de onde os kobolds vieram.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "sala_chefe"
+   },
+   {
+    "tipo": "npc",
+    "id": "estudioso_obcecado"
+   }
+  ]
+ },
+ "sala_chefe_xeco_de_passos_2": {
+  "nome": "Eco de Passos 2",
+  "regiao": "sala_chefe",
+  "arquivo": "guias/pontos/sala_chefe.md",
+  "leitura": "Mais um corredor estreito, e outra vez o metal arrastando — só que desta vez o som para quando vocês param. Ele está acompanhando o grupo pelo corredor paralelo, e os dois lados sabem disso.",
+  "oque": "segundo Sentinel isolado da antessala, respawn de 3h — mesma mecânica do primeiro, com a diferença de que este escolta o grupo de longe.",
+  "acoes": [
+   {
+    "acao": "Enfrentar",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo antes dele fechar a guarda",
+    "parcial": "Acerta, mas a armadura absorve quase tudo",
+    "falha": "Ele já está esperando — ataca primeiro"
+   },
+   {
+    "acao": "Mirar a garganta",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Acerta o único ponto sem placa — o golpe conta dobrado",
+    "parcial": "Acerta, mas ele cobre a garganta em seguida",
+    "falha": "O colar de couro desvia a lâmina"
+   },
+   {
+    "acao": "Contornar e seguir",
+    "teste": "—",
+    "sucesso": "Sem teste — ele mantém a posição e não persegue além do posto",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "mesmo drop (Col + Fragmento de Armadura Kobold). Se o grupo notar que os passos acompanhavam, recompense a leitura: quem escolhe engajar aqui escolhe também o terreno, não o Sentinel.",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "ruin_kobold_sentinel"
+   },
+   {
+    "tipo": "regiao",
+    "id": "sala_chefe"
+   }
+  ]
+ },
+ "sala_chefe_xeco_de_passos_3": {
+  "nome": "Eco de Passos 3",
+  "regiao": "sala_chefe",
+  "arquivo": "guias/pontos/sala_chefe.md",
+  "leitura": "O terceiro corredor é o mais estreito até agora, e o arrastar de metal vem de frente — ele está no meio do caminho, de propósito, e a alabarda risca uma faísca na pedra a cada passo que dá na direção de vocês.",
+  "oque": "terceiro Sentinel isolado, respawn de 3h. Corredor estreito de verdade — vale a regra de dungeon: armas de haste longa e de duas mãos não dão bônus aqui.",
+  "acoes": [
+   {
+    "acao": "Enfrentar",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo antes dele fechar a guarda",
+    "parcial": "Acerta, mas a armadura absorve quase tudo",
+    "falha": "A alabarda controla o vão inteiro — ele acerta primeiro"
+   },
+   {
+    "acao": "Mirar a garganta",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Acerta o único ponto sem placa — o golpe conta dobrado",
+    "parcial": "Acerta, mas ele cobre a garganta em seguida",
+    "falha": "O colar de couro desvia a lâmina"
+   },
+   {
+    "acao": "Contornar e seguir",
+    "teste": "—",
+    "sucesso": "Sem teste — ele mantém a posição e não persegue além do posto",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "mesmo drop (Col + Fragmento de Armadura Kobold). Se ainda não disse, é aqui que a regra de corredor estreito muda a luta — adaga, rapieira e tonfa brilham; glaive e espada longa atrapalham (`mapas/dungeons_andar1.md`).",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "ruin_kobold_sentinel"
+   },
+   {
+    "tipo": "regiao",
+    "id": "sala_chefe"
+   }
+  ]
+ },
+ "sala_chefe_xeco_de_passos_4": {
+  "nome": "Eco de Passos 4",
+  "regiao": "sala_chefe",
+  "arquivo": "guias/pontos/sala_chefe.md",
+  "leitura": "O último eco é o mais perto da porta. Por baixo do metal arrastando dá pra ouvir a respiração grande que vem da sala do chefe — os dois sons juntos dizem a mesma coisa: ninguém passa sem ser notado.",
+  "oque": "quarto e último Sentinel isolado da antessala, respawn de 3h — o degrau final de escolta antes do trono.",
+  "acoes": [
+   {
+    "acao": "Enfrentar",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo antes dele fechar a guarda",
+    "parcial": "Acerta, mas a armadura absorve quase tudo",
+    "falha": "A alabarda já está no ar quando você chega"
+   },
+   {
+    "acao": "Mirar a garganta",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Acerta o único ponto sem placa — o golpe conta dobrado",
+    "parcial": "Acerta, mas ele cobre a garganta em seguida",
+    "falha": "O colar de couro desvia a lâmina"
+   },
+   {
+    "acao": "Contornar e seguir",
+    "teste": "—",
+    "sucesso": "Sem teste — ele mantém a posição e não persegue além do posto",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "último aviso mecânico antes de `chefe_illfang`. Se o grupo apanha feio aqui, diga com o combate, não com palavras, que eles não estão prontos — mesma função da Passagem Guardada (Trecho IV-5).",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "ruin_kobold_sentinel"
+   },
+   {
+    "tipo": "regiao",
+    "id": "sala_chefe"
+   }
+  ]
+ },
+ "terracos_plantacao": {
+  "nome": "Plantação em Socalco",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "Do pé da encosta dá pra contar os degraus um a um, subindo até onde a luz bate mais cheia. A escada de pedra que leva ao último degrau é estreita demais pra duas pessoas e gasta no meio, de tanto pé subindo carregado. Lá em cima, a plantação está inteira — verde, baixa, balançando com o vento do vale como se a praga dos degraus de baixo não existisse.",
+  "oque": "a faixa de cultivo mais alta e melhor preservada dos Terraços — ponto de coleta principal da região, com material de qualidade superior pra Cozinheiro. O acesso é a escada estreita de pedra, e é ela que cobra o preço da descida.",
+  "acoes": [
+   {
+    "acao": "Subir e colher no degrau mais alto",
+    "teste": "2d6+Corpo",
+    "sucesso": "Colheita com qualidade melhor que a média (material superior pra Cozinheiro)",
+    "parcial": "Colhe, mas escorrega na descida (dano leve)",
+    "falha": "Desiste da subida"
+   },
+   {
+    "acao": "Observar a encosta de cima",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Vista clara dos degraus todos — sabe quais já foram comidos e de onde vem o barulho de mastigação",
+    "parcial": "Vê o estrago, sem localizar a origem",
+    "falha": "Só vê plantação bonita"
+   }
+  ],
+  "mestre": "enquanto a praga durar, este degrau é a próxima refeição dos gafanhotos — deixe isso visível a cada sessão de atraso em `bounty_05`. A qualidade superior da colheita é o que justifica o Cozinheiro do grupo subir a escada em vez de comprar no vale.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_05_colheita_ameacada"
+   }
+  ]
+ },
+ "terracos_xgafanhoto_gigante": {
+  "nome": "Gafanhoto Gigante (spawn)",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "O capim se mexe sem vento — não ondula, pula. Um estalo pesado de salto ecoa no degrau de cima, depois outro, depois três ao mesmo tempo. Quando o primeiro aparece, do tamanho de um cão médio, as mandíbulas já estão trabalhando — mesmo sem estar comendo nada.",
+  "oque": "spawn de Gafanhoto Gigante — ver `monstros/gafanhoto_gigante.md`. Um visível significa entre oito e vinte no mesmo terraço. Ameaça comum, 3 golpes; recompensa em Col com chance de Perna Serrilhada.",
+  "acoes": [
+   {
+    "acao": "Enfrentar",
+    "teste": "2d6+Corpo",
+    "sucesso": "Golpe limpo, sem reação",
+    "parcial": "Acerta, mas a ninhada se agita",
+    "falha": "Salto de impacto antes de você"
+   },
+   {
+    "acao": "Cronometrar o ponto fraco",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Acerta as patas traseiras dobradas antes do salto — ele perde o impulso",
+    "parcial": "Acerta, mas fora do timing",
+    "falha": "Ele salta primeiro"
+   },
+   {
+    "acao": "Andar devagar e cercar",
+    "teste": "2d6+Reflexo",
+    "sucesso": "O grupo escolhe quando a luta começa",
+    "parcial": "Um deles percebe e estica as pernas",
+    "falha": "O terraço inteiro levanta de uma vez"
+   }
+  ],
+  "mestre": "matar não resolve — respawn de 4h, e eles voltam. A solução de verdade em `bounty_05_colheita_ameacada` é achar e queimar a ninhada nas fendas de pedra abaixo do terraço mais baixo. Deixe o grupo sentir a inutilidade do abate antes de apontar isso; é a lição central da região.",
+  "atalhos": [
+   {
+    "tipo": "monstro",
+    "id": "gafanhoto_gigante"
+   },
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_05_colheita_ameacada"
+   }
+  ]
+ },
+ "terracos_xterraco_alto": {
+  "nome": "Terraço Alto",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "Mais um degrau estreito de cultivo perto do topo, com a escada de pedra lisa de tão gasta. Daqui dá pra ver o Guardião da Colheita de pé no degrau ao lado, vara comprida na mão, sem tirar os olhos do campo abaixo.",
+  "oque": "ponto de coleta secundário, mesma safra do degrau principal — respawn de 6h, colheita de qualidade superior pra Cozinheiro.",
+  "acoes": [
+   {
+    "acao": "Subir e colher",
+    "teste": "2d6+Corpo",
+    "sucesso": "Colheita com qualidade melhor que a média (material superior pra Cozinheiro)",
+    "parcial": "Colhe, mas escorrega na descida (dano leve)",
+    "falha": "Desiste da subida"
+   }
+  ],
+  "mestre": "bom ponto pra dividir o grupo sem forçar — quem sobe colhe, quem fica embaixo conversa com o guardião. Os dois lados da cena se alimentam sozinhos.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   }
+  ]
+ },
+ "terracos_xguardiao_da_colheita": {
+  "nome": "Guardião da Colheita",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "O espantalho está fincado no degrau mais castigado da encosta, tão velho que a palha já virou uma coisa só com a roupa — e mesmo assim tem flores frescas penduradas no braço de madeira, trocadas a cada poucos dias. Do lado dele, um rapaz do vale segura uma vara comprida e vigia o campo abaixo sem piscar. \"Cada terraço que a gente perde pra monstro é um mês sem plantar de novo\", ele diz, sem virar o rosto. \"Aqui a gente luta por comida, não por Col.\"",
+  "oque": "posto de vigia da fazenda comunitária de Molwyn, montado ao lado do espantalho que os fazendeiros chamam de Guardião da Colheita. É quem recompensa — em comida e gratidão, não em Col — quem protege a colheita dos ataques de monstro de campo.",
+  "acoes": [
+   {
+    "acao": "Perguntar sobre a praga",
+    "teste": "—",
+    "sucesso": "Sem teste — ele aponta as fendas de pedra abaixo do degrau mais baixo, de onde jura que os gafanhotos vêm",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Ficar de guarda na próxima debandada",
+    "teste": "2d6+Corpo",
+    "sucesso": "Repele o ataque sem perder leira nenhuma — Solveig te deve",
+    "parcial": "Repele, mas uma leira é comida na confusão",
+    "falha": "A debandada passa por cima de vocês"
+   }
+  ],
+  "mestre": "o espantalho não é mágico — os fazendeiros o tratam com respeito exagerado porque precisam acreditar em alguma coisa (ver \"Locais\" no guia da região). O vigia é a porta de entrada de `bounty_05_colheita_ameacada` pra quem chegou pelos Terraços sem falar com o Fazendeiro Local em Molwyn — a recompensa final é a Foice de Ceifa dos Terraços e o jantar do vale, não Col.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   },
+   {
+    "tipo": "npc",
+    "id": "fazendeiro_local"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_05_colheita_ameacada"
+   }
+  ]
+ },
+ "terracos_xterraco_alto_2": {
+  "nome": "Terraço Alto 2",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "Este degrau já mostra o estrago nas bordas — leiras mordidas até o talo, capim pisado num padrão de salto que nenhum animal de fazenda faz. O centro ainda está verde, mas é questão de dias.",
+  "oque": "segundo ponto de coleta secundário da região, o mais exposto à praga — mesma mecânica e mesma recompensa dos demais degraus altos.",
+  "acoes": [
+   {
+    "acao": "Subir e colher",
+    "teste": "2d6+Corpo",
+    "sucesso": "Colheita com qualidade melhor que a média (material superior pra Cozinheiro)",
+    "parcial": "Colhe, mas escorrega na descida (dano leve)",
+    "falha": "Desiste da subida"
+   }
+  ],
+  "mestre": "o estrago crescente nas bordas é o relógio da região — descreva este degrau pior a cada sessão que o grupo adiar `bounty_05`. É o termômetro mais barato que você tem.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   }
+  ]
+ },
+ "terracos_xterraco_alto_3": {
+  "nome": "Terraço Alto 3",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "A escada deste degrau está meio tomada pelo mato — pouca gente sobe até aqui, e a plantação cresceu quase selvagem, mais densa que o normal. O silêncio é quase completo, quebrado só pelo farfalhar distante dos degraus de baixo.",
+  "oque": "terceiro ponto de coleta secundário, o mais isolado da encosta — respawn de 6h, colheita de qualidade superior pra Cozinheiro.",
+  "acoes": [
+   {
+    "acao": "Subir e colher",
+    "teste": "2d6+Corpo",
+    "sucesso": "Colheita com qualidade melhor que a média (material superior pra Cozinheiro)",
+    "parcial": "Colhe, mas escorrega na descida (dano leve)",
+    "falha": "Desiste da subida"
+   }
+  ],
+  "mestre": "o isolamento é a moeda deste ponto — colheita tranquila se o grupo quiser evitar o gafanhoto, ou encontro surpresa se você precisar de tensão numa sessão morna. As duas leituras cabem no mesmo silêncio.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   }
+  ]
+ },
+ "terracos_xterraco_alto_4": {
+  "nome": "Terraço Alto 4",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "O degrau mais perto do cume: o vento aqui bate direto, sem nada pra quebrar, e a plantação inteira deita numa direção só. Lá embaixo dá pra ver os três moinhos do Vale de Molwyn girando devagar, alheios a tudo.",
+  "oque": "quarto ponto de coleta secundário, no alto da encosta — mesma safra superior, mesma escada que cobra na descida.",
+  "acoes": [
+   {
+    "acao": "Subir e colher",
+    "teste": "2d6+Corpo",
+    "sucesso": "Colheita com qualidade melhor que a média (material superior pra Cozinheiro)",
+    "parcial": "Colhe, mas escorrega na descida (dano leve)",
+    "falha": "Desiste da subida"
+   }
+  ],
+  "mestre": "a vista dos moinhos é a deixa visual que amarra Solveig a Molwyn — quem colhe aqui entende sem explicação de quem é a comida que está salvando. Use a cena pra puxar conversa de personagem, não rolagem.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   }
+  ]
+ },
+ "terracos_xterraco_alto_5": {
+  "nome": "Terraço Alto 5",
+  "regiao": "terracos",
+  "arquivo": "guias/pontos/terracos.md",
+  "leitura": "A escada deste degrau tem pedras soltas logo no primeiro lance, e uma cicatriz de terra revirada marca onde alguém escorregou não faz muito tempo. A plantação, em compensação, é das mais cheias da encosta.",
+  "oque": "quinto ponto de coleta secundário — respawn de 6h, colheita de qualidade superior pra Cozinheiro, com a descida mais traiçoeira dos degraus.",
+  "acoes": [
+   {
+    "acao": "Subir e colher",
+    "teste": "2d6+Corpo",
+    "sucesso": "Colheita com qualidade melhor que a média (material superior pra Cozinheiro)",
+    "parcial": "Colhe, mas escorrega na descida (dano leve)",
+    "falha": "Desiste da subida"
+   }
+  ],
+  "mestre": "enfatize o custo do 7-9 aqui — a marca da queda anterior está desenhada pra isso. Quem vê a cicatriz na terra e sobe mesmo assim está aceitando o risco de olhos abertos, e o dano leve da descida deixa de parecer arbitrário.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "terracos"
+   }
+  ]
+ },
  "tolbana_praca": {
   "nome": "Praça de Tolbana",
   "regiao": "tolbana",
@@ -16927,6 +21189,519 @@ var PONTOS_DETALHE = {
    {
     "tipo": "regiao",
     "id": "torre_relogio"
+   }
+  ]
+ },
+ "contrabando_ponto": {
+  "nome": "Ponto de Encontro",
+  "regiao": "trilha_contrabandistas",
+  "arquivo": "guias/pontos/trilha_contrabandistas.md",
+  "leitura": "A clareira é pequena demais pra ser acampamento e arrumada demais pra ser acidente: pedras dispostas pra sentar, cinzas frias de mais de uma fogueira, e a grama ao redor amassada num padrão que se repete — sempre na mesma altura, sempre no mesmo intervalo. Quem passa rápido vê um descanso abandonado. Quem para, percebe que alguém usa isso aqui com frequência — e que a grama amassada aponta pra algum lugar.",
+  "oque": "o coração visível da Trilha de Corvain — o lugar onde a rota de contrabando entre a Cidade do Início e Tolbana se revela pra quem sabe ler. Mecanicamente é a porta de entrada da região: seguir o padrão leva aos demais pontos da trilha.",
+  "acoes": [
+   {
+    "acao": "Seguir o padrão da grama amassada",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Segue a marca sem ser notado e acha o próximo ponto da trilha",
+    "parcial": "Segue, mas faz barulho demais — alguém vai saber que vocês passaram",
+    "falha": "Perde a trilha; o padrão some na vegetação"
+   },
+   {
+    "acao": "Ler as marcas como código",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Entende o código e onde fica o encontro com o contato",
+    "parcial": "Sabe que é código, mas segue às cegas",
+    "falha": "Segue uma marca falsa — meia hora perdida e um observador avisado"
+   },
+   {
+    "acao": "Esconder algo pra retirar depois",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Ninguém acha, nem procurando",
+    "parcial": "Acham, mas você tem uma desculpa pronta",
+    "falha": "Achado e registrado — a trilha sabe o que você escondeu"
+   }
+  ],
+  "mestre": "a recompensa do ponto é revelar o resto da região — na prática, conduza a descoberta na sequência marcas → contato, como sugestão de ordem, não como bloqueio. É nesta clareira que o Contato aparece \"quando quer\". Se o grupo pernoitar aqui, deixe cinzas novas e uma pedra fora do lugar pela manhã: alguém usou o ponto enquanto eles dormiam.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "trilha_contrabandistas"
+   },
+   {
+    "tipo": "npc",
+    "id": "o_contato"
+   }
+  ]
+ },
+ "trilha_contrabandistas_xmarca_de_passagem": {
+  "nome": "Marca de Passagem",
+  "regiao": "trilha_contrabandistas",
+  "arquivo": "guias/pontos/trilha_contrabandistas.md",
+  "leitura": "Um risco raso no tronco de uma árvore caída, na altura do quadril — curto, reto, recente o bastante pra ainda mostrar casca clara por dentro. Uns trinta passos adiante, outro igual, numa pedra. Quem fez sabia exatamente onde a mão de quem procura ia parar.",
+  "oque": "um dos elos do código da trilha — sozinha, a marca não diz nada; em sequência, desenha o caminho até o contato. É o mesmo sistema de riscos rasos descrito no guia da região.",
+  "acoes": [
+   {
+    "acao": "Seguir a marca até a próxima",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Segue sem ser notado, no ritmo certo da trilha",
+    "parcial": "Segue, mas faz barulho demais — a trilha registra sua passagem",
+    "falha": "Perde a trilha; a próxima marca simplesmente não aparece"
+   }
+  ],
+  "mestre": "existem várias marcas espalhadas pela região — trate esta como a primeira que o grupo efetivamente decifra depois do Ponto de Encontro, e varie o suporte entre elas (pedra, tronco, raiz). Quem já negociou com o Contato uma vez aprende o código de graça: \"cliente perdido não compra.\"",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "trilha_contrabandistas"
+   }
+  ]
+ },
+ "trilha_contrabandistas_xcontato_desconfiado": {
+  "nome": "Contato Desconfiado",
+  "regiao": "trilha_contrabandistas",
+  "arquivo": "guias/pontos/trilha_contrabandistas.md",
+  "leitura": "Ele está encostado numa árvore como quem espera alguém há tempo demais — de capuz, de frente pro caminho, sem fingir que não viu vocês chegarem. Antes de qualquer cumprimento, a voz vem baixa e educada: \"Palavra errada e essa conversa acabou antes de começar.\"",
+  "oque": "o Contato da Trilha de Corvain em modo cauteloso — primeiro encontro, grupo sem referência. Ele só negocia informação ou item se o grupo souber (ou descobrir) a senha certa; sem ela, é só um homem educado esperando outra pessoa.",
+  "acoes": [
+   {
+    "acao": "Ser aceito pelo Contato",
+    "teste": "2d6+Espírito",
+    "sucesso": "Ele negocia de igual pra igual",
+    "parcial": "Negocia, mas cobra o \"incômodo\" (+25% em Col)",
+    "falha": "Ele some — e a trilha esfria por uma semana"
+   },
+   {
+    "acao": "Comprar / trocar com ele",
+    "teste": "—",
+    "sucesso": "Sobretudo do Contrabandista: 370 Col ou uma peça Incomum em troca · passagem por rota não vigiada: 100 Col · item sem procedência: 30% abaixo do preço, sempre com história",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "a senha não se descobre aqui — ela circula no mercado negro da capital (Ruela das Versões), e caçá-la é o gancho de investigação. É o mesmo homem de `EP.16 — O Homem de Capuz Cinza` e `EP.33 — Mercado Negro`, comprador de dados aparentemente inúteis que alimenta `EP.47 — A Lista dos Quarenta`; ele não sabe (ou não admite) pra que servem. Se traído, não retalia: some, e a trilha some com ele. Nome, procedência dos itens e quem mais usa a trilha são as três perguntas que ele nunca responde.",
+  "atalhos": [
+   {
+    "tipo": "npc",
+    "id": "o_contato"
+   },
+   {
+    "tipo": "regiao",
+    "id": "trilha_contrabandistas"
+   }
+  ]
+ },
+ "vale_fazenda": {
+  "nome": "Fazenda Comunitária",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "Quatro casas baixas dividindo o mesmo campo cercado de pedra solta. Roupa no varal, fumaça de fogão a lenha subindo reta, e um homem de meia-idade curvado sobre uma leira, com ferramentas gastas de tanto usar. Ele olha pra vocês por cima do ombro, mede o tamanho do grupo e volta pro trabalho sem dizer nada — aqui, quem quer conversa ajuda primeiro.",
+  "oque": "o coração social do Vale de Molwyn — quatro famílias-avatar dividindo o mesmo campo, a coisa mais próxima de sociedade funcional que o andar tem. Ponto de apoio: comida preparada, trabalho braçal e o gancho das pragas do leste.",
+  "acoes": [
+   {
+    "acao": "Trabalhar um dia na lavoura",
+    "teste": "2d6+Corpo",
+    "sucesso": "Ganha a Calça de Trabalho e a confiança do vale",
+    "parcial": "Ganha comida e um \"obrigado\" seco",
+    "falha": "Estraga uma leira; ninguém grita, que é pior"
+   },
+   {
+    "acao": "Perguntar sobre as pragas",
+    "teste": "—",
+    "sucesso": "Sem teste — \"Praga nova toda semana.\" Ele conta dos gafanhotos nos Terraços de Solveig: gancho de bounty_05",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Comprar comida preparada",
+    "teste": "—",
+    "sucesso": "20-40 Col; se um Cozinheiro preparar junto, a refeição dá bônus temporário",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "o pagamento aqui é comida, nunca Col — é de propósito, pra empurrar o grupo pra mecânica de refeição do Cozinheiro. Se o grupo ficar até o anoitecer, oferecem jantar: cena longa de mesa, sem rolagem, e quem aceita ganha o bônus de refeição na sessão seguinte — mais uma dívida social com o vale. Conversar aqui é a porta natural pros pontos de recurso da região.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   },
+   {
+    "tipo": "npc",
+    "id": "fazendeiro_local"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_05_colheita_ameacada"
+   }
+  ]
+ },
+ "vale_moinho": {
+  "nome": "Moinho de Vento",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "As pás giram devagar contra o céu, rangendo num compasso que não falha nunca — e no meio do rangido tem uma nota mais aguda, quase musical. Este moinho canta. O dono jura que é de propósito; a filha dele, que recolhe a farinha irregular lá embaixo, claramente discorda.",
+  "oque": "um dos três moinhos do vale — o do meio, o primeiro marco de quem vem da Cidade do Início pela Estrada de Ombric. Mói mal por causa do eixo torto, e é exatamente por isso que existe história aqui.",
+  "acoes": [
+   {
+    "acao": "Subir no moinho",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Vista do vale inteiro; vantagem no próximo teste de Cartógrafo",
+    "parcial": "Sobe, mas o mecanismo range alto e o dono grita lá de baixo",
+    "falha": "A escada quebra"
+   },
+   {
+    "acao": "Examinar o eixo torto",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Entende o defeito e sabe que madeira aguentaria a substituição (Nodosa)",
+    "parcial": "Confirma que o problema é o eixo",
+    "falha": "\"Moinho velho é assim mesmo\""
+   }
+  ],
+  "mestre": "a quest `oficio_lenhador_eixo_do_moinho` mora aqui — a farinha irregular não vende no dia 10, e a Nodosa boa fica no lado leste de Horunka, onde o Torv não vai. Do alto, o grupo avista os Terraços de Solveig: deixa visual pro problema dos gafanhotos antes de qualquer fala.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   },
+   {
+    "tipo": "quest",
+    "id": "oficio_lenhador_eixo_do_moinho"
+   }
+  ]
+ },
+ "vale_moinhos_trigo": {
+  "nome": "Campo de Trigo",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "Fileiras de trigo até onde a cerca alcança, aparadas com uma regularidade que denuncia cuidado diário. Espigas cheias, chão capinado, pedra nenhuma fora do lugar — alguém trata este campo como se a vida dependesse dele. Porque depende.",
+  "oque": "o principal ponto de coleta de Sementes do vale, matéria-prima de Cozinheiro e Alquimista. Respawn de 6h — rende bem pra downtime de coleta entre sessões.",
+  "acoes": [
+   {
+    "acao": "Selecionar sementes viáveis",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 sementes viáveis",
+    "parcial": "Colhe 1",
+    "falha": "Estraga o canteiro sem querer"
+   }
+  ],
+  "mestre": "coletar aqui pressupõe boa relação com a fazenda — se o grupo já estragou uma leira, alguém comenta que \"o trigo não é de quem passa, é de quem planta\". Bom ponto pra ensinar que recurso em área habitada tem dono.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   }
+  ]
+ },
+ "vale_moinhos_pomar": {
+  "nome": "Pomar",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "Árvores baixas e tortas em fileiras largas, com fruta madura pesando os galhos e fruta caída apodrecendo no chão em volta — nem toda mão dá conta de tudo. O cheiro doce sobe junto com as moscas, e dá pra ouvir abelha trabalhando em algum lugar perto.",
+  "oque": "segundo ponto de coleta de Sementes do vale, com a mesma mecânica do campo de trigo — aqui as sementes vêm da fruta madura, não da espiga. Respawn de 6h.",
+  "acoes": [
+   {
+    "acao": "Escolher frutos e tirar sementes",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 sementes viáveis",
+    "parcial": "Colhe 1",
+    "falha": "Estraga o canteiro sem querer — derruba e pisa na fruta boa"
+   }
+  ],
+  "mestre": "a fruta apodrecendo no chão é falta de braço, não descuido — se o grupo parar pra ajudar a recolher, o vale lembra disso. As abelhas que se ouvem daqui são das colmeias selvagens da região.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   }
+  ]
+ },
+ "vale_moinhos_xestufa_de_sementes": {
+  "nome": "Estufa de Sementes",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "Uma estufa baixa de ripas de madeira e tela esticada, abafada lá dentro mesmo com o vento do vale. Mudas em fileiras apertadas, cada uma com uma estaca marcada a carvão. O cuidado é quase exagerado pra um jardim de videogame.",
+  "oque": "ponto de coleta de Sementes (Cozinheiro/Alquimista), voltado a mudas selecionadas. Respawn de 6h.",
+  "acoes": [
+   {
+    "acao": "Separar mudas e sementes",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 sementes viáveis",
+    "parcial": "Colhe 1",
+    "falha": "Estraga o canteiro sem querer"
+   }
+  ],
+  "mestre": "ponto mecânico simples — a descrição do cuidado \"exagerado\" reforça, sem custo de cena, que o vale leva plantio a sério de verdade.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   }
+  ]
+ },
+ "vale_moinhos_xfazendeiro_local": {
+  "nome": "Fazendeiro Local",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "Mãos calejadas de avatar que não deveria ter calo. Ele endireita as costas com dificuldade quando vocês se aproximam, apoia o peso na pá e espera — sem hostilidade, sem pressa, com a paciência de quem já viu grupo demais prometer ajuda e sumir.",
+  "oque": "o Fazendeiro Local (`npcs/fazendeiro_local.md`) — aliado, voz do vale e a melhor fonte de informação sobre o leste do andar.",
+  "acoes": [
+   {
+    "acao": "Oferecer ajuda contra as pragas",
+    "teste": "—",
+    "sucesso": "Sem teste — ele aceita na hora e paga em comida preparada, não Col (gancho de bounty_05)",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Perguntar sobre o leste",
+    "teste": "2d6+Espírito",
+    "sucesso": "Conta dos gafanhotos nos Terraços e indica a subida certa",
+    "parcial": "Responde curto, sem rota",
+    "falha": "\"Leste é problema.\" E volta pra leira"
+   }
+  ],
+  "mestre": "a fala dele — \"Praga nova toda semana. Não sei se é o jogo ou se é só falta de sorte mesmo.\" — é o tom do vale inteiro. O contrato puxa `bounty_05_colheita_ameacada`, que se resolve nos Terraços de Solveig; matar gafanhoto não basta, e ele sabe disso melhor que ninguém.",
+  "atalhos": [
+   {
+    "tipo": "npc",
+    "id": "fazendeiro_local"
+   },
+   {
+    "tipo": "quest",
+    "id": "bounty_05_colheita_ameacada"
+   },
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   }
+  ]
+ },
+ "vale_moinhos_xcolmeia_selvagem": {
+  "nome": "Colmeia Selvagem",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "O zumbido chega antes da colmeia aparecer. Ela pende de uma árvore na beira do campo, e as flores ao redor são as mais carregadas do vale — ninguém colhe ali faz tempo, e dá pra entender por quê.",
+  "oque": "ponto duplo de recurso — as flores ao redor rendem Sementes (Cozinheiro/Alquimista); a colmeia em si rende mel. Respawn de 6h. O enxame reage a pressa e movimento brusco, não a cuidado.",
+  "acoes": [
+   {
+    "acao": "Colher sementes nas flores ao redor",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 sementes viáveis",
+    "parcial": "Colhe 1",
+    "falha": "Estraga o canteiro sem querer — e o enxame não gosta"
+   },
+   {
+    "acao": "Coletar mel",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Mel x2, sem ferroada",
+    "parcial": "Mel x1 e ferroadas",
+    "falha": "Enxame; fuga obrigatória"
+   }
+  ],
+  "mestre": "fumaça acalma o enxame (mesma lógica das abelhas douradas de Horunka) — quem pensar nisso merece a colheita fácil. Não vire combate: o enxame defende a colmeia e não persegue além de alguns metros.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   }
+  ]
+ },
+ "vale_moinhos_xestufa_de_sementes_2": {
+  "nome": "Estufa de Sementes 2",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "Outra estufa, menor e mais velha, com a tela remendada em três pontos e a porta que não fecha direito. Mesmo assim, as fileiras lá dentro estão vivas — quem cuida disso não deixa estrutura ruim virar desculpa.",
+  "oque": "segundo ponto de coleta de Sementes do vale (Cozinheiro/Alquimista), mesma mecânica da primeira estufa. Respawn de 6h.",
+  "acoes": [
+   {
+    "acao": "Separar mudas e sementes",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 sementes viáveis",
+    "parcial": "Colhe 1",
+    "falha": "Estraga o canteiro sem querer"
+   }
+  ],
+  "mestre": "variação de sabor apenas — o contraste (estrutura ruim, plantio bom) reforça o tema do vale sem custo de cena.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   }
+  ]
+ },
+ "vale_moinhos_xcolmeia_selvagem_2": {
+  "nome": "Colmeia Selvagem 2",
+  "regiao": "vale_moinhos",
+  "arquivo": "guias/pontos/vale_moinhos.md",
+  "leitura": "Esta colmeia é menor e ficou presa na forquilha de uma cerca viva, baixa o bastante pra alcançar sem escalar nada. O enxame aqui parece menos paciente — ou as flores em volta são boas demais pra dividir.",
+  "oque": "a segunda colmeia selvagem do vale — mesma mecânica da outra (sementes ao redor, mel na colmeia), com acesso mais fácil e enxame mais reativo. Respawn de 6h.",
+  "acoes": [
+   {
+    "acao": "Colher sementes nas flores ao redor",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Colhe 2 sementes viáveis",
+    "parcial": "Colhe 1",
+    "falha": "Estraga o canteiro sem querer — e provoca o enxame"
+   },
+   {
+    "acao": "Coletar mel",
+    "teste": "2d6+Reflexo",
+    "sucesso": "Mel x2, sem ferroada",
+    "parcial": "Mel x1 e ferroadas",
+    "falha": "Enxame; fuga obrigatória"
+   }
+  ],
+  "mestre": "como a colmeia é baixa e acessível, jogue o enxame mais reativo — um 7-9 aqui pode custar ferroadas até na coleta de sementes. Continua sem ser combate: susto e dispersão, não vida ou morte.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vale_moinhos"
+   }
+  ]
+ },
+ "vila_rib_centro": {
+  "nome": "Vila Ribeirinha (centro)",
+  "regiao": "vila_ribeirinha",
+  "arquivo": "guias/pontos/vila_ribeirinha.md",
+  "leitura": "Brenmoor é menor que Horunka e mais aberta — casas de um andar em cima de estacas, redes de pesca penduradas pra secar em toda parede virada pro sol, e um cheiro de peixe que deixa de incomodar depois de uns minutos. No meio da praça de terra batida tem um poço, e umas crianças-avatar correm entre as estacas. Ninguém aqui encara forasteiro: forasteiro compra peixe.",
+  "oque": "o coração da segunda zona segura do andar — praça de terra batida com poço no meio, proteção de sistema, nível 1-2. É o lugar certo pra um grupo machucado se recompor sem a tensão emocional da Cidade do Início.",
+  "acoes": [
+   {
+    "acao": "Descansar de verdade",
+    "teste": "—",
+    "sucesso": "Sem teste — zona segura: recupera tudo, e o mestre deve deixar",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Ouvir a vila sobre o lago",
+    "teste": "2d6+Conhecimento",
+    "sucesso": "Três histórias, uma delas verdadeira e você sabe qual",
+    "parcial": "Três histórias, sem saber qual presta",
+    "falha": "Uma história, e é a falsa"
+   },
+   {
+    "acao": "Perguntar por trabalho braçal",
+    "teste": "2d6+Espírito",
+    "sucesso": "Bico honesto (descarregar barco, remendar rede) por Col do dia e boa vontade da vila",
+    "parcial": "Bico, mas paga pouco",
+    "falha": "\"Forasteiro demais perguntando essa semana\""
+   }
+  ],
+  "mestre": "Brenmoor existe pra dar ao andar um segundo lugar seguro que **não** é a capital — a capital carrega o peso do dia 1 e às vezes a mesa precisa respirar longe disso. Se o grupo demorar, a vila os adota: depois de dois dias de jogo, alguém oferece uma casa vazia. Ela pertencia a alguém. Ninguém explica. No fim da tarde, as crianças-avatar param de brincar pra contar barcos voltando — se faltar um, os adultos disfarçam mal a mudança de clima.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vila_ribeirinha"
+   }
+  ]
+ },
+ "vila_rib_doca": {
+  "nome": "Doca da Vila",
+  "regiao": "vila_ribeirinha",
+  "arquivo": "guias/pontos/vila_ribeirinha.md",
+  "leitura": "Tábuas rangendo em cima da água marrom do Coluber, cestos de vime empilhados e uma barraca de madeira com gelo importado — luxo de quem vive do rio. O cheiro de rio aqui é forte o bastante pra ter gosto. Se o Barqueiro não está na Ponte Velha, o barco dele está amarrado aqui, e ele dentro dele, sem pressa nenhuma.",
+  "oque": "o cais comercial da vila — peixe fresco pro grupo se reabastecer, aluguel de barco pra quem quer descer o rio, e o ponto onde o Barqueiro atraca quando não está na ponte (`rio_serpente`).",
+  "acoes": [
+   {
+    "acao": "Comprar peixe fresco",
+    "teste": "—",
+    "sucesso": "Sem teste — Col 15-30 a unidade",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Vender peixe pro cais",
+    "teste": "—",
+    "sucesso": "Sem teste — compram por preço razoável, sem fazer perguntas",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Alugar barco",
+    "teste": "—",
+    "sucesso": "Sem teste — 30 Col por dia",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "o \"sem fazer perguntas\" é literal — a doca compra peixe de origem duvidosa também, e é assim que a vila escoa o que cai nas redes sem explicação. Bom lugar pra um jogador Comerciante medir preço contra `docs/mercado_andar1.md` antes de vender tudo na primeira oferta. Se o grupo quer o Barqueiro e ele não está aqui, está na ponte — e vice-versa.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vila_ribeirinha"
+   },
+   {
+    "tipo": "npc",
+    "id": "barqueiro_rio_coluber"
+   }
+  ]
+ },
+ "vila_ribeirinha_xpeixaria_local": {
+  "nome": "Peixaria Local",
+  "regiao": "vila_ribeirinha",
+  "arquivo": "guias/pontos/vila_ribeirinha.md",
+  "leitura": "Bancada de pedra lavada, facas penduradas por tamanho, e o vaivém constante de quem limpa, pesa e embrulha. O gelo importado faz uma névoa rasa em volta da bancada. A peixeira não sorri, mas anota o nome de quem traz peixe bom.",
+  "oque": "a peixaria da vila — mesma mercadoria da doca, com balcão permanente: peixe, isca, a Calça Encerada de Pescador e, quando alguém traz uma, a Escama Prateada.",
+  "acoes": [
+   {
+    "acao": "Comprar peixe, isca e apetrechos",
+    "teste": "—",
+    "sucesso": "Sem teste — Peixe fresco (Col 15-30/un.); tabela fixa em docs/mercado_andar1.md (Peixaria Local)",
+    "parcial": "",
+    "falha": ""
+   },
+   {
+    "acao": "Vender peixe de pesca própria",
+    "teste": "—",
+    "sucesso": "Sem teste — preço razoável, sem perguntas",
+    "parcial": "",
+    "falha": ""
+   }
+  ],
+  "mestre": "é nesta bancada que o peixe estranho da cadeia C aparece primeiro na economia da vila — quem já começou `lago_01_peixe_estranho` pode perguntar aqui e ouvir que \"essa semana já é a terceira vez\". A Calça Encerada do estoque dela é a mesma que o Pescador Veterano dá de graça a quem resolve a quest do lago — deixe o grupo descobrir que a peixaria repor o item não é coincidência.",
+  "atalhos": [
+   {
+    "tipo": "regiao",
+    "id": "vila_ribeirinha"
+   }
+  ]
+ },
+ "vila_ribeirinha_xpescador_veterano": {
+  "nome": "Pescador Veterano",
+  "regiao": "vila_ribeirinha",
+  "arquivo": "guias/pontos/vila_ribeirinha.md",
+  "leitura": "Um homem mais velho sentado na ponta da doca com a vara na água, nem sempre olhando pra ela — mais atento ao movimento da vila do que aos próprios peixes. Quando o grupo para perto, ele fala sem virar o rosto: \"Conheço esse rio melhor que qualquer mapa que o Cartógrafo da guilda vendeu até agora.\"",
+  "oque": "Caçador aposentado que trocou a besta pela vara — a melhor fonte de informação sobre o Coluber e o Lago Sylvaine em todo o andar, e a ponte entre Brenmoor e a cadeia C (Águas de Sylvaine). Trata a água com respeito e espera o mesmo de quem chega.",
+  "acoes": [
+   {
+    "acao": "Ganhar a confiança dele",
+    "teste": "2d6+Espírito",
+    "sucesso": "Ele te ensina onde o lago é fundo e por quê",
+    "parcial": "Ele te vende a informação",
+    "falha": "Ele te manda pescar e descobrir sozinho"
+   },
+   {
+    "acao": "Pedir pontos de pesca e atalho",
+    "teste": "2d6+Espírito",
+    "sucesso": "Indica os melhores pontos de pesca e um atalho seguro entre as regiões vizinhas",
+    "parcial": "Indica os pontos, mas não o atalho",
+    "falha": "\"Compra um mapa da guilda, que é tão bom quanto\""
+   }
+  ],
+  "mestre": "ele é o gancho de `lago_01_peixe_estranho` dentro da vila — confirma ou completa o que o Barqueiro deixar escapar (\"Peixe estranho de novo essa semana. Terceira vez. Vocês notaram, ou só eu que reparo?\"). Sabe que o redemoinho do Coluber e o Lago Sylvaine estão ligados, embora não saiba explicar como — use isso pra apontar o grupo pra cadeia C sem entregar o puzzle. Quem resolver a quest do lago que ele indicar volta aqui pra ganhar a Calça Encerada de graça, direto da mão dele.",
+  "atalhos": [
+   {
+    "tipo": "npc",
+    "id": "pescador_veterano"
+   },
+   {
+    "tipo": "regiao",
+    "id": "vila_ribeirinha"
+   },
+   {
+    "tipo": "quest",
+    "id": "lago_01_peixe_estranho"
    }
   ]
  }

@@ -123,19 +123,47 @@ document.getElementById("gEntrar").addEventListener("click", async function(){
   }
 });
 
+  var TABELAS_GRUPOS = {
+    "📜 Conteúdo de Campanha": ["npcs","monstros","armas","equipamentos","cidades","guias","puzzles","oficios","dungeons","salas_dungeon","producao","pontos","pontos_detalhe","clas","cartas","cristais","ferramentas_oficio"],
+    "⚔️ Sistema & Mecânica": ["moves_arma","moves_profissao","sistema","mercado","mercado_itens","compra_materiais","nivel_profissao_xp"],
+    "🗺️ Quests & História": ["quests","cronicas"],
+    "🎮 Jogo Online (Economia & Progresso)": ["personagens","inventario","personagem_ferramentas","criaturas_domadas","nivel_profissao","vitrine","transacoes","missoes_quadro","missao_diaria","craft_fila","reputacao_personagem"],
+    "🔐 Autenticação & Permissões": ["perfis","conteudo_liberado"],
+    "🧠 RAG / Busca por semântica": ["documentos","documento_chunks"],
+  };
+  var TEM_EXCLUIDO = {};
+  Object.keys(TABELAS_ADMIN).forEach(function(t){
+    TEM_EXCLUIDO[t] = TABELAS_ADMIN[t].campos.some(function(c){ return c.nome==="excluido"; });
+  });
+
 function mostrarPainel(){
   document.getElementById("gate").style.display="none";
   document.getElementById("painel").style.display="";
-  document.getElementById("quemLogado").textContent = "logado como mestre. ";
+  var totalTabelas = Object.keys(TABELAS_ADMIN).length;
+  document.getElementById("quemLogado").textContent = "logado como mestre. " + totalTabelas + " tabelas editáveis. ";
   document.getElementById("sair").addEventListener("click", async function(e){
     e.preventDefault(); await fazerLogout(); location.reload();
   });
 
   var sel=document.getElementById("selTabela");
+  Object.keys(TABELAS_GRUPOS).forEach(function(nomeGrupo){
+    var og = document.createElement("optgroup");
+    og.label = nomeGrupo;
+    TABELAS_GRUPOS[nomeGrupo].forEach(function(k){
+      if(!TABELAS_ADMIN[k]) return;
+      var o=document.createElement("option");
+      o.value=k; o.textContent=TABELAS_ADMIN[k].rotulo;
+      og.appendChild(o);
+    });
+    sel.appendChild(og);
+  });
   Object.keys(TABELAS_ADMIN).forEach(function(k){
-    var o=document.createElement("option");
-    o.value=k; o.textContent=TABELAS_ADMIN[k].rotulo;
-    sel.appendChild(o);
+    var jaTem = sel.querySelector('option[value="'+k+'"]');
+    if(!jaTem){
+      var o=document.createElement("option");
+      o.value=k; o.textContent="[sem grupo] "+TABELAS_ADMIN[k].rotulo;
+      sel.appendChild(o);
+    }
   });
   sel.addEventListener("change", function(){ carregarTabela(sel.value); });
   document.getElementById("busca").addEventListener("input", renderLista);
@@ -147,6 +175,8 @@ function mostrarPainel(){
 
 async function carregarTabela(nome){
   tabelaAtual = nome;
+  document.getElementById("mostrarExcluidos").disabled = !TEM_EXCLUIDO[nome];
+  if(!TEM_EXCLUIDO[nome]) document.getElementById("mostrarExcluidos").checked = false;
   await carregarLinhas();
   abrirForm(null);
 }
@@ -154,11 +184,9 @@ async function carregarTabela(nome){
 async function carregarLinhas(){
   var conf = TABELAS_ADMIN[tabelaAtual];
   var mostrarExcl = document.getElementById("mostrarExcluidos").checked;
-  // le pela view nas tabelas com campo secreto (a view revela o campo pra
-  // quem estiver logado como mestre); escrita sempre vai na tabela base.
   var origem = TABELAS_COM_VIEW_PUBLICA[tabelaAtual] || tabelaAtual;
   var q = supaClient().from(origem).select("*");
-  if(!mostrarExcl) q = q.eq("excluido", false);
+  if(TEM_EXCLUIDO[tabelaAtual] && !mostrarExcl) q = q.eq("excluido", false);
   var r = await q;
   if(r.error){ alert("Erro carregando " + tabelaAtual + ": " + r.error.message); linhas=[]; }
   else linhas = r.data || [];

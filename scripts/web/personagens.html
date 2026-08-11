@@ -107,6 +107,43 @@ table.tbl tr:last-child td{border-bottom:none}
 
 footer{margin-top:26px;font-size:11.5px;color:var(--ink-faint);text-align:center}
 footer a{color:var(--gold-dim)}
+
+/* ---------- modal cadastro de personagem ---------- */
+.modal-fundo{position:fixed;inset:0;background:rgba(5,3,1,.78);z-index:60;display:none;overflow-y:auto;padding:28px 14px}
+.modal-fundo.on{display:block}
+.modal{max-width:640px;margin:14px auto;background:var(--panel);border:2px solid var(--gold-dim);border-radius:6px;padding:0;box-shadow:0 30px 90px rgba(0,0,0,.6)}
+.modal-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;padding:20px 24px;border-bottom:1px solid var(--line)}
+.modal-top h2{font-family:var(--f-disp);font-size:26px;color:var(--gold-bright);margin:0}
+.modal-top .mt-sub{font-family:var(--f-mono);font-size:11px;letter-spacing:.12em;color:var(--violet);text-transform:uppercase;margin-top:2px}
+.modal-fechar{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-dim);border:1px solid var(--line);padding:7px 12px;border-radius:3px;flex-shrink:0}
+.modal-fechar:hover{color:var(--gold);border-color:var(--gold-dim)}
+.modal-body{padding:20px 24px 24px;display:grid;gap:14px}
+.campo{display:grid;gap:4px}
+.campo label{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim)}
+.campo input[type=text],.campo textarea,.campo select{
+  background:var(--panel-2);color:var(--ink);border:1px solid var(--line);
+  border-radius:4px;padding:9px 11px;font:inherit;outline:none;transition:border-color .1s;
+}
+.campo input[type=text]:focus,.campo textarea:focus,.campo select:focus{border-color:var(--gold)}
+.campo .ajuda{font-size:11px;color:var(--ink-faint);margin:0}
+.attr-row{display:grid;grid-template-columns:9ch 1fr 3ch;gap:10px;align-items:center}
+.attr-row .a-lab{font-family:var(--f-mono);font-size:11px;text-transform:uppercase;color:var(--ink-dim);letter-spacing:.04em}
+.attr-row input[type=range]{accent-color:var(--gold)}
+.attr-row .a-val{font-family:var(--f-mono);font-size:13px;text-align:right}
+.attr-row.pos .a-val{color:var(--gold-bright)}
+.attr-row.neg .a-val{color:#e0887a}
+.sum-box{padding:8px 12px;border:1px dashed var(--line);border-radius:4px;font-family:var(--f-mono);font-size:12px;display:flex;justify-content:space-between;align-items:center}
+.sum-box.ok{border-color:#5e9e5a;color:#9ed899}
+.sum-box.ruim{border-color:#a35454;color:#e0887a}
+.aviso-erro{padding:8px 12px;border:1px solid #a35454;background:rgba(163,84,84,.12);color:#e0887a;border-radius:4px;font-size:12.5px}
+.botoes{display:flex;gap:10px;justify-content:flex-end;margin-top:6px}
+.botao{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;padding:10px 16px;border-radius:4px;border:1px solid var(--line);color:var(--ink-dim);cursor:pointer;background:var(--panel-2)}
+.botao:hover{border-color:var(--gold-dim);color:var(--gold)}
+.botao.primario{background:linear-gradient(180deg,#2e220f,#181107);color:var(--gold-bright);border-color:var(--gold)}
+.botao.primario:hover{background:linear-gradient(180deg,#3c2c12,#201809)}
+.pill{font-family:var(--f-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px;border:1px solid var(--line);color:var(--ink-dim);cursor:pointer;display:inline-flex;align-items:center;gap:6px;user-select:none}
+.pill.on{border-color:var(--gold);color:var(--gold-bright);background:rgba(217,173,94,.06)}
+.pill.cta{border-color:var(--gold);color:var(--gold-bright);background:linear-gradient(180deg,rgba(217,173,94,.08),rgba(217,173,94,.02))}
 </style>
 </head>
 <body>
@@ -131,6 +168,22 @@ footer a{color:var(--gold-dim)}
 
 <div class="ovl" id="ovl">
   <div class="sheet" id="sheet"></div>
+</div>
+
+<!-- Modal de Cadastro de Personagem -->
+<div class="modal-fundo" id="modalCad">
+  <div class="modal">
+    <div class="modal-top">
+      <div>
+        <h2 id="modalCadTitulo">Criar Meu Personagem</h2>
+        <div class="mt-sub">Aincrad · Andar 1 · Jogador Logado</div>
+      </div>
+      <button class="modal-fechar" id="modalCadFechar">Cancelar ✕</button>
+    </div>
+    <div class="modal-body" id="modalCadBody">
+      <!-- populado por JS -->
+    </div>
+  </div>
 </div>
 
 <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
@@ -230,6 +283,12 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")fechaFicha()
 (async function(){
   await carregarPersonagens();
   var who=document.querySelector(".masthead");
+  var CTA_PILL = null;
+  var PERFIL = null;
+  var EH_MESTRE = false;
+  if(estaLogado()){ try{ PERFIL = await meuPerfil(); }catch(e){} }
+  EH_MESTRE = !!(PERFIL && PERFIL.papel === "mestre");
+
   if(who){
     var box=document.createElement("div");
     box.style.marginTop="10px";
@@ -238,6 +297,38 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")fechaFicha()
     box.style.flexWrap="wrap";
     montarBotaoMestre(box);
     montarAreaJogador(box);
+
+    var euPers=null;
+    if(estaLogado()){
+      var uid=_sessao.user.id;
+      euPers=(window.PERSONAGENS||[]).find(function(p){return p.dono_id===uid;});
+    }
+
+    // ---------- REGRA: SÓ MESTRE CRIA PERSONAGENS ----------
+    if(EH_MESTRE){
+      CTA_PILL=document.createElement("span");
+      CTA_PILL.className="pill cta";
+      CTA_PILL.textContent="🧙 Criar personagem (mestre)";
+      CTA_PILL.addEventListener("click",abrirModalCadastro);
+      box.appendChild(CTA_PILL);
+    }else if(estaLogado() && !euPers){
+      // jogador sem ficha: avisa que tem que falar com mestre
+      var av=document.createElement("span");
+      av.className="pill";
+      av.style.borderColor="#a35454";
+      av.style.color="#e0887a";
+      av.textContent="⚠️ Sem ficha — avise o mestre criar seu personagem";
+      box.appendChild(av);
+    }
+
+    // sempre que logado e tem personagem (mestre ou jogador) mostra "Minha ficha"
+    if(euPers){
+      var me=document.createElement("span");
+      me.className="pill on";
+      me.textContent="👤 Minha ficha: "+euPers.nome;
+      me.addEventListener("click",function(){abreFicha(euPers);});
+      box.appendChild(me);
+    }
     who.appendChild(box);
   }
   var grid=document.getElementById("grid");
@@ -245,14 +336,212 @@ document.addEventListener("keydown",function(e){if(e.key==="Escape")fechaFicha()
     var c=document.createElement("div");
     c.className="card";c.tabIndex=0;c.setAttribute("role","button");
     c.innerHTML='<div class="ct">'+esc(p.nome)+'</div>'+
-      '<div class="cs">'+esc(p.guilda)+'</div>'+
-      '<p>'+esc(p.conceito)+'</p>'+
-      '<div class="row"><span class="tag gold">'+esc(p.arma)+'</span><span class="tag cy">'+esc(p.profissao)+'</span></div>';
+      '<div class="cs">'+esc(p.guilda||"—")+'</div>'+
+      '<p>'+esc(p.conceito||"(sem conceito)")+'</p>'+
+      '<div class="row">'+(p.arma?'<span class="tag gold">'+esc(p.arma)+'</span>':"")+(p.profissao?'<span class="tag cy">'+esc(p.profissao)+'</span>':"")+'</div>';
     c.addEventListener("click",function(){abreFicha(p);});
     c.addEventListener("keypress",function(e){if(e.key==="Enter")abreFicha(p);});
     grid.appendChild(c);
   });
 })();
+
+/* ============================================================
+   CADASTRO DE PERSONAGEM (modal bonito, uso EXCLUSIVO do mestre)
+   ============================================================ */
+var ARMAS_CAT=[],OFICIOS_CAT=[],PERFIS_CAT=[],CLANS_CAT=[];
+var FORM={nome:"",guilda:"",conceito:"",aparencia:"",arma:"",profissao:"",dono_id:null,
+  atributos:{tecnica:0,espirito:-1,conhecimento:-1,reflexo:-1,corpo:-2}};
+
+function abrirModalCadastro(){
+  (async function(){
+    document.getElementById("modalCadTitulo").textContent = "Criar Personagem (Mestre)";
+    // armas: SÓ AS BÁSICAS = raridade exatamente 'Comum' (valor no banco é case-sensitive)
+    if(!ARMAS_CAT.length){
+      var r=await supaClient().from("armas").select("id,nome,raridade").eq("visivel",true).eq("excluido",false).order("id");
+      ARMAS_CAT=(r.data||[]).filter(function(a){return a.raridade==="Comum";}).map(function(a){return {id:a.id,nome:a.nome};});
+    }
+    // oficios (profissões): TABELA NÃO TEM COLUNA 'id', PK=nome → alias 'nome as id'
+    if(!OFICIOS_CAT.length){
+      var r2=await supaClient().from("oficios").select("nome,atributo").eq("visivel",true).eq("excluido",false).order("nome");
+      OFICIOS_CAT=(r2.data||[]).map(function(o){return {id:o.nome,nome:o.nome,atributo:o.atributo};});
+    }
+    // clãs (clas tabela) : PK = nome. aliás = clas
+    if(!CLANS_CAT.length){
+      var rc=await supaClient().from("clas").select("nome").eq("visivel",true).eq("excluido",false).order("nome");
+      CLANS_CAT=(rc.data||[]).map(function(c){return {id:c.nome,nome:c.nome};});
+    }
+    if(!PERFIS_CAT.length){
+      var r3=await supaClient().from("perfis").select("id,nome,papel,email").order("papel").order("nome");
+      PERFIS_CAT=(r3.data||[]).slice();
+    }
+    renderModalCad();
+    document.getElementById("modalCad").classList.add("on");
+  })();
+}
+
+function fecharModalCad(){document.getElementById("modalCad").classList.remove("on");}
+document.getElementById("modalCadFechar").addEventListener("click",fecharModalCad);
+document.getElementById("modalCad").addEventListener("click",function(e){if(e.target.id==="modalCad")fecharModalCad();});
+document.addEventListener("keydown",function(e){if(e.key==="Escape")fecharModalCad();});
+
+function somaAttrs(){
+  var a=FORM.atributos,s=0;for(var k in a)s+=a[k];return s;
+}
+
+function renderModalCad(){
+  var body=document.getElementById("modalCadBody");
+  var h="";
+  // dono (só mestre vê)
+  h+='<div class="campo"><label>Dono do personagem (jogador)</label>'+
+      '<select id="f-dono">'+
+      '<option value="">—— sem dono (NPC / personagem do mestre) ——</option>'+
+      PERFIS_CAT.map(function(p){
+        var rot=(p.nome||"(sem nome)")+" ("+(p.papel||"perfil")+")";
+        if(p.email) rot += " · "+p.email;
+        return '<option value="'+esc(p.id)+'"'+(FORM.dono_id===p.id?' selected':"")+'>'+esc(rot)+'</option>';
+      }).join("")+
+      '</select>'+
+      '<p class="ajuda">Escolha qual jogador é o dono desta ficha. Sem dono = personagem controlado pelo mestre (NPC/NPC jogável).</p></div>';
+  // nome
+  h+='<div class="campo"><label>Nome do personagem *</label>'+
+      '<input type="text" id="f-nome" maxlength="60" placeholder="Ex.: Kirito, Asuna, Agil..."'+
+      ' value="'+esc(FORM.nome)+'">'+
+      '<p class="ajuda">Nome único — se já existir um personagem com esse nome, precisará escolher outro.</p></div>';
+  // guilda / clã = select com os 6 clãs da tabela clas + opção "sem clã"
+  h+='<div class="campo"><label>Clã / Guilda</label>'+
+      '<select id="f-guilda">'+
+      '<option value="">—— Aventureiro Independente (sem clã) ——</option>'+
+      CLANS_CAT.map(function(c){return '<option value="'+esc(c.id)+'"'+(FORM.guilda===c.id?' selected':"")+'>'+esc(c.nome||c.id)+'</option>';}).join("")+
+      '</select><p class="ajuda">Escolha entre os 6 clãs existentes, ou deixe independente.</p></div>';
+  // arma + profissao
+  h+='<div style="display:grid;grid-template-columns:1fr 1fr;gap:12px">';
+  h+='<div class="campo"><label>Arma inicial *</label>'+
+      '<select id="f-arma">'+
+      '<option value="">-- escolha sua arma --</option>'+
+      ARMAS_CAT.map(function(a){return '<option value="'+esc(a.id)+'"'+(FORM.arma===a.id?' selected':"")+'>'+esc(a.nome||a.id)+'</option>';}).join("")+
+      '</select></div>';
+  h+='<div class="campo"><label>Profissão inicial *</label>'+
+      '<select id="f-prof">'+
+      '<option value="">-- escolha sua profissão --</option>'+
+      OFICIOS_CAT.map(function(a){return '<option value="'+esc(a.id)+'"'+(FORM.profissao===a.id?' selected':"")+'>'+esc(a.nome||a.id)+'</option>';}).join("")+
+      '</select></div>';
+  h+='</div>';
+  // conceito
+  h+='<div class="campo"><label>Conceito *</label>'+
+      '<textarea id="f-conceito" rows="2" maxlength="240" placeholder="Uma frase ou duas: quem é esse cara no fundo?">'+esc(FORM.conceito)+'</textarea>'+
+      '<p class="ajuda">Ex.: \"Ex-médico que jurou proteger os fracos depois do dia do fechamento\"</p></div>';
+  // aparencia
+  h+='<div class="campo"><label>Aparência</label>'+
+      '<textarea id="f-apar" rows="2" maxlength="300" placeholder="Como ele(a) parece?">'+esc(FORM.aparencia)+'</textarea></div>';
+  // atributos
+  h+='<div><label style="font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim)">Atributos (distribuição padrão do Andar 1: 0 / -1 / -1 / -1 / -2)</label>';
+  var ATTR_ORDEM=["tecnica","espirito","conhecimento","reflexo","corpo"];
+  h+='<div style="margin-top:6px;display:grid;gap:7px">';
+  ATTR_ORDEM.forEach(function(k){
+    var v=FORM.atributos[k];var cls=(v>0?"pos":(v<0?"neg":""));
+    h+='<div class="attr-row '+cls+'"><span class="a-lab">'+esc(ATTR_LABELS[k])+'</span>'+
+      '<input type="range" min="-2" max="2" step="1" data-k="'+k+'" value="'+v+'" class="rng-attr">'+
+      '<span class="a-val">'+(v>0?"+":"")+v+'</span></div>';
+  });
+  h+='</div>';
+  var s=somaAttrs();
+  h+='<div class="sum-box ok" style="margin-top:10px">'+
+    '<span>Soma dos atributos</span>'+
+    '<span><b>'+(s>0?"+":"")+s+'</b> · padrão do andar 1 = -5</span></div>';
+  h+='</div>';
+  // botoes
+  h+='<div class="botoes"><button class="botao" id="btn-cancelar">Cancelar</button>'+
+      '<button class="botao primario" id="btn-salvar">⚔️  Criar personagem</button></div>';
+
+  body.innerHTML=h;
+  // bindings
+  body.querySelector("#f-dono").addEventListener("change",function(e){FORM.dono_id=e.target.value||null;});
+  body.querySelector("#f-nome").addEventListener("input",function(e){FORM.nome=e.target.value;});
+  body.querySelector("#f-guilda").addEventListener("input",function(e){FORM.guilda=e.target.value;});
+  body.querySelector("#f-arma").addEventListener("change",function(e){FORM.arma=e.target.value;});
+  body.querySelector("#f-prof").addEventListener("change",function(e){FORM.profissao=e.target.value;});
+  body.querySelector("#f-conceito").addEventListener("input",function(e){FORM.conceito=e.target.value;});
+  body.querySelector("#f-apar").addEventListener("input",function(e){FORM.aparencia=e.target.value;});
+  body.querySelectorAll(".rng-attr").forEach(function(el){
+    el.addEventListener("input",function(e){
+      FORM.atributos[e.target.dataset.k]=parseInt(e.target.value,10);
+      renderModalCad();
+    });
+  });
+  body.querySelector("#btn-cancelar").addEventListener("click",fecharModalCad);
+  body.querySelector("#btn-salvar").addEventListener("click",salvarCadastro);
+}
+
+async function salvarCadastro(){
+  // validações locais
+  var errs=[];
+  if(!FORM.nome.trim())errs.push("Preencha o nome do personagem.");
+  if(!FORM.arma)errs.push("Escolha uma arma inicial.");
+  if(!FORM.profissao)errs.push("Escolha uma profissão inicial.");
+  if(!FORM.conceito.trim())errs.push("Preencha o conceito.");
+  var body=document.getElementById("modalCadBody");
+  // remove avisos antigos
+  body.querySelectorAll(".aviso-erro.cad").forEach(function(x){x.remove();});
+  if(errs.length){
+    var div=document.createElement("div");
+    div.className="aviso-erro cad";
+    div.innerHTML="<b>Corrija antes de salvar:</b><br>"+errs.map(function(x){return "• "+esc(x);}).join("<br>");
+    body.insertBefore(div,body.firstChild);
+    return;
+  }
+  // envia
+  var btn=document.getElementById("btn-salvar");
+  var txtAnt=btn.textContent;btn.textContent="Salvando...";btn.disabled=true;
+  try{
+    var nome=FORM.nome.trim().replace(/\s+/g," ");
+    var dados={
+      nome:nome,
+      guilda:FORM.guilda.trim()||null,
+      arma:FORM.arma,
+      profissao:FORM.profissao,
+      conceito:FORM.conceito.trim(),
+      aparencia:FORM.aparencia.trim()||null,
+      atributos:JSON.parse(JSON.stringify(FORM.atributos)),
+      estado:{impulso:0,impulsoMax:5,marcos:0,marcosMax:5,condicoes:""},
+      dono_id:FORM.dono_id,   // ← pode ser null (NPC) ou uuid do perfil
+      visivel:true,
+      excluido:false,
+      // defaults de economia/fôlego (igual schema_jogo_online.sql)
+      col_mao:0,
+      col_guardado:0,
+      col_ganho_hoje:0,
+      folego:20,
+      folego_atualizado_em:new Date().toISOString(),
+      bug:0,
+      carga_limit:0,
+      equipado:{}
+    };
+    var r=await supaClient().from("personagens").insert(dados);
+    if(r.error){
+      if(/personagens_pkey|duplicate.*personagens/.test(r.error.message||"")){
+        throw new Error("Já existe um personagem com o nome '"+nome+"'. Escolha outro nome.");
+      }
+      if(/personagens_dono_uidx|duplicate.*dono/.test(r.error.message||"")){
+        var donoNome="";
+        var d=PERFIS_CAT.find(function(p){return p.id===FORM.dono_id;});
+        if(d) donoNome = " ("+(d.nome||d.email||d.id)+")";
+        throw new Error("O jogador"+donoNome+" já TEM um personagem vinculado — cada jogador só pode ter um.");
+      }
+      throw r.error;
+    }
+    btn.textContent="✅ Criado!";
+    setTimeout(function(){
+      fecharModalCad();
+      location.reload();
+    },600);
+  }catch(e){
+    btn.disabled=false;btn.textContent=txtAnt;
+    var div=document.createElement("div");
+    div.className="aviso-erro cad";
+    div.innerHTML="<b>Não deu pra criar:</b> "+esc(e.message||String(e));
+    body.insertBefore(div,body.firstChild);
+  }
+}
 </script>
 </body>
 </html>

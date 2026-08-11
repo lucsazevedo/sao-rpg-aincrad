@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Inventário — SAO RPG</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<style>
+  :root {
+    --fundo: #0e0e12;
+    --cartao: #181822;
+    --borda: #2b2b3a;
+    --texto: #e9e9f2;
+    --muted: #8a8aa0;
+    --destaque: #c9a14a;
+    --perigo: #c04a4a;
+    --ok: #5ab17c;
+    --incomum: #6fcf7a;
+    --raro: #6aa9ff;
+    --epico: #c485ff;
+    --lendario: #ffb548;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--fundo);
+    color: var(--texto);
+    font-family: Georgia, "Times New Roman", serif;
+  }
+  .aviso-folego {
+    padding: 8px 20px;
+    background: linear-gradient(90deg, rgba(201,161,74,.12), rgba(201,161,74,.02));
+    border-bottom: 1px solid rgba(201,161,74,.2);
+    font-size: 13px;
+    color: var(--muted);
+  }
+  .aviso-folego b { color: var(--destaque); }
+  header {
+    padding: 14px 20px;
+    border-bottom: 1px solid var(--borda);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background: var(--fundo);
+    z-index: 50;
+  }
+  header h1 {
+    margin: 0;
+    font-size: 20px;
+    letter-spacing: 1px;
+  }
+  header .spacer { flex: 1; }
+  .pill {
+    display: inline-block;
+    padding: 4px 10px;
+    border: 1px solid var(--borda);
+    border-radius: 999px;
+    font-size: 13px;
+    background: var(--cartao);
+  }
+  .pill.on { border-color: var(--destaque); color: var(--destaque); }
+  .nav-link {
+    color: var(--muted);
+    text-decoration: none;
+    font-size: 14px;
+    padding: 4px 8px;
+  }
+  .nav-link:hover { color: var(--destaque); }
+
+  /* header status do personagem */
+  .status-bar {
+    display: flex;
+    gap: 16px;
+    padding: 10px 20px;
+    background: var(--cartao);
+    border-bottom: 1px solid var(--borda);
+    flex-wrap: wrap;
+    align-items: center;
+    font-size: 14px;
+  }
+  .status-bar .campo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .status-bar .val { color: var(--destaque); font-weight: bold; }
+
+  main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 340px 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 960px) {
+    main { grid-template-columns: 1fr; }
+  }
+
+  .card {
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    padding: 16px;
+  }
+  .card h2 {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--muted);
+    border-bottom: 1px solid var(--borda);
+    padding-bottom: 6px;
+  }
+
+  /* PAPER DOLL */
+  .paper {
+    display: grid;
+    grid-template-columns: 60px 1fr 60px;
+    grid-template-rows: repeat(6, 60px);
+    gap: 6px;
+    justify-items: stretch;
+  }
+  .paper .slot {
+    border: 1px dashed var(--borda);
+    border-radius: 6px;
+    background: #0f0f17;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: var(--muted);
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
+    overflow: hidden;
+    transition: border-color .15s;
+  }
+  .paper .slot.cheio {
+    border-style: solid;
+    border-color: var(--borda);
+    color: var(--texto);
+  }
+  .paper .slot:hover { border-color: var(--destaque); }
+  .paper .slot .icone { font-size: 22px; line-height: 1; margin-bottom: 2px; }
+  .paper .slot .s-nome {
+    font-size: 9px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .slot[data-slot="acessorio_1"] { grid-column: 1; grid-row: 2; }
+  .slot[data-slot="capuz"]      { grid-column: 2; grid-row: 1; }
+  .slot[data-slot="acessorio_2"] { grid-column: 3; grid-row: 2; }
+  .slot[data-slot="arma"]       { grid-column: 1; grid-row: 3; }
+  .slot[data-slot="armadura"]   { grid-column: 2; grid-row: 2 / span 2; }
+  .slot[data-slot="escudo"]     { grid-column: 3; grid-row: 3; }
+  .slot[data-slot="luvas"]      { grid-column: 1; grid-row: 4; }
+  .slot[data-slot="carta"]      { grid-column: 2; grid-row: 4; }
+  .slot[data-slot="cristal"]    { grid-column: 3; grid-row: 4; }
+  .slot[data-slot="luvas_b"]    { grid-column: 1; grid-row: 5; display: none; }
+  .slot[data-slot="botas"]      { grid-column: 2; grid-row: 5; }
+  .slot[data-slot="vazio1"]     { grid-column: 3; grid-row: 5; display: none; }
+
+  /* Inventário grid */
+  .toolbar {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .toolbar input, .toolbar select {
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    padding: 6px 10px;
+    color: var(--texto);
+    font-family: inherit;
+    font-size: 13px;
+  }
+  .toolbar input { flex: 1; min-width: 200px; }
+  .toolbar .chip {
+    padding: 4px 10px;
+    border-radius: 999px;
+    border: 1px solid var(--borda);
+    background: var(--fundo);
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+  }
+  .toolbar .chip.on {
+    color: var(--destaque);
+    border-color: var(--destaque);
+    background: rgba(201,161,74,.08);
+  }
+  .saco {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    gap: 4px;
+  }
+  @media (max-width: 640px) {
+    .saco { grid-template-columns: repeat(6, 1fr); }
+  }
+  .saco .slot {
+    aspect-ratio: 1 / 1;
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    background: #0f0f17;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    padding: 2px;
+    font-size: 10px;
+    transition: transform .1s, border-color .1s;
+  }
+  .saco .slot:hover { border-color: var(--destaque); transform: translateY(-1px); }
+  .saco .slot.vazio { cursor: default; opacity: .35; }
+  .saco .slot.vazio:hover { transform: none; border-color: var(--borda); }
+  .saco .slot .qtd {
+    position: absolute;
+    right: 2px;
+    bottom: 1px;
+    font-size: 10px;
+    color: var(--destaque);
+    font-weight: bold;
+    background: rgba(0,0,0,.5);
+    padding: 0 2px;
+    border-radius: 2px;
+  }
+  .saco .slot .icone {
+    font-size: 20px;
+    line-height: 1;
+    margin-bottom: 2px;
+  }
+  .saco .slot .n {
+    text-align: center;
+    font-size: 9px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+  }
+  .rar-Comum    { box-shadow: inset 0 0 0 1px #555; }
+  .rar-Incomum  { box-shadow: inset 0 0 0 1px var(--incomum); }
+  .rar-Raro     { box-shadow: inset 0 0 0 1px var(--raro); }
+  .rar-Épico    { box-shadow: inset 0 0 0 1px var(--epico); }
+  .rar-Lendário { box-shadow: inset 0 0 0 1px var(--lendario); }
+
+  /* Tooltip modal */
+  .modal-bg {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.7);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    padding: 20px;
+  }
+  .modal-bg.on { display: flex; }
+  .modal {
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: 8px;
+    max-width: 480px;
+    width: 100%;
+    padding: 16px;
+  }
+  .modal h3 { margin: 0 0 8px 0; }
+  .modal .info { color: var(--muted); font-size: 13px; margin-bottom: 12px; }
+  .modal .botoes { display: flex; gap: 8px; flex-wrap: wrap; }
+  .btn {
+    padding: 8px 14px;
+    background: var(--fundo);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 13px;
+  }
+  .btn:hover { border-color: var(--destaque); color: var(--destaque); }
+  .btn.primario { background: var(--destaque); color: #1a1207; border-color: var(--destaque); }
+  .btn.primario:hover { filter: brightness(1.1); color: #1a1207; }
+  .btn.perigo { border-color: var(--perigo); color: var(--perigo); }
+
+  /* Mensagem de status */
+  .toast {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: var(--cartao);
+    border: 1px solid var(--borda);
+    border-left: 3px solid var(--destaque);
+    padding: 10px 14px;
+    border-radius: 6px;
+    z-index: 200;
+    font-size: 14px;
+    max-width: 360px;
+    display: none;
+  }
+  .toast.erro { border-left-color: var(--perigo); }
+  .toast.ok   { border-left-color: var(--ok); }
+  .toast.on { display: block; }
+
+  /* Login card */
+  .login-card {
+    max-width: 480px;
+    margin: 40px auto;
+    text-align: center;
+    padding: 40px 24px;
+  }
+  .login-card p { color: var(--muted); }
+
+  .prof-bar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    margin-top: 8px;
+  }
+  .prof-bar .bar {
+    flex: 1;
+    height: 8px;
+    background: var(--fundo);
+    border: 1px solid var(--borda);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .prof-bar .fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--destaque), #f1c76d);
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🎒 Inventário</h1>
+  <a href="painel.html" class="nav-link">← Painel</a>
+  <a href="mercado.html" class="nav-link">Mercado →</a>
+  <a href="personagens.html" class="nav-link">Fichas</a>
+  <span class="spacer"></span>
+  <div id="statusLogin"></div>
+</header>
+
+<div id="corpo"></div>
+
+<div class="modal-bg" id="modalItem">
+  <div class="modal" id="modalItemContent"></div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="modo_mestre.js"></script>
+<script>
+/* ======= Aplicação Inventário ======= */
+
+var EU_PNOME = null;
+var EU_PERS = null;
+var MEU_INV = [];
+var RAR_SLOT_ICONES = {
+  arma: "🗡️", armadura: "🛡️", capuz: "🎩", escudo: "🛡️",
+  luvas: "🧤", botas: "🥾", acessorio_1: "💍", acessorio_2: "📿",
+  carta: "🃏", cristal: "💎"
+};
+var TIPO_ICONE = {
+  arma: "🗡️", equipamento: "🛡️", consumivel: "🧪",
+  material: "🪨", carta: "🃏", cristal: "💎", ovo: "🥚", pet: "🐾"
+};
+var SLOTS_PAPER = [
+  { key: "capuz",       rotulo: "Elmo / Capuz",  icone: "🎩" },
+  { key: "arma",        rotulo: "Arma",          icone: "🗡️" },
+  { key: "armadura",    rotulo: "Armadura/Capa", icone: "🛡️" },
+  { key: "escudo",      rotulo: "Mão Secundária",icone: "🛡️" },
+  { key: "luvas",       rotulo: "Luvas",         icone: "🧤" },
+  { key: "botas",       rotulo: "Botas",         icone: "🥾" },
+  { key: "acessorio_1", rotulo: "Acessório 1",   icone: "💍" },
+  { key: "acessorio_2", rotulo: "Acessório 2",   icone: "📿" },
+  { key: "carta",       rotulo: "Carta Equipada",icone: "🃏" },
+  { key: "cristal",     rotulo: "Cristal Socket",icone: "💎" },
+];
+var TAM_SACO = 64; // 8x8
+
+function toast(msg, tipo) {
+  var el = document.getElementById("toast");
+  el.textContent = msg;
+  el.className = "toast " + (tipo || "");
+  el.classList.add("on");
+  clearTimeout(el._t);
+  el._t = setTimeout(function() { el.classList.remove("on"); }, 3200);
+}
+
+/* ------------ inicialização ------------ */
+async function main() {
+  var sta = document.getElementById("statusLogin");
+  await montarAreaJogador(sta);
+  if (!estaLogado()) {
+    document.getElementById("corpo").innerHTML =
+      '<div class="card login-card">' +
+      '<h2>🔒 Área de jogador</h2>' +
+      "<p>Entre ou crie uma conta de jogador no canto superior direito para acessar seu inventário.</p>" +
+      "</div>";
+    return;
+  }
+  await carregarEu();
+  if (!EU_PERS) {
+    document.getElementById("corpo").innerHTML =
+      '<div class="card login-card">' +
+      '<h2>📝 Sem personagem</h2>' +
+      '<p>Sua conta não tem personagem vinculado. Crie sua ficha em personagens.html e avise o mestre para vincular a conta.</p>' +
+      "</div>";
+    return;
+  }
+  renderCabecalho();
+  renderLayout();
+  await carregarInventario();
+  renderTudo();
+}
+
+async function carregarEu() {
+  var eu = await supaClient().from("personagens")
+    .select("*")
+    .eq("dono_id", _sessao.user.id)
+    .maybeSingle();
+  if (eu.error) { toast(eu.error.message, "erro"); return; }
+  EU_PERS = eu.data;
+  if (EU_PERS) EU_PNOME = EU_PERS.nome;
+}
+
+function renderCabecalho() {
+  var body =
+    '<div class="aviso-folego">⚡ <b>Fôlego</b> é o que controla o quanto você pode jogar online por dia (missões + crafting gastam fôlego). 🛒 Mercado <b>NÃO</b> gasta fôlego — compre e venda quando quiser, mesmo sem energia!</div>' +
+    '<div class="status-bar">' +
+      '<div class="campo">⚔️ Personagem: <span class="val">' + EU_PERS.nome + "</span></div>" +
+      '<div class="campo">🛡️ Profissão: <span class="val">' + (EU_PERS.profissao || "—") + "</span></div>" +
+      '<div class="campo">💰 Col na mão: <span class="val">' + (EU_PERS.col_mao || 0) + "</span></div>" +
+      '<div class="campo">🏦 Col guardado: <span class="val">' + (EU_PERS.col_guardado || 0) + "</span></div>" +
+      '<div class="campo">🌬️ Fôlego: <span class="val">' + (EU_PERS.folego || 0) + "/20</span></div>" +
+    "</div>";
+  document.getElementById("corpo").insertAdjacentHTML("beforeend", body);
+}
+
+var _filtro = { busca: "", tipo: null, raridade: null };
+function renderLayout() {
+  // adiciona o main se não existir (fora do header/bar)
+  var corpo = document.getElementById("corpo");
+  corpo.insertAdjacentHTML("beforeend",
+    '<main>' +
+      '<section id="colEsq"></section>' +
+      '<section id="colDir"></section>' +
+    "</main>"
+  );
+
+  // COLUNA ESQUERDA: PAPER DOLL + PROFISSÃO XP
+  var npl = EU_PERS.nivel_profissao || 1;
+  var xpl = EU_PERS.xp_profissao || 0;
+  var proximoxp = XP_POR_NIVEL[npl + 1] || null;
+  var pct = proximoxp ? Math.max(0, Math.min(100, Math.round(xpl / proximoxp * 100))) : 100;
+  document.getElementById("colEsq").innerHTML =
+    '<div class="card">' +
+      "<h2>⚔️ Equipado</h2>" +
+      '<div class="paper" id="paperDoll">' +
+        SLOTS_PAPER.map(function (s) {
+          return '<div class="slot" data-slot="' + s.key + '" data-rotulo="' + s.rotulo + '">' +
+            '<div class="icone">' + s.icone + '</div>' +
+            '<div class="s-nome">' + s.rotulo + '</div>' +
+          '</div>';
+        }).join("") +
+      "</div>" +
+    "</div>" +
+    '<div class="card" style="margin-top:14px;">' +
+      "<h2>📈 Nível de Profissão</h2>" +
+      '<div style="font-size:13px;">' + (EU_PERS.profissao || "—") +
+        " · Nível <b>" + npl + "</b> · XP " + xpl +
+        (proximoxp ? " / " + proximoxp : " (MAX)") +
+      '</div>' +
+      '<div class="prof-bar"><div class="bar"><div class="fill" style="width:' + pct + '%"></div></div>' +
+        "<span>" + pct + "%</span></div>" +
+    "</div>"
+  );
+
+  // COLUNA DIREITA: TOOLBAR + SACO
+  var tiposDisp = ["Todos", "arma", "equipamento", "consumivel", "material", "carta", "cristal", "ovo", "pet"];
+  var rarsDisp = ["Todas", "Comum", "Incomum", "Raro", "Épico", "Lendário"];
+  document.getElementById("colDir").innerHTML =
+    '<div class="card">' +
+      "<h2>🎒 Saco (capacidade 64)</h2>" +
+      '<div class="toolbar" id="toolbar">' +
+        '<input type="text" id="buscaInv" placeholder="🔍 Buscar item por nome..." />' +
+        '<select id="fTipo">' +
+          tiposDisp.map(function (t) {
+            return '<option value="' + (t === "Todos" ? "" : t) + '">' +
+              (t === "Todos" ? "Tipo" : t.charAt(0).toUpperCase() + t.slice(1)) + '</option>';
+          }).join("") +
+        '</select>' +
+        '<select id="fRar">' +
+          rarsDisp.map(function (r) {
+            return '<option value="' + (r === "Todas" ? "" : r) + '">' + r + '</option>';
+          }).join("") +
+        '</select>' +
+        '<button class="btn" id="btnLimpaFiltro">Limpar</button>' +
+      '</div>' +
+      '<div id="sacoInv" class="saco"></div>' +
+    "</div>";
+
+  document.getElementById("buscaInv").addEventListener("input", function (e) {
+    _filtro.busca = e.target.value.trim().toLowerCase();
+    renderTudo();
+  });
+  document.getElementById("fTipo").addEventListener("change", function (e) {
+    _filtro.tipo = e.target.value || null;
+    renderTudo();
+  });
+  document.getElementById("fRar").addEventListener("change", function (e) {
+    _filtro.raridade = e.target.value || null;
+    renderTudo();
+  });
+  document.getElementById("btnLimpaFiltro").addEventListener("click", function () {
+    _filtro = { busca: "", tipo: null, raridade: null };
+    document.getElementById("buscaInv").value = "";
+    document.getElementById("fTipo").value = "";
+    document.getElementById("fRar").value = "";
+    renderTudo();
+  });
+}
+
+async function carregarInventario() {
+  var inv = await supaClient().from("inventario")
+    .select("*")
+    .eq("personagem_nome", EU_PNOME)
+    .eq("excluido", false)
+    .order("obtido_em", { ascending: false });
+  if (inv.error) { toast(inv.error.message, "erro"); return; }
+  MEU_INV = inv.data || [];
+}
+
+/* ----- render: paper doll + saco ----- */
+function itensEquipados() {
+  var map = {};
+  (EU_PERS.equipado || {}).forEach ? null : null; // garantia
+  var eq = EU_PERS.equipado || {};
+  for (var k in eq) if (eq[k]) {
+    var inv = MEU_INV.find(function (i) { return i.id === eq[k]; });
+    if (inv) map[k] = inv;
+  }
+  return map;
+}
+
+function renderPaperDoll() {
+  var eq = itensEquipados();
+  var doc = document;
+  var slots = doc.querySelectorAll("#paperDoll .slot");
+  slots.forEach(function (el) {
+    var k = el.getAttribute("data-slot");
+    var it = eq[k];
+    if (it) {
+      el.classList.add("cheio");
+      el.setAttribute("data-inv-id", it.id);
+      var rar = it.raridade || "Comum";
+      el.className = "slot cheio rar-" + rar.replace(/[^A-Za-zÉéíóúãõâêôçÇ]/g, '');
+      el.innerHTML =
+        '<div class="icone">' + (RAR_SLOT_ICONES[k] || "📦") + '</div>' +
+        '<div class="s-nome">' + it.nome + '</div>';
+    } else {
+      el.classList.remove("cheio");
+      el.removeAttribute("data-inv-id");
+      el.className = el.className.replace(/rar-\S+/g, "");
+    }
+    el.onclick = function () {
+      if (it) abrirModal(it, { origemSlot: k });
+    };
+  });
+}
+
+function filtrarInv() {
+  return MEU_INV.filter(function (i) {
+    if (_filtro.busca && i.nome.toLowerCase().indexOf(_filtro.busca) === -1) return false;
+    if (_filtro.tipo && i.tipo !== _filtro.tipo) return false;
+    if (_filtro.raridade && i.raridade !== _filtro.raridade) return false;
+    return true;
+  });
+}
+
+function renderSaco() {
+  var visiveis = filtrarInv();
+  var html = "";
+  for (var i = 0; i < TAM_SACO; i++) {
+    var it = visiveis[i];
+    if (!it) {
+      html += '<div class="slot vazio"></div>';
+      continue;
+    }
+    var rar = it.raridade || "Comum";
+    var ic = TIPO_ICONE[it.tipo] || "📦";
+    html +=
+      '<div class="slot rar-' + rar.replace(/[^A-Za-zÉéíóúãõâêôçÇ]/g, '') + '" data-inv-id="' + it.id + '">' +
+        '<div class="icone">' + ic + '</div>' +
+        '<div class="n">' + it.nome + '</div>' +
+        (it.quantidade > 1 ? '<div class="qtd">' + it.quantidade + '</div>' : "") +
+      "</div>";
+  }
+  document.getElementById("sacoInv").innerHTML = html;
+  document.querySelectorAll("#sacoInv .slot[data-inv-id]").forEach(function (el) {
+    el.addEventListener("click", function () {
+      var id = Number(el.getAttribute("data-inv-id"));
+      var it = MEU_INV.find(function (x) { return x.id === id; });
+      if (it) abrirModal(it);
+    });
+  });
+}
+
+function renderTudo() {
+  renderPaperDoll();
+  renderSaco();
+}
+
+/* ----- Modal item ----- */
+function abrirModal(item, opts) {
+  opts = opts || {};
+  var modal = document.getElementById("modalItem");
+  var cnt = document.getElementById("modalItemContent");
+  var rar = item.raridade || "Comum";
+  var slotsEquipaveis = slotsEquipaveisPara(item);
+  var equipadoEm = slotOndeEstaEquipado(item.id);
+
+  var html =
+    '<h3 style="color: corDoRar(' + "'" + rar + "'" + ')">' + (TIPO_ICONE[item.tipo] || "📦") + " " + item.nome + '</h3>' +
+    '<div class="info">' +
+      "Tipo: <b>" + (item.tipo || "—") + "</b>" +
+      (item.slot ? " · Slot: <b>" + item.slot + "</b>" : "") +
+      " · Raridade: <b>" + rar + "</b>" +
+      (item.quantidade ? " · Quantidade: <b>" + item.quantidade + "</b>" : "") +
+      (item.origem ? " · Origem: <b>" + item.origem + "</b>" : "") +
+    "</div>" +
+    (item.descricao ? '<div style="margin-bottom:12px;line-height:1.5;">' + item.descricao + "</div>" : "") +
+    (item.efeito ? '<div style="margin-bottom:12px;line-height:1.5;color:#c9a14a;">⚡ ' + item.efeito + "</div>" : "") +
+    '<div class="botoes">';
+
+  if (slotsEquipaveis.length) {
+    if (equipadoEm) {
+      html += '<button class="btn perigo" data-acao="desequipar">Desequipar (' + equipadoEm + ")</button>";
+    } else {
+      slotsEquipaveis.forEach(function (s) {
+        var rot = SLOTS_PAPER.find(function (x) { return x.key === s; });
+        html += '<button class="btn primario" data-acao="equipar" data-slot="' + s + '">Equipar em ' + (rot ? rot.rotulo : s) + "</button>";
+      });
+    }
+  }
+  if (!equipadoEm) {
+    html += '<button class="btn" data-acao="vender">🛒 Vender no Mercado</button>';
+  }
+  html +=
+      '<button class="btn" data-acao="fechar">Fechar</button>' +
+    "</div>";
+
+  cnt.innerHTML = html;
+  cnt.querySelectorAll("button[data-acao]").forEach(function (b) {
+    b.addEventListener("click", function () {
+      var ac = b.getAttribute("data-acao");
+      var sl = b.getAttribute("data-slot");
+      modal.classList.remove("on");
+      if (ac === "fechar") return;
+      if (ac === "equipar") acaoEquipar(item, sl);
+      if (ac === "desequipar") acaoDesequipar(item);
+      if (ac === "vender") abrirVender(item);
+    });
+  });
+  modal.classList.add("on");
+  // corRaridade
+  var tit = cnt.querySelector("h3");
+  if (tit) tit.style.color = corDeRaridade(rar);
+  modal.onclick = function (e) {
+    if (e.target === modal) modal.classList.remove("on");
+  };
+}
+
+function slotsEquipaveisPara(item) {
+  var t = item.tipo;
+  var sl = item.slot && item.slot.toLowerCase ? item.slot.toLowerCase() : "";
+  var out = [];
+  if (t === "arma") out.push("arma");
+  if (t === "carta") out.push("carta");
+  if (t === "cristal" && sl.indexOf("uso") === -1) out.push("cristal"); // socket permanente
+  if (sl.indexOf("armadura") !== -1) out.push("armadura");
+  if (sl.indexOf("capuz") !== -1 || sl.indexOf("elmo") !== -1) out.push("capuz");
+  if (sl.indexOf("luva") !== -1) out.push("luvas");
+  if (sl.indexOf("bota") !== -1) out.push("botas");
+  if (sl.indexOf("acess") !== -1) out.push("acessorio_1", "acessorio_2");
+  if (sl.indexOf("escudo") !== -1) out.push("escudo");
+  return out;
+}
+function slotOndeEstaEquipado(invId) {
+  var eq = EU_PERS.equipado || {};
+  for (var k in eq) if (eq[k] === invId) return k;
+  return null;
+}
+
+function corDeRaridade(r) {
+  return ({
+    "Comum": "#b9b9c8", "Incomum": "#6fcf7a", "Raro": "#6aa9ff",
+    "Épico": "#c485ff", "Lendário": "#ffb548"
+  })[r] || "#e9e9f2";
+}
+
+/* ----- Ações ----- */
+async function salvarEquipadoNoBanco(novoEq) {
+  var r = await supaClient().rpc("salvar_estado_online", {
+    p: { equipado: novoEq }
+  });
+  if (r.error) { toast(r.error.message, "erro"); return false; }
+  EU_PERS.equipado = novoEq;
+  return true;
+}
+
+async function acaoEquipar(item, slot) {
+  if (!slot) return;
+  var novoEq = Object.assign({}, EU_PERS.equipado || {});
+  novoEq[slot] = item.id;
+  var ok = await salvarEquipadoNoBanco(novoEq);
+  if (ok) {
+    toast("✔️ Equipado em " + (SLOTS_PAPER.find(function (x) { return x.key === slot; }) || {}).rotulo + "!", "ok");
+    renderTudo();
+  }
+}
+async function acaoDesequipar(item) {
+  var alvo = slotOndeEstaEquipado(item.id);
+  if (!alvo) return;
+  var novoEq = Object.assign({}, EU_PERS.equipado || {});
+  delete novoEq[alvo];
+  var ok = await salvarEquipadoNoBanco(novoEq);
+  if (ok) { toast("✔️ Item desequipado.", "ok"); renderTudo(); }
+}
+
+/* ----- Vender no Mercado (modal + RPC) ----- */
+function abrirVender(item) {
+  var modal = document.getElementById("modalItem");
+  var cnt = document.getElementById("modalItemContent");
+  var html =
+    "<h3>🛒 Vender no Mercado</h3>" +
+    '<div class="info">Item: <b>' + item.nome + '</b> · Qtd: <b>' + (item.quantidade || 1) + '</b>' +
+      ' · Anúncio expira em <b>7 dias</b>. Sem custos para anunciar ou vender — <b>você recebe 100% do valor</b>!</div>' +
+    '<div style="margin-bottom:12px;">' +
+      '<label style="display:block;font-size:13px;color:var(--muted);margin-bottom:4px;">Preço (Col, inteiro):</label>' +
+      '<input type="number" min="1" id="precoVenda" value="10" style="width:100%;padding:8px;background:var(--fundo);color:var(--texto);border:1px solid var(--borda);border-radius:6px;font-family:inherit;" />' +
+    "</div>" +
+    '<div id="resumoVenda" style="margin-bottom:12px;color:var(--muted);font-size:13px;"></div>' +
+    '<div class="botoes">' +
+      '<button class="btn primario" id="confirmVenda">✔️ Publicar anúncio</button>' +
+      '<button class="btn" data-acao="cancelar">Cancelar</button>' +
+    "</div>";
+  cnt.innerHTML = html;
+  modal.classList.add("on");
+  function atualizaResumo() {
+    var p = Number(document.getElementById("precoVenda").value) || 0;
+    document.getElementById("resumoVenda").textContent =
+      "💸 Você recebe: " + p + " Col (100% — sem taxa, sem dedução nenhuma)";
+  }
+  document.getElementById("precoVenda").addEventListener("input", atualizaResumo);
+  atualizaResumo();
+  cnt.querySelector("#confirmVenda").onclick = async function () {
+    var p = Number(document.getElementById("precoVenda").value);
+    if (!p || p <= 0) { toast("Preço inválido", "erro"); return; }
+    var r = await supaClient().rpc("publicar_anuncio", {
+      p_inventario_id: item.id, p_preco: p
+    });
+    modal.classList.remove("on");
+    if (r.error) { toast(r.error.message || r.error, "erro"); return; }
+    toast("✔️ Anúncio #" + r.data + " publicado no Mercado!", "ok");
+    // remover do inventário visual (o item ainda é o mesmo dono até vender)
+    await carregarInventario();
+    renderTudo();
+  };
+  cnt.querySelector('[data-acao="cancelar"]').onclick = function () {
+    modal.classList.remove("on");
+  };
+}
+
+/* curva XP por nível (igual seeds do schema) */
+var XP_POR_NIVEL = {
+  2: 100, 3: 250, 4: 500, 5: 1000, 6: 2000,
+  7: 3500, 8: 6000, 9: 10000, 10: 18000, 11: Infinity
+};
+
+/* bootstrap */
+main().catch(function (e) {
+  console.error(e);
+  toast(e.message || e, "erro");
+});
+</script>
+</body>
+</html>

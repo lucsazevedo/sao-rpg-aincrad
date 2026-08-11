@@ -108,6 +108,39 @@ details.cfg[open] summary::before{transform:rotate(90deg)}
 .dropzone{border:1px dashed var(--line);border-radius:3px;padding:5px 10px;font-family:var(--f-mono);font-size:10.5px;color:var(--ink-faint)}
 .dropzone.drag{border-color:var(--gold);color:var(--gold)}
 
+/* ---- modos ---- */
+.tabs{display:flex;gap:8px;margin-bottom:16px}
+.tab{font-family:var(--f-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-dim);border:1px solid var(--line);padding:9px 16px;border-radius:3px}
+.tab.on{color:var(--gold-bright);border-color:var(--gold-dim);background:var(--panel-2)}
+.painel{display:none}
+.painel.on{display:block}
+
+/* ---- agente ---- */
+.agente-warn{border:1px solid var(--red);border-radius:4px;padding:10px 14px;font-size:12px;color:var(--ink-dim);margin-bottom:14px}
+.agente-warn b{color:var(--red)}
+.objetivo{width:100%;min-height:70px;padding:10px;font-size:13.5px;border-color:var(--line-soft);margin-bottom:8px}
+.trace{display:flex;flex-direction:column;gap:4px;margin:14px 0;max-height:340px;overflow-y:auto;border:1px solid var(--line-soft);border-radius:4px;padding:10px;background:var(--panel)}
+.trace-empty{font-size:12px;color:var(--ink-faint);font-style:italic}
+.tline{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-dim);white-space:pre-wrap;word-break:break-word}
+.tline.tool{color:var(--violet)}
+.tline.result{color:var(--ink-faint);padding-left:14px}
+.tline.fim{color:var(--green)}
+.tline.err{color:var(--red)}
+.propostas{display:flex;flex-direction:column;gap:10px;margin-top:14px}
+.proposta{border:1px solid var(--line);border-radius:4px;background:var(--panel)}
+.proposta-head{display:flex;align-items:center;gap:10px;padding:10px 12px;border-bottom:1px solid var(--line-soft)}
+.proposta-head input[type=checkbox]{width:15px;height:15px}
+.proposta-nome{font-family:var(--f-mono);font-size:12.5px;color:var(--gold-bright);flex:1}
+.proposta-tag{font-family:var(--f-mono);font-size:9.5px;text-transform:uppercase;color:var(--ink-faint);border:1px solid var(--line-soft);padding:2px 7px;border-radius:3px}
+.proposta-motivo{padding:8px 12px 0;font-size:12px;color:var(--ink-dim)}
+.proposta-diff{margin:10px 12px 12px;max-height:260px;overflow:auto;background:var(--panel-3);border-radius:3px;padding:8px 10px;font-family:var(--f-mono);font-size:11px;line-height:1.5}
+.dl{white-space:pre}
+.dl.add{color:var(--green)}
+.dl.rem{color:var(--red)}
+.dl.hunk{color:var(--violet)}
+.agente-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.agente-status{font-family:var(--f-mono);font-size:11.5px;color:var(--ink-faint);margin-top:8px}
+
 footer{margin-top:26px;font-size:11.5px;color:var(--ink-faint);text-align:center}
 footer a{color:var(--gold-dim)}
 </style>
@@ -143,6 +176,20 @@ footer a{color:var(--gold-dim)}
           <button class="btn" id="testarBtn">Testar conexão</button>
           <span class="status" id="statusMsg">ainda não testado</span>
         </div>
+        <div class="cfg-row">
+          <label for="agenteUrl">Servidor do agente</label>
+          <input id="agenteUrl" value="http://127.0.0.1:8787" spellcheck="false" />
+        </div>
+        <div class="cfg-row">
+          <label for="agenteModelo">Modelo do agente</label>
+          <input id="agenteModelo" value="qwen2.5:14b" spellcheck="false" />
+        </div>
+        <p class="help">
+          O Modo Agente (aba abaixo) não fala com o Ollama direto — ele fala com
+          <code>python scripts\servidor_agente.py</code>, que precisa estar rodando (é ele quem lê/escreve
+          arquivo, o navegador sozinho não consegue). O modelo do agente precisa suportar <em>tool calling</em>
+          — confirmado no <code>qwen2.5:14b</code>; outros modelos podem não funcionar.
+        </p>
         <div class="cfg-actions">
           <label class="btn" style="display:inline-flex;align-items:center">
             Anexar guia de contexto (.md/.txt)
@@ -162,28 +209,64 @@ footer a{color:var(--gold-dim)}
       </div>
     </details>
 
-    <div class="chatlog" id="chatlog">
-      <p class="empty" id="emptyMsg">A conversa aparece aqui. Escreva embaixo e mande — ou anexe uma imagem pra analisar.</p>
+    <div class="tabs">
+      <button class="tab on" id="tabConversa" data-alvo="painelConversa">💬 Conversa</button>
+      <button class="tab" id="tabAgente" data-alvo="painelAgente">🛠️ Agente (edita arquivos)</button>
     </div>
 
-    <div class="composer">
-      <div class="preview-row" id="previewRow"></div>
-      <textarea id="prompt" placeholder="Peça uma ficha, revise um texto, descreva uma cena... (Enter envia, Shift+Enter quebra linha)"></textarea>
-      <div class="composer-bar">
-        <div class="composer-left">
-          <label class="btn" style="display:inline-flex;align-items:center">
-            📎 Imagem
-            <input type="file" id="imgFile" accept="image/*" multiple style="display:none" />
-          </label>
-          <span class="dropzone" id="dropzone">ou arraste uma imagem aqui</span>
-        </div>
-        <div class="composer-left">
-          <button class="btn" id="limparBtn">Limpar conversa</button>
-          <button class="btn" id="exportarBtn">Exportar .md</button>
-          <button class="btn" id="pararBtn" style="display:none">Parar</button>
-          <button class="btn primary" id="enviarBtn">Enviar</button>
+    <div class="painel on" id="painelConversa">
+      <div class="chatlog" id="chatlog">
+        <p class="empty" id="emptyMsg">A conversa aparece aqui. Escreva embaixo e mande — ou anexe uma imagem pra analisar.</p>
+      </div>
+
+      <div class="composer">
+        <div class="preview-row" id="previewRow"></div>
+        <textarea id="prompt" placeholder="Peça uma ficha, revise um texto, descreva uma cena... (Enter envia, Shift+Enter quebra linha)"></textarea>
+        <div class="composer-bar">
+          <div class="composer-left">
+            <label class="btn" style="display:inline-flex;align-items:center">
+              📎 Imagem
+              <input type="file" id="imgFile" accept="image/*" multiple style="display:none" />
+            </label>
+            <span class="dropzone" id="dropzone">ou arraste uma imagem aqui</span>
+          </div>
+          <div class="composer-left">
+            <button class="btn" id="limparBtn">Limpar conversa</button>
+            <button class="btn" id="exportarBtn">Exportar .md</button>
+            <button class="btn" id="pararBtn" style="display:none">Parar</button>
+            <button class="btn primary" id="enviarBtn">Enviar</button>
+          </div>
         </div>
       </div>
+    </div>
+
+    <div class="painel" id="painelAgente">
+      <div class="agente-warn">
+        <b>Leia antes de usar:</b> o agente enxerga qualquer arquivo de texto do projeto (só
+        <code>.env</code> e <code>scripts/db/</code> ficam de fora) — mas <b>nunca escreve nada
+        sozinho</b>: toda proposta aparece como diff abaixo, e só vira arquivo de verdade quando
+        você marca e clica em "Aplicar". Ele não tem acesso a comando nenhum (não roda git, não
+        mexe no banco, não gera imagem). É um modelo local de 14B: já testei e ele erra coisa
+        simples (contagem, por exemplo) e às vezes diz "feito" antes mesmo de você aprovar —
+        <b>confie no diff, nunca no texto dele</b>. Revise cada proposta, principalmente pedidos
+        que mexem em vários arquivos. <b>Ele só edita `.md`/`.js` fonte — não toca no Supabase.</b>
+        O Compêndio ao vivo lê do banco, então uma proposta aplicada só aparece lá depois de você
+        rodar <code>gerar_dados_web.py</code> e <code>migrar_para_supabase.py</code> na sequência.
+      </div>
+      <textarea class="objetivo" id="objetivo" placeholder="Descreva o que você quer mudar no projeto. Ex: 'Adicione um campo opcional dropa_ovo (sim/não) na ficha de todo monstro do tipo Besta em monstros/, seguindo o padrão do _modelo_monstro.md.'"></textarea>
+      <div class="agente-actions">
+        <button class="btn primary" id="agenteExecutarBtn">Executar agente</button>
+        <button class="btn" id="agentePararBtn" style="display:none">Parar</button>
+        <button class="btn" id="agenteLimparBtn">Limpar</button>
+      </div>
+      <div class="trace" id="trace"><p class="trace-empty">O passo a passo do agente aparece aqui — o que ele lê, busca e propõe.</p></div>
+      <div class="propostas" id="propostas"></div>
+      <div class="agente-actions" id="agenteAplicarBar" style="display:none">
+        <button class="btn" id="agenteSelTodasBtn">Selecionar todas</button>
+        <button class="btn" id="agenteSelNenhumaBtn">Nenhuma</button>
+        <button class="btn primary" id="agenteAplicarBtn">Aplicar selecionadas</button>
+      </div>
+      <p class="agente-status" id="agenteStatus"></p>
     </div>
 
     <footer>Conversa não é salva ao recarregar a página — exporte antes de fechar. · <a href="compendio_andar1.html">← Compêndio</a></footer>
@@ -200,7 +283,22 @@ const els = {
   prompt: $('prompt'), imgFile: $('imgFile'), dropzone: $('dropzone'), previewRow: $('previewRow'),
   limparBtn: $('limparBtn'), exportarBtn: $('exportarBtn'), pararBtn: $('pararBtn'), enviarBtn: $('enviarBtn'),
   cfgBox: $('cfgBox'),
+  tabConversa: $('tabConversa'), tabAgente: $('tabAgente'),
+  painelConversa: $('painelConversa'), painelAgente: $('painelAgente'),
+  agenteUrl: $('agenteUrl'), agenteModelo: $('agenteModelo'),
+  objetivo: $('objetivo'), trace: $('trace'), propostas: $('propostas'),
+  agenteExecutarBtn: $('agenteExecutarBtn'), agentePararBtn: $('agentePararBtn'), agenteLimparBtn: $('agenteLimparBtn'),
+  agenteAplicarBar: $('agenteAplicarBar'), agenteSelTodasBtn: $('agenteSelTodasBtn'), agenteSelNenhumaBtn: $('agenteSelNenhumaBtn'),
+  agenteAplicarBtn: $('agenteAplicarBtn'), agenteStatus: $('agenteStatus'),
 };
+
+// ---- abas ----
+[els.tabConversa, els.tabAgente].forEach(tab => tab.addEventListener('click', () => {
+  [els.tabConversa, els.tabAgente].forEach(t => t.classList.remove('on'));
+  [els.painelConversa, els.painelAgente].forEach(p => p.classList.remove('on'));
+  tab.classList.add('on');
+  $(tab.dataset.alvo).classList.add('on');
+}));
 
 const LS_KEY = 'aincrad_assistente_cfg';
 let conversation = []; // {role, content, images:[dataURL,...]}
@@ -418,6 +516,156 @@ async function enviar(){
   }
 }
 function stripPrefix(dataUrl){ return dataUrl.split(',')[1] || dataUrl; }
+
+// ============================================================
+// Modo Agente
+// ============================================================
+let agentAbort = null;
+let agentPropostas = {}; // caminho -> {motivo, existia, diff}
+let agentSessionId = null;
+
+function agenteBase(){ return els.agenteUrl.value.replace(/\/+$/, ''); }
+
+function addTrace(kind, html){
+  if (els.trace.querySelector('.trace-empty')) els.trace.innerHTML = '';
+  const div = document.createElement('div');
+  div.className = 'tline ' + kind;
+  div.innerHTML = html;
+  els.trace.appendChild(div);
+  els.trace.scrollTop = els.trace.scrollHeight;
+}
+
+function fmtArgs(args){
+  return Object.entries(args || {}).map(([k, v]) => `${k}=${esc(typeof v === 'string' ? v : JSON.stringify(v))}`).join(', ');
+}
+
+function renderDiff(diff){
+  if (!diff) return '<span class="dl">(arquivo novo, sem diferenças pra mostrar linha a linha)</span>';
+  return diff.split('\n').map(linha => {
+    let cls = 'dl';
+    if (linha.startsWith('+++') || linha.startsWith('---')) cls += '';
+    else if (linha.startsWith('+')) cls += ' add';
+    else if (linha.startsWith('-')) cls += ' rem';
+    else if (linha.startsWith('@@')) cls += ' hunk';
+    return `<div class="${cls}">${esc(linha)}</div>`;
+  }).join('');
+}
+
+function renderPropostas(){
+  els.propostas.innerHTML = '';
+  const caminhos = Object.keys(agentPropostas);
+  els.agenteAplicarBar.style.display = caminhos.length ? 'flex' : 'none';
+  caminhos.forEach(caminho => {
+    const p = agentPropostas[caminho];
+    const div = document.createElement('div');
+    div.className = 'proposta';
+    div.innerHTML = `
+      <div class="proposta-head">
+        <input type="checkbox" checked data-caminho="${esc(caminho)}">
+        <span class="proposta-nome">${esc(caminho)}</span>
+        <span class="proposta-tag">${p.existia ? 'edição' : 'arquivo novo'}</span>
+      </div>
+      ${p.motivo ? `<div class="proposta-motivo">${esc(p.motivo)}</div>` : ''}
+      <div class="proposta-diff">${renderDiff(p.diff)}</div>
+    `;
+    els.propostas.appendChild(div);
+  });
+}
+
+els.agenteSelTodasBtn.addEventListener('click', () => {
+  els.propostas.querySelectorAll('input[type=checkbox]').forEach(c => c.checked = true);
+});
+els.agenteSelNenhumaBtn.addEventListener('click', () => {
+  els.propostas.querySelectorAll('input[type=checkbox]').forEach(c => c.checked = false);
+});
+
+els.agenteAplicarBtn.addEventListener('click', async () => {
+  const marcados = [...els.propostas.querySelectorAll('input[type=checkbox]:checked')].map(c => c.dataset.caminho);
+  if (!marcados.length){ els.agenteStatus.textContent = 'nada selecionado.'; return; }
+  els.agenteStatus.textContent = 'aplicando...';
+  try{
+    const res = await fetch(agenteBase() + '/aplicar', {
+      method: 'POST', headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({ id_sessao: agentSessionId, arquivos: marcados }),
+    });
+    const data = await res.json();
+    let txt = '';
+    if (data.aplicados && data.aplicados.length) txt += `Aplicado: ${data.aplicados.join(', ')}. `;
+    if (data.falhas && data.falhas.length) txt += `Falhou: ${data.falhas.map(f => f.caminho + ' (' + f.erro + ')').join(', ')}.`;
+    els.agenteStatus.textContent = txt || '(nada aplicado)';
+    if (data.aplicados && data.aplicados.length){
+      els.agenteStatus.textContent += ' Lembrete: o Compêndio ao vivo lê do Supabase, não do arquivo direto — rode "python scripts\\gerar_dados_web.py" e DEPOIS "python scripts\\migrar_para_supabase.py" pra essa mudança aparecer de verdade. "python scripts\\subir_github.py" quando quiser subir pro GitHub.';
+      data.aplicados.forEach(c => delete agentPropostas[c]);
+      renderPropostas();
+    }
+  }catch(e){
+    els.agenteStatus.textContent = 'Erro ao aplicar: ' + e.message;
+  }
+});
+
+els.agenteLimparBtn.addEventListener('click', () => {
+  els.trace.innerHTML = '<p class="trace-empty">O passo a passo do agente aparece aqui — o que ele lê, busca e propõe.</p>';
+  els.propostas.innerHTML = '';
+  els.agenteAplicarBar.style.display = 'none';
+  els.agenteStatus.textContent = '';
+  agentPropostas = {};
+  agentSessionId = null;
+});
+
+els.agentePararBtn.addEventListener('click', () => { if (agentAbort) agentAbort.abort(); });
+
+els.agenteExecutarBtn.addEventListener('click', async () => {
+  const objetivo = els.objetivo.value.trim();
+  if (!objetivo) return;
+  els.trace.innerHTML = '';
+  els.propostas.innerHTML = '';
+  els.agenteAplicarBar.style.display = 'none';
+  agentPropostas = {};
+  els.agenteStatus.textContent = '';
+  els.agenteExecutarBtn.disabled = true;
+  els.agentePararBtn.style.display = 'inline-block';
+  agentAbort = new AbortController();
+
+  try{
+    const res = await fetch(agenteBase() + '/perguntar', {
+      method: 'POST', headers: {'Content-Type':'application/json'}, signal: agentAbort.signal,
+      body: JSON.stringify({ objetivo, modelo: els.agenteModelo.value.trim(), max_passos: 15 }),
+    });
+    if (!res.ok || !res.body) throw new Error('HTTP ' + res.status);
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder();
+    let buf = '';
+    while (true){
+      const { value, done } = await reader.read();
+      if (done) break;
+      buf += decoder.decode(value, { stream: true });
+      const linhas = buf.split('\n');
+      buf = linhas.pop();
+      for (const linha of linhas){
+        if (!linha.trim()) continue;
+        const ev = JSON.parse(linha);
+        agentSessionId = ev.id_sessao || agentSessionId;
+        if (ev.tipo === 'inicio') addTrace('', `▸ iniciando (${esc(ev.modelo)})`);
+        else if (ev.tipo === 'passo') addTrace('', `— passo ${ev.n} —`);
+        else if (ev.tipo === 'ferramenta') addTrace('tool', `🔧 ${esc(ev.nome)}(${fmtArgs(ev.args)})`);
+        else if (ev.tipo === 'resultado_ferramenta') addTrace('result', `↳ ${esc(JSON.stringify(ev.resultado)).slice(0, 400)}`);
+        else if (ev.tipo === 'erro') addTrace('err', `✕ ${esc(ev.texto)}`);
+        else if (ev.tipo === 'fim'){
+          addTrace('fim', `✅ ${esc(ev.texto)}`);
+          agentPropostas = ev.propostas || {};
+          renderPropostas();
+        }
+      }
+    }
+  }catch(e){
+    if (e.name === 'AbortError') addTrace('err', '(interrompido)');
+    else addTrace('err', `✕ Erro ao falar com ${esc(agenteBase())}: ${esc(e.message)} — confira se "python scripts\\servidor_agente.py" está rodando.`);
+  }finally{
+    els.agenteExecutarBtn.disabled = false;
+    els.agentePararBtn.style.display = 'none';
+    agentAbort = null;
+  }
+});
 
 renderChat();
 </script>

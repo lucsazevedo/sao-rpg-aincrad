@@ -1,0 +1,788 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Profissões & Craft</title>
+<style>
+:root{
+  --bg:#0a0806; --panel:#15100a; --panel-2:#1d150c;
+  --line:#3d2e1a; --line-soft:#2a2013;
+  --gold:#d9ad5e; --gold-dim:#8c6f3e; --gold-bright:#f2d18a;
+  --ink:#efe5d2; --ink-dim:#a89a80; --ink-faint:#6f6450;
+  --red:#e0524a; --green:#8fd694;
+  --rar-comum:#a89a80; --rar-incomum:#76b06a; --rar-raro:#5f8dcf;
+  --rar-epico:#b184d9; --rar-lendario:#e0a44b;
+  --f-disp:"Palatino Linotype",Palatino,Georgia,serif;
+  --f-ui:-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-ui);line-height:1.5}
+button,input,textarea,select{font:inherit;color:inherit}
+.shell{max-width:1200px;margin:0 auto;padding:20px 16px 70px}
+h1{font-family:var(--f-disp);color:var(--gold-bright);font-size:28px;margin:0 0 4px}
+.sub{color:var(--ink-dim);font-size:13px;margin-bottom:18px}
+.gate{border:2px solid var(--gold-dim);border-radius:6px;padding:28px;max-width:380px;margin:80px auto;text-align:center}
+.gate input{width:100%;background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:9px 11px;margin:8px 0;color:var(--ink)}
+.gate button{width:100%;background:var(--gold-dim);color:#150f08;border:none;border-radius:4px;padding:10px;font-weight:700;cursor:pointer;margin-top:8px}
+.gate .erro{color:var(--red);font-size:12.5px;min-height:16px}
+.aviso-folego{background:linear-gradient(90deg,#2d220f,#3a2a12 50%,#2d220f);border:1px solid #5a4320;border-radius:6px;padding:10px 14px;margin-bottom:14px;font-size:13px;color:var(--gold-bright)}
+.aviso-folego b{color:#fff7dc}
+.status{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}
+.status .st{background:var(--panel);border:1px solid var(--line);border-radius:6px;padding:8px 12px;font-size:13px;flex:1 0 calc(25% - 10px);min-width:180px}
+.status .st .k{color:var(--ink-dim);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;font-family:var(--f-mono)}
+.status .st .v{font-family:var(--f-disp);color:var(--gold-bright);font-size:18px}
+.status .st .v.small{font-size:13px;color:var(--ink)}
+.bar{background:var(--line);border-radius:3px;height:6px;overflow:hidden;margin-top:4px;min-width:140px}
+.bar > div{height:100%;background:linear-gradient(90deg,var(--gold-dim),var(--gold-bright))}
+.bar.rar > div{background:linear-gradient(90deg,#5f8dcf,#b184d9)}
+.tabs{display:flex;gap:4px;margin-bottom:16px;border-bottom:1px solid var(--line);flex-wrap:wrap}
+.tab{padding:10px 14px;border:1px solid transparent;border-bottom:none;border-radius:4px 4px 0 0;cursor:pointer;font-size:13px;color:var(--ink-dim);background:transparent}
+.tab.ativo{background:var(--panel);color:var(--gold);border-color:var(--line);position:relative;top:1px}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.toolbar input,.toolbar select{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:8px 10px;color:var(--ink)}
+.btn{background:var(--panel);border:1px solid var(--line);border-radius:4px;padding:8px 13px;cursor:pointer;color:var(--ink)}
+.btn:hover{border-color:var(--gold-dim)}
+.btn.primary{background:var(--gold-dim);color:#150f08;border-color:var(--gold-dim);font-weight:700}
+.btn.danger{border-color:var(--red);color:var(--red)}
+.btn:disabled{opacity:.4;cursor:not-allowed;border-color:var(--line)!important;background:var(--panel)!important;color:var(--ink-faint)!important}
+.btn.small{padding:4px 9px;font-size:12px}
+.grid-profissoes{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+.grid-receitas{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:14px}
+.grid-materiais,.grid-ovos,.grid-pets{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;position:relative}
+.card .faixa{height:6px}
+.card .faixa.rar-comum{background:var(--rar-comum)}
+.card .faixa.rar-incomum{background:var(--rar-incomum)}
+.card .faixa.rar-raro{background:var(--rar-raro)}
+.card .faixa.rar-epico{background:var(--rar-epico)}
+.card .faixa.rar-lendario{background:var(--rar-lendario)}
+.card .body{padding:14px}
+.card .tit{font-family:var(--f-disp);font-size:17px;margin-bottom:4px}
+.card .tit.rar-comum{color:var(--ink)}
+.card .tit.rar-incomum{color:#bfe2b5}
+.card .tit.rar-raro{color:#a9c6f3}
+.card .tit.rar-epico{color:#dfc0f0}
+.card .tit.rar-lendario{color:#ffd691}
+.card .subtit{color:var(--ink-dim);font-size:11.5px;margin-bottom:8px;font-family:var(--f-mono);letter-spacing:.04em}
+.card .desc{color:var(--ink-dim);font-size:12.5px;margin-bottom:10px;min-height:30px}
+.card .row{display:flex;justify-content:space-between;align-items:center;font-size:12px;padding:3px 0;color:var(--ink-dim)}
+.card .row b{color:var(--ink);font-weight:600}
+.card .tags{display:flex;gap:4px;flex-wrap:wrap;margin:8px 0}
+.pill{font-family:var(--f-mono);font-size:10px;padding:2px 7px;border-radius:3px;border:1px solid var(--line);color:var(--ink-dim)}
+.pill.nv{border-color:var(--gold-dim);color:var(--gold-bright)}
+.pill.fg{border-color:var(--green);color:var(--green)}
+.pill.t-mat{border-color:#6b5a3a;color:#d9b987}
+.pill.t-ovo{border-color:#7b5a8a;color:#c9aed7}
+.pill.t-pet{border-color:#4a6b7b;color:#aec9d7}
+.pill.ok{border-color:var(--green);color:var(--green)}
+.pill.warn{border-color:#b58a3a;color:#e0b96a}
+.pill.erro{border-color:var(--red);color:var(--red)}
+.mat-lista{margin:8px 0;padding:8px;background:var(--panel-2);border-radius:4px;font-size:12px}
+.mat-linha{display:flex;justify-content:space-between;padding:2px 0}
+.mat-faltando{color:var(--red);font-weight:700}
+.mat-tem{color:var(--green);font-weight:600}
+.acoes-card{display:flex;gap:8px;margin-top:12px;padding-top:10px;border-top:1px dashed var(--line-soft)}
+.modal-fundo{position:fixed;inset:0;background:rgba(0,0,0,.72);display:none;align-items:center;justify-content:center;z-index:999;padding:20px}
+.modal-fundo.aberto{display:flex}
+.modal{background:var(--panel);border:1px solid var(--line);border-radius:8px;max-width:560px;width:100%;max-height:90vh;overflow:auto}
+.modal .cab{padding:14px 18px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center}
+.modal .cab h3{margin:0;font-family:var(--f-disp);color:var(--gold-bright);font-size:20px}
+.modal .corpo{padding:18px}
+.modal .rodape{padding:12px 18px;border-top:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.fechar{background:transparent;border:1px solid var(--line);border-radius:3px;color:var(--ink-dim);cursor:pointer;width:28px;height:28px}
+.resumo-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}
+.resumo-grid .k{color:var(--ink-dim);font-family:var(--f-mono);font-size:11px;letter-spacing:.05em;text-transform:uppercase}
+.resumo-grid .v{color:var(--gold-bright);font-weight:700;font-size:15px}
+.dado{display:inline-block;padding:6px 10px;background:var(--panel-2);border:1px solid var(--line);border-radius:6px;font-family:var(--f-disp);font-size:20px;color:var(--gold-bright);min-width:44px;text-align:center;margin:0 4px}
+.dado.vermelho{color:var(--red);border-color:#6b2e2a}
+.dado.verde{color:var(--green);border-color:#3d6e41}
+.msg{font-size:13px;padding:9px 12px;border-radius:4px;margin-bottom:8px}
+.msg.ok{background:#1b3a1e;color:#bfe2b5;border:1px solid #3d6e41}
+.msg.erro{background:#3a1b1b;color:#e2a9a4;border:1px solid #6b2e2a}
+.msg.info{background:#1e2a3a;color:#b1c1e0;border:1px solid #3c5374}
+.msg.warn{background:#3a3018;color:#e0c98a;border:1px solid #7a6428}
+.links{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:16px}
+.links a{color:var(--gold-dim);font-size:13px;text-decoration:none}
+.links a:hover{color:var(--gold-bright);text-decoration:underline}
+.prof-card-eu{outline:2px solid var(--gold);outline-offset:-2px;position:relative}
+.prof-card-eu::before{content:"VOCÊ";position:absolute;top:8px;right:8px;background:var(--gold);color:#150f08;font-family:var(--f-mono);font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;z-index:2}
+.timer{font-family:var(--f-mono);font-size:14px;color:var(--gold-bright);font-weight:700}
+.tabs-internas{display:flex;gap:4px;margin-bottom:12px}
+.tabs-internas .tab-in{background:transparent;border:1px solid var(--line);padding:6px 12px;border-radius:4px;cursor:pointer;font-size:12px;color:var(--ink-dim)}
+.tabs-internas .tab-in.ativo{background:var(--panel-2);color:var(--gold);border-color:var(--gold-dim)}
+.explicacao-box{max-width:760px;margin:0 auto}
+.explicacao-box h3{color:var(--gold-bright);font-family:var(--f-disp);margin:20px 0 8px;border-bottom:1px solid var(--line);padding-bottom:6px}
+.explicacao-box h3:first-child{margin-top:0}
+.explicacao-box p{font-size:13px;color:var(--ink-dim);margin:6px 0}
+.explicacao-box table{width:100%;border-collapse:collapse;margin:10px 0;font-size:12.5px}
+.explicacao-box th,.explicacao-box td{border:1px solid var(--line);padding:6px 10px;text-align:left}
+.explicacao-box th{background:var(--panel-2);color:var(--gold);font-family:var(--f-mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.explicacao-box td b{color:var(--ink)}
+.empty{text-align:center;padding:40px 20px;color:var(--ink-faint);font-size:14px}
+.empty b{color:var(--ink-dim)}
+@media (max-width:760px){
+  .status{gap:6px}
+  .status .st{flex:1 0 calc(50% - 6px);min-width:0}
+  .grid-profissoes,.grid-receitas,.grid-materiais,.grid-ovos,.grid-pets{grid-template-columns:1fr}
+  .bar{min-width:100px}
+}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div id="gate" class="gate" style="display:none">
+    <h1 style="font-size:20px">🔒 Profissões & Craft</h1>
+    <p class="sub">Faça login com sua conta de jogador.</p>
+    <input type="text" id="gEmail" placeholder="e-mail" />
+    <input type="password" id="gSenha" placeholder="senha" />
+    <button id="gEntrar">Entrar</button>
+    <div class="erro" id="gErro"></div>
+  </div>
+
+  <div id="painel" style="display:none">
+    <h1>🛠️ Profissões & Craft</h1>
+    <div class="sub">Crie itens, ferramentas de ofício e chocagem de pets usando <b>2d6 PBTA</b>: 10+ sucesso total · 7-9 parcial · 6- falha.</div>
+
+    <div class="links">
+      <a href="painel.html">← Voltar ao Painel</a>
+      <a href="missoes_diarias.html">⚔️ Missões</a>
+      <a href="inventario.html">🎒 Inventário</a>
+      <a href="estalagem.html">🛏️ Estalagem</a>
+      <a href="mercado.html">🏪 Mercado</a>
+      <a href="#" id="sair" style="margin-left:auto;color:var(--red)">Sair</a>
+    </div>
+
+    <div class="aviso-folego">
+      ⚡ <b>Craft gasta Fôlego</b> — item Nv1 gasta 1, ferramenta Nv5_ref gasta 8. Quanto maior o nível, maior o risco e maior o XP. Materiais são perdidos em falha (50%) e parcial (20%) — <b>10+ sucesso total = 0 desperdício</b>.
+    </div>
+
+    <div class="status" id="statusBar"></div>
+
+    <div class="tabs" id="tabs">
+      <div class="tab ativo" data-tab="minha">🛠️ Minha Profissão</div>
+      <div class="tab" data-tab="materiais">🎒 Meus Materiais</div>
+      <div class="tab" data-tab="ovos">🥚 Meus Ovos</div>
+      <div class="tab" data-tab="pets">🐾 Pets & Incubando</div>
+      <div class="tab" data-tab="info">📖 Como Funciona</div>
+    </div>
+
+    <div class="tab-pane" id="pane-minha">
+      <div id="minhaProfTitulo" style="margin-bottom:12px"></div>
+      <div class="toolbar">
+        <input type="search" id="buscaReceita" placeholder="Buscar receita por nome ou material..." style="flex:1;min-width:200px" />
+        <select id="filtroTipoRec"><option value="">Itens + Ferramentas</option><option value="item">Apenas Itens</option><option value="ferramenta">Apenas Ferramentas</option></select>
+      </div>
+      <div id="receitas" class="grid-receitas"></div>
+    </div>
+
+    <div class="tab-pane" id="pane-todas" style="display:none">
+      <div id="profissoes" class="grid-profissoes"></div>
+    </div>
+
+    <div class="tab-pane" id="pane-materiais" style="display:none">
+      <div class="toolbar">
+        <input type="search" id="buscaMat" placeholder="Buscar material..." style="flex:1;min-width:200px" />
+        <select id="filtroRarMat"><option value="">Todas raridades</option><option value="comum">Comum</option><option value="incomum">Incomum</option><option value="raro">Raro</option><option value="epico">Épico</option><option value="lendario">Lendário</option></select>
+      </div>
+      <div id="materiais" class="grid-materiais"></div>
+    </div>
+
+    <div class="tab-pane" id="pane-ovos" style="display:none">
+      <div class="toolbar"><span style="color:var(--ink-dim);font-size:12.5px">⚠️ Domadores recebem <b>−10% de tempo por nível de incubadora ACIMA do mínimo</b> (mínimo 25% do tempo).</span></div>
+      <div id="ovos" class="grid-ovos"></div>
+    </div>
+
+    <div class="tab-pane" id="pane-pets" style="display:none">
+      <div class="tabs-internas" id="petTabs">
+        <div class="tab-in ativo" data-stat="ativo">✅ Ativos</div>
+        <div class="tab-in" data-stat="incubando">🥚 Incubando</div>
+        <div class="tab-in" data-stat="perdido">💔 Perdidos</div>
+      </div>
+      <div id="pets" class="grid-pets"></div>
+    </div>
+
+    <div class="tab-pane" id="pane-info" style="display:none">
+      <div class="card explicacao-box" style="max-width:780px">
+        <div class="faixa rar-epico"></div>
+        <div class="body">
+          <h3>🎲 Como funciona o craft (PBTA)</h3>
+          <p>Todo craft rola <b>2d6 + Modificador</b> no servidor. A soma cai em 3 faixas:</p>
+          <table><thead><tr><th>Faixa</th><th>Risco material</th><th>XP ganho</th><th>Resultado</th></tr></thead><tbody>
+            <tr><td><b style="color:var(--green)">10+ Sucesso TOTAL</b></td><td>0% de perda</td><td>100%</td><td>Item vai pro inventário / ferramenta desbloqueada</td></tr>
+            <tr><td><b style="color:#c4c06a">7–9 Sucesso PARCIAL</b></td><td>+20% extra gasto</td><td>70%</td><td>Item ganho; 8% chance da ferramenta danificar</td></tr>
+            <tr><td><b style="color:var(--red)">6– FALHA</b></td><td>+50% extra gasto</td><td>10% (consolo)</td><td>Item NÃO é criado; 20% chance dano</td></tr>
+          </tbody></table>
+
+          <h3>📊 Modificador por diferença de nível</h3>
+          <table><thead><tr><th>(Seu niv. prof. − Niv. receita)</th><th>Mod PBTA</th></tr></thead><tbody>
+            <tr><td>≥ +2</td><td><b style="color:var(--green)">+3</b></td></tr>
+            <tr><td>+1</td><td><b style="color:var(--green)">+1</b></td></tr>
+            <tr><td>0</td><td>0</td></tr>
+            <tr><td>−1</td><td><b style="color:var(--red)">−1</b></td></tr>
+            <tr><td>≤ −2</td><td><b style="color:var(--red)">−3</b></td></tr>
+          </tbody></table>
+          <p>Além disso, cada receita tem <code>dificuldade_mod</code> (−1 a +5) que soma diretamente.</p>
+
+          <h3>🔧 Ferramentas de ofício (5 níveis + refino)</h3>
+          <p>Cada profissão tem <b>2 ferramentas iniciais</b> (Nv1 e Nv2) + <b>1 ferramenta final de 2 estágios</b> (Nv5 Estágio 1 e Estágio 2 / Refino). O Estágio 2 <b>exige</b> ter o Estágio 1 já craftado — e o substitui ao ser criado.</p>
+
+          <h3>🎯 Obtendo TODOS os materiais SÓ por drop</h3>
+          <p>Nunca compre matéria-prima de NPC — <b>100% dos 48 materiais</b> dropam em missões. Ao resolver qualquer missão (com sucesso ou parcial), você SEMPRE recebe <b>1–3 materiais de craft</b> aleatórios com raridade proporcional ao nível da missão e preferência por categoria do tipo de missão (caça = animal, coleta = vegetal/mineral etc).</p>
+
+          <h3>🥚 Incubação (Domador + todos)</h3>
+          <p>Qualquer jogador pode chocar ovos, mas <b>Domadores</b> possuem ferramentas de incubadora que aceleram o tempo: −10% por nível acima do mínimo (até 75% de redução). Quando o cronômetro zerar, clique em "Verificar Chocagem" e o pet passa para status "Ativo".</p>
+
+          <h3>⚖️ Nenhum material órfão · Balanceamento estrito</h3>
+          <p>48 materiais × distribuição controlada: Comum (≤10 usos) · Incomum (≤8) · Raro (≤6) · Épico (≤5) · Lendário (≤4). <b>Todos</b> os materiais aparecem em pelo menos 3 receitas diferentes. Lendários só aparecem nas ferramentas de Refino Estágio 2 (16 slots / 5 lendários = 3,2 usos médios cada).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-fundo" id="modalCraft">
+  <div class="modal">
+    <div class="cab">
+      <h3 id="mTit">Confirmar craft</h3>
+      <button class="fechar" id="mFechar">×</button>
+    </div>
+    <div class="corpo" id="mCorpo"></div>
+    <div class="rodape" id="mRodape"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<script src="modo_mestre.js"></script>
+<script>
+var XP_POR_NIVEL = {2:100,3:250,4:500,5:1000,6:2000,7:3500,8:6000,9:10000,10:18000};
+var RAR_NOME = {comum:"Comum",incomum:"Incomum",raro:"Raro",epico:"Épico",lendario:"Lendário"};
+var RAR_CLS = {comum:"rar-comum",incomum:"rar-incomum",raro:"rar-raro",epico:"rar-epico",lendario:"rar-lendario"};
+
+var EU_PERS = null; var EU_PROF = null; var MEU_NIVEL = 1; var MEU_XP = 0;
+var RECEITAS = []; var PROFISSOES = []; var MATS = []; var OVOS_CAT = [];
+var MEUS_MATS = {}; var MEUS_INV = []; var MEUS_PETS = [];
+var PET_FILTRO = "ativo";
+
+function usuarioId(){ return _sessao && _sessao.user ? _sessao.user.id : null; }
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+function rarCor(r){ return RAR_CLS[r] || "rar-comum"; }
+function rarNome(r){ return RAR_NOME[r] || r || "Comum"; }
+
+document.getElementById("gEntrar").addEventListener("click", async function(){
+  var email=document.getElementById("gEmail").value.trim();
+  var senha=document.getElementById("gSenha").value;
+  var erro=document.getElementById("gErro"); erro.textContent="";
+  try{
+    await fazerLogin(email, senha); location.reload();
+  }catch(e){ erro.textContent = "Não deu: " + e.message; }
+});
+document.getElementById("sair").addEventListener("click", async function(e){
+  e.preventDefault(); await fazerLogout(); location.reload();
+});
+
+document.querySelectorAll("#tabs > .tab").forEach(function(t){
+  t.addEventListener("click", function(){
+    document.querySelectorAll("#tabs > .tab").forEach(function(x){x.classList.remove("ativo");});
+    t.classList.add("ativo");
+    document.querySelectorAll(".tab-pane").forEach(function(p){p.style.display="none";});
+    document.getElementById("pane-"+t.dataset.tab).style.display="";
+    if(t.dataset.tab==="materiais") renderMateriais();
+    if(t.dataset.tab==="ovos") renderOvos();
+    if(t.dataset.tab==="pets") renderPets();
+  });
+});
+
+document.querySelectorAll("#petTabs > .tab-in").forEach(function(t){
+  t.addEventListener("click", function(){
+    document.querySelectorAll("#petTabs > .tab-in").forEach(function(x){x.classList.remove("ativo");});
+    t.classList.add("ativo");
+    PET_FILTRO = t.dataset.stat;
+    renderPets();
+  });
+});
+
+document.getElementById("buscaReceita").addEventListener("input", renderReceitas);
+document.getElementById("filtroTipoRec").addEventListener("change", renderReceitas);
+document.getElementById("buscaMat").addEventListener("input", renderMateriais);
+document.getElementById("filtroRarMat").addEventListener("change", renderMateriais);
+document.getElementById("mFechar").addEventListener("click", function(){ document.getElementById("modalCraft").classList.remove("aberto");});
+
+async function iniciar(){
+  await iniciarSessao();
+  // Evita gate de login duplicado na race condition onAuthStateChange
+  for(var tentativa=0; tentativa<2 && !estaLogado(); tentativa++){
+    await new Promise(function(res){ setTimeout(res, 80); });
+    await iniciarSessao();
+  }
+  if(!estaLogado()){
+    document.getElementById("painel").style.display="none";
+    document.getElementById("gate").style.display="";
+    return;
+  }
+  document.getElementById("gate").style.display="none";
+  document.getElementById("painel").style.display="";
+
+  var [pers, receitas, profissoes, mats, ovosCat] = await Promise.all([
+    carregarEu(),
+    carregarReceitas(),
+    carregarProfissoes(),
+    carregarMateriais(),
+    carregarOvosCatalogo()
+  ]);
+  RECEITAS = receitas; PROFISSOES = profissoes; MATS = mats; OVOS_CAT = ovosCat;
+  if(!EU_PERS) return;
+  await carregarInventario();
+  await carregarPets();
+  renderStatus();
+  renderMinhaProf();
+  renderReceitas();
+}
+
+async function carregarEu(){
+  var r = await supaClient().from("personagens").select("*").eq("dono_id", usuarioId());
+  EU_PERS = (r.data||[])[0] || null;
+  if(!EU_PERS){
+    document.getElementById("painel").innerHTML = '<div class="msg erro">⚠️ Você ainda não tem personagem. Crie um em personagens.html primeiro.</div><a href="personagens.html" class="btn primary" style="display:inline-block;margin-top:10px">Criar ficha</a>';
+    return null;
+  }
+  EU_PROF = EU_PERS.profissao || "Aventureiro";
+  var r2 = await supaClient().from("nivel_profissao").select("*")
+    .eq("personagem_nome", EU_PERS.nome).eq("profissao", EU_PROF)
+    .order("nivel",{ascending:false}).limit(1);
+  var np = (r2.data||[])[0];
+  MEU_NIVEL = np? np.nivel : 1;
+  MEU_XP = np? np.xp : 0;
+  return EU_PERS;
+}
+
+async function carregarReceitas(){
+  var r = await supaClient().from("receitas").select("*").eq("visivel",true).eq("excluido",false);
+  return r.data || [];
+}
+async function carregarProfissoes(){
+  var r = await supaClient().from("oficios").select("*").eq("visivel",true).eq("excluido",false);
+  return r.data || [];
+}
+async function carregarMateriais(){
+  var r = await supaClient().from("materiais_basicos").select("*").eq("visivel",true).eq("excluido",false);
+  return r.data || [];
+}
+async function carregarOvosCatalogo(){
+  var r = await supaClient().from("ovos_catalogo").select("*").eq("visivel",true).eq("excluido",false);
+  return r.data || [];
+}
+async function carregarInventario(){
+  var r = await supaClient().from("inventario").select("*")
+    .eq("personagem_nome", EU_PERS.nome).eq("excluido",false);
+  MEUS_INV = r.data || [];
+  MEUS_MATS = {};
+  MEUS_INV.forEach(function(it){
+    if(it.tipo==="material"){
+      MEUS_MATS[it.item_id] = (MEUS_MATS[it.item_id]||0) + (it.quantidade||0);
+    }
+  });
+}
+async function carregarPets(){
+  var r = await supaClient().from("criaturas_domadas").select("*")
+    .eq("personagem_nome", EU_PERS.nome).eq("excluido",false);
+  MEUS_PETS = r.data || [];
+}
+
+function renderStatus(){
+  if(!EU_PERS) return;
+  var colT = Number(EU_PERS.col_mao||0) + Number(EU_PERS.col_guardado||0);
+  var xpMax = XP_POR_NIVEL[Math.min(10, MEU_NIVEL+1)] || 18000;
+  var pctXp = Math.min(100, Math.round((MEU_XP/xpMax)*100));
+  var pctFg = Math.min(100, Math.round((EU_PERS.folego/20)*100));
+  var nRec = RECEITAS.filter(function(r){return r.profissao===EU_PROF;}).length;
+  var nMat = Object.keys(MEUS_MATS).length;
+  document.getElementById("statusBar").innerHTML = '' +
+    '<div class="st"><div class="k">Personagem</div><div class="v small">' + esc(EU_PERS.nome) + '</div><div class="small" style="color:var(--ink-dim);font-size:11px;margin-top:2px">Profissão: <b style="color:var(--gold-bright)">' + esc(EU_PROF) + '</b></div></div>' +
+    '<div class="st"><div class="k">Nível Profissão</div><div class="v">' + MEU_NIVEL + '/10</div><div class="bar rar"><div style="width:' + pctXp + '%"></div></div><div class="small" style="color:var(--ink-dim);font-size:11px;margin-top:2px">' + MEU_XP + ' / ' + xpMax + ' XP · ' + nRec + ' receitas</div></div>' +
+    '<div class="st"><div class="k">💰 Col</div><div class="v small">' + EU_PERS.col_mao + ' / ' + EU_PERS.col_guardado + ' <span style="color:var(--ink-faint)">(total ' + colT + ')</span></div><div class="small" style="color:var(--ink-dim);font-size:11px;margin-top:2px">' + nMat + ' tipos de material</div></div>' +
+    '<div class="st"><div class="k">🌬️ Fôlego</div><div class="v">' + (EU_PERS.folego||0) + '/20</div><div class="bar"><div style="width:' + pctFg + '%"></div></div><div class="small" style="color:var(--ink-dim);font-size:11px;margin-top:2px">−1 a cada 30 min passivos</div></div>';
+}
+
+function renderMinhaProf(){
+  var minha = PROFISSOES.find(function(p){return p.nome===EU_PROF;}) || {nome:EU_PROF,descricao:""};
+  document.getElementById("minhaProfTitulo").innerHTML =
+    '<h2 style="color:var(--gold);font-family:var(--f-disp);margin:0;font-size:20px">' +
+    (minha.icone||"🔧") + " " + esc(minha.nome) +
+    (minha.atributo_teste? ' <span style="color:var(--ink-dim);font-size:12px;font-family:var(--f-mono)">· Rolagem: ' + esc(minha.atributo_teste) + '</span>':'') +
+    '</h2><div class="sub">' + esc(minha.descricao||"") + '</div>';
+}
+
+function renderReceitas(){
+  var termo = document.getElementById("buscaReceita").value.trim().toLowerCase();
+  var fTipo = document.getElementById("filtroTipoRec").value;
+  var lista = RECEITAS.filter(function(r){return r.profissao===EU_PROF;});
+  if(fTipo) lista = lista.filter(function(r){return r.tipo===fTipo;});
+  if(termo) lista = lista.filter(function(r){
+    var nomesMateriais = ((r.materiais||[]).map(function(m){ return ((MATS.find(function(x){ return x.id===m.mat_id;})||{}).nome || ""); }).join(" ");
+    var s = (r.nome_resultado||"") + " " + (r.descricao||"") + " " + nomesMateriais;
+    return s.toLowerCase().indexOf(termo)>=0;
+  });
+  lista.sort(function(a,b){
+    if(a.tipo!==b.tipo) return a.tipo==="ferramenta"?-1:1;
+    return (a.nivel_receita||0)-(b.nivel_receita||0) || (a.receita_estagio||1)-(b.receita_estagio||1);
+  });
+  var box = document.getElementById("receitas");
+  if(!lista.length){ box.innerHTML = '<div class="empty">Nenhuma receita encontrada para sua profissão.</div>'; return; }
+  box.innerHTML = "";
+  lista.forEach(function(rec){
+    var rar = rarCor(rec.resultado_raridade);
+    var div = document.createElement("div");
+    div.className = "card";
+    var bloq = MEU_NIVEL < (rec.nivel_receita||1);
+    var sufEst = rec.receita_refino? (" (Est. " + (rec.receita_estagio||1) + ")"):"";
+    var iconeTipo = rec.tipo==="ferramenta"? "🔧":"🎒";
+    var matHtml = "";
+    var matsOk = true;
+    var matsArr = rec.materiais || [];
+    if(typeof matsArr === "string") try { matsArr = JSON.parse(matsArr); } catch(e){ matsArr=[];}
+    matsArr.forEach(function(m){
+      var tem = MEUS_MATS[m.mat_id] || 0;
+      var qtd = m.qtd || 0;
+      if(tem < qtd) matsOk = false;
+      var matNome = ((MATS.find(function(x){return x.id===m.mat_id;})||{}).nome || m.mat_id);
+      matHtml += '<div class="mat-linha"><span>· ' + esc(matNome) + '</span><span class="' + (tem>=qtd?'mat-tem':'mat-faltando') + '">' + tem + '/' + qtd + '</span></div>';
+    });
+    var dif = MEU_NIVEL - (rec.nivel_receita||1);
+    var mod = dif>=2?3:(dif===1?1:(dif===-1?-1:(dif<=-2?-3:0))) + (rec.dificuldade_mod||0);
+    var folegoOk = (EU_PERS.folego||0) >= (rec.folego_custo||0);
+    var podeClicar = !bloq && matsOk && folegoOk;
+
+    div.innerHTML = '' +
+      '<div class="faixa ' + rar + '"></div>' +
+      '<div class="body">' +
+        '<div class="tit ' + rar + '">' + iconeTipo + ' ' + esc(rec.nome_resultado) + sufEst + '</div>' +
+        '<div class="subtit">' + esc(rec.atributo_teste? ('Teste de ' + String(rec.atributo_teste).charAt(0).toUpperCase() + String(rec.atributo_teste).slice(1)):"") + (rec.tipo? ' · ' + (rec.tipo==='ferramenta'?'Ferramenta':'Item craftado'):"") + '</div>' +
+        '<div class="tags">' +
+          '<span class="pill nv">Nv ' + (rec.nivel_receita||1) + ' req.</span>' +
+          '<span class="pill fg">−' + (rec.folego_custo||0) + ' 🌬️</span>' +
+          '<span class="pill">⭐ +' + (rec.xp_recompensa||0) + ' XP</span>' +
+          '<span class="pill" style="border-color:' + (mod>=0?'var(--green)':'var(--red)') + ';color:' + (mod>=0?'var(--green)':'var(--red)') + '">🎲 mod ' + (mod>=0?'+':'') + mod + '</span>' +
+          (rec.receita_refino && rec.receita_estagio===2? '<span class="pill erro">⛓️ Refino Exige Est.1</span>':'') +
+          (bloq? '<span class="pill erro">🔒 Bloqueado</span>':'') +
+        '</div>' +
+        (rec.efeitos && Object.keys(rec.efeitos).length?
+          '<div class="row"><span>Efeito:</span><b>' + esc(JSON.stringify(rec.efeitos).replace(/[{}"]/g," ").trim()) + '</b></div>':'') +
+        '<div class="desc" style="margin-top:6px"><b>Materiais (' + (matsOk?'<span style="color:var(--green)">ok</span>':'<span style="color:var(--red)">faltando</span>') + '):</b></div>' +
+        '<div class="mat-lista">' + matHtml + '</div>' +
+        '<div class="acoes-card">' +
+          '<button class="btn primary" data-id="' + esc(rec.id) + '" data-tipo="' + esc(rec.tipo) + '" style="flex:1"' + (podeClicar?'':' disabled') + '>' +
+            (bloq? '🔒 Nv ' + (rec.nivel_receita||1) + ' req.' : (!matsOk? '📦 Materiais faltando' : (!folegoOk? '🌬️ Fôlego baixo' : '▶️ Craftar (click único)'))) +
+          '</button>' +
+        '</div>' +
+      '</div>';
+    var btn = div.querySelector('[data-id]');
+    if(btn && podeClicar) btn.addEventListener("click", function(){ abrirModalCraft(rec); });
+    box.appendChild(div);
+  });
+}
+
+function renderProfissoes(){
+  var box = document.getElementById("profissoes");
+  if(!PROFISSOES.length){ box.innerHTML='<div class="empty">Nenhuma profissão carregada.</div>'; return; }
+  box.innerHTML = "";
+  PROFISSOES.forEach(function(p){
+    var minha = p.nome === EU_PROF;
+    var div = document.createElement("div");
+    div.className = "card" + (minha?" prof-card-eu":"");
+    var nRec = RECEITAS.filter(function(r){return r.profissao===p.nome;}).length;
+    div.innerHTML = '' +
+      '<div class="faixa ' + (minha?'rar-lendario':'rar-raro') + '"></div>' +
+      '<div class="body">' +
+        '<div class="tit ' + (minha?'rar-lendario':'rar-raro') + '">' + (p.icone||"⚔️") + ' ' + esc(p.nome) + '</div>' +
+        '<div class="subtit">' + (p.atributo_teste? esc(p.atributo_teste)+" · ":"") + nRec + ' receitas' + '</div>' +
+        '<div class="desc">' + esc(p.descricao||"") + '</div>' +
+        (p.exemplo_mecanica? '<div class="row"><span>Exemplo:</span><b style="font-size:11.5px">' + esc(String(p.exemplo_mecanica).slice(0,80)) + '</b></div>':'') +
+        (p.caracteristica_1? '<div class="row"><span>Traço A:</span><b>' + esc(String(p.caracteristica_1).slice(0,30)) + '</b></div>':'') +
+        (p.caracteristica_2? '<div class="row"><span>Traço B:</span><b>' + esc(String(p.caracteristica_2).slice(0,30)) + '</b></div>':'') +
+      '</div>';
+    box.appendChild(div);
+  });
+}
+
+function renderMateriais(){
+  var termo = document.getElementById("buscaMat").value.trim().toLowerCase();
+  var fRar = document.getElementById("filtroRarMat").value;
+  // SOMENTE os materiais que o usuário POSSUI (MEUS_MATS). Nunca mais mostra catálogo inteiro.
+  var lista = Object.keys(MEUS_MATS).map(function(mid){
+    var qtd = MEUS_MATS[mid] || 0;
+    var m = MATS.find(function(x){ return x.id===mid; }) || {id:mid,nome:mid,raridade:"comum",descricao:""};
+    return Object.assign({}, m, { qtd: qtd });
+  });
+  lista.sort(function(a,b){return (a.nome||a.id).localeCompare(b.nome||b.id);});
+  if(termo) lista = lista.filter(function(m){return String(m.nome||m.id||"").toLowerCase().indexOf(termo)>=0;});
+  if(fRar) lista = lista.filter(function(m){return m.raridade===fRar;});
+  var box = document.getElementById("materiais");
+  if(!lista.length){ box.innerHTML='<div class="empty">Você ainda não tem nenhum material. Faça missões para obter drops!</div>'; return; }
+  box.innerHTML = "";
+  lista.forEach(function(m){
+    var tem = m.qtd || 0;
+    var rar = rarCor(m.raridade);
+    var div = document.createElement("div");
+    div.className = "card";
+    div.innerHTML = '' +
+      '<div class="faixa ' + rar + '"></div>' +
+      '<div class="body">' +
+        '<div class="tit ' + rar + '" style="font-size:14px">' + esc(m.nome||m.id) + '</div>' +
+        '<div class="tags">' +
+          '<span class="pill t-mat">' + rarNome(m.raridade) + '</span>' +
+          '<span class="pill nv">Nv ' + (m.nivel_obtencao||1) + '+</span>' +
+        '</div>' +
+        '<div class="row" style="margin-top:6px"><span>📦 Você tem:</span><b style="font-size:18px;font-family:var(--f-disp);color:var(--gold-bright)">' + tem + '</b></div>' +
+        (m.categoria? '<div class="row"><span>Categoria:</span><b>' + esc(m.categoria) + '</b></div>':'') +
+        (m.fonte? '<div class="row"><span>Fonte drop:</span><b style="font-size:11.5px;color:var(--ink-dim)">' + esc(String(m.fonte).slice(0,60)) + '</b></div>':'') +
+        (m.descricao? '<div class="desc" style="min-height:0;margin-top:6px;font-size:11.5px">' + esc(String(m.descricao).slice(0,120)) + '</div>':'') +
+      '</div>';
+    box.appendChild(div);
+  });
+}
+
+function renderOvos(){
+  var lista = MEUS_INV.filter(function(it){return it.tipo==="ovo";});
+  var box = document.getElementById("ovos");
+  if(!lista.length){ box.innerHTML='<div class="empty">Nenhum ovo no inventário. <b>Domadores</b> podem fabricar incubadoras; ovos dropam em chefes e missões raras de caça.</div>'; return; }
+  box.innerHTML = "";
+  lista.forEach(function(o){
+    var cat = OVOS_CAT.find(function(x){return x.id===o.item_id;});
+    var rar = rarCor(cat? cat.raridade : "comum");
+    var div = document.createElement("div");
+    div.className = "card";
+    var catMin = cat? (cat.incubadora_min||1) : 1;
+    div.innerHTML = '' +
+      '<div class="faixa ' + rar + '"></div>' +
+      '<div class="body">' +
+        '<div class="tit ' + rar + '" style="font-size:15px">🥚 ' + esc(o.nome||o.item_id) + '</div>' +
+        '<div class="tags">' +
+          '<span class="pill t-ovo">' + rarNome(cat?cat.raridade:"comum") + '</span>' +
+          '<span class="pill qtd">×' + (o.quantidade||1) + '</span>' +
+        '</div>' +
+        (cat? '<div class="row"><span>Nv mínimo:</span><b>Nv ' + (cat.nivel_min||1) + '+</b></div>':'') +
+        (cat? '<div class="row"><span>Tempo:</span><b>' + (cat.tempo_chocagem_horas||12) + 'h</b></div>':'') +
+        (cat? '<div class="row"><span>Incub. mín:</span><b>Nv ' + catMin + '</b></div>':'') +
+        (cat && cat.como_obter? '<div class="desc" style="min-height:0;font-size:11.5px;margin-top:6px">' + esc(String(cat.como_obter).slice(0,100)) + '</div>':'') +
+        '<div class="acoes-card"><button class="btn primary" data-ovo="' + o.id + '" style="flex:1">🥚 Chocar Ovo</button></div>' +
+      '</div>';
+    var btn = div.querySelector('[data-ovo]');
+    if(btn) btn.addEventListener("click", function(){ chocarOvo(o.id); });
+    box.appendChild(div);
+  });
+}
+
+function renderPets(){
+  var lista = MEUS_PETS.filter(function(p){return p.status===PET_FILTRO;});
+  var box = document.getElementById("pets");
+  if(!lista.length){
+    var msg = PET_FILTRO==="ativo"?
+      "Nenhum pet ativo ainda. Chocar um ovo primeiro!" :
+      (PET_FILTRO==="incubando"? "Nenhuma incubação em andamento." : "Nenhum pet perdido.");
+    box.innerHTML = '<div class="empty">' + msg + '</div>';
+    return;
+  }
+  box.innerHTML = "";
+  lista.forEach(function(p){
+    var rarMap = {"Comum":"comum","Incomum":"incomum","Raro":"raro","Épico":"epico"};
+    var rar = rarCor(rarMap[p.raridade] || "comum");
+    var div = document.createElement("div");
+    div.className = "card";
+    var extra = "";
+    if(p.status==="incubando" && p.choca_em){
+      var choca = new Date(p.choca_em);
+      var agora = new Date();
+      var falta = Math.max(0, Math.round((choca-agora)/1000));
+      var hh = Math.floor(falta/3600); var mm = Math.floor((falta%3600)/60); var ss = falta%60;
+      var pad = function(n){return String(n).padStart(2,"0");};
+      var pronto = falta <= 0;
+      extra = '<div class="row"><span>Choca em:</span><span class="timer">' + (pronto? '✅ PRONTO':'⏳ '+pad(hh)+':'+pad(mm)+':'+pad(ss)) + '</span></div>' +
+        '<div class="acoes-card"><button class="btn ' + (pronto?'primary':'') + '" data-pet="' + p.id + '" style="flex:1" ' + (pronto?'':'disabled') + '>' +
+          (pronto? '🐣 Verificar Chocagem':'Ainda incubando...') + '</button></div>';
+    }
+    if(p.status==="ativo"){
+      extra = '<div class="row"><span>Nascido em:</span><b style="font-size:11px">' + (p.nascido_em? new Date(p.nascido_em).toLocaleString("pt-BR"):"-") + '</b></div>' +
+        (p.efeitos && Object.keys(p.efeitos).length? '<div class="desc" style="min-height:0;margin-top:4px;font-size:11.5px">🎁 ' + esc(JSON.stringify(p.efeitos).replace(/[{}"]/g," ").trim()) + '</div>':"");
+    }
+    div.innerHTML = '' +
+      '<div class="faixa ' + rar + '"></div>' +
+      '<div class="body">' +
+        '<div class="tit ' + rar + '" style="font-size:15px">🐾 ' + esc(p.nome_pet||"Pet") + '</div>' +
+        '<div class="tags">' +
+          '<span class="pill t-pet">' + (p.raridade||"Comum") + '</span>' +
+          '<span class="pill nv">Incub. Nv ' + (p.incubadora_nivel||1) + '</span>' +
+          '<span class="pill ' + (p.status==="ativo"?'ok':(p.status==="incubando"?'warn':'erro')) + '">' +
+            (p.status==="ativo"?'✅ Ativo':(p.status==="incubando"?'🥚 Incub.':'💔 Perdido')) + '</span>' +
+        '</div>' +
+        (p.especie? '<div class="row"><span>Espécie:</span><b>' + esc(p.especie) + '</b></div>':'') +
+        extra +
+      '</div>';
+    var btn = div.querySelector('[data-pet]');
+    if(btn) btn.addEventListener("click", function(){ verificarChocagem(p.id); });
+    box.appendChild(div);
+  });
+}
+
+/* ================ MODAIS E AÇÕES ================ */
+
+function abrirModalCraft(rec){
+  var fundo = document.getElementById("modalCraft");
+  document.getElementById("mTit").textContent = (rec.tipo==="ferramenta"?"🔧":"🎒") + " Craftar: " + rec.nome_resultado;
+  var rar = rarCor(rec.resultado_raridade);
+  var dif = MEU_NIVEL - (rec.nivel_receita||1);
+  var mod = dif>=2?3:(dif===1?1:(dif===-1?-1:(dif<=-2?-3:0))) + (rec.dificuldade_mod||0);
+  var matHtml = "";
+  var matsArr = rec.materiais || [];
+  if(typeof matsArr === "string") try { matsArr = JSON.parse(matsArr); } catch(e){ matsArr=[];}
+  matsArr.forEach(function(m){
+    var tem = MEUS_MATS[m.mat_id] || 0;
+    var qtd = m.qtd || 0;
+    var matNome = ((MATS.find(function(x){return x.id===m.mat_id;})||{}).nome || m.mat_id);
+    matHtml += '<div class="mat-linha"><span>· ' + esc(matNome) + '</span><span class="' + (tem>=qtd?'mat-tem':'mat-faltando') + '">' + tem + '/' + qtd + '</span></div>';
+  });
+
+  var corpo = '<div class="resumo-grid">' +
+    '<div><div class="k">Tipo</div><div class="v">' + (rec.tipo==="ferramenta"?"🔧 Ferramenta":"🎒 Item") + '</div></div>' +
+    '<div><div class="k">Nível req.</div><div class="v">' + (rec.nivel_receita||1) + '</div></div>' +
+    '<div><div class="k">🌬️ Fôlego</div><div class="v">−' + (rec.folego_custo||0) + '</div></div>' +
+    '<div><div class="k">⭐ XP</div><div class="v">+' + (rec.xp_recompensa||0) + '</div></div>' +
+    '<div><div class="k">Atributo</div><div class="v small">' + esc(rec.atributo_teste||"-") + '</div></div>' +
+    '<div><div class="k">Mod PBTA</div><div class="v" style="color:' + (mod>=0?'var(--green)':'var(--red)') + '">' + (mod>=0?'+':'') + mod + '</div></div>' +
+    '<div><div class="k">Raridade</div><div class="v small" style="color:var(--' + rar.replace("rar-","rar-") + ')">' + rarNome(rec.resultado_raridade) + '</div></div>' +
+    (rec.receita_refino? '<div><div class="k">Refino</div><div class="v small">Estágio ' + (rec.receita_estagio||1) + '/2</div></div>':'<div></div>') +
+  '</div>' +
+  '<p style="color:var(--ink-dim);font-size:12.5px"><b>Materiais:</b></p>' +
+  '<div class="mat-lista" style="margin-bottom:10px">' + matHtml + '</div>' +
+  '<div id="mMsg"></div>';
+  document.getElementById("mCorpo").innerHTML = corpo;
+
+  var folegoOk = (EU_PERS.folego||0) >= (rec.folego_custo||0);
+  var rodape = '<span style="font-size:12px;color:var(--ink-dim)">Click único: gasta fôlego, rola 2d6 no servidor e insere item/ferramenta.</span>' +
+    '<button class="btn primary" id="btnCraft"' + (folegoOk?'':' disabled') + '>🎲 Confirmar e Rodar Dados</button>';
+  document.getElementById("mRodape").innerHTML = rodape;
+  document.getElementById("btnCraft").addEventListener("click", function(){ fazerCraft(rec); });
+  fundo.classList.add("aberto");
+}
+
+async function fazerCraft(rec){
+  var btn = document.getElementById("btnCraft");
+  btn.disabled = true;
+  try{
+    var fn = rec.tipo === "ferramenta"? "craftar_ferramenta" : "craftar_item";
+    var r = await supaClient().rpc(fn, {p_receita_id: rec.id});
+    if(r.error) throw new Error(r.error.message);
+    var resp;
+    try{ resp = typeof r.data === "string"? JSON.parse(r.data) : r.data; }catch(e){ throw new Error("Resposta inválida: " + r.data); }
+    if(resp && resp.erro){ throw new Error(resp.erro); }
+
+    var msg = document.getElementById("mMsg");
+    var classe = resp.resultado==='sucesso_total'?'ok':(resp.resultado==='sucesso_parcial'?'warn':'erro');
+    var titulo = resp.resultado==='sucesso_total'?'✅ Sucesso TOTAL!':(resp.resultado==='sucesso_parcial'?'⚠️ Sucesso PARCIAL':'❌ FALHA');
+    var d1 = document.createElement('span'); d1.className='dado ' + (resp.soma_com_mod>=10?'verde':(resp.soma_com_mod>=7?'':'vermelho')); d1.textContent = resp.dados[0];
+    var d2 = document.createElement('span'); d2.className='dado ' + (resp.soma_com_mod>=10?'verde':(resp.soma_com_mod>=7?'':'vermelho')); d2.textContent = resp.dados[1];
+    var dSoma = document.createElement('span'); dSoma.className='dado ' + (resp.soma_com_mod>=10?'verde':(resp.soma_com_mod>=7?'':'vermelho')); dSoma.textContent = resp.soma_com_mod;
+    var container = document.createElement('div');
+    container.style.margin='10px 0';
+    container.appendChild(document.createTextNode('🎲 Dados: '));
+    container.appendChild(d1); container.appendChild(document.createTextNode(' + '));
+    container.appendChild(d2); container.appendChild(document.createTextNode(' + mod = '));
+    container.appendChild(dSoma);
+
+    msg.innerHTML = '';
+    var mEl = document.createElement('div'); mEl.className='msg ' + classe;
+    mEl.innerHTML = '<b>' + titulo + '</b><br/>';
+    if(resp.xp){ mEl.innerHTML += '🏆 Ganhou <b>' + resp.xp + ' XP</b> de profissão.<br/>'; }
+    if(resp.novo_nivel_profissao){
+      mEl.innerHTML += '<b style="color:var(--gold-bright);font-size:16px">⬆️ SUBIU PARA NÍVEL ' + resp.novo_nivel_profissao + '!</b><br/>';
+    }
+    if(resp.resultado !== 'falha'){
+      if(resp.item_nome) mEl.innerHTML += '🎁 Criou: <b>' + esc(resp.item_nome) + '</b> (inventário)<br/>';
+      if(resp.ferramenta_nome) mEl.innerHTML += '🔧 Desbloqueou: <b>' + esc(resp.ferramenta_nome) + '</b><br/>';
+      if(resp.refino_substituiu_antecessora) mEl.innerHTML += '♻️ Substituiu a ferramenta estágio 1.<br/>';
+    }
+    if(resp.ferramenta_danificada){ mEl.innerHTML += '⚠️ <b style="color:#e0c98a">Ferramenta danificada no processo!</b><br/>'; }
+    if(resp.materiais_consumidos){
+      mEl.innerHTML += '📦 Materiais usados: <ul style="margin:6px 0 0 20px;padding:0;font-size:12px">';
+      (resp.materiais_consumidos||[]).forEach(function(mm){
+        var mn = ((MATS.find(function(x){return x.id===mm.mat_id;})||{}).nome || mm.mat_id);
+        mEl.innerHTML += '<li>' + esc(mn) + ' × <b>' + (mm.qtd_usada||0) + '</b></li>';
+      });
+      mEl.innerHTML += '</ul>';
+    }
+    msg.appendChild(mEl);
+    msg.appendChild(container);
+
+    // atualizar locais
+    await carregarEu();
+    await carregarInventario();
+    renderStatus();
+    renderReceitas();
+
+    document.getElementById("mRodape").innerHTML = '<span></span><button class="btn primary" onclick="document.getElementById(\'modalCraft\').classList.remove(\'aberto\');">Fechar</button>';
+  }catch(e){
+    var msg = document.getElementById("mMsg");
+    if(!msg){ document.getElementById("mCorpo").innerHTML += '<div id="mMsg"></div>'; msg = document.getElementById("mMsg"); }
+    msg.innerHTML = '<div class="msg erro">' + esc(e.message) + '</div>';
+    btn.disabled = false;
+  }
+}
+
+async function chocarOvo(invId){
+  try{
+    var r = await supaClient().rpc("chocar_ovo", {p_inventario_ovo_id: invId});
+    if(r.error) throw new Error(r.error.message);
+    var resp;
+    try{ resp = typeof r.data === "string"? JSON.parse(r.data) : r.data; }catch(e){ throw new Error("Resposta inválida: " + r.data); }
+    if(resp && resp.erro){ throw new Error(resp.erro); }
+    alert('🥚 Ovo em incubação!\n\n' +
+      'Tempo: ' + resp.tempo_horas_original + 'h → ' + resp.tempo_horas_acelerado + 'h (acelerado)\n' +
+      'Pronta em: ' + new Date(resp.choca_em).toLocaleString("pt-BR"));
+    await carregarInventario(); await carregarPets();
+    renderOvos(); renderStatus();
+  }catch(e){
+    alert("Erro: " + e.message);
+  }
+}
+
+async function verificarChocagem(cdId){
+  try{
+    var r = await supaClient().rpc("verificar_chocagem", {p_criatura_domada_id: cdId});
+    if(r.error) throw new Error(r.error.message);
+    var resp;
+    try{ resp = typeof r.data === "string"? JSON.parse(r.data) : r.data; }catch(e){ throw new Error("Resposta inválida: " + r.data); }
+    if(resp.erro === 'ainda nao chocou'){
+      var falta = resp.faltam_segundos||0;
+      var hh = Math.floor(falta/3600); var mm = Math.floor((falta%3600)/60); var ss = falta%60;
+      var pad = function(n){return String(n).padStart(2,"0");};
+      alert("⏳ Ainda não! Faltam " + pad(hh)+":"+pad(mm)+":"+pad(ss));
+      return;
+    }
+    if(resp.erro){ throw new Error(resp.erro); }
+    alert('🐣 Chocou! Parabéns!\n\n' +
+      'Pet: ' + resp.nome_pet + '\n' +
+      'Raridade: ' + resp.raridade);
+    await carregarPets();
+    PET_FILTRO = "ativo";
+    document.querySelectorAll("#petTabs > .tab-in").forEach(function(x){x.classList.toggle("ativo", x.dataset.stat==="ativo");});
+    renderPets();
+  }catch(e){
+    alert("Erro: " + e.message);
+  }
+}
+
+// ticker de 1 seg para atualizar timers de incubação
+setInterval(function(){
+  if(document.getElementById("pane-pets").style.display !== "none" && PET_FILTRO === "incubando"){
+    renderPets();
+  }
+}, 1000);
+
+iniciar();
+</script>
+</body>
+</html>

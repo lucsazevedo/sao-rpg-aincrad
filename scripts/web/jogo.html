@@ -1,0 +1,1293 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aincrad — Jogo Diário</title>
+<style>
+:root{
+  --bg:#0a0806; --panel:#15100a; --panel-2:#1d150c; --panel-3:#241a0f;
+  --line:#3d2e1a; --line-soft:#2a2013;
+  --gold:#d9ad5e; --gold-dim:#8c6f3e; --gold-bright:#f2d18a;
+  --ink:#efe5d2; --ink-dim:#a89a80; --ink-faint:#6f6450;
+  --violet:#a98fd6; --red:#e0524a;
+  --f-disp:"Palatino Linotype",Palatino,Georgia,"Times New Roman",serif;
+  --f-ui:-apple-system,"Segoe UI",system-ui,sans-serif;
+  --f-mono:ui-monospace,"Cascadia Mono",Consolas,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:
+    radial-gradient(ellipse 1600px 900px at 50% -12%, #2a1e10 0%, transparent 62%),
+    repeating-linear-gradient(115deg, rgba(255,255,255,.012) 0 2px, transparent 2px 5px),
+    var(--bg);
+  color:var(--ink); font-family:var(--f-ui); line-height:1.55; -webkit-font-smoothing:antialiased;
+}
+button,input,select{font:inherit;color:inherit}
+::-webkit-scrollbar{width:10px;height:10px}
+::-webkit-scrollbar-thumb{background:var(--line);border-radius:5px}
+::-webkit-scrollbar-track{background:transparent}
+
+.shell{max-width:1080px;margin:0 auto;padding:34px 16px 70px}
+.eyebrow{font-family:var(--f-mono);font-size:10.5px;letter-spacing:.28em;text-transform:uppercase;color:var(--gold-dim)}
+h1{font-family:var(--f-disp);color:var(--gold-bright);font-size:clamp(26px,3.4vw,38px);margin:2px 0 6px;letter-spacing:.04em}
+.sub{color:var(--ink-dim);font-size:14px;margin-bottom:22px}
+.status{display:flex;gap:8px;align-items:center;margin-bottom:20px;flex-wrap:wrap}
+.pill{font-family:var(--f-mono);font-size:11px;border:1px solid var(--line);padding:6px 11px;border-radius:4px;color:var(--ink-dim)}
+.pill.on{color:var(--gold);border-color:var(--gold-dim)}
+
+.gate{border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin-bottom:26px;display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.aviso{border:1px solid var(--line);border-radius:6px;padding:16px 18px;margin-bottom:20px;color:var(--ink-dim);font-size:13.5px;background:var(--panel)}
+.erro{color:var(--red);font-size:12.5px}
+.mini{font-size:10.5px;color:var(--ink-faint);font-family:var(--f-mono)}
+
+.inp{background:var(--panel-2);border:1px solid var(--line);border-radius:4px;padding:7px 10px;color:var(--ink)}
+.btn{background:var(--gold-dim);color:#150f08;border:none;border-radius:4px;padding:7px 13px;font-weight:700;cursor:pointer;font-size:12.5px}
+.btn:hover{background:var(--gold)}
+.btn.sec{background:none;border:1px solid var(--line);color:var(--ink-dim);font-weight:400}
+.btn.sec:hover{color:var(--gold);border-color:var(--gold-dim)}
+.btn[disabled]{opacity:.45;cursor:not-allowed}
+
+/* barra de status do personagem — sempre visível */
+.statgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-bottom:8px}
+.stat{border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:10px 12px}
+.stat .lab{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}
+.stat .val{font-family:var(--f-disp);font-size:20px;color:var(--gold-bright)}
+.nivline{font-family:var(--f-mono);font-size:11px;color:var(--ink-dim);margin-bottom:6px}
+
+.bannerbug{border:1px solid var(--red);background:rgba(224,82,74,.08);border-radius:6px;padding:12px 16px;margin-bottom:14px;font-size:13px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+.bannerinsp{border:1px solid var(--gold-dim);background:rgba(217,173,94,.07);border-radius:6px;padding:10px 16px;margin-bottom:14px;font-size:12.5px;color:var(--ink-dim)}
+
+.log{margin:4px 0 6px}
+.logline{font-size:12.5px;color:var(--ink-dim);padding:3px 0;border-bottom:1px dashed var(--line-soft)}
+.logline.erro{color:var(--red)}
+
+.tabs{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line-soft);margin:16px 0 18px}
+.tab{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-dim);border:1px solid transparent;border-bottom:none;padding:8px 14px;border-radius:4px 4px 0 0;cursor:pointer;background:none}
+.tab:hover{color:var(--gold)}
+.tab.on{color:var(--gold);border-color:var(--line);background:var(--panel)}
+
+.sec{margin-bottom:24px}
+.sec h2{font-family:var(--f-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);border-bottom:1px solid var(--line-soft);padding-bottom:8px;margin:0 0 12px}
+.mrow{display:flex;align-items:center;gap:10px;border:1px solid var(--line);background:var(--panel);border-radius:6px;padding:10px 12px;margin-bottom:8px;flex-wrap:wrap}
+.mrow .nm{font-family:var(--f-disp);font-size:15.5px;color:var(--gold-bright)}
+.mrow .inf{flex:1;min-width:180px;font-size:12px;color:var(--ink-dim)}
+.tag{font-family:var(--f-mono);font-size:10px;letter-spacing:.04em;border:1px solid var(--line);color:var(--ink-dim);padding:2px 7px;border-radius:3px;white-space:nowrap}
+.tag.gold{color:var(--gold);border-color:var(--gold-dim)}
+.tag.cy{color:var(--violet);border-color:var(--violet)}
+.tag.red{color:var(--red);border-color:var(--red)}
+.tag.ok{color:#7fc97f;border-color:#4a7a4a}
+
+.slotgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px;margin-bottom:8px}
+.slot{border:1px dashed var(--line);border-radius:6px;padding:8px 10px;font-size:12px;color:var(--ink-dim)}
+.slot .lab{font-family:var(--f-mono);font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint);display:block;margin-bottom:2px}
+.slot .item{color:var(--gold-bright)}
+
+table.tbl{width:100%;border-collapse:collapse;font-size:12px}
+table.tbl th{text-align:left;font-family:var(--f-mono);font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--gold-dim);padding:4px 6px 6px;border-bottom:1px solid var(--line-soft)}
+table.tbl td{padding:6px;border-bottom:1px dashed var(--line-soft);color:var(--ink-dim)}
+table.tbl tr:last-child td{border-bottom:none}
+</style>
+</head>
+<body>
+<div class="shell">
+  <span class="eyebrow">Sword Art Online · The Perfect Chaos · Andar 1</span>
+  <h1>Jogo Diário</h1>
+  <div class="sub">O que acontece entre sessões: missões do quadro, ofício, craft, mercado e reputação.
+    Regras em <code>docs/jogo_online.md</code>.</div>
+
+  <div class="status" id="statusBox"></div>
+
+  <!-- login de jogador — mesmo padrão do painel.html -->
+  <div class="gate" id="gate" style="display:none">
+    <input type="text" id="gEmail" class="inp" placeholder="e-mail" style="flex:1;min-width:160px" />
+    <input type="password" id="gSenha" class="inp" placeholder="senha" style="flex:1;min-width:120px" />
+    <button id="gEntrar" class="btn">Entrar</button>
+    <span class="erro" id="gErro"></span>
+    <span class="mini">Sem conta? Cadastre-se em <a href="personagens.html" style="color:var(--gold-dim)">Fichas de Jogador</a> e peça ao mestre pra ligar seu personagem.</span>
+  </div>
+
+  <div class="aviso" id="semPers" style="display:none">
+    Seu personagem ainda não está ligado à sua conta — fale com o mestre.
+    <span class="mini">(Ele amarra o campo <code>dono_id</code> do personagem ao seu usuário e confere se a ficha está visível.)</span>
+  </div>
+
+  <div id="app" style="display:none">
+    <div class="mrow" id="mestreBox" style="display:none">
+      <span class="tag gold">mestre</span>
+      <label class="mini" for="selPers">vendo o personagem:</label>
+      <select id="selPers" class="inp"></select>
+    </div>
+
+    <div class="bannerinsp" id="bannerInsp" style="display:none">
+      Modo inspeção — você está vendo o personagem de outro jogador. Ações que gravam estado ficam desativadas
+      (a RPC <code>salvar_estado_online</code> só escreve no personagem ligado à sua própria conta).
+    </div>
+
+    <div class="bannerbug" id="bannerBug" style="display:none"></div>
+
+    <div class="statgrid" id="barraStatus"></div>
+    <div class="nivline" id="linhaNiveis"></div>
+    <div class="log" id="log"></div>
+
+    <div class="tabs" id="tabs"></div>
+    <div id="painel"></div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/@supabase/supabase-js@2"></script>
+<script src="supabase_config.js"></script>
+<script src="modo_mestre.js"></script>
+<script>
+/* ------------------------------------------------------------------
+   jogo.html — o "jogo online diário" entre sessões (fase 2 do site).
+   Especificação: docs/jogo_online.md — os números vêm de lá.
+   Duas regras de acesso guiam todo o arquivo:
+   - estado de personagem (fôlego, Col, bug, equipado) SÓ via RPC
+     salvar_estado_online — jogador não tem UPDATE na tabela personagens;
+   - tabelas de jogador (inventario, missao_diaria, craft_fila, vitrine,
+     nivel_profissao, criaturas_domadas, personagem_ferramentas,
+     transacoes) têm RLS de dono, então insert/update direto funciona.
+------------------------------------------------------------------ */
+
+/* ---------------- utilitários ---------------- */
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c];});}
+
+/* comparações de texto do jogo ignoram acento/caixa — o catálogo mistura
+   "Tecnica" (armas) com "Técnica" (fraqueza de monstro) */
+function norm(s){
+  return String(s||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
+}
+}
+
+function slug(s){
+  return norm(s).replace(/[^a-z0-9]+/g,"-").replace(/^-+|-+$/g,"");
+}
+/* dia local (não UTC) — o reset diário é conceito de "dia do jogador" */
+function hojeStr(){
+  var d=new Date();
+  return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0");
+}
+/* hash simples e determinístico: sorteia as 3 missões do dia por personagem */
+function hashStr(s){
+  var h=0;
+  for(var i=0;i<s.length;i++) h=(h*31 + s.charCodeAt(i))>>>0;
+  return h;
+}
+function fmtDur(ms){
+  if(ms<=0) return "agora";
+  var s=Math.ceil(ms/1000), h=Math.floor(s/3600), m=Math.floor((s%3600)/60), ss=s%60;
+  if(h>0) return h+"h "+String(m).padStart(2,"0")+"min";
+  if(m>0) return m+"min "+String(ss).padStart(2,"0")+"s";
+  return ss+"s";
+}
+/* qtd de drop vem como "2-3", "1800-2600", "1" ou vazio */
+function parseQtd(s){
+  s=String(s||"").trim();
+  if(!s) return 1;
+  var m=s.match(/^(\d+)\s*-\s*(\d+)$/);
+  if(m){ var a=+m[1], b=+m[2]; return a + Math.floor(Math.random()*(b-a+1)); }
+  var n=parseInt(s,10);
+  return isNaN(n)?1:n;
+}
+/* chance de drop vem como "60%" (string); vazio = drop garantido */
+function parseChanceTxt(s){
+  s=String(s||"").trim();
+  if(!s) return 1;
+  var n=parseFloat(s.replace("%","").replace(",","."));
+  if(isNaN(n)) return 1;
+  return n>1 ? n/100 : n;
+}
+/* nivel_recomendado é uma faixa tipo "5-6"; o alvo da fórmula é a média
+   arredondada; a trava de acesso olha o máximo da faixa */
+function faixaNivel(txt){
+  var m=String(txt||"").match(/(\d+)\s*-\s*(\d+)/);
+  if(m){ var a=+m[1], b=+m[2]; return {min:a, max:b, media:Math.round((a+b)/2)}; }
+  var s=String(txt||"").match(/(\d+)/);
+  if(s){ var n=+s[1]; return {min:n, max:n, media:n}; }
+  return null;
+}
+/* ids de inventario são bigint — cruzam jsonb (equipado) e podem vir como
+   string ou número; compara sempre como texto */
+function mesmoId(a,b){ return String(a)===String(b); }
+
+/* ---------------- constantes das regras (docs/jogo_online.md) ---------------- */
+var TETO_COL_SISTEMA_DIA = 400;                 // Col de sistema por dia; venda entre jogadores não conta
+var CUSTO_FOLEGO = { combate:4, chefe:10, oficio:3, ovo:5 };
+var XP_COMBATE=10, XP_ARRISCADO=25, XP_CHEFE=100, XP_OFICIO=5;
+var XP_CRAFT = { Comum:5, Incomum:15, Raro:40 };
+var CRAFT_MS = { Comum:10*60*1000, Incomum:2*60*60*1000, Raro:8*60*60*1000 };
+var NIVEL_MAX = 10;                             // teto do Andar 1
+var DIFICULDADE_OFICIO = 3;                     // ação de ofício rola contra "dificuldade padrão 3"
+var SLOTS = ["arma","armadura","escudo","capuz","acessorio","luvas","parte_cima","parte_baixo","carta"];
+var SLOT_LABELS = { arma:"Arma", armadura:"Armadura", escudo:"Escudo", capuz:"Capuz",
+  acessorio:"Acessório", luvas:"Luvas", parte_cima:"Parte de cima", parte_baixo:"Parte de baixo", carta:"Carta" };
+/* equipamentos.slot no catálogo vem solto ("Armaduras", "Parte de Cima"...) —
+   aqui amarra cada texto no slot do equipado jsonb */
+var SLOT_DE_EQUIP = {
+  "armaduras":"armadura", "armadura":"armadura",
+  "escudos":"escudo", "escudo":"escudo",
+  "capuz":"capuz",
+  "acessorios":"acessorio", "acessorio":"acessorio",
+  "luvas":"luvas",
+  "parte de cima":"parte_cima", "parte de baixo":"parte_baixo"
+};
+var TIPO_ORDEM = ["arma","equipamento","carta","cristal","ovo","pet","consumivel","material"];
+var TIPO_LABELS = { arma:"Armas", equipamento:"Equipamentos", carta:"Cartas", cristal:"Cristais",
+  ovo:"Ovos", pet:"Pets", consumivel:"Consumíveis", material:"Materiais" };
+var RARIDADES_CRAFT = ["Comum","Incomum","Raro"];  // acima de Raro não entra no craft online
+
+/* ---------------- estado da página ---------------- */
+var S = {
+  sessao:null, perfil:null, ehMestre:false,
+  personagens:[],          // só mestre: lista pro dropdown
+  pers:null,               // linha de personagens do personagem carregado
+  inspecao:false,          // mestre vendo personagem alheio -> sem gravação
+  niveis:{},               // profissao -> {xp, nivel}
+  inventario:[], ferramentas:[], // personagem_ferramentas
+  oficio:null,             // linha de oficios da profissão do personagem
+  monstros:[], armas:[], equips:[], oficios:[], missoes:[],
+  ferrCatalogo:[],         // ferramentas_oficio
+  missoesDia:[], fila:[], vitrine:[], vitrineItens:{}, rep:[], pets:[],
+  aba:"hoje", _ultimoTick:0
+};
+var ABAS = [ ["hoje","Hoje"], ["acoes","Ações"], ["craft","Craft"],
+  ["inventario","Inventário"], ["mercado","Mercado"], ["reputacao","Reputação"] ];
+
+function sb(){ return supaClient(); }
+
+/* ---------------- log de eventos (feedback da sessão) ---------------- */
+function logMsg(txt, erro){
+  var el=document.getElementById("log");
+  if(!el){ console.log(txt); return; }
+  var d=document.createElement("div");
+  d.className="logline"+(erro?" erro":"");
+  d.textContent=(erro?"✕ ":"✓ ")+txt;
+  el.insertBefore(d, el.firstChild);
+  while(el.children.length>10) el.removeChild(el.lastChild);
+}
+
+/* ---------------- nível / fôlego / bug: derivados do personagem ---------------- */
+function nivelDe(prof){ var n=S.niveis[prof]; return n? n.nivel : 1; }
+
+/* não existe nível de personagem — a régua é sempre Nível de Profissão;
+   pra combate/trava de acesso vale a profissão mais alta (decisão do doc) */
+function nivelMax(){
+  var m = S.pers && S.pers.profissao ? nivelDe(S.pers.profissao) : 1;
+  for(var k in S.niveis) if(S.niveis[k].nivel>m) m=S.niveis[k].nivel;
+  return m;
+}
+function profMaiorNivel(){
+  var melhor = S.pers.profissao || null;
+  var m = melhor ? nivelDe(melhor) : 1;
+  for(var k in S.niveis){ if(S.niveis[k].nivel>m){ m=S.niveis[k].nivel; melhor=k; } }
+  return melhor;
+}
+function tetoFolego(){
+  var esp = (S.pers && S.pers.atributos && S.pers.atributos.espirito) || 0;
+  return Math.max(20, 20 + 5*esp);   // teto 20 + 5×Espírito, mínimo 20
+}
+function bugAtivo(){
+  return !!(S.pers && S.pers.bug_ate && new Date(S.pers.bug_ate).getTime() > Date.now());
+}
+
+/* mestre vendo personagem alheio: a RPC salvar_estado_online só escreve no
+   personagem do PRÓPRIO usuário logado, então toda gravação é bloqueada aqui
+   pra não mirar no personagem errado */
+function bloqueado(){
+  if(S.inspecao){ logMsg("Modo inspeção — ações desativadas.", true); return true; }
+  return false;
+}
+
+/* única porta de escrita em personagens (whitelist de colunas vive na RPC) */
+async function salvarEstado(obj){
+  if(S.inspecao){ logMsg("Modo inspeção: nada foi gravado.", true); return false; }
+  var r = await sb().rpc("salvar_estado_online", { p: obj });
+  if(r.error){ logMsg("Não consegui gravar o estado: "+r.error.message, true); return false; }
+  for(var k in obj) S.pers[k]=obj[k];   // espelha local pra não reler a linha
+  return true;
+}
+
+/* regen preguiçosa de fôlego (teto ÷ 3,5 por hora, arredondado pra cima) +
+   reset diário do teto de Col de sistema. Roda no load e antes de cada gasto;
+   devolve o payload parcial a gravar (vazio = nada mudou). */
+function aplicarRegen(){
+  var p={}, agora=Date.now();
+  var teto=tetoFolego(), porHora=Math.ceil(teto/3.5);
+  var base = S.pers.folego_atualizado_em ? new Date(S.pers.folego_atualizado_em).getTime() : agora;
+  var ganho = Math.floor((agora-base)/3600000 * porHora);
+  var f = S.pers.folego||0;
+  if(ganho>0 && f<teto){
+    p.folego = Math.min(teto, f+ganho);
+    p.folego_atualizado_em = new Date(agora).toISOString();
+  } else if(f>teto){
+    p.folego = teto;
+    p.folego_atualizado_em = new Date(agora).toISOString();
+  }
+  var h=hojeStr();
+  if(S.pers.col_reset_dia !== h){
+    p.col_reset_dia = h;
+    if((S.pers.col_ganho_hoje||0) > 0) p.col_ganho_hoje = 0;
+  }
+  return p;
+}
+
+/* toda ação com custo passa por aqui: bug ativo trava tudo (regra do doc),
+   regen é aplicada antes de cobrar, e a baixa grava folego_atualizado_em
+   junto pra não pagar regen em cima de hora já contada */
+async function gastarFolego(custo){
+  if(bloqueado()) return false;
+  if(bugAtivo()){
+    logMsg("Personagem bugado por mais "+fmtDur(new Date(S.pers.bug_ate).getTime()-Date.now())+" — nenhuma ação com custo.", true);
+    return false;
+  }
+  var pre=aplicarRegen();
+  if(Object.keys(pre).length && !(await salvarEstado(pre))) return false;
+  if((S.pers.folego||0) < custo){
+    logMsg("Fôlego insuficiente: "+(S.pers.folego||0)+"/"+custo+". Espera regenerar.", true);
+    return false;
+  }
+  return await salvarEstado({ folego: S.pers.folego - custo, folego_atualizado_em: new Date().toISOString() });
+}
+
+/* RLS de transacoes: jogador só insere linha em que ELE é o pagador
+   (de_pers). Pagamento do sistema (de_pers null) seria bloqueado — então
+   tenta a forma correta e, se a policy barrar, grava de=para=próprio com
+   marcação no obs pra trilha de auditoria não ficar cega. */
+async function registrarTransacao(t){
+  var linha = {
+    de_pers: t.de||null, para_pers: t.para||null, tipo: t.tipo,
+    valor: t.valor||0, item_tipo: t.itemTipo||null, item_id: t.itemId||null, obs: t.obs||null
+  };
+  var r = await sb().from("transacoes").insert(linha);
+  if(r.error && linha.de_pers===null){
+    linha.de_pers = S.pers.nome; linha.para_pers = S.pers.nome;
+    linha.obs = (linha.obs? linha.obs+" · ":"") + "sistema → jogador";
+    r = await sb().from("transacoes").insert(linha);
+  }
+  if(r.error) console.warn("transacao nao registrada:", r.error.message);
+}
+
+/* Col vindo de sistema (missão, drop, ofício) respeita o teto de 400/dia —
+   o que passar se perde, e o jogador precisa ver que perdeu */
+async function ganharColSistema(qtd, obs, tipo){
+  var h=hojeStr();
+  var ganhoHoje = S.pers.col_reset_dia===h ? (S.pers.col_ganho_hoje||0) : 0;
+  var livre = Math.max(0, TETO_COL_SISTEMA_DIA - ganhoHoje);
+  var efetivo = Math.min(qtd, livre);
+  var ok = await salvarEstado({
+    col_mao: (S.pers.col_mao||0)+efetivo,
+    col_ganho_hoje: ganhoHoje+efetivo,
+    col_reset_dia: h
+  });
+  if(!ok) return 0;
+  if(efetivo>0) await registrarTransacao({ de:null, para:S.pers.nome, tipo:tipo||"sistema", valor:efetivo, obs:obs });
+  if(efetivo<qtd) logMsg("Teto de "+TETO_COL_SISTEMA_DIA+" Col/dia de sistema: entraram "+efetivo+" de "+qtd+".", true);
+  return efetivo;
+}
+
+/* curva de XP: subir do nível N pro N+1 custa N×100 XP; máx 10 */
+async function ganharXP(prof, qtd){
+  if(!prof || S.inspecao) return;
+  var linha = S.niveis[prof] || { xp:0, nivel:1 };
+  var xp=linha.xp+qtd, nivel=linha.nivel, subiu=false;
+  while(nivel<NIVEL_MAX && xp >= nivel*100){ xp -= nivel*100; nivel++; subiu=true; }
+  var r = await sb().from("nivel_profissao").upsert(
+    { personagem:S.pers.nome, profissao:prof, xp:xp, nivel:nivel },
+    { onConflict:"personagem,profissao" });
+  if(r.error){ logMsg("XP não gravou: "+r.error.message, true); return; }
+  S.niveis[prof] = { xp:xp, nivel:nivel };
+  logMsg("+"+qtd+" XP em "+prof+(subiu? " — subiu pro nível "+nivel+"!" : "")+".");
+}
+
+/* ---------------- a régua única de chance (item 12) ---------------- */
+function chancePorNivel(nivelEfetivo, nivelAlvo, bonus){
+  var d = nivelEfetivo - nivelAlvo;
+  var c = d>=0 ? 75 + 5*d : 75 + 10*d;   // −10% por nível abaixo, +5% acima
+  c += (bonus||0);
+  return Math.max(5, Math.min(95, c));   // piso 5%, teto 95%
+}
+
+/* +5% fixo se a arma equipada bate o atributo_fraqueza do monstro */
+function armaEquipada(){
+  var id = S.pers.equipado && S.pers.equipado.arma;
+  if(!id) return null;
+  var inv = S.inventario.find(function(i){ return mesmoId(i.id, id); });
+  if(!inv) return null;
+  return S.armas.find(function(a){ return a.id===inv.item_id; }) || null;
+}
+function bonusFraqueza(m){
+  var arma=armaEquipada();
+  if(!arma || !arma.atributo || !m.atributo_fraqueza) return 0;
+  return norm(arma.atributo)===norm(m.atributo_fraqueza) ? 5 : 0;
+}
+
+/* ---------------- inventário: inserir / consumir ---------------- */
+async function recarregarInventario(){
+  var r = await sb().from("inventario").select("*").eq("personagem", S.pers.nome).order("obtido_em");
+  if(!r.error) S.inventario = r.data||[];
+}
+/* materiais e consumíveis empilham na linha existente; o resto entra como
+   linha nova (cada equipável/carta/ovo é uma unidade física separada) */
+async function inserirItem(tipo, itemId, nome, qtd, origem){
+  if(tipo==="material" || tipo==="consumivel"){
+    var ex = S.inventario.find(function(i){ return i.tipo===tipo && i.item_id===itemId; });
+    if(ex){
+      var up = await sb().from("inventario").update({ quantidade: ex.quantidade+qtd }).eq("id", ex.id);
+      if(!up.error){ ex.quantidade += qtd; return true; }
+    }
+  }
+  var r = await sb().from("inventario").insert({
+    personagem:S.pers.nome, tipo:tipo, item_id:itemId, nome:nome, quantidade:qtd, origem:origem
+  });
+  if(r.error){ logMsg("Falha ao guardar "+nome+": "+r.error.message, true); return false; }
+  await recarregarInventario();   // precisa do id novo pra equipar/vender
+  return true;
+}
+async function consumirItem(invId, qtd){
+  var it = S.inventario.find(function(i){ return mesmoId(i.id, invId); });
+  if(!it) return false;
+  if(it.quantidade > qtd){
+    var r = await sb().from("inventario").update({ quantidade: it.quantidade-qtd }).eq("id", it.id);
+    if(r.error){ logMsg("Falha ao consumir item: "+r.error.message, true); return false; }
+    it.quantidade -= qtd;
+  } else {
+    var r2 = await sb().from("inventario").delete().eq("id", it.id);
+    if(r2.error){ logMsg("Falha ao consumir item: "+r2.error.message, true); return false; }
+    S.inventario = S.inventario.filter(function(i){ return !mesmoId(i.id, invId); });
+  }
+  return true;
+}
+
+/* ---------------- ABA HOJE — missões diárias ---------------- */
+/* sorteio determinístico: hash(nome+dia+id da missão) ordena a lista —
+   mesmo dia e mesmo personagem dão sempre as mesmas 3, sem servidor */
+function missoesDeHoje(){
+  var nv = nivelMax();
+  var eleg = S.missoes.filter(function(m){ return m.visivel && (m.nivel_minimo||1) <= nv; });
+  var h = hojeStr();
+  return eleg.map(function(m){ return { m:m, k:hashStr(S.pers.nome+"|"+h+"|"+m.id) }; })
+    .sort(function(a,b){ return a.k-b.k; })
+    .slice(0,3)
+    .map(function(x){ return x.m; });
+}
+function statusMissao(missaoId){
+  var l = S.missoesDia.find(function(x){ return x.missao_id===missaoId; });
+  return l ? l.status : "oferecida";
+}
+async function aceitarMissao(missaoId){
+  if(bloqueado()) return;
+  if(statusMissao(missaoId)!=="oferecida") return;
+  var linha = { personagem:S.pers.nome, missao_id:missaoId, dia:hojeStr(), status:"aceita" };
+  var r = await sb().from("missao_diaria").insert(linha);
+  if(r.error){ logMsg("Não aceitou: "+r.error.message, true); return; }
+  S.missoesDia.push(linha);
+  renderAll();
+}
+async function concluirMissao(missaoId){
+  if(bloqueado()) return;
+  if(statusMissao(missaoId)!=="aceita") return;
+  var m = S.missoes.find(function(x){ return x.id===missaoId; });
+  if(!m) return;
+  var r = await sb().from("missao_diaria").update({ status:"concluida" })
+    .eq("personagem", S.pers.nome).eq("missao_id", missaoId).eq("dia", hojeStr());
+  if(r.error){ logMsg("Não concluiu: "+r.error.message, true); return; }
+  var l = S.missoesDia.find(function(x){ return x.missao_id===missaoId; });
+  if(l) l.status="concluida";
+  logMsg("Missão concluída: "+m.titulo+".");
+  await ganharColSistema(m.recompensa_col||0, "missão diária: "+m.titulo, "missao");
+  await ganharXP(profMaiorNivel(), m.recompensa_xp||0);
+  renderAll();
+}
+
+/* ---------------- ABA AÇÕES — combate ---------------- */
+/* trava de acesso: o máximo da faixa do monstro precisa caber em
+   (maior nível de profissão)+2, senão a região nem aparece */
+function monstrosAcessiveis(){
+  var nv = nivelMax();
+  return S.monstros.filter(function(m){
+    var f = faixaNivel(m.nivel_recomendado);
+    return f && f.max <= nv+2;
+  }).sort(function(a,b){
+    return faixaNivel(a.nivel_recomendado).media - faixaNivel(b.nivel_recomendado).media;
+  });
+}
+
+/* o nome do item de drop decide o tipo no inventário (regra da tarefa):
+   Carta/Ovo/Cristal viram tipo próprio; o resto é material. Ovo guarda o
+   id do monstro em item_id — é dele que sai a espécie do pet. */
+function tipoDeDrop(item, monstro){
+  var t = item.trim();
+  if(/^carta\b/i.test(t))   return { tipo:"carta",   itemId:slug(t) };
+  if(/^ovo\b/i.test(t))     return { tipo:"ovo",     itemId:monstro.id };
+  if(/^cristal\b/i.test(t)) return { tipo:"cristal", itemId:slug(t) };
+  return { tipo:"material", itemId:slug(t) };
+}
+
+async function enfrentar(monstroId){
+  if(bloqueado()) return;
+  var m = S.monstros.find(function(x){ return x.id===monstroId; });
+  if(!m) return;
+  var chefe = norm(m.ameaca)==="chefe";
+  var custo = chefe ? CUSTO_FOLEGO.chefe : CUSTO_FOLEGO.combate;
+  var f = faixaNivel(m.nivel_recomendado);
+  var nv = nivelMax();
+  var chance = chancePorNivel(nv, f.media, bonusFraqueza(m));
+  var arriscado = chance < 75;
+
+  if(!(await gastarFolego(custo))) return;
+
+  if(Math.random()*100 < chance){
+    /* sucesso — arriscado também dá drop cheio (decisão do doc) */
+    var ganhos=[];
+    var drops = Array.isArray(m.drops) ? m.drops : [];
+    for(var i=0;i<drops.length;i++){
+      var d = drops[i];
+      if(Math.random() >= parseChanceTxt(d.chance)) continue;
+      var qtd = parseQtd(d.qtd);
+      if(norm(d.item)==="col"){
+        var ef = await ganharColSistema(qtd, "drop de "+m.nome, "drop");
+        if(ef>0) ganhos.push(ef+" Col");
+        continue;
+      }
+      var td = tipoDeDrop(d.item||"material", m);
+      if(await inserirItem(td.tipo, td.itemId, d.item, qtd, "drop")){
+        ganhos.push(d.item+(qtd>1? " ×"+qtd : ""));
+        await registrarTransacao({ de:null, para:S.pers.nome, tipo:"drop", valor:qtd,
+          itemTipo:td.tipo, itemId:td.itemId, obs:"drop de "+m.nome });
+      }
+    }
+    logMsg("Você venceu "+m.nome+"!"+(ganhos.length? " Drops: "+ganhos.join(", ")+"." : " Sem drop dessa vez."));
+    /* XP vai pra profissão relacionada à ação; combate não amarra com uma
+       profissão específica, então vale a de maior nível (decisão do doc) */
+    await ganharXP(profMaiorNivel(), chefe ? XP_CHEFE : (arriscado ? XP_ARRISCADO : XP_COMBATE));
+  } else if(arriscado){
+    /* falha arriscada: +2 de Bug, trava por bug_total×15min, perde 20% da mão */
+    var bugNovo = (S.pers.bug||0)+2;
+    var ate = new Date(Date.now() + bugNovo*15*60*1000);
+    var perda = Math.floor((S.pers.col_mao||0)*0.2);
+    if(await salvarEstado({ bug:bugNovo, bug_ate:ate.toISOString(), col_mao:(S.pers.col_mao||0)-perda })){
+      await registrarTransacao({ de:S.pers.nome, para:null, tipo:"bug", valor:perda,
+        obs:"falha arriscada em "+m.nome+" (bug +2)" });
+      logMsg("Falha arriscada contra "+m.nome+": bug +2 (total "+bugNovo+"), travado por "+
+        fmtDur(bugNovo*15*60*1000)+", perdeu "+perda+" Col da mão.", true);
+    }
+  } else {
+    logMsg(m.nome+" te venceu. Falha normal — só o fôlego se foi.", true);
+  }
+  renderAll();
+}
+
+/* pagar pra limpar o bug: 100 Col por ponto, debita da mão, zera tudo */
+async function pagarBug(){
+  if(bloqueado()) return;
+  var bug = S.pers.bug||0;
+  if(bug<=0) return;
+  var custo = bug*100;
+  if((S.pers.col_mao||0) < custo){
+    logMsg("Limpar custa "+custo+" Col ("+bug+" pt × 100) e você tem "+(S.pers.col_mao||0)+" na mão.", true);
+    return;
+  }
+  if(await salvarEstado({ col_mao:S.pers.col_mao-custo, bug:0, bug_ate:null })){
+    await registrarTransacao({ de:S.pers.nome, para:null, tipo:"bug", valor:custo, obs:"limpeza de bug (templo)" });
+    logMsg("Bug limpo por "+custo+" Col.");
+    renderAll();
+  }
+}
+
+/* ---------------- ABA AÇÕES — ofício ---------------- */
+function nivelFerramenta(prof){
+  var f = S.ferramentas.find(function(x){ return x.profissao===prof; });
+  return f ? (f.nivel||1) : 0;   // sem linha = ainda não tem a ferramenta
+}
+/* a ferramenta cobre UMA ação (acao_afetada): +3% por nível, só nela */
+function bonusFerramenta(acaoNome){
+  var cat = S.ferrCatalogo.find(function(f){ return f.profissao===S.pers.profissao; });
+  if(!cat || !cat.acao_afetada) return { bonus:0 };
+  var alvo = norm(cat.acao_afetada), atual = norm(acaoNome);
+  if(!alvo || (atual.indexOf(alvo)<0 && alvo.indexOf(atual)<0)) return { bonus:0 };
+  var nv = nivelFerramenta(S.pers.profissao);
+  return { bonus: 3*nv, nivel:nv, nome:cat.nome };
+}
+
+/* ação de ofício: 3 de fôlego, rola contra dificuldade padrão 3, e em caso
+   de sucesso o jogador escolhe material genérico OU 20 Col; +5 XP na
+   profissão. Falha de ofício não gera bug (ofício não é combate — 7-9
+   sempre entrega algo na mesa; aqui só o fôlego se perde). */
+async function executarOficio(acaoNome, recompensa){
+  if(bloqueado()) return;
+  var prof = S.pers.profissao;
+  if(!prof) return;
+  if(!(await gastarFolego(CUSTO_FOLEGO.oficio))) return;
+  var bf = bonusFerramenta(acaoNome);
+  var chance = chancePorNivel(nivelDe(prof), DIFICULDADE_OFICIO, bf.bonus);
+  if(Math.random()*100 < chance){
+    if(recompensa==="col"){
+      await ganharColSistema(20, "ação de ofício: "+acaoNome, "oficio");
+      logMsg(acaoNome+" rendeu 20 Col.");
+    } else {
+      var sid = slug(acaoNome);
+      if(await inserirItem("material", sid, acaoNome, 1, "oficio")){
+        await registrarTransacao({ de:null, para:S.pers.nome, tipo:"oficio", valor:1,
+          itemTipo:"material", itemId:sid, obs:"ação de ofício" });
+        logMsg(acaoNome+" rendeu material (1×).");
+      }
+    }
+    await ganharXP(prof, XP_OFICIO);
+  } else {
+    logMsg(acaoNome+" não rendeu dessa vez — só o fôlego se foi.", true);
+  }
+  renderAll();
+}
+
+/* ---------------- ABA AÇÕES — chocar ovo (Domador) ---------------- */
+async function chocarOvo(ovoId){
+  if(bloqueado()) return;
+  var ovo = S.inventario.find(function(i){ return mesmoId(i.id, ovoId); });
+  if(!ovo) return;
+  if(!(await gastarFolego(CUSTO_FOLEGO.ovo))) return;
+  var nvInc = nivelFerramenta("Domador");        // Incubadora: +5% por nível
+  var chance = 50 + 5*nvInc;
+  if(Math.random()*100 < chance){
+    var r = Math.random();
+    var rar = r<0.6 ? "Comum" : (r<0.9 ? "Incomum" : "Raro");   // 60/30/10
+    var monstro = S.monstros.find(function(m){ return m.id===ovo.item_id; });
+    var nomePet = monstro ? "Filhote de "+monstro.nome : ovo.nome;
+    var ins = await sb().from("criaturas_domadas").insert({
+      personagem:S.pers.nome, monstro_id:ovo.item_id||null, nome_pet:nomePet,
+      raridade:rar, estado:"incubando", incubadora_nivel:Math.max(1,nvInc),
+      choca_em:new Date(Date.now()+8*3600*1000).toISOString()   // cronômetro de craft Raro
+    });
+    if(ins.error){ logMsg("Não consegui registrar a chocagem: "+ins.error.message, true); return; }
+    await consumirItem(ovo.id, 1);
+    S.pets = (await sb().from("criaturas_domadas").select("*").eq("personagem",S.pers.nome).neq("estado","perdido")).data || S.pets;
+    logMsg("O ovo começou a chocar! Raridade: "+rar+" — pronto em ~8h.");
+  } else {
+    logMsg("Não chocou — mas o ovo sobreviveu, tenta de novo depois.", true);
+  }
+  renderAll();
+}
+
+/* ---------------- ABA CRAFT ---------------- */
+async function recarregarFila(){
+  var r = await sb().from("craft_fila").select("*").eq("personagem",S.pers.nome)
+    .eq("coletado", false).order("pronto_em");
+  if(!r.error) S.fila = r.data||[];
+}
+async function iniciarCraft(){
+  if(bloqueado()) return;
+  var sel = document.getElementById("craftItem");
+  var matSel = document.getElementById("craftMat");
+  if(!sel || !matSel) return;
+  var val = sel.value;   // "arma:<id>" ou "equipamento:<id>"
+  var sep = val.indexOf(":");
+  var tipoItem = val.slice(0,sep), itemId = val.slice(sep+1);
+  var cat = (tipoItem==="arma" ? S.armas : S.equips).find(function(x){ return x.id===itemId; });
+  if(!cat){ logMsg("Escolhe um item do catálogo.", true); return; }
+  var mat = S.inventario.find(function(i){ return mesmoId(i.id, matSel.value); });
+  if(!mat){ logMsg("Craft consome 1 material — você não tem nenhum.", true); return; }
+  var rar = cat.raridade || "Comum";
+  var tempo = CRAFT_MS[rar] || CRAFT_MS.Comum;
+  var r = await sb().from("craft_fila").insert({
+    personagem:S.pers.nome, tipo_item:tipoItem, item_id:itemId, nome:cat.nome,
+    raridade:rar, pronto_em:new Date(Date.now()+tempo).toISOString()
+  });
+  if(r.error){ logMsg("Não iniciou o craft: "+r.error.message, true); return; }
+  await consumirItem(mat.id, 1);
+  await registrarTransacao({ de:S.pers.nome, para:null, tipo:"craft", valor:0,
+    itemTipo:"material", itemId:mat.item_id, obs:"material pro craft de "+cat.nome });
+  logMsg("Craft de "+cat.nome+" ("+rar+") iniciado — pronto em "+fmtDur(tempo)+".");
+  await recarregarFila();
+  renderAll();
+}
+async function coletarCraft(filaId){
+  if(bloqueado()) return;
+  var f = S.fila.find(function(x){ return mesmoId(x.id, filaId); });
+  if(!f) return;
+  if(new Date(f.pronto_em).getTime() > Date.now()){ logMsg("Ainda não está pronto.", true); return; }
+  /* craft_fila.tipo_item admite 'ferramenta', mas inventario.tipo não —
+     se um dia entrar, vira material pra não violar o check constraint */
+  var tipo = ["arma","equipamento","consumivel","carta","cristal","ovo","pet"].indexOf(f.tipo_item)>=0
+    ? f.tipo_item : "material";
+  if(!(await inserirItem(tipo, f.item_id, f.nome, 1, "craft"))) return;
+  var r = await sb().from("craft_fila").update({ coletado:true }).eq("id", f.id);
+  if(r.error){ logMsg("Item entrou mas a fila não marcou: "+r.error.message, true); return; }
+  S.fila = S.fila.filter(function(x){ return !mesmoId(x.id, filaId); });
+  await registrarTransacao({ de:null, para:S.pers.nome, tipo:"craft", valor:1,
+    itemTipo:tipo, itemId:f.item_id, obs:"craft coletado" });
+  logMsg(f.nome+" coletado e guardado no inventário.");
+  await ganharXP(profMaiorNivel(), XP_CRAFT[f.raridade]||5);
+  renderAll();
+}
+
+/* ---------------- ABA INVENTÁRIO — equipado / carteira ---------------- */
+/* slot de um item do inventário: arma e carta são diretos; equipamento
+   depende do slot declarado no catálogo de equipamentos */
+function slotDoItem(inv){
+  if(inv.tipo==="arma") return "arma";
+  if(inv.tipo==="carta") return "carta";
+  if(inv.tipo==="equipamento"){
+    var eq = S.equips.find(function(e){ return e.id===inv.item_id; });
+    if(eq && eq.slot) return SLOT_DE_EQUIP[norm(eq.slot)] || null;
+  }
+  return null;
+}
+async function equipar(invId){
+  if(bloqueado()) return;
+  var inv = S.inventario.find(function(i){ return mesmoId(i.id, invId); });
+  if(!inv) return;
+  var slot = slotDoItem(inv);
+  if(!slot){ logMsg(inv.nome+" não tem slot de equipado.", true); return; }
+  /* carta é slot único (regra do item 7): equipar em slot ocupado troca —
+     vale pra todos os slots, na prática */
+  var eq = Object.assign({}, S.pers.equipado||{});
+  eq[slot] = inv.id;
+  if(await salvarEstado({ equipado:eq })){ logMsg(inv.nome+" equipado em "+SLOT_LABELS[slot]+"."); renderAll(); }
+}
+async function desequipar(slot){
+  if(bloqueado()) return;
+  var eq = Object.assign({}, S.pers.equipado||{});
+  if(!(slot in eq)) return;
+  delete eq[slot];
+  if(await salvarEstado({ equipado:eq })){ logMsg(SLOT_LABELS[slot]+" desequipado."); renderAll(); }
+}
+/* guardar/resgatar é ação gratuita (na ficção: o banco da cidade) — move
+   entre as duas bolsas e não gera transação, porque nada muda de dono */
+async function moverCol(direcao){
+  if(bloqueado()) return;
+  var inp = document.getElementById("mvCol");
+  var qtd = parseInt(inp && inp.value, 10);
+  if(!(qtd>0)){ logMsg("Diz quanto Col você quer mover.", true); return; }
+  var p;
+  if(direcao==="guardar"){
+    qtd = Math.min(qtd, S.pers.col_mao||0);
+    if(qtd<=0){ logMsg("Nada na mão pra guardar.", true); return; }
+    p = { col_mao:(S.pers.col_mao||0)-qtd, col_guardado:(S.pers.col_guardado||0)+qtd };
+  } else {
+    qtd = Math.min(qtd, S.pers.col_guardado||0);
+    if(qtd<=0){ logMsg("Nada guardado pra resgatar.", true); return; }
+    p = { col_mao:(S.pers.col_mao||0)+qtd, col_guardado:(S.pers.col_guardado||0)-qtd };
+  }
+  if(await salvarEstado(p)){ logMsg(qtd+" Col "+(direcao==="guardar"?"guardado no banco da cidade.":"resgatado pra mão.")); renderAll(); }
+}
+
+/* ---------------- ABA MERCADO — vitrines ---------------- */
+async function recarregarVitrine(){
+  var r = await sb().from("vitrine").select("*").eq("ativa", true).order("criado_em", { ascending:false });
+  if(r.error){ console.warn("vitrine:", r.error.message); return; }
+  S.vitrine = r.data||[];
+  S.vitrineItens = {};
+  var ids = S.vitrine.map(function(v){ return v.inventario_id; });
+  if(ids.length){
+    /* inventario tem leitura pública justamente pra vitrine alheia mostrar
+       o que está à venda */
+    var ri = await sb().from("inventario").select("*").in("id", ids);
+    (ri.data||[]).forEach(function(i){ S.vitrineItens[String(i.id)] = i; });
+  }
+}
+/* preço de referência do catálogo, quando o item veio de armas/equipamentos */
+function precoReferencia(item){
+  if(!item) return null;
+  var cat = item.tipo==="arma"
+    ? S.armas.find(function(a){ return a.id===item.item_id; })
+    : S.equips.find(function(e){ return e.id===item.item_id; });
+  var p = cat && cat.preco;
+  return (p && +p>0) ? +p : null;
+}
+async function anunciar(){
+  if(bloqueado()) return;
+  var sel = document.getElementById("vendItem");
+  var precoEl = document.getElementById("vendPreco");
+  var inv = S.inventario.find(function(i){ return mesmoId(i.id, sel && sel.value); });
+  var preco = parseInt(precoEl && precoEl.value, 10);
+  if(!inv){ logMsg("Escolhe um item do inventário.", true); return; }
+  if(!(preco>0)){ logMsg("Preço precisa ser maior que zero.", true); return; }
+  var r = await sb().from("vitrine").insert({ dono:S.pers.nome, inventario_id:inv.id, preco:preco });
+  if(r.error){ logMsg("Não anunciou: "+r.error.message, true); return; }
+  logMsg(inv.nome+" anunciado por "+preco+" Col.");
+  await recarregarVitrine();
+  renderAll();
+}
+async function desativarOferta(vitrineId){
+  if(bloqueado()) return;
+  var r = await sb().from("vitrine").update({ ativa:false }).eq("id", vitrineId);
+  if(r.error){ logMsg("Não desativou: "+r.error.message, true); return; }
+  logMsg("Oferta retirada da vitrine.");
+  await recarregarVitrine();
+  renderAll();
+}
+/* a compra mexe na carteira dos dois lados — por isso é RPC security
+   definer; ela devolve o erro em texto ou null no sucesso */
+async function comprar(vitrineId){
+  if(bloqueado()) return;
+  var r = await sb().rpc("comprar_da_vitrine", { p_vitrine_id: Number(vitrineId) });
+  if(r.error){ logMsg("Não deu: "+r.error.message, true); return; }
+  if(r.data){ logMsg(String(r.data), true); return; }
+  logMsg("Compra feita! O item já está no seu inventário.");
+  await recarregarPers();
+  await recarregarInventario();
+  await recarregarVitrine();
+  renderAll();
+}
+async function recarregarPers(){
+  var r = await sb().from("personagens").select("*").eq("nome", S.pers.nome).limit(1);
+  if(!r.error && r.data && r.data[0]) S.pers = r.data[0];
+}
+
+/* ================== RENDER ================== */
+function stat(lab, val, mini){
+  return '<div class="stat"><span class="lab">'+lab+'</span><div class="val">'+val+'</div>'+
+    (mini? '<span class="mini">'+mini+'</span>':'')+'</div>';
+}
+
+function renderBarra(){
+  var p=S.pers, teto=tetoFolego();
+  var bugTxt = (p.bug||0)>0 ? String(p.bug) : "—";
+  if(bugAtivo()) bugTxt += ' <span class="mini" data-vence="'+new Date(p.bug_ate).getTime()+'"></span>';
+  var colHoje = p.col_reset_dia===hojeStr() ? (p.col_ganho_hoje||0) : 0;
+  document.getElementById("barraStatus").innerHTML =
+      stat("Fôlego", (p.folego||0)+"/"+teto, "regen +"+Math.ceil(teto/3.5)+"/h")
+    + stat("Col na mão", p.col_mao||0, "perdível em bug")
+    + stat("Col guardado", p.col_guardado||0, "seguro")
+    + stat("Bug", bugTxt, (p.bug||0)>0 ? "100 Col/pt pra limpar" : "")
+    + stat("Limit Breaker", p.carga_limit||0, "carga")
+    + stat("Col de sistema hoje", colHoje+"/"+TETO_COL_SISTEMA_DIA, "teto diário");
+
+  /* linha de níveis: profissão principal sempre aparece, mesmo sem linha
+     em nivel_profissao (nível 1 implícito) */
+  var profs=Object.keys(S.niveis);
+  if(p.profissao && profs.indexOf(p.profissao)<0) profs.unshift(p.profissao);
+  var partes=profs.map(function(prof){
+    var n=nivelDe(prof), xp=(S.niveis[prof]||{xp:0}).xp;
+    return prof+" nv "+n+(n>=NIVEL_MAX ? " (máx)" : " · "+xp+"/"+(n*100)+" XP");
+  });
+  document.getElementById("linhaNiveis").textContent =
+    p.nome+" — "+(p.profissao||"sem profissão")+" · nível efetivo "+nivelMax()+
+    (partes.length? " · "+partes.join(" · ") : "");
+}
+
+function renderBannerBug(){
+  var el=document.getElementById("bannerBug");
+  var bug=S.pers.bug||0;
+  if(bug<=0){ el.style.display="none"; el.innerHTML=""; return; }
+  var h='<b style="color:var(--red)">Personagem bugado — '+bug+' pt'+(bug>1?'s':'')+'.</b>';
+  if(bugAtivo()){
+    h+='<span>Ações com custo bloqueadas por mais <b data-vence="'+new Date(S.pers.bug_ate).getTime()+'"></b>.</span>';
+  } else {
+    h+='<span>O travamento passou, mas os pontos continuam — a próxima falha arriscada escala com eles.</span>';
+  }
+  h+='<button class="btn" data-act="pagarBug">Pagar pra limpar ('+(bug*100)+' Col)</button>';
+  el.innerHTML=h;
+  el.style.display="";
+}
+
+function renderTabs(){
+  document.getElementById("tabs").innerHTML = ABAS.map(function(a){
+    return '<button class="tab'+(S.aba===a[0]?" on":"")+'" data-tab="'+a[0]+'">'+a[1]+'</button>';
+  }).join("");
+}
+
+function renderAll(){ renderBarra(); renderBannerBug(); renderTabs(); renderAba(); }
+function renderAba(){
+  var el=document.getElementById("painel");
+  if(S.aba==="hoje") el.innerHTML=htmlHoje();
+  else if(S.aba==="acoes") el.innerHTML=htmlAcoes();
+  else if(S.aba==="craft") el.innerHTML=htmlCraft();
+  else if(S.aba==="inventario") el.innerHTML=htmlInventario();
+  else if(S.aba==="mercado") el.innerHTML=htmlMercado();
+  else if(S.aba==="reputacao") el.innerHTML=htmlReputacao();
+}
+
+/* ---------------- aba Hoje ---------------- */
+function htmlHoje(){
+  var ms=missoesDeHoje();
+  var h='<div class="sec"><h2>Quadro de hoje — '+hojeStr().split("-").reverse().join("/")+'</h2>'
+    +'<p class="mini">Três missões por dia, sorteadas do quadro pro seu nível. Pagam Col (conta no teto de '
+    +TETO_COL_SISTEMA_DIA+'/dia de sistema) e XP na sua profissão mais alta.</p>';
+  if(!ms.length) return h+'<div class="aviso">Nenhuma missão disponível pro seu nível hoje.</div></div>';
+  ms.forEach(function(m){
+    var st=statusMissao(m.id);
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(m.titulo)+'</span> '
+      +'<span class="tag cy">'+esc(m.tipo||"—")+'</span> '
+      +'<span class="tag">nível mín. '+(m.nivel_minimo||1)+'</span> '
+      +'<span class="tag gold">+'+(m.recompensa_col||0)+' Col · +'+(m.recompensa_xp||0)+' XP</span>'
+      +(m.resumo? '<br>'+esc(m.resumo):'')+'</div>';
+    if(st==="oferecida") h+='<button class="btn sec" data-act="aceitarMissao" data-arg="'+esc(m.id)+'">Aceitar</button>';
+    else if(st==="aceita") h+='<span class="tag">aceita</span><button class="btn" data-act="concluirMissao" data-arg="'+esc(m.id)+'">Concluir</button>';
+    else h+='<span class="tag ok">concluída</span>';
+    h+='</div>';
+  });
+  return h+'</div>';
+}
+
+/* ---------------- aba Ações ---------------- */
+function htmlAcoes(){
+  var nv=nivelMax(), arma=armaEquipada();
+  var h='<div class="sec"><h2>Combate</h2>'
+    +'<p class="mini">Nível efetivo '+nv+' (sua profissão mais alta) · arma equipada: '
+    +(arma? esc(arma.nome)+" ("+esc(arma.atributo||"—")+")" : "nenhuma — sem o +5% de fraqueza")
+    +'. Monstros com nível acima de '+(nv+2)+' nem aparecem. Arriscado = chance abaixo de 75% — falhar num arriscado dá bug.</p>';
+  var lista=monstrosAcessiveis();
+  if(!lista.length) h+='<div class="aviso">Nenhum monstro ao seu alcance ainda.</div>';
+  lista.forEach(function(m){
+    var f=faixaNivel(m.nivel_recomendado);
+    var chefe=norm(m.ameaca)==="chefe";
+    var bonus=bonusFraqueza(m);
+    var ch=chancePorNivel(nv, f.media, bonus);
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(m.nome)+'</span> '
+      +(m.epiteto? '<span class="mini">'+esc(m.epiteto)+'</span> ':'')
+      +'<span class="tag">'+esc(m.ameaca||"—")+'</span> '
+      +'<span class="tag">nv '+esc(m.nivel_recomendado)+'</span>'
+      +(m.atributo_fraqueza? ' <span class="mini">fraqueza: '+esc(m.atributo_fraqueza)+'</span>':'')
+      +'</div>'
+      +'<span class="tag">Fôlego '+(chefe?CUSTO_FOLEGO.chefe:CUSTO_FOLEGO.combate)+'</span> '
+      +'<span class="tag gold">'+ch+'%</span>'
+      +(bonus? ' <span class="tag cy">+5% fraqueza</span>':'')
+      +(ch<75? ' <span class="tag red">arriscado</span>':'')
+      +' <button class="btn" data-act="enfrentar" data-arg="'+esc(m.id)+'">Enfrentar</button></div>';
+  });
+  h+='</div>'+htmlOficio();
+  if(norm(S.pers.profissao)==="domador") h+=htmlDomador();
+  return h;
+}
+
+function htmlOficio(){
+  var prof=S.pers.profissao;
+  var h='<div class="sec"><h2>Ofício'+(prof? ' — '+esc(prof):'')+'</h2>';
+  if(!prof) return h+'<div class="aviso">Seu personagem não tem profissão definida na ficha.</div></div>';
+  var acoes=(S.oficio && Array.isArray(S.oficio.acoes)) ? S.oficio.acoes.slice(0,3) : [];
+  if(!acoes.length) return h+'<div class="aviso">As ações de '+esc(prof)+' ainda não estão cadastradas no banco.</div></div>';
+  var cat=S.ferrCatalogo.find(function(f){ return f.profissao===prof; });
+  var nvF=nivelFerramenta(prof);
+  if(cat) h+='<p class="mini">Ferramenta: '+esc(cat.nome)
+    +(nvF>0? ' nv '+nvF+' (+3%/nível na ação que ela cobre: '+esc(cat.acao_afetada||"?")+')'
+           : ' — você ainda não tem uma; ela upa por craft')+'.</p>';
+  acoes.forEach(function(a){
+    var bf=bonusFerramenta(a.acao);
+    var ch=chancePorNivel(nivelDe(prof), DIFICULDADE_OFICIO, bf.bonus);
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(a.acao)+'</span> '
+      +(a.teste? '<span class="mini">'+esc(a.teste)+'</span> ':'')
+      +(bf.bonus? '<span class="tag cy">'+esc(bf.nome)+' +'+bf.bonus+'%</span>':'')
+      +(a.sucesso? '<br>'+esc(a.sucesso):'')+'</div>'
+      +'<span class="tag">Fôlego '+CUSTO_FOLEGO.oficio+'</span> <span class="tag gold">'+ch+'%</span> '
+      +'<button class="btn sec" data-act="oficio" data-arg="'+esc(a.acao)+'" data-arg2="material">Rolar → material</button> '
+      +'<button class="btn sec" data-act="oficio" data-arg="'+esc(a.acao)+'" data-arg2="col">Rolar → 20 Col</button></div>';
+  });
+  return h+'</div>';
+}
+
+function htmlDomador(){
+  var ovos=S.inventario.filter(function(i){ return i.tipo==="ovo"; });
+  var nvInc=nivelFerramenta("Domador"), chance=50+5*nvInc;
+  var h='<div class="sec"><h2>Domador — ovos e chocagem</h2>'
+    +'<p class="mini">Incubadora nv '+nvInc+' → chance de chocar '+chance+'% (50% + 5%/nível). '
+    +'Sucesso consome o ovo e começa 8h de incubação; falha deixa o ovo vivo.</p>';
+  if(!ovos.length) h+='<div class="aviso">Nenhum ovo no inventário — ovos dropam de feras domáveis.</div>';
+  ovos.forEach(function(o){
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(o.nome)+'</span> <span class="tag">×'+o.quantidade+'</span></div>'
+      +'<span class="tag">Fôlego '+CUSTO_FOLEGO.ovo+'</span> <span class="tag gold">'+chance+'%</span> '
+      +'<button class="btn" data-act="chocar" data-arg="'+o.id+'">Chocar</button></div>';
+  });
+  S.pets.filter(function(p){ return p.estado==="incubando"; }).forEach(function(p){
+    var t=p.choca_em? new Date(p.choca_em).getTime():0;
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(p.nome_pet)+'</span> '
+      +'<span class="tag cy">'+esc(p.raridade)+'</span> <span class="mini">chocando</span></div>'
+      +(t<=Date.now()? '<span class="tag ok">pronto pra eclodir — o mestre confirma na mesa</span>'
+                     : '<span class="tag" data-vence="'+t+'"></span>')
+      +'</div>';
+  });
+  var ativos=S.pets.filter(function(p){ return p.estado==="ativo"; });
+  if(ativos.length) h+='<p class="mini">Pets ativos: '
+    +ativos.map(function(p){ return esc(p.nome_pet)+" ("+esc(p.raridade)+")"; }).join(" · ")+'</p>';
+  return h+'</div>';
+}
+
+/* ---------------- aba Craft ---------------- */
+function htmlCraft(){
+  var h='<div class="sec"><h2>Fila de craft</h2>';
+  if(!S.fila.length) h+='<p class="mini">Nada em produção.</p>';
+  S.fila.forEach(function(f){
+    var t=new Date(f.pronto_em).getTime();
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(f.nome)+'</span> <span class="tag cy">'+esc(f.raridade)+'</span></div>'
+      +(t<=Date.now()? '<button class="btn" data-act="coletar" data-arg="'+f.id+'">Coletar</button>'
+                     : '<span class="tag" data-vence="'+t+'"></span>')
+      +'</div>';
+  });
+  h+='</div>';
+  var mats=S.inventario.filter(function(i){ return i.tipo==="material"; });
+  var catalogo=[];
+  S.armas.forEach(function(a){ if(RARIDADES_CRAFT.indexOf(a.raridade||"Comum")>=0) catalogo.push({t:"arma", r:a}); });
+  S.equips.forEach(function(e){ if(RARIDADES_CRAFT.indexOf(e.raridade||"Comum")>=0) catalogo.push({t:"equipamento", r:e}); });
+  h+='<div class="sec"><h2>Iniciar craft</h2>'
+    +'<p class="mini">Consome 1 material qualquer do inventário. Tempo: Comum ~10min · Incomum ~2h · Raro ~8h. Coletar dá XP por raridade (5/15/40).</p>'
+    +'<div class="mrow"><select id="craftItem" class="inp" style="flex:2;min-width:220px">'
+    + catalogo.map(function(c){ return '<option value="'+c.t+':'+esc(c.r.id)+'">'+esc(c.r.nome)+' — '+esc(c.r.raridade||"Comum")+' ('+(c.t==="arma"?"arma":"equipamento")+')</option>'; }).join("")
+    +'</select>'
+    +'<select id="craftMat" class="inp" style="flex:1;min-width:160px">'
+    + (mats.length? mats.map(function(m){ return '<option value="'+m.id+'">'+esc(m.nome)+' ×'+m.quantidade+'</option>'; }).join("")
+                 : '<option value="">(sem material)</option>')
+    +'</select>'
+    +'<button class="btn" data-act="craft">Iniciar</button></div></div>';
+  return h;
+}
+
+/* ---------------- aba Inventário ---------------- */
+function htmlInventario(){
+  var eq=S.pers.equipado||{};
+  var h='<div class="sec"><h2>Equipado — o que o mestre considera levado pra mesa</h2><div class="slotgrid">';
+  SLOTS.forEach(function(slot){
+    var id=eq[slot];
+    var inv=id!=null? S.inventario.find(function(i){ return mesmoId(i.id, id); }) : null;
+    h+='<div class="slot"><span class="lab">'+SLOT_LABELS[slot]+'</span>';
+    if(inv) h+='<span class="item">'+esc(inv.nome)+'</span> <button class="btn sec" style="padding:2px 8px;font-size:10.5px" data-act="desequipar" data-arg="'+slot+'">tirar</button>';
+    else if(id!=null) h+='<span class="tag red">item não existe mais</span> <button class="btn sec" style="padding:2px 8px;font-size:10.5px" data-act="desequipar" data-arg="'+slot+'">limpar</button>';
+    else h+='—';
+    h+='</div>';
+  });
+  h+='</div></div>';
+  h+='<div class="sec"><h2>Carteira</h2><div class="mrow">'
+    +'<span class="tag gold">Na mão: '+(S.pers.col_mao||0)+' Col</span>'
+    +'<span class="tag">Guardado: '+(S.pers.col_guardado||0)+' Col</span>'
+    +'<input type="number" id="mvCol" class="inp" min="1" placeholder="quanto?" style="width:110px" />'
+    +'<button class="btn sec" data-act="guardar">Guardar</button>'
+    +'<button class="btn sec" data-act="resgatar">Resgatar</button></div>'
+    +'<p class="mini">O que está guardado não se perde em bug. Mover é gratuito (na ficção: o banco da cidade).</p></div>';
+  TIPO_ORDEM.forEach(function(tipo){
+    var itens=S.inventario.filter(function(i){ return i.tipo===tipo; });
+    if(!itens.length) return;
+    h+='<div class="sec"><h2>'+TIPO_LABELS[tipo]+'</h2>';
+    itens.forEach(function(i){
+      var slot=slotDoItem(i);
+      var equipado=Object.keys(eq).some(function(s){ return mesmoId(eq[s], i.id); });
+      h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(i.nome)+'</span> '
+        +'<span class="tag">×'+i.quantidade+'</span>'
+        +(i.origem? ' <span class="mini">'+esc(i.origem)+'</span>':'')
+        +(equipado? ' <span class="tag ok">equipado</span>':'')+'</div>'
+        +(slot? '<button class="btn sec" data-act="equipar" data-arg="'+i.id+'">Equipar</button>':'')
+        +'</div>';
+    });
+    h+='</div>';
+  });
+  if(!S.inventario.length) h+='<div class="aviso">Inventário vazio — vá caçar, trabalhar ou craftar.</div>';
+  return h;
+}
+
+/* ---------------- aba Mercado ---------------- */
+function htmlMercado(){
+  var h='<div class="sec"><h2>Minha vitrine</h2>'
+    +'<div class="mrow"><select id="vendItem" class="inp" style="flex:2;min-width:220px">'
+    + (S.inventario.length? S.inventario.map(function(i){
+        var ref=precoReferencia(i);
+        return '<option value="'+i.id+'">'+esc(i.nome)+' ×'+i.quantidade+(ref? ' (ref. '+ref+' Col)':'')+'</option>';
+      }).join("") : '<option value="">(inventário vazio)</option>')
+    +'</select>'
+    +'<input type="number" id="vendPreco" class="inp" min="1" placeholder="preço em Col" style="width:130px" />'
+    +'<button class="btn" data-act="anunciar">Anunciar</button></div>';
+  var minhas=S.vitrine.filter(function(v){ return v.dono===S.pers.nome; });
+  if(!minhas.length) h+='<p class="mini">Nada anunciado. Venda entre jogadores não conta no teto diário de Col.</p>';
+  minhas.forEach(function(v){
+    var it=S.vitrineItens[String(v.inventario_id)];
+    var ref=precoReferencia(it);
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(it? it.nome:"?")+'</span> '
+      +'<span class="tag gold">'+v.preco+' Col</span>'+(ref? ' <span class="mini">ref. '+ref+'</span>':'')+'</div>'
+      +'<button class="btn sec" data-act="desativarOferta" data-arg="'+v.id+'">Retirar</button></div>';
+  });
+  h+='</div><div class="sec"><h2>Vitrines do andar</h2>';
+  if(!S.vitrine.length) h+='<p class="mini">Nenhuma oferta ativa no andar.</p>';
+  S.vitrine.forEach(function(v){
+    var it=S.vitrineItens[String(v.inventario_id)];
+    var ref=precoReferencia(it);
+    var minha=v.dono===S.pers.nome;
+    h+='<div class="mrow"><div class="inf"><span class="nm">'+esc(it? it.nome:"?")+'</span> '
+      +(it? '<span class="tag">'+esc(TIPO_LABELS[it.tipo]||it.tipo)+'</span> ':'')
+      +'<span class="mini">vendedor: '+esc(v.dono)+'</span>'
+      +(ref? ' <span class="mini">ref. catálogo: '+ref+' Col</span>':'')+'</div>'
+      +'<span class="tag gold">'+v.preco+' Col</span>'
+      +(minha? ' <span class="tag">sua oferta</span>'
+             : ' <button class="btn" data-act="comprar" data-arg="'+v.id+'">Comprar</button>')
+      +'</div>';
+  });
+  return h+'</div>';
+}
+
+/* ---------------- aba Reputação ---------------- */
+function htmlReputacao(){
+  var h='<div class="sec"><h2>Sua reputação</h2>';
+  if(!S.rep.length){
+    h+='<p class="mini">Nenhuma reputação registrada ainda — ela muda com missão social, ajuda a clã e contrato cumprido (no máximo 1 ponto por alvo por dia).</p>';
+  } else {
+    h+='<table class="tbl"><thead><tr><th>Frente</th><th>Tipo</th><th>Valor</th></tr></thead><tbody>'
+      + S.rep.map(function(r){
+          var cls=r.valor>0?"ok":(r.valor<0?"red":"");
+          return '<tr><td style="color:var(--gold-bright)">'+esc(r.alvo)+'</td><td>'+esc(r.alvo_tipo)+'</td><td><span class="tag '+cls+'">'+(r.valor>0?"+":"")+r.valor+'</span></td></tr>';
+        }).join("")
+      +'</tbody></table>';
+  }
+  /* tabela de mordomias do doc, como referência estática */
+  h+='</div><div class="sec"><h2>Mordomias (referência)</h2>'
+    +'<table class="tbl"><thead><tr><th>Valor</th><th>Efeito no online</th></tr></thead><tbody>'
+    +'<tr><td>+1</td><td>desconto de 10% nas vitrines de NPC daquela frente</td></tr>'
+    +'<tr><td>+2</td><td>missões especiais do quadro</td></tr>'
+    +'<tr><td>+3</td><td>acesso a área/contrato exclusivo</td></tr>'
+    +'<tr><td>−1</td><td>preço maior</td></tr>'
+    +'<tr><td>−2</td><td>missões fechadas</td></tr>'
+    +'<tr><td>−3</td><td>boicote</td></tr>'
+    +'</tbody></table>'
+    +'<p class="mini">Escala −3 a +3, mesma língua do Favor/Suspeita da mesa — o mestre pode refletir um no outro.</p></div>';
+  return h;
+}
+
+/* ================== bootstrap ================== */
+function montarDropdownMestre(uid){
+  document.getElementById("mestreBox").style.display="";
+  var sel=document.getElementById("selPers");
+  sel.innerHTML=S.personagens.map(function(p){
+    return '<option value="'+esc(p.nome)+'">'+esc(p.nome)+(p.dono_id===uid?" (seu)":"")+'</option>';
+  }).join("");
+  sel.addEventListener("change", async function(){
+    var p=S.personagens.find(function(x){ return x.nome===sel.value; });
+    if(p) await carregarPersonagem(p);
+  });
+}
+
+async function carregarPersonagem(p){
+  S.pers=p;
+  S.inspecao = p.dono_id !== S.sessao.user.id;
+  document.getElementById("app").style.display="";
+  document.getElementById("bannerInsp").style.display = S.inspecao? "" : "none";
+  var sel=document.getElementById("selPers");
+  if(sel) sel.value=p.nome;
+
+  var h=hojeStr();
+  var dados=await Promise.all([
+    sb().from("nivel_profissao").select("*").eq("personagem",p.nome),
+    sb().from("inventario").select("*").eq("personagem",p.nome).order("obtido_em"),
+    sb().from("personagem_ferramentas").select("*").eq("personagem",p.nome),
+    sb().from("missao_diaria").select("*").eq("personagem",p.nome).eq("dia",h),
+    sb().from("craft_fila").select("*").eq("personagem",p.nome).eq("coletado",false).order("pronto_em"),
+    sb().from("reputacao_personagem").select("*").eq("personagem",p.nome),
+    sb().from("criaturas_domadas").select("*").eq("personagem",p.nome).neq("estado","perdido")
+  ]);
+  S.niveis={};
+  (dados[0].data||[]).forEach(function(l){ S.niveis[l.profissao]={ xp:l.xp, nivel:l.nivel }; });
+  S.inventario=dados[1].data||[];
+  S.ferramentas=dados[2].data||[];
+  S.missoesDia=dados[3].data||[];
+  S.fila=dados[4].data||[];
+  S.rep=dados[5].data||[];
+  S.pets=dados[6].data||[];
+  S.oficio=S.oficios.find(function(o){ return o.nome===p.profissao; }) || null;
+
+  /* regen preguiçosa + reset diário de Col — só grava no próprio personagem */
+  if(!S.inspecao){
+    var pre=aplicarRegen();
+    if(Object.keys(pre).length) await salvarEstado(pre);
+  }
+  await recarregarVitrine();
+  document.getElementById("log").innerHTML="";
+  renderAll();
+}
+
+async function iniciar(){
+  S.sessao=await iniciarSessao();
+  var statusBox=document.getElementById("statusBox");
+
+  if(!estaLogado()){
+    statusBox.innerHTML='<span class="pill">visitante — entre pra jogar</span>';
+    document.getElementById("gate").style.display="";
+    document.getElementById("gEntrar").addEventListener("click", async function(){
+      var erro=document.getElementById("gErro");
+      erro.textContent="";
+      try{
+        await fazerLogin(document.getElementById("gEmail").value.trim(), document.getElementById("gSenha").value);
+        location.reload();
+      }catch(e){ erro.textContent="Não deu: "+e.message; }
+    });
+    return;
+  }
+
+  S.perfil=await meuPerfil();
+  S.ehMestre=!!(S.perfil && S.perfil.papel==="mestre");
+  statusBox.innerHTML='<span class="pill on">'+(S.ehMestre?"🔓 mestre":"🎮 "+esc((S.perfil&&S.perfil.nome)||"jogador"))+'</span>';
+  var sair=document.createElement("span");
+  sair.className="pill"; sair.style.cursor="pointer"; sair.textContent="sair";
+  sair.addEventListener("click", async function(){ await fazerLogout(); location.reload(); });
+  statusBox.appendChild(sair);
+
+  /* catálogos em paralelo — a visibilidade é resolvida pela RLS/views */
+  var cats=await Promise.all([
+    carregarLista("monstros"), carregarLista("armas"), carregarLista("equipamentos"),
+    carregarLista("oficios"), carregarLista("missoes_quadro"), carregarLista("ferramentas_oficio")
+  ]);
+  S.monstros=cats[0]; S.armas=cats[1]; S.equips=cats[2];
+  S.oficios=cats[3]; S.missoes=cats[4]; S.ferrCatalogo=cats[5];
+
+  var uid=S.sessao.user.id;
+  if(S.ehMestre){
+    S.personagens=await carregarLista("personagens");
+    montarDropdownMestre(uid);
+    var proprioM=S.personagens.find(function(p){ return p.dono_id===uid; });
+    if(proprioM){ await carregarPersonagem(proprioM); }
+    else {
+      document.getElementById("app").style.display="";
+      document.getElementById("painel").innerHTML='<div class="aviso">Sua conta não tem personagem próprio — escolhe um no dropdown acima pra inspecionar.</div>';
+    }
+    return;
+  }
+
+  /* jogador: personagem = linha com dono_id = usuário. Se a ficha não estiver
+     visivel, a RLS esconde até do dono — daí a mensagem de falar com o mestre */
+  var q=await sb().from("personagens").select("*").eq("dono_id", uid).limit(1);
+  var proprio=(q.data||[])[0] || null;
+  if(!proprio){
+    document.getElementById("semPers").style.display="";
+    return;
+  }
+  await carregarPersonagem(proprio);
+}
+
+/* delegação única de clique: botões dinâmicos usam data-act/data-tab */
+document.addEventListener("click", function(ev){
+  var t=ev.target && ev.target.closest ? ev.target.closest("[data-tab],[data-act]") : null;
+  if(!t) return;
+  if(t.getAttribute("data-tab")){
+    S.aba=t.getAttribute("data-tab");
+    renderTabs(); renderAba();
+    return;
+  }
+  var act=t.getAttribute("data-act");
+  if(act && ACOES_UI[act]) ACOES_UI[act](t.getAttribute("data-arg"), t.getAttribute("data-arg2"));
+});
+var ACOES_UI={
+  aceitarMissao:aceitarMissao, concluirMissao:concluirMissao,
+  enfrentar:enfrentar, pagarBug:pagarBug,
+  oficio:executarOficio, chocar:chocarOvo,
+  craft:iniciarCraft, coletar:coletarCraft,
+  equipar:equipar, desequipar:desequipar,
+  guardar:function(){ moverCol("guardar"); }, resgatar:function(){ moverCol("resgatar"); },
+  anunciar:anunciar, desativarOferta:desativarOferta, comprar:comprar
+};
+
+/* relógio de 1s: atualiza contagens regressivas e re-renderiza quando algo
+   vence (bug, craft, chocagem) — sem polling no banco */
+setInterval(function(){
+  if(!S.pers) return;
+  var agora=Date.now();
+  document.querySelectorAll("[data-vence]").forEach(function(el){
+    el.textContent=fmtDur((+el.getAttribute("data-vence"))-agora);
+  });
+  if(S._ultimoTick){
+    var bugT=S.pers.bug_ate? new Date(S.pers.bug_ate).getTime():0;
+    var cruzou=(bugT>S._ultimoTick && bugT<=agora)
+      || S.fila.some(function(f){ var t=new Date(f.pronto_em).getTime(); return t>S._ultimoTick && t<=agora; })
+      || S.pets.some(function(p){ var t=p.choca_em? new Date(p.choca_em).getTime():0; return t>S._ultimoTick && t<=agora; });
+    if(cruzou) renderAll();
+  }
+  S._ultimoTick=agora;
+},1000);
+
+iniciar();
+</script>
+</body>
+</html>
