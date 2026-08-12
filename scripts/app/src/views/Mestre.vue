@@ -743,6 +743,40 @@
           </div>
         </div>
 
+        <!-- ============ ABA: PEDIDOS DE CLÃ (recrutamento) ============ -->
+        <div v-if="aba==='pedidos_cla'" class="admin-content">
+          <div class="card" style="background:var(--panel-2)">
+            <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:12px">
+              <h4 style="margin:0;color:var(--azul-bright)">🚪 Pedidos de entrada em clã</h4>
+              <button class="btn" :disabled="carregandoPedidosCla" @click="carregarPedidosCla()">🔄 Atualizar</button>
+            </div>
+            <div v-if="carregandoPedidosCla" class="msg info carregando">Carregando pedidos…</div>
+            <div v-else-if="!pedidosClaPendentes.length" class="msg warn">Nenhum pedido pendente no momento.</div>
+            <div v-else class="admin-list">
+              <div v-for="p in pedidosClaPendentes" :key="p.id" class="admin-row">
+                <div style="flex:1">
+                  <div class="row-nome">{{ p.personagem_nome }} → {{ p.cla_nome }}</div>
+                  <div class="row-sub">{{ p.mensagem || 'sem mensagem' }} · pedido em {{ formatarData(p.criado_em) }}</div>
+                </div>
+                <button class="btn tiny primario" @click="responderPedidoCla(p, true)">✅ Aprovar</button>
+                <button class="btn tiny bad ghost" @click="responderPedidoCla(p, false)">✖️ Recusar</button>
+              </div>
+            </div>
+            <div v-if="pedidosClaResolvidos.length" style="margin-top:18px">
+              <h4 style="margin:0 0 10px;color:var(--ink-dim)">Histórico recente</h4>
+              <div class="admin-list">
+                <div v-for="p in pedidosClaResolvidos" :key="p.id" class="admin-row">
+                  <div style="flex:1">
+                    <div class="row-nome">{{ p.personagem_nome }} → {{ p.cla_nome }}</div>
+                    <div class="row-sub">{{ formatarData(p.resolvido_em) }}</div>
+                  </div>
+                  <span class="pill" :class="{ bad: p.status!=='aprovado' }">{{ p.status }}</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </section>
     </div>
   </div>
@@ -761,16 +795,17 @@ const supa = useSupa()
 
 // ===== Sidebar de navegação admin =====
 const aba = ref('dashboard')
-const secoes = [
+const secoes = computed(() => [
   { k:'dashboard', ico:'📊', lbl:'Dashboard', desc:'Visão geral da campanha: jogadores, dinheiro, profissões, ações rápidas.' },
   { k:'mesa', ico:'🎬', lbl:'Mesa & Sessão', desc:'Relógios narrativos, preparação de raid, favor/suspeita, log de sessão, condições e rastreador de combate — estado gravado no banco, só o mestre vê.', divider:true },
   { k:'jogadores', ico:'👥', lbl:'Jogadores', desc:'Lista de todos os personagens. Clique em um para abrir a ficha completa, editar, resetar senha ou excluir logicamente.', divider:true },
   { k:'criar',     ico:'➕', lbl:'Criar Personagem', desc:'Formulário para cadastrar um novo aventureiro, com senha forte gerada automaticamente.' },
   { k:'compendio', ico:'📚', lbl:'Compêndio', desc:'Todo o conteúdo do jogo — monstros, missões, receitas, materiais, pontos do mapa, clãs e mais. Crie, edite e exclua livremente.', divider:true },
+  { k:'pedidos_cla', ico:'🚪', lbl:'Pedidos de Clã', desc:'Pedidos de entrada em clã da aba de Recrutamento — aprove ou recuse (a liderança do clã, cargo líder/oficial, também pode responder pelo lado do jogador).', divider:true, badge: pedidosClaPendentesCount.value || null },
   { k:'mercado',   ico:'🏪', lbl:'Mercado', desc:'Anúncios ativos do mercado dos jogadores, valores e data de expiração.', divider:true },
   { k:'inventarios', ico:'🎒', lbl:'Inventários', desc:'Inspecione o inventário pessoal e stash de qualquer jogador.' },
-]
-const secaoAtual = computed(() => secoes.find(s => s.k === aba.value))
+])
+const secaoAtual = computed(() => secoes.value.find(s => s.k === aba.value))
 
 // ===== ====== ABA JOGADORES / DASHBOARD ===== ======
 const carregandoPers = ref(false)
@@ -1081,6 +1116,30 @@ async function removerAnuncio(a){
   } catch(e){ alert('Erro: '+e.message) }
 }
 
+// ===== ====== ABA PEDIDOS DE CLÃ (recrutamento) ===== ======
+const carregandoPedidosCla = ref(false)
+const pedidosCla = ref([])
+const pedidosClaPendentesCount = computed(() => pedidosCla.value.filter(p => p.status === 'pendente').length)
+const pedidosClaPendentes = computed(() => pedidosCla.value.filter(p => p.status === 'pendente'))
+const pedidosClaResolvidos = computed(() => pedidosCla.value.filter(p => p.status !== 'pendente').slice(0, 20))
+async function carregarPedidosCla(){
+  carregandoPedidosCla.value = true
+  try {
+    const r = await supa.from('cla_pedidos').select('*').order('criado_em', { ascending: false }).limit(200)
+    if (r.error) throw r.error
+    pedidosCla.value = r.data || []
+  } catch(e){ console.warn(e) } finally { carregandoPedidosCla.value = false }
+}
+async function responderPedidoCla(p, aprovar){
+  try {
+    const r = await supa.rpc('responder_pedido_cla', { p_pedido_id: p.id, p_aprovar: aprovar })
+    if (r.error) throw r.error
+    const d = JSON.parse(r.data)
+    if (d.erro) { alert(d.erro); await carregarPedidosCla(); return }
+    await Promise.all([carregarPedidosCla(), carregarJogadores()])
+  } catch(e){ alert('Erro: '+e.message) }
+}
+
 // ===== ====== ABA INVENTÁRIOS ===== ======
 const invPers = ref(''), carregandoInvJog = ref(false), invItens = ref([])
 async function carregarInventarioJog(){
@@ -1268,7 +1327,7 @@ onMounted(async () => {
     // clas_publico: mesmo motivo do pontos_publico acima — "ganchos" só
     // tem GRANT SELECT resolvido com segurança dentro da view.
     supa.from('clas_publico').select('*'),
-    carregarJogadores(), carregarMercado(), carregarMesa(), carregarTiposArma(),
+    carregarJogadores(), carregarMercado(), carregarMesa(), carregarTiposArma(), carregarPedidosCla(),
   ]
   const [rOf, rAr, rCl] = await Promise.all(proms)
   oficios.value = (rOf?.data || []).sort((a,b)=>a.nome.localeCompare(b.nome,'pt-BR'))
