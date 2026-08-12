@@ -265,31 +265,43 @@ Cada arma abaixo tem:
 
 ## As 16 profissões de Aincrad
 
+> **Reforma 12/08**: Bibliotecário + Diplomata unificaram em
+> **Informante**; **Coveiro** saiu (funções foram pro Mercenário);
+> entraram **Mestre de Montarias** e **Minerador**. Continua em 16
+> profissões — só a lineup mudou. Personagem que já tinha a profissão
+> antiga não quebra (o campo é texto livre), só some do dropdown de
+> personagem novo. Seções antigas de Bibliotecário/Diplomata/Coveiro
+> ficam marcadas "descontinuada" abaixo, não apagadas — servem de
+> referência caso algum personagem legado ainda use.
+
 Cada profissão está ligada a um atributo principal e concede um **Move
 Exclusivo**. Nesta mesa, cada profissão concede:
 
 - **Move de Ofício** (o que só você faz).
 - **Move de Cena** (como você garante protagonismo em jogo).
+- **Move Exclusivo** (o golpe de assinatura da profissão — formato PBTA
+  10+ escolha 2 / 7-9 escolha 1 / 6- o Mestre narra; ver
+  `SAO_PBTA_Profissoes_e_Moves.pdf`).
 - **Marca** (como o mundo te lê; sem rolagem).
 
-| Profissão     | Atributo     | Faz                                                                         |
-| ------------- | ------------ | --------------------------------------------------------------------------- |
-| Caçador       | Reflexo      | Rastreia, caça e coleta materiais de criaturas e monstros                   |
-| Lenhador      | Reflexo      | Coleta madeira e recursos da natureza com agilidade                         |
-| Cartógrafo    | Conhecimento | Explora e revela mapas, descobre rotas e locais escondidos                  |
-| Comerciante   | Conhecimento | Negocia, compra e vende itens e informações                                 |
-| Cozinheiro    | Conhecimento | Prepara refeições que recuperam energia e concedem bônus temporários        |
-| Diplomata     | Conhecimento | Conquista confiança, media conflitos, abre caminhos com palavras            |
-| Bibliotecário | Conhecimento | Pesquisa livros, lendas, criaturas, itens e eventos históricos de Aincrad   |
-| Alquimista    | Conhecimento | Cria poções e itens especiais usando misturas e reações químicas            |
-| Costureiro    | Técnica      | Cria e aprimora roupas, armas e itens de tecido                             |
-| Domador       | Técnica      | Treina e cria laços com criaturas; comanda aliados em batalha               |
-| Ferreiro      | Técnica      | Forja armas, armaduras e ferramentas; domina fogo e metal                   |
-| Joalheiro     | Técnica      | Cria, repara e aprimora anéis, colares, pedras preciosas e acessórios       |
-| Coveiro       | Espírito     | Lida com os mortos e locais de descanso; coleta ossos e itens especiais     |
-| Médico        | Espírito     | Cuida de ferimentos, doenças e efeitos negativos; especialista em cura      |
-| Músico        | Espírito     | Usa música para inspirar aliados, fortalecer o moral, influenciar emoções   |
-| Mercenário    | Corpo        | Guerreiro de aluguel; especialista em combate corpo a corpo e sobrevivência |
+| Profissão           | Atributo     | Faz                                                                         |
+| ------------------- | ------------ | --------------------------------------------------------------------------- |
+| Caçador             | Reflexo      | Rastreia, caça, pesca e coleta materiais de criaturas e monstros            |
+| Lenhador            | Reflexo      | Coleta madeira e recursos da natureza com agilidade                         |
+| Cartógrafo          | Conhecimento | Explora e revela mapas, descobre rotas e locais escondidos                  |
+| Comerciante         | Conhecimento | Negocia, compra e vende itens e informações                                 |
+| Cozinheiro          | Conhecimento | Prepara refeições que recuperam energia e concedem bônus temporários        |
+| Informante          | Conhecimento | Pesquisa registros, cultiva contatos, ouve rumores e vende informação       |
+| Alquimista          | Conhecimento | Cria poções e itens especiais usando misturas e reações químicas            |
+| Costureiro          | Técnica      | Cria e aprimora roupas, armas e itens de tecido                             |
+| Domador             | Técnica      | Treina e cria laços com criaturas; comanda aliados em batalha               |
+| Ferreiro            | Técnica      | Forja armas, armaduras e ferramentas; domina fogo e metal                   |
+| Joalheiro           | Técnica      | Cria, repara e aprimora anéis, colares, pedras preciosas e acessórios       |
+| Mestre de Montarias | Técnica      | Aproxima, doma e conduz criaturas usadas como montaria                      |
+| Médico              | Espírito     | Cuida de ferimentos, doenças e efeitos negativos; especialista em cura      |
+| Músico              | Espírito     | Usa música para inspirar aliados, fortalecer o moral, influenciar emoções   |
+| Mercenário          | Corpo        | Guerreiro de aluguel; combate corpo a corpo, escolta e recuperação          |
+| Minerador           | Corpo        | Escava túneis e extrai minérios das regiões mais perigosas e profundas      |
 
 ## Moves de Profissão (todas Tier S em protagonismo)
 
@@ -298,12 +310,14 @@ Exclusivo**. Nesta mesa, cada profissão concede:
 **Marca:** você é “o que volta com prova”; gente te procura quando precisa de material e verdade.
 **Move de Ofício — Extração:** quando você extrai material raro/bônus de uma criatura recém-abatida, role 2d6+Reflexo. 10+ você consegue e escolhe 1: encontra um traço útil (rastro, toca, rota), ou mantém a cena limpa (sem atrair atenção). 7-9 você consegue, mas cria uma pressão (barulho, cheiro, predador, discussão moral).
 **Move de Cena — Olho de Caça:** quando você entra em região selvagem e para para ler sinais (pegadas, vento, fezes, silêncio), role 2d6+Reflexo. 10+ o mestre deve te dizer o perigo mais próximo e a rota mais segura. 7-9 ele diz, mas você escolhe: risco, tempo ou exposição.
+**Move Exclusivo — Mestre da Caçada:** quando você rastrear uma criatura, pescar, preparar uma armadilha ou procurar recursos naturais, descreva sua abordagem e role 2d6+Reflexo. 10+ escolha 2 / 7-9 escolha 1 entre: encontra rápido o que procurava, obtém recurso adicional, encontra algo raro, identifica um perigo/fraqueza antes da hora, ou prepara uma vantagem pra próxima ação contra a presa. 6- o mestre narra: rastro falso leva a território alheio, equipamento quebra ou fica preso, a presa percebe você primeiro, o recurso está protegido por algo perigoso, ou você se perde/isola/fica Sob Pressão.
 
 ### Lenhador (REF)
 
 **Marca:** você é o “mão de obra do andar”; gente respeita quem sabe fazer fogo e abrigo.
 **Move de Ofício — Corte Certo:** quando você coleta madeira boa ou rara em lugar onde não é seguro perder tempo, role 2d6+Reflexo. 10+ você coleta sem desperdício e sem marca. 7-9 você coleta, mas deixa rastro, se machuca levemente ou atrai gente.
 **Move de Cena — Acampamento que Aguenta:** quando o grupo para para descansar e você assume o acampamento (fogo, abrigo, silêncio), role 2d6+Reflexo. 10+ o descanso é seguro e o mestre deve remover uma pressão do caminho (frio, fome, medo). 7-9 é seguro, mas a noite cobra (barulho, rastros, visita).
+**Move Exclusivo — Força da Floresta:** quando você explorar uma área florestal, derrubar uma árvore ou coletar madeira usando movimentos rápidos e precisos, descreva seu método e role 2d6+Reflexo. 10+ escolha 2 / 7-9 escolha 1 entre: madeira adicional, material raro/resistente, conclui rápido antes de um perigo, preserva as ferramentas, ou identifica caminho seguro/recurso próximo. 6- o mestre narra: a árvore cai em direção perigosa, o barulho atrai algo, a madeira é de má qualidade, a ferramenta prende ou quebra, ou a árvore rara está protegida.
 
 ### Cartógrafo (CON)
 
@@ -316,78 +330,109 @@ Exclusivo**. Nesta mesa, cada profissão concede:
 **Marca:** você é rede; todo mundo tem uma opinião sobre você.
 **Move de Ofício — Negociação:** quando você tenta comprar, vender ou trocar algo importante, role 2d6+Conhecimento. 10+ você consegue um acordo justo e escolhe 1: reduz o risco social, garante estoque, ou obtém uma informação verdadeira. 7-9 você consegue, mas cria dívida, rumor ou rival.
 **Move de Cena — Ouvir a Praça:** quando você passa alguns minutos ouvindo, perguntando e juntando nomes, role 2d6+Conhecimento. 10+ o mestre te dá uma oportunidade real. 7-9 te dá, mas vem com dono e cobrança.
+**Move Exclusivo — Negociação Perfeita:** quando você negociar a compra, venda ou troca de um item, serviço ou informação, explique sua proposta e role 2d6+Conhecimento. 10+ escolha 2 / 7-9 escolha 1 entre: preço muito melhor, benefício adicional no acordo, descobre o valor/raridade real, a outra parte passa a confiar em você, ou percebe uma intenção escondida/golpe. 6- o mestre narra: preço piora, você aceita condição ruim sem perceber, a mercadoria tem defeito oculto, você ofende alguém influente, ou o acordo exige pagamento/favor extra.
 
 ### Cozinheiro (CON)
 
 **Marca:** você é conforto em Aincrad; gente te protege porque você alimenta.
 **Move de Ofício — Refeição de Campo:** quando você cozinha antes de uma saída com recursos limitados, role 2d6+Conhecimento. 10+ a comida muda o humor do grupo e remove uma pressão de viagem (cansaço, medo, frio). 7-9 remove, mas cria outra (barulho, cheiro, gente pedindo).
 **Move de Cena — Mesa e Conversa:** quando você transforma uma pausa em conversa real (taverna, acampamento, beira de estrada), role 2d6+Conhecimento. 10+ o mestre revela um boato útil verdadeiro. 7-9 revela, mas alguém ouve também.
+**Move Exclusivo — Banquete Revigorante:** quando você preparar uma refeição completa para o grupo usando ingredientes adequados, descreva o prato e role 2d6+Conhecimento. 10+ escolha 2 / 7-9 escolha 1 entre: todos recuperam 1 PV, cada um remove Amedrontado/Exausto/Sob Pressão, +1 na próxima ação do desafio, porções extras guardadas, ou você preserva ingredientes. 6- o mestre narra: a refeição não revigora, ingredientes desperdiçados, causa desconforto, o cheiro atrai algo indesejado, ou a receita exige ingrediente/utensílio raro.
 
-### Diplomata (CON)
+### Diplomata (CON) — descontinuada 12/08, ver Informante
 
 **Marca:** você é política; as guildas te observam, gostando ou não.
 **Move de Ofício — Mediar:** quando você negocia passagem, trégua ou termo entre grupos, role 2d6+Conhecimento. 10+ você fecha acordo e escolhe 1: evita violência nesta cena, abre acesso, ou conquista aval. 7-9 fecha, mas você assume obrigação concreta.
 **Move de Cena — Antes da Lâmina:** quando a tensão vai virar combate entre pessoas e você entra no meio, role 2d6+Conhecimento. 10+ todo mundo para e escuta, e a cena vira diálogo por enquanto. 7-9 para, mas alguém exige prova, pagamento ou humilhação.
 
-### Bibliotecário (CON)
+### Bibliotecário (CON) — descontinuada 12/08, ver Informante
 
 **Marca:** você é memória; gente te procura por nome, fraqueza e história.
 **Move de Ofício — Pesquisa com Fonte:** quando você pesquisa um monstro, item ou evento com fonte real, role 2d6+Conhecimento. 10+ o mestre revela fraqueza e um detalhe útil de comportamento. 7-9 revela uma parte, mas cobra tempo, favor ou exposição.
 **Move de Cena — Ler o que Ninguém Lê:** quando você para para ler inscrições, listas, diários, placas ou registros, role 2d6+Conhecimento. 10+ você acha a pista que move a cena. 7-9 você acha, mas ativa atenção indesejada (guardas, NPC, guilda, anomalia).
+
+### Informante (CON)
+
+**Marca:** você é rede e memória ao mesmo tempo; gente te procura por nome, por rumor e por dívida a cobrar.
+**Move de Ofício — Pesquisa com Fonte:** quando você pesquisa um monstro, item, pessoa ou evento com fonte real (registro, arquivo, testemunha), role 2d6+Conhecimento. 10+ o mestre revela um detalhe crítico e útil. 7-9 revela uma parte, mas cobra tempo, favor ou exposição.
+**Move de Cena — Contato Certo:** quando você aciona um contato ou puxa conversa pra conseguir algo que só gente por dentro sabe, role 2d6+Conhecimento. 10+ o mestre te dá a pessoa, o lugar ou a informação certa. 7-9 te dá, mas o contato cobra favor, silêncio ou exposição.
+**Move Exclusivo — Rede de Informações:** quando você pesquisar registros, consultar contatos, ouvir rumores ou negociar por uma informação importante, diga o que deseja descobrir e role 2d6+Conhecimento. 10+ escolha 2 / 7-9 escolha 1 entre: descobre exatamente o que procurava, descobre algo adicional, identifica quem está mentindo/escondendo algo, descobre onde encontrar algo relacionado, ou estabelece um contato útil (+1 na próxima interação). 6- o mestre narra: informação errada ou plantada, atenção de alguém perigoso, favor complicado exigido, informação perigosa, ou a fonte é inacessível.
 
 ### Alquimista (CON)
 
 **Marca:** você é “o que faz funcionar”; gente te vê como solução e como risco.
 **Move de Ofício — Mistura:** quando você prepara antídoto, isca ou pomada com ingredientes do andar, role 2d6+Conhecimento. 10+ funciona limpo. 7-9 funciona, mas tem efeito colateral (cheiro, fumaça, irritação, marca).
 **Move de Cena — Improviso:** quando você tenta usar o ambiente para criar um efeito rápido (feromônio, fumaça, solvente, neutralização), role 2d6+Conhecimento. 10+ você cria o efeito sem piorar a cena. 7-9 cria, mas escala o perigo.
+**Move Exclusivo — Mistura Perfeita:** quando você combinar ingredientes e seguir uma fórmula para criar um preparado alquímico, descreva o efeito desejado e role 2d6+Conhecimento. 10+ escolha 2 / 7-9 escolha 1 entre: duas doses em vez de uma, efeito mais potente/duradouro, usa menos ingredientes, remove uma condição apropriada, ou descobre melhoria pra próxima vez (+1). 6- o mestre narra: efeito imprevisível, ingredientes desperdiçados, causa condição/complicação temporária, chama atenção (fumaça, explosão), ou exige ingrediente/ferramenta/conhecimento raro.
 
 ### Costureiro (TEC)
 
 **Marca:** você é cuidado; quem usa peça sua “vira gente”.
 **Move de Ofício — Remendo:** quando você repara uma peça rachada ou adapta roupa para a cena (frio, lama, silêncio), role 2d6+Técnica. 10+ fica firme e discreto. 7-9 fica firme, mas limita movimento ou deixa marca.
 **Move de Cena — Disfarce:** quando você usa tecido, capuz, corte ou detalhe para mudar como NPCs te leem, role 2d6+Técnica. 10+ você passa como quer. 7-9 você passa, mas alguém te reconhece depois.
+**Move Exclusivo — Mestre dos Tecidos:** quando você confeccionar, reparar ou aprimorar uma peça de roupa, armadura leve ou equipamento de tecido, descreva o resultado desejado e role 2d6+Técnica. 10+ escolha 2 / 7-9 escolha 1 entre: +1 numa situação específica, protege de uma condição uma vez, compartimento oculto, resistente (ignora primeiro dano), ou preserva materiais. 6- o mestre narra: ponto frágil que pode romper, materiais desperdiçados, fica desconfortável (Sob Pressão em situação exigente), exige material/ferramenta raro, ou ganha característica indesejada.
 
 ### Domador (TEC)
 
 **Marca:** você anda com vida ao lado; isso atrai curiosidade, inveja e medo.
 **Move de Ofício — Ovo de Fera** (substitui a antiga "Doma" — amansar bicho adulto foi removido, o vínculo agora nasce do ovo): quando você encontra, cuida ou tenta chocar um ovo de criatura, descreva como prepara o ambiente e role 2d6+Técnica. 10+ escolha 2: o ovo choca com segurança e a fera nasce saudável, ela reconhece você como cuidador e cria vínculo imediato, você descobre uma característica especial dela, ou preserva os materiais usados no cuidado. 7-9 escolha 1: choca mas exige cuidados constantes por um tempo, a fera ainda precisa de confiança antes de aceitar você, ou nasce saudável só que assustada e difícil de controlar. 6- o mestre escolhe: o ovo não choca sem um local/item/condição especial, a criatura nasce agressiva ou desconfiada, o processo chama atenção da mãe da fera ou de outros monstros, ou o ovo tem doença/maldição/característica inesperada.
 **Move de Cena — Ordem Clara:** quando você dá uma ordem ao aliado domado para resolver um obstáculo ou mudar uma cena, role 2d6+Técnica. 10+ escolha 1: proteger alguém, abrir caminho, ou evitar uma ameaça. 7-9 ele faz, mas cria consequência (barulho, risco, ciúme, custo).
+**Move Exclusivo — Ovo de Fera:** quando você encontrar, cuidar ou tentar chocar um ovo de criatura, descreva como prepara o ambiente e role 2d6+Técnica. 10+ escolha 2 / 7-9 escolha 1 entre: o ovo choca com segurança, a fera cria vínculo imediato, você descobre uma característica especial, ela nasce com qualidade incomum, ou você preserva os materiais usados. 6- o mestre narra: o ovo não choca sem condição especial, a criatura nasce agressiva/desconfiada, chama atenção da mãe ou de outros monstros, o ovo tem doença/maldição/característica inesperada, ou a criatura vincula com outra pessoa e foge.
 
 ### Ferreiro (TEC)
 
 **Marca:** você é escassez; gente tenta te puxar pra guilda ou te pressionar.
 **Move de Ofício — Forjar/Consertar:** quando você trabalha metal para transformar material do andar em componente útil ou segurar equipamento até a próxima cidade, role 2d6+Técnica. 10+ fica bom e não racha nesta sessão. 7-9 fica, mas você paga (material extra, tempo, rumor).
 **Move de Cena — Avaliar Liga:** quando você examina arma/equipamento/material e diz o que está errado, role 2d6+Técnica. 10+ o mestre te diz a verdade e como resolver. 7-9 diz, mas a solução cobra algo difícil.
+**Move Exclusivo — Forja Suprema:** quando você forjar, reparar ou aprimorar uma arma, armadura ou equipamento metálico, descreva o resultado desejado e role 2d6+Técnica. 10+ escolha 2 / 7-9 escolha 1 entre: +1 numa situação específica, reforçado (ignora primeiro dano), a arma atravessa uma guarda resistente uma vez, a armadura protege de uma condição uma vez, ou você preserva materiais. 6- o mestre narra: ponto frágil que pode falhar, material perdido na forja, fica pesado/desconfortável, exige minério/ferramenta/forja melhor, ou ganha falha indesejada.
 
 ### Joalheiro (TEC)
 
 **Marca:** joia é status; gente te mede por detalhe.
 **Move de Ofício — Lapidar:** quando você transforma um material raro em acessório com significado (não magia), role 2d6+Técnica. 10+ fica desejável e útil, e o mestre deve dizer quem vai querer isso. 7-9 fica, mas atrai cobiça ou suspeita.
 **Move de Cena — Ler Gente:** quando você observa alguém pelo que usa e pelo que finge não valorizar, role 2d6+Técnica. 10+ o mestre te dá a motivação real daquela pessoa. 7-9 te dá, mas você cria um inimigo por ter “enxergado demais”.
+**Move Exclusivo — Lapidação Encantada:** quando você trabalhar uma pedra preciosa ou joia para criar, reparar ou aprimorar um acessório, descreva o resultado desejado e role 2d6+Técnica. 10+ escolha 2 / 7-9 escolha 1 entre: +1 numa situação específica, armazena efeito de cristal consumível, protege de uma condição uma vez, grande valor de venda, ou revela propriedade especial do material. 6- o mestre narra: a pedra quebra ou perde valor, funciona de forma instável, exige material raro pra terminar, fica marcada por falha, ou consome mais recurso/tempo que o esperado.
 
-### Coveiro (ESP)
+### Coveiro (ESP) — descontinuada 12/08, funções foram pro Mercenário
 
 **Marca:** você anda perto da morte; algumas pessoas se afastam, outras procuram consolo.
 **Move de Ofício — Rito:** quando você realiza rito no Memorial/Necrópole com respeito para lidar com presença, culpa ou silêncio, role 2d6+Espírito. 10+ o mestre responde 1 verdade sobre um morto ou uma presença. 7-9 você recebe sinal, mas fica marcado (peso, visita, cobrança social).
 **Move de Cena — Ouvir o Que Fica:** quando alguém morre, desaparece ou a cidade comenta um nome, role 2d6+Espírito. 10+ você encontra a pessoa certa ou o lugar certo para a próxima cena. 7-9 encontra, mas chega tarde ou deve algo.
+
+### Mestre de Montarias (TEC)
+
+**Marca:** você anda lado a lado com uma fera maior que você; isso muda como o mundo te vê — respeito, medo ou cobiça.
+**Move de Ofício — Doma de Montaria:** quando você tenta acalmar, domesticar ou treinar uma criatura pra servir como montaria, role 2d6+Técnica. 10+ a criatura aceita você e obedece um comando simples. 7-9 aceita, mas exige alimento, cuidado ou paciência antes de confiar de verdade.
+**Move de Cena — Conduzir na Pressão:** quando sua montaria precisa atravessar perigo, terreno ruim ou pânico sem quebrar a formação, role 2d6+Técnica. 10+ ela atravessa firme e o grupo não perde tempo nem recurso. 7-9 atravessa, mas o esforço cobra — ela se cansa, se machuca ou assusta.
+**Move Exclusivo — O Domesticador:** quando você tentar acalmar, domesticar ou treinar uma criatura para servir como montaria, descreva sua abordagem e role 2d6+Técnica. 10+ escolha 2 / 7-9 escolha 1 entre: a criatura aceita ser montada, aprende um comando simples, você identifica suas necessidades/medos/preferências, ela permanece calma sob pressão, ou você cria um vínculo forte (+1 na próxima ação junto dela). 6- o mestre narra: a criatura se assusta ou foge, aceita outra pessoa em vez de você, chama atenção de uma criatura dominante ou do antigo dono, exige algo especial antes de ser montada, ou perde o controle no pior momento.
 
 ### Médico (ESP)
 
 **Marca:** você carrega responsabilidade; quando dá errado, ninguém esquece.
 **Move de Ofício — Triagem:** quando você trata status/ferimento sem gastar Cristal, role 2d6+Espírito. 10+ remove e estabiliza sem deixar rastro. 7-9 remove, mas deixa fraqueza temporária ou exige insumo/repouso.
 **Move de Cena — Manter Alguém Vivo:** quando alguém está em pânico, choque ou prestes a desabar e você assume, role 2d6+Espírito. 10+ a pessoa volta ao controle e a cena não escala. 7-9 volta, mas você absorve parte do peso (cansaço, culpa, cobrança).
+**Move Exclusivo — O Salva-Vidas:** quando você prestar atendimento imediato a alguém ferido, inconsciente ou em estado crítico, descreva como realiza o tratamento e role 2d6+Espírito. 10+ escolha 2 / 7-9 escolha 1 entre: recupera 1 PV, remove Ferido/Abalado/Paralisado/Exausto/Sob Pressão, estabiliza completamente, identifica a causa e como tratá-la de vez, ou +1 na próxima ação do paciente. 6- o mestre narra: o estado piora durante o atendimento, uma nova condição aparece, os materiais acabam, exige item raro/cirurgia/ajuda especializada, ou a pressão te deixa Abalado/Sob Pressão.
 
 ### Músico (ESP)
 
 **Marca:** você mexe com humor; gente te ama, te odeia ou te usa.
 **Move de Ofício — Cadência:** quando você toca para mudar emoção de grupo (acalmar, inspirar, impor ritmo), role 2d6+Espírito. 10+ escolha 1: reduza tensão social, dê coragem para atravessar um medo, ou transforme pausa em conversa. 7-9 você consegue, mas atrai atenção inevitável.
 **Move de Cena — A Praça Ouve:** quando você toca em lugar público e pede algo em troca (informação, abrigo, silêncio), role 2d6+Espírito. 10+ alguém responde com algo verdadeiro. 7-9 alguém responde, mas com interesse e cobrança.
+**Move Exclusivo — A Melodia Inspiradora:** quando você tocar ou cantar para inspirar seus companheiros antes ou durante uma situação perigosa, descreva sua apresentação e role 2d6+Espírito. 10+ escolha 2 / 7-9 escolha 1 entre: um aliado recebe +1 na próxima ação, remove Amedrontado/Abalado/Sob Pressão de alguém, o grupo inteiro escolhe ordem de ação na próxima troca, um aliado age apesar do medo, ou você distrai o suficiente pra um aliado se reposicionar. 6- o mestre narra: a música atrai algo indesejado, a apresentação aumenta a tensão em vez de aliviar, um inimigo passa a te considerar alvo principal, seu instrumento sofre dano, ou você absorve as emoções e fica Abalado/Sob Pressão.
 
 ### Mercenário (COR)
 
-**Marca:** você é segurança; gente te contrata e também te teme.
+**Marca:** você é segurança; gente te contrata e também te teme. Desde 12/08 também absorve o que era do Coveiro: recuperação de corpos e trabalho sujo em zona perigosa.
 **Move de Ofício — Escolta:** quando você escolta alguém por zona perigosa, role 2d6+Corpo. 10+ vocês chegam sem incidente e o grupo mantém recursos. 7-9 chegam, mas o mestre cobra em tempo, dano leve ou perseguição.
 **Move de Cena — Postura de Guarda:** quando a cena fica perigosa e você toma a frente para ler ameaça e definir posição, role 2d6+Corpo. 10+ o mestre te diz de onde vem o perigo e como evitar o pior. 7-9 diz, mas você paga ficando exposto.
+**Move Exclusivo — Profissional da Missão:** quando você assumir um trabalho perigoso, proteger alguém, recuperar um corpo ou pertences, ou enfrentar um obstáculo ligado a um contrato, descreva sua abordagem e role 2d6+Corpo. 10+ escolha 2 / 7-9 escolha 1 entre: avança direto ao objetivo, protege um aliado das consequências imediatas, neutraliza uma ameaça no avanço, recupera com segurança o que procurava, ou descobre uma pista importante na cena. 6- o mestre narra: o contratante escondeu algo, o alvo não está onde deveria, algo revela uma ameaça maior, você fica cercado/isolado/Sob Pressão, ou o contrato exige uma escolha difícil.
+
+### Minerador (COR)
+
+**Marca:** você é o que desce onde os outros não vão; gente confia em você pra achar o que está fundo demais pra ser fácil.
+**Move de Ofício — Escavação:** quando você escava rocha, abre um túnel ou extrai minério usando força e resistência, role 2d6+Corpo. 10+ você extrai o que precisa sem desgastar ferramenta nem se expor. 7-9 extrai, mas perde tempo, desgasta a ferramenta ou desperta algo.
+**Move de Cena — Leitura de Veio:** quando você examina uma parede rochosa, mina ou formação antes de decidir onde cavar, role 2d6+Corpo. 10+ o mestre te diz onde está o melhor material e o perigo mais próximo. 7-9 diz uma das duas coisas, não as duas.
+**Move Exclusivo — Escavador das Profundezas:** quando você escavar uma parede rochosa, explorar uma mina ou extrair minério usando sua força e resistência, descreva seu método e role 2d6+Corpo. 10+ escolha 2 / 7-9 escolha 1 entre: encontra minério ou pedra útil adicional, descobre um minério raro/cristal especial, abre uma passagem segura, conclui sem desgastar ferramentas, ou identifica antecipadamente uma ameaça subterrânea. 6- o mestre narra: desabamento ou passagem bloqueada, barulho desperta algo, ferramenta quebra ou fica presa, região com gás/calor/perigo natural, ou o minério valioso está numa área instável, profunda ou protegida.
 
 ## Equipamentos
 

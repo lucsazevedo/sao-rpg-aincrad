@@ -327,6 +327,13 @@ const PROF_GANCHOS = {
   Bibliotecário:{ desc:"Copia, organiza e cataloga livros, grimórios e conhecimentos antigos." },
   Comerciante:{ desc: "Compra, vende, negocia e avalia mercadorias em feiras livres." },
   Coveiro:   { desc: "Prepara sepultamentos, velórios e lida com o além-caixão da vila." },
+  // Reforma 12/08: Bibliotecário+Diplomata → Informante; Coveiro → Mercenário;
+  // entraram Mestre de Montarias e Minerador. As entradas antigas acima ficam
+  // (não atrapalham, servem pra personagem legado que ainda tem a profissão
+  // antiga) — só as novas abaixo entram no dropdown de personagem novo.
+  Informante:        { desc: "Reúne pesquisa, contatos e rumores; sabe onde procurar e com quem falar em Aincrad." },
+  "Mestre de Montarias": { desc: "Aproxima, doma e treina criaturas para servir como montaria pelos territórios." },
+  Minerador:         { desc: "Escava túneis e extrai minérios das regiões mais perigosas e profundas de Aincrad." },
 };
 const tituloPagina = computed(() => {
   const n = nomeProf.value || "Sem profissão definida";

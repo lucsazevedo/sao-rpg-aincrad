@@ -35,7 +35,14 @@ const ATRIBUTOS_ABREV = ["COR", "REF", "TEC", "CON", "ESP"];
 const RARIDADE_5 = ["Comum", "Incomum", "Raro", "Épico", "Lendário"];
 const RARIDADE_4 = ["Comum", "Incomum", "Raro", "Épico"];
 const RARIDADE_5_MIN = ["comum", "incomum", "raro", "epico", "lendario"];
-const PROFISSOES = ["Alquimista", "Bibliotecário", "Caçador", "Cartógrafo", "Comerciante", "Costureiro", "Coveiro", "Cozinheiro", "Diplomata", "Domador", "Ferreiro", "Joalheiro", "Lenhador", "Médico", "Mercenário", "Músico"];
+// Reforma 12/08 (pedido do usuário): Bibliotecário + Diplomata unificaram
+// em Informante; Coveiro saiu (funções foram pro Mercenário); entraram
+// Mestre de Montarias e Minerador (Move Exclusivo pronto em
+// SAO_PBTA_Profissoes_e_Moves.pdf). Continua em 16 profissões.
+// Personagem já criado com profissão antiga (Bibliotecário/Diplomata/
+// Coveiro) não quebra — profissao é texto livre, só some do dropdown de
+// criação de personagem novo.
+const PROFISSOES = ["Alquimista", "Caçador", "Cartógrafo", "Comerciante", "Costureiro", "Cozinheiro", "Domador", "Ferreiro", "Informante", "Joalheiro", "Lenhador", "Médico", "Mercenário", "Mestre de Montarias", "Minerador", "Músico"];
 const ARMAS_TIPOS = ["Adagas", "Adagas de Arremesso", "Arco e Flecha", "Bastão", "Besta", "Chakrams", "Chicote", "Clava", "Corrente com Peso", "Escudo e Espada", "Espada Longa", "Foice", "Glaive", "Katana", "Lança", "Leque", "Machado", "Manopla", "Martelo", "Nunchaku", "Pá", "Rapieira", "Tonfas"];
 const EQUIP_SLOTS = ["Acessórios", "Armaduras", "Botas", "Capuz", "Comidas", "Cristais de Uso", "Elmos", "Escudos", "Luvas", "Munições", "Parte de Baixo", "Parte de Cima", "Poções"];
 const MONSTRO_TIPOS = ["aracnideo", "besta", "chefe_de_andar", "construto", "humanoide", "inseto", "nao-corporeo", "planta"];
