@@ -1,0 +1,498 @@
+<title>AINCRAD — Manual do Sistema</title>
+<style>
+/* ===================== tokens ===================== */
+:root{
+  --void:#080b14; --void-2:#0b0f1c;
+  --panel:#101a30; --panel-2:#152040; --line:#213257; --line-soft:#182444;
+  --cian:#57d6f5; --cian-dim:#2c6f8a; --cian-glow:rgba(87,214,245,.18);
+  --ambar:#f0b94e; --ambar-dim:#8a6a2a; --ambar-glow:rgba(240,185,78,.16);
+  --texto:#e9eefb; --texto-dim:#93a0c2; --texto-faint:#5c6889;
+  --verde:#5fdc93; --dourado:#f0b94e; --vermelho:#f0715f;
+  --cor:#f0715f; --ref:#57d6f5; --tec:#5fdc93; --con:#c48af5; --esp:#f0b94e;
+  --f-display:ui-monospace,"Cascadia Code","SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",system-ui,sans-serif;
+  --radius:2px;
+}
+*{box-sizing:border-box}
+::selection{background:var(--cian);color:var(--void)}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--void);color:var(--texto);font-family:var(--f-body);
+  font-size:16px;line-height:1.6;background-image:
+    radial-gradient(1200px 600px at 15% -10%, var(--cian-glow), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, var(--ambar-glow), transparent 55%);
+  background-attachment:fixed;
+}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;color:var(--texto);text-wrap:balance;letter-spacing:.02em}
+p{margin:0 0 12px;max-width:72ch}
+a{color:var(--cian)}
+.mono{font-family:var(--f-display)}
+.container{max-width:100%;overflow-x:hidden}
+
+/* ===================== layout ===================== */
+.wrap{display:grid;grid-template-columns:272px minmax(0,1fr);min-height:100vh}
+@media (max-width:900px){.wrap{grid-template-columns:1fr}}
+
+.nav{
+  position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;
+  border-right:1px solid var(--line-soft);background:linear-gradient(180deg,var(--void-2),var(--void));
+  padding:22px 14px 40px;
+}
+@media (max-width:900px){.nav{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line-soft)}}
+.nav-brand{display:flex;align-items:center;gap:10px;padding:4px 10px 18px;border-bottom:1px solid var(--line-soft);margin-bottom:14px}
+.nav-brand .diamante{width:11px;height:11px;background:var(--cian);transform:rotate(45deg);box-shadow:0 0 12px var(--cian)}
+.nav-brand b{font-family:var(--f-display);font-size:14px;letter-spacing:.14em;color:var(--texto)}
+.nav-brand small{display:block;font-size:9.5px;color:var(--texto-faint);letter-spacing:.1em}
+.nav-grupo{margin-bottom:4px}
+.nav-grupo-titulo{font-family:var(--f-display);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--texto-faint);padding:14px 10px 6px}
+.nav a.nav-link{
+  display:block;padding:7px 10px;font-size:13px;color:var(--texto-dim);text-decoration:none;
+  border-left:2px solid transparent;transition:color .15s,border-color .15s,background .15s;
+}
+.nav a.nav-link:hover{color:var(--texto);background:var(--panel)}
+.nav a.nav-link.ativo{color:var(--cian);border-left-color:var(--cian);background:var(--panel)}
+
+.main{padding:48px clamp(20px,5vw,64px) 100px;min-width:0}
+.coluna{max-width:760px}
+section.bloco{margin-bottom:64px;scroll-margin-top:20px}
+.eyebrow{font-family:var(--f-display);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--cian);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:18px;height:1px;background:var(--cian)}
+h2.titulo-secao{font-size:30px;margin:0 0 6px}
+.sub{color:var(--texto-dim);font-size:15px;margin-bottom:26px;max-width:68ch}
+
+/* ===================== hero ===================== */
+.hero{
+  position:relative;padding:80px clamp(20px,6vw,64px) 64px;border-bottom:1px solid var(--line-soft);
+  background:
+    linear-gradient(180deg, rgba(87,214,245,.06), transparent 40%),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(87,214,245,.035) 79px 80px);
+}
+.hero-tag{font-family:var(--f-display);font-size:12px;letter-spacing:.3em;color:var(--ambar);margin-bottom:18px;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,7vw,76px);line-height:.96;margin:0 0 18px;
+  background:linear-gradient(180deg,#fff, var(--cian) 120%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 30px var(--cian-glow));
+}
+.hero p.lead{font-size:17px;color:var(--texto-dim);max-width:62ch}
+.hero-stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.hero-stat b{display:block;font-family:var(--f-display);font-size:28px;color:var(--ambar);font-variant-numeric:tabular-nums}
+.hero-stat span{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--texto-faint);margin-top:2px}
+.hero-frame{position:absolute;inset:18px;border:1px solid var(--line-soft);pointer-events:none}
+.hero-frame::before,.hero-frame::after{content:"";position:absolute;width:22px;height:22px;border:1px solid var(--cian)}
+.hero-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.hero-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+
+/* ===================== componentes de texto ===================== */
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:640px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tabela-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line)}
+thead th{font-family:var(--f-display);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cian);background:var(--panel-2)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--panel)}
+td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
+
+.callout{border-left:3px solid var(--ambar);background:var(--panel);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:18px 0}
+.callout p:last-child{margin-bottom:0}
+.callout-titulo{font-family:var(--f-display);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ambar);margin-bottom:6px}
+
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-size:11px;letter-spacing:.06em;
+  padding:3px 9px;border:1px solid var(--line);border-radius:20px;color:var(--texto-dim)}
+.badge .dot{width:6px;height:6px;border-radius:50%}
+
+/* atributo -> cor */
+.attr-cor .pill-attr,.badge-cor{color:var(--cor);border-color:var(--cor)}
+.attr-ref .pill-attr,.badge-ref{color:var(--ref);border-color:var(--ref)}
+.attr-tec .pill-attr,.badge-tec{color:var(--tec);border-color:var(--tec)}
+.attr-con .pill-attr,.badge-con{color:var(--con);border-color:var(--con)}
+.attr-esp .pill-attr,.badge-esp{color:var(--esp);border-color:var(--esp)}
+.pill-attr{font-family:var(--f-display);font-size:10.5px;letter-spacing:.08em;padding:3px 10px;border:1px solid currentColor;border-radius:20px;white-space:nowrap}
+
+/* ===================== índice em chips ===================== */
+.indice-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--texto-dim);text-decoration:none;
+  padding:6px 12px;border:1px solid var(--line);border-radius:20px;transition:border-color .15s,color .15s}
+.chip:hover{color:var(--texto);border-color:var(--cian)}
+.chip-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.chip.attr-cor{color:var(--cor)}.chip.attr-ref{color:var(--ref)}.chip.attr-tec{color:var(--tec)}
+.chip.attr-con{color:var(--con)}.chip.attr-esp{color:var(--esp)}
+.chip.attr-cor:hover,.chip.attr-ref:hover,.chip.attr-tec:hover,.chip.attr-con:hover,.chip.attr-esp:hover{border-color:currentColor}
+
+/* ===================== entradas (arma/profissão) ===================== */
+.entrada{padding:26px 0;border-top:1px solid var(--line-soft)}
+.entrada:first-of-type{border-top:none;padding-top:0}
+.entrada-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.entrada-head-nome{display:flex;align-items:center;gap:12px}
+.entrada-icone{width:38px;height:38px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 0 6px rgba(0,0,0,.5))}
+.entrada h3{font-size:21px;margin:0}
+.entrada-marca{color:var(--texto-dim);font-style:italic;font-size:14.5px;margin-bottom:18px;max-width:68ch}
+
+.moves-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.move{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.move-eyebrow{font-family:var(--f-display);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-faint)}
+.move-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.move-head h4{margin:0;font-size:15.5px;color:var(--texto)}
+.move-attr{font-family:var(--f-display);font-size:11px;color:var(--cian);white-space:nowrap}
+.move-bonus{color:var(--ambar);margin-left:4px}
+.move-gatilho{font-size:13px;color:var(--texto-dim);font-style:italic;margin:0}
+.move-resultados{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.resultado{display:flex;gap:10px;font-size:13px}
+.r-tag{flex-shrink:0;font-family:var(--f-display);font-size:11px;font-weight:700;width:34px;padding-top:1px}
+.r-dez .r-tag{color:var(--verde)}
+.r-sete .r-tag{color:var(--dourado)}
+.r-seis .r-tag{color:var(--vermelho)}
+.r-corpo p{margin:0;color:var(--texto-dim)}
+.r-corpo ul{margin:0;padding-left:16px;color:var(--texto-dim)}
+.r-corpo li{margin-bottom:2px}
+.move-limitbreak{border-color:var(--ambar-dim);background:linear-gradient(180deg,rgba(240,185,78,.07),var(--panel) 40%)}
+.move-limitbreak .move-eyebrow{color:var(--ambar)}
+.move-exclusivo{border-color:var(--cian-dim);background:linear-gradient(180deg,rgba(87,214,245,.07),var(--panel) 40%)}
+.move-exclusivo .move-eyebrow{color:var(--cian)}
+
+/* ===================== rodapé ===================== */
+.creditos{border-top:1px solid var(--line-soft);padding-top:24px;color:var(--texto-faint);font-size:13px}
+.creditos b{color:var(--texto-dim)}
+
+@media print{.nav{display:none}.wrap{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+  <nav class="nav" id="nav">
+    <div class="nav-brand">
+      <span class="diamante"></span>
+      <div><b>AINCRAD</b><small>MANUAL DO SISTEMA · v1</small></div>
+    </div>
+
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">Fundamentos</div>
+      <a class="nav-link" href="#mundo">O Mundo</a>
+      <a class="nav-link" href="#mecanica">Sistema Central</a>
+      <a class="nav-link" href="#atributos">Atributos</a>
+      <a class="nav-link" href="#criacao">Criando um Personagem</a>
+      <a class="nav-link" href="#condicoes">Condições &amp; Crítico</a>
+      <a class="nav-link" href="#combate">Combate, Duelos &amp; PK</a>
+    </div>
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">Compêndio</div>
+      <a class="nav-link" href="#armas">Armas <span class="mono" style="color:var(--texto-faint)">· 23</span></a>
+      <a class="nav-link" href="#profissoes">Profissões <span class="mono" style="color:var(--texto-faint)">· 16</span></a>
+      <a class="nav-link" href="#equipamento">Equipamento &amp; Raridade</a>
+    </div>
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">Vida em Aincrad</div>
+      <a class="nav-link" href="#clas">Clãs</a>
+      <a class="nav-link" href="#cooperacao">Cooperação</a>
+      <a class="nav-link" href="#minigames">Minigames de Profissão</a>
+    </div>
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">&nbsp;</div>
+      <a class="nav-link" href="#creditos">Créditos</a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <header class="hero" id="topo" style="margin:-48px clamp(-20px,-5vw,-64px) 56px">
+      <div class="hero-frame"></div>
+      <div class="hero-tag">Manual do Sistema · Powered by the Apocalypse</div>
+      <h1>AINCRAD</h1>
+      <p class="lead">Cem andares. Um NerveGear que não desliga. Um jogo onde morrer é morrer de verdade —
+        e a única saída é vencer. Este é o manual de regras completo da mesa: mecânica central,
+        os cinco atributos, as 23 armas, as 16 profissões, equipamento, clãs e os sistemas de
+        cooperação de Aincrad.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>2d6</b><span>Motor de resolução</span></div>
+        <div class="hero-stat"><b>5</b><span>Atributos</span></div>
+        <div class="hero-stat"><b>23</b><span>Armas</span></div>
+        <div class="hero-stat"><b>16</b><span>Profissões</span></div>
+      </div>
+    </header>
+
+    <div class="coluna">
+
+    <section class="bloco" id="mundo">
+      <div class="eyebrow">Capítulo 01</div>
+      <h2 class="titulo-secao">O Mundo</h2>
+      <p class="sub">Sword Art Online — 6 de novembro de 2022. Dez mil jogadores vestem o NerveGear
+        pra experimentar o primeiro VRMMORPG totalmente imersivo do mundo. Nenhum deles consegue tirar
+        o capacete de novo.</p>
+      <p>Todos são transportados pra dentro de <b>Aincrad</b>, uma torre flutuante de 100 andares.
+        Kayaba Akihiko, criador do jogo, anuncia a regra: <b>morrer no jogo é morrer na vida real</b> —
+        o NerveGear destrói o cérebro de quem tenta sair ou é derrotado em combate. A única forma de
+        escapar de verdade é jogar até o fim: conquistar os 100 andares e derrotar todos os chefes.</p>
+      <p>Cada andar é o seu próprio mundo — um chefe, monstros e tesouros únicos, dungeons com
+        armadilhas e inimigos fortes, zonas seguras (cidades, com descanso, comércio e missões) e
+        campos abertos, onde o perigo é real e os recursos também.</p>
+    </section>
+
+    <section class="bloco" id="mecanica">
+      <div class="eyebrow">Capítulo 02</div>
+      <h2 class="titulo-secao">Sistema Central</h2>
+      <p class="sub">Aincrad roda em <b>PBTA</b> (Powered by the Apocalypse) — poucas regras,
+        muita ficção. Toda ação arriscada ou incerta se resolve do mesmo jeito.</p>
+      <div class="callout">
+        <div class="callout-titulo">A rolagem</div>
+        <p><b class="mono" style="color:var(--cian)">2d6 + atributo</b> — some os dois dados, some o
+          atributo correspondente à ação.</p>
+      </div>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th style="width:90px">Resultado</th><th>O que acontece</th></tr></thead>
+          <tbody>
+            <tr><td class="mono" style="color:var(--verde)">10+</td><td>Sucesso completo — o personagem faz o que quer e ainda tira algo bom.</td></tr>
+            <tr><td class="mono" style="color:var(--dourado)">7–9</td><td>Sucesso parcial — consegue, mas com custo ou complicação.</td></tr>
+            <tr><td class="mono" style="color:var(--vermelho)">6−</td><td>Complicou — o Mestre narra o revés.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:16px">O foco é história, ação e escolha — não regra complicada. Perigo está
+        sempre presente; a sombra da morte é a única regra que nunca se desliga, e o maior medo de
+        qualquer personagem em Aincrad.</p>
+
+      <h3 id="impulso" style="margin-top:32px;font-size:19px">Impulso</h3>
+      <p>Quando você <b>escolhe</b> uma complicação, custo ou risco real que nasce da sua arma, da
+        sua profissão ou do jeito que você interpreta seu personagem, marque <b>1 Impulso</b>
+        (máximo 3). Gaste 1 Impulso para:</p>
+      <ul>
+        <li><b>Rolar de novo</b> um teste depois de ver o resultado, aceitando o novo.</li>
+        <li><b>Converter um 7–9 em sucesso limpo</b>, removendo o custo mecânico — mas o Mestre
+          introduz uma consequência social ou ambiental no lugar.</li>
+      </ul>
+    </section>
+
+    <section class="bloco" id="atributos">
+      <div class="eyebrow">Capítulo 03</div>
+      <h2 class="titulo-secao">Atributos</h2>
+      <p class="sub">Cinco atributos cobrem tudo que um personagem faz em Aincrad. Criação de
+        personagem distribui <b class="mono">-2, -1, -1, -1, 0</b> entre os cinco, um valor por
+        atributo, sem repetir.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Atributo</th><th>Representa</th><th>Use quando</th></tr></thead>
+          <tbody>
+            <tr><td class="badge badge-cor"><span class="dot" style="background:var(--cor)"></span>Corpo</td><td>Força física, resistência, vitalidade</td><td>Levantar/carregar peso, resistir dano físico, forçar portas/quebrar objetos</td></tr>
+            <tr><td class="badge badge-ref"><span class="dot" style="background:var(--ref)"></span>Reflexo</td><td>Agilidade, velocidade, reação</td><td>Esquivar, agir rápido sob perigo, ataques à distância/precisão</td></tr>
+            <tr><td class="badge badge-con"><span class="dot" style="background:var(--con)"></span>Conhecimento</td><td>Inteligência, memória, compreensão</td><td>Lembrar informações, identificar fraquezas/segredos, decifrar enigmas</td></tr>
+            <tr><td class="badge badge-esp"><span class="dot" style="background:var(--esp)"></span>Espírito</td><td>Força mental, vontade, equilíbrio</td><td>Resistir medo/ilusão/controle mental, manter calma, inspirar aliados</td></tr>
+            <tr><td class="badge badge-tec"><span class="dot" style="background:var(--tec)"></span>Técnica</td><td>Treinamento, domínio de armas/técnicas</td><td>Skills de arma/profissão, manobras técnicas, consertar/criar itens</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="bloco" id="criacao">
+      <div class="eyebrow">Capítulo 04</div>
+      <h2 class="titulo-secao">Criando um Personagem</h2>
+      <ol style="padding-left:20px">
+        <li>Escolha uma arma (das 23 — ver Compêndio).</li>
+        <li>Escolha uma profissão (das 16 — ver Compêndio).</li>
+        <li>Dê um nome e crie a aparência do avatar.</li>
+        <li>Distribua <span class="mono">-2, -1, -1, -1, 0</span> entre os 5 atributos.</li>
+      </ol>
+      <div class="callout">
+        <div class="callout-titulo">Arma e profissão são escolhas independentes</div>
+        <p>Não precisam compartilhar atributo principal. Um personagem de Espírito alto pode
+          perfeitamente usar Machado (Corpo) e ser Médico (Espírito) — o move de arma rola no
+          atributo da arma, o move de ofício rola no atributo da profissão, e o resto dos testes usa
+          o atributo que a ficção pedir.</p>
+      </div>
+    </section>
+
+    <section class="bloco" id="condicoes">
+      <div class="eyebrow">Capítulo 05</div>
+      <h2 class="titulo-secao">Condições &amp; Crítico</h2>
+      <p class="sub">Condições substituem pontos de vida. Marque uma somente quando a ficção muda —
+        nunca acumula a mesma condição duas vezes.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Condição</th><th>Significa</th><th>Como sai</th></tr></thead>
+          <tbody>
+            <tr><td><b>Exposto</b></td><td>sem cobertura, alvo visível ou posição ruim</td><td>mudar posição / proteção</td></tr>
+            <tr><td><b>Ferido</b></td><td>dor, corte, torção ou dano que limita</td><td>Médico, descanso e recurso</td></tr>
+            <tr><td><b>Abalado</b></td><td>medo, culpa, pânico ou foco quebrado</td><td>conversa, Músico, descanso</td></tr>
+            <tr><td><b>Separado</b></td><td>isolado do grupo, rota ou suporte</td><td>reencontro ficcional</td></tr>
+            <tr><td><b>Exaurido</b></td><td>sem fôlego, alimento, ferramenta ou tempo</td><td>descanso, provisão, ajuda</td></tr>
+            <tr><td><b>Comprometido</b></td><td>nome, item, segredo ou relação em risco</td><td>resolver a consequência</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="callout">
+        <div class="callout-titulo">Crítico — 3 condições</div>
+        <p>O próximo dano ou perigo grave exige <b>À Beira</b>, <span class="mono">2d6+Espírito</span>.
+          <b style="color:var(--verde)">10+</b>: sobrevive, escolhe uma condição que fica até o fim da
+          sessão. <b style="color:var(--dourado)">7–9</b>: sobrevive, mas perde/racha item importante,
+          fica Separado, ganha cicatriz narrativa ou fica devendo ajuda séria.
+          <b style="color:var(--vermelho)">6−</b>: a morte se torna possível — só se o perigo letal já
+          tinha sido mostrado e não havia recuo razoável. Nunca é armadilha invisível.</p>
+      </div>
+    </section>
+
+    <section class="bloco" id="combate">
+      <div class="eyebrow">Capítulo 06</div>
+      <h2 class="titulo-secao">Combate, Duelos &amp; Player Killing</h2>
+      <p class="sub">Fora de combate contra monstros, Aincrad também tem regras pra conflito entre
+        jogadores — a parte mais perigosa do jogo, porque nela a morte é sempre uma escolha de
+        alguém.</p>
+
+      <h3 style="font-size:17px;margin-top:8px">Zona segura bloqueia tudo</h3>
+      <p>Dentro de zona segura de sistema (Cidade do Início, Tolbana, Horunka, Brenmoor), o próprio
+        jogo <b>impede qualquer ataque contra outro jogador</b>. Não é regra de conduta, é trava de
+        sistema — a interface recusa o comando. Todo PvP desta seção só existe fora dessas zonas.</p>
+
+      <h3 style="font-size:17px">Duelo consensual</h3>
+      <p>Dois jogadores podem declarar duelo a qualquer momento fora de zona segura. Antes do
+        primeiro golpe: declaram a <b>aposta</b> (Col, item, informação, reputação ou só orgulho) e o
+        <b>tipo</b> —</p>
+      <ul>
+        <li><b>Duelo Selado</b> (padrão): para com 3 Condições no perdedor, sem risco de morte.</li>
+        <li><b>Duelo de Sangue</b> (raro, precisa acordo explícito dos dois lados): À Beira vale
+          normal — risco de morte real. Só quando a ficção realmente pedir.</li>
+      </ul>
+
+      <h3 style="font-size:17px">Player Killing — ataque não consensual</h3>
+      <p>Fora de zona segura, um jogador pode atacar outro sem aviso. Mecanicamente é um <b>Duelo de
+        Sangue forçado</b> — mas a vítima nunca perde a rolagem: ela sempre pode reagir com
+        <b>Escapar</b> ou <b>Proteger</b> antes de qualquer golpe valer, mesmo numa emboscada.</p>
+    </section>
+
+    <section class="bloco" id="armas">
+      <div class="eyebrow">Compêndio</div>
+      <h2 class="titulo-secao">Armas de Aincrad</h2>
+      <p class="sub">Cada arma tem um atributo principal e três golpes nomeados: dois normais e um
+        <b style="color:var(--ambar)">Limit Break</b> — o golpe de assinatura, que soma <span class="mono">+2</span>
+        ao teste de acerto. Padrão PBTA em todos: <span style="color:var(--verde)">10+ escolha 2</span> ·
+        <span style="color:var(--dourado)">7–9 escolha 1</span> · <span style="color:var(--vermelho)">6− o Mestre narra</span>.</p>
+      <div class="indice-chips">__INDICE_ARMAS__</div>
+      __ARMAS__
+    </section>
+
+    <section class="bloco" id="profissoes">
+      <div class="eyebrow">Compêndio</div>
+      <h2 class="titulo-secao">Profissões de Aincrad</h2>
+      <p class="sub">Cada profissão concede um <b>Move de Ofício</b> (o que só ela faz), um
+        <b>Move de Cena</b> (como ela garante protagonismo fora de combate) e um
+        <b style="color:var(--cian)">Move Exclusivo</b> — o golpe de assinatura, no mesmo formato
+        PBTA das armas.</p>
+      <div class="indice-chips">__INDICE_PROFISSOES__</div>
+      __PROFISSOES__
+    </section>
+
+    <section class="bloco" id="equipamento">
+      <div class="eyebrow">Capítulo 07</div>
+      <h2 class="titulo-secao">Equipamento &amp; Raridade</h2>
+      <p class="sub">Toda arma e equipamento tem uma raridade — cinco degraus, cada um mais raro e
+        mais forte que o anterior.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Raridade</th><th>Descrição</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge" style="border-color:#eceaf5;color:#eceaf5">Comum</span></td><td>Básico, fácil de produzir, sem bônus adicionais — ideal para iniciantes</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--tec);color:var(--tec)">Incomum</span></td><td>Pequenos bônus nos atributos principais, maior durabilidade</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--ref);color:var(--ref)">Raro</span></td><td>Bônus significativos, pode ter efeitos especiais</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--con);color:var(--con)">Épico</span></td><td>Grandes bônus, efeitos poderosos ou únicos, criado por artesãos mestres</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--ambar);color:var(--ambar)">Lendário</span></td><td>Bônus máximos, efeitos que podem mudar o rumo de uma batalha, raríssimos</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:16px">Slots de equipamento: <b>Elmos/Capuz</b>, <b>Armaduras</b>, <b>Botas</b>,
+        <b>Acessórios</b>, <b>Luvas</b>, <b>Escudos</b>, <b>Cristais de Uso</b>, <b>Munições</b>,
+        <b>Parte de Cima</b>, <b>Parte de Baixo</b>, <b>Poções</b>, <b>Comidas</b>. Nem todo item vem
+        de crafting comum — alguns só existem em missão, baú ou drop de chefe.</p>
+    </section>
+
+    <section class="bloco" id="clas">
+      <div class="eyebrow">Capítulo 08</div>
+      <h2 class="titulo-secao">Clãs</h2>
+      <p class="sub">Um clã é a guilda do seu personagem — proteção, propósito e política em
+        Aincrad. Entrar em um é opcional, mas quem entra ganha muito mais do que companhia.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h4 style="margin:0 0 8px;font-size:14.5px;color:var(--cian)">Recrutamento</h4>
+          <p style="font-size:13.5px">Clãs marcados como recrutando aparecem pra qualquer jogador
+            sem clã. Alguns exigem profissão específica — a trava aparece antes mesmo de mandar o
+            pedido. O mestre ou a liderança (líder/oficial) aprova ou recusa.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 8px;font-size:14.5px;color:var(--cian)">Baú do Clã</h4>
+          <p style="font-size:13.5px">Espaço compartilhado de itens entre os membros — depositar é
+            livre, retirar item travado exige cargo de oficial ou líder.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco" id="cooperacao">
+      <div class="eyebrow">Capítulo 09</div>
+      <h2 class="titulo-secao">Cooperação</h2>
+      <p class="sub">Sistemas que existem só porque Aincrad tem 10 mil jogadores nela — nenhum
+        cobra taxa, todos existem pra fortalecer o grupo.</p>
+      <div class="grid-3">
+        <div class="card">
+          <h4 style="margin:0 0 6px;font-size:14px;color:var(--ambar)">✉️ Correio</h4>
+          <p style="font-size:13px">Envio de Col e item entre jogadores, sem taxa em nenhum dos dois.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 6px;font-size:14px;color:var(--ambar)">🧰 Baú de Clã</h4>
+          <p style="font-size:13px">Cofre coletivo — cada membro deposita, oficiais liberam retirada.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 6px;font-size:14px;color:var(--ambar)">🎯 Metas Globais</h4>
+          <p style="font-size:13px">Até 3 metas ativas do mestre ao mesmo tempo — todo mundo que doa
+            qualquer quantidade recebe a recompensa quando bate.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="bloco" id="minigames">
+      <div class="eyebrow">Capítulo 10</div>
+      <h2 class="titulo-secao">Minigames de Profissão</h2>
+      <p class="sub">Duas profissões ganham uma mecânica jogável de verdade, além do Move Exclusivo
+        — ambas com freio embutido contra farm infinito.</p>
+      <div class="grid-2">
+        <div class="card">
+          <h4 style="margin:0 0 8px;font-size:15px;color:var(--cian)">🗺️ Névoa do Andar <span style="color:var(--texto-faint);font-weight:400">— Cartógrafo</span></h4>
+          <p style="font-size:13.5px">Grade de 9 áreas por dia, revela até 3. Cada área esconde Col,
+            XP de Cartógrafo ou nada. Reseta à meia-noite.</p>
+        </div>
+        <div class="card">
+          <h4 style="margin:0 0 8px;font-size:15px;color:var(--cian)">🎵 Composição Viva <span style="color:var(--texto-faint);font-weight:400">— Músico</span></h4>
+          <p style="font-size:13.5px">Sequência musical pra repetir na ordem certa. Sucesso cria um
+            buff de grupo (+1 na próxima rolagem importante, 2h de validade). Custa 2 de Fôlego por
+            tentativa, no máximo 2 sucessos por dia.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="creditos" id="creditos">
+      <p><b>AINCRAD — Manual do Sistema</b> · Sword Art Online, sistema PBTA (Powered by the
+        Apocalypse) · material de mesa, uso não comercial entre o grupo de jogo.</p>
+      <p>Compilado a partir do banco de dados vivo da campanha — mecânica central e regras de
+        Condições/PK adaptadas de <span class="mono">docs/guia_sistema_aincrad.md</span> e
+        <span class="mono">docs/regras_nucleares_campanha.md</span>. Armas e profissões: conteúdo
+        aplicado de fato no jogo no momento da geração deste documento.</p>
+    </footer>
+
+    </div>
+  </main>
+</div>
+
+<script>
+// realça o link do menu conforme a seção visível — puramente
+// progressive enhancement, a navegação por âncora já funciona sem isso.
+(function(){
+  var secoes = document.querySelectorAll('main section.bloco, main header.hero');
+  var links = document.querySelectorAll('.nav a.nav-link');
+  if (!secoes.length || !links.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var id = e.target.id;
+      links.forEach(function(l){
+        l.classList.toggle('ativo', l.getAttribute('href') === '#' + id);
+      });
+    });
+  }, { rootMargin: '-15% 0px -70% 0px' });
+  secoes.forEach(function(s){ if (s.id) obs.observe(s); });
+})();
+</script>
