@@ -78,8 +78,13 @@ async function carregar(){
     ])
     const inv = rInv.data||[]; const cat = rCat.data||[]
     meusOvos.value = inv.map(it => {
+      // c.id é o id de TEXTO do catálogo (ex. 'ovo_lobo_cinza') — precisa
+      // vir ANTES de "it" no assign, senão sobrescreve o id NUMÉRICO da
+      // linha do inventário (bigint, é o que chocar_ovo espera receber) e
+      // vira "invalid input syntax for type bigint" ao tentar chocar
+      // (bug achado ao vivo: acontecia com qualquer ovo, não só um).
       const c = cat.find(x => x.id === it.item_id) || {}
-      return Object.assign({}, it, c, { qtd: it.qtd || 1 })
+      return Object.assign({}, c, it, { qtd: it.quantidade || 1 })
     })
     const agora = new Date().getTime()
     pets.value = (rPet.data||[]).map(p => {
