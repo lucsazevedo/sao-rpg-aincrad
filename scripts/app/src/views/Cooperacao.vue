@@ -136,7 +136,13 @@
               <div class="cs" v-if="c.forca">💪 {{ c.forca }}</div>
               <p v-if="c.resumo">{{ c.resumo }}</p>
               <p v-if="c.precisa" style="color:var(--ink-dim);font-size:12.5px">Procura: {{ c.precisa }}</p>
+              <p v-if="c.profissoes_aceitas?.length" style="color:var(--ink-dim);font-size:12.5px">
+                Aceita: {{ c.profissoes_aceitas.join(", ") }}
+              </p>
               <div v-if="pedidoPendentePara(c.nome)" class="msg info" style="margin-top:8px">⏳ Pedido enviado — aguardando resposta.</div>
+              <div v-else-if="!aceitaMinhaProfissao(c)" class="msg warn" style="margin-top:8px">
+                Esse clã não aceita {{ auth.personagem?.profissao || "sua profissão" }}.
+              </div>
               <template v-else>
                 <textarea v-if="mensagemAberta===c.nome" v-model="mensagemPedido" rows="2"
                   placeholder="Mensagem opcional pra liderança do clã…"
@@ -210,6 +216,10 @@ async function carregarMetas() {
 function formatarData(d) { if (!d) return '—'; try { return new Date(d).toLocaleDateString('pt-BR') } catch (_) { return d } }
 function pedidoPendentePara(claNome) {
   return meusPedidos.value.some(p => p.cla_nome === claNome && p.status === 'pendente')
+}
+function aceitaMinhaProfissao(cla) {
+  if (!cla.profissoes_aceitas?.length) return true
+  return cla.profissoes_aceitas.includes(auth.personagem?.profissao)
 }
 async function carregarRecrutamento() {
   meuCla.value = auth.personagem?.guilda || ''

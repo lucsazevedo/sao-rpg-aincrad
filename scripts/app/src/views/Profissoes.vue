@@ -183,6 +183,60 @@
       <div v-if="aba === 'pets'">
         <PetsTab @pedir-login="$emit('pedir-login')" />
       </div>
+
+      <!-- Aba Cartógrafo: minigame Névoa do Andar -->
+      <div v-if="aba === 'nevoa'">
+        <p style="color:var(--ink-dim);font-size:13px;margin:0 0 12px">
+          Revele até 3 áreas do andar por dia — cada uma pode esconder Col, experiência de Cartógrafo ou nada. A névoa volta a fechar à meia-noite.
+        </p>
+        <div class="card" style="background:var(--panel-2)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <h4 style="margin:0;color:var(--gold-bright)">🗺️ Névoa do Andar</h4>
+            <span class="pill" :class="{on: revelacoesRestantes>0}">{{ revelacoesRestantes }}/3 revelações hoje</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:340px">
+            <button
+              v-for="i in 9" :key="i" type="button"
+              class="btn" :class="{ primario: !nevoaGrade[i-1]?.revelado }"
+              style="aspect-ratio:1;font-size:24px;display:flex;align-items:center;justify-content:center"
+              :disabled="revelando || nevoaGrade[i-1]?.revelado || revelacoesRestantes<=0"
+              @click="revelarNevoa(i-1)"
+            >{{ nevoaGrade[i-1]?.revelado ? iconeTileNevoa(nevoaGrade[i-1]) : "🌫️" }}</button>
+          </div>
+          <p v-if="mensagemNevoa" class="msg info" style="margin-top:10px">{{ mensagemNevoa }}</p>
+        </div>
+      </div>
+
+      <!-- Aba Músico: minigame Composição Viva -->
+      <div v-if="aba === 'composicao'">
+        <p style="color:var(--ink-dim);font-size:13px;margin:0 0 12px">
+          Reproduza a sequência musical na ordem certa. Sucesso dá +1 pro grupo na próxima rolagem importante (vale por 2h de sessão).
+          Custa 2 de Fôlego por tentativa (sucesso ou não) — máximo 2 composições bem-sucedidas por dia.
+        </p>
+        <div class="card" style="background:var(--panel-2)">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+            <h4 style="margin:0;color:var(--gold-bright)">🎵 Composição Viva</h4>
+            <span class="pill">💨 Fôlego: {{ auth.personagem?.folego ?? 0 }}</span>
+          </div>
+          <div v-if="faseComposicao==='parada'">
+            <button class="btn primario" :disabled="(auth.personagem?.folego??0)<2" @click="iniciarComposicao">🎼 Começar composição (-2 Fôlego)</button>
+          </div>
+          <div v-else>
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:320px;margin-bottom:10px">
+              <button
+                v-for="(nota,i) in NOTAS" :key="i" type="button" class="btn"
+                :class="{ primario: notaAtiva===i }"
+                :disabled="faseComposicao!=='jogando'"
+                style="aspect-ratio:1;font-size:26px"
+                @click="clicarNota(i)"
+              >{{ nota }}</button>
+            </div>
+            <p v-if="faseComposicao==='mostrando'" class="msg info">Observe a sequência…</p>
+            <p v-else-if="faseComposicao==='jogando'" class="msg info">Sua vez — repita a sequência ({{ cliquesJogador.length }}/{{ sequenciaAtual.length }})</p>
+          </div>
+          <p v-if="mensagemComposicao" class="msg" :class="sucessoComposicao ? 'info' : 'warn'" style="margin-top:10px">{{ mensagemComposicao }}</p>
+        </div>
+      </div>
     </div>
 
     <div
@@ -286,11 +340,19 @@ defineEmits(["pedir-login"]);
 const supa = useSupa();
 
 const aba = ref("minhas");
-const abas = [
-  { k: "minhas", label: "🛠️ Minhas Receitas" },
-  { k: "materiais", label: "🎒 Meus Materiais" },
-  { k: "pets", label: "🐾 Pets / Ovos" },
-];
+// Minigame de profissão: só aparece a aba de quem tem a profissão certa —
+// Cartógrafo (Névoa do Andar) e Músico (Composição Viva).
+const abas = computed(() => {
+  const base = [
+    { k: "minhas", label: "🛠️ Minhas Receitas" },
+    { k: "materiais", label: "🎒 Meus Materiais" },
+    { k: "pets", label: "🐾 Pets / Ovos" },
+  ];
+  const prof = auth.personagem?.profissao;
+  if (prof === "Cartógrafo") base.push({ k: "nevoa", label: "🗺️ Névoa do Andar" });
+  if (prof === "Músico") base.push({ k: "composicao", label: "🎵 Composição Viva" });
+  return base;
+});
 
 const carregando = ref(false),
   carregandoMat = ref(false);
@@ -538,11 +600,122 @@ async function craftar() {
   }
 }
 
+// ===== Minigame Cartógrafo: Névoa do Andar =====
+const nevoaGrade = ref(Array(9).fill(null).map(() => ({ revelado: false })));
+const revelacoesRestantes = ref(3);
+const revelando = ref(false);
+const mensagemNevoa = ref("");
+function iconeTileNevoa(tile) {
+  if (tile.tipo === "col") return "💰";
+  if (tile.tipo === "xp") return "✨";
+  return "🕳️";
+}
+async function carregarNevoa() {
+  if (!auth.temPersonagem || auth.personagem?.profissao !== "Cartógrafo") return;
+  try {
+    const hoje = new Date().toISOString().slice(0, 10);
+    const r = await supa.from("cartografo_nevoa").select("*").eq("personagem_nome", auth.personagem.nome).eq("data", hoje).maybeSingle();
+    if (r.data) {
+      nevoaGrade.value = r.data.grade;
+      revelacoesRestantes.value = Math.max(0, 3 - r.data.revelados_hoje);
+    } else {
+      nevoaGrade.value = Array(9).fill(null).map(() => ({ revelado: false }));
+      revelacoesRestantes.value = 3;
+    }
+  } catch (e) {
+    console.warn(e);
+  }
+}
+async function revelarNevoa(i) {
+  if (revelando.value) return;
+  revelando.value = true;
+  mensagemNevoa.value = "";
+  try {
+    const r = await supa.rpc("cartografo_revelar", { p_index: i });
+    if (r.error) throw r.error;
+    const d = JSON.parse(r.data);
+    if (d.erro) {
+      mensagemNevoa.value = "⚠️ " + d.erro;
+      return;
+    }
+    nevoaGrade.value[i] = { revelado: true, tipo: d.tipo, valor: d.valor };
+    revelacoesRestantes.value = 3 - d.revelados_hoje;
+    if (d.tipo === "col") mensagemNevoa.value = `💰 Achou ${d.valor} Col!`;
+    else if (d.tipo === "xp") mensagemNevoa.value = `✨ Ganhou ${d.valor} XP de Cartógrafo!`;
+    else mensagemNevoa.value = "🕳️ Área já explorada — nada aqui.";
+    await auth.carregarPerfilEPersonagem();
+  } catch (e) {
+    mensagemNevoa.value = "Erro: " + e.message;
+  } finally {
+    revelando.value = false;
+  }
+}
+
+// ===== Minigame Músico: Composição Viva =====
+const NOTAS = ["🎵", "🎶", "🎼", "🎹"];
+const TAMANHO_SEQUENCIA = 5;
+const faseComposicao = ref("parada"); // parada | mostrando | jogando
+const sequenciaAtual = ref([]);
+const cliquesJogador = ref([]);
+const notaAtiva = ref(-1);
+const mensagemComposicao = ref("");
+const sucessoComposicao = ref(false);
+function esperar(ms) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+function iniciarComposicao() {
+  mensagemComposicao.value = "";
+  sequenciaAtual.value = Array.from({ length: TAMANHO_SEQUENCIA }, () => Math.floor(Math.random() * 4));
+  cliquesJogador.value = [];
+  faseComposicao.value = "mostrando";
+  mostrarSequencia();
+}
+async function mostrarSequencia() {
+  for (const nota of sequenciaAtual.value) {
+    notaAtiva.value = nota;
+    await esperar(500);
+    notaAtiva.value = -1;
+    await esperar(200);
+  }
+  faseComposicao.value = "jogando";
+}
+async function clicarNota(i) {
+  if (faseComposicao.value !== "jogando") return;
+  cliquesJogador.value.push(i);
+  const idx = cliquesJogador.value.length - 1;
+  if (sequenciaAtual.value[idx] !== i) {
+    await finalizarComposicao(false);
+    return;
+  }
+  if (cliquesJogador.value.length === sequenciaAtual.value.length) {
+    await finalizarComposicao(true);
+  }
+}
+async function finalizarComposicao(sucesso) {
+  faseComposicao.value = "parada";
+  try {
+    const r = await supa.rpc("musico_compor", { p_sucesso: sucesso });
+    if (r.error) throw r.error;
+    const d = JSON.parse(r.data);
+    if (d.erro) {
+      mensagemComposicao.value = "⚠️ " + d.erro;
+      sucessoComposicao.value = false;
+      return;
+    }
+    sucessoComposicao.value = !!d.sucesso;
+    mensagemComposicao.value = d.mensagem;
+    await auth.carregarPerfilEPersonagem();
+  } catch (e) {
+    mensagemComposicao.value = "Erro: " + e.message;
+  }
+}
+
 onMounted(async () => {
   if (!auth.ready) await auth.init();
   if (auth.temPersonagem) {
     await carregar();
     await carregarMateriais();
+    await carregarNevoa();
   }
 });
 </script>

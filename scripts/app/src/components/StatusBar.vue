@@ -18,13 +18,32 @@
     <div class="hv-stat"><small>💰 COL</small><span>{{ nf.format(pers.col_mao || 0) }}<em v-if="pers.col_guardado">+{{ nf.format(pers.col_guardado) }} guardado</em></span></div>
     <div class="hv-stat"><small>🧑‍🏭 OFÍCIO</small><span>{{ pers.profissao || "—" }}</span></div>
     <div class="hv-stat"><small>🗡️ ARMA</small><span>{{ pers.arma ? nomeArma(pers.arma) : "—" }}</span></div>
+
+    <div v-if="buffsAtivos.length" class="hv-buffs">
+      <span v-for="b in buffsAtivos" :key="b.id" class="pill on" :title="b.descricao">✨ {{ b.titulo }}</span>
+    </div>
   </div>
 </template>
 <script setup>
-import { computed } from "vue";
+import { computed, onMounted, ref } from "vue";
 import { useAuthStore } from "../stores/auth.js";
+import { useSupa } from "../lib/supabase.js";
 const auth = useAuthStore();
+const supa = useSupa();
 const pers = computed(() => auth.personagem);
+
+// Buffs de grupo ativos (ex: Composição Viva do Músico) — visível pra
+// todo mundo, some sozinho quando expira (RLS de leitura pública).
+const buffsAtivos = ref([]);
+async function carregarBuffs() {
+  try {
+    const r = await supa.from("buffs_grupo").select("*").gt("expira_em", new Date().toISOString()).order("criado_em", { ascending: false }).limit(5);
+    buffsAtivos.value = r.data || [];
+  } catch (e) {
+    console.warn(e);
+  }
+}
+onMounted(carregarBuffs);
 const vidaMax = computed(() => pers.value?.vida_max || 50);
 const vidaAtual = computed(() => pers.value?.vida_atual ?? vidaMax.value);
 const pctVida = computed(() =>
@@ -97,6 +116,7 @@ function nomeArma(id) {
 .hv-stat small{font-family:var(--f-mono);font-size:9.5px;letter-spacing:.1em;color:var(--ink-faint)}
 .hv-stat span{font-size:13.5px;color:var(--ink);font-weight:600}
 .hv-stat em{display:block;font-style:normal;font-size:10px;color:var(--ink-faint);font-weight:400}
+.hv-buffs{flex-basis:100%;display:flex;gap:8px;flex-wrap:wrap;margin-top:2px}
 /* HP crítico — o alerta visual clássico de vida baixa do HUD do jogo:
    pulso vermelho na barra + rótulo piscando */
 .hv-alerta{color:#ff5b3d;animation:hvPiscar 1s ease-in-out infinite}

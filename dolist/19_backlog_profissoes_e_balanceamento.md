@@ -21,48 +21,54 @@ ainda precisa de spec própria antes de virar código.
   `SAO_PBTA_Profissoes_e_Moves.pdf`): **Informante**, **Mestre de
   Montarias**, **Minerador**.
 
-## ⏳ Em aberto — precisa de spec antes de mexer no código
+## ✅ Resolvido (12/08, segunda rodada) — "resolve você, modo Cellbit"
 
-- **Cartógrafo : Historiador** — usuário pediu "unificar mais cartógrafo:
-  Historiador", mas não veio spec (Marca, Move de Ofício/Cena, Move
-  Exclusivo) nem ficou claro se é **fundir um profissão nova chamada
-  "Historiador" pra dentro do Cartógrafo** (Cartógrafo absorve pesquisa
-  histórica) ou **renomear** Cartógrafo. Cartógrafo ficou de fora dessa
-  rodada (mantido como está, sem Move Exclusivo ainda) até essa decisão
-  ficar clara.
+Usuário deu carta branca ("você toma as decisões, você resolve") pro
+resto da lista. Decisões tomadas e already implementadas (ver
+`scripts/db/schema_reforma_cellbit_profissoes.sql`):
 
-- **Mini game para Cartógrafo** — sem spec. Precisa decidir: mecânica
-  (o que o jogador realmente faz — desenhar rota? adivinhar terreno?
-  conectar pontos?), onde mora na UI, se dá recompensa em Col/XP/item, se
-  usa 2d6+Conhecimento por trás ou é puramente lúdico.
+- **Cartógrafo : Historiador** → Cartógrafo **absorve** o papel de
+  Historiador (não vira profissão separada). Marca atualizada + Move
+  Exclusivo novo "Crônica do Andar" (+Conhecimento, documentar/catalogar
+  locais e eventos do andar).
 
-- **Mini game para composição e buffs** (provavelmente Músico) — mesma
-  situação: sem mecânica definida. Precisa decidir o "verbo" do jogo
-  (compor uma sequência? ritmo tipo QTE?) e como o resultado vira buff de
-  verdade pro grupo (duração, quem recebe, se gasta Fôlego).
+- **Minigame do Cartógrafo — "Névoa do Andar"**: grade 3×3 por
+  personagem, revela até 3 áreas por dia (reseta à meia-noite), cada
+  área dá Col (10-40), XP de Cartógrafo (5-15) ou nada. Freio anti-farm
+  = limite diário fixo de 3, mesmo espírito do `limite_diario` que já
+  existe em `transacoes`. UI em Profissoes.vue, aba só visível pra quem
+  é Cartógrafo.
 
-- **Limitar classe por clã** — ambíguo: significa que cada clã só aceita
-  certas profissões (trava na entrada/recrutamento, ver
-  [[schema_upload_imagens_e_recrutamento_cla]])? Ou que profissão define
-  quais clãs você pode entrar? Precisa de regra explícita por clã antes
-  de mexer em `pedir_entrada_cla`/RLS.
+- **Minigame do Músico — "Composição Viva"**: sequência tipo Simon (5
+  notas, 4 símbolos), jogador repete a ordem. Sucesso cria um registro
+  em `buffs_grupo` ("+1 na próxima rolagem importante", 2h de validade),
+  visível pra mesa inteira num banner no StatusBar. Custa 2 de Fôlego
+  por tentativa (sucesso ou não) e trava em 2 buffs bem-sucedidos por
+  dia — mesmo racional de fôlego-como-limite já usado em craft.
+  **Importante**: o buff é só um registro visível — não é aplicado
+  automaticamente em nenhuma rolagem (nada no sistema hoje resolve dado
+  no servidor pra combate/craft usar isso sozinho), o mestre aplica o
+  +1 manualmente na mesa quando alguém pede pra usar o buff ativo.
 
-- **Balancear profissões** — sem alvo definido (balancear o quê:
-  economia de Col? XP por hora? poder de combate indireto via
-  ferramenta/craft?). Precisa de critério de comparação antes de
-  qualquer ajuste — mexer sem isso é chute.
+- **Limitar profissão por clã** → decidido: cada clã pode (opcional)
+  listar `profissoes_aceitas`. Vazio/null = aceita qualquer profissão.
+  Travado dentro de `pedir_entrada_cla` (erro claro se a profissão do
+  personagem não estiver na lista), editável no Compêndio do mestre, e
+  mostrado no card de recrutamento pro jogador saber antes de tentar.
 
-- **Cuidar com o "farm" infinito** — relacionado ao ponto acima. Precisa
-  mapear quais moves/recompensas hoje não têm limite por sessão/dia (ex:
-  Alquimista rolando Mistura Perfeita repetidamente sem custo) e decidir
-  o freio: limite diário (já existe padrão em outros sistemas do jogo,
-  ver `limite_diario` em `transacoes`), custo de Fôlego, ou cooldown por
-  narrativa (mestre decide quando cabe rolar de novo).
+- **Balancear profissões / anti-farm** → resolvido *para o que é
+  digital*: os dois minigames novos já nasceram com freio (3/dia e
+  2/dia). O resto do sistema de profissão (os 15 Moves Exclusivos do
+  PDF) **não é digitalizado** — não tem botão que resolve dado sozinho,
+  é o mestre narrando na mesa com 2d6 físico ou mental, então "farm
+  infinito" não se aplica a eles do jeito que se aplicaria a um botão
+  de app. Balanceamento fino de economia (Col/hora, XP/hora entre
+  profissões) segue em aberto — isso só dá pra calibrar com dado real de
+  playtest, não em cima de chute.
 
-## Como retomar
+## Como retomar o que ainda falta
 
-Quando o usuário quiser destravar qualquer um desses, a pergunta certa é
-"qual é a mecânica exata" — não dá pra implementar minigame ou trava de
-balanceamento sem isso virar chute. Os itens "✅ Decidido" acima não têm
-esse problema (vieram com texto pronto) e por isso já entraram nesta
-sessão.
+Restam só itens fora do que foi decidido nesta rodada: balanceamento
+fino de economia entre profissões (precisa de dado de playtest, não de
+mais decisão de design) e qualquer ajuste de sensação de jogo nos dois
+minigames depois de testados na mesa de verdade.

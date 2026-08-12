@@ -415,6 +415,7 @@ export const TABELAS_ADMIN = {
       { nome: "logo_url", tipo: "imagem", rotulo: "Logo" },
       { nome: "destaque", tipo: "bool" },
       { nome: "recrutando", tipo: "bool", rotulo: "Recrutando (aparece na aba de Recrutamento pros jogadores sem clã)" },
+      { nome: "profissoes_aceitas", tipo: "lista-texto", rotulo: "Profissões aceitas (vazio = aceita qualquer uma)" },
       { nome: "forca", tipo: "text" },
       { nome: "necessidade", tipo: "text" },
       { nome: "rival", tipo: "sugestao", tabelaRef: "clas", campoRef: "nome" },

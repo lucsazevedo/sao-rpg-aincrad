@@ -159,6 +159,32 @@
             {{ r.alvo_nome }} · {{ r.nivel }} ({{ statusRep(r.nivel) }})
           </span>
         </div>
+        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🗡️ Golpes da Arma · {{ armaDetalhe?.tipo || armaAtual }}</h3>
+        <div v-if="carregandoGolpes" class="msg info carregando">Carregando…</div>
+        <div v-else-if="!golpesArma.length" class="msg warn">Sem arma equipada ou sem golpes cadastrados ainda.</div>
+        <div v-else style="display:flex;flex-direction:column;gap:8px">
+          <div v-for="g in golpesArma" :key="g.nome" class="card" style="background:var(--panel);border:none">
+            <div class="ct">{{ g.nome }} <span v-if="g.bonus" class="pill on">{{ g.bonus }}</span></div>
+            <p style="font-style:italic;color:var(--ink-dim);margin:4px 0">{{ g.gatilho }}</p>
+            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">10+</b> {{ g.dezMais.join(" · ") }}</div>
+            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">7-9</b> {{ g.seteNove.join(" · ") }}</div>
+            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">6-</b> {{ g.seisMenos.join(" · ") }}</div>
+          </div>
+        </div>
+
+        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🛠️ Golpes de Profissão · {{ auth.personagem?.profissao || "—" }}</h3>
+        <div v-if="carregandoGolpes" class="msg info carregando">Carregando…</div>
+        <div v-else-if="!golpesProfissao.length" class="msg warn">Sem profissão definida ou sem golpes cadastrados ainda.</div>
+        <div v-else style="display:flex;flex-direction:column;gap:8px">
+          <div v-for="g in golpesProfissao" :key="g.nome" class="card" style="background:var(--panel);border:none">
+            <div class="ct">{{ g.nome }} <span v-if="g.bonus" class="pill on">{{ g.bonus }}</span></div>
+            <p style="font-style:italic;color:var(--ink-dim);margin:4px 0">{{ g.gatilho }}</p>
+            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">10+</b> {{ g.dezMais.join(" · ") }}</div>
+            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">7-9</b> {{ g.seteNove.join(" · ") }}</div>
+            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">6-</b> {{ g.seisMenos.join(" · ") }}</div>
+          </div>
+        </div>
+
         <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">Limit Breaker</h3>
         <p style="margin:0 0 8px;color:var(--ink-dim);font-size:12.5px">Contador por arma — ferramenta de mesa, o mestre marca durante o jogo.</p>
         <div v-if="!limitBreakers.length" class="msg warn">Nenhum contador ainda.</div>
@@ -293,8 +319,53 @@ async function carregarArmaDetalhe() {
     console.warn(e);
   }
 }
+
+// ===== Golpes (arma + profissão) — normaliza os dois formatos de JSON
+// que moves_arma/moves_profissao usam (lista de 5 opções nas armas e nas
+// 15 profissões com Move Exclusivo; texto corrido no Move de Ofício/Cena
+// mais antigo) num shape só pra exibir. =====
+const carregandoGolpes = ref(true);
+const golpesArma = ref([]);
+const golpesProfissao = ref([]);
+function normalizarGolpe(g) {
+  if (!g || !g.nome) return null;
+  const paraLista = (v) => (Array.isArray(v) ? v : v ? [v] : []);
+  return {
+    nome: g.nome,
+    gatilho: g.gatilho || "",
+    bonus: g.bonus_acerto || "",
+    dezMais: paraLista(g.dez_mais),
+    seteNove: paraLista(g.sete_nove),
+    seisMenos: paraLista(g.seis_menos),
+  };
+}
+async function carregarGolpes() {
+  carregandoGolpes.value = true;
+  try {
+    const [rArma, rProf] = await Promise.all([
+      armaDetalhe.value?.tipo
+        ? supa.from("moves_arma").select("move_a,golpe_2,limit_breaker").eq("nome", armaDetalhe.value.tipo).eq("visivel", true).maybeSingle()
+        : Promise.resolve({ data: null }),
+      auth.personagem?.profissao
+        ? supa.from("moves_profissao").select("move_a,move_b,move_c").eq("nome", auth.personagem.profissao).eq("visivel", true).maybeSingle()
+        : Promise.resolve({ data: null }),
+    ]);
+    golpesArma.value = rArma.data
+      ? [normalizarGolpe(rArma.data.move_a), normalizarGolpe(rArma.data.golpe_2), normalizarGolpe(rArma.data.limit_breaker)].filter(Boolean)
+      : [];
+    golpesProfissao.value = rProf.data
+      ? [normalizarGolpe(rProf.data.move_a), normalizarGolpe(rProf.data.move_b), normalizarGolpe(rProf.data.move_c)].filter(Boolean)
+      : [];
+  } catch (e) {
+    console.warn(e);
+  } finally {
+    carregandoGolpes.value = false;
+  }
+}
+
 onMounted(async () => {
   if (!auth.ready) await auth.init();
   await Promise.all([carregarReputacoes(), carregarLimitBreakers(), carregarArmaDetalhe()]);
+  await carregarGolpes(); // depende de armaDetalhe já carregado
 });
 </script>
