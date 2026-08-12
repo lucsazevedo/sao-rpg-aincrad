@@ -1,3 +1,43 @@
+## Novo nesta rodada — 10 profissões rasas expandidas (equilíbrio de conteúdo)
+
+Pergunta do usuário: "todas as profissões estão equilibradas?". Medido em
+vez de chutado: 10 das 16 profissões (Bibliotecário, Cartógrafo,
+Comerciante, Coveiro, Diplomata, Domador, Lenhador, Médico, Mercenário,
+Músico) tinham só **4 receitas de item cada, parando no nível 6**, com
+XP/fôlego médio idênticos entre as 10 (35 XP / 1.8 fôlego — sinal de vir do
+mesmo template genérico, só nome trocado). As outras 6 (Ferreiro,
+Alquimista, Costureiro, Caçador, Cozinheiro, Joalheiro) tinham 14 a 40
+receitas cada, indo até nível 10 — vieram de um lote de importação
+diferente (`dolist/03_itens_crafts_novos.md`, rodada de 10/08) que nunca
+cobriu essas outras 10.
+
+Confirmado que a progressão real do jogo é sempre nível 1/2/4/6/8/10
+(comum/comum/incomum/raro/épico/lendário) — não existe receita em nível
+3/5/7/9 em profissão nenhuma, nem nas ricas. Então o problema não era
+"nível faltando", era variedade nos níveis que já existem + as duas tiers
+mais altas (épico=8, lendário=10) que essas 10 nunca tinham.
+
+Usuário escolheu expandir agora. 12 itens novos por profissão (3 no nível
+1, 3 no nível 2, 2 no nível 4, 2 no nível 6, 1 épico novo no 8, 1 lendário
+novo no 10) — nomes tirados do tema oficial de cada profissão
+(`docs/guia_sistema_aincrad.md`, seção "Moves de Profissão": Bibliotecário
+= pesquisa/memória, Cartógrafo = mapas/rotas, Comerciante = negociação,
+Coveiro = ritual/morte, Diplomata = mediação/política, Domador = vínculo
+com criatura, Lenhador = madeira/acampamento, Médico = cura, Mercenário =
+sobrevivência/combate, Músico = performance), emendando o estilo dos 4
+itens que já existiam. `atributo_teste` usa o atributo canônico da
+profissão (os 4 itens originais tinham atributo inconsistente por item —
+não mexido, só corrigido daqui pra frente). Materiais escolhidos do
+catálogo por categoria temática + raridade da tier. `requer_ferramenta_id`
+calculado igual às receitas existentes (mesma função da rodada anterior).
+
+Resultado: as 10 profissões saem de 4 → 16 receitas de item cada (mesma
+faixa da Joalheiro, 14 — dentro do "~15-25" combinado com o usuário).
+Testado ao vivo com Shen (Domador): craftou "Apito de Chamado" (item novo)
+com sucesso, ferramenta e materiais corretos, XP creditado.
+
+Schema: `scripts/db/schema_expandir_10_profissoes_rasas.sql`.
+
 ## Novo nesta rodada — ferramenta obrigatória/gasta + catálogo de materiais + drop unificado, todas as profissões
 
 Pedido do usuário: "Ajuste todas as profissões, todas precisam de
