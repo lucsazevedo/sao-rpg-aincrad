@@ -6,6 +6,20 @@ import { useAuthStore } from "./stores/auth.js";
 
 import "./styles/main.css";
 
+// Aba aberta durante um deploy novo: cada deploy troca o hash dos arquivos
+// (build do Vite), então um chunk lazy (rota, ex. Equipamentos.vue) que a
+// aba antiga tenta buscar já não existe mais no servidor -- 404 ->
+// "Failed to fetch dynamically imported module". Vite dispara esse evento
+// nesse caso específico; a correção padrão é recarregar a página inteira
+// (busca o index.html novo, com os hashes certos). Guard de sessionStorage
+// evita loop infinito se o erro for outra coisa (ex. offline de verdade).
+window.addEventListener("vite:preloadError", () => {
+  const chave = "sao-rpg-reload-apos-preload-error";
+  if (sessionStorage.getItem(chave)) return; // já tentou recarregar nesta sessão, não repete
+  sessionStorage.setItem(chave, "1");
+  window.location.reload();
+});
+
 const router = createRouter({
   history: createWebHashHistory(),
   routes: [
@@ -85,3 +99,6 @@ const app = createApp(App);
 app.use(createPinia());
 app.use(router);
 app.mount("#app");
+// app montou com sucesso -> limpa o guard, senão um preload error futuro
+// nesta mesma aba (outro deploy, mesma sessão) ficaria bloqueado pra sempre.
+sessionStorage.removeItem("sao-rpg-reload-apos-preload-error");
