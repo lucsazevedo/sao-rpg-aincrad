@@ -74,3 +74,62 @@ Achado no caminho: `armas.tipo` tinha uma linha com "Lanca" sem cedilha
 (`lanca_de_guarda`) enquanto `moves_arma.nome` usa "Lança" — os 23 tipos
 não batiam 100% por causa disso. Corrigido (agora os dois lados usam a
 mesma grafia em todas as 23 armas).
+
+## ✅ Resolvido (12/08) — 13 armas reescritas a partir do PDF oficial do usuário
+
+Usuário trouxe `SAO_PBTA_Armas_e_Moves_Atualizado.pdf` — texto definitivo
+(não rascunho de IA) pra 13 das 23 armas: Chakrams, Escudo e Espada,
+Espada Longa, Foice, Katana, Lança, Machado, Martelo, Rapieira, Bastão,
+Clava, Corrente com Peso, Leque. Cada uma com 2 golpes normais + Limit
+Break (3º move, +2 no acerto já embutido no gatilho), formato
+"Quando [gatilho], role +Atributo" / 10+ escolha 2 / 7-9 escolha 1 / 6-
+o Mestre narra (5 ideias cada).
+
+Transcrito via `scripts/db/_gerar_dml_moves_pdf.py` →
+`scripts/db/dml_moves_armas_pdf_pbta.sql` (rodar contra o banco pra
+aplicar). Mapeamento pro schema existente: `move_a` = Move 1, `golpe_2` =
+Move 2, `limit_breaker` = Move 3/LIMIT BREAK; `move_b` e `golpe_3` foram
+zerados nessas 13 (o PDF usa só 3 golpes por arma, não 5 — essas duas
+colunas eram do rascunho Ollama de 10/08, que esse PDF substitui pras 13
+que ele cobre).
+
+**Leque**: pedido explícito do usuário ("crie o leque, que será de
+técnica") — já vinha com golpes genéricos no rascunho antigo, agora tem o
+conteúdo oficial do PDF (Dança das Lâminas, Véu Cortante, Tempestade das
+Mil Lâminas), atributo Técnica.
+
+**Ainda não coberto pelo PDF** (mantidas com o rascunho antigo, sem
+revisão): Adagas, Adagas de Arremesso, Arco e Flecha, Besta, Chicote,
+Glaive, Manopla, Nunchaku, Pá, Tonfas — 10 armas. Se/quando o usuário
+trouxer material equivalente pra elas, repetir o mesmo processo.
+
+## ✅ Resolvido (12/08) — as 10 armas restantes, mesmo formato
+
+Pedido do usuário: "com base em tudo que você criou você já tem base pra
+fazer isso no restante da base" — estendi o mesmo formato PBTA (2 golpes
+normais + Limit Break, mesmo atributo nos 3, +2 no acerto do Limit Break)
+pras 10 armas que o PDF não cobria. Diferente das 13 anteriores (transcrição
+literal de um PDF trazido pelo usuário), aqui não havia texto pronto — usei
+como base **docs/guia_sistema_aincrad.md** (fonte canônica já existente:
+atributo principal + Marca + "Move de Combate" original de cada arma).
+Move 1 de cada arma é uma reformatação fiel desse Move de Combate
+canônico pro molde 10+/7-9/6-; Move 2 é um segundo ângulo de combate novo
+pra mesma arma; o Limit Break é um golpe de assinatura novo, nomeado a
+partir da própria identidade/Marca da arma (ex: "Território Disputado"
+pro Chicote, ecoando a Marca "transforma espaço aberto em território
+disputado").
+
+Gerado por `scripts/db/_gerar_dml_moves_restante.py` →
+`scripts/db/dml_moves_armas_restante.sql`, mesma validação de JSON que o
+lote anterior (30 blocos, 10 armas × 3 golpes, 5 itens em cada lista).
+
+**Com isso, as 23 armas estão no mesmo padrão PBTA de 3 golpes.** Falta só
+aplicar os dois arquivos `dml_moves_armas_*.sql` no banco (não tenho
+acesso de escrita ao Supabase daqui) — e ainda vale o ponto de 10/08: em
+lugar nenhum do site isso é exibido pro jogador ainda, só no editor do
+Compêndio do mestre.
+
+**Ainda não exibido em lugar nenhum do site/mesa** — mesma observação de
+10/08, ninguém lê `moves_arma` na tela ainda (só o editor do mestre no
+Compêndio). Item futuro em aberto: decidir onde/como mostrar os 3 golpes
+pro jogador (Ficha? Combate?).
