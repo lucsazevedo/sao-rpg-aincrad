@@ -26,6 +26,9 @@
             <div v-if="e.key==='arma' && e.item" style="display:flex;justify-content:center;margin:4px 0">
               <IconeArma :tipo="e.item.tipo" :raridade="e.item.raridade" :tamanho="56" />
             </div>
+            <div v-else-if="e.item" style="display:flex;justify-content:center;margin:4px 0">
+              <IconeEquipamento :slot="e.key" :raridade="e.item.raridade" :tamanho="56" />
+            </div>
             <div class="cs">{{ e.item ? e.item.nome : 'Nada equipado' }}</div>
             <div class="faixa">
               <span class="pill on" v-if="e.item && e.item.raridade">{{ e.item.raridade }}</span>
@@ -110,6 +113,7 @@ import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
 import TituloHUD from '../components/TituloHUD.vue'
 import IconeArma from '../components/IconeArma.vue'
+import IconeEquipamento from '../components/IconeEquipamento.vue'
 
 const auth = useAuthStore()
 defineEmits(['pedir-login'])

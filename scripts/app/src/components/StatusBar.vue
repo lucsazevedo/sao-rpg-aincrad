@@ -16,7 +16,10 @@
     </div>
 
     <div class="hv-stat"><small>💰 COL</small><span>{{ nf.format(pers.col_mao || 0) }}<em v-if="pers.col_guardado">+{{ nf.format(pers.col_guardado) }} guardado</em></span></div>
-    <div class="hv-stat"><small>🧑‍🏭 OFÍCIO</small><span>{{ pers.profissao || "—" }}</span></div>
+    <div class="hv-stat" style="flex-direction:row;align-items:center;gap:6px">
+      <IconeProfissao v-if="pers.profissao" :profissao="pers.profissao" :tamanho="24" />
+      <div><small>🧑‍🏭 OFÍCIO</small><span>{{ pers.profissao || "—" }}</span></div>
+    </div>
     <div class="hv-stat"><small>🗡️ ARMA</small><span>{{ pers.arma ? nomeArma(pers.arma) : "—" }}</span></div>
 
     <div v-if="buffsAtivos.length" class="hv-buffs">
@@ -28,6 +31,7 @@
 import { computed, onMounted, ref } from "vue";
 import { useAuthStore } from "../stores/auth.js";
 import { useSupa } from "../lib/supabase.js";
+import IconeProfissao from "./IconeProfissao.vue";
 const auth = useAuthStore();
 const supa = useSupa();
 const pers = computed(() => auth.personagem);

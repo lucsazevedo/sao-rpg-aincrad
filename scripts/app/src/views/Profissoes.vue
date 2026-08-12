@@ -11,12 +11,12 @@
       <StatusBar />
       <!-- ITEM 6: HEADER = NOME DA PROFISSÃO DO USUÁRIO LOGADO -->
       <TituloHUD icone="🛠️" :titulo="tituloPagina" trilha="Sistema · Ofício" />
-      <p
-        v-if="descricaoProfissao"
-        style="margin: 0 0 10px; color: var(--ink-dim); font-size: 13px"
-      >
-        {{ descricaoProfissao }}
-      </p>
+      <div v-if="nomeProf" style="display: flex; align-items: center; gap: 10px; margin: -4px 0 10px">
+        <IconeProfissao :profissao="nomeProf" :tamanho="40" />
+        <p v-if="descricaoProfissao" style="margin: 0; color: var(--ink-dim); font-size: 13px">
+          {{ descricaoProfissao }}
+        </p>
+      </div>
       <div class="tabs" style="margin: 8px 0">
         <div
           v-for="t in abas"
@@ -334,6 +334,7 @@ import { useSupa } from "../lib/supabase.js";
 import StatusBar from "../components/StatusBar.vue";
 import TituloHUD from "../components/TituloHUD.vue";
 import PetsTab from "./PetsTab.vue";
+import IconeProfissao from "../components/IconeProfissao.vue";
 
 const auth = useAuthStore();
 defineEmits(["pedir-login"]);

@@ -116,9 +116,11 @@
               <template v-else>⚔️</template>
               {{ armaAtual }}
             </span>
-            <span class="pill"
-              >🛠️ {{ auth.personagem.profissao || "Sem profissão" }}</span
-            >
+            <span class="pill" style="display: inline-flex; align-items: center; gap: 6px">
+              <IconeProfissao v-if="auth.personagem.profissao" :profissao="auth.personagem.profissao" :tamanho="18" />
+              <template v-else>🛠️</template>
+              {{ auth.personagem.profissao || "Sem profissão" }}
+            </span>
             <span class="pill rar-comum"
               >💨 Fôlego {{ auth.personagem.folego ?? 0 }} / 20</span
             >
@@ -204,6 +206,7 @@ import { useSupa } from "../lib/supabase.js";
 import StatusBar from "../components/StatusBar.vue";
 import TituloHUD from "../components/TituloHUD.vue";
 import IconeArma from "../components/IconeArma.vue";
+import IconeProfissao from "../components/IconeProfissao.vue";
 const auth = useAuthStore();
 const supa = useSupa();
 defineEmits(["pedir-login"]);
