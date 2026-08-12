@@ -1,11 +1,40 @@
 <template>
   <div>
     <StatusBar v-if="auth.temPersonagem"/>
-    <TituloHUD icone="🏪" titulo="Mercado" trilha="Sistema · Comércio entre Jogadores" />
+    <TituloHUD icone="🏪" titulo="Mercado" trilha="Sistema · Comércio entre Jogadores e NPCs" />
     <div class="tabs" style="margin:12px 0">
+      <button type="button" class="tab" :class="{on:tab=='npcs'}" @click="tab='npcs'">🏛️ Lojas NPC</button>
       <button type="button" class="tab" :class="{on:tab=='vitrine'}" @click="tab='vitrine'">📦 Vitrine</button>
       <button type="button" class="tab" :class="{on:tab=='meus'}" @click="tab='meus'">📢 Meus Anúncios</button>
       <button type="button" v-if="auth.temPersonagem" class="tab" :class="{on:tab=='meuinv'}" @click="tab='meuinv'">🎒 Meu inventário</button>
+    </div>
+
+    <!-- Lojas NPC (preço fixo de catálogo, estoque infinito) -->
+    <div v-if="tab==='npcs'">
+      <p style="margin:0 0 12px;color:var(--ink-dim);font-size:13px">
+        Preço de catálogo, sem regatear — os NPCs de mesa (descontos por reputação, encomenda,
+        mercado negro) só existem na sessão presencial com o mestre. Aqui é o preço fixo, sempre disponível.
+      </p>
+      <div v-if="carregandoNpc" class="msg info carregando">Carregando lojas…</div>
+      <div v-else v-for="loja in lojasNpc" :key="loja.chave" class="card" style="margin-bottom:14px">
+        <h4 style="margin:0 0 4px;color:var(--gold-bright)">{{ loja.icone }} {{ loja.nome }}</h4>
+        <p style="margin:0 0 10px;color:var(--ink-dim);font-size:12.5px">{{ loja.descricao }} · {{ loja.regiao }}</p>
+        <div v-if="!loja.itens.length" class="msg warn">Nada à venda aqui pro seu nível ainda.</div>
+        <div v-else class="grid">
+          <div v-for="it in loja.itens" :key="it.id" class="card">
+            <div class="ct">{{ it.nome }}</div>
+            <div class="cs">{{ it.raridade || 'comum' }}{{ it.slot ? ' · '+it.slot : '' }}</div>
+            <div class="faixa">
+              <span class="pill on">💰 {{ it.preco }} Col</span>
+            </div>
+            <button v-if="auth.temPersonagem" class="btn primario" style="margin-top:auto"
+              :disabled="comprandoNpc===it.id" @click="comprarDeNpc(loja.tabela, it)">
+              🛒 {{ comprandoNpc===it.id ? 'Comprando…' : 'Comprar' }}
+            </button>
+            <div v-else class="msg info" style="margin:6px 0 0">🔒 Entrar para comprar.</div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <!-- Vitrine -->
@@ -73,9 +102,10 @@ const auth = useAuthStore()
 defineEmits(['pedir-login'])
 const supa = useSupa()
 
-const tab = ref('vitrine')
+const tab = ref('npcs')
 const vitrine = ref([]), meus = ref([]), meuInv = ref([])
 const carregandoV = ref(false), carregandoM = ref(false), carregandoI = ref(false)
+const lojasNpc = ref([]), carregandoNpc = ref(false), comprandoNpc = ref(null)
 const comprando = ref(null), publicando = ref(null)
 const precos = reactive({}), descricoes = reactive({})
 
@@ -143,8 +173,62 @@ async function remover(a){
   }catch(e){ alert('Erro: ' + e.message) }
 }
 
+// Lojas NPC: preço/estoque de armas+equipamentos vêm do catálogo real
+// (100%/74% das linhas já têm preço, nunca inventado). Os NPCs em si (nome,
+// bairro, flavor) são os de mesa de verdade (tabela mercado) — só o
+// desconto/condição narrativa deles (que é texto solto pro mestre
+// interpretar, não dado limpo) fica de fora daqui.
+const GRUPOS_NPC = [
+  { chave: 'armas', nomeNpc: 'Loja de Armas', icone: '⚔️', tabela: 'armas', filtro: () => true },
+  { chave: 'armadura_leve', nomeNpc: 'Forja do Ferreiro', icone: '🔨', tabela: 'equipamentos',
+    filtro: it => ['Armaduras','Elmos','Botas','Luvas','Escudos'].includes(it.slot) && ['Comum','Incomum'].includes(it.raridade) },
+  { chave: 'armadura_pesada', nomeNpc: 'Loja de Armaduras — Lynx', icone: '🛡️', tabela: 'equipamentos',
+    filtro: it => ['Armaduras','Elmos','Botas','Luvas','Escudos'].includes(it.slot) && !['Comum','Incomum'].includes(it.raridade) },
+  { chave: 'consumiveis', nomeNpc: 'Comerciante da Praça (importados)', icone: '🧪', tabela: 'equipamentos',
+    filtro: it => ['Cristais de Uso','Poções','Munições','Comidas'].includes(it.slot) },
+  { chave: 'roupas', nomeNpc: 'Ateliê do Costureiro', icone: '🧵', tabela: 'equipamentos',
+    filtro: it => ['Parte de Cima','Parte de Baixo','Capuz','Acessórios'].includes(it.slot) },
+]
+async function carregarLojasNpc(){
+  carregandoNpc.value = true
+  try{
+    const [rArmas, rEquip, rMercado] = await Promise.all([
+      supa.from('armas').select('id,nome,preco,raridade').not('preco','is',null),
+      supa.from('equipamentos').select('id,nome,preco,raridade,slot').not('preco','is',null),
+      supa.from('mercado').select('nome,regiao,descricao').in('nome', GRUPOS_NPC.map(g=>g.nomeNpc)),
+    ])
+    const armas = rArmas.data || [], equip = rEquip.data || []
+    lojasNpc.value = GRUPOS_NPC.map(g => {
+      const catalogo = g.tabela === 'armas' ? armas : equip
+      const m = (rMercado.data||[]).find(x => x.nome === g.nomeNpc)
+      return {
+        chave: g.chave, tabela: g.tabela, icone: g.icone,
+        nome: g.nomeNpc,
+        descricao: m?.descricao || 'Vendedor de Aincrad.',
+        regiao: m?.regiao || '—',
+        itens: catalogo.filter(g.filtro).sort((a,b)=>(a.preco||0)-(b.preco||0)),
+      }
+    })
+  } catch(e){ console.warn(e) }
+  finally { carregandoNpc.value = false }
+}
+async function comprarDeNpc(tabela, it){
+  if (!auth.temPersonagem) { return }
+  comprandoNpc.value = it.id
+  try{
+    const r = await supa.rpc('comprar_de_npc', { p_tabela: tabela, p_item_id: it.id })
+    if (r.error) throw r.error
+    const d = typeof r.data === 'string' ? JSON.parse(r.data) : r.data
+    if (d.erro) { alert(d.erro); return }
+    alert(`✅ Comprou ${d.item_nome} por ${d.preco_pago} Col. Col restante: ${d.col_restante}`)
+    await auth.carregarPerfilEPersonagem()
+  }catch(e){ alert('Erro na compra: ' + e.message) }
+  finally { comprandoNpc.value = null }
+}
+
 onMounted(async () => {
   if (!auth.ready) await auth.init()
+  await carregarLojasNpc()
   await carregarVitrine()
   if (auth.temPersonagem) { await carregarMeus(); await carregarMeuInv() }
 })
