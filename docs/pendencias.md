@@ -1,3 +1,87 @@
+## Novo nesta rodada — ferramenta obrigatória/gasta + catálogo de materiais + drop unificado, todas as profissões
+
+Pedido do usuário: "Ajuste todas as profissões, todas precisam de
+ferramentas que são gastos no craft, além disso tudo para criar os itens e
+as ferramentas precisam ser dropadas, cada drop tem um percentual, e é
+sorteado uma vez [...] se o usuário conseguir o drop de 20, ele vai
+conseguir junto o de 30 e qualquer outro que tenha o percentual que seja
+maior que 20%, isso em um lugar só, ajuste tudo aí". Investigando pra
+executar isso direito, apareceram 2 buracos de dado bem maiores do que o
+pedido em si sugeria — corrigidos antes de construir a mecânica nova em
+cima, senão ela ficaria montada sobre dado furado:
+
+**1) Catálogo de materiais 80% incompleto.** 251 `mat_id` distintos são
+referenciados em `receitas.materiais` (299 receitas, 16 profissões) mas só
+48 existiam de verdade em `materiais_basicos`. Os outros 203 não tinham
+categoria, raridade, nem nome de exibição em lugar nenhum — impossível dar
+drop coerente ou mostrar nome bonito na UI pra essa maioria. Gerados via
+script (categoria por palavra-chave no id, raridade pelo nível médio das
+receitas onde o material aparece), com 2 colisões de nome resolvidas
+redirecionando a receita pro id já existente em vez de duplicar linha
+(`mat_pergaminho_simples`→`mat_pergaminho_sim`,
+`mat_vidro_temperado`→`mat_vidro_temper`). Catálogo agora com 249 materiais,
+100% dos usados em receita cobertos. Schema:
+`scripts/db/schema_catalogo_materiais_completo.sql`.
+
+**2) 60 "ferramentas fantasma" nas 15 profissões fora o Domador.** Das 6
+receitas tipo=ferramenta por profissão (n1, n2, n3_est1, n3_est2, n5,
+n5_ref), só n1 e n3_est2 tinham linha real em `ferramentas_oficio` —
+craftar as outras 4 tiers dava um item que entra em
+`personagem_ferramentas` mas nunca some no JOIN que calcula o bônus de
+sucesso (zero efeito). Corrigido com progressão de bônus nova (n1=1, n2=1,
+n3_est1=1 transitório, n3_est2=2, n5=3 transitório, n5_ref=4). Schema:
+`scripts/db/schema_ferramentas_tiers_completos.sql`.
+
+Com o catálogo e as ferramentas corrigidos, os 4 pedaços do pedido:
+
+- **Ferramenta obrigatória**: as 205 receitas tipo=item (16 profissões)
+  ganharam `requer_ferramenta_id` apontando pro tier de ferramenta da
+  própria profissão mais alto disponível naquele nível de receita.
+  `craftar_item` já recusava craft sem a ferramenta certa (código já
+  existia, só nunca tinha sido usado em escala). Schema:
+  `scripts/db/schema_receitas_requer_ferramenta.sql`.
+- **Ferramenta gasta no craft**: `ferramenta_danificada` (8% em sucesso
+  parcial, 20% em falha) — já existia como flag decorativa, nunca fazia
+  nada. Agora quando dispara, a ferramenta EXIGIDA pela receita é removida
+  de `personagem_ferramentas` de verdade — jogador precisa craftar de novo
+  (gastando material de novo) antes do próximo item. Testado ao vivo: 2
+  consumos em 80 crafts (taxa bate com a chance esperada), ferramenta
+  realmente some do banco.
+- **Materiais dropáveis por combate, todas as profissões**: medido que 236
+  dos 249 materiais do catálogo não tinham NENHUM monstro dropando algo com
+  nome parecido — praticamente só alcançáveis via missão. Distribuídos
+  automaticamente pros 53 monstros do bestiário por faixa de nível
+  (raridade do material → nível do monstro) com leve preferência temática
+  quando dava pra inferir do id do monstro (bicho/planta/mineral), e
+  balanceado pra não empilhar tudo nos mesmos poucos monstros. Bug achado
+  no meio do caminho: `nivel_recomendado` tem texto tipo "1-3 (andar 2)" —
+  o "(andar 2)" é o **piso de Aincrad**, não dificuldade; contar esse
+  número junto na média de nível quase classificou o chefe de raid
+  (`baran_o_rei_touro`, "andar 2, conteúdo de raid", sem range numérico de
+  dificuldade nenhum) como nível 2 — corrigido antes de aplicar, ele ficou
+  com material lendário como deveria. Schema:
+  `scripts/db/schema_cobertura_drops_bestiario.sql`.
+- **Mecânica de drop unificada num lugar só**: nova função
+  `resolver_drops(jsonb)` — UM roll compartilhado por evento (não mais um
+  roll independente por entrada, que era a correção da rodada anterior),
+  comparado contra o percentual de CADA entrada da lista. Quem tem chance
+  menor "bate" só se o roll for baixo o bastante, e nesse caso TODA entrada
+  de chance igual ou maior bate junto (mesmo roll comparado contra vários
+  limiares) — exatamente o exemplo do pedido (drop de 20% batendo arrasta
+  o de 30% junto). Testado isoladamente 10x com uma lista de 4 chances
+  (55/60/25/7%): toda vez que o 7% bateu, os outros 3 bateram junto;
+  confirmado. `combater_monstro` foi reescrito pra chamar essa função em
+  vez de ter a lógica de roll embutida — é o "em um lugar só" do pedido, e
+  fica pronta pra qualquer outro sistema (chefe, por exemplo) reusar sem
+  duplicar. Schema:
+  `scripts/db/schema_profissoes_ferramenta_obrigatoria_e_drop_unico.sql`.
+
+Não mexido (fora do escopo do pedido, documentado pra não sumir): ~13
+materiais legados dos drops originais dos monstros (ex. "Pele Rústica",
+"Dente Pequeno", "Carne Simples" do Rato Gigante) não são usados em nenhuma
+receita — flavor loot pré-existente, inofensivo, não bloqueia craft de
+nada.
+
 ## Novo nesta rodada — bugs achados jogando de verdade: drop de combate, ovo, Domador
 
 Lista grande de feedback de uso real (13 itens) mais 2 interjeições

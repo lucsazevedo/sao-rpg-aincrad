@@ -56,5 +56,30 @@ HTTP real (Shen craftou "Martelo Comum" do Ferreiro, virou linha em
 - Ferramenta é craftável por qualquer ofício relacionado (ex: Ferreiro
   crafta a Incubadora do Domador), ou cada ofício craft a própria
   ferramenta?
-- Ferramenta é item único por personagem (upa a mesma peça) ou consumível
-  que precisa reposição em algum nível (ex: quebra depois de X usos)?
+
+## ✅ Fechado (11/08) — ferramenta obrigatória em toda receita de item, e gasta de verdade
+
+Pedido do usuário: "todas [as profissões] precisam de ferramentas que são
+gastos no craft". Respondendo a pergunta em aberto acima ("item único ou
+consumível que quebra"): ficou **híbrido** — a ferramenta é um item
+duradouro (upa de tier, craftada uma vez via `craftar_ferramenta`), mas tem
+uma chance real de ser **destruída** quando o craft de item "danifica" ela
+(`ferramenta_danificada`, já existia como flag desde antes mas nunca fazia
+nada — 8% em sucesso parcial, 20% em falha). Quando destrói, some de
+`personagem_ferramentas` e o jogador precisa craftar de novo, gastando
+material de novo — é o "gasto no craft" pedido, sem transformar ferramenta
+em item de uso único (o que mataria o sentido de ter tier/refino).
+
+Todas as 205 receitas tipo=item (16 profissões) agora têm
+`requer_ferramenta_id` apontando pro tier de ferramenta correspondente ao
+próprio nível da receita — sem a ferramenta certa craftada, `craftar_item`
+recusa antes de gastar fôlego/material. Achado no caminho: 60 das 90
+receitas de ferramenta das 15 profissões não-Domador (n2/n3_est1/n5/n5_ref)
+nunca tinham virado linha real em `ferramentas_oficio` — craftar essas
+"tiers" produzia ferramenta fantasma, sem bônus nenhum. Corrigido (bônus
+novo: n1=1, n2=1, n3_est1=1 transitório, n3_est2=2, n5=3 transitório,
+n5_ref=4).
+
+Schema: `scripts/db/schema_ferramentas_tiers_completos.sql` +
+`scripts/db/schema_receitas_requer_ferramenta.sql` +
+`scripts/db/schema_profissoes_ferramenta_obrigatoria_e_drop_unico.sql`.
