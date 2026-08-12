@@ -1,0 +1,444 @@
+<title>AINCRAD — Manual do Mestre</title>
+<style>
+/* ===================== tokens (idêntico ao Manual do Jogador) ===================== */
+:root{
+  --void:#080b14; --void-2:#0b0f1c;
+  --panel:#101a30; --panel-2:#152040; --line:#213257; --line-soft:#182444;
+  --cian:#57d6f5; --cian-dim:#2c6f8a; --cian-glow:rgba(87,214,245,.18);
+  --ambar:#f0b94e; --ambar-dim:#8a6a2a; --ambar-glow:rgba(240,185,78,.16);
+  --texto:#e9eefb; --texto-dim:#93a0c2; --texto-faint:#5c6889;
+  --verde:#5fdc93; --dourado:#f0b94e; --vermelho:#f0715f;
+  --cor:#f0715f; --ref:#57d6f5; --tec:#5fdc93; --con:#c48af5; --esp:#f0b94e;
+  --f-display:ui-monospace,"Cascadia Code","SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --f-body:-apple-system,BlinkMacSystemFont,"Segoe UI","Inter",system-ui,sans-serif;
+  --radius:2px;
+}
+*{box-sizing:border-box}
+::selection{background:var(--ambar);color:var(--void)}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--void);color:var(--texto);font-family:var(--f-body);
+  font-size:16px;line-height:1.6;background-image:
+    radial-gradient(1200px 600px at 15% -10%, var(--ambar-glow), transparent 60%),
+    radial-gradient(900px 500px at 110% 10%, var(--cian-glow), transparent 55%);
+  background-attachment:fixed;
+}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:700;color:var(--texto);text-wrap:balance;letter-spacing:.02em}
+p{margin:0 0 12px;max-width:72ch}
+a{color:var(--ambar)}
+.mono{font-family:var(--f-display)}
+
+.wrap{display:grid;grid-template-columns:272px minmax(0,1fr);min-height:100vh}
+@media (max-width:900px){.wrap{grid-template-columns:1fr}}
+.nav{
+  position:sticky;top:0;align-self:start;height:100vh;overflow-y:auto;
+  border-right:1px solid var(--line-soft);background:linear-gradient(180deg,var(--void-2),var(--void));
+  padding:22px 14px 40px;
+}
+@media (max-width:900px){.nav{position:relative;height:auto;border-right:none;border-bottom:1px solid var(--line-soft)}}
+.nav-brand{display:flex;align-items:center;gap:10px;padding:4px 10px 18px;border-bottom:1px solid var(--line-soft);margin-bottom:14px}
+.nav-brand .diamante{width:11px;height:11px;background:var(--ambar);transform:rotate(45deg);box-shadow:0 0 12px var(--ambar)}
+.nav-brand b{font-family:var(--f-display);font-size:14px;letter-spacing:.14em;color:var(--texto)}
+.nav-brand small{display:block;font-size:9.5px;color:var(--texto-faint);letter-spacing:.1em}
+.nav-grupo{margin-bottom:4px}
+.nav-grupo-titulo{font-family:var(--f-display);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--texto-faint);padding:14px 10px 6px}
+.nav a.nav-link{
+  display:block;padding:7px 10px;font-size:13px;color:var(--texto-dim);text-decoration:none;
+  border-left:2px solid transparent;transition:color .15s,border-color .15s,background .15s;
+}
+.nav a.nav-link:hover{color:var(--texto);background:var(--panel)}
+.nav a.nav-link.ativo{color:var(--ambar);border-left-color:var(--ambar);background:var(--panel)}
+
+.main{padding:48px clamp(20px,5vw,64px) 100px;min-width:0}
+.coluna{max-width:760px}
+section.bloco{margin-bottom:64px;scroll-margin-top:20px}
+.eyebrow{font-family:var(--f-display);font-size:11px;letter-spacing:.22em;text-transform:uppercase;color:var(--ambar);margin-bottom:8px;display:flex;align-items:center;gap:8px}
+.eyebrow::before{content:"";width:18px;height:1px;background:var(--ambar)}
+h2.titulo-secao{font-size:30px;margin:0 0 6px}
+.sub{color:var(--texto-dim);font-size:15px;margin-bottom:26px;max-width:68ch}
+
+.hero{
+  position:relative;padding:80px clamp(20px,6vw,64px) 64px;border-bottom:1px solid var(--line-soft);
+  background:
+    linear-gradient(180deg, rgba(240,185,78,.07), transparent 40%),
+    repeating-linear-gradient(90deg, transparent 0 79px, rgba(240,185,78,.035) 79px 80px);
+}
+.hero-tag{font-family:var(--f-display);font-size:12px;letter-spacing:.3em;color:var(--cian);margin-bottom:18px;text-transform:uppercase}
+.hero h1{font-size:clamp(40px,7vw,76px);line-height:.96;margin:0 0 18px;
+  background:linear-gradient(180deg,#fff, var(--ambar) 120%);-webkit-background-clip:text;background-clip:text;color:transparent;
+  filter:drop-shadow(0 0 30px var(--ambar-glow));
+}
+.hero p.lead{font-size:17px;color:var(--texto-dim);max-width:62ch}
+.hero-stats{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap}
+.hero-stat b{display:block;font-family:var(--f-display);font-size:28px;color:var(--cian);font-variant-numeric:tabular-nums}
+.hero-stat span{display:block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--texto-faint);margin-top:2px}
+.hero-frame{position:absolute;inset:18px;border:1px solid var(--line-soft);pointer-events:none}
+.hero-frame::before,.hero-frame::after{content:"";position:absolute;width:22px;height:22px;border:1px solid var(--ambar)}
+.hero-frame::before{top:-1px;left:-1px;border-right:none;border-bottom:none}
+.hero-frame::after{bottom:-1px;right:-1px;border-left:none;border-top:none}
+
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media (max-width:640px){.grid-2,.grid-3{grid-template-columns:1fr}}
+
+table{border-collapse:collapse;width:100%;font-size:14px}
+.tabela-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius)}
+th,td{padding:9px 12px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{font-family:var(--f-display);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--ambar);background:var(--panel-2)}
+tbody tr:last-child td{border-bottom:none}
+tbody tr:hover{background:var(--panel)}
+td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
+
+.callout{border-left:3px solid var(--cian);background:var(--panel);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;margin:18px 0}
+.callout p:last-child{margin-bottom:0}
+.callout-titulo{font-family:var(--f-display);font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--cian);margin-bottom:6px}
+.callout.confidencial{border-left-color:var(--vermelho)}
+.callout.confidencial .callout-titulo{color:var(--vermelho)}
+
+.badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-display);font-size:11px;letter-spacing:.06em;
+  padding:3px 9px;border:1px solid var(--line);border-radius:20px;color:var(--texto-dim)}
+.badge .dot{width:6px;height:6px;border-radius:50%}
+
+.attr-cor .pill-attr,.badge-cor{color:var(--cor);border-color:var(--cor)}
+.attr-ref .pill-attr,.badge-ref{color:var(--ref);border-color:var(--ref)}
+.attr-tec .pill-attr,.badge-tec{color:var(--tec);border-color:var(--tec)}
+.attr-con .pill-attr,.badge-con{color:var(--con);border-color:var(--con)}
+.attr-esp .pill-attr,.badge-esp{color:var(--esp);border-color:var(--esp)}
+.pill-attr{font-family:var(--f-display);font-size:10.5px;letter-spacing:.08em;padding:3px 10px;border:1px solid currentColor;border-radius:20px;white-space:nowrap}
+
+.indice-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:30px}
+.chip{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;color:var(--texto-dim);text-decoration:none;
+  padding:6px 12px;border:1px solid var(--line);border-radius:20px;transition:border-color .15s,color .15s}
+.chip:hover{color:var(--texto);border-color:var(--ambar)}
+.chip-dot{width:6px;height:6px;border-radius:50%;background:currentColor}
+.chip.attr-cor{color:var(--cor)}.chip.attr-ref{color:var(--ref)}.chip.attr-tec{color:var(--tec)}
+.chip.attr-con{color:var(--con)}.chip.attr-esp{color:var(--esp)}
+.chip.attr-cor:hover,.chip.attr-ref:hover,.chip.attr-tec:hover,.chip.attr-con:hover,.chip.attr-esp:hover{border-color:currentColor}
+
+.entrada{padding:26px 0;border-top:1px solid var(--line-soft)}
+.entrada:first-of-type{border-top:none;padding-top:0}
+.entrada-head{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-bottom:8px;flex-wrap:wrap}
+.entrada-head-nome{display:flex;align-items:center;gap:12px}
+.entrada-icone{width:38px;height:38px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 0 6px rgba(0,0,0,.5))}
+.entrada h3{font-size:21px;margin:0}
+.entrada-marca{color:var(--texto-dim);font-style:italic;font-size:14.5px;margin-bottom:10px;max-width:68ch}
+.entrada-faz{font-size:13.5px;color:var(--texto-dim);margin-bottom:18px;max-width:68ch}
+.entrada-faz b{color:var(--ambar);font-family:var(--f-display);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-right:6px}
+
+.moves-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
+.move{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;display:flex;flex-direction:column;gap:8px}
+.move-eyebrow{font-family:var(--f-display);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--texto-faint)}
+.move-head{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+.move-head h4{margin:0;font-size:15.5px;color:var(--texto)}
+.move-attr{font-family:var(--f-display);font-size:11px;color:var(--ambar);white-space:nowrap}
+.move-bonus{color:var(--ambar);margin-left:4px}
+.move-gatilho{font-size:13px;color:var(--texto-dim);font-style:italic;margin:0}
+.move-resultados{display:flex;flex-direction:column;gap:8px;margin-top:4px}
+.resultado{display:flex;gap:10px;font-size:13px}
+.r-tag{flex-shrink:0;font-family:var(--f-display);font-size:11px;font-weight:700;width:34px;padding-top:1px}
+.r-dez .r-tag{color:var(--verde)}
+.r-sete .r-tag{color:var(--dourado)}
+.r-seis .r-tag{color:var(--vermelho)}
+.r-corpo p{margin:0;color:var(--texto-dim)}
+.r-corpo ul{margin:0;padding-left:16px;color:var(--texto-dim)}
+.r-corpo li{margin-bottom:2px}
+.move-limitbreak{border-color:var(--ambar-dim);background:linear-gradient(180deg,rgba(240,185,78,.07),var(--panel) 40%)}
+.move-exclusivo{border-color:var(--cian-dim);background:linear-gradient(180deg,rgba(87,214,245,.07),var(--panel) 40%)}
+
+.creditos{border-top:1px solid var(--line-soft);padding-top:24px;color:var(--texto-faint);font-size:13px}
+.creditos b{color:var(--texto-dim)}
+
+@media print{.nav{display:none}.wrap{grid-template-columns:1fr}}
+</style>
+
+<div class="wrap">
+  <nav class="nav" id="nav">
+    <div class="nav-brand">
+      <span class="diamante"></span>
+      <div><b>AINCRAD</b><small>MANUAL DO MESTRE · v1</small></div>
+    </div>
+
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">Como narrar</div>
+      <a class="nav-link" href="#principios">Princípios de Resolução</a>
+      <a class="nav-link" href="#monstros">Monstros: HP &amp; Ameaça</a>
+      <a class="nav-link" href="#objetivo">Combate por Objetivo</a>
+      <a class="nav-link" href="#bonus">Bônus, Dificuldade &amp; Equipamento</a>
+    </div>
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">Economia da mesa</div>
+      <a class="nav-link" href="#crafting">Crafting &amp; Raridade</a>
+      <a class="nav-link" href="#marcos">Progresso por Marcos</a>
+      <a class="nav-link" href="#downtime">Downtime entre Sessões</a>
+      <a class="nav-link" href="#reputacao">Favor &amp; Suspeita</a>
+      <a class="nav-link" href="#raid">Preparação de Raid</a>
+    </div>
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">Referência rápida</div>
+      <a class="nav-link" href="#armas">Armas <span class="mono" style="color:var(--texto-faint)">· 23</span></a>
+      <a class="nav-link" href="#profissoes">Profissões <span class="mono" style="color:var(--texto-faint)">· 16</span></a>
+    </div>
+    <div class="nav-grupo">
+      <div class="nav-grupo-titulo">&nbsp;</div>
+      <a class="nav-link" href="manual-jogador.html">📘 Manual do Jogador →</a>
+      <a class="nav-link" href="#creditos">Créditos</a>
+    </div>
+  </nav>
+
+  <main class="main">
+    <header class="hero" id="topo" style="margin:-48px clamp(-20px,-5vw,-64px) 56px">
+      <div class="hero-frame"></div>
+      <div class="hero-tag">Manual do Mestre · confidencial de mesa</div>
+      <h1>AINCRAD</h1>
+      <p class="lead">Tudo que fica atrás da tela: como escalar um monstro, como rodar crafting,
+        como o grupo evolui sem XP por kill, o que fazer entre sessões, como reputação e
+        preparação de raid mudam a mesa. Se você é jogador e não é o Mestre desta campanha, o
+        <a href="manual-jogador.html">Manual do Jogador</a> é o documento certo pra você.</p>
+      <div class="hero-stats">
+        <div class="hero-stat"><b>6</b><span>Ferramentas de mesa</span></div>
+        <div class="hero-stat"><b>5</b><span>Níveis de ameaça</span></div>
+        <div class="hero-stat"><b>4</b><span>Marcos p/ Evolução</span></div>
+        <div class="hero-stat"><b>0–6</b><span>Trilha de Preparação</span></div>
+      </div>
+    </header>
+
+    <div class="coluna">
+
+    <section class="bloco" id="principios">
+      <div class="eyebrow">Capítulo 01</div>
+      <h2 class="titulo-secao">Princípios de Resolução</h2>
+      <p class="sub">Quatro regras que resolvem 90% das dúvidas de mesa antes de virarem debate.</p>
+      <ol style="padding-left:20px">
+        <li>Só role quando houver risco, incerteza ou custo interessante.</li>
+        <li>Se um Move de Arma ou Profissão se aplica, ele vem antes de um Move Núcleo.</li>
+        <li>Um 6− nunca significa "nada acontece". Ele muda a situação, revela perigo, cobra um
+          recurso ou faz o mundo avançar.</li>
+        <li>A dificuldade aumenta o <b>custo e a posição ficcional</b>, nunca transforma 2d6 numa
+          matemática inflada.</li>
+      </ol>
+    </section>
+
+    <section class="bloco" id="monstros">
+      <div class="eyebrow">Capítulo 02</div>
+      <h2 class="titulo-secao">Monstros: HP &amp; Nível de Ameaça</h2>
+      <p class="sub">PBTA normalmente resolve combate de forma puramente narrativa, mas pra mesa
+        com raid grande cada monstro também tem um número simples de golpes bons pra derrotar —
+        não é "HP" em pontos, é literalmente quantos acertos (7+ no teste) ele aguenta antes de
+        cair.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Nível de ameaça</th><th>Golpes pra derrotar</th><th>Exemplo</th></tr></thead>
+          <tbody>
+            <tr><td>fraco</td><td class="mono">1–2</td><td>Frenzy Boar</td></tr>
+            <tr><td>comum</td><td class="mono">3–4</td><td>Ruin Kobold Trooper, Stabbing Wasp</td></tr>
+            <tr><td>forte</td><td class="mono">5–7</td><td>Ruin Kobold Sentinel</td></tr>
+            <tr><td>elite</td><td class="mono">8–10</td><td>miniboss de campo/dungeon</td></tr>
+            <tr><td>chefe</td><td class="mono">4 barras × 6–8 (24–32 total)</td><td>Illfang the Kobold Lord</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px">Um "golpe" conta em qualquer sucesso (7–9 ou 10+) num teste de
+        ataque 2d6+atributo; a diferença entre parcial e completo vira dano extra, efeito
+        adicional, ou custo pro atacante — a seu critério.</p>
+      <p>Cada monstro pode ter <b>Resistências</b> (tipo de dano que conta menos — ex: armadura
+        pesada ignora ataque fora do ponto fraco), <b>Vulnerabilidades</b> (conta em dobro ou
+        sucesso automático — ex: fogo contra planta) e uma <b>Tabela de Drop</b> própria (% de
+        chance por item, independente do Col/XP fixo).</p>
+    </section>
+
+    <section class="bloco" id="objetivo">
+      <div class="eyebrow">Capítulo 03</div>
+      <h2 class="titulo-secao">Combate por Objetivo</h2>
+      <p class="sub">Antes de uma luta relevante, pergunte: <b>o que cada lado quer?</b> Escapar,
+        segurar uma porta, atravessar, capturar, proteger alguém, obter material, silenciar um
+        alarme, ou derrotar — reduzir o inimigo a zero golpes é só uma das saídas possíveis.</p>
+      <div class="callout">
+        <p>Quando o objetivo é alcançado, a cena pode acabar mesmo com o monstro de pé. Quando o
+          objetivo falha, matar o monstro depois <b>não apaga automaticamente</b> a consequência
+          já estabelecida.</p>
+      </div>
+    </section>
+
+    <section class="bloco" id="bonus">
+      <div class="eyebrow">Capítulo 04</div>
+      <h2 class="titulo-secao">Bônus, Dificuldade &amp; Equipamento</h2>
+      <ul style="padding-left:20px">
+        <li>Um teste recebe no máximo <b>+1 numérico externo</b> além do atributo.</li>
+        <li>Equipamento usa esse único espaço de bônus — bônus iguais não somam.</li>
+        <li>Ajuda, posição, mapa, plano e profissão melhoram <b>efeito, informação ou custo</b> —
+          nunca somam outro modificador numérico.</li>
+        <li>Requisito de atributo é porta ficcional: sem ele, o item ainda pode ser usado, só não
+          libera o benefício especial.</li>
+      </ul>
+    </section>
+
+    <section class="bloco" id="crafting">
+      <div class="eyebrow">Capítulo 05</div>
+      <h2 class="titulo-secao">Crafting &amp; Raridade</h2>
+      <p class="sub">Processo em 4 etapas: <b>coletar</b> materiais → <b>levar</b> a um
+        artesão/usar profissão → <b>fabricar</b> o equipamento → <b>qualidade final</b> (depende
+        do nível da profissão, materiais usados e sorte).</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Raridade</th><th>Descrição</th></tr></thead>
+          <tbody>
+            <tr><td><span class="badge" style="border-color:#eceaf5;color:#eceaf5">Comum</span></td><td>Básico, fácil de produzir, sem bônus adicionais — ideal para iniciantes</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--tec);color:var(--tec)">Incomum</span></td><td>Pequenos bônus nos atributos principais, maior durabilidade</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--ref);color:var(--ref)">Raro</span></td><td>Bônus significativos, pode ter efeitos especiais</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--con);color:var(--con)">Épico</span></td><td>Grandes bônus, efeitos poderosos ou únicos, criado por artesãos mestres</td></tr>
+            <tr><td><span class="badge" style="border-color:var(--ambar);color:var(--ambar)">Lendário</span></td><td>Bônus máximos, efeitos que podem mudar o rumo de uma batalha, raríssimos</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px">Nem todo item vem de crafting comum — alguns são únicos e só
+        existem em missão, baú ou drop de chefe derrotado.</p>
+    </section>
+
+    <section class="bloco" id="marcos">
+      <div class="eyebrow">Capítulo 06</div>
+      <h2 class="titulo-secao">Progresso por Marcos</h2>
+      <p class="sub">Não existe XP por matar. Ao final de uma sessão, cada jogador marca no
+        máximo <b>2 Marcos</b>, um por frase verdadeira:</p>
+      <ul style="padding-left:20px">
+        <li>mudamos algo concreto no andar;</li>
+        <li>escolhi um custo que revelou quem meu personagem é;</li>
+        <li>criei ou aprofundei um vínculo, dívida ou rivalidade;</li>
+        <li>usei minha arma ou profissão pra resolver algo que outro personagem não resolveria do
+          mesmo modo.</li>
+      </ul>
+      <div class="callout">
+        <div class="callout-titulo">Com 4 Marcos — escolha uma Evolução e zere os 4</div>
+        <ol style="padding-left:20px;margin:0">
+          <li>Aumentar um atributo em +1 (máximo +2).</li>
+          <li>Adquirir um Move Avançado de arma ou profissão, criado com o Mestre.</li>
+          <li>Definir uma Especialidade: uma vez por sessão, quando ela importa, fazer uma
+            pergunta útil ao Mestre antes de rolar.</li>
+          <li>Criar um Contato confiável, receita, refúgio ou rota que passe a existir no mundo.</li>
+          <li>Transformar uma cicatriz, dívida ou fracasso em um novo Move de personagem.</li>
+        </ol>
+      </div>
+      <p>Depois da terceira Evolução, cada nova Evolução deve ser consequência de um arco
+        importante — não apenas contagem de sessões.</p>
+    </section>
+
+    <section class="bloco" id="downtime">
+      <div class="eyebrow">Capítulo 07</div>
+      <h2 class="titulo-secao">Downtime entre Sessões</h2>
+      <p class="sub">Todo personagem, inclusive ausente da sessão, escolhe <b>uma</b> ação de
+        downtime. Resolva por ficção; role 2d6 só se houver oposição real.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Ação</th><th>Atributo</th><th>10+</th><th>7–9</th></tr></thead>
+          <tbody>
+            <tr><td>Trabalhar</td><td class="mono">Técnica</td><td>2 unidades/serviços úteis</td><td>1, com custo de material ou prazo</td></tr>
+            <tr><td>Pesquisar</td><td class="mono">Conhecimento</td><td>fato confirmado + pista</td><td>pista com lacuna ou atenção indesejada</td></tr>
+            <tr><td>Treinar</td><td class="mono">atributo usado</td><td>ignora 1 Condição coerente na próxima cena</td><td>preparo, mas começa Exaurido ou observado</td></tr>
+            <tr><td>Cultivar contato</td><td class="mono">Espírito</td><td>1 Favor</td><td>Favor com pedido futuro</td></tr>
+            <tr><td>Explorar rota</td><td class="mono">Reflexo</td><td>rota segura + detalhe útil</td><td>rota, mas com perigo conhecido</td></tr>
+            <tr><td>Recuperar-se</td><td class="mono">Corpo/Espírito</td><td>remove 1 Condição persistente</td><td>remove, mas perde tempo, Col ou recurso</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px">Um 6− cria nova pressão, rumor ou obrigação — nunca retira a
+        participação do jogador ausente.</p>
+    </section>
+
+    <section class="bloco" id="reputacao">
+      <div class="eyebrow">Capítulo 08</div>
+      <h2 class="titulo-secao">Favor &amp; Suspeita</h2>
+      <p class="sub">Reputação registrada separadamente por pessoa, facção ou clã, de
+        <span class="mono">-3</span> a <span class="mono">+3</span>. Muda no máximo 1 ponto por
+        relação em cada sessão, só quando algo público ou relevante aconteceu.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Valor</th><th>Estado</th><th>Efeito</th></tr></thead>
+          <tbody>
+            <tr><td class="mono" style="color:var(--verde)">+3</td><td>Protegido</td><td>ajuda importante, acesso e defesa pública; favor pode ser cobrado</td></tr>
+            <tr><td class="mono" style="color:var(--dourado)">+1 a +2</td><td>Favor</td><td>informação, desconto, abrigo ou benefício social plausível</td></tr>
+            <tr><td class="mono">0</td><td>Neutro</td><td>resposta normal</td></tr>
+            <tr><td class="mono" style="color:var(--dourado)">-1 a -2</td><td>Suspeita</td><td>preço maior, vigilância ou condição extra</td></tr>
+            <tr><td class="mono" style="color:var(--vermelho)">-3</td><td>Bloqueado</td><td>recusa, boicote ou rival ativo até a relação mudar</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px">Favor nunca compra ausência de consequência. Suspeita nunca
+        impede um jogador de agir — ela torna a ação mais interessante.</p>
+    </section>
+
+    <section class="bloco" id="raid">
+      <div class="eyebrow">Capítulo 09</div>
+      <h2 class="titulo-secao">Preparação de Raid</h2>
+      <p class="sub">O andar tem uma trilha coletiva de <b>Preparação 0–6</b>. Uma missão
+        importante de preparação concede 1 Crédito a uma categoria — nunca dois créditos da mesma
+        categoria pela mesma solução.</p>
+      <div class="tabela-wrap">
+        <table>
+          <thead><tr><th>Crédito</th><th>Exemplos de contribuição</th><th>Uso no raid</th></tr></thead>
+          <tbody>
+            <tr><td>Reconhecimento</td><td>Cartógrafo, exploração</td><td>revelar rota, fraqueza ou saída</td></tr>
+            <tr><td>Suprimentos</td><td>Cozinheiro, Comerciante, coleta</td><td>remover Exaurido ou evitar perda de recurso</td></tr>
+            <tr><td>Equipamento</td><td>Ferreiro, Costureiro, Joalheiro</td><td>evitar rachadura ou absorver impacto</td></tr>
+            <tr><td>Saúde</td><td>Médico, Alquimista, Cristais</td><td>remover Ferido/Abalado de um aliado</td></tr>
+            <tr><td>Coesão</td><td>Informante, Músico, liderança</td><td>impedir pânico, deserção ou conflito de clã</td></tr>
+            <tr><td>Inteligência</td><td>Informante, investigação, NPC</td><td>declarar uma verdade preparada sobre o chefe</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p style="margin-top:14px">Cada Crédito é gasto uma vez, por alguém que explique como o
+        preparo aparece na cena. Em Preparação 6, o raid começa com vantagem coletiva: escolha uma
+        rota segura, uma retirada conhecida, ou um fato confirmado sobre o chefe. Em 3 ou menos,
+        escolha uma pressão inicial de logística, moral ou informação errada.</p>
+    </section>
+
+    <section class="bloco" id="armas">
+      <div class="eyebrow">Referência rápida</div>
+      <h2 class="titulo-secao">Armas de Aincrad</h2>
+      <p class="sub">Mesmo conteúdo do Manual do Jogador — reproduzido aqui pra você não precisar
+        alternar de aba durante a sessão. Golpes normais em verde/dourado/vermelho (10+/7–9/6−),
+        <b style="color:var(--ambar)">Limit Break</b> com borda dourada.</p>
+      <div class="indice-chips">__INDICE_ARMAS__</div>
+      __ARMAS__
+    </section>
+
+    <section class="bloco" id="profissoes">
+      <div class="eyebrow">Referência rápida</div>
+      <h2 class="titulo-secao">Profissões de Aincrad</h2>
+      <p class="sub">Move de Ofício, Move de Cena e <b style="color:var(--cian)">Move Exclusivo</b>
+        de cada uma das 16 — pronto pra consultar sem precisar abrir o Compêndio do app no meio da
+        cena.</p>
+      <div class="indice-chips">__INDICE_PROFISSOES__</div>
+      __PROFISSOES__
+    </section>
+
+    <footer class="creditos" id="creditos">
+      <p><b>AINCRAD — Manual do Mestre</b> · Sword Art Online, sistema PBTA (Powered by the
+        Apocalypse) · material de mesa, uso não comercial entre o grupo de jogo.</p>
+      <p>Compilado a partir do banco de dados vivo da campanha — ferramentas de mesa adaptadas de
+        <span class="mono">docs/regras_nucleares_campanha.md</span> e
+        <span class="mono">docs/guia_sistema_aincrad.md</span>. Regras que o jogador também
+        precisa (atributos, Moves Núcleo, criação de personagem) ficam no
+        <a href="manual-jogador.html">Manual do Jogador</a>.</p>
+    </footer>
+
+    </div>
+  </main>
+</div>
+
+<script>
+(function(){
+  var secoes = document.querySelectorAll('main section.bloco, main header.hero');
+  var links = document.querySelectorAll('.nav a.nav-link');
+  if (!secoes.length || !links.length) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if (!e.isIntersecting) return;
+      var id = e.target.id;
+      links.forEach(function(l){
+        l.classList.toggle('ativo', l.getAttribute('href') === '#' + id);
+      });
+    });
+  }, { rootMargin: '-15% 0px -70% 0px' });
+  secoes.forEach(function(s){ if (s.id) obs.observe(s); });
+})();
+</script>

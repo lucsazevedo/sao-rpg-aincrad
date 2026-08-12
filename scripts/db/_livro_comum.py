@@ -1,28 +1,22 @@
 # -*- coding: utf-8 -*-
 """
-Gera o livro de regras público (HTML) a partir de:
-  - scripts/db/_conteudo_livro.json (23 armas + 16 profissões, puxado do
-    banco ao vivo por _extrair_conteudo_livro.py)
-  - texto curado à mão pras seções de mundo/mecânica (abaixo), baseado em
-    docs/guia_sistema_aincrad.md e docs/regras_nucleares_campanha.md
-
-Rode: python scripts/db/_gerar_livro_regras.py <caminho_saida.html>
+Funções e dados compartilhados entre os dois manuais públicos
+(_gerar_manual_jogador.py e _gerar_manual_mestre.py) — leitura do
+conteúdo vivo do banco, escape/slug, ícones em data URI, e os
+geradores de card de arma/profissão (idênticos nos dois manuais).
 """
 import base64
 import html
 import json
 import os
-import sys
 import unicodedata
 
 RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-CONTEUDO_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "_conteudo_livro.json")
+AQUI = os.path.dirname(os.path.abspath(__file__))
+CONTEUDO_PATH = os.path.join(AQUI, "_conteudo_livro.json")
 IMAGENS_PROF = os.path.join(RAIZ, "imagens", "profissoes_icones")
 IMAGENS_ARMA = os.path.join(RAIZ, "imagens", "armas_icones")
 
-# Artifact tem CSP estrita — nada de <img src="caminho relativo"> ou URL
-# externa (nem raw.githubusercontent). Os ícones (pequenos, ~220KB no
-# total) entram embutidos como data URI.
 _cache_datauri = {}
 def datauri_png(caminho):
     if caminho not in _cache_datauri:
@@ -33,9 +27,6 @@ def datauri_png(caminho):
                 b64 = base64.b64encode(f.read()).decode("ascii")
             _cache_datauri[caminho] = f"data:image/png;base64,{b64}"
     return _cache_datauri[caminho]
-
-with open(CONTEUDO_PATH, encoding="utf-8") as f:
-    DADOS = json.load(f)
 
 def esc(s):
     return html.escape(str(s or ""), quote=True)
@@ -49,9 +40,49 @@ def slug(s):
         s = s.replace("--", "-")
     return s.strip("-")
 
-ATRIBUTO_SIGLA = {"Corpo": "COR", "Reflexo": "REF", "Técnica": "TEC", "Conhecimento": "CON", "Espírito": "ESP"}
 ATRIBUTO_CLASSE = {"Corpo": "cor", "Reflexo": "ref", "Técnica": "tec", "Conhecimento": "con", "Espírito": "esp"}
 SIGLA_PARA_NOME = {"COR": "Corpo", "REF": "Reflexo", "TEC": "Técnica", "CON": "Conhecimento", "ESP": "Espírito"}
+
+# "Faz" — resumo de uma linha por profissão (usuário pediu: "detalhado o
+# que cada uma faz"). Mesmo texto da tabela em docs/guia_sistema_aincrad.md;
+# Cartógrafo/Informante/Mestre de Montarias/Minerador atualizados pra
+# reforma de roster de 12/08.
+FAZ_PROFISSAO = {
+    "Alquimista": "Cria poções e itens especiais usando misturas e reações químicas.",
+    "Caçador": "Rastreia, caça, pesca e coleta materiais de criaturas e monstros.",
+    "Cartógrafo": "Explora e revela mapas, descobre rotas e locais escondidos — e agora também documenta a história do andar (absorveu o papel de Historiador).",
+    "Comerciante": "Negocia, compra e vende itens e informações.",
+    "Costureiro": "Cria e aprimora roupas e itens de tecido.",
+    "Cozinheiro": "Prepara refeições que recuperam energia e concedem bônus temporários.",
+    "Domador": "Treina e cria laços com criaturas; comanda aliados em batalha.",
+    "Ferreiro": "Forja armas, armaduras e ferramentas; domina fogo e metal.",
+    "Informante": "Reúne pesquisa, contatos, rumores e leitura social — sabe onde procurar e com quem falar.",
+    "Joalheiro": "Cria, repara e aprimora anéis, colares, pedras preciosas e acessórios.",
+    "Lenhador": "Coleta madeira e recursos da natureza com agilidade.",
+    "Médico": "Cuida de ferimentos, doenças e efeitos negativos; especialista em cura.",
+    "Mercenário": "Guerreiro de aluguel; combate corpo a corpo, escolta e trabalho perigoso — inclusive o que era do Coveiro (recuperação de corpos).",
+    "Mestre de Montarias": "Aproxima, doma e conduz criaturas usadas como montaria.",
+    "Minerador": "Escava túneis e extrai minérios das regiões mais perigosas e profundas.",
+    "Músico": "Usa música para inspirar aliados, fortalecer o moral e influenciar emoções.",
+}
+
+ICONE_PROF = {
+    "Alquimista": "alquimista", "Caçador": "cacador", "Comerciante": "comerciante",
+    "Costureiro": "costureiro", "Cozinheiro": "cozinheiro", "Domador": "domador",
+    "Ferreiro": "ferreiro", "Informante": "informante", "Lenhador": "lenhador",
+    "Mercenário": "mercenario", "Médico": "medico", "Mestre de Montarias": "mestre_de_montarias",
+    "Minerador": "minerador", "Músico": "musico", "Joalheiro": "joalheiro",
+}
+ICONE_ARMA = {
+    "Chakrams": "chakrams", "Escudo e Espada": "escudo_e_espada", "Espada Longa": "espada_longa",
+    "Foice": "foice", "Katana": "katana", "Lança": "lanca", "Machado": "machado", "Martelo": "martelo",
+    "Rapieira": "rapieira", "Bastão": "bastao", "Clava": "clava", "Corrente com Peso": "corrente_com_peso",
+    "Leque": "leque",
+}
+
+def carregar_dados():
+    with open(CONTEUDO_PATH, encoding="utf-8") as f:
+        return json.load(f)
 
 def lista_ou_paragrafo(v):
     """dez_mais/sete_nove vêm como lista (armas + move exclusivo de profissão)
@@ -90,20 +121,6 @@ def bloco_move(move, rotulo, variante=""):
       <p class="move-gatilho">{esc(move.get("gatilho", ""))}</p>
       <div class="move-resultados">{resultados}</div>
     </article>'''
-
-ICONE_PROF = {
-    "Alquimista": "alquimista", "Caçador": "cacador", "Comerciante": "comerciante",
-    "Costureiro": "costureiro", "Cozinheiro": "cozinheiro", "Domador": "domador",
-    "Ferreiro": "ferreiro", "Informante": "informante", "Lenhador": "lenhador",
-    "Mercenário": "mercenario", "Médico": "medico", "Mestre de Montarias": "mestre_de_montarias",
-    "Minerador": "minerador", "Músico": "musico", "Joalheiro": "joalheiro",
-}
-ICONE_ARMA = {
-    "Chakrams": "chakrams", "Escudo e Espada": "escudo_e_espada", "Espada Longa": "espada_longa",
-    "Foice": "foice", "Katana": "katana", "Lança": "lanca", "Machado": "machado", "Martelo": "martelo",
-    "Rapieira": "rapieira", "Bastão": "bastao", "Clava": "clava", "Corrente com Peso": "corrente_com_peso",
-    "Leque": "leque",
-}
 
 def icone_img_html(pasta, slug_map, chave, classe):
     slug_arq = slug_map.get(chave)
@@ -146,6 +163,8 @@ def card_profissao(p):
         + bloco_move(p.get("move_c"), "Move Exclusivo", variante="move-exclusivo")
     )
     icone = icone_img_html(IMAGENS_PROF, ICONE_PROF, p["nome"], "entrada-icone")
+    faz = FAZ_PROFISSAO.get(p["nome"], "")
+    faz_html = f'<p class="entrada-faz"><b>Faz:</b> {esc(faz)}</p>' if faz else ""
     return f'''<section class="entrada entrada-prof attr-{classe_attr}" id="prof-{sid}">
       <header class="entrada-head">
         <div class="entrada-head-nome">
@@ -155,6 +174,7 @@ def card_profissao(p):
         <span class="pill-attr">{esc(atributo)}</span>
       </header>
       <p class="entrada-marca">{esc(p.get("marca", ""))}</p>
+      {faz_html}
       <div class="moves-grid">{moves_html}</div>
     </section>'''
 
@@ -162,37 +182,18 @@ def chip_indice(nome, alvo, atributo_nome):
     classe_attr = ATRIBUTO_CLASSE.get(atributo_nome, "")
     return f'<a class="chip attr-{classe_attr}" href="#{alvo}-{slug(nome)}"><span class="chip-dot"></span>{esc(nome)}</a>'
 
-armas_ordenadas = sorted(DADOS["armas"], key=lambda a: a["nome"])
-profissoes_ordenadas = sorted(DADOS["profissoes"], key=lambda p: p["nome"])
-
-indice_armas = "".join(
-    chip_indice(a["nome"], "arma", a.get("move_a", {}).get("atributo") or SIGLA_PARA_NOME.get(a.get("atributo", ""), ""))
-    for a in armas_ordenadas
-)
-indice_profissoes = "".join(
-    chip_indice(p["nome"], "prof", p.get("move_c", {}).get("atributo") or p.get("move_a", {}).get("atributo") or SIGLA_PARA_NOME.get(p.get("atributo", ""), ""))
-    for p in profissoes_ordenadas
-)
-
-armas_html = "".join(card_arma(a) for a in armas_ordenadas)
-profissoes_html = "".join(card_profissao(p) for p in profissoes_ordenadas)
-
-print(f"armas: {len(armas_ordenadas)}  profissoes: {len(profissoes_ordenadas)}")
-
-# ============================================================ template
-TEMPLATE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "_livro_template.html")
-with open(TEMPLATE_PATH, encoding="utf-8") as f:
-    template = f.read()
-
-saida_html = (
-    template
-    .replace("__INDICE_ARMAS__", indice_armas)
-    .replace("__INDICE_PROFISSOES__", indice_profissoes)
-    .replace("__ARMAS__", armas_html)
-    .replace("__PROFISSOES__", profissoes_html)
-)
-
-destino = sys.argv[1] if len(sys.argv) > 1 else os.path.join(RAIZ, "scripts", "_livro_regras.html")
-with open(destino, "w", encoding="utf-8") as f:
-    f.write(saida_html)
-print("gravado em", destino)
+def montar_armas_e_profissoes(dados):
+    armas_ordenadas = sorted(dados["armas"], key=lambda a: a["nome"])
+    profissoes_ordenadas = sorted(dados["profissoes"], key=lambda p: p["nome"])
+    indice_armas = "".join(
+        chip_indice(a["nome"], "arma", a.get("move_a", {}).get("atributo") or SIGLA_PARA_NOME.get(a.get("atributo", ""), ""))
+        for a in armas_ordenadas
+    )
+    indice_profissoes = "".join(
+        chip_indice(p["nome"], "prof", p.get("move_c", {}).get("atributo") or p.get("move_a", {}).get("atributo") or SIGLA_PARA_NOME.get(p.get("atributo", ""), ""))
+        for p in profissoes_ordenadas
+    )
+    armas_html = "".join(card_arma(a) for a in armas_ordenadas)
+    profissoes_html = "".join(card_profissao(p) for p in profissoes_ordenadas)
+    print(f"armas: {len(armas_ordenadas)}  profissoes: {len(profissoes_ordenadas)}")
+    return indice_armas, indice_profissoes, armas_html, profissoes_html

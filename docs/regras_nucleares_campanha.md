@@ -211,8 +211,8 @@ mesma categoria pela mesma solução.
 | Suprimentos | Cozinheiro, Comerciante, coleta | remover Exaurido ou evitar perda de recurso |
 | Equipamento | Ferreiro, Costureiro, Joalheiro | evitar uma rachadura ou absorver impacto |
 | Saúde | Médico, Alquimista, Cristais | remover Ferido/Abalado de um aliado |
-| Coesão | Diplomata, Músico, liderança | impedir pânico, deserção ou conflito de clã |
-| Inteligência | Bibliotecário, investigação, NPC | declarar uma verdade preparada sobre o chefe |
+| Coesão | Informante, Músico, liderança | impedir pânico, deserção ou conflito de clã |
+| Inteligência | Informante, investigação, NPC | declarar uma verdade preparada sobre o chefe |
 
 Cada Crédito é gasto uma vez, por alguém que explique como o preparo aparece
 na cena. Em Preparação 6, o raid começa com uma vantagem coletiva: escolha

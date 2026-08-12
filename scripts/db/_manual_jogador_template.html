@@ -1,4 +1,4 @@
-<title>AINCRAD — Manual do Sistema</title>
+<title>AINCRAD — Manual do Jogador</title>
 <style>
 /* ===================== tokens ===================== */
 :root{
@@ -128,7 +128,9 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
 .entrada-head-nome{display:flex;align-items:center;gap:12px}
 .entrada-icone{width:38px;height:38px;object-fit:contain;flex-shrink:0;filter:drop-shadow(0 0 6px rgba(0,0,0,.5))}
 .entrada h3{font-size:21px;margin:0}
-.entrada-marca{color:var(--texto-dim);font-style:italic;font-size:14.5px;margin-bottom:18px;max-width:68ch}
+.entrada-marca{color:var(--texto-dim);font-style:italic;font-size:14.5px;margin-bottom:10px;max-width:68ch}
+.entrada-faz{font-size:13.5px;color:var(--texto-dim);margin-bottom:18px;max-width:68ch}
+.entrada-faz b{color:var(--cian);font-family:var(--f-display);font-size:11px;letter-spacing:.08em;text-transform:uppercase;margin-right:6px}
 
 .moves-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:14px}
 .move{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;display:flex;flex-direction:column;gap:8px}
@@ -163,7 +165,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
   <nav class="nav" id="nav">
     <div class="nav-brand">
       <span class="diamante"></span>
-      <div><b>AINCRAD</b><small>MANUAL DO SISTEMA · v1</small></div>
+      <div><b>AINCRAD</b><small>MANUAL DO JOGADOR · v1</small></div>
     </div>
 
     <div class="nav-grupo">
@@ -171,6 +173,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
       <a class="nav-link" href="#mundo">O Mundo</a>
       <a class="nav-link" href="#mecanica">Sistema Central</a>
       <a class="nav-link" href="#atributos">Atributos</a>
+      <a class="nav-link" href="#moves-nucleo">Moves Núcleo</a>
       <a class="nav-link" href="#criacao">Criando um Personagem</a>
       <a class="nav-link" href="#condicoes">Condições &amp; Crítico</a>
       <a class="nav-link" href="#combate">Combate, Duelos &amp; PK</a>
@@ -189,6 +192,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </div>
     <div class="nav-grupo">
       <div class="nav-grupo-titulo">&nbsp;</div>
+      <a class="nav-link" href="manual-mestre.html">🔒 Manual do Mestre →</a>
       <a class="nav-link" href="#creditos">Créditos</a>
     </div>
   </nav>
@@ -196,12 +200,12 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
   <main class="main">
     <header class="hero" id="topo" style="margin:-48px clamp(-20px,-5vw,-64px) 56px">
       <div class="hero-frame"></div>
-      <div class="hero-tag">Manual do Sistema · Powered by the Apocalypse</div>
+      <div class="hero-tag">Manual do Jogador · Powered by the Apocalypse</div>
       <h1>AINCRAD</h1>
       <p class="lead">Cem andares. Um NerveGear que não desliga. Um jogo onde morrer é morrer de verdade —
-        e a única saída é vencer. Este é o manual de regras completo da mesa: mecânica central,
-        os cinco atributos, as 23 armas, as 16 profissões, equipamento, clãs e os sistemas de
-        cooperação de Aincrad.</p>
+        e a única saída é vencer. Este é tudo que você precisa pra criar e jogar seu personagem:
+        mecânica central, os cinco atributos, os moves que qualquer um pode usar, as 23 armas, as 16
+        profissões, equipamento, clãs e os sistemas de cooperação de Aincrad.</p>
       <div class="hero-stats">
         <div class="hero-stat"><b>2d6</b><span>Motor de resolução</span></div>
         <div class="hero-stat"><b>5</b><span>Atributos</span></div>
@@ -282,8 +286,87 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
       </div>
     </section>
 
-    <section class="bloco" id="criacao">
+    <section class="bloco" id="moves-nucleo">
       <div class="eyebrow">Capítulo 04</div>
+      <h2 class="titulo-secao">Moves Núcleo</h2>
+      <p class="sub">Sete moves que qualquer personagem pode usar, não importa a arma ou a
+        profissão — cobrem o que todo mundo em Aincrad precisa fazer pra sobreviver: agir sob
+        pressão, ler uma situação, proteger alguém, fugir, negociar, descansar e ajudar um aliado.
+        Regra de prioridade: se um Move de Arma ou de Profissão se aplica à cena, ele vem antes de
+        um Move Núcleo.</p>
+
+      <div class="moves-grid" style="grid-template-columns:repeat(auto-fit,minmax(320px,1fr))">
+        <article class="move">
+          <div class="move-eyebrow">Move Núcleo</div>
+          <header class="move-head"><h4>Enfrentar Perigo</h4><span class="move-attr">+atributo</span></header>
+          <p class="move-gatilho">Quando você age rápido diante de uma ameaça imediata, role 2d6 + o atributo que melhor descreve sua abordagem.</p>
+          <div class="move-resultados">
+            <div class="resultado r-dez"><span class="r-tag">10+</span><div class="r-corpo"><p>Você faz e escolhe 1: mantém posição, protege algo que carregava, ou obtém uma abertura clara.</p></div></div>
+            <div class="resultado r-sete"><span class="r-tag">7–9</span><div class="r-corpo"><p>Você faz, mas escolha 1: fica Exposto, perde tempo/recurso, ou a ameaça muda de alvo.</p></div></div>
+            <div class="resultado r-seis"><span class="r-tag">6−</span><div class="r-corpo"><p>O Mestre faz um movimento forte, mas mostra a consequência antes de torná-la irreversível.</p></div></div>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-eyebrow">Move Núcleo</div>
+          <header class="move-head"><h4>Ler a Situação</h4><span class="move-attr">+Conhecimento</span></header>
+          <p class="move-gatilho">Quando você para para entender uma pessoa, local ou ameaça sob pressão, role 2d6+Conhecimento.</p>
+          <div class="move-resultados">
+            <div class="resultado r-dez"><span class="r-tag">10+</span><div class="r-corpo"><p>Faça 3 perguntas da lista abaixo — a resposta é sempre honesta e útil.</p></div></div>
+            <div class="resultado r-sete"><span class="r-tag">7–9</span><div class="r-corpo"><p>Faça 1 pergunta.</p></div></div>
+            <div class="resultado r-seis"><span class="r-tag">6−</span><div class="r-corpo"><p>Você encontra uma resposta incompleta ou deixa claro que está investigando.</p></div></div>
+          </div>
+          <p style="font-size:12.5px;color:var(--texto-faint);margin:2px 0 0">O que aqui é realmente perigoso? · O que está prestes a mudar? · O que alguém quer que eu não perceba? · Qual é a melhor rota, ferramenta ou pessoa pra isto? · Como posso proteger alguém agora?</p>
+        </article>
+
+        <article class="move">
+          <div class="move-eyebrow">Move Núcleo</div>
+          <header class="move-head"><h4>Proteger</h4><span class="move-attr">+Corpo/Espírito</span></header>
+          <p class="move-gatilho">Quando você se coloca entre alguém e uma consequência, role 2d6+Corpo ou Espírito.</p>
+          <div class="move-resultados">
+            <div class="resultado r-dez"><span class="r-tag">10+</span><div class="r-corpo"><p>Negue a reação/efeito e escolha 1: mude a posição de ambos, force recuo, ou assuma uma Condição menor.</p></div></div>
+            <div class="resultado r-sete"><span class="r-tag">7–9</span><div class="r-corpo"><p>Você protege, mas assume uma Condição ou perde algo importante.</p></div></div>
+            <div class="resultado r-seis"><span class="r-tag">6−</span><div class="r-corpo"><p>Você ainda é a barreira, mas a ameaça encontra um preço que o grupo verá chegando.</p></div></div>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-eyebrow">Move Núcleo</div>
+          <header class="move-head"><h4>Escapar</h4><span class="move-attr">+Reflexo</span></header>
+          <p class="move-gatilho">Quando o grupo abandona uma situação perigosa antes de resolvê-la, role 2d6+Reflexo — alguém lidera, os demais explicam como contribuem.</p>
+          <div class="move-resultados">
+            <div class="resultado r-dez"><span class="r-tag">10+</span><div class="r-corpo"><p>Todos saem e escolhem 1: não deixam rastro, levam algo importante, ou chegam onde queriam.</p></div></div>
+            <div class="resultado r-sete"><span class="r-tag">7–9</span><div class="r-corpo"><p>Saem, mas escolhem 1: deixam recurso, alguém fica Separado, ou o inimigo ganha posição.</p></div></div>
+            <div class="resultado r-seis"><span class="r-tag">6−</span><div class="r-corpo"><p>A saída existe, mas cobra uma Condição do líder ou cria uma consequência pública.</p></div></div>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-eyebrow">Move Núcleo</div>
+          <header class="move-head"><h4>Convencer ou Firmar Termos</h4><span class="move-attr">+Espírito</span></header>
+          <p class="move-gatilho">Quando você pede que alguém assuma risco, mude de ideia ou aceite um acordo, role 2d6+Espírito.</p>
+          <div class="move-resultados">
+            <div class="resultado r-dez"><span class="r-tag">10+</span><div class="r-corpo"><p>Escolha 2 — <b>7–9:</b> escolha 1: a pessoa acredita que você cumprirá sua parte; ela aceita agora; ela revela qual é a condição real; ninguém importante percebe a negociação.</p></div></div>
+            <div class="resultado r-seis"><span class="r-tag">6−</span><div class="r-corpo"><p>A pessoa responde com uma condição, aliado ou preço que muda a cena.</p></div></div>
+          </div>
+        </article>
+
+        <article class="move">
+          <div class="move-eyebrow">Move Núcleo · sem rolagem</div>
+          <header class="move-head"><h4>Recuperar Fôlego</h4></header>
+          <p class="move-gatilho">Quando o grupo tem abrigo, tempo e meios pra cuidar de si, cada pessoa escolhe uma: remover uma Condição que faça sentido tratar, reparar um item rachado, ou conversar de verdade com alguém — marque 1 Impulso se expuser uma verdade. Em dungeon, descansar também faz o Mestre avançar uma pressão da área.</p>
+        </article>
+
+        <article class="move">
+          <div class="move-eyebrow">Move Núcleo · sem rolagem</div>
+          <header class="move-head"><h4>Trabalhar em Conjunto</h4></header>
+          <p class="move-gatilho">Um aliado só ajuda se disser <b>o que faz na ficção</b> — ele não soma número. Antes da rolagem principal, escolha um efeito: dar cobertura, fornecer ferramenta/informação, absorver um custo possível, ou ampliar o alcance do sucesso. Em 7–9 ou 6−, o ajudante também é um alvo legítimo da complicação.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="bloco" id="criacao">
+      <div class="eyebrow">Capítulo 05</div>
       <h2 class="titulo-secao">Criando um Personagem</h2>
       <ol style="padding-left:20px">
         <li>Escolha uma arma (das 23 — ver Compêndio).</li>
@@ -301,7 +384,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </section>
 
     <section class="bloco" id="condicoes">
-      <div class="eyebrow">Capítulo 05</div>
+      <div class="eyebrow">Capítulo 06</div>
       <h2 class="titulo-secao">Condições &amp; Crítico</h2>
       <p class="sub">Condições substituem pontos de vida. Marque uma somente quando a ficção muda —
         nunca acumula a mesma condição duas vezes.</p>
@@ -330,7 +413,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </section>
 
     <section class="bloco" id="combate">
-      <div class="eyebrow">Capítulo 06</div>
+      <div class="eyebrow">Capítulo 07</div>
       <h2 class="titulo-secao">Combate, Duelos &amp; Player Killing</h2>
       <p class="sub">Fora de combate contra monstros, Aincrad também tem regras pra conflito entre
         jogadores — a parte mais perigosa do jogo, porque nela a morte é sempre uma escolha de
@@ -380,7 +463,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </section>
 
     <section class="bloco" id="equipamento">
-      <div class="eyebrow">Capítulo 07</div>
+      <div class="eyebrow">Capítulo 08</div>
       <h2 class="titulo-secao">Equipamento &amp; Raridade</h2>
       <p class="sub">Toda arma e equipamento tem uma raridade — cinco degraus, cada um mais raro e
         mais forte que o anterior.</p>
@@ -403,7 +486,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </section>
 
     <section class="bloco" id="clas">
-      <div class="eyebrow">Capítulo 08</div>
+      <div class="eyebrow">Capítulo 09</div>
       <h2 class="titulo-secao">Clãs</h2>
       <p class="sub">Um clã é a guilda do seu personagem — proteção, propósito e política em
         Aincrad. Entrar em um é opcional, mas quem entra ganha muito mais do que companhia.</p>
@@ -423,7 +506,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </section>
 
     <section class="bloco" id="cooperacao">
-      <div class="eyebrow">Capítulo 09</div>
+      <div class="eyebrow">Capítulo 10</div>
       <h2 class="titulo-secao">Cooperação</h2>
       <p class="sub">Sistemas que existem só porque Aincrad tem 10 mil jogadores nela — nenhum
         cobra taxa, todos existem pra fortalecer o grupo.</p>
@@ -445,7 +528,7 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </section>
 
     <section class="bloco" id="minigames">
-      <div class="eyebrow">Capítulo 10</div>
+      <div class="eyebrow">Capítulo 11</div>
       <h2 class="titulo-secao">Minigames de Profissão</h2>
       <p class="sub">Duas profissões ganham uma mecânica jogável de verdade, além do Move Exclusivo
         — ambas com freio embutido contra farm infinito.</p>
@@ -465,12 +548,14 @@ td.mono,th.mono{font-family:var(--f-display);font-variant-numeric:tabular-nums}
     </section>
 
     <footer class="creditos" id="creditos">
-      <p><b>AINCRAD — Manual do Sistema</b> · Sword Art Online, sistema PBTA (Powered by the
+      <p><b>AINCRAD — Manual do Jogador</b> · Sword Art Online, sistema PBTA (Powered by the
         Apocalypse) · material de mesa, uso não comercial entre o grupo de jogo.</p>
-      <p>Compilado a partir do banco de dados vivo da campanha — mecânica central e regras de
-        Condições/PK adaptadas de <span class="mono">docs/guia_sistema_aincrad.md</span> e
+      <p>Compilado a partir do banco de dados vivo da campanha — mecânica central, Moves Núcleo e
+        regras de Condições/PK adaptadas de <span class="mono">docs/guia_sistema_aincrad.md</span> e
         <span class="mono">docs/regras_nucleares_campanha.md</span>. Armas e profissões: conteúdo
         aplicado de fato no jogo no momento da geração deste documento.</p>
+      <p>Ferramentas de mestre (monstros, crafting, evolução, downtime, reputação, preparação de
+        raid) ficam no <a href="manual-mestre.html">Manual do Mestre</a>.</p>
     </footer>
 
     </div>
