@@ -21,7 +21,8 @@ WHERE nome = 'Cartógrafo';
 -- ======================================================================
 alter table clas add column if not exists profissoes_aceitas text[];
 
-create or replace view clas_publico as
+drop view if exists clas_publico;
+create view clas_publico as
   select nome, destaque, forca, necessidade, rival, rumor, status, resumo, bons,
          precisa, nao_admitem, proximo, atravessado, quests, aparecem, simbolo,
          logo_url, recrutando, profissoes_aceitas, reputacao, updated_at,

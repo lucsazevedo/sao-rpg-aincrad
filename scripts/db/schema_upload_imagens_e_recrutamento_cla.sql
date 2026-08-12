@@ -15,8 +15,10 @@ insert into storage.buckets (id, name, public)
 values ('compendio-imagens', 'compendio-imagens', true)
 on conflict (id) do nothing;
 
-alter table storage.objects enable row level security;
-
+-- storage.objects já vem com RLS ligado por padrão em todo projeto
+-- Supabase (schema gerenciado pela extensão de Storage) — o role de
+-- conexão direta (postgres) não é dono da tabela pra rodar ALTER TABLE
+-- nela, então não precisa e não pode; só cria as políticas mesmo.
 drop policy if exists "compendio_imagens_leitura_publica" on storage.objects;
 create policy "compendio_imagens_leitura_publica" on storage.objects for select
   using (bucket_id = 'compendio-imagens');
@@ -33,7 +35,11 @@ create policy "compendio_imagens_escrita_mestre" on storage.objects for all
 alter table clas add column if not exists logo_url text;
 alter table clas add column if not exists recrutando boolean not null default false;
 
-create or replace view clas_publico as
+-- drop+create em vez de "or replace": a ordem/nome das colunas mudou
+-- (logo_url/recrutando entraram no meio), e o Postgres só deixa
+-- CREATE OR REPLACE VIEW acrescentar coluna no fim, não reordenar.
+drop view if exists clas_publico;
+create view clas_publico as
   select nome, destaque, forca, necessidade, rival, rumor, status, resumo, bons,
          precisa, nao_admitem, proximo, atravessado, quests, aparecem, simbolo,
          logo_url, recrutando, reputacao, updated_at,
