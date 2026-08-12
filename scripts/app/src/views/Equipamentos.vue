@@ -23,6 +23,9 @@
         <div v-else class="grid">
           <div v-for="e in paperDoll" :key="e.key" class="card">
             <div class="ct">{{ e.emoji }} {{ e.label }}</div>
+            <div v-if="e.key==='arma' && e.item" style="display:flex;justify-content:center;margin:4px 0">
+              <IconeArma :tipo="e.item.tipo" :raridade="e.item.raridade" :tamanho="56" />
+            </div>
             <div class="cs">{{ e.item ? e.item.nome : 'Nada equipado' }}</div>
             <div class="faixa">
               <span class="pill on" v-if="e.item && e.item.raridade">{{ e.item.raridade }}</span>
@@ -57,6 +60,7 @@
           </div>
           <div class="grid">
             <div v-for="it in inventarioFiltrado" :key="it.id" class="card" :style="{'border-left': tipoBorda(it.tipo)}">
+              <IconeArma v-if="it.tipo==='arma'" :tipo="armaTipoDe(it)" :raridade="it.raridade" :tamanho="40" style="margin-bottom:4px" />
               <div class="ct">{{ it.nome || it.item_id }}</div>
               <div class="cs">
                 {{ tituloTipo(it.tipo) }}
@@ -85,6 +89,7 @@
         </div>
         <div v-else class="grid">
           <div v-for="it in stash" :key="it.id" class="card" :style="{'border-left': tipoBorda(it.tipo)}">
+            <IconeArma v-if="it.tipo==='arma'" :tipo="armaTipoDe(it)" :raridade="it.raridade" :tamanho="40" style="margin-bottom:4px" />
             <div class="ct">{{ it.nome || it.item_id }}</div>
             <div class="cs">{{ tituloTipo(it.tipo) }}</div>
             <div class="faixa"><span class="pill on">x {{ it.quantidade || 1 }}</span></div>
@@ -104,6 +109,7 @@ import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
 import TituloHUD from '../components/TituloHUD.vue'
+import IconeArma from '../components/IconeArma.vue'
 
 const auth = useAuthStore()
 defineEmits(['pedir-login'])
@@ -118,7 +124,7 @@ const abas = [
 const busca = ref(''), filtroTipo = ref('')
 const carregando = ref(true)
 const inventario = ref([])
-const armasCatalogo = ref({}) // id -> nome, pro slot "arma" (personagens.arma não é linha de inventario)
+const armasCatalogo = ref({}) // id -> {nome,tipo,raridade}, pro slot "arma" (personagens.arma não é linha de inventario) e pro ícone por tipo/raridade
 
 // Os 10 slots decididos em dolist/08_equipamento_inventario.md.
 const SLOTS = [
@@ -163,17 +169,18 @@ function tipoBorda(t){
 
 // ========= paper doll =========
 const paperDoll = computed(() => {
-  const nomeArma = auth.personagem?.arma
-    ? (armasCatalogo.value[auth.personagem.arma] || auth.personagem.arma)
-    : null
+  const armaId = auth.personagem?.arma
+  const armaCat = armaId ? armasCatalogo.value[armaId] : null
   return SLOTS.map(s => {
     if (s.key === 'arma') {
-      return { ...s, item: nomeArma ? { nome: nomeArma } : null }
+      if (!armaId) return { ...s, item: null }
+      return { ...s, item: { nome: armaCat?.nome || armaId, tipo: armaCat?.tipo, raridade: armaCat?.raridade } }
     }
     const it = inventario.value.find(i => i.equipado && i.slot === s.key)
     return { ...s, item: it ? { nome: it.nome || it.item_id, raridade: it.raridade } : null }
   })
 })
+function armaTipoDe(it){ return armasCatalogo.value[it.item_id]?.tipo }
 
 // ========= mochila vs baú (item 8, coluna "local") =========
 const mochila = computed(() => inventario.value.filter(i => (i.local||'mochila') === 'mochila'))
@@ -263,12 +270,12 @@ async function carregarTudo(){
     const nome = auth.personagem.nome
     const [rInv, rArm] = await Promise.all([
       supa.from('inventario').select('*').eq('personagem_nome', nome).eq('excluido', false).order('obtido_em', {ascending:false}).limit(500),
-      Object.keys(armasCatalogo.value).length ? Promise.resolve(null) : supa.from('armas').select('id,nome'),
+      Object.keys(armasCatalogo.value).length ? Promise.resolve(null) : supa.from('armas').select('id,nome,tipo,raridade'),
     ])
     inventario.value = rInv.data || []
     if (rArm?.data) {
       const m = {}
-      rArm.data.forEach(a => { m[a.id] = a.nome })
+      rArm.data.forEach(a => { m[a.id] = { nome: a.nome, tipo: a.tipo, raridade: a.raridade } })
       armasCatalogo.value = m
     }
   } catch(e){ console.warn(e) }

@@ -82,13 +82,19 @@
           style="flex:1 1 220px;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
         <span class="pill">{{ itensFiltrados.length }} {{ itensFiltrados.length===1?'item':'itens' }}</span>
       </div>
-      <div class="grid">
-        <div v-for="it in itensFiltrados" :key="chave(it)" class="card" :class="classeRaridade(it)" role="button" tabindex="0"
+      <div class="grid" :class="{ 'grid-icones': abaAtiva==='armas' }">
+        <div v-for="it in itensFiltrados" :key="chave(it)" class="card" :class="[abaAtiva==='armas' ? '' : classeRaridade(it), { 'card-icone': abaAtiva==='armas' }]" role="button" tabindex="0"
           @click="abrir(it)" @keydown.enter="abrir(it)" @keydown.space.prevent="abrir(it)" style="cursor:pointer">
-          <img v-if="campo(it,'img')" :src="urlImagem(campo(it,'img'))" :alt="titulo(it)" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
-          <div class="ct">{{ titulo(it) }}</div>
-          <div class="cs" v-if="subtitulo(it)">{{ subtitulo(it) }}</div>
-          <p v-if="resumo(it)">{{ resumo(it).slice(0,160) }}{{ resumo(it).length>160?'…':'' }}</p>
+          <template v-if="abaAtiva==='armas'">
+            <IconeArma :tipo="it.tipo" :raridade="it.raridade" :tamanho="64" />
+            <div class="ct" style="text-align:center">{{ titulo(it) }}</div>
+          </template>
+          <template v-else>
+            <img v-if="campo(it,'img')" :src="urlImagem(campo(it,'img'))" :alt="titulo(it)" style="width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:6px;margin-bottom:8px">
+            <div class="ct">{{ titulo(it) }}</div>
+            <div class="cs" v-if="subtitulo(it)">{{ subtitulo(it) }}</div>
+            <p v-if="resumo(it)">{{ resumo(it).slice(0,160) }}{{ resumo(it).length>160?'…':'' }}</p>
+          </template>
         </div>
       </div>
     </div>
@@ -101,7 +107,10 @@
           <button class="btn ghost" @click="aberto=null">✕</button>
         </div>
         <div class="body">
-          <img v-if="campo(aberto,'img')" :src="urlImagem(campo(aberto,'img'))" :alt="titulo(aberto)" style="width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px">
+          <div v-if="abaAtiva==='armas'" style="display:flex;justify-content:center;margin-bottom:12px">
+            <IconeArma :tipo="aberto.tipo" :raridade="aberto.raridade" :tamanho="120" />
+          </div>
+          <img v-else-if="campo(aberto,'img')" :src="urlImagem(campo(aberto,'img'))" :alt="titulo(aberto)" style="width:100%;max-height:320px;object-fit:cover;border-radius:8px;margin-bottom:12px">
           <div v-if="subtitulo(aberto)" class="cs" style="margin-bottom:8px">{{ subtitulo(aberto) }}</div>
           <div v-for="f in tabAtual.pills||[]" :key="f" style="display:inline-block;margin:0 6px 8px 0">
             <span v-if="campo(aberto,f)" class="pill on">{{ String(campo(aberto,f)) }}</span>
@@ -126,6 +135,7 @@ import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
 import { urlImagem } from '../lib/imagens.js'
 import TituloHUD from '../components/TituloHUD.vue'
+import IconeArma from '../components/IconeArma.vue'
 import { desenharTerreno } from '../lib/mapaTerreno.js'
 
 const auth = useAuthStore()

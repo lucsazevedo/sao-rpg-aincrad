@@ -110,8 +110,12 @@
             justify-content: space-between;
           "
         >
-          <div style="display: flex; gap: 6px; flex-wrap: wrap">
-            <span class="pill on">⚔️ {{ armaAtual }}</span>
+          <div style="display: flex; gap: 6px; flex-wrap: wrap; align-items: center">
+            <span class="pill on" style="display: inline-flex; align-items: center; gap: 6px">
+              <IconeArma v-if="armaDetalhe" :tipo="armaDetalhe.tipo" :raridade="armaDetalhe.raridade" :tamanho="18" />
+              <template v-else>⚔️</template>
+              {{ armaAtual }}
+            </span>
             <span class="pill"
               >🛠️ {{ auth.personagem.profissao || "Sem profissão" }}</span
             >
@@ -173,6 +177,7 @@ import { useAuthStore } from "../stores/auth.js";
 import { useSupa } from "../lib/supabase.js";
 import StatusBar from "../components/StatusBar.vue";
 import TituloHUD from "../components/TituloHUD.vue";
+import IconeArma from "../components/IconeArma.vue";
 const auth = useAuthStore();
 const supa = useSupa();
 defineEmits(["pedir-login"]);
@@ -276,8 +281,20 @@ const armaAtual = computed(() => {
     .trim()
     .replace(/\b\w/g, (l) => l.toUpperCase());
 });
+const armaDetalhe = ref(null); // {tipo,raridade} da arma equipada — pro ícone colorido junto do pill
+async function carregarArmaDetalhe() {
+  armaDetalhe.value = null;
+  const id = auth.personagem?.arma;
+  if (!id) return;
+  try {
+    const r = await supa.from("armas").select("tipo,raridade").eq("id", id).maybeSingle();
+    armaDetalhe.value = r.data || null;
+  } catch (e) {
+    console.warn(e);
+  }
+}
 onMounted(async () => {
   if (!auth.ready) await auth.init();
-  await Promise.all([carregarReputacoes(), carregarLimitBreakers()]);
+  await Promise.all([carregarReputacoes(), carregarLimitBreakers(), carregarArmaDetalhe()]);
 });
 </script>

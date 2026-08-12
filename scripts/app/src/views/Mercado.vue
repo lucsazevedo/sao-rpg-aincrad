@@ -22,6 +22,7 @@
         <div v-if="!loja.itens.length" class="msg warn">Nada à venda aqui pro seu nível ainda.</div>
         <div v-else class="grid">
           <div v-for="it in loja.itens" :key="it.id" class="card">
+            <IconeArma v-if="loja.tabela==='armas'" :tipo="it.tipo" :raridade="it.raridade" :tamanho="48" style="margin-bottom:4px" />
             <div class="ct">{{ it.nome }}</div>
             <div class="cs">{{ it.raridade || 'comum' }}{{ it.slot ? ' · '+it.slot : '' }}</div>
             <div class="faixa">
@@ -43,6 +44,7 @@
       <div v-else-if="!vitrine.length" class="msg warn">Nenhum anúncio publicado no momento.</div>
       <div v-else class="grid">
         <div v-for="a in vitrine" :key="a.id" class="card">
+          <IconeArma v-if="a.inventario?.tipo==='arma'" :tipo="armaTipoDe(a.inventario.item_id)" :raridade="a.raridade" :tamanho="48" style="margin-bottom:4px" />
           <div class="ct">{{ a.inventario && a.inventario.item_id ? a.inventario.item_id : ('Item #' + a.inventario_id) }}</div>
           <div class="cs">{{ a.inventario && a.inventario.tipo ? a.inventario.tipo : 'item' }} · {{ a.raridade || 'comum' }}</div>
           <p>{{ a.descricao || 'Clique para comprar.' }}</p>
@@ -64,6 +66,7 @@
       <div v-else-if="!meus.length" class="msg warn">Você não publicou nenhum anúncio ainda. Vá em "Meu inventário" → "Publicar".</div>
       <div v-else class="grid">
         <div v-for="a in meus" :key="a.id" class="card">
+          <IconeArma v-if="a.inventario?.tipo==='arma'" :tipo="armaTipoDe(a.inventario.item_id)" :raridade="a.raridade" :tamanho="48" style="margin-bottom:4px" />
           <div class="ct">{{ a.inventario && a.inventario.item_id ? a.inventario.item_id : 'Item' }}</div>
           <div class="cs">Preço: {{ a.preco_col }} Col · Status {{ a.status || 'ativo' }}</div>
           <p>{{ a.descricao || '—' }}</p>
@@ -78,6 +81,7 @@
       <div v-else-if="!meuInv.length" class="msg warn">Inventário vazio. Faça missões para obter itens e materiais.</div>
       <div v-else class="grid">
         <div v-for="it in meuInv" :key="it.id" class="card">
+          <IconeArma v-if="it.tipo==='arma'" :tipo="armaTipoDe(it.item_id)" :raridade="it.raridade" :tamanho="48" style="margin-bottom:4px" />
           <div class="ct">{{ it.item_id }} · x{{ it.qtd||1 }}</div>
           <div class="cs">{{ it.tipo }} · {{ it.raridade || 'comum' }}</div>
           <div style="display:grid;gap:6px;margin-top:6px">
@@ -98,6 +102,7 @@ import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import StatusBar from '../components/StatusBar.vue'
 import TituloHUD from '../components/TituloHUD.vue'
+import IconeArma from '../components/IconeArma.vue'
 const auth = useAuthStore()
 defineEmits(['pedir-login'])
 const supa = useSupa()
@@ -106,6 +111,8 @@ const tab = ref('npcs')
 const vitrine = ref([]), meus = ref([]), meuInv = ref([])
 const carregandoV = ref(false), carregandoM = ref(false), carregandoI = ref(false)
 const lojasNpc = ref([]), carregandoNpc = ref(false), comprandoNpc = ref(null)
+const armasTipoPorId = ref({}) // item_id -> tipo (ARMAS_TIPOS), pro ícone colorido por raridade em vitrine/meus/meuinv
+function armaTipoDe(itemId){ return armasTipoPorId.value[itemId] }
 const comprando = ref(null), publicando = ref(null)
 const precos = reactive({}), descricoes = reactive({})
 
@@ -193,11 +200,12 @@ async function carregarLojasNpc(){
   carregandoNpc.value = true
   try{
     const [rArmas, rEquip, rMercado] = await Promise.all([
-      supa.from('armas').select('id,nome,preco,raridade').not('preco','is',null),
+      supa.from('armas').select('id,nome,preco,raridade,tipo').not('preco','is',null),
       supa.from('equipamentos').select('id,nome,preco,raridade,slot').not('preco','is',null),
       supa.from('mercado').select('nome,regiao,descricao').in('nome', GRUPOS_NPC.map(g=>g.nomeNpc)),
     ])
     const armas = rArmas.data || [], equip = rEquip.data || []
+    armasTipoPorId.value = Object.fromEntries(armas.map(a => [a.id, a.tipo]))
     lojasNpc.value = GRUPOS_NPC.map(g => {
       const catalogo = g.tabela === 'armas' ? armas : equip
       const m = (rMercado.data||[]).find(x => x.nome === g.nomeNpc)

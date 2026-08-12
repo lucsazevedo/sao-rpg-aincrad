@@ -109,13 +109,19 @@
                 </datalist>
               </template>
 
-              <!-- imagem: URL + preview ao vivo -->
+              <!-- imagem: upload real pro Storage (sem colar URL) + preview ao vivo -->
               <template v-else-if="c.tipo === 'imagem'">
-                <input v-model="itemAberto[c.nome]" class="ee-input" placeholder="URL completa (https://…) ou caminho tipo imagens/arquivo.png" />
                 <div v-if="itemAberto[c.nome]" class="ee-preview">
                   <img :src="urlImagem(itemAberto[c.nome])" alt="Pré-visualização da imagem" @load="e => e.target.classList.remove('erro')" @error="e => e.target.classList.add('erro')" />
-                  <small class="ee-hint">Se a imagem não aparecer acima, o link está quebrado ou não é uma URL de imagem direta.</small>
                 </div>
+                <div class="ee-upload-linha">
+                  <label class="btn tiny" :class="{ disabled: enviandoImagem[c.nome] }">
+                    {{ enviandoImagem[c.nome] ? "⏳ Enviando…" : itemAberto[c.nome] ? "🔄 Trocar imagem" : "📤 Enviar imagem" }}
+                    <input type="file" accept="image/*" style="display:none" :disabled="enviandoImagem[c.nome]" @change="(e) => enviarArquivoImagem(c, e)" />
+                  </label>
+                  <button v-if="itemAberto[c.nome]" type="button" class="btn tiny bad ghost" @click="itemAberto[c.nome] = ''">🗑️ Remover</button>
+                </div>
+                <small v-if="erroImagem[c.nome]" class="ee-hint" style="color:#e0887a">⚠️ {{ erroImagem[c.nome] }}</small>
               </template>
 
               <!-- lista de texto simples: array de strings -->
@@ -219,7 +225,7 @@
 import { ref, reactive, computed, onMounted } from "vue";
 import { useSupa } from "../lib/supabase.js";
 import { TABELAS_ADMIN } from "../lib/tabelasAdmin.js";
-import { urlImagem } from "../lib/imagens.js";
+import { urlImagem, enviarImagem } from "../lib/imagens.js";
 
 const props = defineProps({ tabela: { type: String, required: true } });
 const emit = defineEmits(["fechar"]);
@@ -242,6 +248,8 @@ const camposObjeto = reactive({});
 const opcoesReferencia = reactive({});
 const salvando = ref(false);
 const erroSalvar = ref("");
+const enviandoImagem = reactive({});
+const erroImagem = reactive({});
 
 function temCampo(nome) {
   return !!config?.campos.find((c) => c.nome === nome);
@@ -385,6 +393,22 @@ function formatarJson(nome) {
     camposJsonTexto[nome] = JSON.stringify(obj, null, 2);
   } catch {
     /* deixa como está, o indicador de inválido já avisa */
+  }
+}
+
+async function enviarArquivoImagem(campo, evento) {
+  const file = evento.target.files?.[0];
+  evento.target.value = ""; // deixa escolher o mesmo arquivo de novo depois, se precisar
+  if (!file) return;
+  erroImagem[campo.nome] = "";
+  enviandoImagem[campo.nome] = true;
+  try {
+    const pasta = props.tabela + "/" + (itemAberto.value[config.pk] || "novo");
+    itemAberto.value[campo.nome] = await enviarImagem(file, pasta);
+  } catch (e) {
+    erroImagem[campo.nome] = e.message || String(e);
+  } finally {
+    enviandoImagem[campo.nome] = false;
   }
 }
 
@@ -666,6 +690,16 @@ select.ee-input {
 }
 .ee-preview img.erro {
   display: none;
+}
+.ee-upload-linha {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.ee-upload-linha .btn.disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
 .ee-json-barra {
   display: flex;

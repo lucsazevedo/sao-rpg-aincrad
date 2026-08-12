@@ -15,7 +15,8 @@
                  busca de outra tabela via tabelaRef/campoRef) mas deixa
                  digitar algo novo. Pra vocabulário "geralmente é um
                  desses, mas pode crescer".
-   - imagem      URL de imagem com preview ao vivo abaixo do campo.
+   - imagem      upload real de arquivo (Storage do Supabase, bucket
+                 "compendio-imagens") com preview ao vivo abaixo do campo.
    - lista-texto array de strings — vira um repetidor de linhas (➕/🗑️).
    - lista       array de objetos com sub-schema fixo (itemCampos).
    - objeto      objeto de forma fixa e conhecida (campos).
@@ -172,15 +173,26 @@ export const TABELAS_ADMIN = {
     pk: "nome",
     rotulo: "Golpes de Arma",
     icone: "🗡️",
+    // 13 armas (Chakrams, Escudo e Espada, Espada Longa, Foice, Katana,
+    // Lança, Machado, Martelo, Rapieira, Bastão, Clava, Corrente com Peso,
+    // Leque) seguem hoje o SAO_PBTA_Armas_e_Moves_Atualizado.pdf: 3 golpes
+    // por arma, o 3º sempre Limit Break (+2 no acerto). Mapeamento pro
+    // schema (herdado de duas rodadas de design diferentes — ver
+    // dolist/02_ataques_limit_breaker.md): move_a = Move 1, golpe_2 =
+    // Move 2, limit_breaker = Move 3/LIMIT BREAK. move_b e golpe_3 ficam
+    // null nessas 13 (o PDF não usa 5 golpes, só 3) — só existem ainda
+    // preenchidos nas outras 10 armas (rascunho antigo, não revisado).
+    // Forma de cada JSON: {nome, atributo, gatilho, dez_mais:[...5],
+    // sete_nove:[...5], seis_menos:[...5], bonus_acerto?:"+2"}.
     campos: [
       { nome: "nome", tipo: "select", opcoes: ARMAS_TIPOS, rotulo: "Arma (precisa bater com armas.tipo)" },
       { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS_ABREV },
       { nome: "marca", tipo: "textarea" },
-      { nome: "move_a", tipo: "json" },
-      { nome: "move_b", tipo: "json" },
-      { nome: "golpe_2", tipo: "json" },
-      { nome: "golpe_3", tipo: "json" },
-      { nome: "limit_breaker", tipo: "json" },
+      { nome: "move_a", tipo: "json", rotulo: "Move 1" },
+      { nome: "golpe_2", tipo: "json", rotulo: "Move 2" },
+      { nome: "limit_breaker", tipo: "json", rotulo: "Move 3 · LIMIT BREAK (+2)" },
+      { nome: "move_b", tipo: "json", rotulo: "Move B (rascunho antigo, não usado nas 13 armas do PDF)" },
+      { nome: "golpe_3", tipo: "json", rotulo: "Golpe 3 (rascunho antigo, não usado nas 13 armas do PDF)" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
@@ -393,7 +405,9 @@ export const TABELAS_ADMIN = {
     viewLeitura: "clas_publico",
     campos: [
       { nome: "nome", tipo: "text" },
+      { nome: "logo_url", tipo: "imagem", rotulo: "Logo" },
       { nome: "destaque", tipo: "bool" },
+      { nome: "recrutando", tipo: "bool", rotulo: "Recrutando (aparece na aba de Recrutamento pros jogadores sem clã)" },
       { nome: "forca", tipo: "text" },
       { nome: "necessidade", tipo: "text" },
       { nome: "rival", tipo: "sugestao", tabelaRef: "clas", campoRef: "nome" },
