@@ -56,8 +56,16 @@
           <span v-if="ultimoResultado.xp_ganho">+{{ ultimoResultado.xp_ganho }} XP</span>
           <span v-if="ultimoResultado.col_ganho"> · +{{ ultimoResultado.col_ganho }} Col</span>
           <span v-if="ultimoResultado.vida_perdida"> · −{{ ultimoResultado.vida_perdida }} Vida</span>
-          <span v-if="ultimoResultado.drop_item"> · dropou: {{ ultimoResultado.drop_item }}</span>
           <span v-if="ultimoResultado.derrotado"> · ⚠️ Vida chegou a 0 — cure na Estalagem antes de lutar de novo.</span>
+          <div v-if="ultimoResultado.drops_todos?.length" style="margin-top:6px">
+            📦 dropou:
+            <span v-for="(d,i) in ultimoResultado.drops_todos" :key="i" class="pill on" style="margin:2px 4px 0 0;display:inline-block">
+              {{ d.tipo==='ovo' ? '🥚' : '🌿' }} {{ d.item }}{{ d.qtd>1 ? ' x'+d.qtd : '' }}
+            </span>
+          </div>
+          <div v-else-if="ultimoResultado.resultado !== 'falha'" style="margin-top:4px;color:var(--ink-dim);font-size:12.5px">
+            📦 nenhum drop desta vez
+          </div>
         </template>
       </div>
 
