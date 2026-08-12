@@ -148,6 +148,9 @@
                 "
                 >{{ r.resultado_raridade || "comum" }}</span
               >
+              <span v-if="r.requer_ferramenta_id" class="pill" :class="temFerramentaExigida(r) ? 'on' : 'bad'">
+                🔧 {{ temFerramentaExigida(r) ? "ferramenta ok" : "falta ferramenta" }}
+              </span>
             </div>
           </div>
         </div>
@@ -210,6 +213,17 @@
             </div>
             <div class="pill">Tipo: {{ selecionada.tipo }}</div>
           </div>
+          <template v-if="selecionada.requer_ferramenta_id">
+            <h4 style="margin: 10px 0 6px; color: var(--gold-bright)">
+              Ferramenta exigida
+            </h4>
+            <div class="card" style="padding: 8px 12px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px">
+              <b>{{ nomeFerramenta(selecionada.requer_ferramenta_id) }}</b>
+              <span class="pill" :class="temFerramentaExigida(selecionada) ? 'on' : 'bad'">
+                {{ temFerramentaExigida(selecionada) ? "✅ você tem" : "❌ falta craftar" }}
+              </span>
+            </div>
+          </template>
           <h4 style="margin: 10px 0 6px; color: var(--gold-bright)">
             Materiais necessários
           </h4>
@@ -285,7 +299,9 @@ const busca = ref(""),
   filtroTipo = ref("");
 const receitas = ref([]),
   catalogoMat = ref([]),
-  meuInv = ref([]);
+  meuInv = ref([]),
+  minhasFerramentas = ref([]), // ids de ferramenta_id que o personagem já tem
+  ferramentasCatalogo = ref([]); // ferramentas_oficio, pra mostrar nome bonito
 const selecionada = ref(null);
 
 // ===== ITEM 6: Título página = NOME da profissão do usuário =====
@@ -327,6 +343,7 @@ const descricaoProfissao = computed(() => {
 // ===== ITEM 12: Mostrar apenas RECEITAS FAZÍVEIS (ligado por padrão) =====
 const soFaziveis = ref(false);
 function possoCraftarReceita(r) {
+  if (r.requer_ferramenta_id && !minhasFerramentas.value.includes(r.requer_ferramenta_id)) return false;
   const mats = Array.isArray(r.materiais_com_nome) ? r.materiais_com_nome : (
     Array.isArray(r.materiais) ? r.materiais :
     (typeof r.materiais === "object" ? Object.keys(r.materiais).map(k => ({ mat_id: k, qtd: r.materiais[k] })) : [])
@@ -335,6 +352,13 @@ function possoCraftarReceita(r) {
   const inv = meuInv.value.filter(it => it.tipo === "material" && !it.excluido);
   inv.forEach(i => { somas[i.item_id] = (somas[i.item_id] || 0) + (i.qtd || 1); });
   return mats.every(m => (somas[m.mat_id] || 0) >= (m.qtd || 0));
+}
+function temFerramentaExigida(r) {
+  return !r?.requer_ferramenta_id || minhasFerramentas.value.includes(r.requer_ferramenta_id);
+}
+function nomeFerramenta(id) {
+  const f = ferramentasCatalogo.value.find(x => x.id === id);
+  return f?.nome || id;
 }
 
 const receitasFiltradas = computed(() => {
@@ -386,7 +410,7 @@ const listaMat = computed(() => {
     return Object.keys(mats).map((k) => ({ mat_id: k, qtd: mats[k] }));
   return [];
 });
-const possoCraftar = computed(() => listaMat.value.every((m) => temMat(m)));
+const possoCraftar = computed(() => temFerramentaExigida(selecionada.value) && listaMat.value.every((m) => temMat(m)));
 function temMat(m) {
   return qtdMat(m) >= m.qtd;
 }
@@ -397,7 +421,7 @@ function qtdMat(m) {
 async function carregar() {
   carregando.value = true;
   try {
-    const [rReceitas, rMats, rInv] = await Promise.all([
+    const [rReceitas, rMats, rInv, rFerr, rMinhasFerr] = await Promise.all([
       supa
         .from("receitas")
         .select("*")
@@ -413,12 +437,16 @@ async function carregar() {
         .select("*")
         .eq("personagem_nome", auth.personagem.nome)
         .eq("excluido", false),
+      supa.from("ferramentas_oficio").select("id,nome,profissao"),
+      supa.from("personagem_ferramentas").select("ferramenta_id").eq("personagem_nome", auth.personagem.nome),
     ]);
     if (rReceitas.error) throw rReceitas.error;
     if (rMats.error) throw rMats.error;
     if (rInv.error) throw rInv.error;
     receitas.value = rReceitas.data || [];
     catalogoMat.value = rMats.data || [];
+    ferramentasCatalogo.value = rFerr.data || [];
+    minhasFerramentas.value = (rMinhasFerr.data || []).map((f) => f.ferramenta_id);
     // Completa nome_mat em receitas.materiais
     receitas.value.forEach((r) => {
       const lista = Array.isArray(r.materiais)
