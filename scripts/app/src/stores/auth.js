@@ -31,6 +31,12 @@ export const useAuthStore = defineStore('auth', {
         this.sessao = sess
         if (sess) await this.carregarPerfilEPersonagem()
         else { this.perfil = null; this.personagem = null }
+        // Link de "esqueci a senha" (redirectTo = raiz do site, sem rota
+        // hash — ver LoginModal.vue): o GoTrue processa o token da URL e
+        // dispara esse evento sozinho, antes do vue-router conseguir
+        // resolver a rota certa a partir do hash "#access_token=...". Força
+        // a navegação pra RedefinirSenha.vue explicitamente aqui.
+        if (_evt === 'PASSWORD_RECOVERY') location.hash = '#/redefinir-senha'
       })
       if (this.sessao) await this.carregarPerfilEPersonagem()
       this.ready = true

@@ -25,6 +25,9 @@
           ><span class="ico">🎒</span>Equipamentos</router-link
         >
         <router-link to="/mercado" class="nav-link"><span class="ico">🏪</span>Mercado</router-link>
+        <router-link v-if="auth.ready && !auth.temPersonagem" to="/cadastro" class="nav-link"
+          ><span class="ico">📝</span>Criar Personagem</router-link
+        >
         <router-link to="/mestre" v-if="auth.ehMestre" class="nav-link"
           ><span class="ico">🧙</span>Mestre</router-link
         >
@@ -47,12 +50,13 @@
           />
           👤 {{ auth.nomeMostrar }}
         </span>
-        <span
+        <router-link
           v-else-if="auth.logado && !auth.temPersonagem && !auth.ehMestre"
+          to="/cadastro"
           class="pill bad"
         >
-          ⚠️ Sem ficha · fale com mestre
-        </span>
+          ⚠️ Sem ficha · criar agora
+        </router-link>
         <span v-else-if="auth.ehMestre" class="pill on">🧙 Mestre</span>
         <button v-if="auth.logado" class="btn ghost" @click="sair">Sair</button>
       </template>

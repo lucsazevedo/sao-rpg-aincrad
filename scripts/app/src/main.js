@@ -66,6 +66,21 @@ const router = createRouter({
       meta: { title: "Minha Ficha" },
     },
     {
+      path: "/cadastro",
+      component: () => import("./views/Cadastro.vue"),
+      meta: { title: "Criar Personagem" },
+    },
+    {
+      path: "/personagem/:nome",
+      component: () => import("./views/FichaPublica.vue"),
+      meta: { title: "Ficha Pública" },
+    },
+    {
+      path: "/redefinir-senha",
+      component: () => import("./views/RedefinirSenha.vue"),
+      meta: { title: "Redefinir Senha" },
+    },
+    {
       path: "/tarefas",
       component: () => import("./views/Tarefas.vue"),
       meta: { title: "Tarefas", requerJogador: true },

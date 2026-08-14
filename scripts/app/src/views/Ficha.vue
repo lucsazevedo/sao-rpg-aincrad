@@ -5,7 +5,7 @@
     pra ver sua ficha.
   </div>
   <div v-else-if="!auth.temPersonagem" class="msg warn">
-    ⚠️ Você ainda não tem personagem. Avise o mestre pra criar sua ficha.
+    ⚠️ Você ainda não tem personagem. <router-link to="/cadastro" style="color:var(--gold-bright)">Crie sua ficha aqui</router-link> ou avise o mestre.
   </div>
   <div v-else>
     <StatusBar />
@@ -188,6 +188,25 @@
             {{ lb.arma_tipo }} · {{ lb.contador }}/10{{ lb.contador>=10 ? ' ⚡' : '' }}
           </span>
         </div>
+
+        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">Conta</h3>
+        <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px">
+          <router-link :to="`/personagem/${encodeURIComponent(auth.personagem.nome)}`" class="btn tiny" target="_blank">
+            🔗 Ver minha ficha pública
+          </router-link>
+          <button class="btn tiny" type="button" @click="mostrarTrocarSenha = !mostrarTrocarSenha">
+            🔑 {{ mostrarTrocarSenha ? "Cancelar" : "Alterar senha" }}
+          </button>
+        </div>
+        <div v-if="mostrarTrocarSenha" class="form" style="max-width:360px;padding:0;border:none;background:transparent">
+          <div class="c"><label>Nova senha</label><input type="password" v-model="novaSenha" placeholder="Mínimo 6 caracteres"></div>
+          <div class="c"><label>Confirmar nova senha</label><input type="password" v-model="novaSenha2" @keydown.enter="trocarSenha"></div>
+          <div v-if="erroSenha" class="msg erro">{{ erroSenha }}</div>
+          <div v-if="senhaTrocada" class="msg ok">✅ Senha alterada.</div>
+          <div style="display:flex;justify-content:flex-end">
+            <button class="btn primario" :disabled="trocandoSenha" @click="trocarSenha">{{ trocandoSenha ? "Salvando…" : "Salvar nova senha" }}</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -364,6 +383,31 @@ onMounted(async () => {
   await Promise.all([carregarReputacoes(), carregarLimitBreakers(), carregarArmaDetalhe()]);
   await carregarGolpes(); // depende de armaDetalhe já carregado
 });
+
+// ===== Alterar senha (jogador logado) =====
+const mostrarTrocarSenha = ref(false);
+const novaSenha = ref("");
+const novaSenha2 = ref("");
+const erroSenha = ref("");
+const senhaTrocada = ref(false);
+const trocandoSenha = ref(false);
+async function trocarSenha() {
+  erroSenha.value = "";
+  senhaTrocada.value = false;
+  if (!novaSenha.value || novaSenha.value.length < 6) { erroSenha.value = "A senha precisa ter pelo menos 6 caracteres."; return; }
+  if (novaSenha.value !== novaSenha2.value) { erroSenha.value = "As senhas não são iguais."; return; }
+  trocandoSenha.value = true;
+  try {
+    const r = await supa.auth.updateUser({ password: novaSenha.value });
+    if (r.error) throw r.error;
+    senhaTrocada.value = true;
+    novaSenha.value = ""; novaSenha2.value = "";
+  } catch (e) {
+    erroSenha.value = "Erro: " + e.message;
+  } finally {
+    trocandoSenha.value = false;
+  }
+}
 </script>
 <style scoped>
 /* Retrato (220px) + conteúdo lado a lado — no celular o retrato fixo
