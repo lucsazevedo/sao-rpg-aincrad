@@ -17,10 +17,8 @@ CONTEUDO_PATH = os.path.join(AQUI, "_conteudo_livro.json")
 IMAGENS_PROF = os.path.join(RAIZ, "imagens", "profissoes_icones")
 # manual não tem contexto de raridade por arma (lista o TIPO, não um item
 # específico) — usa a pasta "cinza" (comum) dos badges oficiais como cor
-# neutra de referência. Clava ainda não tem badge oficial, só o ícone
-# antigo (silhueta branca, pasta raiz) — ver ICONE_ARMA_ANTIGO abaixo.
+# neutra de referência. Os 19 tipos do roster atual têm badge oficial.
 IMAGENS_ARMA = os.path.join(RAIZ, "imagens", "armas_icones", "cinza")
-IMAGENS_ARMA_ANTIGO = os.path.join(RAIZ, "imagens", "armas_icones")
 
 _cache_datauri = {}
 def datauri_png(caminho):
@@ -78,7 +76,7 @@ ICONE_PROF = {
     "Mercenário": "mercenario", "Médico": "medico", "Mestre de Montarias": "mestre_de_montarias",
     "Minerador": "minerador", "Músico": "musico", "Joalheiro": "joalheiro",
 }
-# 19 dos 23 tipos de arma têm badge oficial hoje (Imagens_atualizar/Armas/).
+# os 19 tipos de arma do roster atual (ARMAS_TIPOS) têm badge oficial.
 ICONE_ARMA = {
     "Adagas": "adagas", "Adagas de Arremesso": "adagas_de_arremesso", "Arco e Flecha": "arco_e_flecha",
     "Bastão": "bastao", "Besta": "besta", "Chakrams": "chakram", "Chicote": "chicote",
@@ -86,8 +84,6 @@ ICONE_ARMA = {
     "Foice": "foice", "Katana": "katana", "Lança": "lanca", "Leque": "leque", "Machado": "machado",
     "Manopla": "manopla", "Martelo": "martelo", "Pá": "pa", "Rapieira": "rapieira",
 }
-# Glaive, Nunchaku e Tonfas ainda não têm ícone nenhum (nem o antigo).
-ICONE_ARMA_ANTIGO = {"Clava": "clava"}
 
 def carregar_dados():
     with open(CONTEUDO_PATH, encoding="utf-8") as f:
@@ -141,12 +137,7 @@ def icone_img_html(pasta, slug_map, chave, classe):
     return f'<img class="{classe}" src="{uri}" alt="">'
 
 def icone_arma_html(nome, classe):
-    """Badge oficial (pasta cinza) se o tipo já tiver um; senão cai no
-    ícone antigo (só Clava sobrevive nele hoje)."""
-    html_novo = icone_img_html(IMAGENS_ARMA, ICONE_ARMA, nome, classe)
-    if html_novo:
-        return html_novo
-    return icone_img_html(IMAGENS_ARMA_ANTIGO, ICONE_ARMA_ANTIGO, nome, classe)
+    return icone_img_html(IMAGENS_ARMA, ICONE_ARMA, nome, classe)
 
 def card_arma(a):
     sid = slug(a["nome"])

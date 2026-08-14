@@ -4,7 +4,7 @@ andar: 1
 localizacao: Floresta de Horunka — Pousada de Horunka
 papel: vendedor
 profissao: Cozinheiro
-arma: Clava
+arma: Martelo
 guilda: ""
 atributos:
   corpo: 1
@@ -64,4 +64,4 @@ Sinceridade relaxa ele; hostilidade custa caro por sessões.
 
 ## Combate (se aplicável)
 
-Corpo 1, clava atrás do balcão. Nunca precisou. Um dia vai precisar.
+Corpo 1, martelo atrás do balcão. Nunca precisou. Um dia vai precisar.

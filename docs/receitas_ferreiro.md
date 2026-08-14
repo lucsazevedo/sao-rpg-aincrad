@@ -119,7 +119,7 @@ Placas de Metal Refinado x3
 **Efeito:** armadura reforjada com esta liga dá vantagem em Corpo contra o
 tipo de ataque que o próprio Guardião de Mournhall usa (impacto/queda).
 **Como conseguir:** Presa do Guardião, `monstros/guardiao_de_mournhall.md`
-(Incomum, 40%, 1-2 unidades) — mesmo drop que já alimenta a `Clava de Osso
+(Incomum, 40%, 1-2 unidades) — mesmo drop que já alimenta o `Machado de Osso
 de Guardião` (`armas/`); não depende de extração especial de Caçador,
 então dá pra tentar em qualquer combate contra ele.
 

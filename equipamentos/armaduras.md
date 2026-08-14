@@ -98,7 +98,7 @@ peitoral humano — as placas não combinam entre si e ficou óbvio. Quem usa
 está anunciando que já entrou no Labirinto.
 
 **Efeito:** **+1 em testes de Corpo para resistir a golpe de arma pesada**
-(clava, machado, o nodachi de Illfang).
+(machado, martelo, o nodachi de Illfang).
 **Efeito social:** Ruin Kobolds hesitam meio segundo ao ver as próprias
 placas — na primeira rodada de qualquer combate contra eles, uma falha
 (**6-**) do usuário vira 7-9. Uma vez por combate.

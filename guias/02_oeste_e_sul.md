@@ -407,7 +407,7 @@ quando se ergue, resistente a escuridão e impacto, vulnerável a luz intensa.
 
 - doc: `mapas/dungeons_andar1.md` (layout completo)
 - monstro: sombra_de_mournhall, guardiao_de_mournhall, morcego_ecoante
-- equip: `Cota do Guardião`, `Clava de Osso de Guardião`
+- equip: `Cota do Guardião`, `Machado de Osso de Guardião`
 
 ---
 

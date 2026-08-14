@@ -6,6 +6,14 @@
         <small>Aincrad · Andar 1</small>
       </router-link>
       <div class="nav-links">
+        <!-- Hub de Aincrad (SAO_RPG_AINCRAD_SISTEMAS.md, item 8 — estrutura do menu).
+             Notícias já é a marca (link "/"), por isso não repete aqui. -->
+        <router-link to="/estado" class="nav-link"><span class="ico">📊</span>Estado</router-link>
+        <router-link to="/andares" class="nav-link"><span class="ico">🏯</span>Andares</router-link>
+        <router-link to="/evento-global" class="nav-link"><span class="ico">🌍</span>Evento Global</router-link>
+        <router-link to="/guildas" class="nav-link"><span class="ico">🛡️</span>Guildas</router-link>
+        <router-link to="/diario" class="nav-link"><span class="ico">📔</span>Diário</router-link>
+        <router-link to="/inicio" class="nav-link"><span class="ico">🧭</span>Painel</router-link>
         <router-link to="/compendio" class="nav-link"><span class="ico">📚</span>Compêndio</router-link>
         <router-link to="/ficha" class="nav-link"><span class="ico">🧑</span>Ficha</router-link>
         <router-link to="/tarefas" class="nav-link"><span class="ico">📋</span>Tarefas</router-link>

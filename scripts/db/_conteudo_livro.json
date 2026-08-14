@@ -1,0 +1,2270 @@
+{
+  "armas": [
+    {
+      "nome": "Adagas",
+      "atributo": "TEC",
+      "marca": "Arma de proximidade, precisão curta e perigo imediato; elas mudam a cena quando tudo fica perto demais.",
+      "move_a": {
+        "nome": "Dentro da Guarda",
+        "gatilho": "Quando você entrar colado no inimigo, negando espaço para qualquer reação, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você nega a próxima reação do alvo.",
+          "Você desarma um item pequeno do inimigo.",
+          "Você muda de posição, ficando fora do alcance imediato.",
+          "Você evita a retaliação imediata."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você nega parte da reação do alvo.",
+          "Você fica preso na troca, mas causa dano mesmo assim.",
+          "Você se expõe a um segundo inimigo.",
+          "Você deixa uma marca evidente no alvo."
+        ],
+        "seis_menos": [
+          "Você entra na guarda errada e leva o troco.",
+          "O inimigo prevê sua aproximação.",
+          "Sua adaga escorrega ou erra o ângulo.",
+          "Você fica preso perto demais do inimigo.",
+          "Um segundo inimigo aproveita sua abertura."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Corte de Sombra",
+        "gatilho": "Quando você explorar uma abertura já criada para cravar as adagas num ponto exato, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você acerta um ponto vulnerável e deixa o alvo Ferido.",
+          "Você evita qualquer retaliação imediata.",
+          "Você corta ou rouba algo preso ao alvo.",
+          "Você se reposiciona sem perder o controle da troca."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a recuar.",
+          "Você mantém a iniciativa da troca.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você consegue se afastar após o golpe."
+        ],
+        "seis_menos": [
+          "Sua lâmina desliza sem penetrar.",
+          "O inimigo fecha a abertura antes de você.",
+          "Você se expõe ao insistir no corte.",
+          "Um dos golpes te deixa exposto no lugar errado.",
+          "O inimigo lê seu padrão e se prepara."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Execução Silenciosa",
+        "gatilho": "Quando você concentrar toda sua velocidade numa sequência final de cortes rápidos e certeiros contra um alvo já comprometido, role +Técnica +2.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você deixa o alvo Ferido.",
+          "Você impede qualquer reação do alvo durante a sequência.",
+          "Você encerra os cortes sem se expor.",
+          "Você descobre um segundo ponto vulnerável para explorar depois."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a defender em vez de atacar.",
+          "Você mantém a iniciativa da luta.",
+          "Você deixa o alvo hesitante por um instante.",
+          "Você recua para uma posição mais segura."
+        ],
+        "seis_menos": [
+          "Sua sequência perde o ritmo no meio do golpe.",
+          "O inimigo resiste e contra-ataca.",
+          "Você se expõe demais ao insistir.",
+          "Uma das lâminas escapa da sua mão.",
+          "Você fica Exausto ao final da sequência."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Adagas de Arremesso",
+      "atributo": "REF",
+      "marca": "Arma de prontidão, alcance curto e ameaça espalhada; a cena tende a abrir espaço para marcação, aviso e pressão rápida.",
+      "move_a": {
+        "nome": "Primeira Chuva",
+        "gatilho": "Quando você abrir a troca contra um grupo antes que ele se organize, arremessando suas lâminas, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano em até dois alvos próximos.",
+          "Você impede que qualquer um do grupo feche distância sem pagar por isso.",
+          "Você força a dispersão do grupo inimigo.",
+          "Você deixa um alvo Sob Pressão.",
+          "Você recupera parte das lâminas na hora."
+        ],
+        "sete_nove": [
+          "Você causa dano em um alvo.",
+          "Você atrasa o avanço do grupo.",
+          "Você força um inimigo a recuar.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você mantém a iniciativa por um instante."
+        ],
+        "seis_menos": [
+          "Suas lâminas ficam no chão, presas ou longe demais.",
+          "O grupo se organiza mais rápido do que você esperava.",
+          "Você fica sem nada em mãos no pior momento.",
+          "Um inimigo avança direto sobre você.",
+          "Você se expõe ao gastar todas as lâminas de uma vez."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Marcação Cruzada",
+        "gatilho": "Quando você arremessar lâminas para marcar, prender roupa ou travar a movimentação de um alvo específico, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você prende o alvo por uma troca (roupa, arma ou membro).",
+          "Você reduz drasticamente a mobilidade do alvo.",
+          "Você deixa o alvo marcado — o próximo golpe de um aliado contra ele não sofre reação.",
+          "Você evita a retaliação imediata."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você reduz a mobilidade do alvo por um instante.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você força o alvo a se expor tentando se soltar.",
+          "Você cria uma abertura curta para um aliado."
+        ],
+        "seis_menos": [
+          "A lâmina erra o ponto de prender.",
+          "O alvo se solta antes do esperado.",
+          "Você fica sem lâminas de sobra.",
+          "O alvo usa sua prisão contra você.",
+          "Você se expõe ao tentar acertar o ponto certo."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Tempestade de Lâminas",
+        "gatilho": "Quando você arremessar todas as lâminas que tem numa saraivada final contra tudo que estiver ao seu alcance, role +Reflexo +2.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano em até dois alvos próximos.",
+          "Você deixa um alvo Ferido.",
+          "Você impede qualquer aproximação durante a saraivada.",
+          "Você mantém uma lâmina de reserva para o próximo golpe.",
+          "Você encerra a manobra em posição vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano aumentado em um alvo.",
+          "Você atinge um segundo alvo com dano normal.",
+          "Você força os inimigos ao redor a recuar.",
+          "Você deixa o alvo Abalado.",
+          "Você fica sem lâminas até recuperá-las."
+        ],
+        "seis_menos": [
+          "Você fica completamente desarmado no pior momento.",
+          "A saraivada acerta algo ou alguém errado.",
+          "Um inimigo atravessa a chuva de lâminas.",
+          "Você se expõe ao gastar tudo de uma vez.",
+          "Você fica Exausto pelo esforço."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Arco e Flecha",
+      "atributo": "REF",
+      "marca": "Arma de distância, precisão e leitura de terreno; a cena te coloca naturalmente em pontos de visão, cobertura e vigilância.",
+      "move_a": {
+        "nome": "Linha de Tiro",
+        "gatilho": "Quando você mantiver distância e disparar contra um alvo antes que ele consiga te alcançar, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você interrompe a ação que o alvo estava prestes a realizar.",
+          "Você impede que o alvo feche distância nesta troca.",
+          "Você dispara sem revelar sua posição.",
+          "Você deixa o alvo Sob Pressão."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você atrasa a ação do alvo por um instante.",
+          "Você mantém alguma distância do alvo.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você força o alvo a buscar cobertura."
+        ],
+        "seis_menos": [
+          "Sua posição é revelada.",
+          "A flecha se perde ou fica presa longe.",
+          "O alvo fecha distância rapidamente.",
+          "Um terceiro percebe o disparo e reage.",
+          "Você fica Sob Pressão ao ser encontrado."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Chuva Dirigida",
+        "gatilho": "Quando você disparar uma sequência rápida de flechas contra um grupo ou área para negar avanço, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano em até dois alvos próximos.",
+          "Você afasta os inimigos ao redor.",
+          "Você impede o avanço de quem está na área.",
+          "Você deixa um alvo Ferido.",
+          "Você mantém munição suficiente para o próximo disparo."
+        ],
+        "sete_nove": [
+          "Você causa dano em um alvo.",
+          "Você afasta um inimigo próximo.",
+          "Você atrasa o avanço da linha inimiga.",
+          "Você cria espaço para recuar ou se reposicionar.",
+          "Você protege um aliado com a cobertura de flechas."
+        ],
+        "seis_menos": [
+          "Você fica sem flechas no pior momento.",
+          "Um inimigo atravessa a chuva de flechas.",
+          "Seu disparo acerta algo ou alguém errado.",
+          "Você se expõe ao manter o ritmo de disparos.",
+          "Você fica Exausto pelo esforço."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Tiro do Horizonte",
+        "gatilho": "Quando você mirar com calma absoluta e disparar um único tiro decisivo através de qualquer obstáculo no caminho, role +Reflexo +2.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano ignorando cobertura simples ou guarda parcial.",
+          "Você atinge o alvo antes que qualquer reação seja possível.",
+          "Você acerta um ponto vulnerável e deixa o alvo Ferido.",
+          "Você revela a posição real de um inimigo oculto.",
+          "Você mantém sua posição em segredo mesmo após o disparo."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a sair da cobertura.",
+          "Você atinge o alvo, mas revela sua posição.",
+          "Você descobre uma fraqueza do inimigo.",
+          "Você cria uma abertura clara para um aliado."
+        ],
+        "seis_menos": [
+          "O tiro erra o ponto exato que você mirava.",
+          "Sua posição é entregue no pior momento.",
+          "A flecha se perde ou atinge outra coisa.",
+          "O inimigo antecipa sua mira.",
+          "Você fica Sob Pressão ou exposto após o disparo."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Bastão",
+      "atributo": "ESP",
+      "marca": "Arma de foco, disciplina, defesa e controle de campo.",
+      "move_a": {
+        "nome": "Postura Serena",
+        "gatilho": "Quando você entrar em postura com seu Bastão, buscando equilíbrio, defesa e precisão, role +Espírito.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você evita o contra-ataque imediato.",
+          "Você afasta o inimigo para fora do seu alcance.",
+          "Você protege um aliado próximo do próximo ataque.",
+          "Você impõe a condição Abalado no alvo."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você cria espaço entre você e o inimigo.",
+          "Você concede cobertura a um aliado.",
+          "Você reposiciona sem perder a guarda.",
+          "Você força o inimigo a hesitar por um instante."
+        ],
+        "seis_menos": [
+          "Sua postura é quebrada.",
+          "O inimigo atravessa sua defesa.",
+          "Você fica Sob Pressão.",
+          "Um aliado fica exposto por sua falha.",
+          "Você perde terreno ou é cercado."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Círculo de Defesa",
+        "gatilho": "Quando você girar o Bastão para conter múltiplas ameaças ou segurar uma linha, role +Espírito.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "Você impede que os inimigos avancem.",
+          "Você protege todos os aliados próximos de um ataque.",
+          "Você causa dano em até dois alvos ao redor.",
+          "Você força os inimigos a recuar.",
+          "Você mantém a posição sem sofrer dano."
+        ],
+        "sete_nove": [
+          "Você segura a posição.",
+          "Você protege um aliado próximo.",
+          "Você causa dano em um alvo.",
+          "Você reduz a ofensiva inimiga momentaneamente.",
+          "Você se mantém firme até receber ajuda."
+        ],
+        "seis_menos": [
+          "Sua rotação abre uma brecha perigosa.",
+          "Você é atingido por mais de um lado.",
+          "Seu bastão é travado ou preso.",
+          "Os inimigos rompem sua linha de defesa.",
+          "Você fica Exausto pela pressão."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Impacto Interior",
+        "gatilho": "Quando você concentrar sua energia em um golpe curto, pesado e preciso com o Bastão, role +Espírito +2.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba o alvo.",
+          "Você interrompe uma ação ou habilidade inimiga.",
+          "Você deixa o alvo Amedrontado.",
+          "Você recupera o controle total da cena."
+        ],
+        "sete_nove": [
+          "Você causa dano.",
+          "Você interrompe a ação do alvo.",
+          "Você empurra o alvo alguns passos.",
+          "Você ganha uma abertura para um aliado agir.",
+          "Você força o alvo a recuar."
+        ],
+        "seis_menos": [
+          "Seu golpe passa no vazio.",
+          "O inimigo contra-ataca antes do impacto.",
+          "Você perde o timing e a postura.",
+          "Seu foco se quebra no pior momento.",
+          "Você fica vulnerável a um ataque forte."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Besta",
+      "atributo": "REF",
+      "marca": "Arma de impacto, interrupção e decisão à distância; quando ela entra em cena, alguém sente que uma ação vai ser parada.",
+      "move_a": {
+        "nome": "Tiro de Interrupção",
+        "gatilho": "Quando alguém tentar fugir, ativar algo ou completar uma ação perigosa e você disparar para impedir, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você interrompe a ação do alvo.",
+          "Você causa dano no alvo.",
+          "Você derruba o alvo.",
+          "Você desarma o alvo.",
+          "Você força um recuo imediato."
+        ],
+        "sete_nove": [
+          "Você interrompe a ação do alvo.",
+          "Você causa dano no alvo.",
+          "O barulho ou o tempo de recarga chama atenção extra para a cena.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você mantém o alvo sob mira."
+        ],
+        "seis_menos": [
+          "O virote erra o alvo por pouco.",
+          "Você não consegue recarregar a tempo.",
+          "O alvo completa a ação antes do disparo.",
+          "Sua posição fica exposta.",
+          "Um segundo inimigo aproveita a distração."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Golpe de Rearme",
+        "gatilho": "Quando você disparar à queima-roupa ou usar a besta como arma de impacto num inimigo já perto, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba o alvo.",
+          "Você empurra o alvo para longe.",
+          "Você deixa o alvo Abalado.",
+          "Você recarrega a tempo do próximo disparo."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você empurra o alvo alguns passos.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você mantém distância mínima segura.",
+          "Você chama a atenção do alvo para você."
+        ],
+        "seis_menos": [
+          "Seu disparo sai fraco demais.",
+          "A besta emperra no pior momento.",
+          "O alvo resiste ao impacto e avança.",
+          "Você fica sem munição.",
+          "Você se expõe ao ficar perto demais."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Rajada Final",
+        "gatilho": "Quando você disparar uma sequência rápida de virotes contra um único alvo para encerrar a troca de vez, role +Reflexo +2.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você acerta um ponto crítico e deixa o alvo Ferido.",
+          "Você interrompe qualquer ação do alvo durante a sequência.",
+          "Você derruba o alvo.",
+          "Você mantém munição para o próximo disparo."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você força o alvo a recuar.",
+          "Você mantém a iniciativa da troca.",
+          "Você deixa o alvo hesitante."
+        ],
+        "seis_menos": [
+          "A besta emperra no meio da sequência.",
+          "Você fica sem virotes no pior momento.",
+          "O alvo resiste e avança sobre você.",
+          "Seu disparo acerta algo errado.",
+          "Você fica Exausto ao final da rajada."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Chakrams",
+      "atributo": "REF",
+      "marca": "Arma de precisão, ricochete, controle de distância e ataques imprevisíveis.",
+      "move_a": {
+        "nome": "Arremesso Circular",
+        "gatilho": "Quando você lançar seu Chakram em um arco amplo para atingir, pressionar ou cercar um inimigo, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "O chakram retorna para sua mão sem complicações.",
+          "Você atinge um segundo alvo próximo.",
+          "Você força o alvo a recuar ou perder posição.",
+          "Você deixa o alvo Sob Pressão."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a levantar a guarda.",
+          "Você recupera o chakram logo após o arremesso.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você empurra o alvo para uma posição desfavorável."
+        ],
+        "seis_menos": [
+          "O chakram erra o alvo e vai parar longe.",
+          "O inimigo lê a trajetória e contra-ataca.",
+          "Seu arremesso acerta algo inesperado no cenário.",
+          "Você perde o controle do retorno da arma.",
+          "Um segundo inimigo aproveita sua abertura."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Eclipse Cortante",
+        "gatilho": "Quando você executar um ataque veloz e agressivo com o Chakram, girando e cortando em sequência para dominar a troca, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você acerta um ponto vulnerável e deixa o alvo Ferido.",
+          "Você evita a retaliação imediata do inimigo.",
+          "Você se reposiciona para um local vantajoso.",
+          "Você abre completamente a guarda do alvo."
+        ],
+        "sete_nove": [
+          "Você causa dano.",
+          "Você evita o pior da resposta inimiga.",
+          "Você obriga o alvo a focar na defesa.",
+          "Você muda de posição sem perder a iniciativa.",
+          "Você cria uma abertura curta para o próximo ataque."
+        ],
+        "seis_menos": [
+          "Seu avanço fica previsível.",
+          "O alvo atravessa sua ofensiva e encurta a distância.",
+          "Você se expõe ao tentar manter a pressão.",
+          "O golpe perde força ou precisão.",
+          "Você perde a iniciativa da troca."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Trajetória Impossível",
+        "gatilho": "Quando você lançar o Chakram em uma rota improvável, usando ricochetes, ângulos e movimento para acertar um alvo de forma inesperada, role +Reflexo +2.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano ignorando cobertura simples ou guarda parcial.",
+          "Você atinge o alvo de surpresa, impondo Abalado.",
+          "Você pode atingir um alvo escondido, protegido ou em posição difícil.",
+          "O chakram retorna para você em segurança.",
+          "Você revela uma fraqueza, rota de fuga ou abertura no cenário."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a sair da cobertura.",
+          "Você atinge o alvo, mas o chakram cai em outro ponto.",
+          "Você descobre a posição real de um inimigo oculto.",
+          "Você cria uma oportunidade para um aliado atacar."
+        ],
+        "seis_menos": [
+          "O ricochete sai errado e entrega sua posição.",
+          "O chakram fica preso, cai longe ou some de vista.",
+          "Você acerta algo que complica a cena.",
+          "O inimigo antecipa a rota improvável.",
+          "Sua manobra deixa você Sob Pressão ou sem defesa imediata."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Chicote",
+      "atributo": "CON",
+      "marca": "Arma de alcance, controle e limite; ela transforma espaço aberto em território disputado.",
+      "move_a": {
+        "nome": "Domínio de Alcance",
+        "gatilho": "Quando você usar o alcance do chicote para puxar, prender ou derrubar um alvo sem se aproximar, role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você puxa o alvo para um ponto ruim.",
+          "Você derruba o alvo.",
+          "Você prende o alvo por uma troca — ele não reage até se soltar.",
+          "Você causa dano no alvo.",
+          "Você mantém distância segura durante toda a manobra."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você reduz a mobilidade do alvo.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você cria uma abertura para um aliado.",
+          "Você mantém alguma distância do alvo."
+        ],
+        "seis_menos": [
+          "O chicote enrosca em algo do cenário.",
+          "O alvo puxa você junto.",
+          "Você perde o controle da distância.",
+          "Sua arma vira uma complicação imediata.",
+          "Você fica Sob Pressão ao errar a manobra."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Corte de Limite",
+        "gatilho": "Quando você estalar o chicote com precisão para acertar um ponto exato à distância, role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você acerta um ponto vulnerável e deixa o alvo Ferido.",
+          "Você desarma o alvo à distância.",
+          "Você evita a retaliação imediata.",
+          "Você mantém o alvo dentro do seu alcance."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a recuar.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você mantém a iniciativa da troca.",
+          "Você cria espaço entre você e o alvo."
+        ],
+        "seis_menos": [
+          "O estalo erra o ponto exato.",
+          "O chicote se enrola em você mesmo.",
+          "O alvo entra na sua distância mínima.",
+          "Você perde o timing do golpe.",
+          "Você fica Sob Pressão após a tentativa."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Território Disputado",
+        "gatilho": "Quando você tomar toda a área ao seu redor com o chicote, prendendo, puxando e derrubando tudo que estiver ao alcance, role +Conhecimento +2.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você causa dano em até dois alvos próximos.",
+          "Você prende um alvo por toda a cena, não só uma troca.",
+          "Você derruba ou desequilibra um alvo atingido.",
+          "Você mantém todos os outros inimigos fora do seu alcance.",
+          "Você termina a manobra em posição vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano em um alvo.",
+          "Você prende um alvo por uma troca.",
+          "Você afasta um inimigo próximo.",
+          "Você cria espaço para recuar ou avançar.",
+          "Você protege um aliado ao seu lado."
+        ],
+        "seis_menos": [
+          "O chicote se enrosca em você mesmo.",
+          "Um inimigo atravessa sua área de controle.",
+          "Você perde o controle total da manobra.",
+          "Seu golpe acerta algo inconveniente no cenário.",
+          "Você fica Exausto ou Sob Pressão com o esforço."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Corrente com Peso",
+      "atributo": "TEC",
+      "marca": "Arma de controle, tração, área, desarme e domínio de movimento.",
+      "move_a": {
+        "nome": "Laço de Ferro",
+        "gatilho": "Quando você usar a Corrente com Peso para prender, travar ou limitar um alvo, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você prende o alvo.",
+          "Você causa dano ao enrolar ou impactar.",
+          "Você derruba o alvo.",
+          "Você desarma o alvo.",
+          "Você puxa o alvo para uma posição desfavorável."
+        ],
+        "sete_nove": [
+          "Você reduz a mobilidade do alvo.",
+          "Você causa dano leve.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você força o alvo a recuar ou se expor.",
+          "Você cria abertura para um aliado."
+        ],
+        "seis_menos": [
+          "A corrente falha e perde o alvo.",
+          "Ela se prende em algo do cenário.",
+          "O inimigo puxa você junto.",
+          "Você perde o controle da distância.",
+          "Sua arma vira uma complicação imediata."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Órbita de Aço",
+        "gatilho": "Quando você girar a Corrente com Peso ao redor do corpo para controlar a área e impedir aproximação, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você mantém todos os inimigos próximos afastados.",
+          "Você causa dano em um alvo que tente atravessar sua área.",
+          "Você protege um aliado atrás de você.",
+          "Você força um inimigo a mudar de rota ou recuar.",
+          "Você mantém o controle total do espaço imediato."
+        ],
+        "sete_nove": [
+          "Você afasta um inimigo.",
+          "Você protege um aliado.",
+          "Você controla a área por alguns instantes.",
+          "Você causa dano em quem avança.",
+          "Você recupera fôlego e iniciativa."
+        ],
+        "seis_menos": [
+          "Sua órbita sai do controle.",
+          "Você deixa um flanco aberto.",
+          "O peso da corrente atrapalha seu próprio movimento.",
+          "Um inimigo entra no seu alcance interno.",
+          "Você se coloca em risco ao manter o giro."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Puxão Implacável",
+        "gatilho": "Quando você acertar a Corrente com Peso e usar a tração para reposicionar brutalmente o alvo, role +Técnica +2.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você puxa o alvo até você.",
+          "Você arremessa o alvo para longe.",
+          "Você joga o alvo no chão.",
+          "Você causa dano aumentado com o impacto.",
+          "Você coloca o alvo ao alcance de um aliado."
+        ],
+        "sete_nove": [
+          "Você move o alvo alguns metros.",
+          "Você derruba o alvo.",
+          "Você causa dano.",
+          "Você quebra a formação inimiga.",
+          "Você separa o alvo de seus aliados."
+        ],
+        "seis_menos": [
+          "O alvo resiste e puxa você no lugar.",
+          "A corrente escapa na hora errada.",
+          "Você perde o equilíbrio no puxão.",
+          "O alvo usa sua força contra você.",
+          "Você abre espaço para um contra-ataque perigoso."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Escudo e Espada",
+      "atributo": "COR",
+      "marca": "Arma de resistência, pressão frontal, proteção e domínio de espaço.",
+      "move_a": {
+        "nome": "Fortaleza Inquebrável",
+        "gatilho": "Quando você firmar seu Escudo e Espada para suportar o ataque inimigo e manter sua posição, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você bloqueia completamente o ataque inimigo.",
+          "Você protege um aliado próximo do mesmo ataque.",
+          "Você mantém sua posição sem ser empurrado ou derrubado.",
+          "Você causa dano no inimigo ao responder imediatamente.",
+          "Você deixa o alvo Sob Pressão ao frustrar sua ofensiva."
+        ],
+        "sete_nove": [
+          "Você reduz bastante o dano ou impacto recebido.",
+          "Você protege um aliado próximo.",
+          "Você mantém sua posição.",
+          "Você força o inimigo a recuar um pouco.",
+          "Você ganha tempo para reorganizar a linha de frente."
+        ],
+        "seis_menos": [
+          "Sua defesa é quebrada pelo impacto.",
+          "Você é empurrado ou derrubado.",
+          "Seu aliado continua exposto apesar da tentativa.",
+          "O inimigo encontra uma abertura na sua guarda.",
+          "Você fica Exausto ou Sob Pressão com a colisão."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Golpe Defensivo",
+        "gatilho": "Quando você usar o Escudo e Espada para bloquear e atacar no mesmo movimento, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você bloqueia o golpe inimigo.",
+          "Você causa dano no contra-ataque.",
+          "Você abre a guarda do alvo.",
+          "Você empurra o inimigo para trás.",
+          "Você se mantém em posição vantajosa após a troca."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você reduz o impacto do ataque inimigo.",
+          "Você força o alvo a recuar.",
+          "Você mantém a iniciativa da troca.",
+          "Você cria uma abertura para um aliado agir."
+        ],
+        "seis_menos": [
+          "Seu contra-ataque sai lento demais.",
+          "O inimigo rompe sua defesa antes da resposta.",
+          "Você causa pouco efeito e fica exposto.",
+          "Sua espada ou escudo sai da linha ideal de defesa.",
+          "O inimigo toma a iniciativa da luta."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Muralha Avançada",
+        "gatilho": "Quando você avançar com Escudo e Espada para empurrar a linha inimiga e abrir espaço para seus aliados, role +Corpo +2.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você empurra o alvo para trás.",
+          "Você causa dano no alvo durante o avanço.",
+          "Você abre caminho para um aliado avançar com segurança.",
+          "Você derruba ou desequilibra o inimigo.",
+          "Você mantém a pressão sem sofrer retaliação imediata."
+        ],
+        "sete_nove": [
+          "Você empurra o inimigo alguns passos.",
+          "Você causa dano.",
+          "Você abre espaço na linha inimiga.",
+          "Você protege seus aliados enquanto avança.",
+          "Você obriga o inimigo a focar em você."
+        ],
+        "seis_menos": [
+          "Seu avanço para antes do esperado.",
+          "O inimigo trava sua investida.",
+          "Você avança demais e fica isolado.",
+          "Um flanco fica aberto durante a manobra.",
+          "Você vira o alvo principal da resposta inimiga."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Espada Longa",
+      "atributo": "COR",
+      "marca": "Arma de força, alcance médio, pressão ofensiva e golpes firmes.",
+      "move_a": {
+        "nome": "Corte Preciso",
+        "gatilho": "Quando você atacar com sua Espada Longa buscando um golpe direto, firme e bem colocado, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você acerta um ponto vulnerável e deixa o alvo Ferido.",
+          "Você rompe a guarda do inimigo.",
+          "Você evita a retaliação imediata.",
+          "Você se mantém em posição vantajosa após o golpe."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o inimigo a recuar.",
+          "Você abre uma pequena brecha na guarda do alvo.",
+          "Você mantém a pressão ofensiva.",
+          "Você prepara o terreno para o próximo ataque."
+        ],
+        "seis_menos": [
+          "Seu golpe erra por pouco.",
+          "O inimigo desvia e responde com um contra-ataque.",
+          "Sua espada perde a linha ideal do corte.",
+          "Você fica exposto após a investida.",
+          "O alvo lê seu movimento com facilidade."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Lâmina Ascendente",
+        "gatilho": "Quando você desferir um golpe de baixo para cima com sua Espada Longa para quebrar postura, lançar ou desequilibrar o inimigo, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba ou desequilibra o alvo.",
+          "Você interrompe a ação inimiga.",
+          "Você empurra o inimigo para trás.",
+          "Você deixa o alvo Abalado."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você impede a próxima ação ofensiva do inimigo.",
+          "Você desequilibra o alvo por um instante.",
+          "Você abre espaço para um aliado agir.",
+          "Você força o inimigo a levantar a guarda."
+        ],
+        "seis_menos": [
+          "O golpe sobe fora do tempo.",
+          "O inimigo sai da linha do ataque.",
+          "Você perde equilíbrio ao executar o corte.",
+          "Sua abertura permite um contra-ataque perigoso.",
+          "Você fica Sob Pressão após a tentativa."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Estrela Cadente",
+        "gatilho": "Quando você erguer sua Espada Longa e descer um golpe poderoso de cima para baixo, buscando finalizar ou esmagar a defesa inimiga, role +Corpo +2.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você quebra a guarda ou defesa do alvo.",
+          "Você derruba o alvo no chão.",
+          "Você impõe a condição Amedrontado no alvo.",
+          "Você mantém a iniciativa da luta após o impacto."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você empurra o inimigo para trás.",
+          "Você força o alvo a defender em vez de atacar.",
+          "Você chama a atenção do inimigo para você.",
+          "Você abre uma brecha para um aliado."
+        ],
+        "seis_menos": [
+          "Seu golpe desce lento demais.",
+          "O alvo evita o impacto principal.",
+          "Você acerta o cenário e fica travado por um instante.",
+          "Sua guarda fica totalmente aberta após o ataque.",
+          "O inimigo aproveita o peso do golpe contra você."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Foice",
+      "atributo": "TEC",
+      "marca": "Arma de alcance curvo, puxões, cortes amplos e controle do ritmo da luta.",
+      "move_a": {
+        "nome": "Ceifador Sombrio",
+        "gatilho": "Quando você usar sua Foice para atacar com precisão cruel, explorando aberturas e ângulos difíceis, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você acerta um ponto vulnerável e deixa o alvo Ferido.",
+          "Você puxa o alvo para uma posição desfavorável.",
+          "Você evita a retaliação imediata.",
+          "Você deixa o alvo Sob Pressão."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a recuar.",
+          "Você puxa levemente a guarda ou arma do inimigo para fora de posição.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você mantém a iniciativa por um instante."
+        ],
+        "seis_menos": [
+          "Seu golpe passa no vazio.",
+          "A foice fica fora de posição após o ataque.",
+          "O inimigo lê seu movimento e responde.",
+          "Você se expõe ao tentar encaixar o corte.",
+          "Sua investida o coloca em uma posição ruim."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Colheita Final",
+        "gatilho": "Quando você executar um golpe decisivo de Foice, tentando encerrar a troca com um corte brutal e bem calculado, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba o alvo.",
+          "Você rompe completamente a guarda inimiga.",
+          "Você impõe a condição Amedrontado no alvo.",
+          "Você pode se reposicionar após o golpe sem sofrer retaliação imediata."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o alvo a defender em vez de atacar.",
+          "Você desequilibra o inimigo.",
+          "Você abre espaço para um aliado avançar.",
+          "Você mantém a pressão ofensiva."
+        ],
+        "seis_menos": [
+          "O golpe sai pesado demais e lento.",
+          "O alvo evita o impacto principal.",
+          "Você perde o equilíbrio durante a execução.",
+          "A foice prende ou raspa em algo do cenário.",
+          "O inimigo aproveita a abertura para contra-atacar."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Corte Circular",
+        "gatilho": "Quando você girar a Foice em um arco amplo para controlar espaço, atingir mais de um inimigo ou afastar quem estiver perto, role +Técnica +2.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano em até dois alvos próximos.",
+          "Você afasta os inimigos ao redor.",
+          "Você protege sua área imediata contra aproximação.",
+          "Você derruba ou desequilibra um alvo atingido.",
+          "Você termina a manobra em posição vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano em um alvo.",
+          "Você afasta um inimigo próximo.",
+          "Você impede aproximação por um instante.",
+          "Você cria espaço para recuar ou avançar.",
+          "Você protege um aliado ao seu lado."
+        ],
+        "seis_menos": [
+          "Seu giro abre demais a guarda.",
+          "Um inimigo entra no seu alcance interno.",
+          "Você perde o controle total da rotação.",
+          "Seu golpe acerta algo inconveniente no cenário.",
+          "Você fica Exausto ou Sob Pressão com a manobra."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Katana",
+      "atributo": "ESP",
+      "marca": "Arma de foco, precisão, serenidade e cortes executados no momento perfeito.",
+      "move_a": {
+        "nome": "Corte Iai",
+        "gatilho": "Quando você sacar e golpear com sua Katana em um único movimento fluido e preciso, role +Espírito.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você acerta antes que o inimigo consiga reagir.",
+          "Você evita a retaliação imediata.",
+          "Você deixa o alvo Abalado.",
+          "Você termina o golpe em posição vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o inimigo a interromper sua ação.",
+          "Você se reposiciona após o saque.",
+          "Você obriga o alvo a focar na defesa.",
+          "Você prepara o terreno para o próximo golpe."
+        ],
+        "seis_menos": [
+          "Seu saque sai no tempo errado.",
+          "O inimigo percebe sua intenção antes do golpe.",
+          "Você falha em manter a postura após o corte.",
+          "Sua abertura permite uma resposta perigosa.",
+          "Você perde a iniciativa da troca."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Lua Crescente",
+        "gatilho": "Quando você executar um corte amplo e elevado com sua Katana, buscando fluxo, alcance e domínio da troca, role +Espírito.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você atinge um segundo alvo próximo.",
+          "Você afasta os inimigos ao redor.",
+          "Você rompe a guarda do alvo.",
+          "Você mantém o controle da cena sem sofrer retaliação imediata."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você afasta um inimigo próximo.",
+          "Você abre uma brecha na defesa adversária.",
+          "Você protege seu espaço imediato.",
+          "Você cria uma abertura para um aliado agir."
+        ],
+        "seis_menos": [
+          "Seu arco de corte abre demais sua guarda.",
+          "O inimigo entra na curta distância.",
+          "O golpe perde força ou precisão no meio do movimento.",
+          "Você se posiciona mal ao concluir a técnica.",
+          "Você fica Sob Pressão após a manobra."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Mil Pétalas",
+        "gatilho": "Quando você liberar uma sequência refinada e veloz de cortes com sua Katana, como uma chuva de lâminas, role +Espírito +2.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você impede a reação imediata do alvo.",
+          "Você deixa o alvo Ferido.",
+          "Você cria uma abertura clara para um aliado atacar.",
+          "Você encerra a sequência sem se expor."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você pressiona o alvo e impede seu avanço.",
+          "Você força o inimigo a defender em vez de atacar.",
+          "Você mantém a iniciativa da luta.",
+          "Você deixa o alvo hesitante por um instante."
+        ],
+        "seis_menos": [
+          "Sua sequência perde o ritmo.",
+          "O inimigo resiste à pressão e contra-ataca.",
+          "Você se expõe ao insistir no combo.",
+          "Seu foco se quebra no meio da técnica.",
+          "Você fica Exausto ou Sob Pressão ao final do movimento."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Lança",
+      "atributo": "TEC",
+      "marca": "Arma de alcance, perfuração, controle de espaço e ataques executados com precisão.",
+      "move_a": {
+        "nome": "Muralha de Pontas",
+        "gatilho": "Quando você movimentar sua Lança rapidamente para bloquear passagens, proteger aliados ou impedir a aproximação dos inimigos, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você impede completamente o avanço dos inimigos.",
+          "Você causa dano em um inimigo que tente atravessar sua defesa.",
+          "Você protege um aliado próximo de um ataque.",
+          "Você força os adversários a recuar ou mudar de direção.",
+          "Você mantém sua posição sem sofrer retaliação imediata."
+        ],
+        "sete_nove": [
+          "Você impede o avanço de um inimigo.",
+          "Você causa dano em quem tentar se aproximar.",
+          "Você protege parcialmente um aliado próximo.",
+          "Você ganha tempo para o grupo se reposicionar.",
+          "Você mantém os inimigos afastados por alguns instantes."
+        ],
+        "seis_menos": [
+          "Um inimigo atravessa sua defesa e encurta a distância.",
+          "Sua lança é desviada, travada ou agarrada.",
+          "Você deixa um dos lados da formação desprotegido.",
+          "Um aliado fica exposto durante sua tentativa de defesa.",
+          "Você fica Sob Pressão ao ser cercado pelos inimigos."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Investida Longa",
+        "gatilho": "Quando você avançar com sua Lança estendida para atravessar a defesa inimiga e atingir um alvo distante, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano aumentado no alvo.",
+          "Você atravessa ou rompe a guarda inimiga.",
+          "Você empurra o alvo para trás ou o derruba.",
+          "Você alcança o alvo antes que ele consiga reagir.",
+          "Você termina a investida em uma posição vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o inimigo a recuar.",
+          "Você interrompe a ação que o alvo estava realizando.",
+          "Você abre uma brecha para um aliado avançar.",
+          "Você mantém o alvo distante após o impacto."
+        ],
+        "seis_menos": [
+          "O alvo desvia e você avança para uma posição perigosa.",
+          "Sua lança atinge uma proteção ou obstáculo do cenário.",
+          "Você passa pelo inimigo e fica cercado.",
+          "O adversário segura ou desvia a haste da arma.",
+          "Sua investida deixa sua retaguarda completamente exposta."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Dragão Celestial",
+        "gatilho": "Quando você combinar giros, saltos e estocadas em uma técnica avançada de Lança, atacando de um ângulo inesperado, role +Técnica +2.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você atinge até dois inimigos próximos durante a sequência.",
+          "Você deixa o alvo Ferido com uma perfuração precisa.",
+          "Você evita todos os contra-ataques imediatos durante a técnica.",
+          "Você aterrissa ou encerra o movimento em uma posição vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você atinge um segundo inimigo, mas causa apenas dano normal a um deles.",
+          "Você força os inimigos ao redor a recuar.",
+          "Você evita o pior da resposta inimiga.",
+          "Você deixa o alvo Abalado pela velocidade da técnica."
+        ],
+        "seis_menos": [
+          "Você perde o equilíbrio durante o salto ou giro.",
+          "O inimigo prevê sua trajetória e prepara um contra-ataque.",
+          "Sua lança fica fora de posição ao terminar a técnica.",
+          "Você aterrissa em um local perigoso ou desfavorável.",
+          "O esforço da sequência deixa você Exausto ou Sob Pressão."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Leque",
+      "atributo": "TEC",
+      "marca": "Armas de combate elegantes e imprevisíveis, usadas em pares para desviar ataques, executar cortes rápidos e confundir o adversário.",
+      "move_a": {
+        "nome": "Dança das Lâminas",
+        "gatilho": "Quando você avançar com seus Leques, alternando cortes rápidos e movimentos imprevisíveis, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você evita a retaliação imediata.",
+          "Você deixa o inimigo Sob Pressão.",
+          "Você se reposiciona para um ponto vantajoso.",
+          "Você cria uma abertura para um aliado agir."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você força o inimigo a recuar.",
+          "Você mantém a iniciativa.",
+          "Você dificulta a próxima ação do alvo.",
+          "Você consegue se afastar após o ataque."
+        ],
+        "seis_menos": [
+          "Sua sequência perde o ritmo.",
+          "O inimigo consegue atravessar seus movimentos.",
+          "Um dos leques fica preso, desviado ou fora de posição.",
+          "Você termina a técnica em uma posição perigosa.",
+          "O adversário percebe seu padrão e prepara um contra-ataque."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Véu Cortante",
+        "gatilho": "Quando você usar seus Leques para desviar um ataque e responder no mesmo movimento, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você anula o ataque recebido.",
+          "Você causa dano no contra-ataque.",
+          "Você desarma ou desloca a arma do adversário.",
+          "Você protege um aliado próximo.",
+          "Você deixa o inimigo Abalado pela velocidade da resposta."
+        ],
+        "sete_nove": [
+          "Você reduz ou evita o pior do ataque.",
+          "Você causa dano no contra-ataque.",
+          "Você afasta o inimigo.",
+          "Você protege parcialmente um aliado.",
+          "Você se reposiciona para uma distância segura."
+        ],
+        "seis_menos": [
+          "O ataque atravessa sua defesa.",
+          "Sua tentativa de desvio deixa sua guarda aberta.",
+          "Um dos leques é arrancado de sua mão.",
+          "Você protege alguém, mas recebe o impacto no lugar dele.",
+          "O inimigo usa seu próprio movimento para desequilibrá-lo."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Tempestade das Mil Lâminas",
+        "gatilho": "Quando você liberar toda sua habilidade com os Leques, avançando em uma sequência quase impossível de acompanhar, role +Técnica +2.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você atinge até dois inimigos próximos durante a sequência.",
+          "Você deixa um alvo Ferido.",
+          "Você evita qualquer retaliação imediata durante a técnica.",
+          "Você encerra o Limit Break em qualquer posição próxima que seja vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano aumentado.",
+          "Você atinge um segundo inimigo, causando dano normal nele.",
+          "Você deixa o alvo Abalado.",
+          "Você atravessa a defesa e mantém a iniciativa.",
+          "Você escapa da retaliação, mas termina Sob Pressão."
+        ],
+        "seis_menos": [
+          "A sequência sai do controle e você termina exposto.",
+          "Um inimigo acompanha seus movimentos e interrompe o Limit Break.",
+          "Um dos leques é lançado ou fica preso longe de você.",
+          "Você termina a técnica Exausto.",
+          "Você atinge o alvo, mas acaba cercado ou em uma posição extremamente perigosa."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Machado",
+      "atributo": "COR",
+      "marca": "Arma de força, impacto, rompimento de defesa e golpes devastadores.",
+      "move_a": {
+        "nome": "Execução do Titã",
+        "gatilho": "Quando você erguer seu Machado para desferir um golpe esmagador e decisivo, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba o alvo no chão.",
+          "Você quebra ou atravessa a guarda inimiga.",
+          "Você impõe a condição Amedrontado no alvo.",
+          "Você mantém a iniciativa após o impacto."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você empurra o inimigo para trás.",
+          "Você força o alvo a defender em vez de atacar.",
+          "Você abala a postura do inimigo.",
+          "Você abre uma brecha para um aliado agir."
+        ],
+        "seis_menos": [
+          "Seu golpe sai lento demais.",
+          "O alvo evita o impacto principal.",
+          "Você fica exposto após o ataque.",
+          "O peso do golpe o desequilibra.",
+          "O inimigo aproveita sua abertura para contra-atacar."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Golpe Brutal",
+        "gatilho": "Quando você atacar com seu Machado usando força pura para esmagar, romper ou intimidar, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você empurra o alvo para uma posição desfavorável.",
+          "Você interrompe a ação inimiga com o impacto.",
+          "Você deixa o alvo Abalado.",
+          "Você chama a atenção do inimigo para você, protegendo um aliado."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você empurra o inimigo alguns passos.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você mantém a pressão ofensiva.",
+          "Você impede o avanço imediato do inimigo."
+        ],
+        "seis_menos": [
+          "Seu golpe perde força ou direção.",
+          "O inimigo resiste ao impacto e avança.",
+          "Você abre demais sua guarda.",
+          "O ataque acerta algo do cenário e complica a cena.",
+          "O esforço o deixa Sob Pressão ou Exausto."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Quebra-Guarda",
+        "gatilho": "Quando você usar seu Machado para romper defesa, escudo, postura ou formação inimiga, role +Corpo +2.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você quebra completamente a guarda do alvo.",
+          "Você causa dano no inimigo.",
+          "Você desarma ou desloca a arma do alvo.",
+          "Você derruba ou desequilibra o inimigo.",
+          "Você cria uma abertura clara para um aliado atacar."
+        ],
+        "sete_nove": [
+          "Você abre uma brecha na defesa do alvo.",
+          "Você causa dano no inimigo.",
+          "Você força o alvo a recuar.",
+          "Você atrapalha a próxima defesa do alvo.",
+          "Você ganha posição vantajosa na troca."
+        ],
+        "seis_menos": [
+          "A defesa inimiga resiste ao impacto.",
+          "Seu machado fica fora de posição após a tentativa.",
+          "O inimigo lê seu ataque e responde.",
+          "Você rompe a guarda, mas se expõe demais.",
+          "Outro inimigo aproveita sua abertura."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Manopla",
+      "atributo": "COR",
+      "marca": "Arma de contato direto, aderência e controle físico; ela fica forte quando a cena vira disputa de pegada e proximidade.",
+      "move_a": {
+        "nome": "Pegada",
+        "gatilho": "Quando você decidir que a troca vira corpo a corpo para controlar o inimigo, não para matar, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você captura o alvo sem matar.",
+          "Você causa dano no alvo.",
+          "Você desarma o alvo.",
+          "Você nega a próxima reação do alvo.",
+          "Você mantém o controle sem sofrer dano."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você controla o alvo, mas apanha junto.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você mantém a pegada por um instante.",
+          "Você fica preso na troca."
+        ],
+        "seis_menos": [
+          "O alvo escapa da sua pegada.",
+          "Você apanha mais do que consegue controlar.",
+          "O inimigo usa sua proximidade contra você.",
+          "Você fica preso numa posição ruim.",
+          "Um segundo inimigo aproveita a abertura."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Golpe de Aderência",
+        "gatilho": "Quando você golpear segurando firme o inimigo para não deixar ele se soltar do impacto, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba o alvo.",
+          "Você impede o alvo de recuar.",
+          "Você deixa o alvo Abalado.",
+          "Você mantém a pegada firme para o próximo golpe."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você impede parcialmente o recuo do alvo.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você mantém a pressão física.",
+          "Você fica exposto ao manter a pegada."
+        ],
+        "seis_menos": [
+          "O alvo se solta antes do golpe.",
+          "Seu golpe perde força.",
+          "Você fica preso numa posição desfavorável.",
+          "O inimigo usa a proximidade para revidar.",
+          "Você fica Sob Pressão pelo esforço físico."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Domínio Absoluto",
+        "gatilho": "Quando você usar toda sua força física para imobilizar completamente o inimigo, sem deixar nenhuma chance de reação, role +Corpo +2.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você imobiliza o alvo por completo.",
+          "Você causa dano aumentado no alvo.",
+          "Você desarma o alvo.",
+          "Você nega qualquer reação do alvo durante a manobra.",
+          "Você mantém o controle sem sofrer dano."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você imobiliza o alvo por um instante.",
+          "Você controla o alvo, mas apanha junto.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você fica preso na troca."
+        ],
+        "seis_menos": [
+          "O alvo escapa da imobilização.",
+          "Você gasta toda sua força e fica Exausto.",
+          "O inimigo vira a manobra contra você.",
+          "Você fica preso numa posição perigosa.",
+          "Um segundo inimigo aproveita a abertura."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Martelo",
+      "atributo": "COR",
+      "marca": "Arma de esmagamento, controle de impacto, ruptura de postura e força avassaladora.",
+      "move_a": {
+        "nome": "Impacto Devastador",
+        "gatilho": "Quando você erguer seu Martelo e desferir um golpe brutal para esmagar o alvo, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba o alvo no chão.",
+          "Você quebra a guarda ou defesa do inimigo.",
+          "Você empurra o alvo para longe.",
+          "Você deixa o alvo Abalado."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você empurra o inimigo alguns passos.",
+          "Você desequilibra o alvo por um instante.",
+          "Você impede o avanço imediato do inimigo.",
+          "Você chama a atenção do alvo para você."
+        ],
+        "seis_menos": [
+          "Seu golpe sai lento demais.",
+          "O inimigo evita o impacto principal.",
+          "O peso do ataque o desequilibra.",
+          "Você abre a guarda ao terminar o golpe.",
+          "O impacto acerta o cenário e complica a cena."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Julgamento de Ferro",
+        "gatilho": "Quando você usar seu Martelo para aplicar um golpe firme e implacável, punindo um inimigo exposto ou vulnerável, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você acerta um ponto crítico e deixa o alvo Ferido.",
+          "Você interrompe a ação inimiga.",
+          "Você impõe a condição Amedrontado no alvo.",
+          "Você mantém a iniciativa da troca."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você atrapalha a próxima ação do inimigo.",
+          "Você força o alvo a defender em vez de atacar.",
+          "Você abre uma brecha para um aliado agir.",
+          "Você abala a postura do alvo."
+        ],
+        "seis_menos": [
+          "O inimigo percebe sua intenção e reage antes.",
+          "Seu golpe perde precisão no último instante.",
+          "Você se expõe ao tentar forçar o impacto.",
+          "O alvo resiste e contra-ataca.",
+          "Você fica Sob Pressão após a tentativa."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Tremor de Guerra",
+        "gatilho": "Quando você bater seu Martelo com violência para espalhar impacto, quebrar formação ou desestabilizar inimigos ao redor, role +Corpo +2.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você causa dano em até dois alvos próximos.",
+          "Você derruba ou desequilibra um alvo atingido.",
+          "Você quebra a formação inimiga.",
+          "Você afasta os inimigos ao redor.",
+          "Você abre espaço seguro para seus aliados avançarem."
+        ],
+        "sete_nove": [
+          "Você causa dano em um alvo.",
+          "Você afasta um inimigo próximo.",
+          "Você desorganiza momentaneamente a linha inimiga.",
+          "Você cria espaço para recuar ou avançar.",
+          "Você protege um aliado ao chamar a pressão para si."
+        ],
+        "seis_menos": [
+          "O impacto não gera o efeito esperado.",
+          "Você fica travado na animação do golpe por um instante.",
+          "Um inimigo entra na sua guarda enquanto você ataca.",
+          "O terreno ou cenário piora a situação.",
+          "O esforço o deixa Exausto ou Sob Pressão."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Pá",
+      "atributo": "CON",
+      "marca": "Arma de improviso, terreno e preparação; ela faz a cena olhar para o chão, para o abrigo e para o que pode ser montado ali.",
+      "move_a": {
+        "nome": "Terreno é Arma",
+        "gatilho": "Quando você usar chão, areia, água rasa ou entulho com sua Pá para criar vantagem tática, role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você cria cobertura útil para você ou um aliado.",
+          "Você cega ou derruba o alvo por um instante.",
+          "Você força um recuo.",
+          "Você não deixa rastro da manobra."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você cria a vantagem, mas perde posição.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você deixa um rastro óbvio da manobra."
+        ],
+        "seis_menos": [
+          "O terreno não coopera como esperado.",
+          "Você mesmo fica em desvantagem com a manobra.",
+          "O alvo antecipa seu truque.",
+          "Sua Pá prende ou emperra no chão.",
+          "Você fica exposto ao tentar a manobra."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Golpe de Pá",
+        "gatilho": "Quando você golpear com o peso e a borda da Pá para causar impacto direto, role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você derruba o alvo.",
+          "Você empurra o alvo para longe.",
+          "Você deixa o alvo Abalado.",
+          "Você mantém a iniciativa após o golpe."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você empurra o alvo alguns passos.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você força o alvo a recuar.",
+          "Você chama a atenção do alvo para você."
+        ],
+        "seis_menos": [
+          "Seu golpe sai lento demais.",
+          "O alvo evita o impacto.",
+          "A Pá prende no chão ou em algo do cenário.",
+          "Você fica exposto após o ataque.",
+          "O esforço te deixa Sob Pressão."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Terra Revolta",
+        "gatilho": "Quando você revirar completamente o terreno ao seu redor, transformando o chão inteiro numa armadilha, role +Conhecimento +2.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você causa dano em até dois alvos próximos.",
+          "Você derruba ou prende todos os alvos atingidos.",
+          "Você cria cobertura ampla para todo o grupo.",
+          "Você cega ou desorienta os inimigos ao redor.",
+          "Você não fica exposto durante a manobra."
+        ],
+        "sete_nove": [
+          "Você causa dano em um alvo.",
+          "Você derruba um alvo.",
+          "Você cria alguma cobertura.",
+          "Você atrapalha o avanço de um grupo pequeno.",
+          "Você deixa rastro óbvio da manobra."
+        ],
+        "seis_menos": [
+          "O terreno vira contra você também.",
+          "Você fica preso no próprio buraco ou armadilha.",
+          "Um inimigo evita a manobra por completo.",
+          "Sua Pá quebra ou fica presa.",
+          "Você fica Exausto pelo esforço."
+        ],
+        "bonus_acerto": "+2"
+      }
+    },
+    {
+      "nome": "Rapieira",
+      "atributo": "REF",
+      "marca": "Arma de velocidade, precisão, mobilidade e estocadas executadas em aberturas rápidas.",
+      "move_a": {
+        "nome": "Mil Rosas",
+        "gatilho": "Quando você realizar uma sequência veloz de estocadas com sua Rapieira, pressionando o inimigo sem permitir que ele acompanhe seus movimentos, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você impede a retaliação imediata do alvo.",
+          "Você deixa o inimigo Sob Pressão.",
+          "Você encontra uma abertura e deixa o alvo Ferido.",
+          "Você encerra a sequência em uma posição segura e vantajosa."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você obriga o inimigo a permanecer na defensiva.",
+          "Você interrompe o movimento que o alvo estava realizando.",
+          "Você cria uma abertura para um aliado agir.",
+          "Você se reposiciona após a sequência."
+        ],
+        "seis_menos": [
+          "Sua sequência perde o ritmo e deixa sua guarda aberta.",
+          "O inimigo acompanha seus movimentos e contra-ataca.",
+          "Você avança demais e fica cercado ou isolado.",
+          "A lâmina é desviada, presa ou afastada da linha de ataque.",
+          "O esforço deixa você Exausto ou Sob Pressão."
+        ]
+      },
+      "golpe_2": {
+        "nome": "Estrela Cadente",
+        "gatilho": "Quando você avançar repentinamente com sua Rapieira, atravessando o espaço entre você e o inimigo em uma estocada fulminante, role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano aumentado.",
+          "Você atinge o alvo antes que ele consiga reagir.",
+          "Você atravessa ou ignora uma guarda parcial.",
+          "Você deixa o alvo Abalado pelo ataque inesperado.",
+          "Você passa pelo inimigo e termina fora do alcance de retaliação."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você interrompe a ação do inimigo.",
+          "Você atravessa a defesa, mas termina próximo do alvo.",
+          "Você força o inimigo a recuar.",
+          "Você mantém a iniciativa após a investida."
+        ],
+        "seis_menos": [
+          "O inimigo prevê sua trajetória e prepara um contra-ataque.",
+          "Você passa pelo alvo sem acertar e termina em posição desfavorável.",
+          "Sua estocada é desviada no último instante.",
+          "Você colide com um obstáculo ou entra em uma área perigosa.",
+          "Seu avanço deixa um aliado ou sua retaguarda desprotegidos."
+        ]
+      },
+      "limit_breaker": {
+        "nome": "Estocada Precisa",
+        "gatilho": "Quando você observar atentamente o inimigo e atacar uma abertura específica com sua Rapieira, role +Reflexo +2.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você causa dano no alvo.",
+          "Você acerta um ponto vulnerável e deixa o inimigo Ferido.",
+          "Você desarma ou desloca a arma do alvo.",
+          "Você evita completamente o contra-ataque imediato.",
+          "Você recebe +1 na próxima ação contra esse mesmo inimigo."
+        ],
+        "sete_nove": [
+          "Você causa dano no alvo.",
+          "Você abre uma pequena brecha na defesa inimiga.",
+          "Você atrapalha a próxima ação do alvo.",
+          "Você descobre uma fraqueza ou padrão de combate do inimigo.",
+          "Você recua para uma distância segura após a estocada."
+        ],
+        "seis_menos": [
+          "A abertura era uma armadilha preparada pelo inimigo.",
+          "Sua estocada não alcança o ponto vulnerável.",
+          "O alvo prende ou desvia sua lâmina.",
+          "Você se concentra demais no ataque e ignora outra ameaça.",
+          "O inimigo percebe seu padrão e ganha vantagem sobre você."
+        ],
+        "bonus_acerto": "+2"
+      }
+    }
+  ],
+  "profissoes": [
+    {
+      "nome": "Alquimista",
+      "atributo": "CON",
+      "marca": "você é “o que faz funcionar”; gente te vê como solução e como risco.",
+      "move_a": {
+        "txt": "quando você prepara antídoto, isca ou pomada com ingredientes do andar, role 2d6+Conhecimento. 10+ funciona limpo. 7-9 funciona, mas tem efeito colateral (cheiro, fumaça, irritação, marca).",
+        "rotulo": "Move de Ofício",
+        "titulo": "Mistura"
+      },
+      "move_b": {
+        "txt": "quando você tenta usar o ambiente para criar um efeito rápido (feromônio, fumaça, solvente, neutralização), role 2d6+Conhecimento. 10+ você cria o efeito sem piorar a cena. 7-9 cria, mas escala o perigo.",
+        "rotulo": "Move de Cena",
+        "titulo": "Improviso"
+      },
+      "move_c": {
+        "nome": "Mistura Perfeita",
+        "gatilho": "Quando você combinar ingredientes e seguir uma fórmula para criar um preparado alquímico, descreva o efeito desejado e role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você produz duas doses do preparado em vez de uma.",
+          "O efeito é mais potente ou dura mais tempo que o normal.",
+          "Você utiliza menos ingredientes e preserva parte dos materiais.",
+          "O preparado remove uma condição apropriada, como Ferido, Amedrontado, Paralisado, Exausto ou Sob Pressão.",
+          "Você descobre uma melhoria para a fórmula e recebe +1 na próxima vez que produzir esse preparado."
+        ],
+        "sete_nove": [
+          "Você cria uma dose com o efeito desejado.",
+          "O preparado funciona, mas possui duração reduzida.",
+          "Você cria o item, mas consome ingredientes adicionais.",
+          "O efeito é mais fraco, porém não apresenta riscos ao usuário.",
+          "Você identifica um ingrediente que pode melhorar essa fórmula futuramente."
+        ],
+        "seis_menos": [
+          "A mistura produz um efeito diferente ou imprevisível.",
+          "Os ingredientes são desperdiçados durante o processo.",
+          "O preparado funciona, mas causa uma condição ou complicação temporária.",
+          "A reação alquímica chama atenção, produz fumaça ou provoca uma pequena explosão.",
+          "A fórmula exige um ingrediente raro, uma ferramenta específica ou conhecimento ainda desconhecido."
+        ]
+      }
+    },
+    {
+      "nome": "Caçador",
+      "atributo": "REF",
+      "marca": "você é “o que volta com prova”; gente te procura quando precisa de material e verdade.",
+      "move_a": {
+        "txt": "quando você extrai material raro/bônus de uma criatura recém-abatida, role 2d6+Reflexo. 10+ você consegue e escolhe 1: encontra um traço útil (rastro, toca, rota), ou mantém a cena limpa (sem atrair atenção). 7-9 você consegue, mas cria uma pressão (barulho, cheiro, predador, discussão moral).",
+        "rotulo": "Move de Ofício",
+        "titulo": "Extração"
+      },
+      "move_b": {
+        "txt": "quando você entra em região selvagem e para para ler sinais (pegadas, vento, fezes, silêncio), role 2d6+Reflexo. 10+ o mestre deve te dizer o perigo mais próximo e a rota mais segura. 7-9 ele diz, mas você escolhe: risco, tempo ou exposição.",
+        "rotulo": "Move de Cena",
+        "titulo": "Olho de Caça"
+      },
+      "move_c": {
+        "nome": "Mestre da Caçada",
+        "gatilho": "Quando você rastrear uma criatura, pescar, preparar uma armadilha ou procurar recursos naturais, descreva sua abordagem e role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você encontra rapidamente a criatura, recurso ou local que estava procurando.",
+          "Você obtém uma quantidade adicional de carne, peixe, pele, madeira, ervas ou outro recurso apropriado.",
+          "Você encontra uma espécie, ingrediente ou material raro.",
+          "Você identifica um perigo, fraqueza ou padrão de comportamento antes que ele se torne uma ameaça.",
+          "Você prepara uma armadilha ou abordagem que lhe concede +1 na próxima ação contra a presa."
+        ],
+        "sete_nove": [
+          "Você encontra o que procura, mas demora mais do que esperava.",
+          "Você consegue recursos suficientes, porém gasta ou danifica parte de seu equipamento.",
+          "Você encontra a presa, mas ela percebe sua presença.",
+          "Sua armadilha funciona, mas apenas por alguns instantes.",
+          "Você encontra algo raro, mas recuperá-lo exige entrar em uma posição perigosa."
+        ],
+        "seis_menos": [
+          "Você segue rastros falsos e entra no território de outra criatura.",
+          "Sua linha, armadilha ou equipamento quebra ou fica preso.",
+          "A presa percebe você primeiro e prepara uma emboscada.",
+          "Você encontra o recurso desejado, mas ele está protegido por uma criatura perigosa.",
+          "Você se perde, fica isolado ou acaba Sob Pressão em uma região selvagem."
+        ]
+      }
+    },
+    {
+      "nome": "Cartógrafo",
+      "atributo": "CON",
+      "marca": "Você conhece o andar e a história dele; gente te paga por caminho, por segurança e por saber o que já aconteceu ali.",
+      "move_a": {
+        "txt": "quando você entra em uma região ainda desconhecida e observa antes de explorar, role 2d6+Conhecimento. 10+ o mestre revela pontos fáceis/óbvios e uma rota segura. 7-9 revela parte, mas cobra tempo ou risco.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Mapa Vivo"
+      },
+      "move_b": {
+        "txt": "quando o grupo decide atravessar um caminho perigoso e você traça o plano, role 2d6+Conhecimento. 10+ vocês evitam uma ameaça prevista. 7-9 vocês evitam, mas aparecem em um lugar pior (mais longe, mais visível, mais hostil).",
+        "rotulo": "Move de Cena",
+        "titulo": "Rota Segura"
+      },
+      "move_c": {
+        "nome": "Crônica do Andar",
+        "gatilho": "Quando você documentar, catalogar ou estudar um local, evento, ruína ou capítulo já vivido do andar, role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você registra o local/evento com uma precisão que outros exploradores vão usar depois.",
+          "Você identifica um padrão histórico que revela onde algo importante deve estar.",
+          "Você descobre uma conexão entre esse lugar/evento e outro já registrado.",
+          "Seu registro vira referência — você recebe +1 na próxima vez que consultar esse mesmo tema.",
+          "Você não se expõe durante o levantamento — ninguém percebe o que você estava fazendo."
+        ],
+        "sete_nove": [
+          "Você registra o essencial, mas o resto exige mais tempo.",
+          "Você encontra a conexão, mas ela aponta pra algo perigoso.",
+          "Seu registro atrai atenção — alguém quer saber o que você anotou.",
+          "Você descobre parte da história; o resto ficou perdido ou incompleto.",
+          "Levantar os dados custa tempo, suprimento ou exposição."
+        ],
+        "seis_menos": [
+          "O registro está errado ou incompleto e alguém confia nele mesmo assim.",
+          "Você desperta algo que devia ficar esquecido.",
+          "Uma facção rival de exploradores ou guilda reivindica sua descoberta.",
+          "O local muda ou é destruído antes de você terminar de registrar.",
+          "Você fica Sob Pressão ou isolado tentando confirmar um dado."
+        ]
+      }
+    },
+    {
+      "nome": "Comerciante",
+      "atributo": "CON",
+      "marca": "você é rede; todo mundo tem uma opinião sobre você.",
+      "move_a": {
+        "txt": "quando você tenta comprar, vender ou trocar algo importante, role 2d6+Conhecimento. 10+ você consegue um acordo justo e escolhe 1: reduz o risco social, garante estoque, ou obtém uma informação verdadeira. 7-9 você consegue, mas cria dívida, rumor ou rival.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Negociação"
+      },
+      "move_b": {
+        "txt": "quando você passa alguns minutos ouvindo, perguntando e juntando nomes, role 2d6+Conhecimento. 10+ o mestre te dá uma oportunidade real. 7-9 te dá, mas vem com dono e cobrança.",
+        "rotulo": "Move de Cena",
+        "titulo": "Ouvir a Praça"
+      },
+      "move_c": {
+        "nome": "Negociação Perfeita",
+        "gatilho": "Quando você negociar a compra, venda ou troca de um item, serviço ou informação, explique sua proposta e role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você consegue um preço muito melhor do que o inicialmente oferecido.",
+          "O acordo inclui um item, serviço ou benefício adicional.",
+          "Você descobre o verdadeiro valor ou a raridade da mercadoria negociada.",
+          "O vendedor ou comprador passa a considerá-lo um contato confiável.",
+          "Você percebe uma intenção escondida, golpe ou informação importante durante a negociação."
+        ],
+        "sete_nove": [
+          "Você consegue um pequeno desconto ou lucro adicional.",
+          "O acordo é concluído, mas exige uma condição ou favor.",
+          "Você descobre uma informação útil sobre o mercado ou sobre a mercadoria.",
+          "Você evita ser enganado, embora não consiga melhorar o preço.",
+          "Você cria uma oportunidade para negociar novamente com essa pessoa no futuro."
+        ],
+        "seis_menos": [
+          "A outra parte aumenta o preço ou diminui o valor oferecido.",
+          "Você aceita uma condição desfavorável sem perceber imediatamente.",
+          "A mercadoria apresenta um defeito, falsificação ou problema oculto.",
+          "A negociação ofende alguém influente ou chama atenção indesejada.",
+          "O acordo só será possível mediante um pagamento adicional, missão ou favor perigoso."
+        ]
+      }
+    },
+    {
+      "nome": "Costureiro",
+      "atributo": "TEC",
+      "marca": "você é cuidado; quem usa peça sua “vira gente”.",
+      "move_a": {
+        "txt": "quando você repara uma peça rachada ou adapta roupa para a cena (frio, lama, silêncio), role 2d6+Técnica. 10+ fica firme e discreto. 7-9 fica firme, mas limita movimento ou deixa marca.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Remendo"
+      },
+      "move_b": {
+        "txt": "quando você usa tecido, capuz, corte ou detalhe para mudar como NPCs te leem, role 2d6+Técnica. 10+ você passa como quer. 7-9 você passa, mas alguém te reconhece depois.",
+        "rotulo": "Move de Cena",
+        "titulo": "Disfarce"
+      },
+      "move_c": {
+        "nome": "Mestre dos Tecidos",
+        "gatilho": "Quando você confeccionar, reparar ou aprimorar uma peça de roupa, armadura leve ou equipamento de tecido, descreva o resultado desejado e role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "A peça concede +1 em uma situação específica, definida durante a criação.",
+          "A roupa protege seu usuário de uma condição apropriada uma vez.",
+          "Você adiciona um compartimento oculto capaz de guardar um item pequeno.",
+          "A peça fica especialmente resistente e ignora a primeira vez que seria rasgada ou danificada.",
+          "Você utiliza os materiais com eficiência e preserva parte deles para outro trabalho."
+        ],
+        "sete_nove": [
+          "Você cria ou repara completamente a peça desejada.",
+          "A roupa oferece uma pequena vantagem narrativa em uma situação específica.",
+          "Você adiciona um bolso ou suporte para carregar um item pequeno.",
+          "A peça fica resistente, mas exige manutenção após uma situação perigosa.",
+          "Você identifica o material necessário para realizar um aprimoramento melhor futuramente."
+        ],
+        "seis_menos": [
+          "A peça fica com um ponto frágil que pode se romper no pior momento.",
+          "Você desperdiça parte dos tecidos ou materiais utilizados.",
+          "O equipamento fica desconfortável e deixa seu usuário Sob Pressão durante uma situação exigente.",
+          "O trabalho exige um material raro, ferramenta especial ou molde específico.",
+          "A peça funciona, mas apresenta uma característica indesejada escolhida pelo Mestre."
+        ]
+      }
+    },
+    {
+      "nome": "Cozinheiro",
+      "atributo": "CON",
+      "marca": "você é conforto em Aincrad; gente te protege porque você alimenta.",
+      "move_a": {
+        "txt": "quando você cozinha antes de uma saída com recursos limitados, role 2d6+Conhecimento. 10+ a comida muda o humor do grupo e remove uma pressão de viagem (cansaço, medo, frio). 7-9 remove, mas cria outra (barulho, cheiro, gente pedindo).",
+        "rotulo": "Move de Ofício",
+        "titulo": "Refeição de Campo"
+      },
+      "move_b": {
+        "txt": "quando você transforma uma pausa em conversa real (taverna, acampamento, beira de estrada), role 2d6+Conhecimento. 10+ o mestre revela um boato útil verdadeiro. 7-9 revela, mas alguém ouve também.",
+        "rotulo": "Move de Cena",
+        "titulo": "Mesa e Conversa"
+      },
+      "move_c": {
+        "nome": "Banquete Revigorante",
+        "gatilho": "Quando você preparar uma refeição completa para o grupo usando ingredientes adequados, descreva o prato e role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Todos que participarem da refeição recuperam 1 PV.",
+          "Cada participante pode remover uma condição entre Amedrontado, Exausto ou Sob Pressão.",
+          "Os participantes recebem +1 na próxima ação relacionada ao desafio para o qual a refeição foi preparada.",
+          "A comida rende porções adicionais que podem ser guardadas para depois.",
+          "Você utiliza os ingredientes com eficiência e preserva parte dos materiais usados."
+        ],
+        "sete_nove": [
+          "Um participante recupera 1 PV.",
+          "Cada participante pode remover a condição Exausto ou Sob Pressão.",
+          "Os participantes recebem uma pequena vantagem narrativa na próxima jornada ou combate.",
+          "A refeição rende uma porção adicional para ser consumida depois.",
+          "Você identifica um ingrediente capaz de melhorar essa receita futuramente."
+        ],
+        "seis_menos": [
+          "A refeição não produz o efeito revigorante esperado.",
+          "Parte dos ingredientes é desperdiçada ou estraga durante o preparo.",
+          "A comida causa desconforto e deixa alguém Sob Pressão.",
+          "O cheiro do banquete atrai monstros, jogadores ou visitantes indesejados.",
+          "A receita exige um ingrediente raro, utensílio especial ou conhecimento ainda desconhecido."
+        ]
+      }
+    },
+    {
+      "nome": "Domador",
+      "atributo": "TEC",
+      "marca": "você anda com vida ao lado; isso atrai curiosidade, inveja e medo.",
+      "move_a": {
+        "txt": "quando você encontra, cuida ou tenta chocar um ovo de criatura, descreva como prepara o ambiente e role 2d6+Técnica. 10+ escolha 2: o ovo choca com segurança e a fera nasce saudável, ela reconhece você como cuidador e cria vínculo imediato, você descobre uma característica especial dela, ou preserva os materiais usados no cuidado. 7-9 escolha 1: choca mas exige cuidados constantes por um tempo, a fera ainda precisa de confiança antes de aceitar você, ou nasce saudável só que assustada e difícil de controlar. 6- o mestre escolhe: o ovo não choca sem um local/item/condição especial, a criatura nasce agressiva ou desconfiada, o processo chama atenção da mãe da fera ou de outros monstros, ou o ovo tem doença/maldição/característica inesperada.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Ovo de Fera"
+      },
+      "move_b": {
+        "txt": "quando você dá uma ordem ao aliado domado para resolver um obstáculo ou mudar uma cena, role 2d6+Técnica. 10+ escolha 1: proteger alguém, abrir caminho, ou evitar uma ameaça. 7-9 ele faz, mas cria consequência (barulho, risco, ciúme, custo).",
+        "rotulo": "Move de Cena",
+        "titulo": "Ordem Clara"
+      },
+      "move_c": {
+        "nome": "Ovo de Fera",
+        "gatilho": "Quando você encontrar, cuidar ou tentar chocar um ovo de criatura, descreva como prepara o ambiente e role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "O ovo choca com segurança e a criatura nasce saudável.",
+          "A fera reconhece você como seu cuidador e cria um vínculo imediato.",
+          "Você descobre uma habilidade, necessidade ou característica especial da criatura.",
+          "A criatura nasce com uma qualidade incomum, definida junto ao Mestre.",
+          "Você preserva os materiais e recursos utilizados durante os cuidados."
+        ],
+        "sete_nove": [
+          "O ovo choca, mas a criatura exige cuidados constantes por algum tempo.",
+          "A fera aceita sua presença, porém ainda precisa conquistar sua confiança.",
+          "Você identifica o alimento, ambiente ou tratamento necessário para o ovo.",
+          "A criatura nasce saudável, mas assustada ou difícil de controlar.",
+          "Você consegue estabilizar o ovo, impedindo que ele seja perdido ou danificado."
+        ],
+        "seis_menos": [
+          "O ovo não choca e precisa de um local, item ou condição especial.",
+          "A criatura nasce agressiva, assustada ou desconfiada.",
+          "O processo chama a atenção da mãe da fera ou de outros monstros.",
+          "O ovo apresenta uma doença, maldição ou característica inesperada.",
+          "A criatura cria vínculo com outra pessoa ou foge logo após nascer."
+        ]
+      }
+    },
+    {
+      "nome": "Ferreiro",
+      "atributo": "TEC",
+      "marca": "você é escassez; gente tenta te puxar pra guilda ou te pressionar.",
+      "move_a": {
+        "txt": "quando você trabalha metal para transformar material do andar em componente útil ou segurar equipamento até a próxima cidade, role 2d6+Técnica. 10+ fica bom e não racha nesta sessão. 7-9 fica, mas você paga (material extra, tempo, rumor).",
+        "rotulo": "Move de Ofício",
+        "titulo": "Forjar/Consertar"
+      },
+      "move_b": {
+        "txt": "quando você examina arma/equipamento/material e diz o que está errado, role 2d6+Técnica. 10+ o mestre te diz a verdade e como resolver. 7-9 diz, mas a solução cobra algo difícil.",
+        "rotulo": "Move de Cena",
+        "titulo": "Avaliar Liga"
+      },
+      "move_c": {
+        "nome": "Forja Suprema",
+        "gatilho": "Quando você forjar, reparar ou aprimorar uma arma, armadura ou equipamento metálico, descreva o resultado desejado e role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "O equipamento recebe +1 em uma situação específica, definida durante a criação.",
+          "O item fica reforçado e ignora a primeira vez que seria quebrado ou danificado.",
+          "A arma atravessa uma proteção ou guarda resistente uma vez.",
+          "A armadura protege seu usuário de uma condição apropriada uma vez.",
+          "Você trabalha com eficiência e preserva parte dos materiais utilizados."
+        ],
+        "sete_nove": [
+          "Você cria ou repara completamente o equipamento desejado.",
+          "O item recebe uma pequena vantagem narrativa relacionada à sua função.",
+          "O equipamento fica reforçado, mas precisará de manutenção após uma situação perigosa.",
+          "Você conclui o trabalho, mas consome materiais ou tempo adicionais.",
+          "Você identifica o material necessário para realizar um aprimoramento superior futuramente."
+        ],
+        "seis_menos": [
+          "O equipamento fica com um ponto frágil que pode falhar no pior momento.",
+          "Parte dos metais ou materiais é perdida durante a forja.",
+          "O item fica pesado, desconfortável ou difícil de manusear.",
+          "O trabalho exige um minério raro, ferramenta especial ou forja mais avançada.",
+          "O equipamento funciona, mas possui uma falha ou característica indesejada escolhida pelo Mestre."
+        ]
+      }
+    },
+    {
+      "nome": "Informante",
+      "atributo": "CON",
+      "marca": "Você é rede e memória ao mesmo tempo; gente te procura por nome, por rumor e por dívida a cobrar.",
+      "move_a": {
+        "nome": "Pesquisa com Fonte",
+        "gatilho": "Quando você pesquisa um monstro, item, pessoa ou evento com fonte real (registro, arquivo, testemunha), role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": "o mestre revela um detalhe crítico e útil.",
+        "sete_nove": "revela uma parte, mas cobra tempo, favor ou exposição."
+      },
+      "move_b": {
+        "nome": "Contato Certo",
+        "gatilho": "Quando você aciona um contato ou puxa conversa pra conseguir algo que só gente por dentro sabe, role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": "o mestre te dá a pessoa, o lugar ou a informação certa.",
+        "sete_nove": "te dá, mas o contato cobra favor, silêncio ou exposição."
+      },
+      "move_c": {
+        "nome": "Rede de Informações",
+        "gatilho": "Quando você pesquisar registros, consultar contatos, ouvir rumores ou negociar por uma informação importante, diga o que deseja descobrir e role +Conhecimento.",
+        "atributo": "Conhecimento",
+        "dez_mais": [
+          "Você descobre exatamente a informação que estava procurando.",
+          "Você descobre uma informação adicional relacionada ao assunto.",
+          "Você identifica quem está escondendo algo, mentindo ou manipulando a situação.",
+          "Você descobre onde encontrar uma pessoa, item, local ou objetivo relacionado.",
+          "Você estabelece um contato útil e recebe +1 na próxima interação relacionada à informação obtida."
+        ],
+        "sete_nove": [
+          "Você consegue uma informação útil, mas incompleta.",
+          "Você descobre quem possui a resposta completa.",
+          "Você consegue a informação, mas precisa pagar, prometer um favor ou oferecer algo em troca.",
+          "Você encontra uma pista importante, embora ainda precise investigá-la.",
+          "Você evita ser enganado, mas percebe que alguém está observando suas perguntas."
+        ],
+        "seis_menos": [
+          "A informação recebida está errada, desatualizada ou foi plantada de propósito.",
+          "Suas perguntas chamam a atenção de alguém perigoso.",
+          "Seu contato exige um favor complicado antes de ajudar.",
+          "Você descobre algo importante, mas a informação coloca você ou seus aliados em perigo.",
+          "A pessoa que possui a resposta desapareceu, foi capturada ou está em um local de difícil acesso."
+        ]
+      }
+    },
+    {
+      "nome": "Joalheiro",
+      "atributo": "TEC",
+      "marca": "joia é status; gente te mede por detalhe.",
+      "move_a": {
+        "txt": "quando você transforma um material raro em acessório com significado (não magia), role 2d6+Técnica. 10+ fica desejável e útil, e o mestre deve dizer quem vai querer isso. 7-9 fica, mas atrai cobiça ou suspeita.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Lapidar"
+      },
+      "move_b": {
+        "txt": "quando você observa alguém pelo que usa e pelo que finge não valorizar, role 2d6+Técnica. 10+ o mestre te dá a motivação real daquela pessoa. 7-9 te dá, mas você cria um inimigo por ter “enxergado demais”.",
+        "rotulo": "Move de Cena",
+        "titulo": "Ler Gente"
+      },
+      "move_c": {
+        "nome": "Lapidação Encantada",
+        "gatilho": "Quando você trabalhar uma pedra preciosa ou joia para criar, reparar ou aprimorar um acessório, descreva o resultado desejado e role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "O acessório concede +1 em uma situação específica, definida durante a criação.",
+          "A joia pode armazenar o efeito de um cristal consumível para ser ativado uma vez.",
+          "O acessório protege seu usuário de uma condição específica uma vez.",
+          "A criação possui grande valor e pode ser vendida por um preço elevado.",
+          "O acessório revela uma propriedade especial ou oculta do material utilizado."
+        ],
+        "sete_nove": [
+          "O acessório funciona, mas seu efeito pode ser usado apenas uma vez.",
+          "A criação concede uma pequena vantagem narrativa em uma situação específica.",
+          "O item fica valioso, embora não possua nenhum efeito especial.",
+          "Você repara completamente uma joia ou acessório danificado.",
+          "Você identifica o material necessário para concluir o aprimoramento desejado."
+        ],
+        "seis_menos": [
+          "A pedra preciosa quebra ou perde parte de seu valor.",
+          "O acessório funciona de maneira instável ou imprevisível.",
+          "Você precisa de um material raro para terminar o trabalho.",
+          "A criação fica marcada por uma falha que pode aparecer no pior momento.",
+          "O processo consome mais materiais, dinheiro ou tempo do que o esperado."
+        ]
+      }
+    },
+    {
+      "nome": "Lenhador",
+      "atributo": "REF",
+      "marca": "você é o “mão de obra do andar”; gente respeita quem sabe fazer fogo e abrigo.",
+      "move_a": {
+        "txt": "quando você coleta madeira boa ou rara em lugar onde não é seguro perder tempo, role 2d6+Reflexo. 10+ você coleta sem desperdício e sem marca. 7-9 você coleta, mas deixa rastro, se machuca levemente ou atrai gente.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Corte Certo"
+      },
+      "move_b": {
+        "txt": "quando o grupo para para descansar e você assume o acampamento (fogo, abrigo, silêncio), role 2d6+Reflexo. 10+ o descanso é seguro e o mestre deve remover uma pressão do caminho (frio, fome, medo). 7-9 é seguro, mas a noite cobra (barulho, rastros, visita).",
+        "rotulo": "Move de Cena",
+        "titulo": "Acampamento que Aguenta"
+      },
+      "move_c": {
+        "nome": "Força da Floresta",
+        "gatilho": "Quando você explorar uma área florestal, derrubar uma árvore ou coletar madeira usando movimentos rápidos e precisos, descreva seu método e role +Reflexo.",
+        "atributo": "Reflexo",
+        "dez_mais": [
+          "Você obtém uma quantidade adicional de madeira ou materiais vegetais.",
+          "Você encontra madeira rara, resistente ou apropriada para uma criação especial.",
+          "Você conclui o trabalho rapidamente, antes que algum perigo se aproxime.",
+          "Você realiza cortes precisos e preserva completamente suas ferramentas.",
+          "Você identifica um caminho seguro, abrigo natural ou recurso útil nas proximidades."
+        ],
+        "sete_nove": [
+          "Você obtém a quantidade de madeira necessária.",
+          "Você termina o trabalho rapidamente, mas faz bastante barulho.",
+          "Você encontra um material especial, porém em pequena quantidade.",
+          "Você preserva a qualidade da madeira, mas desgasta sua ferramenta.",
+          "Você percebe um perigo próximo antes que ele alcance o grupo."
+        ],
+        "seis_menos": [
+          "A árvore cai em uma direção perigosa ou bloqueia uma passagem importante.",
+          "O barulho atrai monstros, jogadores ou criaturas territoriais.",
+          "A madeira coletada está podre, infestada ou possui qualidade inferior.",
+          "Sua ferramenta fica presa, perde o fio ou sofre algum dano.",
+          "Você encontra uma árvore rara, mas ela está em um local perigoso ou protegida por uma criatura."
+        ]
+      }
+    },
+    {
+      "nome": "Médico",
+      "atributo": "ESP",
+      "marca": "você carrega responsabilidade; quando dá errado, ninguém esquece.",
+      "move_a": {
+        "txt": "quando você trata status/ferimento sem gastar Cristal, role 2d6+Espírito. 10+ remove e estabiliza sem deixar rastro. 7-9 remove, mas deixa fraqueza temporária ou exige insumo/repouso.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Triagem"
+      },
+      "move_b": {
+        "txt": "quando alguém está em pânico, choque ou prestes a desabar e você assume, role 2d6+Espírito. 10+ a pessoa volta ao controle e a cena não escala. 7-9 volta, mas você absorve parte do peso (cansaço, culpa, cobrança).",
+        "rotulo": "Move de Cena",
+        "titulo": "Manter Alguém Vivo"
+      },
+      "move_c": {
+        "nome": "O Salva-Vidas",
+        "gatilho": "Quando você prestar atendimento imediato a alguém ferido, inconsciente ou em estado crítico, descreva como realiza o tratamento e role +Espírito.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "O paciente recupera 1 PV.",
+          "Você remove uma condição entre Ferido, Abalado, Paralisado, Exausto ou Sob Pressão, desde que o tratamento seja adequado.",
+          "Você estabiliza completamente o paciente, impedindo que sua situação piore.",
+          "Você identifica a causa do ferimento, doença ou condição e descobre como tratá-la definitivamente.",
+          "O paciente recebe +1 na próxima ação após recuperar-se do atendimento."
+        ],
+        "sete_nove": [
+          "O paciente recupera 1 PV, mas você consome materiais médicos.",
+          "Você remove uma condição apropriada, mas o paciente fica Exausto após o tratamento.",
+          "Você estabiliza o paciente, porém ele ainda precisa de repouso ou cuidados posteriores.",
+          "Você reduz os efeitos do ferimento ou condição temporariamente.",
+          "Você identifica o tratamento necessário, mas precisa de um remédio, ferramenta ou ingrediente específico."
+        ],
+        "seis_menos": [
+          "O estado do paciente piora durante o atendimento.",
+          "Você interrompe o perigo imediato, mas uma nova condição aparece.",
+          "Seus medicamentos ou materiais acabam no pior momento.",
+          "O tratamento exige um item raro, cirurgia ou ajuda especializada.",
+          "A pressão da situação deixa você Abalado ou Sob Pressão."
+        ]
+      }
+    },
+    {
+      "nome": "Mercenário",
+      "atributo": "COR",
+      "marca": "você é segurança; gente te contrata e também te teme.",
+      "move_a": {
+        "txt": "quando você escolta alguém por zona perigosa, role 2d6+Corpo. 10+ vocês chegam sem incidente e o grupo mantém recursos. 7-9 chegam, mas o mestre cobra em tempo, dano leve ou perseguição.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Escolta"
+      },
+      "move_b": {
+        "txt": "quando a cena fica perigosa e você toma a frente para ler ameaça e definir posição, role 2d6+Corpo. 10+ o mestre te diz de onde vem o perigo e como evitar o pior. 7-9 diz, mas você paga ficando exposto.",
+        "rotulo": "Move de Cena",
+        "titulo": "Postura de Guarda"
+      },
+      "move_c": {
+        "nome": "Profissional da Missão",
+        "gatilho": "Quando você assumir um trabalho perigoso, proteger alguém, recuperar um corpo ou pertences, ou enfrentar um obstáculo diretamente ligado a um contrato, descreva sua abordagem e role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você avança diretamente em direção ao objetivo da missão.",
+          "Você protege um aliado das consequências imediatas da ação.",
+          "Você neutraliza uma ameaça ou obstáculo durante o avanço.",
+          "Você recupera com segurança um corpo, equipamento ou item importante.",
+          "Você examina a cena e descobre uma pista importante sobre o que aconteceu ali."
+        ],
+        "sete_nove": [
+          "Você conclui uma parte importante da missão, mas surge uma nova complicação.",
+          "Você protege alguém, porém fica exposto no lugar dele.",
+          "Você recupera o corpo ou item desejado, mas precisa abandonar outra coisa para carregá-lo.",
+          "Você identifica uma pista sobre a morte ou desaparecimento, mas ela aponta para um perigo maior.",
+          "Você supera o obstáculo, mas consome equipamento, tempo ou recursos importantes."
+        ],
+        "seis_menos": [
+          "O contratante escondeu uma informação importante sobre o trabalho.",
+          "O corpo ou item que você procura não está onde deveria estar.",
+          "Algo relacionado aos mortos revela uma ameaça inesperada.",
+          "Você fica cercado, isolado ou Sob Pressão durante a missão.",
+          "Cumprir o contrato exige uma escolha difícil entre o objetivo, sua segurança ou a de um aliado."
+        ]
+      }
+    },
+    {
+      "nome": "Mestre de Montarias",
+      "atributo": "TEC",
+      "marca": "Você anda lado a lado com uma fera maior que você; isso muda como o mundo te vê — respeito, medo ou cobiça.",
+      "move_a": {
+        "nome": "Doma de Montaria",
+        "gatilho": "Quando você tenta acalmar, domesticar ou treinar uma criatura pra servir como montaria, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": "a criatura aceita você e obedece um comando simples.",
+        "sete_nove": "aceita, mas exige alimento, cuidado ou paciência antes de confiar de verdade."
+      },
+      "move_b": {
+        "nome": "Conduzir na Pressão",
+        "gatilho": "Quando sua montaria precisa atravessar perigo, terreno ruim ou pânico sem quebrar a formação, role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": "ela atravessa firme e o grupo não perde tempo nem recurso.",
+        "sete_nove": "atravessa, mas o esforço cobra — ela se cansa, se machuca ou assusta."
+      },
+      "move_c": {
+        "nome": "O Domesticador",
+        "gatilho": "Quando você tentar acalmar, domesticar ou treinar uma criatura para servir como montaria, descreva sua abordagem e role +Técnica.",
+        "atributo": "Técnica",
+        "dez_mais": [
+          "A criatura aceita você como cavaleiro e permite ser montada.",
+          "Você ensina a montaria um comando simples, como avançar, parar, seguir ou proteger.",
+          "Você identifica as necessidades, medos e preferências da criatura.",
+          "A montaria permanece calma mesmo diante de perigos ou ambientes difíceis.",
+          "Você cria um vínculo forte e recebe +1 na próxima ação realizada junto da montaria."
+        ],
+        "sete_nove": [
+          "A criatura permite ser montada, mas apenas por você.",
+          "A montaria obedece a um comando simples, porém ainda demonstra resistência.",
+          "Você acalma a criatura, mas precisa oferecer alimento, cuidado ou descanso.",
+          "Você descobre o que é necessário para conquistar definitivamente sua confiança.",
+          "A criatura acompanha o grupo, mas foge caso seja muito assustada ou ferida."
+        ],
+        "seis_menos": [
+          "A criatura se assusta, reage agressivamente ou tenta fugir.",
+          "A montaria aceita outra pessoa como cavaleiro em vez de você.",
+          "O processo chama a atenção de uma criatura dominante ou de seu antigo dono.",
+          "A criatura exige uma sela, alimento raro ou treinamento especial antes de ser montada.",
+          "A montaria parece domesticada, mas perde o controle no pior momento."
+        ]
+      }
+    },
+    {
+      "nome": "Minerador",
+      "atributo": "COR",
+      "marca": "Você é o que desce onde os outros não vão; gente confia em você pra achar o que está fundo demais pra ser fácil.",
+      "move_a": {
+        "nome": "Escavação",
+        "gatilho": "Quando você escava rocha, abre um túnel ou extrai minério usando força e resistência, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": "você extrai o que precisa sem desgastar ferramenta nem se expor.",
+        "sete_nove": "extrai, mas perde tempo, desgasta a ferramenta ou desperta algo."
+      },
+      "move_b": {
+        "nome": "Leitura de Veio",
+        "gatilho": "Quando você examina uma parede rochosa, mina ou formação antes de decidir onde cavar, role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": "o mestre te diz onde está o melhor material e o perigo mais próximo.",
+        "sete_nove": "diz uma das duas coisas, não as duas."
+      },
+      "move_c": {
+        "nome": "Escavador das Profundezas",
+        "gatilho": "Quando você escavar uma parede rochosa, explorar uma mina ou extrair minério usando sua força e resistência, descreva seu método e role +Corpo.",
+        "atributo": "Corpo",
+        "dez_mais": [
+          "Você encontra uma quantidade adicional de minério ou pedra útil.",
+          "Você descobre um minério raro, cristal ou material especial.",
+          "Você abre uma passagem segura para o grupo atravessar.",
+          "Você conclui a escavação sem desgastar suas ferramentas.",
+          "Você identifica antecipadamente uma ameaça subterrânea, como desabamento, gás ou criatura escondida."
+        ],
+        "sete_nove": [
+          "Você consegue extrair a quantidade de minério necessária.",
+          "Você encontra um material especial, mas em pequena quantidade.",
+          "Você abre uma passagem estreita ou instável.",
+          "Você evita um perigo imediato, mas perde tempo ou recursos.",
+          "Você conclui o trabalho, porém sua ferramenta fica desgastada e precisará de manutenção."
+        ],
+        "seis_menos": [
+          "A escavação provoca um desabamento ou bloqueia a passagem.",
+          "O barulho desperta monstros ou criaturas subterrâneas.",
+          "Sua ferramenta quebra, fica presa ou perde sua utilidade.",
+          "Você encontra uma região com gás, calor ou outro perigo natural.",
+          "Você descobre um minério valioso, mas ele está em uma área instável, profunda ou protegida."
+        ]
+      }
+    },
+    {
+      "nome": "Músico",
+      "atributo": "ESP",
+      "marca": "você mexe com humor; gente te ama, te odeia ou te usa.",
+      "move_a": {
+        "txt": "quando você toca para mudar emoção de grupo (acalmar, inspirar, impor ritmo), role 2d6+Espírito. 10+ escolha 1: reduza tensão social, dê coragem para atravessar um medo, ou transforme pausa em conversa. 7-9 você consegue, mas atrai atenção inevitável.",
+        "rotulo": "Move de Ofício",
+        "titulo": "Cadência"
+      },
+      "move_b": {
+        "txt": "quando você toca em lugar público e pede algo em troca (informação, abrigo, silêncio), role 2d6+Espírito. 10+ alguém responde com algo verdadeiro. 7-9 alguém responde, mas com interesse e cobrança.",
+        "rotulo": "Move de Cena",
+        "titulo": "A Praça Ouve"
+      },
+      "move_c": {
+        "nome": "A Melodia Inspiradora",
+        "gatilho": "Quando você tocar ou cantar para inspirar seus companheiros antes ou durante uma situação perigosa, descreva sua apresentação e role +Espírito.",
+        "atributo": "Espírito",
+        "dez_mais": [
+          "Um aliado que ouvir a melodia recebe +1 na próxima ação.",
+          "Você remove a condição Amedrontado, Abalado ou Sob Pressão de um aliado.",
+          "Você inspira todo o grupo, permitindo que cada aliado escolha quem agirá primeiro na próxima troca.",
+          "Um aliado recupera a coragem e pode agir imediatamente apesar do medo ou hesitação.",
+          "Sua apresentação chama a atenção para você, permitindo que um aliado se reposicione sem ser percebido."
+        ],
+        "sete_nove": [
+          "Um aliado recebe +1 na próxima ação, mas o benefício deve ser usado imediatamente.",
+          "Você reduz temporariamente os efeitos de Amedrontado, Abalado ou Sob Pressão.",
+          "Você encoraja um aliado a continuar, impedindo que ele recue ou desista naquele momento.",
+          "Você distrai um inimigo por alguns instantes e cria uma abertura para o grupo.",
+          "Você fortalece o moral do grupo, mas fica Sob Pressão ao sustentar a apresentação."
+        ],
+        "seis_menos": [
+          "Sua música atrai monstros, jogadores ou visitantes indesejados.",
+          "A apresentação não combina com o momento e aumenta a tensão do grupo.",
+          "Um inimigo percebe sua importância e passa a considerá-lo o principal alvo.",
+          "Seu instrumento sofre algum dano ou precisa de manutenção.",
+          "Você absorve as emoções negativas da situação e fica Abalado ou Sob Pressão."
+        ]
+      }
+    }
+  ]
+}

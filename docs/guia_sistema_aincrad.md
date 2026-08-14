@@ -83,7 +83,7 @@ usa o atributo que a ficção pedir. Ver `docs/balanceamento_armas_oficios.md`
 pra por que isso importa: armas e profissões não estão distribuídas de
 forma igual entre os 5 atributos, e misturar é o que resolve isso na mesa.
 
-## As 22 armas de Aincrad
+## As 19 armas de Aincrad
 
 Cada arma tem um **atributo principal**, somado à rolagem de ação sempre que
 ela for usada, e concede dois Moves do tipo:
@@ -109,13 +109,9 @@ ela for usada, e concede dois Moves do tipo:
 | 14  | Pá                  | Conhecimento       |
 | 15  | Rapieira            | Reflexo            |
 | 16  | Bastão              | Espírito           |
-| 17  | Tonfas              | Técnica            |
-| 18  | Clava               | Corpo              |
-| 19  | Nunchaku            | Técnica            |
-| 20  | Glaive              | Reflexo            |
-| 21  | Corrente com Peso   | Técnica            |
-| 22  | Manopla             | Corpo              |
-| 23  | Leque               | Técnica            |
+| 17  | Corrente com Peso   | Técnica            |
+| 18  | Manopla             | Corpo              |
+| 19  | Leque               | Técnica            |
 
 ## Moves de Arma (todas Tier S em protagonismo)
 
@@ -220,30 +216,6 @@ Cada arma abaixo tem:
 **Marca:** bastão passa ritmo, equilíbrio e condução; ele reorganiza a cena sem precisar ocupar o centro dela.
 **Move de Combate — Ritmo de Grupo:** quando você dita o ritmo da troca para manter o grupo junto, role 2d6+Espírito. 10+ escolha 1: negue a próxima reação contra um aliado que você chamar, force recuo, ou abra espaço para diálogo. 7-9 você consegue, mas se expõe e vira o alvo.
 **Move Utilitário — Vara de Peregrino:** quando você guia travessia, acalma pânico ou mantém alguém de pé sem gastar Cristal, role 2d6+Espírito. 10+ a pessoa/grupo atravessa e mantém a cabeça fria; o mestre remove uma escalada emocional da cena. 7-9 atravessa, mas alguém paga com cansaço, dor ou dívida social.
-
-### Tonfas (TEC)
-
-**Marca:** tonfas passam defesa curta, giro e resposta imediata; elas ficam mais fortes quando o espaço aperta.
-**Move de Combate — Trancar Reação:** quando você luta colado ou em espaço apertado para negar contra-ataque, role 2d6+Técnica. 10+ escolha 1: negue a próxima reação, desarme, ou force recuo curto. 7-9 você consegue, mas sua guarda abre para outro perigo.
-**Move Utilitário — Alavanca Curta:** quando você força mecanismo, abre grade, empurra tampa ou improvisa ferramenta precisa, role 2d6+Técnica. 10+ abre sem quebrar. 7-9 abre, mas entorta/quebra algo e isso vira problema.
-
-### Clava (COR)
-
-**Marca:** clava passa peso, pressão e imposição de espaço; quando ela entra, a cena tende a responder.
-**Move de Combate — Pressão Bruta:** quando você tenta impor recuo, rendição ou quebra de moral, role 2d6+Corpo. 10+ escolha 1: force recuo, desarme, ou capture sem matar. 7-9 você consegue, mas vira rivalidade imediata ou chama reforço.
-**Move Utilitário — Autoridade do Peso:** quando você entra em uma cena tensa e tenta impedir que a violência escale, role 2d6+Corpo. 10+ a cena desacelera e você define a regra do lugar por enquanto. 7-9 desacelera, mas alguém te desafia depois.
-
-### Nunchaku (TEC)
-
-**Marca:** nunchaku passam fluxo, cadência e mudança rápida de direção; a cena ganha velocidade e imprevisibilidade.
-**Move de Combate — Fluxo:** quando você luta com ritmo para vencer sem matar, role 2d6+Técnica. 10+ escolha 1: capture sem matar, desarme, ou force recuo. 7-9 você consegue, mas vira espetáculo: alguém comenta, filma, aposta ou espalha boato.
-**Move Utilitário — Truque de Cordão:** quando você usa corda curta, amarra, prende, puxa ou faz um truque para distrair, role 2d6+Técnica. 10+ funciona e não parece ameaça. 7-9 funciona, mas alguém interpreta como provocação.
-
-### Glaive (REF)
-
-**Marca:** glaive passa alcance amplo, linha de passagem e domínio de área; ele reorganiza como os corpos se movem no espaço.
-**Move de Combate — Passo de Pique:** quando você mantém inimigos fora do alcance e tenta controlar espaço amplo, role 2d6+Reflexo. 10+ escolha 1: mantenha distância, force recuo, ou impeça que alguém atravesse um ponto. 7-9 você consegue, mas o cabo enrosca, o chão te trai ou você fica preso em espaço curto.
-**Move Utilitário — Estandarte de Passagem:** quando você usa o glaive como símbolo de escolta, patrulha ou “formação” para atravessar uma área com gente, role 2d6+Reflexo. 10+ as pessoas assumem ordem e abrem passagem. 7-9 abrem, mas cobram favor, informação ou aval de guilda.
 
 ### Corrente com Peso (TEC)
 

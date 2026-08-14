@@ -43,7 +43,7 @@ const RARIDADE_5_MIN = ["comum", "incomum", "raro", "epico", "lendario"];
 // Coveiro) não quebra — profissao é texto livre, só some do dropdown de
 // criação de personagem novo.
 const PROFISSOES = ["Alquimista", "Caçador", "Cartógrafo", "Comerciante", "Costureiro", "Cozinheiro", "Domador", "Ferreiro", "Informante", "Joalheiro", "Lenhador", "Médico", "Mercenário", "Mestre de Montarias", "Minerador", "Músico"];
-const ARMAS_TIPOS = ["Adagas", "Adagas de Arremesso", "Arco e Flecha", "Bastão", "Besta", "Chakrams", "Chicote", "Clava", "Corrente com Peso", "Escudo e Espada", "Espada Longa", "Foice", "Glaive", "Katana", "Lança", "Leque", "Machado", "Manopla", "Martelo", "Nunchaku", "Pá", "Rapieira", "Tonfas"];
+const ARMAS_TIPOS = ["Adagas", "Adagas de Arremesso", "Arco e Flecha", "Bastão", "Besta", "Chakrams", "Chicote", "Corrente com Peso", "Escudo e Espada", "Espada Longa", "Foice", "Katana", "Lança", "Leque", "Machado", "Manopla", "Martelo", "Pá", "Rapieira"];
 const EQUIP_SLOTS = ["Acessórios", "Armaduras", "Botas", "Capuz", "Comidas", "Cristais de Uso", "Elmos", "Escudos", "Luvas", "Munições", "Parte de Baixo", "Parte de Cima", "Poções"];
 const MONSTRO_TIPOS = ["aracnideo", "besta", "chefe_de_andar", "construto", "humanoide", "inseto", "nao-corporeo", "planta"];
 const PONTOS_CATEGORIA = ["npc", "monstro", "chefe", "recurso", "segredo", "puzzle", "dungeon", "cidade", "comerciante"]; // bate 1:1 com CAT_INFO em Compendio.vue — não adicionar sem atualizar lá também
@@ -59,6 +59,11 @@ const BESTIARIO_CATEGORIA = ["comum", "mini_boss", "mvp", "boss"]; // = CHECK be
 const AMEACA = ["fraco", "comum", "forte", "elite", "chefe"]; // elite=miniboss e chefe=boss usam HP compartilhado (item 11)
 const REPUTACAO_ALVO_TIPO = ["cla", "cidade", "vila", "npc", "faccao", "outro"]; // = CHECK reputacao/missoes
 const TRANSACAO_TIPO = ["missao", "venda", "compra", "craft", "bug", "ajuste_mestre", "npc", "taxa", "limite_diario", "combate", "estalagem", "transferencia", "meta_global"]; // = CHECK transacoes_tipo_check
+// Hub de Aincrad (SAO_RPG_AINCRAD_SISTEMAS.md) — vocabulários = CHECK das tabelas em schema_hub_aincrad.sql
+const NOTICIA_CATEGORIA = ["boss", "exploracao", "item_raro", "guilda", "evento", "sistema", "descoberta", "conquista"]; // = CHECK noticias_categoria_check
+const ANDAR_STATUS = ["bloqueado", "em_exploracao", "boss_descoberto", "boss_derrotado", "concluido"]; // = CHECK andares_status_check
+const BOSS_STATUS = ["nao_descoberto", "descoberto", "batalha_disponivel", "derrotado"]; // = CHECK andares_boss_status_check
+const EVENTO_STATUS = ["em_breve", "ativo", "concluido", "fracassado"]; // = CHECK eventos_globais_status_check
 
 // sub-schema reutilizado em receitas.materiais e ferramentas_oficio.receita
 // (mesma forma: [{qtd, mat_id}, ...])
@@ -432,7 +437,108 @@ export const TABELAS_ADMIN = {
       { nome: "simbolo", tipo: "textarea" },
       { nome: "reputacao", tipo: "json" },
       { nome: "ganchos", tipo: "json", segredo: true },
+      // Hub de Aincrad — item 4 (sistema de clã/guilda): liderança e
+      // estatísticas exibidas na página pública /guildas. membros_count e
+      // nivel_medio NÃO entram aqui — são computados na view clas_publico
+      // (join com personagens/nivel_profissao), não são coluna editável.
+      { nome: "lider_personagem", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome", rotulo: "Líder" },
+      { nome: "vice_lider_personagem", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome", rotulo: "Vice-Líder" },
+      { nome: "missoes_concluidas", tipo: "number", min: 0, rotulo: "Missões concluídas (contador manual)" },
+      { nome: "bosses_derrotados", tipo: "number", min: 0, rotulo: "Bosses derrotados (some sozinho ao usar \"Marcar boss derrotado\" no andar)" },
+      { nome: "conquistas", tipo: "lista-texto", rotulo: "Conquistas (ex: Primeiros Exploradores, Boss Slayers)" },
       { nome: "visivel", tipo: "bool" },
+    ],
+  },
+  noticias: {
+    pk: "id",
+    rotulo: "Notícias de Aincrad",
+    icone: "📰",
+    campos: [
+      { nome: "titulo", tipo: "text" },
+      { nome: "categoria", tipo: "select", opcoes: NOTICIA_CATEGORIA },
+      { nome: "andar", tipo: "number", min: 1, rotulo: "Andar (opcional)" },
+      { nome: "dia_aincrad", tipo: "number", min: 1, rotulo: "Dia de Aincrad (opcional)" },
+      { nome: "texto", tipo: "textarea" },
+      { nome: "destaque", tipo: "bool", rotulo: "Destaque (banner SYSTEM ANNOUNCEMENT)" },
+      { nome: "visivel", tipo: "bool" },
+    ],
+  },
+  andares: {
+    pk: "numero",
+    rotulo: "Andares",
+    icone: "🏯",
+    campos: [
+      { nome: "numero", tipo: "number", min: 1 },
+      { nome: "nome", tipo: "text", rotulo: "Nome / Região" },
+      { nome: "status", tipo: "select", opcoes: ANDAR_STATUS },
+      { nome: "exploracao_pct", tipo: "number", min: 0, max: 100, rotulo: "Exploração (%)" },
+      { nome: "info_descobertas", tipo: "textarea", rotulo: "Informações importantes descobertas" },
+      { nome: "monstros_conhecidos", tipo: "lista-texto", rotulo: "Monstros conhecidos" },
+      { nome: "mvp_personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome", rotulo: "MVP do andar" },
+      { nome: "mvp_feito", tipo: "text", rotulo: "Feito do MVP" },
+      { nome: "mvp_titulo", tipo: "text", rotulo: "Título conquistado pelo MVP" },
+      { nome: "boss_status", tipo: "select", opcoes: BOSS_STATUS, rotulo: "Status do Boss" },
+      { nome: "boss_nome", tipo: "text", rotulo: "Nome do Boss" },
+      { nome: "boss_img", tipo: "imagem", rotulo: "Imagem do Boss" },
+      { nome: "boss_localizacao", tipo: "text", rotulo: "Localização do Boss" },
+      { nome: "boss_info", tipo: "textarea", rotulo: "Informações conhecidas do Boss" },
+      { nome: "boss_grupo_responsavel", tipo: "text", rotulo: "Grupo responsável pela derrota" },
+      { nome: "boss_participantes", tipo: "lista-texto", rotulo: "Jogadores participantes da luta" },
+      { nome: "boss_recompensas", tipo: "textarea", rotulo: "Recompensas" },
+      { nome: "boss_drops", tipo: "textarea", rotulo: "Drops conhecidos" },
+      { nome: "visivel", tipo: "bool" },
+    ],
+  },
+  eventos_globais: {
+    pk: "id",
+    rotulo: "Eventos Globais",
+    icone: "🌍",
+    campos: [
+      { nome: "nome", tipo: "text" },
+      { nome: "descricao", tipo: "textarea" },
+      { nome: "objetivo", tipo: "textarea" },
+      { nome: "status", tipo: "select", opcoes: EVENTO_STATUS },
+      { nome: "progresso_pct", tipo: "number", min: 0, max: 100, rotulo: "Progresso global (%)" },
+      { nome: "participantes", tipo: "text" },
+      { nome: "recompensa", tipo: "textarea", rotulo: "Recompensa Global" },
+      { nome: "consequencia_fracasso", tipo: "textarea", rotulo: "Consequência em caso de fracasso" },
+      { nome: "visivel", tipo: "bool" },
+    ],
+  },
+  eventos_globais_objetivos: {
+    pk: "id",
+    rotulo: "Objetivos de Evento Global",
+    icone: "🎯",
+    campos: [
+      { nome: "evento_id", tipo: "sugestao", tabelaRef: "eventos_globais", campoRef: "id", rotulo: "Evento" },
+      { nome: "descricao", tipo: "text", rotulo: "Descrição (ex: Derrotar 100 Lobos Cinzentos)" },
+      { nome: "meta", tipo: "number", min: 0 },
+      { nome: "atual", tipo: "number", min: 0 },
+    ],
+  },
+  diario_entradas: {
+    pk: "id",
+    rotulo: "Diário de Aincrad",
+    icone: "📔",
+    campos: [
+      { nome: "dia", tipo: "number", min: 1, rotulo: "Dia de Aincrad" },
+      { nome: "autor_tipo", tipo: "select", opcoes: ["mestre", "jogador"], rotulo: "Registro do..." },
+      { nome: "autor_personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome", rotulo: "Personagem (se for registro de jogador)" },
+      { nome: "titulo", tipo: "text" },
+      { nome: "texto", tipo: "textarea" },
+      { nome: "categoria", tipo: "text", rotulo: "Categoria (livre, ex: boss, descoberta, rumor)" },
+      { nome: "visivel", tipo: "bool" },
+    ],
+  },
+  estado_aincrad: {
+    pk: "id",
+    rotulo: "Estado de Aincrad",
+    icone: "📊",
+    campos: [
+      { nome: "dia_atual", tipo: "number", min: 1 },
+      { nome: "mortes", tipo: "number", min: 0 },
+      { nome: "andar_atual", tipo: "number", min: 1, rotulo: "Andar atual (vazio = calcula sozinho pelo mais avançado destravado)" },
+      { nome: "texto_extra", tipo: "textarea" },
     ],
   },
   pontos: {
@@ -931,6 +1037,12 @@ export const GRUPOS_COMPENDIO = [
     lbl: "Comércio",
     ico: "🏪",
     tabelas: ["mercado", "mercado_itens", "compra_materiais"],
+  },
+  {
+    k: "hub",
+    lbl: "Hub de Aincrad",
+    ico: "🌐",
+    tabelas: ["noticias", "andares", "eventos_globais", "eventos_globais_objetivos", "diario_entradas", "estado_aincrad"],
   },
   {
     k: "avancado",

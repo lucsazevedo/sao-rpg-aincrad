@@ -34,8 +34,8 @@ daqui. Editou aqui, roda o gerador.
 ## Três regras de dungeon
 
 **1. Corredor estreito muda a arma.** Em qualquer sala descrita como estreita,
-armas de haste longa e duas mãos (Glaive, Espada Longa, Lança, Foice, Martelo)
-não dão bônus e podem custar complicação. Adagas, Rapieira, Tonfas e Manopla
+armas de haste longa e duas mãos (Espada Longa, Lança, Foice, Martelo)
+não dão bônus e podem custar complicação. Adagas, Rapieira e Manopla
 brilham. Diga isso na primeira vez.
 
 **2. Barulho tem preço.** Toda dungeon do andar tem uma mecânica de atenção:
@@ -260,7 +260,7 @@ não dá custa uma ação).
 > vão que a luz não alcança. Sem corrimão. Sem fundo visível. Fila indiana,
 > e a fila decide quem morre primeiro se algo vier.
 
-**Regra:** fila indiana obrigatória. **Glaive, Espada Longa e Lança não
+**Regra:** fila indiana obrigatória. **Espada Longa e Lança não
 funcionam aqui.** Quem estiver na frente enfrenta sozinho.
 **O que dá pra fazer:** amarrar corda entre todos (2d6+Técnica — 10+: uma
 queda não é fatal pra ninguém; 6-: a corda vira o problema).
@@ -555,8 +555,8 @@ grisalho preso na fenda de M-3, e o silêncio dos morcegos perto de M-7). Um
 grupo de nível 8 sem preparo perde gente aqui.
 **Tesouro (nomeado):** **Pelagem Grisalha** (100%) e **Presa do Guardião**
 (40%). A Pelagem vira a **`Cota do Guardião`** com Kazuo Tanaka **e** Mestra
-Sorrel — a única receita do andar que exige dois ofícios. A Presa vira a
-**`Clava de Osso de Guardião`**.
+Sorrel — a única receita do andar que exige dois ofícios. A Presa vira o
+**`Machado de Osso de Guardião`**.
 
 ---
 

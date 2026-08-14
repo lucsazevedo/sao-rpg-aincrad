@@ -7,7 +7,7 @@ itens: 8
 # Escudos
 
 Ocupa uma mão. Quem usa arma de duas mãos (Espada Longa, Machado, Martelo,
-Glaive, Lança, Foice, Bastão, Nunchaku em estilo duplo) **não pode** equipar
+Lança, Foice, Bastão) **não pode** equipar
 escudo — a exceção é a arma "Escudo e Espada", que já pressupõe um e ganha
 bônus dobrado de qualquer escudo Incomum+ (o bônus vira +1 em duas situações
 em vez de uma, escolhidas na hora de equipar).

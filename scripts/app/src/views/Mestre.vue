@@ -35,7 +35,7 @@
             {{ auth.nomeMostrar || auth.perfil?.nome || 'Mestre' }}
           </div>
           <div style="margin-top:10px">
-            <router-link to="/" class="btn ghost" style="width:100%;justify-content:center;display:flex">🏠 Voltar para Home</router-link>
+            <router-link to="/inicio" class="btn ghost" style="width:100%;justify-content:center;display:flex">🏠 Voltar para Home</router-link>
           </div>
         </div>
       </aside>
@@ -777,6 +777,56 @@
           </div>
         </div>
 
+        <!-- ============ ABA: ANDARES — AÇÕES (Hub de Aincrad, item 7 do doc) ============ -->
+        <div v-if="aba==='andares_acoes'" class="admin-content">
+          <div class="msg info">
+            🏯 Marcar um boss como derrotado dispara a cascata inteira sozinho: publica notícia de destaque,
+            registra no Diário de Aincrad, soma "bosses derrotados" no clã de cada participante e — se existir —
+            libera o próximo andar (com notícia própria). Pra editar campos soltos de um andar (nome, status,
+            monstros conhecidos, MVP…) use "Hub de Aincrad → Andares" no Compêndio.
+          </div>
+          <div class="card" style="background:var(--panel-2)">
+            <h4 style="margin:0 0 12px;color:var(--azul-bright)">⚔️ Marcar boss derrotado</h4>
+            <div class="admin-toolbar">
+              <select v-model="bossAndarNumero" style="flex:1;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
+                <option value="">-- Selecione o andar --</option>
+                <option v-for="a in andaresParaBoss" :key="a.numero" :value="a.numero">
+                  {{ a.numero }}º andar — {{ a.nome || 'sem nome' }} ({{ a.boss_nome || 'boss sem nome' }}) · {{ a.boss_status }}
+                </option>
+              </select>
+              <button class="btn" :disabled="carregandoAndares" @click="carregarAndares()">🔄 Atualizar</button>
+            </div>
+            <div class="form" style="margin-top:12px">
+              <div class="campo">
+                <label>Recompensas</label>
+                <textarea v-model="bossRecompensas" rows="2" placeholder="Ex: 500 Col + acesso à Praça do 2º Andar"></textarea>
+              </div>
+              <div class="campo">
+                <label>Drops conhecidos</label>
+                <textarea v-model="bossDrops" rows="2"></textarea>
+              </div>
+              <div class="campo">
+                <label>MVP da batalha</label>
+                <select v-model="bossMvp">
+                  <option value="">-- Nenhum --</option>
+                  <option v-for="p in jogadores" :key="p.nome" :value="p.nome">{{ p.nome }}</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label>Jogadores participantes</label>
+                <div style="display:flex;flex-wrap:wrap;gap:8px">
+                  <label v-for="p in jogadores" :key="p.nome" class="pill" style="cursor:pointer" :class="{on: bossParticipantes.includes(p.nome)}">
+                    <input type="checkbox" :value="p.nome" v-model="bossParticipantes" style="margin-right:5px">{{ p.nome }}
+                  </label>
+                </div>
+              </div>
+            </div>
+            <button class="btn primario" style="margin-top:14px" :disabled="!bossAndarNumero" @click="marcarBossDerrotado()">
+              ✅ Marcar boss derrotado e disparar cascata
+            </button>
+          </div>
+        </div>
+
       </section>
     </div>
   </div>
@@ -802,6 +852,7 @@ const secoes = computed(() => [
   { k:'criar',     ico:'➕', lbl:'Criar Personagem', desc:'Formulário para cadastrar um novo aventureiro, com senha forte gerada automaticamente.' },
   { k:'compendio', ico:'📚', lbl:'Compêndio', desc:'Todo o conteúdo do jogo — monstros, missões, receitas, materiais, pontos do mapa, clãs e mais. Crie, edite e exclua livremente.', divider:true },
   { k:'pedidos_cla', ico:'🚪', lbl:'Pedidos de Clã', desc:'Pedidos de entrada em clã da aba de Recrutamento — aprove ou recuse (a liderança do clã, cargo líder/oficial, também pode responder pelo lado do jogador).', divider:true, badge: pedidosClaPendentesCount.value || null },
+  { k:'andares_acoes', ico:'⚔️', lbl:'Andares — Ações', desc:'Marcar boss derrotado: dispara notícia, diário, progresso de clã e libera o próximo andar de uma vez só (Hub de Aincrad).' },
   { k:'mercado',   ico:'🏪', lbl:'Mercado', desc:'Anúncios ativos do mercado dos jogadores, valores e data de expiração.', divider:true },
   { k:'inventarios', ico:'🎒', lbl:'Inventários', desc:'Inspecione o inventário pessoal e stash de qualquer jogador.' },
 ])
@@ -1140,6 +1191,43 @@ async function responderPedidoCla(p, aprovar){
   } catch(e){ alert('Erro: '+e.message) }
 }
 
+// ===== ====== ABA ANDARES — AÇÕES (Hub de Aincrad: cascata de boss derrotado) ===== ======
+const carregandoAndares = ref(false)
+const andares = ref([])
+const andaresParaBoss = computed(() => andares.value.filter(a => a.boss_status !== 'derrotado'))
+const bossAndarNumero = ref('')
+const bossRecompensas = ref('')
+const bossDrops = ref('')
+const bossMvp = ref('')
+const bossParticipantes = ref([])
+async function carregarAndares(){
+  carregandoAndares.value = true
+  try {
+    const r = await supa.from('andares').select('*').order('numero')
+    if (r.error) throw r.error
+    andares.value = r.data || []
+  } catch(e){ console.warn(e) } finally { carregandoAndares.value = false }
+}
+async function marcarBossDerrotado(){
+  if (!bossAndarNumero.value) return
+  if (!confirm(`Marcar o boss do ${bossAndarNumero.value}º andar como derrotado? Isso publica notícia, registra no diário e libera o próximo andar.`)) return
+  try {
+    const r = await supa.rpc('mestre_resolver_boss_andar', {
+      p_numero: Number(bossAndarNumero.value),
+      p_recompensas: bossRecompensas.value.trim() || null,
+      p_drops: bossDrops.value.trim() || null,
+      p_mvp_personagem: bossMvp.value || null,
+      p_participantes: bossParticipantes.value,
+    })
+    if (r.error) throw r.error
+    const d = JSON.parse(r.data)
+    if (d.erro) { alert(d.erro); return }
+    bossAndarNumero.value = ''; bossRecompensas.value = ''; bossDrops.value = ''; bossMvp.value = ''; bossParticipantes.value = []
+    await carregarAndares()
+    alert('Boss marcado como derrotado — notícia, diário e progresso de clã atualizados.')
+  } catch(e){ alert('Erro: '+e.message) }
+}
+
 // ===== ====== ABA INVENTÁRIOS ===== ======
 const invPers = ref(''), carregandoInvJog = ref(false), invItens = ref([])
 async function carregarInventarioJog(){
@@ -1327,7 +1415,7 @@ onMounted(async () => {
     // clas_publico: mesmo motivo do pontos_publico acima — "ganchos" só
     // tem GRANT SELECT resolvido com segurança dentro da view.
     supa.from('clas_publico').select('*'),
-    carregarJogadores(), carregarMercado(), carregarMesa(), carregarTiposArma(), carregarPedidosCla(),
+    carregarJogadores(), carregarMercado(), carregarMesa(), carregarTiposArma(), carregarPedidosCla(), carregarAndares(),
   ]
   const [rOf, rAr, rCl] = await Promise.all(proms)
   oficios.value = (rOf?.data || []).sort((a,b)=>a.nome.localeCompare(b.nome,'pt-BR'))

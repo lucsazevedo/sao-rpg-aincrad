@@ -18,17 +18,17 @@ Números levantados programaticamente a partir de
 
 | Atributo | Armas (de 22) | Profissões (de 16) | Total combinado |
 |---|---|---|---|
-| Corpo | 6 | 1 | 7 |
-| Reflexo | 5 | 2 | 7 |
-| Técnica | 7 | 4 | 11 |
+| Corpo | 5 | 1 | 6 |
+| Reflexo | 4 | 2 | 6 |
+| Técnica | 6 | 4 | 10 |
 | Conhecimento | 2 | 6 | 8 |
 | Espírito | 2 | 3 | 5 |
 
 **Leitura:** Corpo é forte em armas (Escudo e Espada, Espada Longa, Machado,
-Martelo, Clava, Manopla) e quase sozinho em profissão (só Mercenário).
+Martelo, Manopla) e quase sozinho em profissão (só Mercenário).
 Conhecimento é o oposto: fraquíssimo em arma (só Chicote e Pá) mas o mais
-forte em profissão (6 das 16). Técnica é a combinação mais robusta (7 armas
-+ 4 profissões = 11). **Espírito é o atributo com menos opções totais (5)**
+forte em profissão (6 das 16). Técnica é a combinação mais robusta (6 armas
++ 4 profissões = 10). **Espírito é o atributo com menos opções totais (5)**
 — só Katana/Bastão como arma e Coveiro/Médico/Músico como profissão.
 
 **Isto é bug?** Não necessariamente. `docs/guia_sistema_aincrad.md` ("Criando

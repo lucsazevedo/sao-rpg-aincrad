@@ -310,66 +310,20 @@ sua história inteira sem interromper. Uma vez só, e ele sabe quem já ouviu.
 
 ---
 
-## Tonfas de Núcleo de Ferro — Incomum · Tonfas · Técnica
-
-**Requisito:** Técnica -1+ · **Preço:** 320 Col
-
-Madeira por fora, barra de ferro por dentro. Pesam o dobro do que parecem e
-racham escudo barato.
-
-**Efeito:** +1 em testes de Técnica para **bloquear e contra-atacar no mesmo
-movimento**. Com elas, a Skill **Bloqueio Giratório** em 7-9 também devolve a
-reação anulada como 1 golpe — ou seja, o 7-9 passa a valer o que o 10+ vale.
-
-**Como obter:** Ferreiro da Cidade do Início; usadas pela guarda urbana.
-
----
-
-## Clava de Osso de Guardião — Incomum · Clava · Corpo
+## Machado de Osso de Guardião — Incomum · Machado · Corpo
 
 **Requisito:** Corpo 0+ · **Preço:** 440 Col
 
-Um fêmur do Guardião de Mournhall, denso como pedra, com o punho enrolado em
-tira de couro. Ainda tem a Presa do Guardião cravada na ponta.
+Um fêmur do Guardião de Mournhall, denso como pedra, lascado até virar fio,
+com o punho enrolado em tira de couro. Ainda tem a Presa do Guardião cravada
+na lâmina.
 
 **Efeito:** +1 em testes de Corpo para **derrubar ou empurrar** um alvo maior
-que o usuário. Criaturas de caverna hesitam ao vê-la: primeiro ataque delas
+que o usuário. Criaturas de caverna hesitam ao vê-lo: primeiro ataque delas
 contra o portador sofre complicação.
 
-**Como obter:** crafting de Coveiro + Ferreiro com a Presa do Guardião
+**Como obter:** crafting de Mercenário + Ferreiro com a Presa do Guardião
 (drop 40% do Guardião de Mournhall).
-
----
-
-## Nunchaku de Vinha Trançada — Incomum · Nunchaku · Técnica
-
-**Requisito:** Técnica -1+ · **Preço:** 280 Col
-
-Dois bastões curtos de madeira nodosa unidos por vinha curada trançada, mais
-elástica que corrente. O ritmo muda; quem já usava metal precisa reaprender.
-
-**Efeito:** +1 em testes de Técnica para **manter uma sequência**. Com eles, a
-Skill **Sequência** não zera em 7-9: ela congela no número em que estava e
-volta a crescer no próximo 10+.
-
-**Como obter:** crafting de Costureiro + Lenhador (Madeira Nodosa +
-Trepadeira curada); cadeia B.
-
----
-
-## Glaive de Guarda de Portão — Incomum · Glaive · Reflexo
-
-**Requisito:** Reflexo -1+ · **Preço:** 420 Col
-
-Haste de dois metros com lâmina curva e gancho no dorso. O gancho é pra
-puxar cavaleiro de montaria — não existe montaria no andar 1, e ainda assim
-ele está lá.
-
-**Efeito:** +1 em testes de Reflexo para **atingir vários alvos de uma vez**
-em espaço aberto. Em corredor estreito (Labirinto), não dá bônus nenhum.
-
-**Como obter:** Loja de Armas de Tolbana; equipamento padrão do Guarda
-Insone, que vende o dele se for convencido a dormir.
 
 ---
 

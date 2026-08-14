@@ -3,11 +3,11 @@ Uso: python gerar_arma.py "rapieira lendaria de um mestre de esgrima do andar 30
 
 Gera uma ficha de arma/item pro Aincrad RPG a partir de uma ideia curta,
 usando o Ollama local (qwen2.5:14b) com o guia de sistema em
-docs/guia_sistema_aincrad.md (as 22 armas, raridade de crafting). Salva o
+docs/guia_sistema_aincrad.md (as 19 armas, raridade de crafting). Salva o
 .md em armas/.
 
 Opcoes uteis:
-  --tipo Katana            forca o tipo de arma (uma das 22)
+  --tipo Katana            forca o tipo de arma (uma das 19)
   --raridade Epico         Comum | Incomum | Raro | Epico | Lendario
   --andar 30               andar recomendado
   --revisar                segunda passada com deepseek-r1:14b pra revisar coerencia
@@ -26,7 +26,7 @@ from ollama_client import (
 
 ARMAS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "armas")
 
-# Atributo principal de cada uma das 22 armas (docs/guia_sistema_aincrad.md) --
+# Atributo principal de cada uma das 19 armas (docs/guia_sistema_aincrad.md) --
 # fixo aqui pra corrigir determinaticamente qualquer erro do LLM, em vez de
 # confiar nele pra cruzar a tabela sozinho toda vez.
 ATRIBUTO_POR_ARMA = {
@@ -46,10 +46,6 @@ ATRIBUTO_POR_ARMA = {
     "pa": "Conhecimento",
     "rapieira": "Reflexo",
     "bastao": "Espirito",
-    "tonfas": "Tecnica",
-    "clava": "Corpo",
-    "nunchaku": "Tecnica",
-    "glaive": "Reflexo",
     "corrente com peso": "Tecnica",
     "manopla": "Corpo",
 }

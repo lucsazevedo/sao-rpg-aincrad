@@ -16,7 +16,7 @@
         </div>
         <div class="ml-actions">
           <button class="btn" @click="trocarConta">🔁 Entrar com outra conta</button>
-          <router-link class="btn ghost" to="/">🏠 Voltar para Início</router-link>
+          <router-link class="btn ghost" to="/inicio">🏠 Voltar para Início</router-link>
         </div>
       </div>
 

@@ -181,8 +181,8 @@ dão bônus aqui.
 | Contornar e seguir | — | Sem teste — ele mantém a posição e não persegue além do posto | | |
 
 **Só o mestre:** mesmo drop (Col + Fragmento de Armadura Kobold). Se ainda
-não disse, é aqui que a regra de corredor estreito muda a luta — adaga,
-rapieira e tonfa brilham; glaive e espada longa atrapalham
+não disse, é aqui que a regra de corredor estreito muda a luta — adaga e
+rapieira brilham; espada longa atrapalha
 (`mapas/dungeons_andar1.md`).
 
 **Atalhos:** monstro:ruin_kobold_sentinel · regiao:sala_chefe

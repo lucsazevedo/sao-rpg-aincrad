@@ -61,7 +61,7 @@ sistema, preço fixo, e o dono não negocia com ninguém.
 
 | Item | Col | Estoque/semana |
 |---|---|---|
-| Armas Comuns dos 22 tipos (`armas/*.md`) | 80-200 conforme o tipo | ilimitado |
+| Armas Comuns dos 17 tipos (`armas/*.md`) | 80-200 conforme o tipo | ilimitado |
 | Flechas / virotes (lote de 20) | 15 | ilimitado |
 | Broquel de Tábua | 50 | 6 |
 | Escudo Redondo de Ferro | 140 | 3 |
@@ -82,7 +82,6 @@ com quem esteja em atrito — o mestre decide quando isso vale a pena.
 | Conserto de peça rachada | 1/5 do preço base do item | ilimitado |
 | Elmo Aberto de Ferro | 300 | 2 |
 | Luvas de Forja Rachadas | 310 | 1 (as antigas dele) |
-| Tonfas de Núcleo de Ferro | 320 | 2 |
 | Botas Cravejadas de Montanha | 290 | 2 |
 
 ## Ateliê do Costureiro
@@ -180,10 +179,9 @@ de `tolbana_e05`.
 | Par de Guarda de Tolbana | 400 | 2 |
 | Rapieira de Copo Fechado | 410 | 1 |
 | Lança de Parede de Escudos | 350 | 3 |
-| Glaive de Guarda de Portão | 420 | 2 |
 | Punhais de Lastro | 280 | 3 |
 | Dedeiras de Arqueiro | 250 | 3 |
-| Armas Comuns dos 22 tipos | 100-240 (mais caro que na capital) | ilimitado |
+| Armas Comuns dos 17 tipos | 100-240 (mais caro que na capital) | ilimitado |
 
 ## Ferreiro de Tolbana
 *Forja grande, dois aprendizes, fila.* **Desconto:** 20% pra quem trouxer

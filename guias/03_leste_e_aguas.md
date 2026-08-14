@@ -350,7 +350,7 @@ bem, volta na sessão seguinte e o terraço está pior. Aí a mesa entende.
 
 | Ação                            | Teste            | 10+                                       | 7-9                                   | 6-                                                  |
 | ------------------------------- | ---------------- | ----------------------------------------- | ------------------------------------- | --------------------------------------------------- |
-| Abater gafanhotos em área       | 2d6+Técnica      | 4 de uma vez (Foice/Glaive)               | 2, e a debandada começa               | Debandada: complicação em todos os testes da rodada |
+| Abater gafanhotos em área       | 2d6+Técnica      | 4 de uma vez (Foice)                      | 2, e a debandada começa               | Debandada: complicação em todos os testes da rodada |
 | Descobrir de onde eles vêm      | 2d6+Conhecimento | Acha as fendas de pedra e a ninhada       | Sabe que vêm de baixo                 | Conclui que "são migratórios"                       |
 | Queimar a ninhada               | 2d6+Técnica      | Ninhada destruída, praga encerrada de vez | Destruída, mas o fogo pega numa leira | Fogo se espalha; o vale inteiro te cobra            |
 | Colher Perna Serrilhada         | 2d6+Reflexo      | 3 unidades (Cozinheiro/Ferreiro)          | 2 unidades                            | Quebra as três                                      |

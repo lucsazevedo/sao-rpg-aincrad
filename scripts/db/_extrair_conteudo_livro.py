@@ -1,5 +1,5 @@
 """
-Puxa do banco tudo que o livro de regras público precisa: as 23 armas
+Puxa do banco tudo que o livro de regras público precisa: as 19 armas
 (com golpes completos) e as 16 profissões (com golpes completos), pra
 gerar o HTML sem retranscrever nada à mão (fonte mais confiável = o que
 está de fato aplicado no banco agora).

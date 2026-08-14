@@ -24,9 +24,41 @@ const router = createRouter({
   history: createWebHashHistory(),
   routes: [
     {
+      // Hub de Aincrad, item 1 do doc: Notícias vira a primeira página do
+      // site. A Home antiga (Craft em destaque) não some, só muda de rota.
       path: "/",
+      component: () => import("./views/Noticias.vue"),
+      meta: { title: "Notícias de Aincrad" },
+    },
+    {
+      path: "/inicio",
       component: () => import("./views/Home.vue"),
       meta: { title: "Início" },
+    },
+    {
+      path: "/estado",
+      component: () => import("./views/EstadoAincrad.vue"),
+      meta: { title: "Estado de Aincrad" },
+    },
+    {
+      path: "/andares",
+      component: () => import("./views/Andares.vue"),
+      meta: { title: "Andares" },
+    },
+    {
+      path: "/evento-global",
+      component: () => import("./views/EventoGlobal.vue"),
+      meta: { title: "Evento Global" },
+    },
+    {
+      path: "/guildas",
+      component: () => import("./views/Guildas.vue"),
+      meta: { title: "Guildas & Clãs" },
+    },
+    {
+      path: "/diario",
+      component: () => import("./views/Diario.vue"),
+      meta: { title: "Diário de Aincrad" },
     },
     {
       path: "/ficha",
