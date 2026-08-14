@@ -286,10 +286,10 @@
           <div class="card" style="background:var(--panel-2)">
             <h4 style="margin:0 0 4px;color:var(--azul-bright)">🎯 Metas Globais (cooperação, item 18)</h4>
             <p style="color:var(--ink-faint);font-size:12px;margin:0 0 12px">Até 3 abertas ao mesmo tempo. Todo jogador que doar qualquer quantidade recebe a recompensa quando a meta bater 100%.</p>
-            <div class="form" style="padding:0;border:none;background:transparent;grid-template-columns:repeat(3,1fr)">
-              <div class="campo" style="grid-column:span 2"><label>Título</label><input v-model="novaMeta.titulo"></div>
+            <div class="form" style="padding:0;border:none;background:transparent;grid-template-columns:repeat(auto-fit,minmax(160px,1fr))">
+              <div class="campo" style="grid-column:1/-1"><label>Título</label><input v-model="novaMeta.titulo"></div>
               <div class="campo"><label>Item pedido (nome exato)</label><input v-model="novaMeta.meta_item"></div>
-              <div class="campo" style="grid-column:span 3"><label>Descrição</label><textarea rows="2" v-model="novaMeta.descricao"></textarea></div>
+              <div class="campo" style="grid-column:1/-1"><label>Descrição</label><textarea rows="2" v-model="novaMeta.descricao"></textarea></div>
               <div class="campo"><label>Quantidade meta</label><input type="number" min="1" v-model.number="novaMeta.meta_qtd"></div>
               <div class="campo"><label>Recompensa Col</label><input type="number" min="0" v-model.number="novaMeta.recompensa_col"></div>
               <div class="campo"><label>Recompensa XP</label><input type="number" min="0" v-model.number="novaMeta.recompensa_xp"></div>
@@ -312,7 +312,7 @@
               As 16 profissões lado a lado — não é a tela do jogador (ele só vê a própria); isto é só pra você
               ver de longe onde a mesa está investindo.
             </p>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+            <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:8px">
               <div v-for="p in painelProfissoes" :key="p.nome" class="admin-row" style="flex-direction:column;align-items:flex-start;gap:2px">
                 <div class="row-nome" style="font-size:12.5px">{{ p.nome }}</div>
                 <div class="row-sub">{{ p.jogadores }} jogador{{ p.jogadores===1?'':'es' }} · nv máx {{ p.nivelMax }}</div>
@@ -334,7 +334,7 @@
           </div>
           <div v-if="carregandoPers" class="msg info carregando">Carregando lista de jogadores…</div>
           <div v-else-if="!jogadoresFiltrados.length" class="msg warn">Nenhum personagem com esses filtros.</div>
-          <div v-else class="card" style="background:var(--panel-2);padding:0;overflow:hidden">
+          <div v-else class="card" style="background:var(--panel-2);padding:0;overflow-x:auto">
             <table class="admin-table">
               <thead>
                 <tr>
@@ -381,7 +381,7 @@
                 <button class="btn ghost" @click="fichaAberta=null">✕</button>
               </div>
               <div class="body">
-                <div style="display:grid;grid-template-columns:180px 1fr;gap:14px">
+                <div class="mestre-ficha-foto">
                   <img v-if="fichaAberta.foto_url" :src="fichaAberta.foto_url" :alt="'Retrato de ' + fichaAberta.nome"
                     style="width:100%;aspect-ratio:1/1;object-fit:cover;border-radius:10px;border:2px solid var(--laranja)">
                   <div v-else style="width:100%;aspect-ratio:1/1;border-radius:10px;border:2px dashed var(--line);display:grid;place-items:center;color:var(--ink-faint);font-size:70px">👤</div>
@@ -556,7 +556,7 @@
               <div style="grid-column:1 / -1">
                 <div class="campo foto-campo">
                   <label>Foto do personagem (URL)</label>
-                  <div style="display:grid;grid-template-columns:160px 1fr;gap:14px;align-items:stretch">
+                  <div class="mestre-ficha-foto" style="align-items:stretch">
                     <div class="foto-preview" :style="previewEstilo">
                       <span v-if="!F.foto_url">👤</span>
                     </div>
@@ -1462,6 +1462,12 @@ onMounted(async () => {
 
 .admin-table {
   width: 100%;
+  /* 7 colunas (avatar+nome, profissão, discord, clã, col, fôlego, ações)
+     não cabem legíveis em tela de celular — trava um mínimo e deixa o
+     cartão-container (overflow-x:auto) rolar na horizontal em vez de
+     espremer tudo até ficar ilegível ou, pior, cortar coluna (era
+     overflow:hidden antes, sumia com o resto da tabela no celular). */
+  min-width: 640px;
   border-collapse: collapse;
   font-size: 13px;
 }
@@ -1512,6 +1518,15 @@ onMounted(async () => {
 }
 .foto-preview { aspect-ratio: 1/1; min-height: 160px; }
 .foto-campo { grid-column: 1 / -1; }
+/* retrato fixo (160-180px) + coluna de campos ao lado — empilha em tela
+   estreita, senão a coluna de campos sobra menos de 100px de largura. */
+.mestre-ficha-foto { display: grid; grid-template-columns: 180px 1fr; gap: 14px; }
+@media (max-width: 520px) {
+  .mestre-ficha-foto { grid-template-columns: 1fr; }
+  .mestre-ficha-foto > img, .mestre-ficha-foto > .foto-preview, .mestre-ficha-foto > div:first-child {
+    max-width: 200px; margin: 0 auto; width: 100%;
+  }
+}
 .modal :deep(.top), .modal :deep(.body) { background: var(--panel-2) !important; }
 .modal-bg.on :deep(.modal) { background: var(--panel-2) !important; border-color: var(--line-bright) !important; }
 

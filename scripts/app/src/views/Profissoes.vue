@@ -194,7 +194,7 @@
             <h4 style="margin:0;color:var(--gold-bright)">🗺️ Névoa do Andar</h4>
             <span class="pill" :class="{on: revelacoesRestantes>0}">{{ revelacoesRestantes }}/3 revelações hoje</span>
           </div>
-          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:340px">
+          <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:min(340px,100%)">
             <button
               v-for="i in 9" :key="i" type="button"
               class="btn" :class="{ primario: !nevoaGrade[i-1]?.revelado }"
@@ -222,7 +222,7 @@
             <button class="btn primario" :disabled="(auth.personagem?.folego??0)<2" @click="iniciarComposicao">🎼 Começar composição (-2 Fôlego)</button>
           </div>
           <div v-else>
-            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:320px;margin-bottom:10px">
+            <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:10px;max-width:min(320px,100%);margin-bottom:10px">
               <button
                 v-for="(nota,i) in NOTAS" :key="i" type="button" class="btn"
                 :class="{ primario: notaAtiva===i }"

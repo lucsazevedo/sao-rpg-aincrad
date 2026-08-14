@@ -15,7 +15,12 @@ RAIZ = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)
 AQUI = os.path.dirname(os.path.abspath(__file__))
 CONTEUDO_PATH = os.path.join(AQUI, "_conteudo_livro.json")
 IMAGENS_PROF = os.path.join(RAIZ, "imagens", "profissoes_icones")
-IMAGENS_ARMA = os.path.join(RAIZ, "imagens", "armas_icones")
+# manual não tem contexto de raridade por arma (lista o TIPO, não um item
+# específico) — usa a pasta "cinza" (comum) dos badges oficiais como cor
+# neutra de referência. Clava ainda não tem badge oficial, só o ícone
+# antigo (silhueta branca, pasta raiz) — ver ICONE_ARMA_ANTIGO abaixo.
+IMAGENS_ARMA = os.path.join(RAIZ, "imagens", "armas_icones", "cinza")
+IMAGENS_ARMA_ANTIGO = os.path.join(RAIZ, "imagens", "armas_icones")
 
 _cache_datauri = {}
 def datauri_png(caminho):
@@ -67,18 +72,22 @@ FAZ_PROFISSAO = {
 }
 
 ICONE_PROF = {
-    "Alquimista": "alquimista", "Caçador": "cacador", "Comerciante": "comerciante",
+    "Alquimista": "alquimista", "Caçador": "cacador", "Cartógrafo": "cartografo", "Comerciante": "comerciante",
     "Costureiro": "costureiro", "Cozinheiro": "cozinheiro", "Domador": "domador",
     "Ferreiro": "ferreiro", "Informante": "informante", "Lenhador": "lenhador",
     "Mercenário": "mercenario", "Médico": "medico", "Mestre de Montarias": "mestre_de_montarias",
     "Minerador": "minerador", "Músico": "musico", "Joalheiro": "joalheiro",
 }
+# 19 dos 23 tipos de arma têm badge oficial hoje (Imagens_atualizar/Armas/).
 ICONE_ARMA = {
-    "Chakrams": "chakrams", "Escudo e Espada": "escudo_e_espada", "Espada Longa": "espada_longa",
-    "Foice": "foice", "Katana": "katana", "Lança": "lanca", "Machado": "machado", "Martelo": "martelo",
-    "Rapieira": "rapieira", "Bastão": "bastao", "Clava": "clava", "Corrente com Peso": "corrente_com_peso",
-    "Leque": "leque",
+    "Adagas": "adagas", "Adagas de Arremesso": "adagas_de_arremesso", "Arco e Flecha": "arco_e_flecha",
+    "Bastão": "bastao", "Besta": "besta", "Chakrams": "chakram", "Chicote": "chicote",
+    "Corrente com Peso": "corrente_com_peso", "Escudo e Espada": "espada_e_escudo", "Espada Longa": "espada",
+    "Foice": "foice", "Katana": "katana", "Lança": "lanca", "Leque": "leque", "Machado": "machado",
+    "Manopla": "manopla", "Martelo": "martelo", "Pá": "pa", "Rapieira": "rapieira",
 }
+# Glaive, Nunchaku e Tonfas ainda não têm ícone nenhum (nem o antigo).
+ICONE_ARMA_ANTIGO = {"Clava": "clava"}
 
 def carregar_dados():
     with open(CONTEUDO_PATH, encoding="utf-8") as f:
@@ -131,6 +140,14 @@ def icone_img_html(pasta, slug_map, chave, classe):
         return ""
     return f'<img class="{classe}" src="{uri}" alt="">'
 
+def icone_arma_html(nome, classe):
+    """Badge oficial (pasta cinza) se o tipo já tiver um; senão cai no
+    ícone antigo (só Clava sobrevive nele hoje)."""
+    html_novo = icone_img_html(IMAGENS_ARMA, ICONE_ARMA, nome, classe)
+    if html_novo:
+        return html_novo
+    return icone_img_html(IMAGENS_ARMA_ANTIGO, ICONE_ARMA_ANTIGO, nome, classe)
+
 def card_arma(a):
     sid = slug(a["nome"])
     atributo = a.get("move_a", {}).get("atributo") or SIGLA_PARA_NOME.get(a.get("atributo", ""), a.get("atributo", ""))
@@ -140,7 +157,7 @@ def card_arma(a):
         + bloco_move(a.get("golpe_2"), "Move II")
         + bloco_move(a.get("limit_breaker"), "LIMIT BREAK", variante="move-limitbreak")
     )
-    icone = icone_img_html(IMAGENS_ARMA, ICONE_ARMA, a["nome"], "entrada-icone")
+    icone = icone_arma_html(a["nome"], "entrada-icone")
     return f'''<section class="entrada entrada-arma attr-{classe_attr}" id="arma-{sid}">
       <header class="entrada-head">
         <div class="entrada-head-nome">

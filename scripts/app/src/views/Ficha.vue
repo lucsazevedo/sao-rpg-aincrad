@@ -10,14 +10,7 @@
   <div v-else>
     <StatusBar />
     <TituloHUD icone="🧑" titulo="Ficha do Jogador" trilha="Sistema · Personagem" />
-    <div
-      style="
-        display: grid;
-        grid-template-columns: 220px 1fr;
-        gap: 14px;
-        margin-top: 14px;
-      "
-    >
+    <div class="ficha-layout">
       <div class="card" style="padding: 16px; text-align: center">
         <img
           v-if="foto"
@@ -372,3 +365,13 @@ onMounted(async () => {
   await carregarGolpes(); // depende de armaDetalhe já carregado
 });
 </script>
+<style scoped>
+/* Retrato (220px) + conteúdo lado a lado — no celular o retrato fixo
+   sobrava espaço do conteúdo até ele ficar ilegível; empilha em 1 coluna
+   e centraliza o card do retrato. */
+.ficha-layout{display:grid;grid-template-columns:220px 1fr;gap:14px;margin-top:14px}
+@media (max-width:680px){
+  .ficha-layout{grid-template-columns:1fr}
+  .ficha-layout>.card:first-child{max-width:260px;margin:0 auto;width:100%}
+}
+</style>

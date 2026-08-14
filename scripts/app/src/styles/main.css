@@ -113,6 +113,20 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
   display:inline-flex;align-items:center;gap:6px;position:relative;overflow:hidden;
   transition:color .15s;
 }
+/* Mobile: 10 itens de menu quebrando em várias linhas empurra todo o
+   conteúdo pra baixo da dobra — vira uma faixa horizontal com "swipe"
+   (padrão de tab bar de app), 1 linha só, sem quebrar layout nenhum. */
+@media (max-width: 680px){
+  .nav{padding:10px 12px;gap:10px}
+  .nav-links{
+    flex-wrap:nowrap;flex-basis:100%;order:3;
+    overflow-x:auto;-webkit-overflow-scrolling:touch;
+    scrollbar-width:thin;padding-bottom:4px;margin:0 -4px;
+  }
+  .nav a.nav-link{flex-shrink:0;padding:9px 12px}
+  .nav-links::-webkit-scrollbar{height:4px}
+  .nav-links::-webkit-scrollbar-thumb{background:var(--line-bright);border-radius:2px}
+}
 .nav a.nav-link .ico{font-size:13px;filter:grayscale(.4);transition:filter .15s}
 /* "cursor" do menu — barra que preenche de baixo pra cima no hover, igual
    ao realce de item selecionado no menu do jogo */
@@ -193,7 +207,10 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
 }
 .form input:focus,.form select:focus,.form textarea:focus{border-color:var(--laranja);box-shadow:0 0 0 3px rgba(255,153,0,0.14)}
 .form .duas{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.form .atributos{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+/* auto-fit em vez de repeat(5,1fr) fixo: em tela estreita reflui sozinho
+   pra 2-3 colunas em vez de espremer 5 blocos de atributo até ficar
+   ilegível (achado 14/08 revisando responsividade no celular). */
+.form .atributos{display:grid;grid-template-columns:repeat(auto-fit,minmax(74px,1fr));gap:10px}
 .form .atrib{padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--panel-3)}
 .form .atrib b{display:block;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--azul-bright)}
 .form .atrib .v{font-size:22px;font-weight:700;margin-top:4px;font-family:var(--f-titulo)}
@@ -285,8 +302,19 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
 
 /* Responsivo */
 @media (max-width: 720px){
-  .form .duas,.form .atributos{grid-template-columns:1fr 1fr}
+  .form .duas{grid-template-columns:1fr 1fr}
   .hero{grid-template-columns:1fr}
   .hero h1{font-size:24px}
   .stbar{grid-template-columns:1fr 1fr}
+  .shell{padding:12px 12px 40px}
+  .modal-bg{padding:14px 8px}
+  .modal .top{padding:14px 16px}
+  .modal .body{padding:14px 16px 18px}
+}
+/* iOS dá zoom automático em qualquer <input>/<select>/<textarea> focado
+   com font-size < 16px — a maioria dos campos aqui usa font:inherit e o
+   corpo tem 15.5px, ficando meio pixel abaixo do gatilho. Sobe só no
+   celular (visualmente imperceptível) pra nenhum campo disparar o zoom. */
+@media (max-width: 640px){
+  body{font-size:16px}
 }

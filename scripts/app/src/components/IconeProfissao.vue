@@ -5,10 +5,12 @@
 
 <script setup>
 // Ícone de profissão — sem variação de cor (pedido do usuário: "mantém
-// branco"), diferente do IconeArma que tinge por raridade. 15 dos 16
-// perfis têm ícone próprio (extraídos de Profissões.jpeg via
-// scripts/extrair_icones_profissoes.py); Cartógrafo ainda não tem
-// planilha — cai no fallback 🛠️ genérico até chegar o desenho dele.
+// branco"), diferente do IconeArma que tinge por raridade. Badges
+// oficiais que o usuário colocou em Imagens_atualizar/Profissoes/*.png,
+// movidos pra imagens/profissoes_icones/ — os 16 perfis (PROFISSOES em
+// tabelasAdmin.js) têm ícone próprio agora, incluindo Cartógrafo que
+// faltava no conjunto extraído de Profissões.jpeg
+// (scripts/extrair_icones_profissoes.py).
 import { computed } from "vue";
 import { urlImagem } from "../lib/imagens.js";
 
@@ -20,6 +22,7 @@ const props = defineProps({
 const SLUG_POR_PROFISSAO = {
   Alquimista: "alquimista",
   Caçador: "cacador",
+  Cartógrafo: "cartografo",
   Comerciante: "comerciante",
   Costureiro: "costureiro",
   Cozinheiro: "cozinheiro",
