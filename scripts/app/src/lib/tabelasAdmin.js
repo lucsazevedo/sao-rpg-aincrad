@@ -586,6 +586,20 @@ export const TABELAS_ADMIN = {
       { nome: "texto_extra", tipo: "textarea" },
     ],
   },
+  feedback: {
+    pk: "id",
+    rotulo: "Bug Reports & Sugestões",
+    icone: "🐛",
+    campos: [
+      { nome: "tipo", tipo: "select", opcoes: ["bug", "sugestao"] },
+      { nome: "personagem_nome", tipo: "sugestao", tabelaRef: "personagens", campoRef: "nome", rotulo: "Enviado por" },
+      { nome: "titulo", tipo: "text" },
+      { nome: "descricao", tipo: "textarea" },
+      { nome: "pagina", tipo: "text", rotulo: "Página de onde foi enviado" },
+      { nome: "status", tipo: "select", opcoes: ["aberto", "em_analise", "resolvido", "recusado"] },
+      { nome: "resposta_mestre", tipo: "textarea", rotulo: "Resposta (o jogador vê isso na própria lista de envios)" },
+    ],
+  },
   pontos: {
     pk: "id",
     rotulo: "Pontos do Mapa",
@@ -1102,7 +1116,7 @@ export const GRUPOS_COMPENDIO = [
     k: "hub",
     lbl: "Hub de Aincrad",
     ico: "🌐",
-    tabelas: ["noticias", "andares", "eventos_globais", "eventos_globais_objetivos", "diario_entradas", "estado_aincrad"],
+    tabelas: ["noticias", "andares", "eventos_globais", "eventos_globais_objetivos", "diario_entradas", "estado_aincrad", "feedback"],
   },
   {
     k: "avancado",

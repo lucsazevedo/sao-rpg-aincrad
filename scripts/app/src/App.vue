@@ -89,6 +89,7 @@
         </keep-alive>
       </router-view>
     </main>
+    <FeedbackWidget />
   </div>
 </template>
 
@@ -96,6 +97,7 @@
 import { ref, onMounted } from "vue";
 import { useAuthStore } from "./stores/auth.js";
 import LoginModal from "./components/LoginModal.vue";
+import FeedbackWidget from "./components/FeedbackWidget.vue";
 const auth = useAuthStore();
 const mostrarLogin = ref(false);
 const mobileMenuAberto = ref(false);
