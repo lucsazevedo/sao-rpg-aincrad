@@ -33,9 +33,12 @@
           justify-content: flex-end;
         "
       >
+        <router-link v-if="!auth.logado" to="/cadastro" class="btn primario"
+          >📝 Criar conta</router-link
+        >
         <button
           v-if="!auth.logado"
-          class="btn primario"
+          class="btn ghost"
           @click="$emit('pedir-login')"
         >
           🔑 Entrar
@@ -53,6 +56,28 @@
         O que fazer agora
       </h3>
       <div class="grid">
+        <router-link
+          v-if="auth.ready && !auth.temPersonagem"
+          to="/cadastro"
+          class="card"
+          style="
+            text-decoration: none;
+            color: inherit;
+            border-color: var(--gold-bright);
+            border-width: 2px;
+            background: linear-gradient(135deg, #2a2512 0%, #1a1208 100%);
+            grid-column: 1 / -1;
+          "
+        >
+          <div class="ct" style="color: var(--gold-bright); font-size: 22px">
+            📝 Criar Personagem
+          </div>
+          <div class="cs">Comece agora · autocadastro aberto</div>
+          <p>
+            Crie sua conta e sua ficha de aventureiro — nome, profissão, arma
+            e atributos. Leva menos de dois minutos.
+          </p>
+        </router-link>
         <!-- PRINCIPAL (ITEM 9): SÓ CRAFT fica em DESTAQUE GRANDE -->
         <router-link
           to="/profissoes"

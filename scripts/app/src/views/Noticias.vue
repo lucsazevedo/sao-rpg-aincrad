@@ -26,7 +26,8 @@
         <p>Tudo que acontece no castelo flutuante — bosses, andares, guildas e a campanha em andamento.</p>
       </div>
       <div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end">
-        <button v-if="!auth.logado" class="btn primario" @click="$emit('pedir-login')">🔑 Entrar</button>
+        <router-link v-if="!auth.logado" to="/cadastro" class="btn primario">📝 Criar conta</router-link>
+        <button v-if="!auth.logado" class="btn ghost" @click="$emit('pedir-login')">🔑 Entrar</button>
         <router-link to="/inicio" class="btn ghost">🧭 Painel</router-link>
       </div>
     </section>
