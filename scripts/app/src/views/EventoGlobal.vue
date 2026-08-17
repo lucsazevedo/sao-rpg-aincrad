@@ -26,7 +26,7 @@
         </div>
 
         <div v-if="objetivosPorEvento[e.id]?.length" style="margin-top:10px">
-          <h4 style="margin:0 0 8px;color:var(--azul-bright)">🎯 Objetivos globais</h4>
+          <h4 style="margin:0 0 8px;color:var(--azul-bright)">📋 Metas de progresso</h4>
           <div v-for="o in objetivosPorEvento[e.id]" :key="o.id" style="margin-bottom:8px">
             <div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:3px">
               <span>{{ o.descricao }}</span>

@@ -21,19 +21,12 @@
         <div class="form">
           <div style="grid-column:1 / -1">
             <div class="campo foto-campo">
-              <label>Foto do personagem (URL)</label>
-              <div style="display:flex;gap:14px;align-items:stretch;flex-wrap:wrap">
-                <div :style="previewEstilo" style="width:96px;height:96px;flex:0 0 auto">
-                  <span v-if="!F.foto_url" style="font-size:34px">👤</span>
-                </div>
-                <div style="display:grid;gap:6px;flex:1;min-width:220px">
-                  <input v-model="F.foto_url" placeholder="Cole uma URL de imagem ou deixe em branco.">
-                  <div style="display:flex;gap:8px;flex-wrap:wrap">
-                    <button class="btn tiny" type="button" @click="aleatorioFoto()">🎲 Foto aleatória</button>
-                    <button class="btn tiny ghost" type="button" @click="F.foto_url=''">Limpar</button>
-                  </div>
-                </div>
-              </div>
+              <label>Foto do personagem</label>
+              <CampoImagem v-model="F.foto_url" pasta="avatares">
+                <template #extra>
+                  <button class="btn tiny ghost" type="button" @click="aleatorioFoto()">🎲 Usar avatar aleatório</button>
+                </template>
+              </CampoImagem>
             </div>
           </div>
 
@@ -98,6 +91,7 @@ import { ref, reactive, computed, onMounted } from 'vue'
 import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import TituloHUD from '../components/TituloHUD.vue'
+import CampoImagem from '../components/CampoImagem.vue'
 
 const auth = useAuthStore()
 const supa = useSupa()
@@ -123,9 +117,6 @@ const somaBoxEstilo = computed(() => {
   if (Math.abs(d) <= 1) return { background: 'linear-gradient(135deg,#2a2512,#0a0806)', color: '#d9ad5e', border: '1px solid #d9ad5e' }
   return { background: 'linear-gradient(135deg,#3a1212,#0a0806)', color: '#e05050', border: '1px solid #e05050' }
 })
-const previewEstilo = computed(() => F.foto_url
-  ? { background: `#1a1526 url('${F.foto_url}') center/cover no-repeat`, border: '2px solid #7a5ab8', borderRadius: '10px' }
-  : { background: '#1a1526', border: '2px dashed #332a4d', color: '#6d6199', display: 'grid', placeItems: 'center', borderRadius: '10px' })
 function aleatorioFoto() {
   const seed = (F.nome || F.discord_nome || 'avatar').replace(/\s+/g, '').slice(0, 12) || Math.random().toString(36).slice(2, 10)
   F.foto_url = `https://api.dicebear.com/9.x/thumbs/png?seed=${encodeURIComponent(seed)}&backgroundColor=2d3748,3a3a6a,3a5a3a`

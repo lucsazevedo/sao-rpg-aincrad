@@ -75,12 +75,16 @@
           </div>
 
           <div class="ee-grid">
-            <div
-              v-for="c in camposFormulario"
-              :key="c.nome"
-              class="ee-campo"
-              :class="{ full: ['textarea','json','lista','lista-texto','objeto','imagem'].includes(c.tipo) }"
-            >
+            <template v-for="(c, i) in camposFormulario" :key="c.nome">
+              <!-- Divisor de seção — opcional (propriedade "grupo" no
+                   TABELAS_ADMIN). Formulários genéricos com muitos campos
+                   soltos (ex: pontos do mapa, ~18 campos numa tela só)
+                   ficavam sem nenhuma hierarquia visual. -->
+              <div v-if="c.grupo && c.grupo !== camposFormulario[i-1]?.grupo" class="ee-grupo-label">{{ c.grupo }}</div>
+              <div
+                class="ee-campo"
+                :class="{ full: ['textarea','json','lista','lista-texto','objeto','imagem'].includes(c.tipo) }"
+              >
               <label>
                 {{ c.rotulo || c.nome }}
                 <span v-if="c.segredo" class="ee-lock" title="Só o mestre vê esse valor — jogadores nunca recebem esse campo.">🔒 só mestre</span>
@@ -193,7 +197,8 @@
                   <button type="button" class="btn tiny" @click="formatarJson(c.nome)">🧹 Formatar</button>
                 </div>
               </template>
-            </div>
+              </div>
+            </template>
           </div>
 
           <div v-if="erroSalvar" class="msg erro" style="margin-top:10px">⚠️ {{ erroSalvar }}</div>
@@ -642,6 +647,22 @@ select.ee-input {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
+}
+.ee-grupo-label {
+  grid-column: 1 / -1;
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid #332a4d;
+  font-family: var(--f-mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #a08fd6;
+}
+.ee-grid > .ee-grupo-label:first-child {
+  margin-top: 0;
+  padding-top: 0;
+  border-top: none;
 }
 .ee-campo {
   display: grid;

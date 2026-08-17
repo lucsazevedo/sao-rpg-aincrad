@@ -5,14 +5,26 @@
         🗡️ SAO RPG
         <small>Aincrad · Andar 1</small>
       </router-link>
-      <div class="nav-links">
+      <button
+        type="button"
+        class="nav-toggle"
+        :aria-expanded="mobileMenuAberto"
+        aria-label="Abrir menu"
+        @click="mobileMenuAberto = !mobileMenuAberto"
+      >
+        <span class="ico">{{ mobileMenuAberto ? "✕" : "☰" }}</span>
+      </button>
+      <div class="nav-links" :class="{ aberto: mobileMenuAberto }" @click="mobileMenuAberto = false">
         <!-- Hub de Aincrad (SAO_RPG_AINCRAD_SISTEMAS.md, item 8 — estrutura do menu).
              Notícias já é a marca (link "/"), por isso não repete aqui. -->
+        <span class="nav-group-label">🌐 Hub de Aincrad</span>
         <router-link to="/estado" class="nav-link"><span class="ico">📊</span>Estado</router-link>
         <router-link to="/andares" class="nav-link"><span class="ico">🏯</span>Andares</router-link>
         <router-link to="/evento-global" class="nav-link"><span class="ico">🌍</span>Evento Global</router-link>
         <router-link to="/guildas" class="nav-link"><span class="ico">🛡️</span>Guildas</router-link>
         <router-link to="/diario" class="nav-link"><span class="ico">📔</span>Diário</router-link>
+
+        <span class="nav-group-label">⚔️ Jogo</span>
         <router-link to="/inicio" class="nav-link"><span class="ico">🧭</span>Painel</router-link>
         <router-link to="/compendio" class="nav-link"><span class="ico">📚</span>Compêndio</router-link>
         <router-link to="/ficha" class="nav-link"><span class="ico">🧑</span>Ficha</router-link>
@@ -86,6 +98,7 @@ import { useAuthStore } from "./stores/auth.js";
 import LoginModal from "./components/LoginModal.vue";
 const auth = useAuthStore();
 const mostrarLogin = ref(false);
+const mobileMenuAberto = ref(false);
 // Banner de "modo pré-visualização" — ver Mestre.vue verComoJogador(). A
 // flag mora em sessionStorage (sobrevive ao logout/login que a troca de
 // conta faz) só pra essa aba, não vaza pra outras sessões/dispositivos.

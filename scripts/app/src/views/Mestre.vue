@@ -445,8 +445,8 @@
                       <textarea rows="2" v-model="fichaAberta.aparencia"></textarea>
                     </div>
                     <div class="campo" style="grid-column:1 / -1">
-                      <label>Foto URL (personagem)</label>
-                      <input v-model="fichaAberta.foto_url">
+                      <label>Foto do personagem</label>
+                      <CampoImagem v-model="fichaAberta.foto_url" pasta="avatares" />
                     </div>
                   </div>
                 </div>
@@ -557,18 +557,18 @@
             <div class="form">
               <div style="grid-column:1 / -1">
                 <div class="campo foto-campo">
-                  <label>Foto do personagem (URL)</label>
+                  <label>Foto do personagem</label>
                   <div class="mestre-ficha-foto" style="align-items:stretch">
-                    <div class="foto-preview" :style="previewEstilo">
+                    <div class="foto-preview">
                       <span v-if="!F.foto_url">👤</span>
+                      <img v-else :src="F.foto_url" alt="" style="width:100%;height:100%;object-fit:cover;border-radius:10px">
                     </div>
                     <div style="display:grid;gap:6px">
-                      <input v-model="F.foto_url" placeholder="Cole uma URL de imagem ou deixe em branco." style="width:100%;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:10px 12px;border-radius:6px;font:inherit;outline:none">
-                      <div style="display:flex;gap:8px;flex-wrap:wrap">
-                        <button class="btn" type="button" @click="aleatorioFoto()">🎲 Foto aleatória</button>
-                        <button class="btn ghost" type="button" @click="F.foto_url=''">Limpar</button>
-                      </div>
-                      <small style="color:var(--ink-faint);font-size:12px">Dica: use qualquer URL HTTPS (Discord, Gravatar, Dicebear, Imgur).</small>
+                      <CampoImagem v-model="F.foto_url" pasta="avatares">
+                        <template #extra>
+                          <button class="btn tiny ghost" type="button" @click="aleatorioFoto()">🎲 Foto aleatória</button>
+                        </template>
+                      </CampoImagem>
                     </div>
                   </div>
                 </div>
@@ -840,6 +840,7 @@ import { useAuthStore } from '../stores/auth.js'
 import { useSupa } from '../lib/supabase.js'
 import { TABELAS_ADMIN, GRUPOS_COMPENDIO } from '../lib/tabelasAdmin.js'
 import EditorEntidade from '../components/EditorEntidade.vue'
+import CampoImagem from '../components/CampoImagem.vue'
 
 const auth = useAuthStore()
 defineEmits(['pedir-login'])
@@ -1096,9 +1097,6 @@ const armasComuns = ref([])
 const clas = ref([])
 const salvando = ref(false)
 const resultadoCriacao = ref(null)
-const previewEstilo = computed(() => F.foto_url
-  ? `background:#1a1526 url('${F.foto_url}') center/cover no-repeat;border:2px solid #7a5ab8;border-radius:10px`
-  : `background:#1a1526;border:2px dashed #332a4d;color:#6d6199;display:grid;place-items:center;font-size:60px;border-radius:10px`)
 function aleatorioFoto(){
   const seed = (F.nome||F.discord_nome||'avatar').replace(/\s+/g,'').slice(0,12) || Math.random().toString(36).slice(2,10)
   F.foto_url = `https://api.dicebear.com/9.x/thumbs/png?seed=${encodeURIComponent(seed)}&backgroundColor=2d3748,3a3a6a,3a5a3a`
@@ -1626,7 +1624,11 @@ onMounted(async () => {
   .admin-sidebar { position: relative; }
   .admin-twocol { grid-template-columns: 1fr; }
 }
-.foto-preview { aspect-ratio: 1/1; min-height: 160px; }
+.foto-preview {
+  aspect-ratio: 1/1; min-height: 160px; border-radius: 10px;
+  background: #1a1526; border: 2px dashed #332a4d; color: #6d6199;
+  display: grid; place-items: center; font-size: 60px; overflow: hidden;
+}
 .foto-campo { grid-column: 1 / -1; }
 /* retrato fixo (160-180px) + coluna de campos ao lado — empilha em tela
    estreita, senão a coluna de campos sobra menos de 100px de largura. */
