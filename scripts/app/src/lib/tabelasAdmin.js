@@ -72,6 +72,24 @@ const ITEM_CAMPOS_MATERIAL = [
   { nome: "mat_id", tipo: "text", rotulo: "ID do material (ex: mat_couro_cru)" },
 ];
 
+// Sub-schema de "ação testável" (bloco de teste PBTA: 2d6+atributo, 10+/7-9/6-)
+// reusado em guias.acoes, oficios.acoes e pontos_detalhe.acoes — mesma forma
+// nas 3 tabelas. Achado 16/08 (relato do usuário): essas 3 colunas são jsonb
+// (array de objeto), mas estavam declaradas "lista-texto" (espera array de
+// STRING) — cada linha virava "[object Object]" no formulário, e SALVAR
+// gravava esse texto de volta no banco, apagando o dado de verdade. 29/30
+// guias e 3/16 ofícios já tinham sido corrompidos assim; recuperados a
+// partir de scripts/web/dados_conteudo.js (fonte original, nunca passou
+// pelo editor quebrado) — ver histórico do chat 16-17/08. Tipo corrigido
+// pra "lista" (sub-schema fixo) previne o mesmo acidente de novo.
+const ITEM_CAMPOS_ACAO_TESTAVEL = [
+  { nome: "acao", tipo: "text", rotulo: "Ação" },
+  { nome: "teste", tipo: "text", rotulo: "Teste (ex: 2d6+Conhecimento)" },
+  { nome: "sucesso", tipo: "text", rotulo: "10+ (sucesso)" },
+  { nome: "parcial", tipo: "text", rotulo: "7-9 (parcial)" },
+  { nome: "falha", tipo: "text", rotulo: "6- (falha)" },
+];
+
 export const TABELAS_ADMIN = {
   monstros: {
     pk: "id",
@@ -154,7 +172,7 @@ export const TABELAS_ADMIN = {
       { nome: "resumo", tipo: "textarea" },
       { nome: "efeito", tipo: "textarea" },
       { nome: "obter", tipo: "textarea" },
-      { nome: "skills", tipo: "json" },
+      { nome: "skills", tipo: "lista-texto", rotulo: "Skills (nomes)" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
@@ -333,11 +351,14 @@ export const TABELAS_ADMIN = {
       { nome: "chegada", tipo: "text" },
       { nome: "leitura", tipo: "textarea" },
       { nome: "cena", tipo: "textarea" },
-      { nome: "acoes", tipo: "lista-texto" },
+      { nome: "acoes", tipo: "lista", itemNome: "ação", itemCampos: ITEM_CAMPOS_ACAO_TESTAVEL },
       { nome: "mestre", tipo: "textarea", segredo: true },
       { nome: "demora", tipo: "textarea" },
       { nome: "evento", tipo: "textarea" },
-      { nome: "locais", tipo: "lista-texto" },
+      { nome: "locais", tipo: "lista", itemNome: "local", itemCampos: [
+        { nome: "nome", tipo: "text" },
+        { nome: "txt", tipo: "text", rotulo: "Descrição" },
+      ] },
       { nome: "ligado", tipo: "lista-texto", rotulo: "Ligado (ids de outro guia/ponto)" },
       { nome: "visivel", tipo: "bool" },
     ],
@@ -373,9 +394,23 @@ export const TABELAS_ADMIN = {
       { nome: "nivel", tipo: "text" },
       { nome: "perfil", tipo: "textarea" },
       { nome: "nota", tipo: "textarea" },
-      { nome: "setores", tipo: "json" },
-      { nome: "salas", tipo: "json" },
-      { nome: "ligacoes", tipo: "json" },
+      { nome: "setores", tipo: "lista", itemNome: "setor", itemCampos: [
+        { nome: "id", tipo: "text" },
+        { nome: "nome", tipo: "text" },
+        { nome: "subtitulo", tipo: "text" },
+      ] },
+      { nome: "salas", tipo: "lista", itemNome: "sala", itemCampos: [
+        { nome: "id", tipo: "text" },
+        { nome: "setor", tipo: "text", rotulo: "ID do setor" },
+        { nome: "nome", tipo: "text" },
+        { nome: "tipo", tipo: "text" },
+        { nome: "x", tipo: "number" },
+        { nome: "y", tipo: "number" },
+        { nome: "txt", tipo: "text", rotulo: "Descrição" },
+      ] },
+      // "ligacoes" fica cru: é lista de PARES [ida, volta] (ex: [["L1","L2"]]),
+      // não array de objeto — não cabe no sub-schema fixo de "lista".
+      { nome: "ligacoes", tipo: "json", rotulo: "Ligações (pares [sala_a, sala_b] — formato especial, editar como JSON)" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
@@ -435,8 +470,14 @@ export const TABELAS_ADMIN = {
       { nome: "quests", tipo: "textarea" },
       { nome: "aparecem", tipo: "textarea" },
       { nome: "simbolo", tipo: "textarea" },
-      { nome: "reputacao", tipo: "json" },
-      { nome: "ganchos", tipo: "json", segredo: true },
+      { nome: "reputacao", tipo: "lista", itemNome: "frente", itemCampos: [
+        { nome: "frente", tipo: "text", rotulo: "Frente (ex: Cidade do Início)" },
+        { nome: "estado", tipo: "text" },
+      ] },
+      { nome: "ganchos", tipo: "lista", segredo: true, itemNome: "gancho", itemCampos: [
+        { nome: "tipo", tipo: "sugestao", opcoes: ["Favor", "Erro", "Rumor", "Oportunidade"] },
+        { nome: "texto", tipo: "text" },
+      ] },
       // Hub de Aincrad — item 4 (sistema de clã/guilda): liderança e
       // estatísticas exibidas na página pública /guildas. membros_count e
       // nivel_medio NÃO entram aqui — são computados na view clas_publico
@@ -600,9 +641,12 @@ export const TABELAS_ADMIN = {
       { nome: "arquivo", tipo: "text" },
       { nome: "leitura", tipo: "textarea" },
       { nome: "oque", tipo: "textarea" },
-      { nome: "acoes", tipo: "lista-texto" },
+      { nome: "acoes", tipo: "lista", itemNome: "ação", itemCampos: ITEM_CAMPOS_ACAO_TESTAVEL },
       { nome: "mestre", tipo: "textarea", segredo: true },
-      { nome: "atalhos", tipo: "lista-texto" },
+      { nome: "atalhos", tipo: "lista", itemNome: "atalho", itemCampos: [
+        { nome: "id", tipo: "sugestao", tabelaRef: "pontos", campoRef: "id", rotulo: "ID (de outro ponto/entidade)" },
+        { nome: "tipo", tipo: "text", rotulo: "Tipo (ex: regiao, monstro, npc)" },
+      ] },
       { nome: "visivel", tipo: "bool" },
     ],
   },
@@ -626,8 +670,11 @@ export const TABELAS_ADMIN = {
       { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS },
       { nome: "arquivo", tipo: "text" },
       { nome: "marca", tipo: "textarea" },
-      { nome: "acoes", tipo: "lista-texto" },
-      { nome: "postos", tipo: "json" },
+      { nome: "acoes", tipo: "lista", itemNome: "ação", itemCampos: ITEM_CAMPOS_ACAO_TESTAVEL },
+      { nome: "postos", tipo: "lista", itemNome: "posto", itemCampos: [
+        { nome: "ponto", tipo: "sugestao", tabelaRef: "pontos", campoRef: "id" },
+        { nome: "txt", tipo: "text", rotulo: "Descrição" },
+      ] },
       { nome: "contato", tipo: "text" },
       { nome: "gancho", tipo: "textarea" },
       { nome: "renda", tipo: "text" },
@@ -642,7 +689,13 @@ export const TABELAS_ADMIN = {
     campos: [
       { nome: "profissao", tipo: "select", opcoes: PROFISSOES },
       { nome: "moeda", tipo: "text" },
-      { nome: "itens", tipo: "json" },
+      { nome: "itens", tipo: "lista", itemNome: "item", itemCampos: [
+        { nome: "produz", tipo: "text" },
+        { nome: "precisa", tipo: "text" },
+        { nome: "teste", tipo: "text", rotulo: "Teste (ex: 2d6+Conhecimento)" },
+        { nome: "sucesso", tipo: "text", rotulo: "10+ (sucesso)" },
+        { nome: "parcial", tipo: "text", rotulo: "7-9 (parcial)" },
+      ] },
       { nome: "vale", tipo: "textarea" },
       { nome: "visivel", tipo: "bool" },
     ],
@@ -681,7 +734,7 @@ export const TABELAS_ADMIN = {
       { nome: "folego_custo", tipo: "number", min: 0, max: 10 },
       { nome: "xp_recompensa", tipo: "number" },
       { nome: "materiais", tipo: "lista", itemNome: "material", itemCampos: ITEM_CAMPOS_MATERIAL },
-      { nome: "efeitos", tipo: "json" },
+      { nome: "efeitos", tipo: "chave-valor", rotulo: "Efeitos (chave livre, ex: bonus → +6%)" },
       { nome: "receita_refino", tipo: "bool" },
       { nome: "receita_estagio", tipo: "number", min: 1, max: 2 },
       { nome: "receita_antecessora_id", tipo: "sugestao", tabelaRef: "receitas", campoRef: "id" },
@@ -720,7 +773,7 @@ export const TABELAS_ADMIN = {
       { nome: "nivel_min", tipo: "number", min: 1, max: 10 },
       { nome: "tempo_chocagem_horas", tipo: "number", min: 1, max: 72 },
       { nome: "incubadora_min", tipo: "number", min: 1, max: 5 },
-      { nome: "efeitos_padrao", tipo: "json" },
+      { nome: "efeitos_padrao", tipo: "chave-valor", rotulo: "Efeitos padrão (chave livre, ex: bonus_caca → +3%)" },
       { nome: "como_obter", tipo: "textarea" },
       { nome: "descricao", tipo: "textarea" },
       { nome: "excluido", tipo: "bool" },
@@ -865,7 +918,7 @@ export const TABELAS_ADMIN = {
       { nome: "raridade", tipo: "select", opcoes: RARIDADE_4 },
       { nome: "status", tipo: "select", opcoes: CRIATURA_STATUS },
       { nome: "incubadora_nivel", tipo: "number", min: 1, max: 5 },
-      { nome: "efeitos", tipo: "json" },
+      { nome: "efeitos", tipo: "chave-valor", rotulo: "Efeitos (chave livre)" },
       { nome: "choca_em", tipo: "text" },
       { nome: "nascido_em", tipo: "text" },
       { nome: "excluido", tipo: "bool" },

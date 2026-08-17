@@ -83,7 +83,7 @@
               <div v-if="c.grupo && c.grupo !== camposFormulario[i-1]?.grupo" class="ee-grupo-label">{{ c.grupo }}</div>
               <div
                 class="ee-campo"
-                :class="{ full: ['textarea','json','lista','lista-texto','objeto','imagem'].includes(c.tipo) }"
+                :class="{ full: ['textarea','json','lista','lista-texto','objeto','imagem','chave-valor'].includes(c.tipo) }"
               >
               <label>
                 {{ c.rotulo || c.nome }}
@@ -181,6 +181,21 @@
                 </div>
               </template>
 
+              <!-- chave-valor: objeto de chaves dinâmicas (não tem um
+                   sub-schema fixo pra virar "objeto" — cada linha vira uma
+                   chave nova, ex: efeitos de poção/ovo, onde o nome do
+                   bônus muda de item pra item) -->
+              <template v-else-if="c.tipo === 'chave-valor'">
+                <div class="ee-lista">
+                  <div v-for="(par, i) in (camposChaveValor[c.nome] || [])" :key="i" class="ee-lista-linha ee-chave-valor-linha">
+                    <input v-model="par.chave" class="ee-input" placeholder="chave (ex: bonus_furtividade)" />
+                    <input v-model="par.valor" class="ee-input" placeholder="valor (ex: +5%)" />
+                    <button type="button" class="btn tiny bad ghost" @click="camposChaveValor[c.nome].splice(i, 1)">🗑️</button>
+                  </div>
+                  <button type="button" class="btn tiny" @click="(camposChaveValor[c.nome] ||= []).push({ chave: '', valor: '' })">➕ Adicionar chave</button>
+                </div>
+              </template>
+
               <!-- fallback: JSON cru, com botão de formatar e indicador de validade -->
               <template v-else-if="c.tipo === 'json'">
                 <textarea
@@ -250,6 +265,7 @@ const camposJsonTexto = reactive({});
 const camposListaTexto = reactive({});
 const camposLista = reactive({});
 const camposObjeto = reactive({});
+const camposChaveValor = reactive({});
 const opcoesReferencia = reactive({});
 const salvando = ref(false);
 const erroSalvar = ref("");
@@ -374,6 +390,11 @@ function inicializarCamposEstruturados(r) {
     } else if (c.tipo === "objeto") {
       const v = r[c.nome];
       camposObjeto[c.nome] = v && typeof v === "object" ? { ...v } : {};
+    } else if (c.tipo === "chave-valor") {
+      const v = r[c.nome];
+      camposChaveValor[c.nome] = v && typeof v === "object" && !Array.isArray(v)
+        ? Object.entries(v).map(([chave, valor]) => ({ chave, valor }))
+        : [];
     }
   }
 }
@@ -462,6 +483,9 @@ async function salvar() {
       });
     } else if (c.tipo === "objeto") {
       payload[c.nome] = camposObjeto[c.nome] && Object.keys(camposObjeto[c.nome]).length ? camposObjeto[c.nome] : {};
+    } else if (c.tipo === "chave-valor") {
+      const pares = (camposChaveValor[c.nome] || []).filter((p) => String(p.chave || "").trim());
+      payload[c.nome] = Object.fromEntries(pares.map((p) => [String(p.chave).trim(), p.valor]));
     } else if (c.tipo === "number") {
       const v = itemAberto.value[c.nome];
       payload[c.nome] = v === "" || v === null || v === undefined ? null : Number(v);
