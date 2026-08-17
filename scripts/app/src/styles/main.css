@@ -137,9 +137,16 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{
     flex-direction:column;align-items:stretch;gap:2px;
     order:4;flex-basis:100%;
     position:absolute;left:12px;right:12px;top:calc(100% - 4px);
-    background:var(--panel);border:1px solid var(--line);border-radius:6px;
-    box-shadow:0 16px 40px rgba(0,0,0,.5);
-    padding:8px;z-index:20;max-height:calc(100vh - 90px);overflow-y:auto;
+    /* achado do usuário (print): var(--panel) sozinho (88% opacidade, sem
+       blur) deixava o conteúdo da página vazar por trás do menu-gaveta,
+       virando uma sopa de texto ilegível. --panel-2 é mais sólido (94%) +
+       backdrop-filter (mesmo tratamento "vidro fosco" da navbar) garante
+       legibilidade não importa o que estiver rolado atrás. */
+    background:var(--panel-2);
+    backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);
+    border:1px solid var(--line);border-radius:6px;
+    box-shadow:0 16px 40px rgba(0,0,0,.6);
+    padding:8px;z-index:30;max-height:calc(100vh - 90px);overflow-y:auto;
   }
   .nav-links.aberto{display:flex}
   .nav-group-label{
