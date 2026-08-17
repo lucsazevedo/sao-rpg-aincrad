@@ -368,6 +368,7 @@
                   <td style="text-align:center;white-space:nowrap">
                     <button class="btn tiny" @click.stop="editarPersonagem(p)">✏️ Editar</button>
                     <button class="btn tiny ghost" @click.stop="resetarSenha(p)">🔑 Resetar senha</button>
+                    <button class="btn tiny ghost" @click.stop="verComoJogador(p)" title="Loga como esse jogador de verdade — só assim o RLS filtra igual filtraria pra ele. Troca a senha dele(a).">🎭 Ver como</button>
                   </td>
                 </tr>
               </tbody>
@@ -517,6 +518,7 @@
                   <button class="btn bad ghost" @click="excluirPersonagem(fichaAberta)">🗑️ Excluir (lógico)</button>
                   <div style="display:flex;gap:10px">
                     <button class="btn" @click="resetarSenha(fichaAberta)">🔑 Resetar senha</button>
+                    <button class="btn" @click="verComoJogador(fichaAberta)">🎭 Ver como</button>
                     <button class="btn" @click="fichaAberta=null">Fechar</button>
                     <button class="btn primario" :disabled="salvandoPers" @click="salvarPersonagem()">
                       {{ salvandoPers ? '💾 Salvando…' : '💾 Salvar alterações' }}
@@ -1036,6 +1038,26 @@ async function resetarSenha(p){
     if (r.error) throw r.error
     senhaResetada.value = { nome: p.nome, senha }
   } catch(e){ alert('Erro ao resetar: '+e.message) }
+}
+// "Ver como" — pré-visualizar o site exatamente como um jogador vê (RLS de
+// verdade: is_mestre() não pode ser fingido no cliente, só logando na conta
+// dele mesmo). Pedido do usuário: confirmar que ocultar coisas (ex: pontos
+// do mapa) realmente some pro jogador, não só "parece que sim" porque toda
+// consulta como mestre ignora visibilidade. Efeito colateral avisado: troca
+// a senha do jogador (mesma RPC do botão "Resetar senha" — pra deixar ele
+// entrar sozinho de novo depois, gere outra senha e mande no Discord).
+async function verComoJogador(p){
+  if (!p?.discord_email){ alert('Esse personagem não tem e-mail vinculado — não dá pra entrar como ele(a).'); return }
+  if (!confirm(`Ver o site como ${p.nome}?\n\nIsso troca a senha dele(a) por uma nova e desloga você do Mestre. Pra voltar a ser Mestre, saia e entre de novo com sua conta.`)) return
+  try {
+    const senha = gerarSenha()
+    const r = await supa.rpc('resetar_senha_usuario', { p_email: p.discord_email, p_nova_senha: senha })
+    if (r.error) throw r.error
+    sessionStorage.setItem('sao-rpg-impersonando', JSON.stringify({ mestreEmail: auth.user?.email, personagem: p.nome }))
+    await auth.logout()
+    await auth.login(p.discord_email, senha)
+    location.hash = '#/ficha'
+  } catch(e){ alert('Erro: '+e.message) }
 }
 async function copiarSenhaResetada(){
   if (!senhaResetada.value) return

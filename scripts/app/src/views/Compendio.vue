@@ -27,6 +27,9 @@
           </select>
           <span class="pill">{{ pontosFiltrados.length }} pontos</span>
           <div style="display:flex;gap:4px;margin-left:auto">
+            <button class="btn tiny" :disabled="carregandoMapa" @click="carregarMapa(true)" title="A tela fica montada em segundo plano (keep-alive) — se você mudou visibilidade de pontos no Painel do Mestre nessa mesma aba, o mapa não recarrega sozinho. Use isso pra buscar de novo.">
+              🔄 Atualizar
+            </button>
             <button class="btn tiny" :class="{on: mostrarTerreno}" @click="mostrarTerreno=!mostrarTerreno" title="Terreno artístico desenhado por código (rios, montanhas, cidades…) por baixo dos marcadores">
               🖼️ Terreno {{ mostrarTerreno ? 'ligado' : 'desligado' }}
             </button>
@@ -81,6 +84,7 @@
         <input v-model="busca" placeholder="🔎 Buscar…"
           style="flex:1 1 220px;background:var(--panel-3);border:1px solid var(--line);color:var(--ink);padding:9px 12px;border-radius:6px;font:inherit">
         <span class="pill">{{ itensFiltrados.length }} {{ itensFiltrados.length===1?'item':'itens' }}</span>
+        <button class="btn tiny" @click="carregar(true)" title="Essa aba fica montada em segundo plano — se algo mudou de visibilidade no Painel do Mestre nessa mesma sessão, busca de novo aqui">🔄 Atualizar</button>
       </div>
       <div class="grid" :class="{ 'grid-icones': abaAtiva==='armas' }">
         <div v-for="it in itensFiltrados" :key="chave(it)" class="card" :class="[abaAtiva==='armas' ? '' : classeRaridade(it), { 'card-icone': abaAtiva==='armas' }]" role="button" tabindex="0"
@@ -261,8 +265,8 @@ const pontosFiltrados = computed(() => {
   return l
 })
 
-async function carregarMapa(){
-  if (pontosMapa.value.length) { carregandoMapa.value = false; nextTick(redesenharTerreno); return }
+async function carregarMapa(forcar){
+  if (!forcar && pontosMapa.value.length) { carregandoMapa.value = false; nextTick(redesenharTerreno); return }
   carregandoMapa.value = true
   try {
     // Sempre a view: ela já resolve is_mestre() internamente (CASE WHEN,
@@ -287,10 +291,10 @@ async function abrirPonto(p){
   } catch(e){ console.warn(e) }
 }
 
-async function carregar(){
-  if (abaAtiva.value === 'mapa') { await carregarMapa(); return }
+async function carregar(forcar){
+  if (abaAtiva.value === 'mapa') { await carregarMapa(forcar); return }
   const t = tabAtual.value
-  if (cache[t.k]) { itens.value = cache[t.k]; return }
+  if (!forcar && cache[t.k]) { itens.value = cache[t.k]; return }
   carregando.value = true
   try {
     // tabelas com coluna "só mestre" (monstros.notas, guias.mestre,
@@ -318,7 +322,10 @@ async function carregar(){
   } finally { carregando.value = false }
 }
 
-watch(abaAtiva, carregar)
+// não passa "carregar" direto: watch() chama o handler com o novo valor de
+// abaAtiva como 1º argumento, e carregar(forcar) leria isso como "forcar"
+// verdadeiro sempre — cada troca de aba ignoraria o cache por acidente.
+watch(abaAtiva, () => carregar())
 onMounted(async () => {
   if (!auth.ready) await auth.init()
   await carregar()

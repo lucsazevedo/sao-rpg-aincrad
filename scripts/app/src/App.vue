@@ -61,6 +61,10 @@
         <button v-if="auth.logado" class="btn ghost" @click="sair">Sair</button>
       </template>
     </nav>
+    <div v-if="impersonando && auth.logado" class="msg warn" style="margin:0;border-radius:0;text-align:center">
+      🎭 Modo pré-visualização — vendo como <b>{{ impersonando.personagem }}</b>.
+      <button class="btn tiny ghost" @click="voltarASerMestre" style="margin-left:10px">🔙 Sair e voltar a logar como Mestre</button>
+    </div>
     <LoginModal
       v-if="mostrarLogin"
       @fechar="mostrarLogin = false"
@@ -82,11 +86,26 @@ import { useAuthStore } from "./stores/auth.js";
 import LoginModal from "./components/LoginModal.vue";
 const auth = useAuthStore();
 const mostrarLogin = ref(false);
+// Banner de "modo pré-visualização" — ver Mestre.vue verComoJogador(). A
+// flag mora em sessionStorage (sobrevive ao logout/login que a troca de
+// conta faz) só pra essa aba, não vaza pra outras sessões/dispositivos.
+const CHAVE_IMPERSONANDO = "sao-rpg-impersonando";
+const impersonando = ref(null);
 onMounted(async () => {
+  const bruto = sessionStorage.getItem(CHAVE_IMPERSONANDO);
+  if (bruto) { try { impersonando.value = JSON.parse(bruto); } catch (_) {} }
   await auth.init();
 });
 async function sair() {
+  sessionStorage.removeItem(CHAVE_IMPERSONANDO);
+  impersonando.value = null;
   await auth.logout();
   location.hash = "#/";
+}
+async function voltarASerMestre() {
+  sessionStorage.removeItem(CHAVE_IMPERSONANDO);
+  impersonando.value = null;
+  await auth.logout();
+  location.hash = "#/mestre-login";
 }
 </script>
