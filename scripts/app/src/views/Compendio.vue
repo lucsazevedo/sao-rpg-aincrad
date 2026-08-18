@@ -280,9 +280,17 @@ async function carregarMapa(forcar){
     // pro jogador. Achado 10/08: usar a tabela base como mestre quebrava
     // com "permission denied" — a coluna "mestre" nunca teve GRANT SELECT
     // pra authenticated (só a view expõe isso com segurança).
+    //
+    // Pegadinha: pontos_publico devolve visivel=false pro MESTRE também
+    // (a policy libera "is_mestre() OR visivel=true" — de propósito, pro
+    // Painel do Mestre poder listar/editar tudo). Esse mapa aqui não é o
+    // painel de edição, é a mesma tela que jogador usa — sem filtrar aqui
+    // de novo, o mestre via um ponto marcado invisível e achava que o
+    // "não visível" não tava funcionando de verdade. Filtra sempre,
+    // independente de quem tá logado.
     const r = await supa.from('pontos_publico').select('*').limit(500)
     if (r.error) throw r.error
-    pontosMapa.value = (r.data || []).filter(p => p.x != null && p.y != null)
+    pontosMapa.value = (r.data || []).filter(p => p.x != null && p.y != null && p.visivel !== false)
   } catch(e){ console.warn(e); pontosMapa.value = [] }
   finally { carregandoMapa.value = false; nextTick(redesenharTerreno) }
 }
@@ -313,13 +321,18 @@ async function carregar(forcar){
     // denied for table X" — corrigido usando sempre a view.
     const usaView = !!t.view
     const alvo = usaView ? t.view : t.tabela
-    // as views _publico já filtram visivel=true internamente e nem
-    // devolvem essa coluna — só filtra explicitamente na tabela base.
     let q = supa.from(alvo).select('*').limit(500)
     if (!usaView) q = q.eq('visivel', true)
     const r = await q
     if (r.error) throw r.error
-    const dados = r.data || []
+    // as views _publico liberam visivel=false pro MESTRE também (de
+    // propósito — Painel do Mestre precisa listar/editar tudo), e ainda
+    // devolvem a coluna "visivel" pra quem consultar. Esse Compêndio é a
+    // mesma tela que jogador usa, não o painel de edição: filtra de novo
+    // aqui, senão o mestre navegando normal via item marcado invisível e
+    // achava que "não visível" tava quebrado (mesmo achado do mapa, ver
+    // carregarMapa).
+    const dados = usaView ? (r.data || []).filter(it => it.visivel !== false) : (r.data || [])
     cache[t.k] = dados
     itens.value = dados
   } catch (e) {
