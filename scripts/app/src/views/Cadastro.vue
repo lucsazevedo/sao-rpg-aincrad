@@ -129,9 +129,13 @@ const aguardandoConfirmacao = ref(false)
 const jaLogadoComPersonagem = computed(() => auth.logado && auth.temPersonagem)
 
 async function carregarListas() {
+  // views próprias (não as tabelas base) — quem preenche este formulário
+  // ainda é anon nesse momento (é o fluxo que leva de visitante pra
+  // logado), e oficios/armas exigem "authenticated" na RLS pro resto do
+  // Compêndio. Ver schema_views_publicas_cadastro.sql.
   const [rOf, rAr, rCl] = await Promise.all([
-    supa.from('oficios').select('nome, atributo').eq('excluido', false),
-    supa.from('armas').select('id, nome').eq('raridade', 'Comum').eq('excluido', false),
+    supa.from('oficios_signup_publico').select('nome, atributo'),
+    supa.from('armas_comuns_signup_publico').select('id, nome'),
     supa.from('clas_publico').select('nome'),
   ])
   oficios.value = (rOf.data || []).sort((a, b) => a.nome.localeCompare(b.nome, 'pt-BR'))

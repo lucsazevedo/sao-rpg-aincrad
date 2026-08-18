@@ -71,7 +71,9 @@ async function carregar() {
     if (r.error) throw r.error
     personagem.value = r.data
     if (personagem.value?.arma) {
-      const ra = await supa.from('armas').select('nome').eq('id', personagem.value.arma).maybeSingle()
+      // view, não a tabela base: essa ficha é pública (sem login), e
+      // "armas" exige authenticated na RLS — ver schema_views_publicas_cadastro.sql
+      const ra = await supa.from('armas_publico').select('nome').eq('id', personagem.value.arma).maybeSingle()
       armaNome.value = ra.data?.nome || ''
     }
   } catch (e) { console.warn(e); personagem.value = null } finally { carregando.value = false }
