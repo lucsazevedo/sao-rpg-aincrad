@@ -96,7 +96,7 @@
               <textarea v-else-if="c.tipo === 'textarea'" v-model="itemAberto[c.nome]" rows="3" class="ee-input"></textarea>
               <label v-else-if="c.tipo === 'bool'" class="ee-check">
                 <input type="checkbox" v-model="itemAberto[c.nome]" />
-                {{ itemAberto[c.nome] ? "Sim" : "Não" }}
+                Sim
               </label>
 
               <!-- select travado: só aceita valor da lista, impossível digitar errado -->
