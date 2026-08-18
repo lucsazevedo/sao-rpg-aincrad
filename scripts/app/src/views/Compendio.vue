@@ -49,7 +49,13 @@
           </svg>
         </div>
         <div style="margin-top:10px;display:flex;gap:10px;flex-wrap:wrap">
-          <span v-for="(info,cat) in CAT_INFO" :key="cat" class="pill" :style="{borderColor:info.cor}">
+          <span v-for="(info,cat) in CAT_INFO" :key="cat" class="pill" role="button" tabindex="0"
+            :class="{on: categoriaFiltro===cat}"
+            :style="{borderColor:info.cor, cursor:'pointer', opacity: categoriaFiltro && categoriaFiltro!==cat ? 0.5 : 1}"
+            :title="categoriaFiltro===cat ? 'Clique pra mostrar todas as categorias de novo' : 'Clique pra mostrar só ' + info.label"
+            @click="categoriaFiltro = categoriaFiltro===cat ? '' : cat"
+            @keydown.enter="categoriaFiltro = categoriaFiltro===cat ? '' : cat"
+            @keydown.space.prevent="categoriaFiltro = categoriaFiltro===cat ? '' : cat">
             <span :style="{display:'inline-block',width:'8px',height:'8px',borderRadius:'50%',background:info.cor,marginRight:'4px'}"></span>{{ info.label }}
           </span>
         </div>
