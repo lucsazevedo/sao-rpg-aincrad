@@ -194,9 +194,25 @@
           <router-link :to="`/personagem/${encodeURIComponent(auth.personagem.nome)}`" class="btn tiny" target="_blank">
             🔗 Ver minha ficha pública
           </router-link>
+          <button class="btn tiny" type="button" @click="abrirEditarFicha">
+            ✏️ {{ mostrarEditarFicha ? "Cancelar" : "Editar foto / conceito / aparência" }}
+          </button>
           <button class="btn tiny" type="button" @click="mostrarTrocarSenha = !mostrarTrocarSenha">
             🔑 {{ mostrarTrocarSenha ? "Cancelar" : "Alterar senha" }}
           </button>
+        </div>
+        <div v-if="mostrarEditarFicha" class="form" style="max-width:420px;padding:0;border:none;background:transparent">
+          <div class="c">
+            <label>Foto do personagem</label>
+            <CampoImagem v-model="editForm.foto_url" pasta="avatares" />
+          </div>
+          <div class="c"><label>Conceito</label><textarea v-model="editForm.conceito" rows="2"></textarea></div>
+          <div class="c"><label>Aparência</label><textarea v-model="editForm.aparencia" rows="2"></textarea></div>
+          <div v-if="erroFicha" class="msg erro">{{ erroFicha }}</div>
+          <div v-if="fichaSalva" class="msg ok">✅ Ficha atualizada.</div>
+          <div style="display:flex;justify-content:flex-end">
+            <button class="btn primario" :disabled="salvandoFicha" @click="salvarFicha">{{ salvandoFicha ? "Salvando…" : "Salvar" }}</button>
+          </div>
         </div>
         <div v-if="mostrarTrocarSenha" class="form" style="max-width:360px;padding:0;border:none;background:transparent">
           <div class="c"><label>Nova senha</label><input type="password" v-model="novaSenha" placeholder="Mínimo 6 caracteres"></div>
@@ -219,6 +235,7 @@ import StatusBar from "../components/StatusBar.vue";
 import TituloHUD from "../components/TituloHUD.vue";
 import IconeArma from "../components/IconeArma.vue";
 import IconeProfissao from "../components/IconeProfissao.vue";
+import CampoImagem from "../components/CampoImagem.vue";
 const auth = useAuthStore();
 const supa = useSupa();
 defineEmits(["pedir-login"]);
@@ -383,6 +400,47 @@ onMounted(async () => {
   await Promise.all([carregarReputacoes(), carregarLimitBreakers(), carregarArmaDetalhe()]);
   await carregarGolpes(); // depende de armaDetalhe já carregado
 });
+
+// ===== Editar foto / conceito / aparência (jogador dono da ficha —
+// RLS "upd_dono_ou_mestre" em personagens já libera esse update, só
+// faltava a tela pra usar). =====
+const mostrarEditarFicha = ref(false);
+const editForm = ref({ foto_url: "", conceito: "", aparencia: "" });
+const erroFicha = ref("");
+const fichaSalva = ref(false);
+const salvandoFicha = ref(false);
+function abrirEditarFicha() {
+  mostrarEditarFicha.value = !mostrarEditarFicha.value;
+  if (mostrarEditarFicha.value) {
+    erroFicha.value = "";
+    fichaSalva.value = false;
+    editForm.value = {
+      foto_url: auth.personagem?.foto_url || "",
+      conceito: auth.personagem?.conceito || "",
+      aparencia: auth.personagem?.aparencia || "",
+    };
+  }
+}
+async function salvarFicha() {
+  erroFicha.value = "";
+  fichaSalva.value = false;
+  salvandoFicha.value = true;
+  try {
+    const dados = {
+      foto_url: editForm.value.foto_url || null,
+      conceito: editForm.value.conceito || null,
+      aparencia: editForm.value.aparencia || null,
+    };
+    const r = await supa.from("personagens").update(dados).eq("nome", auth.personagem.nome);
+    if (r.error) throw r.error;
+    Object.assign(auth.personagem, dados);
+    fichaSalva.value = true;
+  } catch (e) {
+    erroFicha.value = "Erro: " + e.message;
+  } finally {
+    salvandoFicha.value = false;
+  }
+}
 
 // ===== Alterar senha (jogador logado) =====
 const mostrarTrocarSenha = ref(false);

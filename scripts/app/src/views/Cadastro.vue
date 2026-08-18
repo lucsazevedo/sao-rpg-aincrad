@@ -179,9 +179,15 @@ async function cadastrar() {
   enviando.value = true
   try {
     const email = F.email.trim()
+    // emailRedirectTo = raiz do site, sem rota hash — mesmo padrão do
+    // "esqueci a senha" (ver LoginModal.vue/auth.js). Sem isso o link do
+    // e-mail de confirmação cai no Site URL padrão do projeto Supabase
+    // (geralmente localhost, de quando foi criado em dev) e a pessoa cai
+    // numa página que recusa conexão em vez de voltar pro site de verdade.
+    const emailRedirectTo = window.location.origin + window.location.pathname
     const rSign = await supa.auth.signUp({
       email, password: F.senha,
-      options: { data: { nome: F.nome, discord_nome: F.discord_nome } },
+      options: { data: { nome: F.nome, discord_nome: F.discord_nome }, emailRedirectTo },
     })
     if (rSign.error) throw new Error(rSign.error.message)
     const payload = payloadPersonagem()

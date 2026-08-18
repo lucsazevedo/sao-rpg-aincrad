@@ -37,6 +37,16 @@ export const useAuthStore = defineStore('auth', {
         // resolver a rota certa a partir do hash "#access_token=...". Força
         // a navegação pra RedefinirSenha.vue explicitamente aqui.
         if (_evt === 'PASSWORD_RECOVERY') location.hash = '#/redefinir-senha'
+        // Mesmo problema, versão "confirmar e-mail no autocadastro": o link
+        // do e-mail também usa emailRedirectTo = raiz do site (Cadastro.vue),
+        // então quem clica cai na Home (rota "/") já logado, mas com a
+        // ficha ainda em rascunho no localStorage — Cadastro.vue é quem sabe
+        // terminar de criá-la (retomarRascunhoSeExistir), só que só faz isso
+        // no próprio onMounted. Sem essa navegação forçada a pessoa fica
+        // "logada sem ficha" até entrar em /cadastro na mão.
+        if (sess && !this.personagem && localStorage.getItem('sao-rpg-cadastro-pendente')) {
+          location.hash = '#/cadastro'
+        }
       })
       if (this.sessao) await this.carregarPerfilEPersonagem()
       this.ready = true

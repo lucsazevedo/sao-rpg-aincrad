@@ -1116,7 +1116,12 @@ async function salvar(){
   try {
     const email = F.discord_email.trim()
     let uid = null
-    const rSign = await supa.auth.signUp({ email, password: senha, options: { data: { nome: F.nome, discord_nome: F.discord_nome } } })
+    // mesmo emailRedirectTo do autocadastro (ver Cadastro.vue/auth.js) —
+    // sem isso o link de confirmação cai no Site URL padrão do projeto
+    // Supabase (localhost) e a conta fica "confirmada" mas a pessoa vê
+    // erro de conexão recusada ao clicar no link.
+    const emailRedirectTo = window.location.origin + window.location.pathname
+    const rSign = await supa.auth.signUp({ email, password: senha, options: { data: { nome: F.nome, discord_nome: F.discord_nome }, emailRedirectTo } })
     if (rSign.error && rSign.error.code !== 'user_already_exists'){
       const rRPC = await supa.rpc('criar_usuario_mestre', { p_email: email, p_senha: senha, p_nome: F.nome })
       if (rRPC.error) throw new Error('signup: ' + rSign.error.message + ' / RPC: ' + rRPC.error.message)
