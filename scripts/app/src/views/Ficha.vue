@@ -76,6 +76,12 @@
         </div>
       </div>
       <div class="card">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+          <span class="pill on">🎯 Nível {{ auth.personagem.nivel || 1 }}</span>
+          <span class="pill">🛡️ CA {{ auth.personagem.ca ?? 10 }}</span>
+          <span class="pill" :class="{bad: pvAtual <= pvMax * 0.3}">❤️ PV {{ pvAtual }} / {{ pvMax }}</span>
+          <span class="pill">⭐ Proficiência +{{ auth.personagem.bonus_proficiencia ?? 2 }}</span>
+        </div>
         <h3 style="margin: 0 0 10px; color: var(--gold-bright)">Atributos</h3>
         <div
           class="form"
@@ -86,10 +92,10 @@
               v-for="a in atributos"
               :key="a.k"
               class="atrib"
-              :class="a.v > 0 ? 'pos' : a.v < 0 ? 'neg' : ''"
+              :class="a.mod > 0 ? 'pos' : a.mod < 0 ? 'neg' : ''"
             >
               <b>{{ a.nome }}</b>
-              <div class="v">{{ a.v > 0 ? "+" : "" }}{{ a.v }}</div>
+              <div class="v">{{ a.v }} ({{ a.mod >= 0 ? "+" : "" }}{{ a.mod }})</div>
             </div>
           </div>
         </div>
@@ -154,16 +160,17 @@
             {{ r.alvo_nome }} · {{ r.nivel }} ({{ statusRep(r.nivel) }})
           </span>
         </div>
-        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🗡️ Golpes da Arma · {{ armaDetalhe?.tipo || armaAtual }}</h3>
+        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🗡️ Sword Skills · {{ armaDetalhe?.tipo || armaAtual }}</h3>
+        <p style="margin:0 0 8px;color:var(--ink-faint);font-size:11.5px">Lista completa (7 Skills + Limit Break) em <code>SAO_RPG_5e.md</code>, Seções 55-59 — os cards abaixo ainda vêm do catálogo antigo do banco.</p>
         <div v-if="carregandoGolpes" class="msg info carregando">Carregando…</div>
         <div v-else-if="!golpesArma.length" class="msg warn">Sem arma equipada ou sem golpes cadastrados ainda.</div>
         <div v-else style="display:flex;flex-direction:column;gap:8px">
           <div v-for="g in golpesArma" :key="g.nome" class="card" style="background:var(--panel);border:none">
             <div class="ct">{{ g.nome }} <span v-if="g.bonus" class="pill on">{{ g.bonus }}</span></div>
             <p style="font-style:italic;color:var(--ink-dim);margin:4px 0">{{ g.gatilho }}</p>
-            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">10+</b> {{ g.dezMais.join(" · ") }}</div>
-            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">7-9</b> {{ g.seteNove.join(" · ") }}</div>
-            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">6-</b> {{ g.seisMenos.join(" · ") }}</div>
+            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">Efeito</b> {{ g.dezMais.join(" · ") }}</div>
+            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">Efeito parcial</b> {{ g.seteNove.join(" · ") }}</div>
+            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">Em falha</b> {{ g.seisMenos.join(" · ") }}</div>
           </div>
         </div>
 
@@ -174,9 +181,9 @@
           <div v-for="g in golpesProfissao" :key="g.nome" class="card" style="background:var(--panel);border:none">
             <div class="ct">{{ g.nome }} <span v-if="g.bonus" class="pill on">{{ g.bonus }}</span></div>
             <p style="font-style:italic;color:var(--ink-dim);margin:4px 0">{{ g.gatilho }}</p>
-            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">10+</b> {{ g.dezMais.join(" · ") }}</div>
-            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">7-9</b> {{ g.seteNove.join(" · ") }}</div>
-            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">6-</b> {{ g.seisMenos.join(" · ") }}</div>
+            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">Efeito</b> {{ g.dezMais.join(" · ") }}</div>
+            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">Efeito parcial</b> {{ g.seteNove.join(" · ") }}</div>
+            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">Em falha</b> {{ g.seisMenos.join(" · ") }}</div>
           </div>
         </div>
 
@@ -274,23 +281,26 @@ async function carregarLimitBreakers() {
     console.warn(e);
   }
 }
+// D&D 5e (Seção 4 do SAO_RPG_5e.md) — substitui os 5 atributos PBTA.
 const ATTR = {
-  tecnica: "Técnica",
-  espirito: "Espírito",
-  conhecimento: "Conhecimento",
-  reflexo: "Reflexo",
-  corpo: "Corpo",
+  forca: "Força",
+  destreza: "Destreza",
+  constituicao: "Constituição",
+  inteligencia: "Inteligência",
+  sabedoria: "Sabedoria",
+  carisma: "Carisma",
 };
 const atributos = computed(() =>
-  Object.keys(ATTR).map((k) => ({
-    k,
-    nome: ATTR[k],
-    v:
-      auth.personagem && auth.personagem.atributos
-        ? auth.personagem.atributos[k] || 0
-        : 0,
-  })),
+  Object.keys(ATTR).map((k) => {
+    const v =
+      auth.personagem && auth.personagem.atributos_dnd
+        ? auth.personagem.atributos_dnd[k] ?? 10
+        : 10;
+    return { k, nome: ATTR[k], v, mod: Math.floor((v - 10) / 2) };
+  }),
 );
+const pvMax = computed(() => auth.personagem?.vida_max ?? 0);
+const pvAtual = computed(() => auth.personagem?.vida_atual ?? 0);
 const foto = computed(
   () => auth.personagem?.foto_url || auth.perfil?.foto_url || "",
 );

@@ -26,12 +26,16 @@
           <p v-if="personagem.conceito"><b>Conceito:</b> {{ personagem.conceito }}</p>
           <p v-if="personagem.aparencia"><b>Aparência:</b> {{ personagem.aparencia }}</p>
 
+          <div style="display:flex;gap:8px;flex-wrap:wrap;margin:6px 0 10px">
+            <span class="pill on">🎯 Nível {{ personagem.nivel || 1 }}</span>
+            <span class="pill">🛡️ CA {{ personagem.ca ?? 10 }}</span>
+          </div>
           <div v-if="atributosLista.length" style="margin-top:14px">
             <h4 style="margin:0 0 8px;color:var(--azul-bright)">Atributos</h4>
             <div class="atributos">
-              <div v-for="a in atributosLista" :key="a.k" class="atrib" :class="{ pos: a.v > 0, neg: a.v < 0 }">
+              <div v-for="a in atributosLista" :key="a.k" class="atrib" :class="{ pos: a.mod > 0, neg: a.mod < 0 }">
                 <label>{{ a.nome }}</label>
-                <div class="v">{{ a.v > 0 ? '+' : '' }}{{ a.v }}</div>
+                <div class="v">{{ a.v }} ({{ a.mod >= 0 ? '+' : '' }}{{ a.mod }})</div>
               </div>
             </div>
           </div>
@@ -53,10 +57,10 @@ const carregando = ref(true)
 const personagem = ref(null)
 const armaNome = ref('')
 
-const NOMES_ATRIBUTOS = { tecnica: 'Técnica', espirito: 'Espírito', conhecimento: 'Conhecimento', reflexo: 'Reflexo', corpo: 'Corpo' }
+const NOMES_ATRIBUTOS = { forca: 'Força', destreza: 'Destreza', constituicao: 'Constituição', inteligencia: 'Inteligência', sabedoria: 'Sabedoria', carisma: 'Carisma' }
 const atributosLista = computed(() => {
-  const at = personagem.value?.atributos || {}
-  return Object.keys(NOMES_ATRIBUTOS).filter(k => at[k] !== undefined).map(k => ({ k, nome: NOMES_ATRIBUTOS[k], v: at[k] }))
+  const at = personagem.value?.atributos_dnd || {}
+  return Object.keys(NOMES_ATRIBUTOS).filter(k => at[k] !== undefined).map(k => ({ k, nome: NOMES_ATRIBUTOS[k], v: at[k], mod: Math.floor((at[k] - 10) / 2) }))
 })
 const foto = computed(() => personagem.value?.foto_url ? urlImagem(personagem.value.foto_url) : '')
 
@@ -66,7 +70,7 @@ async function carregar() {
   armaNome.value = ''
   try {
     const r = await supa.from('personagens')
-      .select('nome, guilda, profissao, arma, atributos, conceito, aparencia, foto_url')
+      .select('nome, guilda, profissao, arma, atributos_dnd, nivel, ca, conceito, aparencia, foto_url')
       .eq('nome', route.params.nome).eq('visivel', true).eq('excluido', false).maybeSingle()
     if (r.error) throw r.error
     personagem.value = r.data
