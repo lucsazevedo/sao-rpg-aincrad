@@ -15,10 +15,12 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from migrar_para_supabase import conectar  # noqa: E402
-from _extrair_sword_skills_e_profissoes import extrair_armas, extrair_profissoes  # noqa: E402
+from _extrair_sword_skills_e_profissoes import extrair_profissoes  # noqa: E402
+from _dados_sword_skills import ARMAS  # noqa: E402 -- fonte unica das 19 armas/152 skills
 
-# nome no SAO_RPG_5e.md -> nome na coluna moves_arma.nome (banco)
+# nome em _dados_sword_skills.py -> nome na coluna moves_arma.nome (banco)
 MAPA_NOME_ARMA = {
     "Espada + Escudo": "Escudo e Espada",
     "Chakram": "Chakrams",
@@ -38,16 +40,23 @@ def main():
     conn = conectar()
     cur = conn.cursor()
 
-    armas = extrair_armas()
     atualizados_armas = 0
-    for nome_md, dados in armas.items():
+    for arma in ARMAS:
+        nome_md = arma["nome"]
         nome_banco = MAPA_NOME_ARMA.get(nome_md, nome_md)
-        sword_skills = json.dumps(dados["skills"], ensure_ascii=False)
-        limit_break = json.dumps(dados["limit_break"], ensure_ascii=False) if dados["limit_break"] else None
+        skills_normais = [
+            {"nivel": s["nivel"], "nome": s["nome"], "descricao": s["corpo"]}
+            for s in arma["skills"] if not s["lb"]
+        ]
+        lb = next((s for s in arma["skills"] if s["lb"]), None)
+        limit_break = json.dumps(
+            {"nivel": lb["nivel"], "nome": lb["nome"], "descricao": lb["corpo"]}, ensure_ascii=False
+        ) if lb else None
+        sword_skills = json.dumps(skills_normais, ensure_ascii=False)
         cur.execute(
             "update moves_arma set sword_skills = %s::jsonb, limit_break_novo = %s::jsonb, "
-            "atributo = %s, updated_at = now() where nome = %s",
-            (sword_skills, limit_break, dados["atributo"], nome_banco),
+            "atributo = %s, marca = %s, updated_at = now() where nome = %s",
+            (sword_skills, limit_break, arma["attr"], arma["identidade"], nome_banco),
         )
         if cur.rowcount == 0:
             print(f"AVISO: nenhuma linha em moves_arma pra '{nome_banco}' (de '{nome_md}')")
