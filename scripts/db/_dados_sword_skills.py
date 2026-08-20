@@ -251,16 +251,19 @@ ARMAS.append(dict(nome="Besta", cat="Scouts", attr="Destreza", dano="perfurante"
 
 ARMAS.append(dict(nome="Leque", cat="Scouts", attr="Sabedoria", dano="cortante",
     funcao="Scout de Ritmo e Mobilidade",
-    identidade="Movimentação constante, posicionamento e ataques fluidos — difícil de fixar.",
+    identidade="Movimentação constante, posicionamento e ataques fluidos — difícil de fixar. "
+                "Passiva (Fluxo Cortante): sempre que o usuário tiver se movido pelo menos 10 ft "
+                "no turno antes de um ataque do Leque, esse ataque causa +1d4 de dano extra "
+                "(revisão de balanceamento).",
     skills=[
         dict(nivel=1, nome="Corte de Seda", lb=False, corpo="Ataque corpo a corpo usando Sabedoria. Causa **1d6 + SAB** e permite mover-se 5 ft (antes ou depois) sem provocar Ataque de Oportunidade."),
         dict(nivel=1, nome="Dança do Leque", lb=False, corpo="Ataque que combina movimento de até 10 ft com um golpe ao longo do trajeto, causando **1d6 + SAB** a um inimigo em qualquer ponto do caminho."),
-        dict(nivel=2, nome="Rajada Cortante", lb=False, corpo="Ataque em leque contra até 2 inimigos adjacentes entre si, cada um sofrendo **1d6 + SAB**."),
+        dict(nivel=2, nome="Rajada Cortante", lb=False, corpo="Ataque em leque contra até 2 inimigos adjacentes entre si, cada um sofrendo **1d8 + SAB**."),
         dict(nivel=5, nome="Mil Lâminas de Vento", lb=True, corpo="1/Descanso Longo. O usuário se move até a velocidade em linha reta atacando todos os inimigos no caminho, cada um sofrendo **2d6 + SAB**."),
         dict(nivel=6, nome="Vento Reverso", lb=False, corpo="Reação: quando um inimigo se move pra perto do usuário, reposiciona-se 10 ft mantendo distância e ataca de relance, causando metade do dano normal."),
-        dict(nivel=10, nome="Dança das Correntes", lb=False, corpo="Cada movimento de pelo menos 10 ft antes de um ataque do Leque nesta cena concede +1 no teste de ataque (acumula até +3)."),
+        dict(nivel=10, nome="Dança das Correntes", lb=False, corpo="Cada movimento de pelo menos 10 ft antes de um ataque do Leque nesta cena concede +1 no teste de ataque (acumula até +3). No estágio máximo (+3), os ataques do Leque também causam +1d4 de dano extra, além do bônus de Fluxo Cortante."),
         dict(nivel=14, nome="Lâmina Tempestuosa", lb=False, corpo="A Rajada Cortante passa a atingir até 4 inimigos em vez de 2."),
-        dict(nivel=18, nome="Festival das Cem Lâminas", lb=False, corpo="1/Descanso Longo. Por 1 minuto, o usuário pode se mover entre cada ataque de uma ação com múltiplos ataques, sem gastar deslocamento extra."),
+        dict(nivel=18, nome="Festival das Cem Lâminas", lb=False, corpo="1/Descanso Longo. Por 1 minuto, o usuário pode se mover entre cada ataque de uma ação com múltiplos ataques, sem gastar deslocamento extra, e o primeiro ataque de cada ação nesse período causa dano dobrado."),
     ]))
 
 ARMAS.append(dict(nome="Adagas de Arremesso", cat="Scouts", attr="Destreza", dano="perfurante",
