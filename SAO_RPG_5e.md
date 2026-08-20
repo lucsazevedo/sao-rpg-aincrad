@@ -2127,9 +2127,79 @@ Ações Lendárias / Fases (só Chefes)
 
 ---
 
-# 75. RESUMO — SAO RPG 5e COMO SISTEMA FECHADO
+# 75. AÇÕES DE EQUIPE (OSS — OUTSIDE SYSTEM SKILLS)
 
-Com as Seções 66-74, o `SAO_RPG_5e.md` deixa de ser só "armas + profissões" e passa a cobrir o núcleo inteiro de regra necessário pra jogar: atributos, perícias, resistências, PV/CA/iniciativa, condições, XP/nível, descanso, equipamentos/cristais e stat block de monstro/boss — tudo compatível com d20 + modificador + proficiência.
+Termos canônicos do próprio anime, adaptados como ações de bônus disponíveis a qualquer personagem (não dependem de arma nem profissão):
+
+### Troca (`<<Switch>>`)
+Ação bônus: concede vantagem no próximo ataque de um aliado a até 30 ft. Usada como ação (em vez de bônus): mesmo efeito, e o alvo escolhido fica com desvantagem em ataques contra você até o fim do turno.
+
+### Provocar (`<<Taunt>>`)
+Ação bônus, só pode ser usada logo depois de uma Troca a seu favor: se o aliado que recebeu a Troca acertar o ataque, o inimigo atacado passa a mirar nesse aliado nos próximos ataques (até 1 minuto, até o aliado cair, ou até algo encerrar o efeito).
+
+### Ajudar (`<<Help>>`)
+Ação bônus: mesma função da ação Ajudar padrão de D&D, num aliado a até 30 ft — mas só em testes que não sejam de ataque (arrastar alguém pra fora de perigo, forçar uma porta junto, etc.; a critério do Mestre).
+
+Usar um Cristal de cura ou antídoto em si mesmo custa uma ação bônus; usar em outra pessoa custa uma ação inteira.
+
+---
+
+# 76. CORES DE CURSOR E PLAYER KILLERS
+
+Sistema canônico de Aincrad, usado tanto em cena quanto como mecânica de PvP:
+
+| Cor do cursor | Significado |
+|---|---|
+| Verde | Jogador ou NPC em boa conduta |
+| Laranja | Player Killer (atacou outro jogador fora de duelo/arena) |
+| Amarelo | Monstro inativo/neutro, alguns NPCs, criaturas domadas |
+| Vermelho | Monstro ativo — o tom (rosa claro → vermelho puro → magenta → carmesim escuro → preto) indica o quanto ele é mais fraco ou mais forte que o personagem |
+
+Um jogador que vira **Laranja** (Player Killer) não pode entrar em zonas seguras — guardas NPC (poder muito acima de qualquer jogador) atacam de forma esmagadora quem tentar. Isso é a única barreira dura contra PK dentro do próprio sistema de jogo, sem precisar de regra de mesa extra.
+
+---
+
+# 77. ECONOMIA DE USO DAS SWORD SKILLS
+
+Fica registrado aqui, de forma explícita, como as Sword Skills descritas nas Seções 55-59 se encaixam na estrutura de ação de D&D:
+
+- A maioria das Sword Skills **substitui o Golpe Básico dentro da própria ação de Ataque** — não gasta recurso à parte, não tem limite diário. É a mesma ação, só que com a Skill em vez do dano padrão da arma.
+- Skills marcadas **"Reação"** seguem a regra padrão de D&D (1 por rodada, fora do seu turno).
+- Skills marcadas **"1/Descanso Curto"** ou **"1/Descanso Longo"** (todo Limit Break é 1/Descanso Longo) recarregam conforme a Seção 72.
+- Um personagem só pode usar **uma Sword Skill por turno** (a menos que uma Skill diga explicitamente o contrário) — não empilha duas Skills de ataque na mesma ação.
+
+Flavor de mesa (opcional, não obrigatório mecanicamente): o momento antes de uma Sword Skill é o **Pré-Movimento** (o corpo "trava" no gesto de abertura, reconhecível por quem já viu a Skill antes) e o momento logo depois é o **Pós-Movimento** (breve janela de vulnerabilidade — o Mestre pode narrar isso mesmo sem penalidade mecânica extra, já que Skills mais fortes já vêm com seu próprio custo/risco embutido na descrição).
+
+---
+
+# 78. ANDARES CONHECIDOS DE AINCRAD (REFERÊNCIA CANÔNICA)
+
+Lista de referência pra manter os andares futuros ancorados no anime/light novel (não inventar nome de cidade onde o cânone já definiu um). Cruzar sempre com `docs/fontes.md` (SAO Fandom Wiki) antes de nomear um andar novo.
+
+| Andar | Local(is) conhecido(s) | Status no projeto |
+|---:|---|---|
+| 1 | Cidade do Início (Town of Beginnings), Monumento da Vida, Palácio de Ferro Negro, Tolbana, Vila Horunka, Vila Medai | `cidades/cidade_do_inicio.md` — feito |
+| 2 | Urbus, Vila Marome, Vila Taran | `cidades/urbus.md` — feito |
+| 3 | Floresta das Brumas Errantes, Dessel, Praça do Portal de Zumfut | pendente |
+| 4 | Rovia, Floresta do Urso, Castelo Yofel, Vila Usco, Lago Caldera | pendente |
+| 5 | Karluin, Mananarena, Shiyaya | pendente |
+| 7 | Arena de Monstros | pendente |
+| 8 | Vila Frieven | pendente |
+| 9 | Castelo da Rainha Elfa Negra | pendente |
+| 10 | Castelo das Mil Serpentes | pendente |
+| 11 | Taft | pendente |
+| 19 | Ralberg, Colina da Cruz | pendente |
+| 20 | Floresta do Sol | pendente |
+| 22 | Vila Coral | pendente |
+| ... | (demais andares até o 100 — ver `Sword Art Online 5e Conversion v1.0.pdf`, seção "Known Floors", ou a SAO Fandom Wiki, antes de inventar) | pendente |
+
+A campanha atual está desenvolvendo os andares 1 e 2 (`docs/historia_campanha.md`, `docs/historia_campanha_andar2.md`) — mantidos coerentes com essa lista.
+
+---
+
+# 79. RESUMO — SAO RPG 5e COMO SISTEMA FECHADO
+
+Com as Seções 66-78, o `SAO_RPG_5e.md` deixa de ser só "armas + profissões" e passa a cobrir o núcleo inteiro de regra necessário pra jogar: atributos, perícias, resistências, PV/CA/iniciativa, condições, XP/nível, descanso, equipamentos/cristais, stat block de monstro/boss, ações de equipe, cursor/Player Killer e economia de uso das Sword Skills — tudo compatível com d20 + modificador + proficiência.
 
 Este documento passa a ser a **fonte única de regra do sistema**, substituindo `docs/guia_sistema_aincrad.md` e `docs/regras_nucleares_campanha.md` (que ficam como redirect histórico — ver Seção 2 desses arquivos).
 
