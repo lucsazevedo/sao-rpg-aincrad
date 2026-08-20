@@ -1,3 +1,62 @@
+## Fechamento da rodada de migração pra D&D 5e — banco + app (continuação)
+
+Continuação direta do registro abaixo ("migração do sistema pra D&D 5e").
+Depois do rulebook e do conteúdo, a rodada seguiu pro banco de produção e
+pro app Vue:
+
+**Banco (aplicado e testado ao vivo, ver commits
+`4755feb`/`schema_migracao_dnd5e_cadastro.sql`/`schema_migracao_dnd5e_chefe.sql`)**:
+`personagens` ganhou `atributos_dnd`/`nivel`/`ca`/`bonus_proficiencia`
+(migrados a partir do `atributos` PBTA existente); `monstros` ganhou
+`ca`/`pv`/`bonus_ataque`/`cd_resistencia` (fórmula da Seção 74); tabela nova
+`profissoes_atributo` (lookup profissão→atributo, cobre nomes pré-fusão
+ainda em uso no dado real); 3 funções auxiliares novas
+(`bonus_proficiencia_por_nivel`, `cd_por_nivel_conteudo`,
+`mod_atributo_personagem`). **6 RPCs reescritas** pra d20+mod+proficiência
+vs. CD (mantendo resultado ternário sucesso_total/parcial/falha e toda a
+lógica de negócio ao redor): `combater_monstro`, `atacar_chefe`,
+`aceitar_e_resolver_missao`, `craftar_item`, `craftar_ferramenta`,
+`autocadastrar_personagem`; `chance_combate_preview` recalculada.
+Testado ao vivo via SET LOCAL ROLE + JWT simulado (Shen, arquivada) com
+rollback — matemática conferida manualmente, RLS intacta, lógica de
+negócio (drops/materiais/XP/ferramentas/contribuintes de chefe) preservada
+idêntica.
+
+**App Vue**: `Cadastro.vue` (distribuição 6/8/8/10/10/12), `Ficha.vue` e
+`FichaPublica.vue` (Nível/CA/PV/Bônus de Proficiência + atributos D&D),
+`Combate.vue` (mostra d20/CD/total, `chancePreview` client-side reescrita
+pra mesma matemática da RPC), `Mestre.vue` (editor de ficha do jogador com
+os 6 atributos D&D + Nível/CA/PV editáveis; lista de Condições trocada
+pras 14 padrão de D&D), `Tarefas.vue` (prévia de chance lê `atributos_dnd`
+— só a exibição antes do clique, resultado real já vinha do servidor).
+`npm run build` limpo depois de cada mudança.
+
+**Não fechado nesta rodada — pendências reais, não esquecimento**:
+- `moves_arma`/`moves_profissao` (tabelas do banco com o catálogo antigo
+  de golpes PBTA, formato `dez_mais`/`sete_nove`/`seis_menos`) não foram
+  migradas pro conteúdo novo de Sword Skills (`SAO_RPG_5e.md`, Seções
+  55-59) — `Ficha.vue` ainda lê esse catálogo antigo pra exibir "Sword
+  Skills" (headers só relabelados, dado por baixo continua velho).
+  Precisa de um script de importação novo (19 armas × 7 Skills + Limit
+  Break + 15 profissões × habilidades por nível) pra popular essas
+  tabelas com o conteúdo já escrito no rulebook.
+- `Profissoes.vue` (craft) e `Equipamentos.vue` não foram tocados nesta
+  rodada — não há leitura de atributo PBTA neles diretamente (a RPC já
+  cuida da mecânica), mas nenhuma tela nova de "teste de perícia d20" foi
+  construída; useiam as telas existentes sem mudança visual.
+  `admin_schema.js`/`tabelasAdmin.js` (Compêndio genérico do mestre) não
+  precisaram de mudança — não há coluna `personagens` cadastrada lá pra
+  editar, e os campos `atributos`/`corpo` que aparecem em `npcs`/outras
+  tabelas são JSON genérico ou corpo de texto, não travam formato.
+- `Tarefas.vue`: a curva de probabilidade visual (`countSomas2d6`, cálculo
+  client-side da % mostrada antes de aceitar missão) não foi reescrita pra
+  d20 — só as chaves de atributo foram atualizadas. Resultado real da
+  missão (servidor) já está 100% em d20; é só o número de prévia que ainda
+  usa uma curva aproximada antiga.
+- 72 arquivos de conteúdo narrativo (`cenas/`, `docs/receitas_*.md`,
+  `docs/servicos_*.md`) ainda citam `2d6`/"7-9"/"6-" dentro de texto corrido
+  — registrado na entrada anterior, não repetido aqui.
+
 ## Novo nesta rodada — migração do sistema pra D&D 5e (rulebook + conteúdo + banco + app)
 
 Pedido do usuário: "quero migrar o sistema inteiro para o d&d 5e" — trabalho
