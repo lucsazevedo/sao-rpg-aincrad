@@ -1,7 +1,7 @@
 ---
 nome: Manopla Reforçada de Metal
 tipo: Manopla
-atributo_principal: Corpo
+atributo_principal: Força
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjada por um ex-lutador das artes marciais mistas, essa manopla foi criada par
 ## Como obter
 
 Crafting, drop de monstros comuns no andar 1
+
+<!-- convertido-dnd5e -->

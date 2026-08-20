@@ -7,11 +7,12 @@ profissao: Cartógrafo
 arma: Besta
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 2
-  espirito: 0
-  tecnica: -1
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 14
+  sabedoria: 10
+  carisma: 10
 tags: [cidade_inicio, cartografia, norte, labirinto]
 imagem:
 canonico: nao
@@ -73,3 +74,5 @@ pergunte qual detalhe o grupo quer ser lembrado por ter confirmado.
 ## Gancho visual / de transmissão
 
 Ela muda a cor da tinta no meio da frase quando percebe que alguém está omitindo algo.
+
+<!-- convertido-dnd5e -->

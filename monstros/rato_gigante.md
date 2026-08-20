@@ -9,8 +9,12 @@ regioes: [esgoto_cidade_inicio, ruinas_kobold, porao_taverna, necrópole_voss]
 nivel_recomendado: "1-2"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
+ca: 10
+pv: 14
+bonus_ataque: +2
+cd_resistencia: 10
 abertura: a barriga, exposta quando ele para de correr para farejar um pedaço de comida
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [doença, veneno leve]
 vulnerabilidades: [tudo que é golpe forte, isolado, luz]
 imagem: ../imagens/monstro_rato_gigante.png
@@ -67,6 +71,20 @@ Rato Gigante é o primeiro monstro que NINGUÉM tem medo. É também o primeiro 
 | Dente Pequeno | Comum | 1-4 | 60% | Joalheiro, Alquimista (pó de dente, amuletos) |
 | Carne Simples | Comum | 1 | 40% | Cozinheiro (refeições baratas) |
 | Col | — | 5-18 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 10
+- **PV:** 14
+- **Bônus de Ataque:** +2
+- **CD de Resistência:** 10
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

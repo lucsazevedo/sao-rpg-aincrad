@@ -1,7 +1,7 @@
 ---
 nome: Katana Equilibrada
 tipo: Katana
-atributo_principal: Espirito
+atributo_principal: Sabedoria
 raridade: Incomum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Esta katana foi forjada por Kazuo Tanaka, um renomado ferreiro da Cidade do Iní
 ## Como obter
 
 Crafting com o NPC Ferreiro Kazuo Tanaka na Cidade do Início
+
+<!-- convertido-dnd5e -->

@@ -6,6 +6,13 @@ uso: mestre
 
 # Chance de sucesso por Nível
 
+> **Superado pela conversão pra D&D 5e.** A "chance de sucesso por Nível"
+> (degrau fixo sobre 2d6) virou o bônus de ataque/CD padrão de D&D — d20 +
+> modificador de atributo + bônus de proficiência (Seções 28, 68, 71 do
+> `SAO_RPG_5e.md`). A decisão de não usar "Poder por equipamento" continua
+> válida (equipamento dá bônus fixo por raridade, Seção 73, não um segundo
+> sistema de risco paralelo). Texto abaixo mantido como histórico.
+
 ## Decisão — Poder por equipamento SAI do jogo
 
 A ideia original deste item (Poder = soma de pontos de cada equipamento,

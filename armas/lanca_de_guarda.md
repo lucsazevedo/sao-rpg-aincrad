@@ -1,7 +1,7 @@
 ---
 nome: Lança de Guarda
 tipo: Lanca
-atributo_principal: Tecnica
+atributo_principal: Destreza
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjada pelos artesãos da Cidade do Início logo após o anúncio de que não h
 ## Como obter
 
 Drop de monstros fracos nos arredores da Cidade do Início ou crafting básico.
+
+<!-- convertido-dnd5e -->

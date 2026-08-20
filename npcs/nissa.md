@@ -7,11 +7,12 @@ profissao: Bibliotecário
 arma: Chicote
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 2
-  espirito: 1
-  tecnica: -1
+  forca: 8
+  destreza: 8
+  constituicao: 8
+  inteligencia: 14
+  sabedoria: 12
+  carisma: 12
 tags: [informacao, misterio_andar2]
 imagem: ../imagens/npc_nissa.png
 canonico: nao
@@ -77,3 +78,5 @@ causa e efeito do andar inteiro.
 ## Combate (se aplicável)
 
 Não luta. Chicote no cinto, nunca usado, e ela admite que é decoração.
+
+<!-- convertido-dnd5e -->

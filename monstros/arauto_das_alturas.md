@@ -9,8 +9,12 @@ regioes: [montanhas, penhascos_vento]
 nivel_recomendado: "7-8"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: golpe nas asas em pleno voo
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [vento]
 vulnerabilidades: []
 imagem: ../imagens/monstro_arauto_das_alturas.png
@@ -57,6 +61,20 @@ A terceira volta. Não há outra advertência e não há necessidade de outra �
 | Garra Afiada | Incomum | 1-2 | 30% | Ferreiro |
 | Pena-Mestra | Raro | 1 | 12% | Item Único, doma de outro Arauto |
 | Col | — | 380-520 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

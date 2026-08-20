@@ -7,11 +7,12 @@ profissao: Alquimista
 arma: nenhuma
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 1
-  espirito: 0
-  tecnica: 0
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [inspirado_em_integral_factor, quest_giver, coleta]
 imagem: ../imagens/npc_mulher_aflita.png
 canonico: nao
@@ -75,3 +76,5 @@ exposição de mundo e pista sobre o custo humano dos primeiros dias.
 ## Combate (se aplicável)
 
 -
+
+<!-- convertido-dnd5e -->

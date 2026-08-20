@@ -9,8 +9,12 @@ regioes: [labirinto_entrada]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 7
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: derrubar o estandarte antes de encarar o portador
-atributo_fraqueza: Espírito
+atributo_fraqueza: Sabedoria
 resistencias: [impacto, intimidação]
 vulnerabilidades: [ataque ao mastro, flanco esquerdo]
 imagem: ../imagens/monstro_porta_estandarte_de_illfang.png
@@ -86,6 +90,20 @@ têm hierarquia, ordens e alguém no topo dando as ordens.
 | Pano do Estandarte | Incomum | 1 | 60% | Corretores de Tolbana — ver Notas |
 | Machado Curto de Kobold | Comum | 1 | 35% | Arma Comum, sucata de Ferreiro |
 | Col | — | 700-1100 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

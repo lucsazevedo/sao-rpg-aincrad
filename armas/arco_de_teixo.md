@@ -1,7 +1,7 @@
 ---
 nome: Arco de Teixo
 tipo: Arco e Flecha
-atributo_principal: Reflexo
+atributo_principal: Destreza
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Este arco é forjado por artesãos locais que utilizam a resistente madeira de t
 ## Como obter
 
 Disponível por crafting com madeira de teixo ou encontrada em lojas de equipamentos básicos na Cidade do Início.
+
+<!-- convertido-dnd5e -->

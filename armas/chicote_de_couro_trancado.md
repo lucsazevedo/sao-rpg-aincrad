@@ -1,7 +1,7 @@
 ---
 nome: Chicote de Couro Trançado
 tipo: Chicote
-atributo_principal: Conhecimento
+atributo_principal: Inteligência
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Confeccionado pelo excêntrico ferreiro Zoltan em Tolbana. É conhecido por sua 
 ## Como obter
 
 Vendido pelo NPC Zoltan no mercado de Tolbana
+
+<!-- convertido-dnd5e -->

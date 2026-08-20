@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Espada Longa
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: -1
-  espirito: -1
-  tecnica: 0
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 8
+  sabedoria: 8
+  carisma: 8
 tags: [emocional, quest_chave, labirinto]
 imagem: ../imagens/npc_marco.png
 canonico: nao
@@ -83,3 +84,5 @@ opções são legítimas e todas custam.
 
 Se entrar no Labirinto, luta bem — Corpo 1, Espada Longa, e nenhuma vontade
 de recuar. É exatamente por isso que é perigoso.
+
+<!-- convertido-dnd5e -->

@@ -9,8 +9,12 @@ regioes: [campos_oeste, campos_leste, floresta_horunka]
 nivel_recomendado: "1-2"
 nivel_ameaca: fraco
 golpes_para_derrotar: 1 (2 se errar a nuca)
+ca: 10
+pv: 14
+bonus_ataque: +2
+cd_resistencia: 10
 abertura: golpe preciso na nuca
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: []
 vulnerabilidades: [ataque na nuca — sucesso automático]
 imagem: ../imagens/monstro_frenzy_boar.png
@@ -67,6 +71,20 @@ ler a cena.
 | Pelagem Azulada | Comum | 1-2 | 15% | Costureiro |
 | Carne Crua | Comum | 1-2 | 45% | Cozinheiro, doma de Domador |
 | Col | — | 25-40 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 10
+- **PV:** 14
+- **Bônus de Ataque:** +2
+- **CD de Resistência:** 10
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

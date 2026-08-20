@@ -7,11 +7,12 @@ profissao: Caçador
 arma: Besta
 guilda: 
 atributos:
-  corpo: 0
-  reflexo: 1
-  conhecimento: 1
-  espirito: 0
-  tecnica: 0
+  forca: 10
+  destreza: 12
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [pescador, vila de brenmoor, aliado, informante local]
 imagem: ../imagens/npc_pescador_veterano.png
 ---
@@ -57,3 +58,5 @@ disponível na cena.
 Usa a besta com competência moderada se necessário, mas prioriza fuga pra
 água — nada bem e conhece passagens que a maioria dos invasores não
 percebe.
+
+<!-- convertido-dnd5e -->

@@ -9,8 +9,12 @@ regioes: [sala_chefe, labirinto_entrada]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: garganta (único ponto sem armadura)
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [golpes no corpo/armadura — dano bem reduzido]
 vulnerabilidades: [golpe preciso na garganta — ignora a resistência da armadura]
 imagem: ../imagens/monstro_ruin_kobold_sentinel.png
@@ -74,6 +78,20 @@ coordenação.
 | Alabarda de Sentinel | Incomum | 1 | 25% | Arma Comum, sucata de Ferreiro |
 | Placa de Peito Inteira | Raro | 1 | 10% | Ferreiro, base de armadura Rara |
 | Col | — | 55-90 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

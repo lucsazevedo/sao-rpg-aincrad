@@ -9,8 +9,12 @@ regioes: [labirinto_entrada, sala_chefe]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
+ca: 11
+pv: 26
+bonus_ataque: +3
+cd_resistencia: 11
 abertura: ""
-atributo_fraqueza: Técnica
+atributo_fraqueza: Destreza
 resistencias: []
 vulnerabilidades: [sem armadura — qualquer golpe direto é efetivo]
 imagem: ../imagens/monstro_ruin_kobold_trooper.png
@@ -56,6 +60,20 @@ Os passos casados. Dois pares de pés no mesmo ritmo, e o ritmo não muda nem qu
 | Machado Rústico | Comum | 1 | 15% | Sucata de Ferreiro |
 | Ração de Ronda | Incomum | 1 | 25% | Cozinheiro — e prova de que eles comem |
 | Col | — | 18-30 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 11
+- **PV:** 26
+- **Bônus de Ataque:** +3
+- **CD de Resistência:** 11
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

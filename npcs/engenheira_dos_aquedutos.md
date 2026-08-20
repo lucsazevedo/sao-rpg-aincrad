@@ -7,11 +7,12 @@ profissao: Ferreiro
 arma: Martelo
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 0
-  conhecimento: 2
-  espirito: 0
-  tecnica: 1
+  forca: 10
+  destreza: 12
+  constituicao: 10
+  inteligencia: 14
+  sabedoria: 10
+  carisma: 10
 tags: [urbus, andar2, aqueduto, infraestrutura]
 imagem: ../imagens/npc_engenheira_dos_aquedutos.png
 canonico: nao
@@ -94,3 +95,5 @@ está confortável em admitir.
 
 Não combatente direta — acompanha expedições até a entrada das galerias,
 mas não entra em combate.
+
+<!-- convertido-dnd5e -->

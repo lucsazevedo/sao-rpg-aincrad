@@ -9,8 +9,12 @@ regioes: [caverna_ecos]
 nivel_recomendado: "8-9"
 nivel_ameaca: elite
 golpes_para_derrotar: 9
+ca: 15
+pv: 80
+bonus_ataque: +5
+cd_resistencia: 14
 abertura: golpe no ventre exposto quando se ergue
-atributo_fraqueza: Espírito
+atributo_fraqueza: Sabedoria
 resistencias: [escuridão, impacto]
 vulnerabilidades: [luz intensa]
 imagem: ../imagens/monstro_guardiao_de_mournhall.png
@@ -76,6 +80,20 @@ Ele para de respirar. O ruído grave que enchia a câmara some, e o silêncio é
 Ação de Ofício de outra profissão pra existir, de propósito: o Guardião só
 morre uma vez, e o grupo decide junto, na hora, se aquele núcleo vira
 `Carne do Monstro Supremo` (Cozinheiro) ou `Chamado do Guardião` (Coveiro).
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 15
+- **PV:** 80
+- **Bônus de Ataque:** +5
+- **CD de Resistência:** 14
+- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

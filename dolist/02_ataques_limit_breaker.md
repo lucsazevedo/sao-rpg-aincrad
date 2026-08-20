@@ -6,6 +6,15 @@ uso: mestre
 
 # 3 ataques por arma (2 normais + Limit Breaker)
 
+> **Superado pela conversão pra D&D 5e.** A ideia de "3 golpes nomeados"
+> foi substituída pela progressão completa de Sword Skills — **7 Skills +
+> Limit Break por arma**, já fechada pra todas as 19 armas nas Seções 55-59
+> do `SAO_RPG_5e.md` (incluindo a Corrente com Peso, que não tinha Skills
+> fechadas antes). O mecanismo de contador do Limit Breaker (construído
+> numa rodada anterior, ver `docs/pendencias.md`) precisa ser revisado pra
+> disparar por Descanso Longo (Seção 72) em vez de contador acumulado — Fase 3
+> da migração (banco/app).
+
 ## A ideia
 
 Cada uma das 23 armas ganha **3 golpes nomeados** em vez de 1 Move de

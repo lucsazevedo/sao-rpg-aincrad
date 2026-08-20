@@ -7,11 +7,12 @@ profissao: Bibliotecário
 arma: 
 guilda: 
 atributos:
-  corpo: -2
-  reflexo: -1
-  conhecimento: 2
-  espirito: 0
-  tecnica: 0
+  forca: 6
+  destreza: 10
+  constituicao: 6
+  inteligencia: 14
+  sabedoria: 10
+  carisma: 10
 tags: [bibliotecário, torre de aldric, teorias, excêntrico]
 imagem: ../imagens/npc_estudioso_obcecado.png
 ---
@@ -60,3 +61,5 @@ pro Bibliotecário do grupo pesquisar antes de um combate ou investigação.
 
 Evita qualquer confronto — corpo frágil, sem treino de combate. Sua
 utilidade é inteiramente de conhecimento, não de ação direta.
+
+<!-- convertido-dnd5e -->

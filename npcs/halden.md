@@ -7,11 +7,12 @@ profissao: Cozinheiro
 arma: Martelo
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: -1
-  conhecimento: 0
-  espirito: 0
-  tecnica: 0
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 10
+  sabedoria: 10
+  carisma: 10
 tags: [pousada, interacao_de_chegada]
 imagem: ../imagens/npc_halden.png
 canonico: nao
@@ -65,3 +66,5 @@ Sinceridade relaxa ele; hostilidade custa caro por sessões.
 ## Combate (se aplicável)
 
 Corpo 1, martelo atrás do balcão. Nunca precisou. Um dia vai precisar.
+
+<!-- convertido-dnd5e -->

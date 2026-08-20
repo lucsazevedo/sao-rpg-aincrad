@@ -7,11 +7,12 @@ profissao: Comerciante
 arma: Adagas de Arremesso
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 1
-  conhecimento: 1
-  espirito: 0
-  tecnica: -1
+  forca: 10
+  destreza: 12
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [mercado_negro, contrabando, reputacao]
 imagem: ../imagens/npc_contato_sem_nome.png
 canonico: nao
@@ -81,3 +82,5 @@ jogadores mortos, horários de respawn e localização de NPCs — dados que,
 somados aos de outros compradores, formam o padrão investigado em
 `EP.47 — A Lista dos Quarenta`. Ele mesmo não sabe (ou não admite saber)
 pra que servem os dados — só que pagam bem.
+
+<!-- convertido-dnd5e -->

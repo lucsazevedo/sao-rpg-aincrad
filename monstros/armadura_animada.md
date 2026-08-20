@@ -9,8 +9,12 @@ regioes: [labirinto_entrada, castelo_ferro_negro, sala_chefe]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 5
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: golpe na junta interna, sem placa
-atributo_fraqueza: Conhecimento
+atributo_fraqueza: Inteligência
 resistencias: [corte, perfuração]
 vulnerabilidades: [impacto]
 imagem: ../imagens/monstro_armadura_animada.png
@@ -57,6 +61,20 @@ Um chiado curto de metal contra metal, meio segundo antes — é o peso mudando 
 | Espada Enferrujada | Comum | 1 | 20% | Sucata de Ferreiro |
 | Núcleo Sem Função | Raro | 1 | 10% | Bibliotecário, Joalheiro |
 | Col | — | 200-320 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

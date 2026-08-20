@@ -7,11 +7,12 @@ profissao: Coveiro
 arma: Bastão
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 1
-  espirito: 2
-  tecnica: -1
+  forca: 8
+  destreza: 8
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 14
+  carisma: 14
 tags: [igreja, memorial, luto]
 imagem: ../imagens/npc_irmao_anselm.png
 canonico: nao
@@ -67,3 +68,5 @@ nomeou nada. O apelido "Irmão" foi dado por terceiros e ele nunca corrigiu.
 ## Combate (se aplicável)
 
 Não luta e não sai da cidade.
+
+<!-- convertido-dnd5e -->

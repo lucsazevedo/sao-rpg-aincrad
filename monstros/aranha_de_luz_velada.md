@@ -9,8 +9,12 @@ regioes: []
 nivel_recomendado: "3-4"
 nivel_ameaca: forte
 golpes_para_derrotar: 4
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: cabeça exposta e teia incendiada
-atributo_fraqueza: Conhecimento
+atributo_fraqueza: Inteligência
 resistencias: [veneno]
 vulnerabilidades: [luz intensa, fogo, ataques à cabeça]
 imagem: ../imagens/monstro_aranha_de_luz_velada.png
@@ -66,6 +70,20 @@ A luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A
 | Seda Velada | Incomum | 1 | 45% | Costureiro, Alquimista |
 | Pata Translúcida | Comum | 1 | 60% | Arcanista, Armadura leve |
 | Col | — | 80-120 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

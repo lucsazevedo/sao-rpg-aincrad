@@ -7,11 +7,12 @@ profissao:
 arma: Pá
 guilda: 
 atributos:
-  corpo: 1
-  reflexo: -1
-  conhecimento: 0
-  espirito: 1
-  tecnica: 0
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 10
+  sabedoria: 12
+  carisma: 12
 tags: [fazendeiro, vale de molwyn, colheita, aliado]
 imagem: ../imagens/npc_fazendeiro_local.png
 ---
@@ -59,3 +60,5 @@ preparada, boa quest de baixo risco entre cadeias mais pesadas.
 
 Luta se a própria colheita for atacada na frente dele, com a pá como arma
 improvisada — sem treino formal, mas com determinação real.
+
+<!-- convertido-dnd5e -->

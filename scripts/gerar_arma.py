@@ -26,28 +26,31 @@ from ollama_client import (
 
 ARMAS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "armas")
 
-# Atributo principal de cada uma das 19 armas (docs/guia_sistema_aincrad.md) --
+# Atributo principal de cada uma das 19 armas (SAO_RPG_5e.md, Secao 7) --
 # fixo aqui pra corrigir determinaticamente qualquer erro do LLM, em vez de
 # confiar nele pra cruzar a tabela sozinho toda vez.
+# Atualizado na conversao pra D&D 5e (era Corpo/Reflexo/Conhecimento/
+# Espirito/Tecnica -- ver Secao 66 do SAO_RPG_5e.md pra regra de conversao).
 ATRIBUTO_POR_ARMA = {
-    "arco e flecha": "Reflexo",
-    "adagas": "Tecnica",
-    "adagas de arremesso": "Reflexo",
-    "besta": "Reflexo",
-    "chakrams": "Tecnica",
-    "chicote": "Conhecimento",
-    "escudo e espada": "Corpo",
-    "espada longa": "Corpo",
-    "foice": "Tecnica",
-    "katana": "Espirito",
-    "lanca": "Tecnica",
-    "machado": "Corpo",
-    "martelo": "Corpo",
-    "pa": "Conhecimento",
-    "rapieira": "Reflexo",
-    "bastao": "Espirito",
-    "corrente com peso": "Tecnica",
-    "manopla": "Corpo",
+    "arco e flecha": "Destreza",
+    "adagas": "Destreza",
+    "adagas de arremesso": "Destreza",
+    "besta": "Destreza",
+    "chakrams": "Destreza",
+    "chicote": "Inteligencia",
+    "escudo e espada": "Forca",
+    "espada longa": "Forca",
+    "foice": "Sabedoria",
+    "katana": "Sabedoria",
+    "lanca": "Destreza",
+    "machado": "Forca",
+    "martelo": "Forca",
+    "pa": "Forca",
+    "rapieira": "Destreza",
+    "bastao": "Sabedoria",
+    "corrente com peso": "Destreza",
+    "manopla": "Forca",
+    "leque": "Sabedoria",
 }
 
 

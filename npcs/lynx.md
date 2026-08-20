@@ -7,11 +7,12 @@ profissao: Comerciante
 arma: nenhuma
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 0
-  tecnica: 0
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [canonico, quest_giver, loja]
 imagem: ../imagens/npc_lynx_comerciante_armaduras.png
 canonico: sim
@@ -78,3 +79,5 @@ qualquer romantização do perigo com uma frase curta.
 ## Combate (se aplicável)
 
 -
+
+<!-- convertido-dnd5e -->

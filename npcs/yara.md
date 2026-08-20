@@ -7,11 +7,12 @@ profissao: Caçador
 arma: Besta
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 2
-  conhecimento: 0
-  espirito: -1
-  tecnica: 0
+  forca: 10
+  destreza: 14
+  constituicao: 10
+  inteligencia: 10
+  sabedoria: 8
+  carisma: 8
 tags: [loja, caca, conjunto]
 imagem: ../imagens/npc_yara.png
 canonico: nao
@@ -65,3 +66,5 @@ perdoa.
 ## Combate (se aplicável)
 
 Reflexo 2 com Besta. Em campo aberto, vale por dois personagens.
+
+<!-- convertido-dnd5e -->

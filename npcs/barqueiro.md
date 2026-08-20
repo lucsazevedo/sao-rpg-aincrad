@@ -7,11 +7,12 @@ profissao:
 arma: Remo (não-combate)
 guilda: 
 atributos:
-  corpo: 0
-  reflexo: 0
-  conhecimento: 1
-  espirito: 1
-  tecnica: 0
+  forca: 10
+  destreza: 10
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [barqueiro, rio, serviço, observador]
 imagem: ../imagens/npc_barqueiro.png
 ---
@@ -84,3 +85,5 @@ convencido) que o redemoinho não é natural.
 Não combatente. Em perigo, usa a balsa pra fugir rio abaixo — conhece
 todas as correntezas seguras o suficiente pra escapar de quase qualquer
 coisa que não voe.
+
+<!-- convertido-dnd5e -->

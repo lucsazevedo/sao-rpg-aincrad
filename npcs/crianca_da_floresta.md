@@ -7,11 +7,12 @@ profissao: nenhuma
 arma: nenhuma
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 1
-  conhecimento: 1
-  espirito: 1
-  tecnica: -1
+  forca: 8
+  destreza: 12
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [cardinal, misterio, arco_b, npc_infantil]
 imagem: ../imagens/npc_crianca_da_floresta.png
 canonico: nao
@@ -96,3 +97,5 @@ não só intrigar.
 
 Não luta. Se ameaçada, apenas insiste em seguir o próprio caminho — não
 foge de medo, o que por si só é estranho para uma criança NPC comum.
+
+<!-- convertido-dnd5e -->

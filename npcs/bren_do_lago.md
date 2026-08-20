@@ -7,11 +7,12 @@ profissao: Cozinheiro
 arma: Bastão
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: -1
-  conhecimento: 1
-  espirito: 1
-  tecnica: -1
+  forca: 10
+  destreza: 8
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [cidade_inicio, lago, rotina, grauvenn]
 imagem:
 canonico: nao
@@ -73,3 +74,5 @@ o lago para transformar recurso em memória e escolha, não em minigame.
 ## Gancho visual / de transmissão
 
 Ele solta uma folha digital na água antes de responder perguntas difíceis.
+
+<!-- convertido-dnd5e -->

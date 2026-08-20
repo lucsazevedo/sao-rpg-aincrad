@@ -1,7 +1,7 @@
 ---
 nome: Pá Reforçada de Mineração
 tipo: Pá
-atributo_principal: Conhecimento
+atributo_principal: Força
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjada por um minerador experiente na Cidade do Início, esta pá foi projetada
 ## Como obter
 
 Vendida por um NPC minerador na Cidade do Início.
+
+<!-- convertido-dnd5e -->

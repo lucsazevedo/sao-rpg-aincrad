@@ -7,11 +7,12 @@ profissao: Costureiro
 arma: Adagas
 guilda: "Guilda de Nerds (aspirante)"
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 0
-  tecnica: 0
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [quest_giver, guilda, jovem]
 imagem: ../imagens/npc_ivy.png
 canonico: nao
@@ -71,3 +72,5 @@ não está mais em Kaldrin, e ninguém sabe dizer pra onde foi.
 ## Combate (se aplicável)
 
 Fraca em combate e sabe disso. Em campo, é útil por Conhecimento, não por dano.
+
+<!-- convertido-dnd5e -->

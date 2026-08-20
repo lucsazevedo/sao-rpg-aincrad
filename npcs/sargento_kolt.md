@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Machado
 guilda: Sindicato
 atributos:
-  corpo: 2
-  reflexo: 0
-  conhecimento: 0
-  espirito: -1
-  tecnica: -1
+  forca: 14
+  destreza: 10
+  constituicao: 14
+  inteligencia: 10
+  sabedoria: 8
+  carisma: 8
 tags: [guilda, contrato, escolta]
 imagem: ../imagens/npc_sargento_kolt.png
 canonico: nao
@@ -68,3 +69,5 @@ organizar uma fila. O apelido pegou. Ele finge não gostar.
 ## Combate (se aplicável)
 
 Corpo 2, Machado, Skill Quebrar Guarda. Segura uma linha sozinho.
+
+<!-- convertido-dnd5e -->

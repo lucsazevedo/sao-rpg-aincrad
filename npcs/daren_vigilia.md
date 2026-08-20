@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Lança
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: -1
-  espirito: 1
-  tecnica: -1
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 8
+  sabedoria: 12
+  carisma: 12
 tags: [cidade_inicio, verrun, escolta, retornos]
 imagem:
 canonico: nao
@@ -71,3 +72,5 @@ grupo: “quem vocês voltam para encontrar?”
 ## Gancho visual / de transmissão
 
 Ele risca uma linha curta na tábua para cada promessa de retorno.
+
+<!-- convertido-dnd5e -->

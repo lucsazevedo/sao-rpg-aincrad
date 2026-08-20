@@ -7,11 +7,12 @@ profissao: Lenhador
 arma: Machado
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: 1
-  conhecimento: 0
-  espirito: -1
-  tecnica: -1
+  forca: 12
+  destreza: 12
+  constituicao: 12
+  inteligencia: 10
+  sabedoria: 8
+  carisma: 8
 tags: [oficio, coleta, floresta]
 imagem: ../imagens/npc_torv_machadeiro.png
 canonico: nao
@@ -77,3 +78,5 @@ de um eixo novo e ninguém no vale sabe escolher a madeira certa.
 ## Combate (se aplicável)
 
 Corpo 1, Reflexo 1, Machado. Não procura briga e resolve rápido a que aparece.
+
+<!-- convertido-dnd5e -->

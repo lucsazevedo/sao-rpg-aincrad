@@ -7,11 +7,12 @@ profissao: Comerciante
 arma: Adagas
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 1
-  conhecimento: 1
-  espirito: 0
-  tecnica: 0
+  forca: 10
+  destreza: 12
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [urbus, andar2, mercado_negro, aqueduto]
 imagem: ../imagens/npc_contrabandista_de_agua.png
 canonico: nao
@@ -89,3 +90,5 @@ exclui — decisão de denunciar ou proteger não deveria ser óbvia.
 
 Não luta — foge e conhece as galerias de manutenção melhor que qualquer
 perseguidor, igual ao `npcs/contato_sem_nome.md` do andar 1.
+
+<!-- convertido-dnd5e -->

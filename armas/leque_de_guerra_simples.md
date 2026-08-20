@@ -1,7 +1,7 @@
 ---
 nome: Leque de Guerra Simples
 tipo: Leque
-atributo_principal: Técnica
+atributo_principal: Sabedoria
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel:
@@ -28,3 +28,5 @@ Não é um item de vitrine — é o tipo de arma que se aprende a usar por neces
 ## Como obter
 
 Disponível na loja da Cidade do Início ou fabricado por um ferreiro local.
+
+<!-- convertido-dnd5e -->

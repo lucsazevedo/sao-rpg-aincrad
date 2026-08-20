@@ -1,7 +1,7 @@
 ---
 nome: Martelo de Guerra Pesado
 tipo: Martelo
-atributo_principal: Corpo
+atributo_principal: Força
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjado nas primeiras horas após o início de Sword Art Online, este martelo fo
 ## Como obter
 
 Disponível na Cidade do Início no início do jogo, nas lojas de armas básicas.
+
+<!-- convertido-dnd5e -->

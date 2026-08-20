@@ -7,11 +7,12 @@ profissao: Ferreiro
 arma: Martelo
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: -1
-  conhecimento: -1
-  espirito: 0
-  tecnica: 2
+  forca: 12
+  destreza: 14
+  constituicao: 12
+  inteligencia: 8
+  sabedoria: 10
+  carisma: 10
 tags: [loja, crafting, quest_giver]
 imagem: ../imagens/npc_kazuo_tanaka.png
 canonico: nao
@@ -76,3 +77,5 @@ apagar ele não sabe o que faz do dia.
 ## Combate (se aplicável)
 
 Corpo 1, Técnica 2, Martelo. Não sai da forja. Se a forja for ameaçada, sai.
+
+<!-- convertido-dnd5e -->

@@ -1,7 +1,7 @@
 ---
 nome: Kit Recruta Iniciante
 tipo: Escudo e Espada
-atributo_principal: Corpo
+atributo_principal: Força
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjado nas oficinas da Guarda Real no primeiro andar, este kit é fornecido aos
 ## Como obter
 
 Dado aos recrutas que se aliam à Guarda Real no primeiro andar.
+
+<!-- convertido-dnd5e -->

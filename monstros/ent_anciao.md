@@ -9,8 +9,12 @@ regioes: [bosque_sussurrante, floresta_horunka, jardim_selvagem]
 nivel_recomendado: "7-8"
 nivel_ameaca: elite
 golpes_para_derrotar: 8
+ca: 15
+pv: 80
+bonus_ataque: +5
+cd_resistencia: 14
 abertura: a fenda de casca no tronco, aberta quando ele se inclina para golpear
-atributo_fraqueza: Conhecimento
+atributo_fraqueza: Inteligência
 resistencias: [veneno, corte superficial, impacto]
 vulnerabilidades: [fogo, corte profundo]
 imagem: ../imagens/monstro_ent_anciao.png
@@ -88,6 +92,20 @@ pontos de coleta de madeira de Horunka rendem menos por várias sessões.
 | Folha de Ent | Raro | 1-2 | 15% | Médico, Alquimista |
 | Cristal de Vida | Raro | 1 | 10% | Joalheiro, Médico |
 | Col | — | 400-650 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 15
+- **PV:** 80
+- **Bônus de Ataque:** +5
+- **CD de Resistência:** 14
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

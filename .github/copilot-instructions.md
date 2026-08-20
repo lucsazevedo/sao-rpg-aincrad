@@ -1,8 +1,10 @@
 # Instruções pra IA — SAO RPG (The Perfect Chaos)
 
-Campanha de RPG de mesa (Sword Art Online, sistema PBTA próprio, não é
-D&D) **+** um site companion (Supabase + GitHub Pages) que a mesa usa
-entre sessões. Leia isto antes de mexer em qualquer arquivo.
+Campanha de RPG de mesa (Sword Art Online, adaptado pra D&D 5e — d20,
+atributos/proficiência/CA/PV padrão, ver `SAO_RPG_5e.md`; o sistema PBTA
+original foi descontinuado, texto antigo só em `docs/guia_sistema_aincrad.md`
+como histórico) **+** um site companion (Supabase + GitHub Pages) que a
+mesa usa entre sessões. Leia isto antes de mexer em qualquer arquivo.
 
 ## As duas regras que mais importam
 
@@ -20,9 +22,11 @@ entre sessões. Leia isto antes de mexer em qualquer arquivo.
 
 ## Onde as coisas vivem
 
-- **Regra do sistema de RPG**: `docs/guia_sistema_aincrad.md` (armas,
-  profissões, atributos) + `docs/regras_nucleares_campanha.md` (moves
-  núcleo, condições, evolução, downtime).
+- **Regra do sistema de RPG**: `SAO_RPG_5e.md` (raiz do projeto) — fonte
+  única de verdade da mecânica D&D 5e adaptada (atributos, perícias,
+  armas/Sword Skills, profissões, PV/CA, condições, XP/nível, monstros).
+  `docs/guia_sistema_aincrad.md` e `docs/regras_nucleares_campanha.md` são
+  histórico do sistema PBTA descontinuado — não usar como regra vigente.
 - **Conteúdo de campanha**: uma pasta por tipo — `npcs/`, `monstros/`,
   `armas/`, `equipamentos/`, `cenas/` (quests/crônicas), `cidades/`,
   `guias/` — um arquivo por item, com frontmatter YAML no topo. Cada pasta

@@ -7,11 +7,12 @@ profissao: Cozinheiro
 arma: Foice
 guilda: "Terraço Geek"
 atributos:
-  corpo: 0
-  reflexo: 0
-  conhecimento: 1
-  espirito: 1
-  tecnica: 0
+  forca: 10
+  destreza: 10
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [comida, boato, guilda]
 imagem: ../imagens/npc_orin.png
 canonico: nao
@@ -69,3 +70,5 @@ moral. É a operação mais lucrativa de Tolbana e ninguém percebeu ainda.
 
 Foice de cozinha, Corpo 0. Se a taverna for ameaçada, ele briga muito pior do
 que qualquer um espera.
+
+<!-- convertido-dnd5e -->

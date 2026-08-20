@@ -7,11 +7,12 @@ profissao: Caçador
 arma: Arco e Flecha
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: -1
-  espirito: -1
-  tecnica: 0
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 8
+  sabedoria: 8
+  carisma: 8
 tags: [inspirado_em_integral_factor, potencial_aliada]
 imagem: ../imagens/npc_garota_do_arco.png
 canonico: nao
@@ -77,3 +78,5 @@ tem frase rápida, opinião clara e utilidade real sem roubar a cena.
 
 Aliada de apoio à distância — boa em combates de campo, menos útil em
 corredores fechados de masmorra (alcance do arco fica limitado).
+
+<!-- convertido-dnd5e -->

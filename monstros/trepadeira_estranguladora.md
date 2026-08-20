@@ -9,8 +9,12 @@ regioes: [floresta_horunka, bosque_sussurrante, jardim_selvagem]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
+ca: 11
+pv: 26
+bonus_ataque: +3
+cd_resistencia: 11
 abertura: golpe na base do caule
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [perfuração]
 vulnerabilidades: [fogo]
 imagem: ../imagens/monstro_trepadeira_estranguladora.png
@@ -57,6 +61,20 @@ Folha caindo sem vento, na sua frente. É a vinha ajustando o peso lá em cima.
 | Espinho Curvo | Comum | 1-2 | 30% | Ferreiro, Alquimista |
 | Seiva Escura | Incomum | 1 | 20% | Alquimista |
 | Col | — | 65-110 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 11
+- **PV:** 26
+- **Bônus de Ataque:** +3
+- **CD de Resistência:** 11
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

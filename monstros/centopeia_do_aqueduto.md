@@ -9,8 +9,12 @@ regioes: []
 nivel_recomendado: "3-5 (andar 2)"
 nivel_ameaca: comum
 golpes_para_derrotar: 4
+ca: 11
+pv: 32
+bonus_ataque: +3
+cd_resistencia: 11
 abertura: segmento central, exposto quando ela se ergue pra atacar
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [água, escuridão]
 vulnerabilidades: []
 imagem: ../imagens/monstro_centopeia_do_aqueduto.png
@@ -80,6 +84,20 @@ Secas não exige.
 | Casca Segmentada | Comum | 1-2 | 60% | Ferreiro, Costureiro |
 | Glândula Aquática | Incomum | 1 | 25% | Alquimista |
 | Col | — | 70-110 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 11
+- **PV:** 32
+- **Bônus de Ataque:** +3
+- **CD de Resistência:** 11
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

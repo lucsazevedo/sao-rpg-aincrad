@@ -7,11 +7,12 @@ profissao:
 arma: 
 guilda: 
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 2
-  espirito: 1
-  tecnica: -1
+  forca: 8
+  destreza: 8
+  constituicao: 8
+  inteligencia: 14
+  sabedoria: 12
+  carisma: 12
 tags: [informante, praça, rumores, cidade do início]
 imagem: ../imagens/npc_contador_de_historias.png
 ---
@@ -60,3 +61,5 @@ numa sessão.
 
 Não combatente. Foge ao primeiro sinal de perigo real — sua sobrevivência
 depende de estar sempre num lugar seguro.
+
+<!-- convertido-dnd5e -->

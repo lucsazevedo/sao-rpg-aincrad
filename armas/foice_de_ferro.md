@@ -1,7 +1,7 @@
 ---
 nome: Foice de Ferro
 tipo: Foice
-atributo_principal: Tecnica
+atributo_principal: Sabedoria
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Esta foça era usada por um fazendeiro local antes que ele abandonasse sua propr
 ## Como obter
 
 Encontrada em uma fazenda abandonada próxima a Horunka.
+
+<!-- convertido-dnd5e -->

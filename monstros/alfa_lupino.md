@@ -9,8 +9,12 @@ regioes: [campos_leste, floresta_horunka, bosque_sussurrante]
 nivel_recomendado: "8-9"
 nivel_ameaca: chefe
 golpes_para_derrotar: "2x5"
+ca: 16
+pv: 165
+bonus_ataque: +6
+cd_resistencia: 15
 abertura: a garganta, exposta só no uivo — e o uivo é o que convoca a matilha
-atributo_fraqueza: Espírito
+atributo_fraqueza: Sabedoria
 resistencias: [frio, escuridão]
 vulnerabilidades: [veneno, luz forte]
 imagem: ../imagens/monstro_alfa_lupino.png
@@ -91,6 +95,20 @@ perceber que o inimigo é a decisão, não a criatura.
 | Carta "Alfa Lupino" | **Épico** | 1 | 5% | Drop exclusivo do Mini Boss; 1 carta equipável por personagem |
 | Coração da Matilha | **Épico** | 1 | 100% | Torna Raro em Único na bancada |
 | Col | — | 1800-2600 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 16
+- **PV:** 165
+- **Bônus de Ataque:** +6
+- **CD de Resistência:** 15
+- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

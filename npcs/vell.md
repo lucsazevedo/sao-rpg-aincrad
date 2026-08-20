@@ -7,11 +7,12 @@ profissao: Comerciante
 arma: Adagas de Arremesso
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 2
-  espirito: 0
-  tecnica: -1
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 14
+  sabedoria: 10
+  carisma: 10
 tags: [informacao, misterio_andar2]
 imagem: ../imagens/npc_vell.png
 canonico: nao
@@ -73,3 +74,5 @@ fase 2.
 ## Combate (se aplicável)
 
 Foge. Rápido. Já treinou o caminho.
+
+<!-- convertido-dnd5e -->

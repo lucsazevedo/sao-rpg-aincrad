@@ -7,11 +7,12 @@ profissao: Médico
 arma: Bastão
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 2
-  tecnica: -1
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 14
+  carisma: 14
 tags: [cura, quest_giver, medico]
 imagem: ../imagens/npc_nadia.png
 canonico: nao
@@ -68,3 +69,5 @@ paralisia, sono — não some sozinho, e que ninguém mais sabia tratar.
 
 Não luta. Espírito 2 — se o grupo levar ela a campo, ela é o melhor suporte
 não-combatente do andar e a pior ideia tática possível.
+
+<!-- convertido-dnd5e -->

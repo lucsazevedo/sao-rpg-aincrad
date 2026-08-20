@@ -9,8 +9,12 @@ regioes: [jardim_selvagem, bosque_sussurrante, campos_oeste]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
+ca: 11
+pv: 26
+bonus_ataque: +3
+cd_resistencia: 11
 abertura: agarrar durante o pouso, quando as asas param
-atributo_fraqueza: Conhecimento
+atributo_fraqueza: Inteligência
 resistencias: [veneno]
 vulnerabilidades: [água, fumaça]
 imagem: ../imagens/monstro_fada_da_poeira.png
@@ -67,6 +71,20 @@ O pó dourado no ar parado. Se ele está ali, elas passaram há pouco — e volt
 | Asa Translúcida Fina | Incomum | 1 | 30% | Costureiro |
 | Néctar de Flor Rara | Incomum | 1 | 20% | Alquimista, doma de Domador |
 | Col | — | 70-120 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 11
+- **PV:** 26
+- **Bônus de Ataque:** +3
+- **CD de Resistência:** 11
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

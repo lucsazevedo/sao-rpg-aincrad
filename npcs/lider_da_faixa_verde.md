@@ -7,11 +7,12 @@ profissao: nenhuma
 arma: Pá
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: 0
-  espirito: 1
-  tecnica: 0
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 10
+  sabedoria: 12
+  carisma: 12
 tags: [urbus, andar2, agricultura, disputa_de_agua]
 imagem: ../imagens/npc_lider_da_faixa_verde.png
 canonico: nao
@@ -88,3 +89,5 @@ numa fase de escalada real, não de primeira reclamação.
 
 Não combatente — se a disputa escalar pra violência, ela se afasta em vez
 de participar.
+
+<!-- convertido-dnd5e -->

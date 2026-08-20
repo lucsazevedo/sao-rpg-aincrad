@@ -7,11 +7,12 @@ profissao: Cartógrafo
 arma: Adagas
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 1
-  conhecimento: 1
-  espirito: 0
-  tecnica: 0
+  forca: 8
+  destreza: 12
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [exploracao, aviso, mortalidade]
 imagem: ../imagens/npc_gilda_a_batedora.png
 canonico: nao
@@ -71,3 +72,5 @@ tese da campanha inteira dita em uma NPC.
 ## Combate (se aplicável)
 
 Reflexo 1, Adagas. Sobrevive por fuga, não por luta.
+
+<!-- convertido-dnd5e -->

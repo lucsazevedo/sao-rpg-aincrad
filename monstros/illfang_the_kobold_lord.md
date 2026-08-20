@@ -9,8 +9,12 @@ regioes: [sala_chefe, labirinto_entrada]
 nivel_recomendado: "8-10"
 nivel_ameaca: chefe
 golpes_para_derrotar: "4x6-8"
+ca: 16
+pv: 165
+bonus_ataque: +6
+cd_resistencia: 15
 abertura: previsibilidade — os golpes de machado têm tempo de leitura, e o nodachi não
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [fase 1 — golpes frontais bloqueados pelo broquel, trovão]
 vulnerabilidades: [fogo, fase 2 — perde a defesa do escudo ao trocar pro nodachi, isolamento dos Sentinels]
 imagem: ../imagens/monstro_illfang_the_kobold_lord.png
@@ -105,6 +109,20 @@ em mecânica real, e faz o último golpe parecer decisão, não matemática.
 | Col | — | ~2000 dividido pelo raid | 100% | — |
 
 **Também libera:** acesso ao Labirinto do Andar 2, para toda a guilda.
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 16
+- **PV:** 165
+- **Bônus de Ataque:** +6
+- **CD de Resistência:** 15
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 
