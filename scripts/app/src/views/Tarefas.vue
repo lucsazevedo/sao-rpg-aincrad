@@ -345,7 +345,7 @@
         </div>
       </div>
 
-      <!-- Modal resultado 2d6 PBTA -->
+      <!-- Modal resultado (d20 + mod + proficiência vs. CD, Seção 68/71 do SAO_RPG_5e.md) -->
       <div v-if="resultado" class="modal-bg on" @click.self="resultado = null">
         <div class="modal">
           <div class="top">
@@ -356,32 +356,15 @@
             <div class="dados">
               <div
                 class="dado"
-                :class="[
-                  'animate',
-                  resultado.d1 === 1 || resultado.d1 === 2
-                    ? 'vermelho'
-                    : 'verde',
-                ]"
+                :class="['animate', resultado.d20 === 1 ? 'vermelho' : resultado.d20 === 20 ? 'verde' : '']"
                 :key="resAnimK1"
               >
-                {{ resultado.d1 }}
-              </div>
-              <div
-                class="dado"
-                :class="[
-                  'animate',
-                  resultado.d2 === 1 || resultado.d2 === 2
-                    ? 'vermelho'
-                    : 'verde',
-                ]"
-                :key="resAnimK2"
-              >
-                {{ resultado.d2 }}
+                {{ resultado.d20 }}
               </div>
             </div>
             <div class="soma">
-              Soma + mod = {{ resultado.soma }} + {{ resultado.mod }} =
-              <b>{{ resultado.soma + resultado.mod }}</b>
+              d20 + mod = {{ resultado.d20 }} + {{ resultado.total - resultado.d20 }} =
+              <b>{{ resultado.total }}</b> vs. CD {{ resultado.cd }}
             </div>
             <div class="resumo" v-html="resultado.resumo"></div>
             <div style="text-align: right">
@@ -411,8 +394,7 @@ const tarefas = ref([]);
 const busca = ref("");
 const fRar = ref("");
 const resultado = ref(null);
-const resAnimK1 = ref(0),
-  resAnimK2 = ref(0);
+const resAnimK1 = ref(0);
 // ====== Item 10: ABAS de tipos de tarefa ======
 const abaTarefa = ref("todas");
 const abas = [
@@ -578,14 +560,6 @@ const atributosPers = computed(() => {
   return Object.assign({}, ATTR, (p && p.atributos_dnd) || {});
 });
 
-function raroMod(rar) {
-  // Punição EXTREMAMENTE leve — raridade não pune quase nada
-  return (
-    { comum: 0, incomum: 0, raro: 0, epico: -1, lendario: -2 }[
-      rar && rar.toLowerCase()
-    ] || 0
-  );
-}
 function pegarModTarefa(t) {
   // Usa atributo PRINCIPAL por TIPO de tarefa (regra imersiva):
   //   caca / combate → Reflexo OU Corpo (o maior)
@@ -616,84 +590,44 @@ function pegarModTarefa(t) {
   const nv = Math.max(1, nivelProfissaoAtual.value);
   return Math.floor(nv / 3);
 }
+// Espelha aceitar_e_resolver_missao() no servidor (Seção 68/71 do
+// SAO_RPG_5e.md): d20 + modificador de atributo da profissão + bônus de
+// proficiência (por Nível de Profissão) vs. CD por nível mínimo da missão
+// (Seção 29). Isto aqui é só a prévia mostrada antes do clique — o
+// resultado real vem do servidor.
+function bonusProficiencia(nivel) {
+  if (nivel <= 4) return 2;
+  if (nivel <= 8) return 3;
+  if (nivel <= 12) return 4;
+  if (nivel <= 16) return 5;
+  return 6;
+}
+function cdPorNivel(nivel) {
+  if (nivel <= 2) return 10;
+  if (nivel <= 4) return 12;
+  if (nivel <= 6) return 15;
+  if (nivel <= 8) return 18;
+  return 20;
+}
 function modTotal(t) {
-  // "nivel do personagem" nao existe como coluna — quem trava dificuldade/chance
-  // de verdade e' o Nivel de Profissao (mesma fonte que aceitar_e_resolver_missao()
-  // usa no servidor pra rolar o resultado real; isto aqui e' só a prévia mostrada
-  // antes do clique).
-  const nv = nivelProfissaoAtual.value;
-  const nivTarefa = t.nivel_min || 1;
-  const nivDif = nivTarefa - nv;
-  // ===== ITEM 2: PROGRESSÃO de dificuldade POR NÍVEL DA TAREFA (DIFERENTE nv2 vs nv3!) =====
-  // Tarefa de nível MAIOR é MAIOR a chance de falha (nd menor).
-  // Curva padrão PBTA mas com degrau progressivo, NÃO IGUAL entre nv2 e nv3:
-  let nd = 0;
-  // Degrau base por nível ALVO da tarefa (nivel_min):
-  const degrauPorNivel = {
-    1: +2, // nível 1 é MELHOR (iniciante)
-    2: +1, // nível 2 é intermediário → 1 degrau MENOS que nv1
-    3: 0, // nível 3 é DIFÍCIL → 2 degraus MENOS que nv1 (DIFERENTE de nv2 agora!)
-    4: -1, // nível 4 +
-    5: -2, // nível 5 +
-  };
-  const base = degrauPorNivel[nivTarefa] ?? -3;
-  if (nivDif >= 2)
-    nd = base - 1; // Muito acima do nível → penalisado 1
-  else if (nivDif === 1)
-    nd = base; // 1 nível acima → base
-  else if (nivDif === 0)
-    nd = base; // No nível → base (diferenciado!)
-  else if (nivDif === -1)
-    nd = base + 1; // Abaixo → +1
-  else if (nivDif <= -2) nd = base + 2; // Muito abaixo → +2
-  const rar = raroMod(t.raridade);
-  // BÔNUS GLOBAL: +3 (ajuda extra do sistema para nv1 jogadores sempre terem chance)
-  return pegarModTarefa(t) + rar + nd + 3;
+  return pegarModTarefa(t) + bonusProficiencia(nivelProfissaoAtual.value);
 }
-
-function countSomas2d6() {
-  // distribuições 2d6: 2=1,3=2,4=3,5=4,6=5,7=6,8=5,9=4,10=3,11=2,12=1
-  const c = {
-    2: 1,
-    3: 2,
-    4: 3,
-    5: 4,
-    6: 5,
-    7: 6,
-    8: 5,
-    9: 4,
-    10: 3,
-    11: 2,
-    12: 1,
-  };
-  let st = 0,
-    sp = 0,
-    fl = 0;
-  for (let s = 2; s <= 12; s++) {
-    if (s >= 10) st += c[s];
-    else if (s >= 7) sp += c[s];
-    else fl += c[s];
-  }
-  return { c, st, sp, fl, total: st + sp + fl }; // =36
-}
-const DS = countSomas2d6();
 function pctSoma(t, tipo) {
   const mod = modTotal(t);
-  // sucesso_total = (soma + mod) >= 10 → soma >= 10 - mod
-  // sucesso parcial = 7 <= soma+mod <=9 → 7-mod <= soma <=9-mod
-  // falha: soma+mod <=6
+  const cd = cdPorNivel(t.nivel_min || 1);
   let st = 0,
     sp = 0,
     fl = 0;
-  for (let s = 2; s <= 12; s++) {
-    const r = s + mod;
-    if (r >= 10) st += DS.c[s];
-    else if (r >= 7) sp += DS.c[s];
-    else fl += DS.c[s];
+  for (let d20 = 1; d20 <= 20; d20++) {
+    const total = d20 + mod;
+    if (d20 === 1) fl++;
+    else if (d20 === 20 || total >= cd + 5) st++;
+    else if (total >= cd) sp++;
+    else fl++;
   }
   const k =
     tipo === "sucesso_total" ? st : tipo === "sucesso_parcial" ? sp : fl;
-  return Math.round((100 * k) / DS.total);
+  return Math.round((100 * k) / 20);
 }
 function pctSucesso(t) {
   return pctSoma(t, "sucesso_total") + pctSoma(t, "sucesso_parcial");
@@ -761,19 +695,16 @@ async function resolver(t) {
     const r = await supa.rpc("aceitar_e_resolver_missao", { p_missao_id: t.id });
     if (r.error) throw r.error;
     const js = typeof r.data === "string" ? JSON.parse(r.data) : r.data || {};
-    const d1 = (js.dados && js.dados[0]) || Math.floor(Math.random() * 6) + 1;
-    const d2 = (js.dados && js.dados[1]) || Math.floor(Math.random() * 6) + 1;
-    const mod = modTotal(t);
-    (resAnimK1.value++, resAnimK2.value++);
+    const d20 = js.d20 ?? (js.dados && js.dados[0]) ?? Math.floor(Math.random() * 20) + 1;
+    resAnimK1.value++;
     let tit = "❌ Falha";
     if (js.resultado === "sucesso_total") tit = "🟢 Sucesso Total!";
     else if (js.resultado === "sucesso_parcial") tit = "🟡 Sucesso Parcial";
     resultado.value = {
       titulo: tit,
-      d1,
-      d2,
-      soma: d1 + d2,
-      mod,
+      d20,
+      cd: js.cd ?? cdPorNivel(t.nivel_min || 1),
+      total: js.total ?? d20,
       resumo:
         (js.mensagem ? `<p>${js.mensagem}</p>` : "") +
         (js.xp ? `<p>⭐ +${js.xp} XP de profissão</p>` : "") +
