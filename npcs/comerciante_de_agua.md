@@ -7,11 +7,12 @@ profissao: Comerciante
 arma: Adagas de Arremesso
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 1
-  conhecimento: 1
-  espirito: 0
-  tecnica: -1
+  forca: 10
+  destreza: 12
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [urbus, andar2, aqueduto, poder_social]
 imagem: ../imagens/npc_comerciante_de_agua.png
 canonico: nao
@@ -92,3 +93,5 @@ pela estabilidade que isso traz pra cidade.
 
 Evita combate pessoalmente — se ameaçado, tem guardas contratados por
 perto (tratar como Mercenário comum).
+
+<!-- convertido-dnd5e -->

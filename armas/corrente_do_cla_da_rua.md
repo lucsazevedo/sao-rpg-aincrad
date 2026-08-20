@@ -1,7 +1,7 @@
 ---
 nome: Corrente do Clã da Rua
 tipo: Corrente com Peso
-atributo_principal: Tecnica
+atributo_principal: Destreza
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjada por membros de um clã da rua que adaptaram ferramentas comuns em armas 
 ## Como obter
 
 Crafting ou drop de monstros comuns no andar 1
+
+<!-- convertido-dnd5e -->

@@ -96,7 +96,7 @@ Quase toda cena memorável do andar 1 cabe nessa sequência.
 
 **Quem age é o jogador. O monstro reage.** Não existe iniciativa, não existe
 turno do inimigo, não existe rolagem de ataque do monstro. O jogador declara o
-que faz, rola 2d6+atributo, e o resultado decide o que o monstro consegue
+que faz, rola d20+atributo, e o resultado decide o que o monstro consegue
 fazer a respeito:
 
 | Resultado | O que acontece                                                                                        |

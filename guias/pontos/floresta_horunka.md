@@ -31,7 +31,7 @@ segura pra expedições mais fundas na floresta.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perguntar sobre a vila | 2d6+Espírito | Moradores contam sobre as marcas entalhadas na floresta (ver `floresta_trilha`) | Contam que a vila é tranquila, sem detalhe extra | Respostas curtas, forasteiro ainda não é bem-vindo |
+| Perguntar sobre a vila | d20+Sabedoria | Moradores contam sobre as marcas entalhadas na floresta (ver `floresta_trilha`) | Contam que a vila é tranquila, sem detalhe extra | Respostas curtas, forasteiro ainda não é bem-vindo |
 
 **Só o mestre:** primeira impressão da vila define o tom de toda a cadeia B —
 ver `EP.01 — Javalis na Pastagem` (equivalente) e
@@ -56,7 +56,7 @@ completa.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Negociar hospedagem/comida | 2d6+Espírito | Preço justo e Halden relaxa — resposta sincera facilita | Preço normal | Preço sobe, resposta evasiva encareceu |
+| Negociar hospedagem/comida | d20+Sabedoria | Preço justo e Halden relaxa — resposta sincera facilita | Preço normal | Preço sobe, resposta evasiva encareceu |
 | Perguntar sobre o mel dourado | — | Sem teste — puxa direto `EP.08 — A Colheita de Mel` | | |
 
 **Só o mestre:** Halden só cobra caro de quem trata a pergunta dele como
@@ -102,7 +102,7 @@ educação.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar a marca | 2d6+Espírito | Sente que a marca aponta pra algum lugar específico | Percebe só que é intencional | Passa direto sem notar nada |
+| Examinar a marca | d20+Sabedoria | Sente que a marca aponta pra algum lugar específico | Percebe só que é intencional | Passa direto sem notar nada |
 
 **Só o mestre:** não entregue o significado do código aqui — só a
 Eremita da Floresta (`floresta_horunka_eremita`) ensina isso, e só depois de
@@ -129,8 +129,8 @@ Fonte da Seiva-Mãe que a Mulher Aflita pede (ver
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher a Seiva-Mãe com cuidado | 2d6+Técnica | Colhe com a cavidade fechada e sai sem acordar nada | Consegue a seiva, mas um cordão-âncora prende alguém | As mudas se viram todas ao mesmo tempo, líquido fica opaco |
-| Enfrentar (combate) | 2d6+Espírito | Ver `monstros/mae_raiz_de_horunka.md` | | |
+| Colher a Seiva-Mãe com cuidado | d20+Destreza | Colhe com a cavidade fechada e sai sem acordar nada | Consegue a seiva, mas um cordão-âncora prende alguém | As mudas se viram todas ao mesmo tempo, líquido fica opaco |
+| Enfrentar (combate) | d20+Sabedoria | Ver `monstros/mae_raiz_de_horunka.md` | | |
 
 **Só o mestre:** ameaça forte (5-7 golpes), fraqueza em Espírito — a
 criatura não é rápida, é paciente. Deixe isso claro na narração antes do
@@ -152,7 +152,7 @@ combate típico da floresta.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Reflexo | Golpe limpo | Acerta, mas a criatura reage | Criatura acerta primeiro |
+| Enfrentar | d20+Destreza | Golpe limpo | Acerta, mas a criatura reage | Criatura acerta primeiro |
 
 **Só o mestre:** puramente tutorial — sem gancho adicional.
 
@@ -172,7 +172,7 @@ pousada.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Reflexo | Golpe limpo | Acerta, mas a criatura reage | Criatura acerta primeiro |
+| Enfrentar | d20+Destreza | Golpe limpo | Acerta, mas a criatura reage | Criatura acerta primeiro |
 
 **Só o mestre:** sem gancho adicional — reforça densidade de ameaça fraca
 perto da vila.
@@ -194,7 +194,7 @@ caça completa.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher | 2d6+Conhecimento | Identifica e colhe 2 comestíveis | Colhe 1, mas quase pega um venenoso | Não arrisca, sai de mãos vazias |
+| Colher | d20+Inteligência | Identifica e colhe 2 comestíveis | Colhe 1, mas quase pega um venenoso | Não arrisca, sai de mãos vazias |
 
 **Só o mestre:** este ponto de coleta ambiental é diferente do combate de
 `horunka_05` — trate como coleta segura, não como caça à variante rara.
@@ -216,8 +216,8 @@ caça completa.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher cogumelos | 2d6+Conhecimento | Identifica e colhe 2 comestíveis | Colhe 1, mas quase pega um venenoso | Não arrisca, sai de mãos vazias |
-| Colher mel (se o enxame estiver presente) | 2d6+Reflexo | Ver `monstros/enxame_de_abelhas_douradas.md` | | |
+| Colher cogumelos | d20+Inteligência | Identifica e colhe 2 comestíveis | Colhe 1, mas quase pega um venenoso | Não arrisca, sai de mãos vazias |
+| Colher mel (se o enxame estiver presente) | d20+Destreza | Ver `monstros/enxame_de_abelhas_douradas.md` | | |
 
 **Só o mestre:** a colmeia gigante não é fixa no mapa por padrão — introduza
 via `EP.08` quando quiser essa cena específica.
@@ -238,7 +238,7 @@ em `cenas/quests_andar1.md`.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Reconhecer e cortar | 2d6+Conhecimento depois 2d6+Técnica | Corta sem rachar o veio | Corta, mas racha parcialmente | Confunde com madeira comum |
+| Reconhecer e cortar | d20+Inteligência depois d20+Destreza | Corta sem rachar o veio | Corta, mas racha parcialmente | Confunde com madeira comum |
 
 **Só o mestre:** também tem pista de Cartógrafo aqui — bom ponto pra
 cruzar com `suri_cartografa` se o grupo já estiver de olho no mapa
@@ -261,7 +261,7 @@ não-oficial do "Código da Floresta" — ver `horunka_04_o_eremita_sabe`.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Convencer de que o interesse é genuíno | 2d6+Espírito | Ele explica o código e a origem das marcas | Ele conta parte, mas encerra cedo | Ele fecha a conversa e sugere "voltem com motivo melhor" |
+| Convencer de que o interesse é genuíno | d20+Sabedoria | Ele explica o código e a origem das marcas | Ele conta parte, mas encerra cedo | Ele fecha a conversa e sugere "voltem com motivo melhor" |
 | Trocar suprimento por conhecimento de trilha | — | Sem teste — troca direta | | |
 
 **Só o mestre:** ele nunca expulsa ninguém — só encerra a conversa. Uma

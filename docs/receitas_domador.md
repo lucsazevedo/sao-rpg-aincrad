@@ -10,7 +10,7 @@ A tabela completa de doma por criatura já existe em
 `docs/economia_profissoes.md`. Isto aqui não substitui aquilo — é o
 equipamento e o ritual que o Domador prepara **antes** de chegar perto do
 bicho. Formato em `docs/catalogo_receitas_por_oficio.md`. Teste padrão:
-**2d6+Técnica**.
+**d20+Destreza**.
 
 ---
 

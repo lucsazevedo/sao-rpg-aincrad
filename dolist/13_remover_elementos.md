@@ -6,6 +6,13 @@ uso: mestre
 
 # Remover elemento, virar tudo fraqueza de atributo
 
+> **Decisão mantida na conversão pra D&D 5e**, só atualizada de escala: a
+> fraqueza de monstro continua sendo sempre um atributo (nunca elemento),
+> mas agora é um dos 4 atributos de ataque de D&D (FOR/DES/INT/SAB — Seção
+> 66 e 74 do `SAO_RPG_5e.md`), não mais um dos 5 antigos. Os 54 monstros já
+> foram reconvertidos automaticamente (`scripts/_converter_conteudo_dnd5e.py`).
+> Texto abaixo mantido como histórico da decisão original.
+
 ## Decisão
 
 Fogo/Trovão/Gelo/Veneno sai do jogo inteiro (mesa e site). Fraqueza de

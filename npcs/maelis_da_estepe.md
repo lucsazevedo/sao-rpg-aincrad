@@ -7,11 +7,12 @@ profissao: Cartógrafo
 arma: Chicote
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 1
-  conhecimento: 1
-  espirito: 0
-  tecnica: -1
+  forca: 8
+  destreza: 12
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [cidade_inicio, kaldan, rota, retirada]
 imagem:
 canonico: nao
@@ -71,3 +72,5 @@ virar comandante da mesa.
 ## Gancho visual / de transmissão
 
 Ela deixa um pedaço do mapa em branco quando não confia numa pessoa.
+
+<!-- convertido-dnd5e -->

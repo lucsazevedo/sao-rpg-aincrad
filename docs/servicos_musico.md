@@ -8,7 +8,7 @@ receitas: 17
 
 Profissão de Espírito. O "material" é atenção — precisa ser ouvido pra
 funcionar. Formato geral em `docs/catalogo_receitas_por_oficio.md`. Teste
-padrão: **2d6+Espírito**.
+padrão: **d20+Sabedoria**.
 
 ---
 

@@ -55,9 +55,9 @@ poções, e paga bem por isso. Ela mesma não vai buscar.
 
 ## Testes sugeridos
 
-- 2d6 + Conhecimento — lembrar o aviso da Mulher Aflita sobre o spray antes de agir
-- 2d6 + Reflexo — desviar do spray corrosivo (senão, dano no equipamento)
-- 2d6 + Tecnica — extrair a seiva sem contaminar (se falhar: frasco perdido, precisa repetir)
+- d20+Inteligência — lembrar o aviso da Mulher Aflita sobre o spray antes de agir
+- d20+Destreza — desviar do spray corrosivo (senão, dano no equipamento)
+- d20+Destreza — extrair a seiva sem contaminar (se falhar: frasco perdido, precisa repetir)
 
 ## NPCs na cena
 

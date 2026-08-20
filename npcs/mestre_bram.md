@@ -7,11 +7,12 @@ profissao: Ferreiro
 arma: Martelo
 guilda: LHUB
 atributos:
-  corpo: 1
-  reflexo: -1
-  conhecimento: 1
-  espirito: -1
-  tecnica: 2
+  forca: 12
+  destreza: 14
+  constituicao: 12
+  inteligencia: 12
+  sabedoria: 8
+  carisma: 8
 tags: [loja, crafting, raid]
 imagem: ../imagens/npc_mestre_bram.png
 canonico: nao
@@ -67,3 +68,5 @@ insuportável em conversa e excelente em serviço.
 ## Combate (se aplicável)
 
 Técnica 2. Não sai da forja nem pro raid — e sente falta de não ter ido.
+
+<!-- convertido-dnd5e -->

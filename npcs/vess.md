@@ -7,11 +7,12 @@ profissao: Cartógrafo
 arma: Rapieira
 guilda: "iBarr's"
 atributos:
-  corpo: 0
-  reflexo: 1
-  conhecimento: 1
-  espirito: -1
-  tecnica: 0
+  forca: 10
+  destreza: 12
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 8
+  carisma: 8
 tags: [labirinto, mapa, guilda]
 imagem: ../imagens/npc_vess.png
 canonico: nao
@@ -71,3 +72,5 @@ Sentinel e ela não tem grupo.
 ## Combate (se aplicável)
 
 Reflexo 1, Rapieira. Boa em corredor, ruim em sala aberta, e sabe disso.
+
+<!-- convertido-dnd5e -->

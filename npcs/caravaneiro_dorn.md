@@ -7,11 +7,12 @@ profissao: Comerciante
 arma: Besta
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 0
-  conhecimento: 2
-  espirito: 0
-  tecnica: -1
+  forca: 10
+  destreza: 10
+  constituicao: 10
+  inteligencia: 14
+  sabedoria: 10
+  carisma: 10
 tags: [caravana, estrada, escolta]
 imagem: ../imagens/npc_caravaneiro_dorn.png
 canonico: nao
@@ -66,3 +67,5 @@ Desde então faz o percurso quatro vezes por semana e já perdeu duas cargas.
 ## Combate (se aplicável)
 
 Conhecimento 2 com Besta. Atira mal e negocia muito bem.
+
+<!-- convertido-dnd5e -->

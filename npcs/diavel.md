@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Escudo e Espada
 guilda: "(sem guilda formal — lidera por convocação)"
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 1
-  tecnica: -1
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [canonico, raid, lider]
 imagem: ../imagens/npc_diavel.png
 canonico: sim
@@ -104,3 +105,5 @@ Se ninguém avisar, deixe acontecer.
 
 Corpo 1, Escudo e Espada, Skill Muro. No raid, ele fica na primeira linha e
 não sai de lá.
+
+<!-- convertido-dnd5e -->

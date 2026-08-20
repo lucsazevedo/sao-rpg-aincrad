@@ -1,7 +1,7 @@
 ---
 nome: Punhais Equilibrados
 tipo: Adagas de Arremesso
-atributo_principal: Reflexo
+atributo_principal: Destreza
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjados por um habilidoso ferreiro da Cidade do Início, esses punhais foram pr
 ## Como obter
 
 Vendido por um ferreiro da Cidade do Início
+
+<!-- convertido-dnd5e -->

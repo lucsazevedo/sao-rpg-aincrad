@@ -9,8 +9,12 @@ regioes: [floresta_horunka]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
 golpes_para_derrotar: 6
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: cortar os cordões-âncora enquanto ela recolhe as mudas
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [corte superficial, veneno]
 vulnerabilidades: [fogo, Espírito]
 imagem: ../imagens/monstro_mae_raiz_de_horunka.png
@@ -88,6 +92,20 @@ reta na floresta de Horunka.
 | Cordão-Âncora Seco | Raro | 1-2 | 45% | Costureiro, item Único |
 | Semente Dormente | Raro | 1 | 20% | Vendável caro; não gera vínculo de Domador |
 | Col | — | 900-1400 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

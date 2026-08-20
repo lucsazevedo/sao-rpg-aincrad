@@ -57,9 +57,9 @@ atributo de quem consumir o prato.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — negociar com cada um dos três donos (um teste por NPC)
-- 2d6+Corpo/Reflexo — cumprir o favor perigoso pedido por Halden
-- 2d6+Ofício (Cozinheiro) — preparar o prato final com os três fragmentos reunidos
+- d20+Sabedoria — negociar com cada um dos três donos (um teste por NPC)
+- d20+Força/Reflexo — cumprir o favor perigoso pedido por Halden
+- d20+Ofício (Cozinheiro) — preparar o prato final com os três fragmentos reunidos
 
 **NPCs na cena**
 
@@ -143,9 +143,9 @@ ocorram mortes.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — avaliar o relato do grupo anterior sem subestimar o perigo
-- 2d6+Espírito — organizar evacuação de novatos sem causar pânico generalizado
-- 2d6+Corpo — combate final, aproveitando a criatura ferida
+- d20+Inteligência — avaliar o relato do grupo anterior sem subestimar o perigo
+- d20+Sabedoria — organizar evacuação de novatos sem causar pânico generalizado
+- d20+Força — combate final, aproveitando a criatura ferida
 
 **NPCs na cena**
 
@@ -228,9 +228,9 @@ lançamento oficial de SAO.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — catalogar o padrão geográfico dos símbolos
-- 2d6+Reflexo — encontrar a entrada disfarçada do esconderijo
-- 2d6+Espírito — lidar com o desconforto de estar num lugar que não deveria existir
+- d20+Inteligência — catalogar o padrão geográfico dos símbolos
+- d20+Destreza — encontrar a entrada disfarçada do esconderijo
+- d20+Sabedoria — lidar com o desconforto de estar num lugar que não deveria existir
 
 **NPCs na cena**
 
@@ -315,9 +315,9 @@ descobrir o que está provocando o fenômeno.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — entender o padrão de fusão antes que piore
-- 2d6+Corpo/Reflexo — combate contendo os slimes fundidos
-- 2d6+Reflexo — chegar ao núcleo catalisador no meio do caos
+- d20+Inteligência — entender o padrão de fusão antes que piore
+- d20+Força/Reflexo — combate contendo os slimes fundidos
+- d20+Destreza — chegar ao núcleo catalisador no meio do caos
 
 **NPCs na cena**
 
@@ -400,9 +400,9 @@ caravanas chegue ao destino.
 
 **Testes sugeridos**
 
-- 2d6+Corpo/Reflexo — defesa da caravana contratada
-- 2d6+Conhecimento — perceber o padrão de sabotagem coordenada entre as duas rotas
-- 2d6+Espírito — decidir e agir sobre ajudar (ou não) a caravana rival
+- d20+Força/Reflexo — defesa da caravana contratada
+- d20+Inteligência — perceber o padrão de sabotagem coordenada entre as duas rotas
+- d20+Sabedoria — decidir e agir sobre ajudar (ou não) a caravana rival
 
 **NPCs na cena**
 
@@ -486,10 +486,10 @@ cada um.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — examinar a lápide sem ativar nada por acidente
-- 2d6+Espírito — lidar com o desconforto de carregar uma missão sem
+- d20+Inteligência — examinar a lápide sem ativar nada por acidente
+- d20+Sabedoria — lidar com o desconforto de carregar uma missão sem
   descrição na própria interface
-- 2d6+Conhecimento — procurar contexto adicional nas ruínas ao redor
+- d20+Inteligência — procurar contexto adicional nas ruínas ao redor
 
 **NPCs na cena**
 
@@ -573,9 +573,9 @@ que estiverem dispostos a abandonar pra passar por ele.
 
 **Testes sugeridos**
 
-- 2d6+Corpo — portão de Força (empurrar/quebrar a entrada)
-- 2d6+Conhecimento — portão de Inteligência (resolver o enigma gravado)
-- 2d6+Espírito (teste conjunto dos três) — portão de Cooperação
+- d20+Força — portão de Força (empurrar/quebrar a entrada)
+- d20+Inteligência — portão de Inteligência (resolver o enigma gravado)
+- d20+Sabedoria (teste conjunto dos três) — portão de Cooperação
 
 **NPCs na cena**
 
@@ -661,9 +661,9 @@ ganhar inimigos perigosos.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — negociar a senha e o acesso sem levantar suspeita
-- 2d6+Reflexo — manter disfarce dentro do mercado clandestino
-- 2d6+Conhecimento — reconhecer, entre os itens/informações vendidos, algo
+- d20+Sabedoria — negociar a senha e o acesso sem levantar suspeita
+- d20+Destreza — manter disfarce dentro do mercado clandestino
+- d20+Inteligência — reconhecer, entre os itens/informações vendidos, algo
   ligado ao padrão de dados de O Contato
 
 **NPCs na cena**
@@ -755,10 +755,10 @@ música e descobre que ela está ligada a outro lugar de Aincrad.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — perceber o padrão exato da apresentação
-- 2d6+Espírito — permanecer até o final sem se distrair (a melodia é
+- d20+Inteligência — perceber o padrão exato da apresentação
+- d20+Sabedoria — permanecer até o final sem se distrair (a melodia é
   hipnoticamente longa)
-- 2d6+Conhecimento — comparar a melodia com outros fenômenos sonoros já
+- d20+Inteligência — comparar a melodia com outros fenômenos sonoros já
   documentados pelo grupo
 
 **NPCs na cena**
@@ -849,9 +849,9 @@ dentro dele.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — perceber que a mudança de layout segue um padrão, não é caos
-- 2d6+Espírito — manter consistência de abordagem entre os jogadores (decisão de mesa real)
-- 2d6+Reflexo — reagir rápido quando o layout muda no meio de uma ação
+- d20+Inteligência — perceber que a mudança de layout segue um padrão, não é caos
+- d20+Sabedoria — manter consistência de abordagem entre os jogadores (decisão de mesa real)
+- d20+Destreza — reagir rápido quando o layout muda no meio de uma ação
 
 **NPCs na cena**
 
@@ -936,9 +936,9 @@ acusações sem provas provoquem mais violência.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — coletar testemunhos coerentes em meio ao pânico
-- 2d6+Conhecimento — examinar a cena e separar prova real de boato
-- 2d6+Corpo/Espírito — confronto final com o suspeito identificado
+- d20+Sabedoria — coletar testemunhos coerentes em meio ao pânico
+- d20+Inteligência — examinar a cena e separar prova real de boato
+- d20+Força/Espírito — confronto final com o suspeito identificado
 
 **NPCs na cena**
 
@@ -1029,10 +1029,10 @@ território.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — interpretar os registros de versões anteriores do território
-- 2d6+Espírito — manter a compostura ao perceber que os andares ficam mais
+- d20+Inteligência — interpretar os registros de versões anteriores do território
+- d20+Sabedoria — manter a compostura ao perceber que os andares ficam mais
   "incompletos" quanto mais fundo
-- 2d6+Reflexo — descer com segurança uma estrutura instável recém-emersa
+- d20+Destreza — descer com segurança uma estrutura instável recém-emersa
 
 **NPCs na cena**
 
@@ -1116,10 +1116,10 @@ real. Curioso, até ele começar a repetir histórias que ninguém contou a ele.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — perceber o detalhe repetido sem se assustar na hora e
+- d20+Sabedoria — perceber o detalhe repetido sem se assustar na hora e
   quebrar a interação
-- 2d6+Conhecimento — consultar o Estudioso Obcecado com perguntas certas
-- 2d6+Espírito — confrontar o Mercador sem perder acesso a ele de vez
+- d20+Inteligência — consultar o Estudioso Obcecado com perguntas certas
+- d20+Sabedoria — confrontar o Mercador sem perder acesso a ele de vez
 
 **NPCs na cena**
 
@@ -1208,9 +1208,9 @@ um drop exclusivo.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — prever o próximo local de aparição com base no padrão
-- 2d6+Espírito — negociar trégua ou cooperação com grupo rival
-- 2d6+Corpo/Reflexo — combate rápido dentro da janela de tempo curta
+- d20+Inteligência — prever o próximo local de aparição com base no padrão
+- d20+Sabedoria — negociar trégua ou cooperação com grupo rival
+- d20+Força/Reflexo — combate rápido dentro da janela de tempo curta
 
 **NPCs na cena**
 
@@ -1295,9 +1295,9 @@ monstros à distância.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — organizar a defesa e manter moral da vila sob ataque
-- 2d6+Corpo/Reflexo — combate contra as ondas coordenadas
-- 2d6+Conhecimento — perceber o padrão de comando por trás do ataque
+- d20+Sabedoria — organizar a defesa e manter moral da vila sob ataque
+- d20+Força/Reflexo — combate contra as ondas coordenadas
+- d20+Inteligência — perceber o padrão de comando por trás do ataque
 
 **NPCs na cena**
 
@@ -1387,9 +1387,9 @@ nunca deveria ter sido acessada.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — interpretar as mensagens de erro técnicas
-- 2d6+Espírito — manter a compostura dentro do ambiente incompleto
-- 2d6+Reflexo — sair a tempo antes da porta se fechar sozinha
+- d20+Inteligência — interpretar as mensagens de erro técnicas
+- d20+Sabedoria — manter a compostura dentro do ambiente incompleto
+- d20+Destreza — sair a tempo antes da porta se fechar sozinha
 
 **NPCs na cena**
 
@@ -1472,9 +1472,9 @@ concreta.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — identificar o padrão geográfico dos avistamentos
-- 2d6+Reflexo — montar e executar a emboscada calculada
-- 2d6+Espírito — manter a calma no confronto breve e direto com o Sem-Cor
+- d20+Inteligência — identificar o padrão geográfico dos avistamentos
+- d20+Destreza — montar e executar a emboscada calculada
+- d20+Sabedoria — manter a calma no confronto breve e direto com o Sem-Cor
 
 **NPCs na cena**
 
@@ -1564,9 +1564,9 @@ sua causa.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — mapear o padrão de movimento do Rei antes do confronto
-- 2d6+Espírito — negociar cooperação (ou vencer competição) com outros grupos
-- 2d6+Corpo — combate principal contra o Rei das Planícies e seus capangas
+- d20+Inteligência — mapear o padrão de movimento do Rei antes do confronto
+- d20+Sabedoria — negociar cooperação (ou vencer competição) com outros grupos
+- d20+Força — combate principal contra o Rei das Planícies e seus capangas
 
 **NPCs na cena**
 
@@ -1651,10 +1651,10 @@ investigar as versões antes que a sentença seja decidida.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — reconstituir os eventos da dungeon com precisão
-- 2d6+Espírito — conduzir entrevistas com testemunhas traumatizadas sem
+- d20+Inteligência — reconstituir os eventos da dungeon com precisão
+- d20+Sabedoria — conduzir entrevistas com testemunhas traumatizadas sem
   revitimizá-las
-- 2d6+Espírito — apresentar as conclusões ao círculo de guildas de forma
+- d20+Sabedoria — apresentar as conclusões ao círculo de guildas de forma
   convincente e justa
 
 **NPCs na cena**
@@ -1748,9 +1748,9 @@ localizada abaixo da Cidade do Início.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — decifrar a coordenada conjunta dos três fragmentos
-- 2d6+Reflexo — descer a estrutura instável e rascunhada com segurança
-- 2d6+Espírito — encarar a porta final sem entrar em pânico ou agir por impulso
+- d20+Inteligência — decifrar a coordenada conjunta dos três fragmentos
+- d20+Destreza — descer a estrutura instável e rascunhada com segurança
+- d20+Sabedoria — encarar a porta final sem entrar em pânico ou agir por impulso
 
 **NPCs na cena**
 
@@ -1846,10 +1846,10 @@ malfuncionando" ou "algo além da compreensão de Kayaba também".
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — capturar e reter o fragmento de texto fugaz
-- 2d6+Conhecimento — cruzar o padrão com fenômenos anteriores já vividos
+- d20+Inteligência — capturar e reter o fragmento de texto fugaz
+- d20+Inteligência — cruzar o padrão com fenômenos anteriores já vividos
   pela campanha
-- 2d6+Espírito — aceitar sair sem resposta completa, sem insistir além do
+- d20+Sabedoria — aceitar sair sem resposta completa, sem insistir além do
   seguro
 
 **NPCs na cena**
@@ -1937,9 +1937,9 @@ indicando eventos que ainda não aconteceram.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — analisar o arquivo e os símbolos junto ao Estudioso Obcecado
-- 2d6+Conhecimento — cruzar os dados com o padrão de coleta de O Contato
-- 2d6+Espírito — decidir com responsabilidade o que fazer com a informação
+- d20+Inteligência — analisar o arquivo e os símbolos junto ao Estudioso Obcecado
+- d20+Inteligência — cruzar os dados com o padrão de coleta de O Contato
+- d20+Sabedoria — decidir com responsabilidade o que fazer com a informação
 
 **NPCs na cena**
 
@@ -2028,9 +2028,9 @@ ocorrido — exceto quem já vinha seguindo o padrão da temporada inteira.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — manter a calma diante do silêncio absoluto e da imobilidade total
-- 2d6+Conhecimento — aproveitar bem a janela de observação segura durante a pausa
-- 2d6+Espírito — processar o retorno ao normal sem perder a cabeça, sabendo
+- d20+Sabedoria — manter a calma diante do silêncio absoluto e da imobilidade total
+- d20+Inteligência — aproveitar bem a janela de observação segura durante a pausa
+- d20+Sabedoria — processar o retorno ao normal sem perder a cabeça, sabendo
   que ninguém mais vai acreditar no relato
 
 **NPCs na cena**
@@ -2124,9 +2124,9 @@ terá de decidir se o segredo deve ser compartilhado.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — reunir e conectar as pistas espalhadas pela temporada
-- 2d6+Espírito — negociar ou competir com os outros grupos interessados
-- 2d6+Espírito — a decisão final sobre o destino da chave, sob pressão social
+- d20+Inteligência — reunir e conectar as pistas espalhadas pela temporada
+- d20+Sabedoria — negociar ou competir com os outros grupos interessados
+- d20+Sabedoria — a decisão final sobre o destino da chave, sob pressão social
 
 **NPCs na cena**
 
@@ -2233,11 +2233,11 @@ continuam paralelos.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — conduzir a convergência de NPCs sem perder o fio emocional
+- d20+Sabedoria — conduzir a convergência de NPCs sem perder o fio emocional
   de cada um
-- 2d6+Conhecimento — combinar corretamente os fragmentos coletados ao longo
+- d20+Inteligência — combinar corretamente os fragmentos coletados ao longo
   da temporada
-- 2d6+Espírito — encarar a mensagem incompleta sem exigir (ou fabricar) uma
+- d20+Sabedoria — encarar a mensagem incompleta sem exigir (ou fabricar) uma
   resposta que a cena não deve dar
 
 **NPCs na cena**

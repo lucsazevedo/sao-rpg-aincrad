@@ -9,8 +9,12 @@ regioes: []
 nivel_recomendado: "1-3 (andar 2)"
 nivel_ameaca: fraco
 golpes_para_derrotar: 2
+ca: 10
+pv: 18
+bonus_ataque: +2
+cd_resistencia: 10
 abertura: investida cega — desviar no último instante deixa o flanco exposto
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: []
 vulnerabilidades: [espaço aberto sem obstáculo pra desviar]
 imagem: ../imagens/monstro_touro_das_colinas.png
@@ -78,6 +82,20 @@ investida é sempre uma ameaça real, não só cosmética.
 | Couro Grosso | Comum | 1-2 | 65% | Costureiro |
 | Chifre Curto | Comum | 1 | 40% | Ferreiro, Joalheiro |
 | Col | — | 40-80 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 10
+- **PV:** 18
+- **Bônus de Ataque:** +2
+- **CD de Resistência:** 10
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

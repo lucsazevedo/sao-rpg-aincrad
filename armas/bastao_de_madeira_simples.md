@@ -1,7 +1,7 @@
 ---
 nome: Bastão de Madeira Simples
 tipo: Bastão
-atributo_principal: Espirito
+atributo_principal: Sabedoria
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Este bastão foi encontrado por um dos primeiros jogadores na Cidade do Início 
 ## Como obter
 
 Drop de monstros fracos na Cidade do Início
+
+<!-- convertido-dnd5e -->

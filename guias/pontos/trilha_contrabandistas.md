@@ -32,9 +32,9 @@ demais pontos da trilha.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Seguir o padrão da grama amassada | 2d6+Reflexo | Segue a marca sem ser notado e acha o próximo ponto da trilha | Segue, mas faz barulho demais — alguém vai saber que vocês passaram | Perde a trilha; o padrão some na vegetação |
-| Ler as marcas como código | 2d6+Conhecimento | Entende o código e onde fica o encontro com o contato | Sabe que é código, mas segue às cegas | Segue uma marca falsa — meia hora perdida e um observador avisado |
-| Esconder algo pra retirar depois | 2d6+Reflexo | Ninguém acha, nem procurando | Acham, mas você tem uma desculpa pronta | Achado e registrado — a trilha sabe o que você escondeu |
+| Seguir o padrão da grama amassada | d20+Destreza | Segue a marca sem ser notado e acha o próximo ponto da trilha | Segue, mas faz barulho demais — alguém vai saber que vocês passaram | Perde a trilha; o padrão some na vegetação |
+| Ler as marcas como código | d20+Inteligência | Entende o código e onde fica o encontro com o contato | Sabe que é código, mas segue às cegas | Segue uma marca falsa — meia hora perdida e um observador avisado |
+| Esconder algo pra retirar depois | d20+Destreza | Ninguém acha, nem procurando | Acham, mas você tem uma desculpa pronta | Achado e registrado — a trilha sabe o que você escondeu |
 
 **Só o mestre:** a recompensa do ponto é revelar o resto da região — na
 prática, conduza a descoberta na sequência marcas → contato, como sugestão
@@ -61,7 +61,7 @@ riscos rasos descrito no guia da região.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Seguir a marca até a próxima | 2d6+Reflexo | Segue sem ser notado, no ritmo certo da trilha | Segue, mas faz barulho demais — a trilha registra sua passagem | Perde a trilha; a próxima marca simplesmente não aparece |
+| Seguir a marca até a próxima | d20+Destreza | Segue sem ser notado, no ritmo certo da trilha | Segue, mas faz barulho demais — a trilha registra sua passagem | Perde a trilha; a próxima marca simplesmente não aparece |
 
 **Só o mestre:** existem várias marcas espalhadas pela região — trate esta
 como a primeira que o grupo efetivamente decifra depois do Ponto de
@@ -89,7 +89,7 @@ esperando outra pessoa.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ser aceito pelo Contato | 2d6+Espírito | Ele negocia de igual pra igual | Negocia, mas cobra o "incômodo" (+25% em Col) | Ele some — e a trilha esfria por uma semana |
+| Ser aceito pelo Contato | d20+Sabedoria | Ele negocia de igual pra igual | Negocia, mas cobra o "incômodo" (+25% em Col) | Ele some — e a trilha esfria por uma semana |
 | Comprar / trocar com ele | — | Sobretudo do Contrabandista: 370 Col ou uma peça Incomum em troca · passagem por rota não vigiada: 100 Col · item sem procedência: 30% abaixo do preço, sempre com história | | |
 
 **Só o mestre:** a senha não se descobre aqui — ela circula no mercado

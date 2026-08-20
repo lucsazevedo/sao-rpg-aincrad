@@ -7,11 +7,12 @@ profissao: Joalheiro
 arma: Manopla
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 0
-  conhecimento: 1
-  espirito: -1
-  tecnica: 2
+  forca: 10
+  destreza: 14
+  constituicao: 10
+  inteligencia: 12
+  sabedoria: 8
+  carisma: 8
 tags: [loja, crafting, cristais]
 imagem: ../imagens/npc_tor.png
 canonico: nao
@@ -70,3 +71,5 @@ copiada por todo mundo, o que ele menciona sempre.
 
 Técnica 2, Manopla. Já quebrou o nariz de um batedor de carteira e conta isso
 com frequência.
+
+<!-- convertido-dnd5e -->

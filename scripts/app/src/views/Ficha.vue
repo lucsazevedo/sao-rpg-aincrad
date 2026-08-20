@@ -76,6 +76,12 @@
         </div>
       </div>
       <div class="card">
+        <div style="display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px">
+          <span class="pill on">🎯 Nível {{ auth.personagem.nivel || 1 }}</span>
+          <span class="pill">🛡️ CA {{ auth.personagem.ca ?? 10 }}</span>
+          <span class="pill" :class="{bad: pvAtual <= pvMax * 0.3}">❤️ PV {{ pvAtual }} / {{ pvMax }}</span>
+          <span class="pill">⭐ Proficiência +{{ auth.personagem.bonus_proficiencia ?? 2 }}</span>
+        </div>
         <h3 style="margin: 0 0 10px; color: var(--gold-bright)">Atributos</h3>
         <div
           class="form"
@@ -86,10 +92,10 @@
               v-for="a in atributos"
               :key="a.k"
               class="atrib"
-              :class="a.v > 0 ? 'pos' : a.v < 0 ? 'neg' : ''"
+              :class="a.mod > 0 ? 'pos' : a.mod < 0 ? 'neg' : ''"
             >
               <b>{{ a.nome }}</b>
-              <div class="v">{{ a.v > 0 ? "+" : "" }}{{ a.v }}</div>
+              <div class="v">{{ a.v }} ({{ a.mod >= 0 ? "+" : "" }}{{ a.mod }})</div>
             </div>
           </div>
         </div>
@@ -154,29 +160,23 @@
             {{ r.alvo_nome }} · {{ r.nivel }} ({{ statusRep(r.nivel) }})
           </span>
         </div>
-        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🗡️ Golpes da Arma · {{ armaDetalhe?.tipo || armaAtual }}</h3>
+        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🗡️ Sword Skills · {{ armaDetalhe?.tipo || armaAtual }}</h3>
         <div v-if="carregandoGolpes" class="msg info carregando">Carregando…</div>
-        <div v-else-if="!golpesArma.length" class="msg warn">Sem arma equipada ou sem golpes cadastrados ainda.</div>
+        <div v-else-if="!golpesArma.length" class="msg warn">Sem arma equipada ou sem Sword Skills cadastradas ainda.</div>
         <div v-else style="display:flex;flex-direction:column;gap:8px">
           <div v-for="g in golpesArma" :key="g.nome" class="card" style="background:var(--panel);border:none">
-            <div class="ct">{{ g.nome }} <span v-if="g.bonus" class="pill on">{{ g.bonus }}</span></div>
-            <p style="font-style:italic;color:var(--ink-dim);margin:4px 0">{{ g.gatilho }}</p>
-            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">10+</b> {{ g.dezMais.join(" · ") }}</div>
-            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">7-9</b> {{ g.seteNove.join(" · ") }}</div>
-            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">6-</b> {{ g.seisMenos.join(" · ") }}</div>
+            <div class="ct">{{ g.nome }} <span class="pill" :class="{on: g.limitBreak}">{{ g.limitBreak ? "⚡ Limit Break" : `Nível ${g.nivel}` }}</span></div>
+            <p style="font-size:13px;margin:4px 0;white-space:pre-line">{{ g.descricao }}</p>
           </div>
         </div>
 
-        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🛠️ Golpes de Profissão · {{ auth.personagem?.profissao || "—" }}</h3>
+        <h3 style="margin: 18px 0 10px; color: var(--gold-bright)">🛠️ Habilidades de Profissão · {{ auth.personagem?.profissao || "—" }}</h3>
         <div v-if="carregandoGolpes" class="msg info carregando">Carregando…</div>
-        <div v-else-if="!golpesProfissao.length" class="msg warn">Sem profissão definida ou sem golpes cadastrados ainda.</div>
+        <div v-else-if="!golpesProfissao.length" class="msg warn">Sem profissão definida ou sem habilidades cadastradas ainda.</div>
         <div v-else style="display:flex;flex-direction:column;gap:8px">
           <div v-for="g in golpesProfissao" :key="g.nome" class="card" style="background:var(--panel);border:none">
-            <div class="ct">{{ g.nome }} <span v-if="g.bonus" class="pill on">{{ g.bonus }}</span></div>
-            <p style="font-style:italic;color:var(--ink-dim);margin:4px 0">{{ g.gatilho }}</p>
-            <div v-if="g.dezMais.length" style="font-size:13px;margin-top:4px"><b style="color:#62c56a">10+</b> {{ g.dezMais.join(" · ") }}</div>
-            <div v-if="g.seteNove.length" style="font-size:13px;margin-top:4px"><b style="color:#d9ad5e">7-9</b> {{ g.seteNove.join(" · ") }}</div>
-            <div v-if="g.seisMenos.length" style="font-size:13px;margin-top:4px"><b style="color:#e0887a">6-</b> {{ g.seisMenos.join(" · ") }}</div>
+            <div class="ct">{{ g.nome }} <span class="pill">Nível {{ g.nivel }}</span></div>
+            <p style="font-size:13px;margin:4px 0;white-space:pre-line">{{ g.descricao }}</p>
           </div>
         </div>
 
@@ -274,23 +274,26 @@ async function carregarLimitBreakers() {
     console.warn(e);
   }
 }
+// D&D 5e (Seção 4 do SAO_RPG_5e.md) — substitui os 5 atributos PBTA.
 const ATTR = {
-  tecnica: "Técnica",
-  espirito: "Espírito",
-  conhecimento: "Conhecimento",
-  reflexo: "Reflexo",
-  corpo: "Corpo",
+  forca: "Força",
+  destreza: "Destreza",
+  constituicao: "Constituição",
+  inteligencia: "Inteligência",
+  sabedoria: "Sabedoria",
+  carisma: "Carisma",
 };
 const atributos = computed(() =>
-  Object.keys(ATTR).map((k) => ({
-    k,
-    nome: ATTR[k],
-    v:
-      auth.personagem && auth.personagem.atributos
-        ? auth.personagem.atributos[k] || 0
-        : 0,
-  })),
+  Object.keys(ATTR).map((k) => {
+    const v =
+      auth.personagem && auth.personagem.atributos_dnd
+        ? auth.personagem.atributos_dnd[k] ?? 10
+        : 10;
+    return { k, nome: ATTR[k], v, mod: Math.floor((v - 10) / 2) };
+  }),
 );
+const pvMax = computed(() => auth.personagem?.vida_max ?? 0);
+const pvAtual = computed(() => auth.personagem?.vida_atual ?? 0);
 const foto = computed(
   () => auth.personagem?.foto_url || auth.perfil?.foto_url || "",
 );
@@ -352,42 +355,28 @@ async function carregarArmaDetalhe() {
   }
 }
 
-// ===== Golpes (arma + profissão) — normaliza os dois formatos de JSON
-// que moves_arma/moves_profissao usam (lista de 5 opções nas armas e nas
-// 15 profissões com Move Exclusivo; texto corrido no Move de Ofício/Cena
-// mais antigo) num shape só pra exibir. =====
+// ===== Sword Skills (arma) + habilidades por nível (profissão) — lê
+// moves_arma.sword_skills/limit_break_novo e moves_profissao.niveis
+// (Seções 55-59/30-44 do SAO_RPG_5e.md, populado por
+// scripts/db/_popular_moves_dnd5e.py). =====
 const carregandoGolpes = ref(true);
 const golpesArma = ref([]);
 const golpesProfissao = ref([]);
-function normalizarGolpe(g) {
-  if (!g || !g.nome) return null;
-  const paraLista = (v) => (Array.isArray(v) ? v : v ? [v] : []);
-  return {
-    nome: g.nome,
-    gatilho: g.gatilho || "",
-    bonus: g.bonus_acerto || "",
-    dezMais: paraLista(g.dez_mais),
-    seteNove: paraLista(g.sete_nove),
-    seisMenos: paraLista(g.seis_menos),
-  };
-}
 async function carregarGolpes() {
   carregandoGolpes.value = true;
   try {
     const [rArma, rProf] = await Promise.all([
       armaDetalhe.value?.tipo
-        ? supa.from("moves_arma").select("move_a,golpe_2,limit_breaker").eq("nome", armaDetalhe.value.tipo).eq("visivel", true).maybeSingle()
+        ? supa.from("moves_arma").select("sword_skills,limit_break_novo").eq("nome", armaDetalhe.value.tipo).eq("visivel", true).maybeSingle()
         : Promise.resolve({ data: null }),
       auth.personagem?.profissao
-        ? supa.from("moves_profissao").select("move_a,move_b,move_c").eq("nome", auth.personagem.profissao).eq("visivel", true).maybeSingle()
+        ? supa.from("moves_profissao").select("niveis").eq("nome", auth.personagem.profissao).eq("visivel", true).maybeSingle()
         : Promise.resolve({ data: null }),
     ]);
-    golpesArma.value = rArma.data
-      ? [normalizarGolpe(rArma.data.move_a), normalizarGolpe(rArma.data.golpe_2), normalizarGolpe(rArma.data.limit_breaker)].filter(Boolean)
-      : [];
-    golpesProfissao.value = rProf.data
-      ? [normalizarGolpe(rProf.data.move_a), normalizarGolpe(rProf.data.move_b), normalizarGolpe(rProf.data.move_c)].filter(Boolean)
-      : [];
+    const skillsArma = rArma.data?.sword_skills || [];
+    const lb = rArma.data?.limit_break_novo;
+    golpesArma.value = [...skillsArma, ...(lb ? [{ ...lb, limitBreak: true }] : [])].sort((a, b) => a.nivel - b.nivel);
+    golpesProfissao.value = (rProf.data?.niveis || []).slice().sort((a, b) => a.nivel - b.nivel);
   } catch (e) {
     console.warn(e);
   } finally {

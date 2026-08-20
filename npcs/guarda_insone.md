@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Escudo e Espada
 guilda: 
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: 0
-  espirito: 1
-  tecnica: -1
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 10
+  sabedoria: 12
+  carisma: 12
 tags: [guarda, castelo, insone, observador]
 imagem: ../imagens/npc_guarda_insone.png
 ---
@@ -59,3 +60,5 @@ o resultado do teste de Espírito.
 
 Combatente competente mas relutante — só entra em confronto se o posto
 dele for diretamente ameaçado. Prefere reportar e observar a agir sozinho.
+
+<!-- convertido-dnd5e -->

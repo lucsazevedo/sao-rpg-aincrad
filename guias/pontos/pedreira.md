@@ -30,8 +30,8 @@ de entrada da região: quem chega em Dunhelm quase sempre para aqui primeiro.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Separar sucata aproveitável | 2d6+Técnica | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável — e uma lasca corta a mão de quem insistiu sem Luvas |
-| Rastrear quem trabalhou aqui | 2d6+Conhecimento | Descobre que ninguém esteve — as marcas de ferramenta e o desgaste são anteriores ao lançamento | Descobre que o desgaste não bate com dez dias de uso | Conclui que teve gente trabalhando aqui até pouco tempo |
+| Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável — e uma lasca corta a mão de quem insistiu sem Luvas |
+| Rastrear quem trabalhou aqui | d20+Inteligência | Descobre que ninguém esteve — as marcas de ferramenta e o desgaste são anteriores ao lançamento | Descobre que o desgaste não bate com dez dias de uso | Conclui que teve gente trabalhando aqui até pouco tempo |
 
 **Só o mestre:** é aqui que o mistério da pedreira começa, antes de
 qualquer engrenagem: dez dias de jogadores não explicam décadas de desgaste.
@@ -59,7 +59,7 @@ corresponde a nada que a pedreira faria, ponto único. É o local central de
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Analisar o maquinário | 2d6+Conhecimento | Reconhece que a tecnologia destoa do resto de Aincrad — e que as engrenagens têm o tamanho certo pra mover uma estrutura da escala de um andar inteiro | Percebe só que é estranho, grande demais pro contexto | Ignora, parece só entulho — "máquina velha de pedreira" |
+| Analisar o maquinário | d20+Inteligência | Reconhece que a tecnologia destoa do resto de Aincrad — e que as engrenagens têm o tamanho certo pra mover uma estrutura da escala de um andar inteiro | Percebe só que é estranho, grande demais pro contexto | Ignora, parece só entulho — "máquina velha de pedreira" |
 
 **Só o mestre:** a revelação da bounty não é um objeto, é uma **conclusão**
 — o que fazer com ela é problema do grupo, e você não deve ajudar. Se o
@@ -85,7 +85,7 @@ esperar.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Separar sucata aproveitável | 2d6+Técnica | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
+| Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
 
 **Só o mestre:** a ferrugem "mais nova" é só textura — se o grupo quiser
 investigar quem revirou a pilha, improvise: ninguém revirou. Mais um detalhe
@@ -111,7 +111,7 @@ Enferrujado e ainda duvida da própria conclusão.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Analisar as peças soltas | 2d6+Conhecimento | Reconhece que a tecnologia destoa do resto de Aincrad — mesmo conjunto, mesma escala errada | Percebe só que é estranho | Ignora, parece só entulho |
+| Analisar as peças soltas | d20+Inteligência | Reconhece que a tecnologia destoa do resto de Aincrad — mesmo conjunto, mesma escala errada | Percebe só que é estranho | Ignora, parece só entulho |
 
 **Só o mestre:** duas evidências na mesma região formam padrão — se o grupo
 já viu a carcaça do terceiro patamar, trate o teste como confirmação, não
@@ -136,11 +136,11 @@ teste, mais fundo na cratera, com o fundo alagado visível daqui.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Separar sucata aproveitável | 2d6+Técnica | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
+| Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
 
 **Só o mestre:** daqui o grupo enxerga a água parada do fundo — se alguém
 quiser descer, use a tabela da região em `guias/03_leste_e_aguas.md`
-(2d6+Reflexo, rampa que cede).
+(d20+Destreza, rampa que cede).
 
 **Atalhos:** regiao:pedreira
 
@@ -159,7 +159,7 @@ variação mais quieta da região, boa pra ritmo de exploração lenta.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Separar sucata aproveitável | 2d6+Técnica | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
+| Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
 
 **Só o mestre:** a fileira "guardada pra amanhã" é o eco mais humano do
 mistério da pedreira — ferramentas deixadas por trabalhadores que, pelo
@@ -182,8 +182,8 @@ exposto, na borda superior da cratera.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Separar sucata aproveitável | 2d6+Técnica | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
-| Revirar os montículos de poeira | 2d6+Reflexo | Percebe a poeira mais fina se mexendo antes de pisar | Percebe no limite — recua sem coletar nada | Pisa no arco errado: Escorpião de Poeira, primeiro golpe dele |
+| Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
+| Revirar os montículos de poeira | d20+Destreza | Percebe a poeira mais fina se mexendo antes de pisar | Percebe no limite — recua sem coletar nada | Pisa no arco errado: Escorpião de Poeira, primeiro golpe dele |
 
 **Só o mestre:** as bordas da pedreira são habitat de Escorpião de Poeira
 (`monstros/escorpiao_de_poeira.md`) — enterrado sob dois dedos de poeira

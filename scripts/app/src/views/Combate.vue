@@ -45,7 +45,8 @@
 
       <div v-if="ultimoResultado" class="msg" :class="corResultado(ultimoResultado.resultado)" style="margin-bottom:14px">
         <b>{{ tituloResultado(ultimoResultado.resultado) }}</b> contra {{ ultimoResultado.monstro_nome }} —
-        dados {{ ultimoResultado.dados?.join('+') }} (mod incluso, soma {{ ultimoResultado.soma_com_mod }}).
+        d20 {{ ultimoResultado.d20 }}{{ ultimoResultado.d20===20?' (crítico!)':ultimoResultado.d20===1?' (falha crítica)':'' }},
+        total {{ ultimoResultado.total }} vs. CD {{ ultimoResultado.cd }}.
         <template v-if="ultimoResultado.chefe_vida_max !== undefined">
           <span v-if="ultimoResultado.dano_causado">· {{ ultimoResultado.dano_causado }} de dano no chefe</span>
           <span> · {{ ultimoResultado.contribuintes_distintos }}/{{ ultimoResultado.min_contribuintes }} contribuintes</span>
@@ -104,7 +105,7 @@
 
           <div class="faixa" style="margin-top:8px">
             <span class="pill" :class="{on: chancePreview(m)>=50}">🎯 {{ chancePreview(m) }}% vitória</span>
-            <span v-if="bateFraqueza(m)" class="pill on">⚡ sua arma bate a fraqueza (+1)</span>
+            <span v-if="bateFraqueza(m)" class="pill on">⚡ sua arma bate a fraqueza (+2)</span>
             <span class="pill">💨 −{{ custoFolego(m) }}</span>
           </div>
           <div style="margin-top:10px;display:flex;justify-content:flex-end">
@@ -168,11 +169,28 @@ function nivelMonstro(m) {
 function custoFolego(m) {
   return Math.max(1, Math.ceil(nivelMonstro(m) / 3))
 }
+// Espelha chance_combate_preview() no banco (d20 + bônus de proficiência +
+// diferença de nível vs. CD por nível de conteúdo — Seções 29/71 do
+// SAO_RPG_5e.md). Ver schema_migracao_dnd5e_rpcs.sql.
+function bonusProficiencia(nivel) {
+  if (nivel <= 4) return 2
+  if (nivel <= 8) return 3
+  if (nivel <= 12) return 4
+  if (nivel <= 16) return 5
+  return 6
+}
+function cdPorNivel(nivel) {
+  if (nivel <= 2) return 10
+  if (nivel <= 4) return 12
+  if (nivel <= 6) return 15
+  if (nivel <= 8) return 18
+  return 20
+}
 function chancePreview(m) {
   const dif = nivelProfissaoAtual.value - nivelMonstro(m)
-  const chanceVitoria = 50 + dif * 7
-  const chanceParcial = 25 - Math.max(0, dif * 2)
-  return Math.round(Math.max(5, Math.min(95, chanceVitoria + chanceParcial * 0.7)))
+  const mod = bonusProficiencia(nivelProfissaoAtual.value) + Math.max(-2, Math.min(4, dif))
+  const cd = cdPorNivel(nivelMonstro(m))
+  return Math.round(Math.max(5, Math.min(95, (21 - (cd - mod)) * 5)))
 }
 function bateFraqueza(m) {
   return !!(m.atributo_fraqueza && minhaArmaAtributo.value && m.atributo_fraqueza === minhaArmaAtributo.value)

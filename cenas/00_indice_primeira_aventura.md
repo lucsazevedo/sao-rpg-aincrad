@@ -21,7 +21,7 @@ o suficiente pra prender quem está assistindo.
 ## Ordem sugerida
 
 1. **[Javalis na Pastagem](01_javalis_na_pastagem.md)** (Eliminação) --
-   primeiro combate, ensina o sistema 2d6+atributo com risco baixo.
+   primeiro combate, ensina o sistema d20+atributo com risco baixo.
 2. **[Seiva para a Alquimista](02_seiva_para_a_alquimista.md)** (Coleta) --
    primeira exploração de verdade, apresenta a Mulher Aflita e o Little
    Nepenthes.

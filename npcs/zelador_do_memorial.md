@@ -7,11 +7,12 @@ profissao: Coveiro
 arma: 
 guilda: 
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 0
-  espirito: 2
-  tecnica: 0
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 10
+  sabedoria: 14
+  carisma: 14
 tags: [coveiro, memorial, guardião de segredo, necrópole]
 imagem: ../imagens/npc_zelador_do_memorial.png
 ---
@@ -86,3 +87,5 @@ conforme a confiança que o grupo constrói, quanto da história real contar.
 Não luta. Se a Necrópole for ameaçada, foge ou se esconde entre as
 lápides — sua única defesa é conhecer o terreno melhor que qualquer
 invasor.
+
+<!-- convertido-dnd5e -->

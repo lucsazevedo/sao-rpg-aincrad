@@ -31,8 +31,8 @@ vale.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher flores raras | 2d6+Conhecimento | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
-| Identificar espécies úteis (Alquimista) | 2d6+Conhecimento | Três ingredientes diferentes catalogados | Um ingrediente | Colhe algo inútil e perde a tarde |
+| Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
+| Identificar espécies úteis (Alquimista) | d20+Inteligência | Três ingredientes diferentes catalogados | Um ingrediente | Colhe algo inútil e perde a tarde |
 
 **Só o mestre:** o Néctar de Flor Rara em si não sai da colheita comum — vem
 das Fadas da Poeira (drop ou doma, ver `monstros/fada_da_poeira.md`) ou da
@@ -59,8 +59,8 @@ não agressivas. Ver ficha completa em `monstros/fada_da_poeira.md`.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Domar uma fada (4 sucessos, exige Néctar de Flor Rara) | 2d6+Técnica | 1 sucesso limpo | 1 sucesso, mas ela se afasta irritada | Sem sucesso; a segunda falha encerra a tentativa |
-| Abater uma no pouso | 2d6+Reflexo | Abate sem levantar pó nenhum | Abate, mas a nuvem desce | Erra — e a nuvem inteira reage |
+| Domar uma fada (4 sucessos, exige Néctar de Flor Rara) | d20+Destreza | 1 sucesso limpo | 1 sucesso, mas ela se afasta irritada | Sem sucesso; a segunda falha encerra a tentativa |
+| Abater uma no pouso | d20+Destreza | Abate sem levantar pó nenhum | Abate, mas a nuvem desce | Erra — e a nuvem inteira reage |
 
 **Só o mestre:** elas não ferem de propósito — o perigo é o espirro. Use o
 sopro de pó pra puxar um encontro de **fora** do vale, nunca de dentro:
@@ -88,7 +88,7 @@ dono.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher flores raras | 2d6+Conhecimento | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
+| Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
 **Só o mestre:** um 6- aqui ("amassa tudo") é exatamente o que acorda o
 Guardião ao lado. Se o grupo colher limpo, deixe colher limpo: Fenwyth não
@@ -113,8 +113,8 @@ saqueada com falha.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber que não é vegetação comum | 2d6+Espírito | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
-| Arrancar pela base do caule | 2d6+Corpo | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
+| Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
+| Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
 
 **Só o mestre:** o gatilho é a falha na colheita, não a presença do grupo —
 um grupo que colhe direito nunca luta aqui. É o único "combate" da região e é
@@ -139,7 +139,7 @@ outro cenário.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher flores raras | 2d6+Conhecimento | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
+| Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
 **Só o mestre:** se o grupo já colheu em outro canteiro, jogue só na
 descrição (espiral, cheiro que enjoa) sem mudar a mecânica — é o mesmo teste,
@@ -162,8 +162,8 @@ sentinela — fraca (1-2 golpes), imóvel, reage só a saque com falha.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber que não é vegetação comum | 2d6+Espírito | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
-| Arrancar pela base do caule | 2d6+Corpo | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
+| Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
+| Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
 
 **Só o mestre:** se já usou o primeiro Guardião, varie descrevendo o peso do
 cipó caindo sobre o tornozelo de quem anda por último na fila — a trepadeira
@@ -186,7 +186,7 @@ outro cenário.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher flores raras | 2d6+Conhecimento | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
+| Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
 **Só o mestre:** o pólen baixo é um bom preâmbulo de mudança de tempo — se
 você pretende puxar algo de fora do vale na sequência (perseguidor, chuva),
@@ -210,8 +210,8 @@ mesmo gatilho de sempre: só reage a saque com falha.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber que não é vegetação comum | 2d6+Espírito | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
-| Arrancar pela base do caule | 2d6+Corpo | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
+| Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
+| Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
 
 **Só o mestre:** lore da ficha — a trepadeira cresce onde o solo é rico, ou
 onde alguma coisa grande morreu embaixo. O círculo murcho é só isso. Deixe a
@@ -235,7 +235,7 @@ entrada, costuma ser achado por último.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher flores raras | 2d6+Conhecimento | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
+| Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
 **Só o mestre:** recompensa de exploração completa — grupo que sobe até aqui
 já viu o vale inteiro. Se houver um Joalheiro na mesa, as pétalas maiores são
@@ -258,8 +258,8 @@ golpes), mesmo gatilho: só reage a saque com falha.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber que não é vegetação comum | 2d6+Espírito | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
-| Arrancar pela base do caule | 2d6+Corpo | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
+| Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
+| Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
 
 **Só o mestre:** se o grupo já derrubou um Guardião antes, este não precisa
 nem virar cena — descreva o cipó recuando devagar enquanto eles colhem, e
@@ -283,7 +283,7 @@ rota natural da região.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher flores raras | 2d6+Conhecimento | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
+| Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
 **Só o mestre:** bom lugar pra fechar a visita — se o grupo já viu tudo, diga
 fora de ficção que Fenwyth não tem mais nada pra mostrar nesta passada.

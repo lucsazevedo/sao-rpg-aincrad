@@ -53,7 +53,7 @@ Move de Ofício no manual: **Mapa Vivo**.
 
 **Ao entrar numa região do mapa** (`scripts/web/dados_mapa.js`) **ainda sem
 nenhum ponto descoberto**, o Cartógrafo pode parar, observar e testar
-**2d6+Conhecimento** antes de explorar normalmente:
+**d20+Inteligência** antes de explorar normalmente:
 - **10+**: revela de uma vez todos os pontos tipo `sempre` da região (os que
   não exigem `requer`) e o mestre deve indicar uma rota segura entre dois
   marcos óbvios da região.
@@ -85,7 +85,7 @@ funciona com acesso a uma fonte real, não em qualquer lugar:
 - **Memorial de Voss** (NPC Zelador do Memorial) é fonte secundária pra
   monstros ligados a mortes de jogadores especificamente.
 
-Teste **2d6+Conhecimento**:
+Teste **d20+Inteligência**:
 - **10+**: revela a fraqueza principal e mais 1 detalhe útil (hábito,
   prioridade de alvo, medo, padrão de patrulha ou “o que ele nunca faz”).
 - **7-9**: revela só a fraqueza principal, mas a fonte cobra algo (tempo,
@@ -117,11 +117,11 @@ comprar/vender.
 
 | Monstro | Material bônus de caça | Teste |
 |---|---|---|
-| Frenzy Boar | Presa completa (drop normal é só XP/Col; a presa intacta exige extração cuidadosa) | 2d6+Reflexo |
-| Stabbing Wasp | Glândula de veneno intacta | 2d6+Técnica |
-| Little Nepenthes | Seiva pura sem contaminar (evita o spray) | 2d6+Reflexo |
-| Lacustre Vagador | Garras completas | 2d6+Corpo |
-| Ruin Kobold Trooper/Sentinel | Fragmento de armadura sem amassar | 2d6+Técnica |
+| Frenzy Boar | Presa completa (drop normal é só XP/Col; a presa intacta exige extração cuidadosa) | d20+Destreza |
+| Stabbing Wasp | Glândula de veneno intacta | d20+Destreza |
+| Little Nepenthes | Seiva pura sem contaminar (evita o spray) | d20+Destreza |
+| Lacustre Vagador | Garras completas | d20+Força |
+| Ruin Kobold Trooper/Sentinel | Fragmento de armadura sem amassar | d20+Destreza |
 
 ## Criaturas domáveis (Domador)
 
@@ -129,7 +129,7 @@ Cobertura completa do bestiário do andar 1 — toda criatura tem status
 explícito de doma, não só as que viraram quest. Doma funciona como uma
 **barra de sucessos**, na mesma lógica de golpes-para-derrotar do combate
 (`docs/guia_sistema_aincrad.md`): cada tentativa é um teste de
-**2d6+Técnica** (10+: 1 sucesso limpo; 7-9: 1 sucesso, mas a criatura reage
+**d20+Destreza** (10+: 1 sucesso limpo; 7-9: 1 sucesso, mas a criatura reage
 mal nesse turno — ela pode fugir ou o Domador leva um dano leve; 6-: sem
 sucesso, e 2 falhas seguidas fazem a criatura fugir/atacar de vez,
 encerrando a tentativa). **Sucessos necessários** escala com a mesma faixa

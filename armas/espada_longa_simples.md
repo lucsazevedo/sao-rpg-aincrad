@@ -1,7 +1,7 @@
 ---
 nome: Espada Longa Simples
 tipo: Espada Longa
-atributo_principal: Corpo
+atributo_principal: Força
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjada por um ferreiro da Cidade do Início logo após o anúncio do Game Maste
 ## Como obter
 
 Disponível na loja da Cidade do Início ou fabricada por um ferreiro local.
+
+<!-- convertido-dnd5e -->

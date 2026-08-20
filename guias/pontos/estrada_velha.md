@@ -29,7 +29,7 @@ lugar onde a estrada mostra que guarda algo inexplicado.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler os números gravados | 2d6+Conhecimento | Percebe que a sequência não é distância — é outra coisa | Percebe que está errado, sem saber o porquê | "Deve ser decoração" |
+| Ler os números gravados | d20+Inteligência | Percebe que a sequência não é distância — é outra coisa | Percebe que está errado, sem saber o porquê | "Deve ser decoração" |
 | Usar o marco pra se orientar | — | Sem teste — a partir daqui o grupo sabe em que trecho da rota está e o que vem adiante | | |
 
 **Só o mestre:** os números errados são mistério de fundo que ninguém
@@ -57,8 +57,8 @@ daqui (respawn de 3h), e é neste ponto que
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber o sinal antes do ataque | 2d6+Reflexo | Vê o hound isca e entende o padrão antes dos outros dois fecharem | Vê tarde demais pra escolher posição — o combate começa emparelhado | A matilha escolhe o flanco e o primeiro alvo |
-| Enfrentar a matilha | 2d6+Corpo | Derruba um hound e cancela a entrada do terceiro | Troca golpes no ritmo deles | Mordida de arrasto puxa alvo ou carga pra fora da formação |
+| Perceber o sinal antes do ataque | d20+Destreza | Vê o hound isca e entende o padrão antes dos outros dois fecharem | Vê tarde demais pra escolher posição — o combate começa emparelhado | A matilha escolhe o flanco e o primeiro alvo |
+| Enfrentar a matilha | d20+Força | Derruba um hound e cancela a entrada do terceiro | Troca golpes no ritmo deles | Mordida de arrasto puxa alvo ou carga pra fora da formação |
 | Recolher o que sobrou depois | — | Col + informação sobre quem anda assaltando a rota | | |
 
 **Só o mestre:** ameaça comum, 3-4 golpes. Use dois ou três hounds, nunca
@@ -87,8 +87,8 @@ descanso mais movimentada da rota.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Comprar importados | — | Sem teste — estoque variado, preço de Comerciante da praça +10% | | |
-| Pechinchar com o condutor | 2d6+Conhecimento | Preço de atacado (20% abaixo) | Preço normal | Ele fecha a carroça |
-| Pedir notícia da estrada | 2d6+Espírito | Conta o que viu adiante — inclusive movimento estranho perto do ponto de assalto | Conta só o trecho que já passou | "Notícia se vende, não se dá" |
+| Pechinchar com o condutor | d20+Inteligência | Preço de atacado (20% abaixo) | Preço normal | Ele fecha a carroça |
+| Pedir notícia da estrada | d20+Sabedoria | Conta o que viu adiante — inclusive movimento estranho perto do ponto de assalto | Conta só o trecho que já passou | "Notícia se vende, não se dá" |
 
 **Só o mestre:** bom ponto pra entregar rumor de região sem custo de cena
 — a caravana vem no sentido contrário e viu o que o grupo ainda não viu.
@@ -114,7 +114,7 @@ com atenção.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar as marcas de luta | 2d6+Conhecimento | Reconhece o padrão de um assalto recente, não um evento aleatório | Percebe só que teve briga ali | Passa direto |
+| Examinar as marcas de luta | d20+Inteligência | Reconhece o padrão de um assalto recente, não um evento aleatório | Percebe só que teve briga ali | Passa direto |
 
 **Só o mestre:** é o beat de investigação de
 `bounty_06_caravana_emboscada` — quem tira 10+ aqui chega ao Ponto de
@@ -143,9 +143,9 @@ real: proteger carga, pessoas ou reputação — nunca os três.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Negociar o contrato de escolta | 2d6+Espírito | Termos bons, e a prioridade (carga, pessoas ou reputação) é definida junto com o grupo | Contrato fechado, mas a prioridade fica na mão dele | Ele desconfia — o preço sobe ou a vaga fecha |
-| Perguntar sobre a rota | 2d6+Conhecimento | Rotas, custo real de uma escolta e quem costuma mexer em carga | Só o custo e a rota | "Pergunta de graça é a que mais custa" |
-| Escoltar a carroça até Kaldrin | 2d6+Corpo/Reflexo | Carga e gente inteiras; ele para de cobrar em Col e passa a pedir presença | Salvam a carga com perda pelo caminho | Carga perdida — e ele guarda rancor de quem sugeriu trocar gente por mercadoria |
+| Negociar o contrato de escolta | d20+Sabedoria | Termos bons, e a prioridade (carga, pessoas ou reputação) é definida junto com o grupo | Contrato fechado, mas a prioridade fica na mão dele | Ele desconfia — o preço sobe ou a vaga fecha |
+| Perguntar sobre a rota | d20+Inteligência | Rotas, custo real de uma escolta e quem costuma mexer em carga | Só o custo e a rota | "Pergunta de graça é a que mais custa" |
+| Escoltar a carroça até Kaldrin | d20+Força/Reflexo | Carga e gente inteiras; ele para de cobrar em Col e passa a pedir presença | Salvam a carga com perda pelo caminho | Carga perdida — e ele guarda rancor de quem sugeriu trocar gente por mercadoria |
 
 **Só o mestre:** a carga pode virar equipamento de raid — escoltar dá
 crédito a um clã, revelar o destino impede o clã rival de tentar tomá-la
@@ -172,8 +172,8 @@ no deles.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler a trilha e prever a emboscada | 2d6+Conhecimento | Prevê a emboscada e escolhe o terreno | Prevê, mas a carga ou alguém fica exposto | A matilha escolhe o primeiro alvo |
-| Enfrentar a matilha | 2d6+Corpo | Ver `monstros/hound_de_cobre.md` — Técnica desmonta o trio inteiro | | |
+| Ler a trilha e prever a emboscada | d20+Inteligência | Prevê a emboscada e escolhe o terreno | Prevê, mas a carga ou alguém fica exposto | A matilha escolhe o primeiro alvo |
+| Enfrentar a matilha | d20+Força | Ver `monstros/hound_de_cobre.md` — Técnica desmonta o trio inteiro | | |
 
 **Só o mestre:** ameaça comum, 3 golpes. Recompensa: Placa de Cobre Fosco
 (Ferreiro) + Col. Se cair um Elo de Coleira, guarde o detalhe — os

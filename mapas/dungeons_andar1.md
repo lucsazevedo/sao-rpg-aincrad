@@ -90,7 +90,7 @@ Col, e eles são honestos.
 > de cor e o som muda de textura. Não tem aviso. Não tem guarda. Só tem o
 > lado de dentro.
 
-**O que dá pra fazer:** examinar o arco (2d6+Conhecimento — 10+: a pedra é da
+**O que dá pra fazer:** examinar o arco (d20+Inteligência — 10+: a pedra é da
 mesma família da Torre de Aldric e do Castelo de Ferro Negro); falar com o
 Marco (`npcs/marco.md`); recuar sem vergonha nenhuma.
 **Quem está aqui:** ninguém. É o único ponto do Labirinto que nunca tem nada.
@@ -102,7 +102,7 @@ Marco (`npcs/marco.md`); recuar sem vergonha nenhuma.
 
 **O que dá pra fazer:** atravessar em silêncio (**impossível** — diga isso;
 a galeria não permite furtividade, e é a primeira lição do Labirinto);
-arrancar um cristal da parede (2d6+Técnica — 10+: um Cristal de Luz de
+arrancar um cristal da parede (d20+Destreza — 10+: um Cristal de Luz de
 verdade, 7-9: ele apaga ao sair, 6-: racha e o barulho puxa I-4).
 **Detalhe:** as marcas de giz no chão começam aqui. Metade é de gente honesta.
 
@@ -114,7 +114,7 @@ verdade, 7-9: ele apaga ao sair, 6-: racha e o barulho puxa I-4).
 
 **O que dá pra fazer:** descansar (recupera, e não respawna nada); comprar
 (tudo 40% acima da tabela — é preço de dentro de dungeon); ouvir boato
-(2d6+Espírito — 10+: alguém conta da Trifurcação do Trecho II e que dois
+(d20+Sabedoria — 10+: alguém conta da Trifurcação do Trecho II e que dois
 corredores são becos).
 **Quem está aqui:** batedores de guilda. **Vess** (`npcs/vess.md`) passa por
 aqui todo entardecer.
@@ -128,10 +128,10 @@ seco. Gente descansa aqui, mas nunca relaxa de verdade.
 
 **Quem está aqui:** **Ruin Kobold Trooper x2** (comum, 3 golpes cada).
 Respawn 3h.
-**O que dá pra fazer:** emboscar (2d6+Reflexo — 10+: o primeiro cai antes de
-reagir); passar sem lutar (2d6+Reflexo — só possível se apagarem a luz);
+**O que dá pra fazer:** emboscar (d20+Destreza — 10+: o primeiro cai antes de
+reagir); passar sem lutar (d20+Destreza — só possível se apagarem a luz);
 lutar de frente (justo, e a lição é que kobold luta em par de propósito).
-**Material:** Fragmento de Armadura Kobold (só o Caçador extrai, 2d6+Técnica).
+**Material:** Fragmento de Armadura Kobold (só o Caçador extrai, d20+Destreza).
 
 ### I-5 · Nicho Rachado — `tesouro`
 > Uma rachadura na parede larga o suficiente pra passar de lado. Lá dentro,
@@ -141,7 +141,7 @@ lutar de frente (justo, e a lição é que kobold luta em par de propósito).
 **Tesouro (nomeado):** 120 Col, **um Cristal de Luz** e **um Cristal de
 Antídoto**. Os dois cristais que o puzzle do mural precisa e que o grupo não
 tem dinheiro pra comprar — é aqui que o Labirinto paga o Castelo.
-**O que dá pra fazer:** verificar armadilha (2d6+Técnica — não tem, e isso é
+**O que dá pra fazer:** verificar armadilha (d20+Destreza — não tem, e isso é
 informação: alguém deixou o baú aí de propósito e fechado).
 
 ### I-6 · Escada Descendente — `corredor`
@@ -162,7 +162,7 @@ Aqui o Labirinto começa a mentir. É onde o **Cartógrafo** justifica existir.
 > de cristal na parede, mesma marca de giz no chão — a mesma marca, nos três.
 > Quem desenhou isso desenhou pra confundir, e conseguiu.
 
-**O teste:** 2d6+Conhecimento. **10+:** acha o corredor certo (o do meio, e o
+**O teste:** d20+Inteligência. **10+:** acha o corredor certo (o do meio, e o
 detalhe que entrega é que só nele o pó do chão está pisado nos dois sentidos —
 gente foi e voltou). **7-9:** acha o certo, mas encosta na parede errada e
 dispara um alarme: a patrulha de II-6 vem até vocês. **6-:** beco.
@@ -174,7 +174,7 @@ dinheiro que o grupo vai gastar.
 > uma placa de pedra levemente mais clara que as outras.
 
 **Armadilha:** placa de pressão → lâmina lateral saindo da parede na altura
-da coxa. 2d6+Técnica pra desarmar (10+: trava o mecanismo pra sempre; 7-9:
+da coxa. d20+Destreza pra desarmar (10+: trava o mecanismo pra sempre; 7-9:
 trava e a lâmina volta em uma hora; 6-: dispara).
 **As `Grevas de Verme-Cristal` ignoram a placa completamente.**
 **Recompensa por desarmar:** a lâmina destravada é aço bom — vale um
@@ -196,7 +196,7 @@ madeira antigo. Não é do grupo do Marco. É de alguém que ninguém procura.
 > sentidos, e porque as marcas de giz aqui têm três estilos de letra
 > diferentes — três grupos passaram, em momentos diferentes, e concordaram.
 
-**O que dá pra fazer:** ler as marcas de giz (2d6+Conhecimento — 10+: uma das
+**O que dá pra fazer:** ler as marcas de giz (d20+Inteligência — 10+: uma das
 letras é do grupo do Marco, e diz "voltamos por aqui" com a data do dia 6).
 
 ### II-5 · Depósito Esquecido — `tesouro`
@@ -207,7 +207,7 @@ letras é do grupo do Marco, e diz "voltamos por aqui" com a data do dia 6).
 **Tesouro (nomeado):** **Fragmento de Armadura Kobold x3** e **Placas de
 Metal Refinado x1**. As Placas são o achado real — é material processado, e
 não existe forja no Labirinto. Alguém trouxe de fora e deixou.
-**O que dá pra fazer:** perguntar quem organizou isso (2d6+Conhecimento — 10+:
+**O que dá pra fazer:** perguntar quem organizou isso (d20+Inteligência — 10+:
 foi organizado por mãos humanas, recentemente, e por alguém metódico).
 
 ### II-6 · Sala do Sino — `patrulha`
@@ -218,8 +218,8 @@ foi organizado por mãos humanas, recentemente, e por alguém metódico).
 **Quem está aqui:** **Ruin Kobold Arqueiro x2** (comum, 3 golpes cada).
 **A mecânica:** se o sino tocar, chegam **mais dois Troopers** em duas
 rodadas. Um dos arqueiros vai tentar tocá-lo na primeira rodada.
-**O que dá pra fazer:** derrubar o sino primeiro (2d6+Reflexo com arma de
-alcance — 10+: o sino cai e não toca nunca mais); tomar o nicho (2d6+Corpo
+**O que dá pra fazer:** derrubar o sino primeiro (d20+Destreza com arma de
+alcance — 10+: o sino cai e não toca nunca mais); tomar o nicho (d20+Força
 pra escalar); recuar e fechar o corredor.
 **Tesouro:** o sino, se recuperado inteiro, vale **200 Col** com Tor em
 Tolbana — e ele paga com prazer porque é bronze fundido de verdade, coisa que
@@ -236,7 +236,7 @@ todo mundo, inclusive dos kobolds.
 > Sessenta degraus descendo, com um filete de água correndo no meio de cada um
 > e limo verde nas bordas. O som da água bate na parede e volta multiplicado.
 
-**Teste:** 2d6+Reflexo pra descer (10+: desce e ajuda o próximo; 7-9: desce,
+**Teste:** d20+Destreza pra descer (10+: desce e ajuda o próximo; 7-9: desce,
 mas larga algo não equipado; 6-: cai o lance inteiro — complicação séria e
 barulho).
 **As `Botas Cravejadas de Montanha` dispensam o teste. As `Botas de Sola
@@ -251,7 +251,7 @@ Macia` pioram: role com complicação.**
 `Casaco Encerado do Pântano` **não pode ser grudado** e ganha uma rodada de
 vantagem pro grupo inteiro.
 **Material:** material de Sanguessuga (Médico, Alquimista).
-**O que dá pra fazer:** atravessar por cima (2d6+Reflexo, pulando de saliência
+**O que dá pra fazer:** atravessar por cima (d20+Destreza, pulando de saliência
 em saliência — 10+: passa sem tocar a água); drenar (não dá — e descobrir que
 não dá custa uma ação).
 
@@ -262,7 +262,7 @@ não dá custa uma ação).
 
 **Regra:** fila indiana obrigatória. **Espada Longa e Lança não
 funcionam aqui.** Quem estiver na frente enfrenta sozinho.
-**O que dá pra fazer:** amarrar corda entre todos (2d6+Técnica — 10+: uma
+**O que dá pra fazer:** amarrar corda entre todos (d20+Destreza — 10+: uma
 queda não é fatal pra ninguém; 6-: a corda vira o problema).
 **Detalhe:** jogue uma pedra no vão e conte. Não tem som de fundo.
 
@@ -272,7 +272,7 @@ queda não é fatal pra ninguém; 6-: a corda vira o problema).
 > Alguém empilhou pedra na entrada pra formar um parapeito baixo.
 
 **Um dos dois únicos pontos seguros do Labirinto inteiro.** Descanso completo.
-**O que dá pra fazer:** procurar (2d6+Conhecimento — 10+: acha um bilhete
+**O que dá pra fazer:** procurar (d20+Inteligência — 10+: acha um bilhete
 dobrado sob uma pedra: *"se você tá lendo isso, a gente conseguiu voltar até
 aqui"*, quatro assinaturas, dia 6).
 **Momento bom de mesa:** se o grupo parar aqui depois de apanhar, deixe o
@@ -284,7 +284,7 @@ ruim virando plano possível.
 > tamanho de uma tampa de poço. Ela está solta. Embaixo, uma escada de ferro
 > descendo no escuro.
 
-**Como achar:** 2d6+Conhecimento em III-4, ou 2d6+Reflexo se alguém
+**Como achar:** d20+Inteligência em III-4, ou d20+Destreza se alguém
 especificamente procurar o chão.
 **Recompensa:** **atalho direto pro Trecho V.** Pula os Trechos III-6 e IV
 inteiros. É o maior atalho do andar e ninguém sabe que existe — **nem a Vess**,
@@ -301,9 +301,8 @@ acontecendo do outro lado da parede. Vozes de kobold. Muitas.
 **Quem está aqui:** **Ruin Kobold Sentinel** (forte, 6 golpes). Resiste a
 golpes no corpo. **Fraqueza: a garganta** — o único ponto sem armadura, e o
 colar de couro precisa ser cortado ou removido antes.
-**O que dá pra fazer:** cortar o colar (2d6+Técnica com arma leve — 10+: colar
-cai e a garganta abre, próximos golpes contam dobrado); usar a água (2d6+
-Conhecimento — 10+: derrubá-lo na água anula a vantagem da armadura pesada
+**O que dá pra fazer:** cortar o colar (d20+Destreza com arma leve — 10+: colar
+cai e a garganta abre, próximos golpes contam dobrado); usar a água (d20+Inteligência — 10+: derrubá-lo na água anula a vantagem da armadura pesada
 por uma rodada).
 **Tesouro:** as **braçadeiras dele** — leve a Mestre Bram e viram
 `Braçadeiras do Mercenário`.
@@ -324,8 +323,8 @@ aqui, e isso muda o tom. Não é dungeon abandonada. É casa de alguém.
 **Mecânica:** cobertura anula bônus de arma à distância. `Pavês de Portão` e
 `Lança de Parede de Escudos` brilham — é exatamente a luta pra qual foram
 feitos.
-**O que dá pra fazer:** derrubar o tapume (2d6+Corpo, Machado ou Marreta dá
-vantagem); passar por cima (2d6+Reflexo); negociar (**sim, dá** — 2d6+Espírito
+**O que dá pra fazer:** derrubar o tapume (d20+Força, Machado ou Marreta dá
+vantagem); passar por cima (d20+Destreza); negociar (**sim, dá** — d20+Sabedoria
 com 10+ faz eles recuarem sem lutar, e essa possibilidade deve estar visível).
 
 ### IV-2 · Fogueira Central — `patrulha`
@@ -334,9 +333,9 @@ com 10+ faz eles recuarem sem lutar, e essa possibilidade deve estar visível).
 > volta do fogo. Um deles está costurando alguma coisa.
 
 **Quem está aqui:** **Trooper x2 + Arqueiro x1**.
-**O que dá pra fazer:** atravessar sem lutar (2d6+Reflexo 10+ — é possível e
+**O que dá pra fazer:** atravessar sem lutar (d20+Destreza 10+ — é possível e
 o grupo deve saber disso); atacar de surpresa; **observar por uma rodada
-antes** (2d6+Espírito — 10+: o grupo vê que estão costurando, comendo e
+antes** (d20+Sabedoria — 10+: o grupo vê que estão costurando, comendo e
 conversando, e a mesa inteira fica desconfortável, que é o objetivo).
 **Nota de mestre:** esta sala existe pra tornar o Labirinto moralmente
 esquisito. Não sublinhe. Só descreva o que está acontecendo e deixe.
@@ -351,7 +350,7 @@ Ninguém do grupo precisa comentar; basta estar ali.
 **Tesouro (nomeado):** **340 Col**, **um Cristal de Cura**, e uma **arma
 Incomum aleatória entre as do catálogo** (role ou escolha — mas ela tem dono
 anterior e o nome dele está no cabo).
-**O que dá pra fazer:** procurar algo específico (2d6+Conhecimento — 10+: acha
+**O que dá pra fazer:** procurar algo específico (d20+Inteligência — 10+: acha
 o que estiver procurando, se for razoável); levar tudo (não cabe — o grupo tem
 que escolher, e escolher é a cena).
 
@@ -360,12 +359,12 @@ que escolher, e escolher é a cena).
 > quatro conjuntos de equipamento, empilhados com cuidado contra a parede do
 > fundo. Um deles tem um escudo retangular com o nome riscado no verso.
 
-**Como achar:** só entra quem procurar sala lateral em IV-2 (2d6+Conhecimento).
+**Como achar:** só entra quem procurar sala lateral em IV-2 (d20+Inteligência).
 **O que tem:** o equipamento completo do grupo do Marco — quatro conjuntos,
 incluindo o **`Escudo e Espada do Primeiro Muro`** (Raro).
 **A informação:** não há corpo, porque corpo vira luz. Não há sinal de luta
 nesta sala. O equipamento foi **empilhado**, com cuidado, por alguém.
-**O que dá pra fazer:** identificar os donos (2d6+Conhecimento — 10+: os
+**O que dá pra fazer:** identificar os donos (d20+Inteligência — 10+: os
 quatro nomes que o Marco repete); descobrir quem empilhou (não dá — e essa
 ausência é o ponto).
 **Isto fecha o triângulo:** Marco (Limiar) + Memorial dos Caídos (capital) +
@@ -382,8 +381,8 @@ com prova física, pergunta aberta e medo novo ao mesmo tempo.
 Sentinels ao mesmo tempo exigem foco alvo a alvo, uso de terreno e alguém
 segurando linha. Se o grupo apanhar feio aqui, eles **não** estão prontos, e o
 mestre deve dizer isso com o combate, não com palavras.
-**O que dá pra fazer:** puxar um de cada vez (2d6+Reflexo — 10+: consegue e a
-luta fica justa); fechar a porta atrás (2d6+Corpo).
+**O que dá pra fazer:** puxar um de cada vez (d20+Destreza — 10+: consegue e a
+luta fica justa); fechar a porta atrás (d20+Força).
 
 ---
 
@@ -397,7 +396,7 @@ Silêncio. Nenhum kobold comum passa daqui — eles evitam.
 > com o mesmo símbolo, em cores diferentes. Não é decoração de monstro. É
 > registro.
 
-**O que dá pra fazer:** ler a heráldica (2d6+Conhecimento — **10+:** os
+**O que dá pra fazer:** ler a heráldica (d20+Inteligência — **10+:** os
 estandartes contam uma sucessão: quarenta gerações de alguma coisa, e o
 símbolo do último é o mesmo que está gravado no corredor da sala do chefe.
 **Os kobolds não são nativos deste andar. Eles chegaram aqui.** 7-9: entende
@@ -473,7 +472,7 @@ vira indispensável aqui.
 > é mais frio que o de fora e cheira a pedra molhada.
 
 **O que dá pra fazer:** acender e organizar antes de entrar (dê essa chance
-explicitamente); estimar profundidade pelo eco (2d6+Espírito).
+explicitamente); estimar profundidade pelo eco (d20+Sabedoria).
 
 ### M-2 · Galeria de Estalactites — `patrulha`
 > Estalactites do teto ao chão em fileiras irregulares, algumas grossas como
@@ -491,7 +490,7 @@ vira batedor de caverna — o melhor aliado possível pro resto de Mournhall.
 > de lado, esvaziando o peito. Dá pra passar com mochila? Não.
 
 **Regra:** quem usar **Armadura pesada, Pavês de Portão ou Peitoral de
-Pedra-Viva** precisa tirar e empurrar na frente. 2d6+Reflexo (10+: passa com
+Pedra-Viva** precisa tirar e empurrar na frente. d20+Destreza (10+: passa com
 tudo; 7-9: passa, deixa a peça pesada pro outro lado; 6-: entala, gasta uma
 hora e faz barulho, o que acorda M-2).
 
@@ -504,7 +503,7 @@ hora e faz barulho, o que acorda M-2).
 jogador que falar em voz alta durante a travessia derruba pedra — e então
 conduza a cena inteira em voz baixa, de verdade, na sua mesa. Funciona.
 **O que dá pra fazer:** comunicar por gesto; amarrar o equipamento pra não
-tilintar (2d6+Técnica); jogar uma pedra no poço de propósito (não tem fundo,
+tilintar (d20+Destreza); jogar uma pedra no poço de propósito (não tem fundo,
 e agora o teto está caindo).
 
 ### M-5 · Veio de Musgo Luminoso — `tesouro`
@@ -513,7 +512,7 @@ e agora o teto está caindo).
 
 **Tesouro (nomeado):** **Musgo Luminoso x3** (Alquimista). É a isca de doma da
 Sombra de Mournhall e a única fonte do andar.
-**Teste:** 2d6+Conhecimento pra colher sem matar (10+: 3 unidades e o veio
+**Teste:** d20+Inteligência pra colher sem matar (10+: 3 unidades e o veio
 continua; 7-9: 1 unidade; 6-: o musgo apaga e não volta).
 
 ### M-6 · Câmara Cega — `patrulha`
@@ -534,7 +533,7 @@ que enxerga no escuro.
 > Atrás de uma coluna grossa, um espaço que a luz não alcançava. Seco, do
 > tamanho de uma cama, com uma marca de fogueira antiga.
 
-**Como achar:** 2d6+Conhecimento em M-6, ou simplesmente contornar a coluna.
+**Como achar:** d20+Inteligência em M-6, ou simplesmente contornar a coluna.
 **O que tem:** descanso seguro **e** uma mochila abandonada com **Ração x2**,
 **uma Tocha** e um **mapa parcial da caverna** desenhado à mão que erra o
 caminho pra M-8 de propósito. Quem desenhou não queria que ninguém achasse o
@@ -578,7 +577,7 @@ que qualquer descrição.
 > logo à frente acendem — e os de trás apagam. Eles estão acompanhando.
 
 **Zona segura.** Nada spawna aqui.
-**O que dá pra fazer:** testar a reação dos cristais (2d6+Conhecimento — 10+:
+**O que dá pra fazer:** testar a reação dos cristais (d20+Inteligência — 10+:
 eles respondem a **movimento**, não a presença; ficar parado apaga tudo).
 
 ### L-2 · Corredor Azul — `corredor`
@@ -594,7 +593,7 @@ nada, mas custa tempo — e tempo é a outra moeda desta dungeon.
 
 **Tesouro (nomeado):** **Cristal Bruto x2**. Cada extração custa **+1 de
 vibração**.
-**Teste:** 2d6+Técnica (10+: 2 unidades e o veio continua; 7-9: 1 unidade;
+**Teste:** d20+Destreza (10+: 2 unidades e o veio continua; 7-9: 1 unidade;
 6-: racha o veio, +2 de vibração e o veio fecha).
 
 ### L-4 · Câmara dos Reflexos — `puzzle`
@@ -602,7 +601,7 @@ vibração**.
 > todas as direções, repetidos. As quatro saídas são idênticas. Duas delas são
 > reflexo.
 
-**Teste:** 2d6+Conhecimento (10+: identifica as duas saídas reais e qual é a
+**Teste:** d20+Inteligência (10+: identifica as duas saídas reais e qual é a
 certa — a que **não** devolve o brilho da lanterna; 7-9: identifica as reais,
 não qual é a certa; 6-: o grupo anda em círculo por uma hora **e não percebe**
 — narre a mesma sala de novo, com as mesmas palavras, e deixe eles notarem).
@@ -629,8 +628,8 @@ Se o contador estava em 1, o Verme aparece no mesmo instante.
 **Quem está aqui:** **Verme de Cristal** (comum, 4 golpes). Resiste a cristal
 e impacto. **Caça por vibração, não por visão** — ficar imóvel é literalmente
 invisibilidade.
-**O que dá pra fazer:** ficar parado (2d6+Espírito pra segurar o nervo — 10+:
-ele passa a dois metros e vai embora); atacar a cabeça mole (2d6+Corpo — 10+:
+**O que dá pra fazer:** ficar parado (d20+Sabedoria pra segurar o nervo — 10+:
+ele passa a dois metros e vai embora); atacar a cabeça mole (d20+Força — 10+:
 2 golpes); provocar de propósito (é a única forma de garantir a carapaça).
 **Tesouro (nomeado):** **carapaça de Verme de Cristal x2 segmentos** →
 **`Grevas de Verme-Cristal`** (Raro) com Mestre Bram, **se** o grupo tiver as
@@ -642,7 +641,7 @@ ele passa a dois metros e vai embora); atacar a cabeça mole (2d6+Corpo — 10+:
 > gelado dela. Constante. Numa caverna que devia estar mais quente que lá fora,
 > num andar de clima temperado, saindo de um lugar fechado.
 
-**Como achar:** 2d6+Conhecimento em L-6, ou seguir o frio.
+**Como achar:** d20+Inteligência em L-6, ou seguir o frio.
 **O que dá pra fazer:** medir a temperatura (é mais frio que qualquer lugar do
 andar); enfiar uma tocha (a chama é **puxada pra dentro**); alargar a fenda
 (não dá — o cristal em volta é duro demais, e três sessões tentando não mudam
@@ -674,7 +673,7 @@ terceira.**
 > No degrau quarenta, quem olhar pra trás não enxerga mais a entrada, e é cedo
 > demais pra isso ser possível.
 
-**O que dá pra fazer:** contar os degraus (2d6+Conhecimento — 10+: são oitenta
+**O que dá pra fazer:** contar os degraus (d20+Inteligência — 10+: são oitenta
 descendo e **oitenta e dois subindo**, e ninguém vai conseguir explicar isso);
 voltar (sempre possível, e sempre a jogada certa).
 
@@ -685,7 +684,7 @@ voltar (sempre possível, e sempre a jogada certa).
 
 **Aqui o mestre dá o último aviso claro** — em voz alta, fora de personagem se
 precisar. Diga: *"a partir daqui eu não vou proteger vocês."*
-**O que dá pra fazer:** ouvir (2d6+Espírito — 10+: há respiração na sala
+**O que dá pra fazer:** ouvir (d20+Sabedoria — 10+: há respiração na sala
 seguinte, e é grande, e é lenta); recuar (e ganhar, por isso, a informação de
 D-5 na próxima visita de qualquer jeito).
 

@@ -10,7 +10,7 @@ status: completo — 16 de 16 profissões formalizadas
 ## De onde isso vem
 
 `docs/producao_por_oficio.md` e `docs/oficios_andar1.md` dão às 16 profissões
-uma **regra abstrata** de produção: role 2d6+atributo, olhe a faixa de
+uma **regra abstrata** de produção: role d20+atributo, olhe a faixa de
 resultado, narre o que sai. Isso garante que nenhuma profissão fique sem
 fazer nada — mas "role e narre" não é a mesma coisa que abrir um cardápio e
 escolher **o Bife do Guerreiro** em vez da **Sopa Revigorante**.

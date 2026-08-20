@@ -28,7 +28,7 @@ de reabastecer antes de atravessar o portão.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Reabastecer / trocar suprimento | — | Sem teste — comércio informal entre grupos | | |
-| Perguntar sobre grupos que não voltaram | 2d6+Espírito | Alguém confirma o caso de Marco (ver `labirinto_marco`) | Boato vago, sem nome | Ninguém quer falar sobre isso |
+| Perguntar sobre grupos que não voltaram | d20+Sabedoria | Alguém confirma o caso de Marco (ver `labirinto_marco`) | Boato vago, sem nome | Ninguém quer falar sobre isso |
 
 **Só o mestre:** bom lugar pra plantar tensão antes da entrada — deixe
 outros grupos comentando sobre o Labirinto sem dar detalhe mecânico.
@@ -51,7 +51,7 @@ teve coragem de entrar de novo.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Conversar com cuidado | 2d6+Espírito | Ele conta o que aconteceu com o grupo dele — pista real sobre um trecho perigoso | Conta parte, embaralhado pela dor | Ele se fecha, não quer reviver |
+| Conversar com cuidado | d20+Sabedoria | Ele conta o que aconteceu com o grupo dele — pista real sobre um trecho perigoso | Conta parte, embaralhado pela dor | Ele se fecha, não quer reviver |
 
 **Só o mestre:** não force redenção — ele pode nunca mais entrar no
 Labirinto, e tudo bem. É personagem de peso, não de resgate obrigatório.
@@ -76,7 +76,7 @@ região.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Atravessar | 2d6+Espírito | O grupo entra junto, no mesmo passo — ninguém marca Condição | Entram, mas alguém hesita na soleira, e a hesitação é vista (marca 1 Condição social) | Alguém não consegue atravessar nesta cena — precisa de motivo melhor que coragem |
+| Atravessar | d20+Sabedoria | O grupo entra junto, no mesmo passo — ninguém marca Condição | Entram, mas alguém hesita na soleira, e a hesitação é vista (marca 1 Condição social) | Alguém não consegue atravessar nesta cena — precisa de motivo melhor que coragem |
 
 **Só o mestre:** os Corretores de Tolbana pagam por qualquer descrição do
 primeiro corredor — bom gancho de Col fácil pra quem quiser vender a
@@ -101,7 +101,7 @@ experiência.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Derrubar o mastro primeiro | 2d6+Técnica | Derruba antes do primeiro reforço chegar — sem estandarte ele recua lutando e a cena acaba | O mastro cai, mas os Troopers que já chegaram ficam | A mesa trata o kobold como alvo principal e a luta vira atrito sem fim |
+| Derrubar o mastro primeiro | d20+Destreza | Derruba antes do primeiro reforço chegar — sem estandarte ele recua lutando e a cena acaba | O mastro cai, mas os Troopers que já chegaram ficam | A mesa trata o kobold como alvo principal e a luta vira atrito sem fim |
 
 **Só o mestre:** a lição mecânica desta cena é clara — o objetivo certo é o
 estandarte, não o portador. Deixe o grupo descobrir isso, não entregue de
@@ -123,8 +123,8 @@ dentro da lógica do Labirinto.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
-| Observar sem engajar | 2d6+Reflexo | Mapeia a rota de ronda sem ser visto | Mapeia parcialmente | É notado |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
+| Observar sem engajar | d20+Destreza | Mapeia a rota de ronda sem ser visto | Mapeia parcialmente | É notado |
 
 **Só o mestre:** ver `tolbana_05_reconhecimento_do_labirinto` — esta
 patrulha é o exemplo perfeito de "engajar ou só observar".
@@ -145,7 +145,7 @@ acampamento.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
 
 **Só o mestre:** bom candidato pra `tolbana_06_fragmentos_sem_amassar` —
 extração de Fragmento de Armadura Kobold logo após a vitória.
@@ -166,7 +166,7 @@ extração de Fragmento de Armadura Kobold logo após a vitória.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
 
 **Só o mestre:** use como reforço narrativo — o combate chegando logo
 depois da cena emocional com Marco reforça que o Labirinto não dá tempo de
@@ -188,7 +188,7 @@ suprimento de um grupo que não voltou.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Vasculhar | 2d6+Reflexo | Recupera tudo que ainda presta | Recupera metade, resto estragou | Nada aproveitável |
+| Vasculhar | d20+Destreza | Recupera tudo que ainda presta | Recupera metade, resto estragou | Nada aproveitável |
 
 **Só o mestre:** se o grupo já conversou com Marco, deixe que reconheçam
 (ou não) a mochila como sendo do grupo dele — decisão deles, não revelação
@@ -211,7 +211,7 @@ andar 1 — fragmento do padrão maior (ver
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar as marcas | 2d6+Conhecimento | Reconhece que não bate com nenhum monstro catalogado do andar | Percebe que é estranho, sem identificar | Passa direto |
+| Examinar as marcas | d20+Inteligência | Reconhece que não bate com nenhum monstro catalogado do andar | Percebe que é estranho, sem identificar | Passa direto |
 
 **Só o mestre:** não explique a origem — é fragmento solto, não missão.
 Reaproveitável como gancho de mestre em qualquer cena futura de mistério.
@@ -233,7 +233,7 @@ partir do segundo grupo de guarda.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
 
 **Só o mestre:** marco de "reconhecimento completo do Limiar" — bom ponto
 pra fechar `tolbana_05_reconhecimento_do_labirinto` com informação sólida.

@@ -9,8 +9,12 @@ regioes: [labirinto_entrada, campo_batalha, castelo_ferro_negro]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
 golpes_para_derrotar: 5
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: Conhecimento — identificar a inscrição falsa
-atributo_fraqueza: Conhecimento
+atributo_fraqueza: Inteligência
 resistencias: [golpes apressados, ilusões de rota]
 vulnerabilidades: [luz direta, leitura cuidadosa de símbolos]
 imagem: ../imagens/monstro_mimic_de_marcos.png
@@ -64,6 +68,20 @@ mesa antes da primeira rolagem de ataque.
 | Núcleo de Bronze Frio | Incomum | 1 | 35% | Ferreiro, Joalheiro |
 | Marca Copiada | Raro | 1 | 10% | Bibliotecário — a cópia de um marco real |
 | Col | — | 90-140 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

@@ -6,6 +6,13 @@ uso: mestre
 
 # Sistema de Níveis e XP
 
+> **Superado pela conversão pra D&D 5e.** A decisão registrada abaixo
+> (Marco na mesa, XP só no jogo online) foi substituída pela tabela de
+> XP/Nível padrão de D&D 5e — Seção 71 do `SAO_RPG_5e.md`, que agora vale
+> tanto pra mesa quanto pro jogo online (nível de personagem de verdade,
+> não mais nível de profissão fazendo essa vez). Texto abaixo mantido como
+> histórico da decisão anterior.
+
 ## A tensão que isso cria
 
 A regra atual (`docs/regras_nucleares_campanha.md`) é explícita: **"Não

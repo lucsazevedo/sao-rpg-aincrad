@@ -73,7 +73,7 @@ Marcos, Downtime, Favor/Suspeita, Preparação de Raid — cobre o que os
 capítulos 12/13 do manual físico cobririam, antes deles serem
 fotografados).
 
-- **Resolução:** 2d6 + atributo. **10+** sucesso limpo. **7-9** sucesso
+- **Resolução:** d20+atributo. **10+** sucesso limpo. **7-9** sucesso
   com complicação/custo. **6-** fracasso ou complicação séria.
 - **5 atributos:** Corpo, Reflexo, Conhecimento, Espírito, Técnica. Criação
   de personagem distribui **-2, -1, -1, -1, 0** — ninguém começa forte.

@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Lança
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: -1
-  espirito: 0
-  tecnica: 1
+  forca: 12
+  destreza: 12
+  constituicao: 12
+  inteligencia: 8
+  sabedoria: 10
+  carisma: 10
 tags: [caravana, kaldrin, divida, mercado]
 imagem: ../imagens/npc_roan_carregador.png
 canonico: nao
@@ -72,3 +73,5 @@ quando todo mundo prefere falar da batalha adiante.
 ## Gancho visual / de transmissão
 
 Antes de uma decisão difícil, ele confere três vezes o nó do lenço vermelho.
+
+<!-- convertido-dnd5e -->

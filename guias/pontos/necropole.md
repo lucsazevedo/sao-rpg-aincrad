@@ -49,7 +49,7 @@ Mortos`.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar a lápide | 2d6+Espírito | Sente que alguém quis esconder quem está ali | Percebe só que foi apagado de propósito | Não nota nada fora do comum |
+| Examinar a lápide | d20+Sabedoria | Sente que alguém quis esconder quem está ali | Percebe só que foi apagado de propósito | Não nota nada fora do comum |
 
 **Só o mestre:** esta é a mesma "ausência de registro" que EP.06 e EP.31
 exploram de ângulos diferentes — não precisa resolver aqui, só plantar.
@@ -69,7 +69,7 @@ exploram de ângulos diferentes — não precisa resolver aqui, só plantar.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar a lápide | 2d6+Espírito | Sente que alguém quis esconder quem está ali | Percebe só que foi apagado de propósito | Não nota nada fora do comum |
+| Examinar a lápide | d20+Sabedoria | Sente que alguém quis esconder quem está ali | Percebe só que foi apagado de propósito | Não nota nada fora do comum |
 
 **Só o mestre:** duas lápides sem nome na mesma necrópole é padrão, não
 coincidência — bom gatilho pra `EP.31 — O Túmulo sem Nome` se o mestre
@@ -92,7 +92,7 @@ de histórias específicas de jogadores mortos ali.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perguntar sobre uma lápide específica | 2d6+Espírito | Ele conta a história completa, com detalhe que ninguém mais sabe | Conta o básico, sem detalhe extra | Ele prefere não falar dessa em particular |
+| Perguntar sobre uma lápide específica | d20+Sabedoria | Ele conta a história completa, com detalhe que ninguém mais sabe | Conta o básico, sem detalhe extra | Ele prefere não falar dessa em particular |
 
 **Só o mestre:** ele é a mesma testemunha ambígua de `EP.06 — Flores para
 os Mortos` — se aquela cena já foi jogada, ele reconhece o grupo e trata
@@ -113,7 +113,7 @@ com mais confiança.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Coletar | 2d6+Conhecimento | Recolhe material intacto | Recolhe, mas quebradiço (qualidade menor) | Desiste, parece errado mexer ali |
+| Coletar | d20+Inteligência | Recolhe material intacto | Recolhe, mas quebradiço (qualidade menor) | Desiste, parece errado mexer ali |
 
 **Só o mestre:** a hesitação de "parece errado mexer ali" é intencional —
 recompense jogadores que peçam permissão (ficcional) ao Zelador antes de
@@ -136,7 +136,7 @@ segunda lápide sem nome.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Coletar | 2d6+Conhecimento | Recolhe material intacto | Recolhe, mas quebradiço (qualidade menor) | Desiste, parece errado mexer ali |
+| Coletar | d20+Inteligência | Recolhe material intacto | Recolhe, mas quebradiço (qualidade menor) | Desiste, parece errado mexer ali |
 
 **Só o mestre:** último ponto nomeado da região — marco de "necrópole
 totalmente explorada" nesta passada.

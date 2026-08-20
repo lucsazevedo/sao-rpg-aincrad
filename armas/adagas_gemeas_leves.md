@@ -1,7 +1,7 @@
 ---
 nome: Adagas Gêmeas Leves
 tipo: Adagas
-atributo_principal: Tecnica
+atributo_principal: Destreza
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjadas por um desconhecido artesão da Cidade do Início, estas adagas foram p
 ## Como obter
 
 Crafting (recomendado por artesãos da Cidade do Início)
+
+<!-- convertido-dnd5e -->

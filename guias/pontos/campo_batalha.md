@@ -31,8 +31,8 @@ campo.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Vasculhar os restos | 2d6+Conhecimento | Identifica que é anterior ao próprio jogo — curiosidade de lore, não material de crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
-| Procurar uma pá de trincheira | 2d6+Conhecimento | Acha uma que ainda presta | Acha uma torta | Só ferro podre |
+| Vasculhar os restos | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade de lore, não material de crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
+| Procurar uma pá de trincheira | d20+Inteligência | Acha uma que ainda presta | Acha uma torta | Só ferro podre |
 
 **Só o mestre:** a recompensa é Curiosidade — item de lore, sem uso
 mecânico. Deixe isso aparecer na ficção: se um Ferreiro do grupo tentar
@@ -61,9 +61,9 @@ aqui.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler o terreno ao redor | 2d6+Espírito | Reconhece que aqui houve um confronto grande — não um evento de jogo comum | Percebe só que o terreno é estranho ali | Passa direto |
-| Estudar a heráldica do pano | 2d6+Conhecimento | Reconhece que não é de nenhuma guilda atual — nem de facção conhecida | Percebe que é antiga | "Pano velho" |
-| Atrair um dos corvos | 2d6+Técnica | Um Corvo das Ruínas desce até uma bugiganga brilhante (1 de 2 sucessos pra domar) | Desce, mas bica a mão antes de pegar | Todos levantam voo de uma vez |
+| Ler o terreno ao redor | d20+Sabedoria | Reconhece que aqui houve um confronto grande — não um evento de jogo comum | Percebe só que o terreno é estranho ali | Passa direto |
+| Estudar a heráldica do pano | d20+Inteligência | Reconhece que não é de nenhuma guilda atual — nem de facção conhecida | Percebe que é antiga | "Pano velho" |
+| Atrair um dos corvos | d20+Destreza | Um Corvo das Ruínas desce até uma bugiganga brilhante (1 de 2 sucessos pra domar) | Desce, mas bica a mão antes de pegar | Todos levantam voo de uma vez |
 
 **Só o mestre:** a heráldica é mistério sem resposta por design — não
 improvise explicação, quanto mais o grupo investiga menos sentido a batalha
@@ -88,7 +88,7 @@ jogo, sem uso de crafting comum. Respawn de 6h.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar a lâmina | 2d6+Conhecimento | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
+| Examinar a lâmina | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
 
 **Só o mestre:** mesmo tipo de item de lore do Campo de Relíquias — se o
 grupo já identificou a natureza das relíquias lá, poupe o teste e entregue
@@ -111,8 +111,8 @@ esconderijo natural com chance de achado e de teto ceder.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler o terreno antes de descer | 2d6+Espírito | Reconhece que foi um confronto grande, não um evento de jogo comum | Percebe só que o terreno é estranho ali | Passa direto |
-| Explorar o interior | 2d6+Reflexo | Acha um esconderijo intacto — e o que tem dentro | Acha, mas o teto cede atrás de você | Cai; complicação e barulho |
+| Ler o terreno antes de descer | d20+Sabedoria | Reconhece que foi um confronto grande, não um evento de jogo comum | Percebe só que o terreno é estranho ali | Passa direto |
+| Explorar o interior | d20+Destreza | Acha um esconderijo intacto — e o que tem dentro | Acha, mas o teto cede atrás de você | Cai; complicação e barulho |
 
 **Só o mestre:** o barulho do 6- é gancho legítimo pra atrair a Sentinela
 mais próxima — `campo_batalha_xsentinela_esquecida` fica a poucos metros.
@@ -139,8 +139,8 @@ do "pescoço") e Trovão.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber o que ela é antes de chegar perto | 2d6+Conhecimento | Nota a postura de vigia a distância segura — o grupo escolhe o engajamento | Nota em cima da hora; ela já escolheu alguém | Confunde com cenário até ela se mover |
-| Enfrentar (combate) | 2d6+Corpo ou Técnica | Golpe na junta do pescoço conta 2 | Troca de golpes equilibrada | Ela te marca como intruso de linha — e não para mais |
+| Perceber o que ela é antes de chegar perto | d20+Inteligência | Nota a postura de vigia a distância segura — o grupo escolhe o engajamento | Nota em cima da hora; ela já escolheu alguém | Confunde com cenário até ela se mover |
+| Enfrentar (combate) | d20+Força ou Técnica | Golpe na junta do pescoço conta 2 | Troca de golpes equilibrada | Ela te marca como intruso de linha — e não para mais |
 
 **Só o mestre:** aqui mora a `bounty_01_sentinela_esquecida` — o melhor
 medo é o atraso entre "isso é cenário" e "isso está olhando de volta". Ela
@@ -165,7 +165,7 @@ de fragmento, outro canto do campo. Respawn de 6h.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar a lâmina | 2d6+Conhecimento | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
+| Examinar a lâmina | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
 
 **Só o mestre:** puramente mecânico — a posição mais a oeste espalha a
 exploração; quem vem até aqui em geral já cruzou com a segunda Sentinela
@@ -189,7 +189,7 @@ ameaça forte (5-7 golpes). Guarda o trecho norte do campo. Respawn de 3h.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar (combate) | 2d6+Corpo ou Técnica | Golpe na junta do pescoço conta 2 | Troca de golpes equilibrada | Ela marca o grupo como intruso de linha — e não para mais |
+| Enfrentar (combate) | d20+Força ou Técnica | Golpe na junta do pescoço conta 2 | Troca de golpes equilibrada | Ela marca o grupo como intruso de linha — e não para mais |
 
 **Só o mestre:** de noite, Sentinelas acendem o "olho" e andam a linha
 antiga sem atacar quem não a cruzar (ver "Se o grupo demorar" no guia da
@@ -213,7 +213,7 @@ varredura do campo. Respawn de 6h.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar a empunhadura | 2d6+Conhecimento | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
+| Examinar a empunhadura | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
 
 **Só o mestre:** último ponto da cadeia natural de descoberta do Campo de
 Ruyn — bom marco pra avisar o grupo (fora de ficção) que a região já mostrou

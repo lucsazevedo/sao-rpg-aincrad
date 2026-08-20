@@ -7,11 +7,12 @@ profissao: Comerciante
 arma: nenhuma
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 1
-  tecnica: 0
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [cardinal, misterio, arco_b, coleta_de_dados]
 imagem: ../imagens/npc_mercador_de_memorias.png
 canonico: nao
@@ -99,3 +100,5 @@ ter. Bom pra cena de tensão baixa e crescente, não pra confronto direto.
 Não luta e não foge com pressa — se atacado, simplesmente para de
 responder, como um NPC comum reagiria a hostilidade sem repertório de
 combate.
+
+<!-- convertido-dnd5e -->

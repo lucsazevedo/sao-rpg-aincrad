@@ -1,7 +1,7 @@
 ---
 nome: Rapieira Leve
 tipo: Rapieira
-atributo_principal: Reflexo
+atributo_principal: Destreza
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -27,3 +27,5 @@ Forjada por um artesão desconhecido na Cidade do Início, esta rapieira é apre
 ## Como obter
 
 Drop de monstros fracos do primeiro andar
+
+<!-- convertido-dnd5e -->

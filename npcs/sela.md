@@ -7,11 +7,12 @@ profissao: Domador
 arma: Chicote
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 0
-  espirito: 1
-  tecnica: 2
+  forca: 8
+  destreza: 14
+  constituicao: 8
+  inteligencia: 10
+  sabedoria: 12
+  carisma: 12
 tags: [doma, mentor, fenwyth]
 imagem: ../imagens/npc_sela.png
 canonico: nao
@@ -71,3 +72,5 @@ criaturas do andar formam vínculo e quais não — a tabela que hoje está em
 ## Combate (se aplicável)
 
 Técnica 2. Não luta — os aliados dela lutam, e nunca são muitos.
+
+<!-- convertido-dnd5e -->

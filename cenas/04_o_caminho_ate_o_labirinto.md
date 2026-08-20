@@ -65,10 +65,10 @@ sabem mais.
 
 ## Testes sugeridos
 
-- 2d6 + Conhecimento -- interpretar a informação dos corretores em Tolbana
-- 2d6 + Reflexo -- perceber a emboscada dos Ruin Kobold Trooper antes que
+- d20+Inteligência -- interpretar a informação dos corretores em Tolbana
+- d20+Destreza -- perceber a emboscada dos Ruin Kobold Trooper antes que
   ela aconteça
-- 2d6 + Espirito -- não hesitar ao ouvir os sons vindos da sala do chefe
+- d20+Sabedoria -- não hesitar ao ouvir os sons vindos da sala do chefe
 
 ## NPCs na cena
 

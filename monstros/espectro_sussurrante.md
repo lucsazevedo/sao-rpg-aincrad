@@ -9,8 +9,12 @@ regioes: [necropole, campo_batalha, castelo_ferro_negro]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
 golpes_para_derrotar: 5
+ca: 13
+pv: 48
+bonus_ataque: +4
+cd_resistencia: 13
 abertura: teste de Espírito em vez de dano físico
-atributo_fraqueza: Espírito
+atributo_fraqueza: Sabedoria
 resistencias: [dano físico]
 vulnerabilidades: [Espírito alto, itens do Coveiro]
 imagem: ../imagens/monstro_espectro_sussurrante.png
@@ -57,6 +61,20 @@ O frio na nuca, e o som das outras pessoas do grupo ficando abafado, como se ela
 | Resíduo Etéreo | Incomum | 1 | 40% | Coveiro, Alquimista |
 | Nome Devolvido | Raro | 1 | 12% | Bibliotecário — um nome que faltava numa lápide |
 | Col | — | 180-260 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 13
+- **PV:** 48
+- **Bônus de Ataque:** +4
+- **CD de Resistência:** 13
+- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

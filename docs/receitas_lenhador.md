@@ -8,7 +8,7 @@ receitas: 17
 
 O que o Lenhador monta com madeira — de acampamento a estrutura de
 travessia. Formato em `docs/catalogo_receitas_por_oficio.md`. Teste
-padrão: **2d6+Reflexo**.
+padrão: **d20+Destreza**.
 
 ---
 

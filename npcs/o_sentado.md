@@ -7,11 +7,12 @@ profissao: nenhuma
 arma: nenhuma
 guilda: ""
 atributos:
-  corpo: 0
-  reflexo: 0
-  conhecimento: 0
-  espirito: 0
-  tecnica: 0
+  forca: 10
+  destreza: 10
+  constituicao: 10
+  inteligencia: 10
+  sabedoria: 10
+  carisma: 10
 tags: [cardinal, misterio, arco_b, nao_interativo]
 imagem: ../imagens/npc_o_sentado.png
 canonico: nao
@@ -96,3 +97,5 @@ mistério.
 Não reage a ataque. Se um jogador atacar mesmo assim, trate como agressão
 contra jogador comum (regras de PK/duelo) — ele não retalia nem foge, o
 que por si só deveria incomodar mais do que qualquer reação normal.
+
+<!-- convertido-dnd5e -->

@@ -29,8 +29,8 @@ Antídoto → Luz → Barreira).
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar o mural | 2d6+Conhecimento | Confirma a sequência antes de tentar encaixar | Suspeita da ordem, sem certeza | Nenhuma pista nova |
-| Encaixar os cristais | 2d6+Técnica | Encaixe físico preciso | Encaixe funciona, mas com hesitação visível | Erro ativa alarme sonoro leve |
+| Examinar o mural | d20+Inteligência | Confirma a sequência antes de tentar encaixar | Suspeita da ordem, sem certeza | Nenhuma pista nova |
+| Encaixar os cristais | d20+Destreza | Encaixe físico preciso | Encaixe funciona, mas com hesitação visível | Erro ativa alarme sonoro leve |
 
 **Só o mestre:** reunir os 5 cristais é a verdadeira sub-quest — Luz e
 Barreira exigem negociação real, não só Col. Ver `docs/mercado_andar1.md`.
@@ -56,7 +56,7 @@ importa sem precisar ser vencida.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Descer alguns degraus com cautela | 2d6+Reflexo | Entende a escala pelo eco e volta antes de ser notado | Volta, mas algo lá embaixo mudou de posição enquanto o grupo estava na escada | O grupo desce um lance a mais do que devia — a subida deixa de ser tranquila |
+| Descer alguns degraus com cautela | d20+Destreza | Entende a escala pelo eco e volta antes de ser notado | Volta, mas algo lá embaixo mudou de posição enquanto o grupo estava na escada | O grupo desce um lance a mais do que devia — a subida deixa de ser tranquila |
 
 **Só o mestre:** **nunca** transforme isso em dungeon completa pra um grupo
 de nível andar 1. O valor é sentir a escala e recuar — igual ao design de
@@ -83,7 +83,7 @@ de nível andar 1. O valor é sentir a escala e recuar — igual ao design de
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler a inscrição | 2d6+Conhecimento | Lê a linha interrompida inteira — entende que fala do golpe final e de verificar algo antes do próximo andar | Lê o suficiente pra saber do que se trata, sem reproduzir de memória | A letra é regular e pequena demais — leva tempo, e alguém vai notar a demora |
+| Ler a inscrição | d20+Inteligência | Lê a linha interrompida inteira — entende que fala do golpe final e de verificar algo antes do próximo andar | Lê o suficiente pra saber do que se trata, sem reproduzir de memória | A letra é regular e pequena demais — leva tempo, e alguém vai notar a demora |
 
 **Só o mestre:** o Anel dos Cinco Encaixes (+1 Conhecimento pra decifrar) e
 o Martelo do Mural (+1 Corpo contra estrutura/construto, revela vazio atrás
@@ -106,7 +106,7 @@ esta cena como a mais importante da cadeia G.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Investigar sem ser notado | 2d6+Reflexo | Encontra um ponto fraco real na defesa — guarda em segredo | Encontra, mas é visto por um guarda de longe | Não acha nada, parede só velha mesmo |
+| Investigar sem ser notado | d20+Destreza | Encontra um ponto fraco real na defesa — guarda em segredo | Encontra, mas é visto por um guarda de longe | Não acha nada, parede só velha mesmo |
 
 **Só o mestre:** se o grupo for visto (7-9), planta desconfiança que
 `castelo_04_guarda_insone` cobra depois — não revele a consequência na hora.
@@ -127,7 +127,7 @@ suspeita e confirmação sobre a muralha. Ver `castelo_04_guarda_insone`.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Conversar à noite | 2d6+Espírito | Confirmação com detalhes | Confirmação parcial e desconfiada | Negação total, mesmo sabendo — mas o grupo percebe a mentira |
+| Conversar à noite | d20+Sabedoria | Confirmação com detalhes | Confirmação parcial e desconfiada | Negação total, mesmo sabendo — mas o grupo percebe a mentira |
 
 **Só o mestre:** se `castelo_03` teve falha (foi visto), esta conversa
 começa em desvantagem — ele já está de guarda alta antes mesmo de começar.

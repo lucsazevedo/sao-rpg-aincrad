@@ -1,7 +1,7 @@
 ---
 nome: Machado de Guerra Simples
 tipo: Machado
-atributo_principal: Corpo
+atributo_principal: Força
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjado por um ferreiro anônimo no andar 1, este machado de guerra simples é c
 ## Como obter
 
 Drop de monstro comum no andar 1
+
+<!-- convertido-dnd5e -->

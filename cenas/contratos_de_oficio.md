@@ -38,7 +38,7 @@ contrato. O item importa mais que o Col.
 **Gancho:** um Cozinheiro de Tolbana encomendou carne de Frenzy Boar com a
 presa **intacta** — e presa intacta não sai de bicho morto às pressas.
 
-**O teste que decide:** 2d6+Reflexo para extrair sem estragar. **10+** presa
+**O teste que decide:** d20+Destreza para extrair sem estragar. **10+** presa
 íntegra e você nota uma toca nova ali perto. **7-9** sai lascada: metade do
 preço, e Erik comenta. **6-** estragou, e o cheiro atrai um Lobo das Estepes.
 
@@ -57,7 +57,7 @@ significa preço fixo de 60% mesmo quando o mercado cai.
 torto. O dono acha graça. A filha dele não, porque a farinha sai irregular e
 ninguém compra farinha irregular no dia 10.
 
-**O teste que decide:** 2d6+Reflexo para escolher e derrubar a madeira certa.
+**O teste que decide:** d20+Destreza para escolher e derrubar a madeira certa.
 **10+** Nodosa boa, na medida, e sobra pra um segundo eixo. **7-9** serve, mas
 você volta com metade do que precisava. **6-** a árvore cai errado e leva duas
 horas de trabalho junto.
@@ -77,7 +77,7 @@ Cozinheiro), e o `Machado de Lenhador de Horunka` se você entregar sem lascar.
 Braxhold e a Gruta de Lumis que três pessoas mapearam e nenhuma concorda com a
 outra.
 
-**O teste que decide:** 2d6+Conhecimento do Mirante das Colinas. **10+** você
+**O teste que decide:** d20+Inteligência do Mirante das Colinas. **10+** você
 resolve a contradição: os três estavam certos, em dias diferentes — o caminho
 **muda com a chuva**. **7-9** você mapeia um dos três e não sabe qual. **6-**
 vira o quarto desenho discordante.
@@ -96,7 +96,7 @@ vermelha** — o que ela viu com os próprios olhos e não vende pra ninguém.
 **Gancho:** Lynx está com doze Casacos Encerados do Pântano parados. Ninguém
 compra: o andar está seco há duas semanas e o casaco fede.
 
-**O teste que decide:** 2d6+Conhecimento para achar quem precisa. **10+** você
+**O teste que decide:** d20+Inteligência para achar quem precisa. **10+** você
 descobre que o Pântano de Kavir tem trabalho pago sobrando e ninguém consegue
 ficar lá: vende os doze de uma vez, com margem. **7-9** vende metade, no preço
 de custo. **6-** você compra o lote achando que revende, e não revende.
@@ -115,7 +115,7 @@ tudo que encalha — a melhor fonte de item barato do andar.
 **Gancho:** vai ter incursão amanhã. Orin não dá conta sozinho de alimentar
 quarenta pessoas nervosas, e comida ruim na véspera estraga a manhã seguinte.
 
-**O teste que decide:** 2d6+Conhecimento para render o que tem. **10+** todo
+**O teste que decide:** d20+Inteligência para render o que tem. **10+** todo
 mundo come, e o bônus de refeição vale pro grupo inteiro no dia seguinte.
 **7-9** metade come bem, metade come. **6-** falta pra uns cinco, e eles vão
 lembrar de quem cozinhou.
@@ -135,7 +135,7 @@ ingrediente** separado pra você.
 dois que faltam são o Sindicato e o Terraço Geek, e a briga entre eles começou
 por algo pequeno demais pra qualquer um dos lados admitir em voz alta.
 
-**O teste que decide:** 2d6+Conhecimento para mediar. **10+** os dois cedem, e
+**O teste que decide:** d20+Inteligência para mediar. **10+** os dois cedem, e
 você define os termos. **7-9** cedem, mas um deles sai devendo — e cobra
 depois. **6-** os dois te culpam, e a trégua atrasa um mês de jogo.
 
@@ -155,7 +155,7 @@ dele custa a relação.
 símbolo aparece nas paredes do Salão dos Estandartes, no Labirinto. Ninguém
 juntou as duas coisas porque ninguém foi aos dois lugares.
 
-**O teste que decide:** 2d6+Conhecimento para cruzar as fontes. **10+** você
+**O teste que decide:** d20+Inteligência para cruzar as fontes. **10+** você
 confirma: é sucessão, não guerra — e os kobolds **chegaram** neste andar, não
 nasceram nele. **7-9** confirma que é o mesmo símbolo, sem entender o que
 significa. **6-** você conclui que é coincidência, com convicção.
@@ -175,7 +175,7 @@ andar 2.
 **Gancho:** Talia precisa de glândula de Rã Venenosa **inteira**, e inteira
 significa não matar a rã com pressa. Ela paga bem e não explica pra quê.
 
-**O teste que decide:** 2d6+Técnica para extrair sem romper. **10+** duas
+**O teste que decide:** d20+Destreza para extrair sem romper. **10+** duas
 glândulas íntegras e você não se envenena. **7-9** uma, e você passa mal por
 uma cena. **6-** rompeu: veneno ativo na sua mão, e sem Luvas de Seda isso
 custa caro.
@@ -195,7 +195,7 @@ ofício), e Talia começa a falar — devagar — sobre por que não sai dos mur
 Sorrel se recusa a fazer sem autorização dele — que ele já deu, por bilhete,
 mas o bilhete não chegou.
 
-**O teste que decide:** 2d6+Técnica para costurar a peça. **10+** fica melhor
+**O teste que decide:** d20+Destreza para costurar a peça. **10+** fica melhor
 do que o Zelador esperava, e ele reconhece cada retalho. **7-9** fica boa, mas
 você usou um retalho que não devia. **6-** a peça sai certa e errada ao mesmo
 tempo: serve, e ofende.
@@ -215,7 +215,7 @@ Sorrel passa a **consertar de graça** equipamento rachado de vocês.
 seguidos no mesmo ponto**. Sela avisa que isso significa três viagens, e que
 quase ninguém termina.
 
-**O teste que decide:** três visitas, e no fim 2d6+Técnica x6 na barra de doma.
+**O teste que decide:** três visitas, e no fim d20+Destreza x6 na barra de doma.
 **10+** um sucesso limpo. **7-9** um sucesso, e ela recua pro fundo. **6-**
 duas falhas seguidas encerram, e ela abandona o ponto por uma semana.
 
@@ -234,7 +234,7 @@ com o grupo.
 **Gancho:** Kazuo está obcecado com o Fragmento de Armadura Kobold. A liga tem
 uma proporção que ele não consegue reproduzir com nada que existe no andar 1.
 
-**O teste que decide:** 2d6+Conhecimento para ler o metal. **10+** você
+**O teste que decide:** d20+Inteligência para ler o metal. **10+** você
 identifica: falta um componente que **não existe neste andar**. **7-9** você
 sabe que falta algo. **6-** conclui que é impureza e Kazuo aceita a resposta.
 
@@ -253,7 +253,7 @@ conta isso aos clientes.
 **Gancho:** um grupo voltou de Lumis com onze pedras e a certeza de que ficou
 rico. Tor olhou de longe e riu. Eles querem uma segunda opinião.
 
-**O teste que decide:** 2d6+Conhecimento para avaliar. **10+** você separa as
+**O teste que decide:** d20+Inteligência para avaliar. **10+** você separa as
 três que prestam e explica a diferença de um jeito que eles entendem. **7-9**
 separa as três, e eles não acreditam. **6-** você erra uma, e a errada é a
 única boa.
@@ -273,7 +273,7 @@ chamar quando aparece coisa que ele não reconhece.
 direito. Não é analfabetismo: ninguém confirmou a morte, e escrever antes da
 hora é uma crueldade que ele não comete.
 
-**O teste que decide:** 2d6+Espírito para descobrir o que aconteceu. **10+**
+**O teste que decide:** d20+Sabedoria para descobrir o que aconteceu. **10+**
 você confirma, com testemunha, e a família sabe primeiro. **7-9** confirma, sem
 testemunha — e alguém vai duvidar. **6-** você traz a versão errada e ela vira
 oficial.
@@ -292,7 +292,7 @@ Memorial — que na prática significa que o Zelador de Voss passa a te responde
 **Gancho:** três pessoas voltaram do Trecho III do Labirinto e nenhuma está
 ferida. Todas param de falar no meio da frase, e nenhuma sabe explicar por quê.
 
-**O teste que decide:** 2d6+Conhecimento para diagnosticar. **10+** você nomeia:
+**O teste que decide:** d20+Inteligência para diagnosticar. **10+** você nomeia:
 não é veneno nem medo — é a Galeria Longa, que devolve a própria voz até a
 pessoa parar de confiar nela. **7-9** você sabe o que **não** é. **6-** você
 trata como pânico, e piora.
@@ -312,7 +312,7 @@ Cristal** — o único jeito no andar. Vale mais que qualquer item.
 nervosas, seis clãs que não se falam, e ninguém consegue começar porque ninguém
 consegue calar a sala.
 
-**O teste que decide:** 2d6+Espírito para tocar. **10+** a sala cala, e quem
+**O teste que decide:** d20+Sabedoria para tocar. **10+** a sala cala, e quem
 falar depois de você começa com todo mundo ouvindo — inclusive você, se quiser.
 **7-9** cala metade, e a metade barulhenta é a pior. **6-** você toca a música
 errada pra plateia errada, e alguém ri.
@@ -332,7 +332,7 @@ escolhe **quem fala primeiro** na reunião que decide o raid.
 Assalto Conhecido. Todo mundo sabe onde é. Ninguém resolveu. Ele paga bem
 porque já perdeu duas cargas.
 
-**O teste que decide:** 2d6+Corpo para segurar a linha na curva. **10+** a
+**O teste que decide:** d20+Força para segurar a linha na curva. **10+** a
 caravana passa inteira e ninguém do comboio se machuca. **7-9** a carga passa,
 o cavalo não. **6-** carga perdida, e a fama circula em Tolbana antes de você
 chegar.

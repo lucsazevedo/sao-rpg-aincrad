@@ -9,8 +9,12 @@ regioes: [floresta_horunka, bosque_sussurrante, margens_rio_coluber]
 nivel_recomendado: "2-3"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
+ca: 11
+pv: 26
+bonus_ataque: +3
+cd_resistencia: 11
 abertura: o pescoço, exposto quando ele ergue a cabeça para farejar o ar
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [veneno leve]
 vulnerabilidades: [frio, isolamento, água fria]
 imagem: ../imagens/monstro_lagarto_floresta.png
@@ -67,6 +71,20 @@ Ele não é perigoso, mas o primeiro monstro que a maioria dos grupos consegue a
 | Pele de Lagarto | Comum | 1 | 55% | Coureiro (luvas, botas leves) |
 | Garra de Réptil | Incomum | 1 | 30% | Ferreiro (arranhões, ponta de adaga) |
 | Col | — | 15-35 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 11
+- **PV:** 26
+- **Bônus de Ataque:** +3
+- **CD de Resistência:** 11
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

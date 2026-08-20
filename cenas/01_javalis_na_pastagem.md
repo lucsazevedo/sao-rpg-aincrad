@@ -52,9 +52,9 @@ pela primeira vez pelos muros.
 
 ## Testes sugeridos
 
-- 2d6 + Reflexo — perceber o Frenzy Boar antes dele perceber o grupo
-- 2d6 + Corpo ou Reflexo — acertar o golpe na nuca (ponto fraco)
-- 2d6 + Espirito — manter a calma no primeiro combate real da vida (fora do jogo)
+- d20+Destreza — perceber o Frenzy Boar antes dele perceber o grupo
+- d20+Força ou Reflexo — acertar o golpe na nuca (ponto fraco)
+- d20+Sabedoria — manter a calma no primeiro combate real da vida (fora do jogo)
 
 ## NPCs na cena
 
@@ -70,7 +70,7 @@ pela primeira vez pelos muros.
 
 1-2 Frenzy Boar (fraco, passivo, ponto fraco na nuca) + opcionalmente 1
 Stabbing Wasp (comum, ataque à distância curta). Ver `monstros/`. Risco de
-vida real, mas baixo — bom pra ensinar o sistema 2d6+atributo sem
+vida real, mas baixo — bom pra ensinar o sistema d20+atributo sem
 apostar a campanha logo de cara.
 
 ## Complicações úteis

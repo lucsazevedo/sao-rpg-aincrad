@@ -10,7 +10,7 @@ O Coveiro não vende no mercado tradicional — o valor dele é acesso e
 memória, não Col fácil. Mesmo assim, a estrutura 8/5/4 vale, com "vale"
 mais baixo que as outras profissões de propósito: não é essa a moeda dele.
 Formato em `docs/catalogo_receitas_por_oficio.md`. Teste padrão:
-**2d6+Espírito**.
+**d20+Sabedoria**.
 
 ---
 

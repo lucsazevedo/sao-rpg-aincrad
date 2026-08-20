@@ -1,7 +1,7 @@
 ---
 nome: Besta Leve de Madeira
 tipo: Besta
-atributo_principal: Reflexo
+atributo_principal: Destreza
 raridade: Comum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Forjada por um carpinteiro habilidoso na Cidade do Início, esta besta é a esco
 ## Como obter
 
 Comprada na loja de armas da Cidade do Início.
+
+<!-- convertido-dnd5e -->

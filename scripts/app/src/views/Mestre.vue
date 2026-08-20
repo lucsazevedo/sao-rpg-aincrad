@@ -408,21 +408,42 @@
                   </div>
                 </div>
                 <div class="card" style="margin-top:14px;background:var(--panel);border:none">
-                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">📊 Atributos</h4>
+                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">📊 Atributos (D&D 5e)</h4>
                   <div class="atributos">
-                    <div v-for="a in atributosAbertos" :key="a.k" class="atrib" :class="{pos:a.v>0, neg:a.v<0}">
+                    <div v-for="a in atributosAbertos" :key="a.k" class="atrib" :class="{pos:a.mod>0, neg:a.mod<0}">
                       <label>{{ a.nome }}</label>
-                      <input type="range" min="-3" max="3" step="1" v-model.number="a.v">
-                      <div class="v">{{ a.v>0?'+':'' }}{{ a.v }}</div>
+                      <input type="number" min="3" max="20" step="1" v-model.number="a.v">
+                      <div class="v">{{ a.mod>=0?'+':'' }}{{ a.mod }}</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card" style="margin-top:14px;background:var(--panel);border:none">
+                  <h4 style="margin:0 0 10px;color:var(--azul-bright)">🎯 Nível · 🛡️ CA · ❤️ PV</h4>
+                  <div class="form" style="padding:0;border:none;background:transparent">
+                    <div class="campo">
+                      <label>Nível de personagem</label>
+                      <input type="number" min="1" max="20" v-model.number="fichaAberta.nivel">
+                    </div>
+                    <div class="campo">
+                      <label>Bônus de Proficiência</label>
+                      <input type="number" min="2" max="6" v-model.number="fichaAberta.bonus_proficiencia">
+                    </div>
+                    <div class="campo">
+                      <label>CA</label>
+                      <input type="number" min="1" v-model.number="fichaAberta.ca">
+                    </div>
+                    <div class="campo">
+                      <label>❤️ PV máximo</label>
+                      <input type="number" min="1" v-model.number="fichaAberta.vida_max">
+                    </div>
+                    <div class="campo">
+                      <label>❤️ PV atual</label>
+                      <input type="number" min="0" v-model.number="fichaAberta.vida_atual">
                     </div>
                   </div>
                 </div>
                 <div class="card" style="margin-top:14px;background:var(--panel);border:none">
                   <h4 style="margin:0 0 10px;color:var(--azul-bright)">💰 Dinheiro · 💨 Fôlego</h4>
-                  <p style="color:var(--ink-faint);font-size:12px;margin:-6px 0 10px">
-                    Não existe nível de personagem separado no sistema — ver <code>dolist/05_niveis_e_xp.md</code>
-                    (decisão em aberto). Quem trava dificuldade/desbloqueio hoje é o Nível de Profissão.
-                  </p>
                   <div class="form" style="padding:0;border:none;background:transparent">
                     <div class="campo">
                       <label>💰 Col na mão</label>
@@ -869,7 +890,9 @@ const filtroProf = ref('')
 const totalPersonagens = computed(() => jogadores.value.filter(p=>!p.excluido).length)
 const totalColCirculante = computed(() => jogadores.value.reduce((s,p)=>s+(p.col_mao||0)+(p.col_guardado||0),0).toLocaleString('pt-BR'))
 const totalProfissoesDiferentes = computed(() => new Set(jogadores.value.map(p=>p.profissao).filter(Boolean)).size)
-const CONDICOES = ['Exposto','Ferido','Abalado','Separado','Exaurido','Comprometido']
+// Condições padrão D&D 5e (Seção 70 do SAO_RPG_5e.md) — substitui as 6
+// condições PBTA (Exposto/Ferido/Abalado/Separado/Exaurido/Comprometido).
+const CONDICOES = ['Agarrado','Amedrontado','Atordoado','Caído','Cego','Enfeitiçado','Envenenado','Exausto','Impossibilitado','Invisível','Paralisado','Restringido','Surdo','Inconsciente']
 const mediaFolego = computed(() => {
   const ativos = jogadores.value.filter(p=>!p.excluido)
   if (!ativos.length) return 0
@@ -893,20 +916,21 @@ const fichaAberta = ref(null)
 const salvandoPers = ref(false)
 const senhaResetada = ref(null)
 const copiadoReset = ref(false), copiadoCriada = ref(false)
+// D&D 5e (Seção 4 do SAO_RPG_5e.md) — substitui os 5 atributos PBTA.
+const NOMES_ATRIBUTOS_DND = { forca:'Força', destreza:'Destreza', constituicao:'Constituição', inteligencia:'Inteligência', sabedoria:'Sabedoria', carisma:'Carisma' }
 const atributosAbertos = computed({
   get() {
-    const at = (fichaAberta.value && fichaAberta.value.atributos) || {}
-    return Object.keys({tecnica:0,espirito:0,conhecimento:0,reflexo:0,corpo:0}).map(k => ({
-      k,
-      nome: {tecnica:'Técnica',espirito:'Espírito',conhecimento:'Conhecimento',reflexo:'Reflexo',corpo:'Corpo'}[k],
-      v: at[k] ?? 0
-    }))
+    const at = (fichaAberta.value && fichaAberta.value.atributos_dnd) || {}
+    return Object.keys(NOMES_ATRIBUTOS_DND).map(k => {
+      const v = at[k] ?? 10
+      return { k, nome: NOMES_ATRIBUTOS_DND[k], v, mod: Math.floor((v - 10) / 2) }
+    })
   },
   set(val) {
     if (!fichaAberta.value) return
     const at = {}
     val.forEach(a => at[a.k] = a.v)
-    fichaAberta.value.atributos = at
+    fichaAberta.value.atributos_dnd = at
   }
 })
 function selecionarPersonagem(p){

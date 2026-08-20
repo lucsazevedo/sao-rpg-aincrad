@@ -7,11 +7,12 @@ profissao: Costureiro
 arma: Adagas
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 0
-  espirito: 0
-  tecnica: 2
+  forca: 8
+  destreza: 14
+  constituicao: 8
+  inteligencia: 10
+  sabedoria: 10
+  carisma: 10
 tags: [loja, crafting]
 imagem: ../imagens/npc_mestra_sorrel.png
 canonico: nao
@@ -76,3 +77,5 @@ ruim mata mais gente que monstro forte.
 ## Combate (se aplicável)
 
 Não luta. Zona segura, e ela não sai de lá.
+
+<!-- convertido-dnd5e -->

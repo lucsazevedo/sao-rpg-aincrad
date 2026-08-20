@@ -9,8 +9,12 @@ regioes: []
 nivel_recomendado: "andar 2, conteúdo de raid"
 nivel_ameaca: chefe
 golpes_para_derrotar: "3 barras x 6-8 golpes cada (18-24 total)"
+ca: 16
+pv: 180
+bonus_ataque: +6
+cd_resistencia: 15
 abertura: martelo cravado no chão após o golpe giratório — abertura curta e real
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [investida corpo a corpo sem preparo]
 vulnerabilidades: []
 imagem: ../imagens/monstro_baran_o_rei_touro.png
@@ -99,6 +103,20 @@ carrega o mesmo peso dramático que o Last Attack Bonus teve em Illfang (ver
 | Fragmento de Martelo | Raro | 1-2 | 60% | Ferreiro, Joalheiro |
 | Couro de Pedra Rachada | Incomum | 2-3 | 80% | Costureiro |
 | Col | — | 3000-4500 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 16
+- **PV:** 180
+- **Bônus de Ataque:** +6
+- **CD de Resistência:** 15
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

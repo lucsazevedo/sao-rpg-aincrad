@@ -28,7 +28,7 @@ pra quem já decidiu encarar o Labirinto.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler o clima da praça | 2d6+Espírito | Sabe qual força-tarefa está se formando e quem lidera | Percebe agitação, não a causa | Só vê gente andando depressa |
+| Ler o clima da praça | d20+Sabedoria | Sabe qual força-tarefa está se formando e quem lidera | Percebe agitação, não a causa | Só vê gente andando depressa |
 
 **Só o mestre:** use esta praça pra estabelecer, sem diálogo, que a
 campanha está caminhando pro raid contra Illfang — multidão maior a cada
@@ -94,7 +94,7 @@ misturado.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Comprar informação | 2d6+Conhecimento | Separa o fragmento real do red herring | Compra os dois misturados, sem saber qual é qual | Compra só o red herring, convencido de que é real |
+| Comprar informação | d20+Inteligência | Separa o fragmento real do red herring | Compra os dois misturados, sem saber qual é qual | Compra só o red herring, convencido de que é real |
 
 **Só o mestre:** ver `EP.33 — Mercado Negro` e
 `tolbana_e03_corretores_desconfiados` pra versões mais profundas desta
@@ -198,7 +198,7 @@ pode notar).
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher sem ser notado | 2d6+Conhecimento | Colhe 2 ervas incomuns sem ser notado | Colhe 1, dono aparece e cobra satisfação | Sai sem nada, quase é flagrado |
+| Colher sem ser notado | d20+Inteligência | Colhe 2 ervas incomuns sem ser notado | Colhe 1, dono aparece e cobra satisfação | Sai sem nada, quase é flagrado |
 
 **Só o mestre:** trate o "dono" como NPC genérico simpático, não guarda —
 a consequência de 7-9 é social (constrangimento), não combate.
@@ -244,7 +244,7 @@ transforma rumor em acordo ou em conflito público entre clãs. Ver
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Contratar mediação entre clãs/jogadores | 2d6+Espírito | Resolve a favor do grupo, sem custo extra | Resolve, mas cobra favor futuro | Ela decide não se envolver — ou o conflito piora publicamente |
+| Contratar mediação entre clãs/jogadores | d20+Sabedoria | Resolve a favor do grupo, sem custo extra | Resolve, mas cobra favor futuro | Ela decide não se envolver — ou o conflito piora publicamente |
 | Comprar informação | — | Sem teste — preço em Col, sem julgamento moral sobre o uso | | |
 
 **Só o mestre:** ela nunca escolhe lado por lealdade — só por interesse

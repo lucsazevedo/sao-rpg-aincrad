@@ -16,11 +16,15 @@ OLLAMA_URL = "http://localhost:11434/api/generate"
 MODELO_RAPIDO = "qwen2.5:14b"
 MODELO_REVISOR = "deepseek-r1:14b"
 
-DOCS_DIR = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "docs")
+RAIZ_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DOCS_DIR = os.path.join(RAIZ_DIR, "docs")
 
 
 def carregar_guia_sistema():
-    caminho = os.path.join(DOCS_DIR, "guia_sistema_aincrad.md")
+    """Fonte única de verdade da mecânica (pós-conversão pra D&D 5e) --
+    `docs/guia_sistema_aincrad.md` virou um redirect histórico curto, o
+    conteúdo de verdade mora em SAO_RPG_5e.md na raiz do projeto."""
+    caminho = os.path.join(RAIZ_DIR, "SAO_RPG_5e.md")
     with open(caminho, "r", encoding="utf-8") as f:
         return f.read()
 

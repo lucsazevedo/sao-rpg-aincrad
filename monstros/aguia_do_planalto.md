@@ -9,8 +9,12 @@ regioes: []
 nivel_recomendado: "2-4 (andar 2)"
 nivel_ameaca: comum
 golpes_para_derrotar: 3
+ca: 11
+pv: 32
+bonus_ataque: +3
+cd_resistencia: 11
 abertura: golpe durante o mergulho, antes de recuperar altitude
-atributo_fraqueza: Reflexo
+atributo_fraqueza: Destreza
 resistencias: [vento, projétil leve]
 vulnerabilidades: []
 imagem: ../imagens/monstro_aguia_do_planalto.png
@@ -83,6 +87,20 @@ bruta constante.
 | Pena de Águia | Incomum | 1 | 30% | Costureiro, doma de Domador |
 | Garra Afiada | Comum | 1-2 | 55% | Ferreiro |
 | Col | — | 60-100 | 100% | — |
+
+<!-- convertido-dnd5e -->
+
+## Stat Block D&D 5e
+
+Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+
+- **CA:** 11
+- **PV:** 32
+- **Bônus de Ataque:** +3
+- **CD de Resistência:** 11
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
+
+> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
 
 ## Lore
 

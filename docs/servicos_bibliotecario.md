@@ -8,7 +8,7 @@ receitas: 17
 
 Profissão de Conhecimento. O "material" é acesso a fonte real — não
 funciona em qualquer lugar. Formato geral em
-`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **2d6+Conhecimento**.
+`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **d20+Inteligência**.
 
 ---
 

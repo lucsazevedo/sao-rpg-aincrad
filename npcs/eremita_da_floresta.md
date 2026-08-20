@@ -7,11 +7,12 @@ profissao: Caçador (aposentado)
 arma: Arco e Flecha (guardado, raramente usado)
 guilda: 
 atributos:
-  corpo: -1
-  reflexo: 1
-  conhecimento: 1
-  espirito: 2
-  tecnica: 0
+  forca: 8
+  destreza: 12
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 14
+  carisma: 14
 tags: [eremita, ex-caçador, guardião de segredo, horunka]
 imagem: ../imagens/npc_eremita_da_floresta.png
 ---
@@ -66,3 +67,5 @@ que não vai usar a floresta ou a vila de má fé.
 Evita combate ativamente. Se encurralado, luta o suficiente pra escapar,
 não pra vencer — conhece a floresta melhor que qualquer intruso e prefere
 sumir entre as árvores a um confronto direto.
+
+<!-- convertido-dnd5e -->

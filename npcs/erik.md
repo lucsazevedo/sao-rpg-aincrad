@@ -7,11 +7,12 @@ profissao: Caçador
 arma: Arco e Flecha
 guilda: 
 atributos:
-  corpo: -2
-  reflexo: 0
-  conhecimento: -1
-  espirito: -1
-  tecnica: -1
+  forca: 6
+  destreza: 10
+  constituicao: 6
+  inteligencia: 8
+  sabedoria: 8
+  carisma: 8
 tags: [solitario, desconfiado, caçador]
 imagem: ../imagens/npc_erik.png
 ---
@@ -62,3 +63,5 @@ quase sempre forçando os jogadores a reagir em vez de só ouvir exposição.
 ## Combate (se aplicável)
 
 Erik é um caçador habilidoso, capaz de disparar flechas rapidamente e acertar alvos a longa distância. Ele evita confrontos diretos quando possível, utilizando o terreno a seu favor.
+
+<!-- convertido-dnd5e -->

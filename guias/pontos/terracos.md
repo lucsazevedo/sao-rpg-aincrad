@@ -32,8 +32,8 @@ preço da descida.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Subir e colher no degrau mais alto | 2d6+Corpo | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
-| Observar a encosta de cima | 2d6+Conhecimento | Vista clara dos degraus todos — sabe quais já foram comidos e de onde vem o barulho de mastigação | Vê o estrago, sem localizar a origem | Só vê plantação bonita |
+| Subir e colher no degrau mais alto | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
+| Observar a encosta de cima | d20+Inteligência | Vista clara dos degraus todos — sabe quais já foram comidos e de onde vem o barulho de mastigação | Vê o estrago, sem localizar a origem | Só vê plantação bonita |
 
 **Só o mestre:** enquanto a praga durar, este degrau é a próxima refeição
 dos gafanhotos — deixe isso visível a cada sessão de atraso em
@@ -59,9 +59,9 @@ golpes; recompensa em Col com chance de Perna Serrilhada.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo | Golpe limpo, sem reação | Acerta, mas a ninhada se agita | Salto de impacto antes de você |
-| Cronometrar o ponto fraco | 2d6+Reflexo | Acerta as patas traseiras dobradas antes do salto — ele perde o impulso | Acerta, mas fora do timing | Ele salta primeiro |
-| Andar devagar e cercar | 2d6+Reflexo | O grupo escolhe quando a luta começa | Um deles percebe e estica as pernas | O terraço inteiro levanta de uma vez |
+| Enfrentar | d20+Força | Golpe limpo, sem reação | Acerta, mas a ninhada se agita | Salto de impacto antes de você |
+| Cronometrar o ponto fraco | d20+Destreza | Acerta as patas traseiras dobradas antes do salto — ele perde o impulso | Acerta, mas fora do timing | Ele salta primeiro |
+| Andar devagar e cercar | d20+Destreza | O grupo escolhe quando a luta começa | Um deles percebe e estica as pernas | O terraço inteiro levanta de uma vez |
 
 **Só o mestre:** matar não resolve — respawn de 4h, e eles voltam. A
 solução de verdade em `bounty_05_colheita_ameacada` é achar e queimar a
@@ -87,7 +87,7 @@ respawn de 6h, colheita de qualidade superior pra Cozinheiro.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Subir e colher | 2d6+Corpo | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
+| Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
 **Só o mestre:** bom ponto pra dividir o grupo sem forçar — quem sobe
 colhe, quem fica embaixo conversa com o guardião. Os dois lados da cena se
@@ -117,7 +117,7 @@ colheita dos ataques de monstro de campo.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Perguntar sobre a praga | — | Sem teste — ele aponta as fendas de pedra abaixo do degrau mais baixo, de onde jura que os gafanhotos vêm | | |
-| Ficar de guarda na próxima debandada | 2d6+Corpo | Repele o ataque sem perder leira nenhuma — Solveig te deve | Repele, mas uma leira é comida na confusão | A debandada passa por cima de vocês |
+| Ficar de guarda na próxima debandada | d20+Força | Repele o ataque sem perder leira nenhuma — Solveig te deve | Repele, mas uma leira é comida na confusão | A debandada passa por cima de vocês |
 
 **Só o mestre:** o espantalho não é mágico — os fazendeiros o tratam com
 respeito exagerado porque precisam acreditar em alguma coisa (ver "Locais"
@@ -143,7 +143,7 @@ dos Terraços e o jantar do vale, não Col.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Subir e colher | 2d6+Corpo | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
+| Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
 **Só o mestre:** o estrago crescente nas bordas é o relógio da região —
 descreva este degrau pior a cada sessão que o grupo adiar `bounty_05`. É o
@@ -167,7 +167,7 @@ encosta — respawn de 6h, colheita de qualidade superior pra Cozinheiro.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Subir e colher | 2d6+Corpo | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
+| Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
 **Só o mestre:** o isolamento é a moeda deste ponto — colheita tranquila
 se o grupo quiser evitar o gafanhoto, ou encontro surpresa se você
@@ -191,7 +191,7 @@ mesma safra superior, mesma escada que cobra na descida.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Subir e colher | 2d6+Corpo | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
+| Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
 **Só o mestre:** a vista dos moinhos é a deixa visual que amarra Solveig a
 Molwyn — quem colhe aqui entende sem explicação de quem é a comida que
@@ -215,7 +215,7 @@ degraus.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Subir e colher | 2d6+Corpo | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
+| Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
 **Só o mestre:** enfatize o custo do 7-9 aqui — a marca da queda anterior
 está desenhada pra isso. Quem vê a cicatriz na terra e sobe mesmo assim

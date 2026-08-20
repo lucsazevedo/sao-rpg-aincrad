@@ -59,9 +59,9 @@ oficialmente por procurá-lo.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — seguir o rastro sem perder tempo
-- 2d6+Corpo — o resgate em combate
-- 2d6+Espírito — convencer o garoto sem humilhá-lo
+- d20+Destreza — seguir o rastro sem perder tempo
+- d20+Força — o resgate em combate
+- d20+Sabedoria — convencer o garoto sem humilhá-lo
 
 **NPCs na cena**
 
@@ -144,9 +144,9 @@ o que já deveria ser um sinal.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — perceber que a emboscada foi bem posicionada demais
-- 2d6+Corpo/Reflexo — defender a caravana em combate
-- 2d6+Espírito — pressionar Roan ou outro membro da caravana sobre o vazamento
+- d20+Inteligência — perceber que a emboscada foi bem posicionada demais
+- d20+Força/Reflexo — defender a caravana em combate
+- d20+Sabedoria — pressionar Roan ou outro membro da caravana sobre o vazamento
 
 **NPCs na cena**
 
@@ -230,9 +230,9 @@ nem no de Suri Cartógrafa.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — manter a calma ao perceber que o cômodo está incompleto
-- 2d6+Conhecimento — notar as texturas erradas antes de qualquer um mencionar
-- 2d6+Corpo — forçar a porta (não abre, mas o teste define se alguém se machuca tentando)
+- d20+Sabedoria — manter a calma ao perceber que o cômodo está incompleto
+- d20+Inteligência — notar as texturas erradas antes de qualquer um mencionar
+- d20+Força — forçar a porta (não abre, mas o teste define se alguém se machuca tentando)
 
 **NPCs na cena**
 
@@ -312,9 +312,9 @@ a rota comercial entre Verrun e Kaldan feche de vez.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — rastrear o padrão de fuga da matilha
-- 2d6+Corpo — combate contra o Alfa Lupino
-- 2d6+Conhecimento — reconhecer as marcas do Guardião como fora do comum
+- d20+Destreza — rastrear o padrão de fuga da matilha
+- d20+Força — combate contra o Alfa Lupino
+- d20+Inteligência — reconhecer as marcas do Guardião como fora do comum
 
 **NPCs na cena**
 
@@ -392,9 +392,9 @@ clientes cresce.
 5. Reparar a situação com Kazuo — o martelo volta, mas com uma rachadura nova.
 
 **Testes sugeridos**
-- 2d6+Conhecimento — ler os sinais do arrombamento
-- 2d6+Espírito — convencer o vendedor oportunista a admitir o que fez
-- 2d6+Corpo/Reflexo — se o comprador resistir na mina
+- d20+Inteligência — ler os sinais do arrombamento
+- d20+Sabedoria — convencer o vendedor oportunista a admitir o que fez
+- d20+Força/Reflexo — se o comprador resistir na mina
 
 **NPCs na cena**
 
@@ -478,9 +478,9 @@ durante a noite, e ela quer saber quem — ou o quê — está levando.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — conduzir a vigília sem se cansar ou desistir
-- 2d6+Conhecimento — perceber o padrão (só flores recentes) antes de vigiar
-- 2d6+Espírito — a conversa final com Anselm, sem constrangê-lo
+- d20+Sabedoria — conduzir a vigília sem se cansar ou desistir
+- d20+Inteligência — perceber o padrão (só flores recentes) antes de vigiar
+- d20+Sabedoria — a conversa final com Anselm, sem constrangê-lo
 
 **NPCs na cena**
 
@@ -566,9 +566,9 @@ desaparecerem quando ninguém olha diretamente.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — comparar o mapa provisório com o terreno real
-- 2d6+Reflexo — não se perder enquanto o caminho muda
-- 2d6+Espírito — manter a calma ao confirmar que o terreno mudou de verdade
+- d20+Inteligência — comparar o mapa provisório com o terreno real
+- d20+Destreza — não se perder enquanto o caminho muda
+- d20+Sabedoria — manter a calma ao confirmar que o terreno mudou de verdade
 
 **NPCs na cena**
 
@@ -652,9 +652,9 @@ colmeia gigantesca e um outro grupo de caçadores de olho no mesmo recurso.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — coletar sem irritar o enxame inteiro de uma vez
-- 2d6+Espírito — negociar com o grupo rival de caçadores
-- 2d6+Corpo — se o enxame atacar de verdade
+- d20+Destreza — coletar sem irritar o enxame inteiro de uma vez
+- d20+Sabedoria — negociar com o grupo rival de caçadores
+- d20+Força — se o enxame atacar de verdade
 
 **NPCs na cena**
 
@@ -741,9 +741,9 @@ finalmente se move, só três jogadores percebem pra onde ele vai.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — manter a vigília sem desistir por tédio ou desconforto
-- 2d6+Reflexo — segui-lo sem ser notado quando ele finalmente se move
-- 2d6+Conhecimento — perceber que a rua que ele entra não deveria existir
+- d20+Sabedoria — manter a vigília sem desistir por tédio ou desconforto
+- d20+Destreza — segui-lo sem ser notado quando ele finalmente se move
+- d20+Inteligência — perceber que a rua que ele entra não deveria existir
 
 **NPCs na cena**
 
@@ -830,9 +830,9 @@ descobrir a origem do som.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — localizar a direção mais provável do som
-- 2d6+Espírito — manter o grupo calmo e coordenado durante a vigília
-- 2d6+Corpo/Reflexo — defender a vila se os monstros atacarem no pico
+- d20+Inteligência — localizar a direção mais provável do som
+- d20+Sabedoria — manter o grupo calmo e coordenado durante a vigília
+- d20+Força/Reflexo — defender a vila se os monstros atacarem no pico
 
 **NPCs na cena**
 
@@ -921,9 +921,9 @@ antes de uma expedição importante.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — analisar os padrões de venda com Vell
-- 2d6+Espírito — negociar informação com Aveline sem pagar Col demais
-- 2d6+Espírito — confrontar o especulador sem virar caçada pública injusta
+- d20+Inteligência — analisar os padrões de venda com Vell
+- d20+Sabedoria — negociar informação com Aveline sem pagar Col demais
+- d20+Sabedoria — confrontar o especulador sem virar caçada pública injusta
 
 **NPCs na cena**
 
@@ -1008,9 +1008,9 @@ morreram. O trio é enviado pra investigar antes que curiosos entrem sozinhos.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — resistir a ouvir uma voz reconhecível sem se aproximar demais
-- 2d6+Conhecimento — perceber o padrão de eco errado como sinal de perigo
-- 2d6+Corpo — combate ou retirada organizada do Espectro Sussurrante
+- d20+Sabedoria — resistir a ouvir uma voz reconhecível sem se aproximar demais
+- d20+Inteligência — perceber o padrão de eco errado como sinal de perigo
+- d20+Força — combate ou retirada organizada do Espectro Sussurrante
 
 **NPCs na cena**
 
@@ -1094,9 +1094,9 @@ sendo usado como bode expiatório.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — conseguir a cooperação de Gilda
-- 2d6+Conhecimento — encontrar furos na acusação da guilda
-- 2d6+Espírito — confrontar a guilda sem provocar retaliação desproporcional
+- d20+Sabedoria — conseguir a cooperação de Gilda
+- d20+Inteligência — encontrar furos na acusação da guilda
+- d20+Sabedoria — confrontar a guilda sem provocar retaliação desproporcional
 
 **NPCs na cena**
 
@@ -1180,9 +1180,9 @@ resolver sem transformar a celebração numa guerra entre guildas.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — conduzir a investigação sem quebrar o clima da festa
-- 2d6+Conhecimento — juntar pistas sociais discretamente
-- 2d6+Espírito — negociar uma resolução que não humilhe ninguém
+- d20+Sabedoria — conduzir a investigação sem quebrar o clima da festa
+- d20+Inteligência — juntar pistas sociais discretamente
+- d20+Sabedoria — negociar uma resolução que não humilhe ninguém
 
 **NPCs na cena**
 
@@ -1267,9 +1267,9 @@ que uma estrutura "permanente" pôde ser destruída.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — examinar os destroços em busca de causa
-- 2d6+Corpo/Reflexo — defender os artesãos nas ondas de ataque
-- 2d6+Espírito — manter o ritmo de trabalho mesmo sob ameaça
+- d20+Inteligência — examinar os destroços em busca de causa
+- d20+Força/Reflexo — defender os artesãos nas ondas de ataque
+- d20+Sabedoria — manter o ritmo de trabalho mesmo sob ameaça
 
 **NPCs na cena**
 
@@ -1353,9 +1353,9 @@ pessoas interessadas em algo muito maior que dinheiro.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — negociar com ele sem parecer suspeito demais
-- 2d6+Reflexo — segui-lo sem ser percebido
-- 2d6+Conhecimento — perceber o padrão nos dados que ele coleta
+- d20+Sabedoria — negociar com ele sem parecer suspeito demais
+- d20+Destreza — segui-lo sem ser percebido
+- d20+Inteligência — perceber o padrão nos dados que ele coleta
 
 **NPCs na cena**
 
@@ -1441,9 +1441,9 @@ redemoinho estranho conhecido dos caçadores locais.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — analisar o padrão do fenômeno sem cair em pânico
-- 2d6+Reflexo — mergulho ou manobra de barco sem alertar o Lacustre Vagador
-- 2d6+Espírito — manter a calma ao perceber o próprio reflexo ausente
+- d20+Inteligência — analisar o padrão do fenômeno sem cair em pânico
+- d20+Destreza — mergulho ou manobra de barco sem alertar o Lacustre Vagador
+- d20+Sabedoria — manter a calma ao perceber o próprio reflexo ausente
 
 **NPCs na cena**
 
@@ -1531,10 +1531,10 @@ incômodas sobre o que acontece com os objetos de quem morre.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — conduzir a conversa com os amigos enlutados sem reabrir
+- d20+Sabedoria — conduzir a conversa com os amigos enlutados sem reabrir
   feridas à toa
-- 2d6+Conhecimento — cruzar registros de venda e apontar a inconsistência
-- 2d6+Espírito — interrogar o NPC vendedor sem quebrar a cena (ele reage como
+- d20+Inteligência — cruzar registros de venda e apontar a inconsistência
+- d20+Sabedoria — interrogar o NPC vendedor sem quebrar a cena (ele reage como
   NPC, não como suspeito)
 
 **NPCs na cena**
@@ -1624,9 +1624,9 @@ jogador desaparece na região, seguir as marcas vira prioridade.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — diferenciar as marcas de vandalismo comum
-- 2d6+Reflexo — seguir a trilha sem cair em armadilha
-- 2d6+Corpo — o confronto final, seja contra PK ou monstro
+- d20+Inteligência — diferenciar as marcas de vandalismo comum
+- d20+Destreza — seguir a trilha sem cair em armadilha
+- d20+Força — o confronto final, seja contra PK ou monstro
 
 **NPCs na cena**
 
@@ -1711,9 +1711,9 @@ uma lembrança importante.
 
 **Testes sugeridos**
 
-- 2d6+Corpo/Reflexo — competições leves do festival (opcional, pra diversão)
-- 2d6+Espírito — o peso emocional de escolher o que entregar ao rio
-- 2d6+Conhecimento — notar o padrão estranho no agrupamento das lanternas
+- d20+Força/Reflexo — competições leves do festival (opcional, pra diversão)
+- d20+Sabedoria — o peso emocional de escolher o que entregar ao rio
+- d20+Inteligência — notar o padrão estranho no agrupamento das lanternas
 
 **NPCs na cena**
 
@@ -1799,9 +1799,9 @@ largadas no lugar — como se todos tivessem saído correndo ao mesmo tempo.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — ler os sinais de fuga em massa sem entrar em pânico
-- 2d6+Reflexo — descer as galerias com segurança
-- 2d6+Corpo — combate contra a infestação de Escorpiões/Vermes
+- d20+Inteligência — ler os sinais de fuga em massa sem entrar em pânico
+- d20+Destreza — descer as galerias com segurança
+- d20+Força — combate contra a infestação de Escorpiões/Vermes
 
 **NPCs na cena**
 
@@ -1886,9 +1886,9 @@ ajudar competidores presos lá dentro quando o tempo se esgota.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — decisões rápidas de rota, sob pressão de tempo
-- 2d6+Conhecimento — resolver o obstáculo central sem gastar tempo demais
-- 2d6+Espírito — manter a cabeça fria com o relógio correndo
+- d20+Destreza — decisões rápidas de rota, sob pressão de tempo
+- d20+Inteligência — resolver o obstáculo central sem gastar tempo demais
+- d20+Sabedoria — manter a cabeça fria com o relógio correndo
 
 **NPCs na cena**
 
@@ -1968,9 +1968,9 @@ excursão, fingindo ser inexperiente.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — manter o disfarce de "novato" convincente
-- 2d6+Reflexo — perceber o desvio da rota antes de ficar longe demais
-- 2d6+Corpo — o confronto final no ponto isolado
+- d20+Sabedoria — manter o disfarce de "novato" convincente
+- d20+Destreza — perceber o desvio da rota antes de ficar longe demais
+- d20+Força — o confronto final no ponto isolado
 
 **NPCs na cena**
 
@@ -2055,9 +2055,9 @@ antes do anoitecer.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — ganhar a confiança da criança pra que ela guie o caminho
-- 2d6+Corpo/Reflexo — proteção contra os perigos normais da floresta no trajeto
-- 2d6+Conhecimento — perceber, no fim, que ela nunca desconectou como um
+- d20+Sabedoria — ganhar a confiança da criança pra que ela guie o caminho
+- d20+Força/Reflexo — proteção contra os perigos normais da floresta no trajeto
+- d20+Inteligência — perceber, no fim, que ela nunca desconectou como um
   jogador ou NPC comum deveria
 
 **NPCs na cena**
@@ -2143,9 +2143,9 @@ pessoal em algo bem mais grave.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — identificar sinais de sabotagem no equipamento ou nas regras
-- 2d6+Espírito — investigar discretamente sem alertar quem manipula
-- 2d6+Reflexo — intervir a tempo se a sabotagem for ativada durante o duelo
+- d20+Inteligência — identificar sinais de sabotagem no equipamento ou nas regras
+- d20+Sabedoria — investigar discretamente sem alertar quem manipula
+- d20+Destreza — intervir a tempo se a sabotagem for ativada durante o duelo
 
 **NPCs na cena**
 

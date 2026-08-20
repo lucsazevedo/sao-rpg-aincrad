@@ -33,9 +33,9 @@ do andar.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Sondar o clima entre as guildas | 2d6+Conhecimento | Sabe quem está de mal com quem, e por quê | Sabe que há atrito, não a causa | Pergunta pra pessoa errada e vira assunto |
-| Negociar entrada numa expedição | 2d6+Conhecimento | Aceitos, com parte justa do espólio | Aceitos, mas na parte pior da divisão | Recusados, e a recusa circula |
-| Ouvir a proposta do homem de tabardo | 2d6+Espírito | Ele abre o jogo: a guilda paga por informação de campo, sem perguntas | Ele oferece, mas cobra sigilo e prazo | Ele desconversa — "volta quando tiver nome" |
+| Sondar o clima entre as guildas | d20+Inteligência | Sabe quem está de mal com quem, e por quê | Sabe que há atrito, não a causa | Pergunta pra pessoa errada e vira assunto |
+| Negociar entrada numa expedição | d20+Inteligência | Aceitos, com parte justa do espólio | Aceitos, mas na parte pior da divisão | Recusados, e a recusa circula |
+| Ouvir a proposta do homem de tabardo | d20+Sabedoria | Ele abre o jogo: a guilda paga por informação de campo, sem perguntas | Ele oferece, mas cobra sigilo e prazo | Ele desconversa — "volta quando tiver nome" |
 
 **Só o mestre:** a fala dele é a do JSON — "Minha guilda paga bem por
 informação de campo. Não preciso saber por quê você precisa saber disso." —
@@ -67,7 +67,7 @@ ajuda — precisa, e essa diferença é a cena.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Ajudar com a barraca | — | Sem teste — ele vira contato, e contato aqui vale mais que Col | | |
-| Ajudar a armar a prova de competência | 2d6+Espírito | Ele confia no grupo e a prova sai limpa | A prova sai, mas um veterano aparece cedo demais pra avaliar | Ele quer impressionar e quase estraga algo simples |
+| Ajudar a armar a prova de competência | d20+Sabedoria | Ele confia no grupo e a prova sai limpa | A prova sai, mas um veterano aparece cedo demais pra avaliar | Ele quer impressionar e quase estraga algo simples |
 
 **Só o mestre:** este é o gancho de `bounty_07_recruta_precisa_de_prova` —
 funciona melhor como cena de vínculo do que como tarefa; reaproveite
@@ -96,7 +96,7 @@ Comuns, Frasco Vazio, bandagem.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Comprar suprimento básico de expedição | — | Sem teste — tabela fixa, Col 20–50 conforme o item | | |
-| Perguntar o que está em falta | 2d6+Conhecimento | Descobre o que acabou e por quê — pista sobre movimento recente no posto | Só descobre o que acabou | "Tá na placa o que tem" |
+| Perguntar o que está em falta | d20+Inteligência | Descobre o que acabou e por quê — pista sobre movimento recente no posto | Só descobre o que acabou | "Tá na placa o que tem" |
 
 **Só o mestre:** estoque limitado de verdade — reabastece só depois de um
 tempo (você define), e o que falta na prateleira é termômetro gratuito de

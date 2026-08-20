@@ -7,11 +7,12 @@ profissao: Bibliotecário
 arma: Chicote
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 2
-  espirito: 1
-  tecnica: -1
+  forca: 8
+  destreza: 8
+  constituicao: 8
+  inteligencia: 14
+  sabedoria: 12
+  carisma: 12
 tags: [informacao, misterio_andar2]
 imagem: ../imagens/npc_nissa.png
 canonico: nao
@@ -63,7 +64,7 @@ oposto exato do Vell, que vende tudo e não filtra.
 Sobre Illfang, Nissa vende: *"talwar e broquel confirmados. Há um relato não
 verificado de uma segunda arma. Não vendo relato não verificado."*
 
-**Se o grupo pagar pelo relato não verificado assim mesmo** (2d6+Espírito;
+**Se o grupo pagar pelo relato não verificado assim mesmo** (d20+Sabedoria;
 10+ ela cede, 7-9 cede e cobra o triplo, 6- recusa): é a fase 2 do Illfang.
 Levar isso ao Diavel salva vidas no raid. Essa é uma das melhores correntes de
 causa e efeito do andar inteiro.
@@ -77,3 +78,5 @@ causa e efeito do andar inteiro.
 ## Combate (se aplicável)
 
 Não luta. Chicote no cinto, nunca usado, e ela admite que é decoração.
+
+<!-- convertido-dnd5e -->

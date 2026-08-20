@@ -53,14 +53,14 @@ entorpecidos). É barato de lembrar e muda a preparação do grupo.
 
 | Ação                          | Teste            | 10+                                                 | 7-9                             | 6-                                             |
 | ----------------------------- | ---------------- | --------------------------------------------------- | ------------------------------- | ---------------------------------------------- |
-| Escalar um trecho ruim        | 2d6+Corpo        | Sobe e ajuda o próximo                              | Sobe, mas larga algo pesado     | Escorrega; queda curta e material perdido      |
-| Minerar Minério Raro          | 2d6+Técnica      | 2 unidades e o veio continua                        | 1 unidade e o veio fecha        | Desabamento parcial; barulho atrai             |
-| Achar Cristal Bruto na rocha  | 2d6+Conhecimento | Acha um veio limpo                                  | Acha, misturado com pedra comum | Só rocha                                       |
-| Enfrentar o Urso de Pedra     | 2d6+Corpo        | Focinho: 2 golpes de uma vez                        | 1 golpe                         | Investida: você vai contra a parede            |
-| Domar o Urso de Pedra         | 2d6+Técnica x6   | 1 sucesso (comida em grande quantidade, de uma vez) | 1 sucesso, ele rosna            | 2 falhas encerram                              |
-| Alcançar o ninho do Arauto    | 2d6+Reflexo      | Chega ao ninho sem ser visto                        | Chega, e ele está voltando      | Ele te pega em terreno aberto                  |
-| Domar o Arauto das Alturas    | 2d6+Técnica x10  | 1 sucesso (com o ritual de penas)                   | 1 sucesso e ele se afasta       | 2 falhas: ele não deixa mais você chegar perto |
-| Investigar o Vale Interditado | 2d6+Espírito     | Entende por que ninguém sobe ali                    | Sente que é melhor não          | Entra assim mesmo                              |
+| Escalar um trecho ruim        | d20+Força        | Sobe e ajuda o próximo                              | Sobe, mas larga algo pesado     | Escorrega; queda curta e material perdido      |
+| Minerar Minério Raro          | d20+Destreza      | 2 unidades e o veio continua                        | 1 unidade e o veio fecha        | Desabamento parcial; barulho atrai             |
+| Achar Cristal Bruto na rocha  | d20+Inteligência | Acha um veio limpo                                  | Acha, misturado com pedra comum | Só rocha                                       |
+| Enfrentar o Urso de Pedra     | d20+Força        | Focinho: 2 golpes de uma vez                        | 1 golpe                         | Investida: você vai contra a parede            |
+| Domar o Urso de Pedra         | d20+Destreza x6   | 1 sucesso (comida em grande quantidade, de uma vez) | 1 sucesso, ele rosna            | 2 falhas encerram                              |
+| Alcançar o ninho do Arauto    | d20+Destreza      | Chega ao ninho sem ser visto                        | Chega, e ele está voltando      | Ele te pega em terreno aberto                  |
+| Domar o Arauto das Alturas    | d20+Destreza x10  | 1 sucesso (com o ritual de penas)                   | 1 sucesso e ele se afasta       | 2 falhas: ele não deixa mais você chegar perto |
+| Investigar o Vale Interditado | d20+Sabedoria     | Entende por que ninguém sobe ali                    | Sente que é melhor não          | Entra assim mesmo                              |
 
 ### Só o mestre
 
@@ -140,10 +140,10 @@ claramente escrita.
 
 | Ação                                    | Teste                         | 10+                                                       | 7-9                               | 6-                          |
 | --------------------------------------- | ----------------------------- | --------------------------------------------------------- | --------------------------------- | --------------------------- |
-| Mapear a partir do Mirante (Cartógrafo) | 2d6+Conhecimento com vantagem | Revela todos os pontos `sempre` de uma região à escolha   | Revela metade                     | Nada, e você gastou a tarde |
-| Decifrar a Gravação Antiga              | 2d6+Conhecimento              | Lê três palavras: são do mesmo alfabeto das outras marcas | Vê que é escrita, não decora      | "Erosão"                    |
-| Fazer decalque da gravação              | 2d6+Técnica                   | Decalque perfeito, transportável pro Estudioso            | Decalque parcial                  | Rasga o papel e borra       |
-| Observar o Labirinto de longe           | 2d6+Conhecimento              | Conta os movimentos do Field Boss e entende o padrão      | Vê que tem algo grande na entrada | Está longe demais           |
+| Mapear a partir do Mirante (Cartógrafo) | d20+Inteligência com vantagem | Revela todos os pontos `sempre` de uma região à escolha   | Revela metade                     | Nada, e você gastou a tarde |
+| Decifrar a Gravação Antiga              | d20+Inteligência              | Lê três palavras: são do mesmo alfabeto das outras marcas | Vê que é escrita, não decora      | "Erosão"                    |
+| Fazer decalque da gravação              | d20+Destreza                   | Decalque perfeito, transportável pro Estudioso            | Decalque parcial                  | Rasga o papel e borra       |
+| Observar o Labirinto de longe           | d20+Inteligência              | Conta os movimentos do Field Boss e entende o padrão      | Vê que tem algo grande na entrada | Está longe demais           |
 | Acampar no alto                         | —                             | Sem teste. Descanso seguro, e a melhor vista do andar     |                                   |                             |
 
 ### Só o mestre
@@ -208,11 +208,11 @@ O Predador de Vaelor caça aqui e é agressivo demais pra doma.
 
 | Ação                               | Teste        | 10+                                             | 7-9                           | 6-                                           |
 | ---------------------------------- | ------------ | ----------------------------------------------- | ----------------------------- | -------------------------------------------- |
-| Chegar à Vista do Topo             | 2d6+Reflexo  | Alcança a beirada com segurança                 | Alcança, mas alguém quase cai | Alguém cai (corda salva; sem corda, é sério) |
-| Olhar pra baixo, pra fora do andar | 2d6+Espírito | Vê a estrutura de sustentação do andar de baixo | Vê nuvem e vertigem           | Pânico: complicação até sair dali            |
-| Alcançar um ninho                  | 2d6+Corpo    | Ovo/pena/material do ninho intacto              | Alcança, o dono chega         | Cai no meio da escalada                      |
-| Enfrentar o Predador de Vaelor     | 2d6+Reflexo  | Acerta no pouso: 2 golpes                       | 1 golpe                       | Ele te empurra em direção à borda            |
-| Coletar penas de Águia de Pedra    | 2d6+Reflexo  | 3 penas íntegras                                | 1 pena                        | O bando inteiro reage                        |
+| Chegar à Vista do Topo             | d20+Destreza  | Alcança a beirada com segurança                 | Alcança, mas alguém quase cai | Alguém cai (corda salva; sem corda, é sério) |
+| Olhar pra baixo, pra fora do andar | d20+Sabedoria | Vê a estrutura de sustentação do andar de baixo | Vê nuvem e vertigem           | Pânico: complicação até sair dali            |
+| Alcançar um ninho                  | d20+Força    | Ovo/pena/material do ninho intacto              | Alcança, o dono chega         | Cai no meio da escalada                      |
+| Enfrentar o Predador de Vaelor     | d20+Destreza  | Acerta no pouso: 2 golpes                       | 1 golpe                       | Ele te empurra em direção à borda            |
+| Coletar penas de Águia de Pedra    | d20+Destreza  | 3 penas íntegras                                | 1 pena                        | O bando inteiro reage                        |
 
 ### Só o mestre
 
@@ -276,10 +276,10 @@ fundo da cena por sessões antes de pagar.
 
 | Ação                           | Teste            | 10+                                                                    | 7-9                                              | 6-                                |
 | ------------------------------ | ---------------- | ---------------------------------------------------------------------- | ------------------------------------------------ | --------------------------------- |
-| Comprar informação de corretor | 2d6+Conhecimento | Separa o verdadeiro do falso                                           | Compra tudo junto, verdadeiro e falso misturados | Compra só teoria falsa e acredita |
-| Negociar entre duas guildas    | 2d6+Conhecimento | Acordo fechado; ganha um sulco no Selo de Trégua                       | Acordo frágil, dura uma sessão                   | As duas te culpam                 |
-| Se inscrever numa expedição    | 2d6+Espírito     | Vaga boa, com gente competente                                         | Vaga na equipe de reserva                        | Recusado publicamente             |
-| Vender espólio de dungeon      | 2d6+Conhecimento | 20% acima da tabela                                                    | Tabela cheia                                     | 20% abaixo e você reclamou alto   |
+| Comprar informação de corretor | d20+Inteligência | Separa o verdadeiro do falso                                           | Compra tudo junto, verdadeiro e falso misturados | Compra só teoria falsa e acredita |
+| Negociar entre duas guildas    | d20+Inteligência | Acordo fechado; ganha um sulco no Selo de Trégua                       | Acordo frágil, dura uma sessão                   | As duas te culpam                 |
+| Se inscrever numa expedição    | d20+Sabedoria     | Vaga boa, com gente competente                                         | Vaga na equipe de reserva                        | Recusado publicamente             |
+| Vender espólio de dungeon      | d20+Inteligência | 20% acima da tabela                                                    | Tabela cheia                                     | 20% abaixo e você reclamou alto   |
 | Ouvir o Contador de Histórias  | —                | Sem teste, custa uma bebida. Três histórias: duas boas, uma verdadeira |                                                  |                                   |
 | Descansar antes do raid        | —                | Zona segura. Recupera tudo. Use pra a cena de véspera                  |                                                  |                                   |
 
@@ -377,12 +377,12 @@ cânone pro andar 1 — o que faz dele um gancho seu.
 
 | Ação                                 | Teste            | 10+                                                   | 7-9                           | 6-                               |
 | ------------------------------------ | ---------------- | ----------------------------------------------------- | ----------------------------- | -------------------------------- |
-| Puxar conversa com o Marco           | 2d6+Espírito     | Ele conta o nome dos quatro e o que combinaram        | Ele conta que estão atrasados | Ele não responde. Só olha o arco |
+| Puxar conversa com o Marco           | d20+Sabedoria     | Ele conta o nome dos quatro e o que combinaram        | Ele conta que estão atrasados | Ele não responde. Só olha o arco |
 | Comprar no acampamento               | —                | Preços de guerra: tudo 30% acima da tabela            |                               |                                  |
-| Observar o Field Boss de longe       | 2d6+Conhecimento | Entende o padrão de patrulha e uma janela de passagem | Vê que ele patrulha           | Ele te vê                        |
-| Enfrentar o Field Boss               | 2d6 + arma       | (Combate de grupo — ver notas)                        |                               |                                  |
-| Examinar a Marca de Garras na Parede | 2d6+Conhecimento | Percebe que as garras riscaram **de dentro pra fora** | Percebe que são frescas       | "Marca de monstro"               |
-| Recrutar gente pro raid              | 2d6+Conhecimento | Três voluntários competentes                          | Dois, um deles problemático   | Ninguém, e a fama circula        |
+| Observar o Field Boss de longe       | d20+Inteligência | Entende o padrão de patrulha e uma janela de passagem | Vê que ele patrulha           | Ele te vê                        |
+| Enfrentar o Field Boss               | d20+arma       | (Combate de grupo — ver notas)                        |                               |                                  |
+| Examinar a Marca de Garras na Parede | d20+Inteligência | Percebe que as garras riscaram **de dentro pra fora** | Percebe que são frescas       | "Marca de monstro"               |
+| Recrutar gente pro raid              | d20+Inteligência | Três voluntários competentes                          | Dois, um deles problemático   | Ninguém, e a fama circula        |
 
 ### Só o mestre
 
@@ -458,12 +458,12 @@ madeira e pedra.
 
 | Ação                             | Teste            | 10+                                                          | 7-9                                     | 6-                                                |
 | -------------------------------- | ---------------- | ------------------------------------------------------------ | --------------------------------------- | ------------------------------------------------- |
-| Organizar o raid antes de entrar | 2d6+Conhecimento | Formação certa: o raid começa com vantagem na primeira barra | Formação ok, uma equipe fora de posição | Confusão: a primeira barra começa com complicação |
-| Atacar a barra 1-3 (com broquel) | 2d6 + arma       | 1 golpe + você abre a guarda dele pro próximo                | 1 golpe                                 | Bloqueado pelo broquel; ele contra-ataca          |
-| Reconhecer a troca pro nodachi   | 2d6+Conhecimento | Avisa o raid a tempo: ninguém é pego na primeira investida   | Avisa tarde: uma equipe é atingida      | Ninguém percebe. É onde as pessoas morrem         |
-| Atacar na barra 4 (nodachi)      | 2d6 + arma       | 2 golpes: sem escudo, ele está aberto                        | 1 golpe                                 | Ele acerta o arco inteiro do nodachi              |
-| Tirar um aliado caído da linha   | 2d6+Corpo        | Salva a pessoa e volta pra linha                             | Salva, mas leva o golpe no lugar        | Os dois ficam expostos                            |
-| Estudar o Símbolo Kobold         | 2d6+Conhecimento | Lê a heráldica: os kobolds não são nativos deste andar       | Vê que é organizado, não selvagem       | "Rabisco de bicho"                                |
+| Organizar o raid antes de entrar | d20+Inteligência | Formação certa: o raid começa com vantagem na primeira barra | Formação ok, uma equipe fora de posição | Confusão: a primeira barra começa com complicação |
+| Atacar a barra 1-3 (com broquel) | d20+arma       | 1 golpe + você abre a guarda dele pro próximo                | 1 golpe                                 | Bloqueado pelo broquel; ele contra-ataca          |
+| Reconhecer a troca pro nodachi   | d20+Inteligência | Avisa o raid a tempo: ninguém é pego na primeira investida   | Avisa tarde: uma equipe é atingida      | Ninguém percebe. É onde as pessoas morrem         |
+| Atacar na barra 4 (nodachi)      | d20+arma       | 2 golpes: sem escudo, ele está aberto                        | 1 golpe                                 | Ele acerta o arco inteiro do nodachi              |
+| Tirar um aliado caído da linha   | d20+Força        | Salva a pessoa e volta pra linha                             | Salva, mas leva o golpe no lugar        | Os dois ficam expostos                            |
+| Estudar o Símbolo Kobold         | d20+Inteligência | Lê a heráldica: os kobolds não são nativos deste andar       | Vê que é organizado, não selvagem       | "Rabisco de bicho"                                |
 
 ### Só o mestre
 

@@ -117,9 +117,9 @@ decide é a **sequência de encaixe**, não a posição.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar os encaixes | 2d6+Conhecimento | Entende que os cinco entram, mas há desgaste desigual: alguns foram usados mais vezes, em ordem | Entende que os cinco cabem | Conclui que é decorativo |
+| Examinar os encaixes | d20+Inteligência | Entende que os cinco entram, mas há desgaste desigual: alguns foram usados mais vezes, em ordem | Entende que os cinco cabem | Conclui que é decorativo |
 | Encaixar um cristal na tentativa | — | O cristal **entra e não sai**. Ordem errada = cristal perdido. Diga isso ANTES de deixar rolar |  |  |
-| Escutar a pedra (bater) | 2d6+Técnica | Há um vão atrás e ele é raso — sala pequena, não dungeon | Há vão | O guarda pergunta o que você está fazendo |
+| Escutar a pedra (bater) | d20+Destreza | Há um vão atrás e ele é raso — sala pequena, não dungeon | Há vão | O guarda pergunta o que você está fazendo |
 
 **Custo real:** cada tentativa errada consome cristais de verdade. Um Cristal
 de Teleporte custa 500 Col. O grupo aprende rápido que chutar é caríssimo, e é
@@ -140,9 +140,9 @@ Barreira (prata).**
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ouvir a cantiga com atenção | 2d6+Espírito (Músico: automático) | Decora a letra inteira e sacou que são cores de cristal | Decora a letra | Lembra do refrão e mais nada |
-| Perguntar ao busker de onde vem | 2d6+Espírito | Ele lembra do nome do busker que ensinou | Ele diz que veio de outro busker | Ele se irrita: "é só uma música" |
-| Ler o verso rabiscado na Dungeon Oculta | 2d6+Conhecimento | Verso idêntico, e mais velho que a cantiga | Verso parecido | Rabisco ilegível — e você está no lugar errado do andar |
+| Ouvir a cantiga com atenção | d20+Sabedoria (Músico: automático) | Decora a letra inteira e sacou que são cores de cristal | Decora a letra | Lembra do refrão e mais nada |
+| Perguntar ao busker de onde vem | d20+Sabedoria | Ele lembra do nome do busker que ensinou | Ele diz que veio de outro busker | Ele se irrita: "é só uma música" |
+| Ler o verso rabiscado na Dungeon Oculta | d20+Inteligência | Verso idêntico, e mais velho que a cantiga | Verso parecido | Rabisco ilegível — e você está no lugar errado do andar |
 
 ### Diálogo do busker
 
@@ -179,7 +179,7 @@ Somando: **1680 Col** comprando tudo. Um grupo de quatro no dia 10 tem entre
 
 Saídas: pedir emprestado a outra guilda (Diplomata brilha), fazer contrato de
 escolta pra bancar, caçar os baús específicos, ou convencer o Comerciante da
-praça a fiar (2d6+Conhecimento; 10+ ele fia metade, 7-9 fia um só e cobra
+praça a fiar (d20+Inteligência; 10+ ele fia metade, 7-9 fia um só e cobra
 juros em serviço, 6- ele ri).
 
 ## Etapa 4 — O encaixe
@@ -284,11 +284,11 @@ acontecer pelo menos uma vez, e deve ser divertido, não punitivo.
 
 | Etapa | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|---|
-| 1 | Achar uma marca | 2d6+Reflexo | Acha e nota a cicatrização | Acha a marca | Passa direto |
-| 2 | Deduzir distância/direção | 2d6+Conhecimento | Deduz as duas | Deduz uma | Anota errado |
-| 3 | Achar o Eremita | 2d6+Espírito | Ele aparece por vontade própria | Acha a cabana vazia | Perde o dia |
-| 4 | Convencer o Eremita | 2d6+Espírito | Ensina o código inteiro | Ensina metade e cobra um favor | Ele encerra e some por uma sessão |
-| 5 | Seguir a rota completa | 2d6+Conhecimento | Chega no esconderijo direto | Chega, mas de noite | Chega no lugar errado (esconderijo vazio de outro caçador) |
+| 1 | Achar uma marca | d20+Destreza | Acha e nota a cicatrização | Acha a marca | Passa direto |
+| 2 | Deduzir distância/direção | d20+Inteligência | Deduz as duas | Deduz uma | Anota errado |
+| 3 | Achar o Eremita | d20+Sabedoria | Ele aparece por vontade própria | Acha a cabana vazia | Perde o dia |
+| 4 | Convencer o Eremita | d20+Sabedoria | Ensina o código inteiro | Ensina metade e cobra um favor | Ele encerra e some por uma sessão |
+| 5 | Seguir a rota completa | d20+Inteligência | Chega no esconderijo direto | Chega, mas de noite | Chega no lugar errado (esconderijo vazio de outro caçador) |
 
 ## O Eremita — o que ele responde e o que não
 
@@ -331,7 +331,7 @@ qualquer comerciante de Horunka se recusa a comprar.
 para de cobrar, e o estalajadeiro passa a chamar o grupo pelo nome.
 
 **Se o grupo falhar:** o esconderijo pode ser achado por força bruta
-(vasculhar a floresta, 2d6+Reflexo, três sessões seguidas). Eles ganham o kit
+(vasculhar a floresta, d20+Destreza, três sessões seguidas). Eles ganham o kit
 e **não** ganham o diário — porque o diário o Eremita entrega em mãos, ou não
 entrega.
 
@@ -378,11 +378,11 @@ dos muros no dia 5, e agora o grupo sabe por quê.
 
 | Etapa | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|---|
-| 1 | Notar que foi raspado, não gasto | 2d6+Conhecimento | Vê marca de ferramenta e que é recente | Vê que está apagado | "Erosão" |
-| 2 | Cruzar as datas com o Memorial | 2d6+Conhecimento | Descobre que a data bate com uma morte dupla no dia 5 | Descobre a data | Registro incompleto |
-| 3 | Ganhar a confiança do Zelador | 2d6+Espírito | Ele conta que alguém pediu, e que ele aceitou | Ele confirma que foi de propósito | Ele te acompanha até a saída, educado |
-| 4 | Descobrir quem visita | 2d6+Reflexo (vigília) ou +Conhecimento (dedução) | Identifica Talia | Sabe que é uma mulher, sempre em horário diferente | Você é visto vigiando e a visitante para de vir |
-| 5 | Falar com Talia | 2d6+Espírito | Ela conta tudo, e chora, e agradece | Ela conta metade e pede pra parar | Ela nega e corta relação com o grupo |
+| 1 | Notar que foi raspado, não gasto | d20+Inteligência | Vê marca de ferramenta e que é recente | Vê que está apagado | "Erosão" |
+| 2 | Cruzar as datas com o Memorial | d20+Inteligência | Descobre que a data bate com uma morte dupla no dia 5 | Descobre a data | Registro incompleto |
+| 3 | Ganhar a confiança do Zelador | d20+Sabedoria | Ele conta que alguém pediu, e que ele aceitou | Ele confirma que foi de propósito | Ele te acompanha até a saída, educado |
+| 4 | Descobrir quem visita | d20+Destreza (vigília) ou +Conhecimento (dedução) | Identifica Talia | Sabe que é uma mulher, sempre em horário diferente | Você é visto vigiando e a visitante para de vir |
+| 5 | Falar com Talia | d20+Sabedoria | Ela conta tudo, e chora, e agradece | Ela conta metade e pede pra parar | Ela nega e corta relação com o grupo |
 
 ## O Zelador — o que ele responde e o que não
 
@@ -479,12 +479,12 @@ puzzle.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber o padrão de quando aparece | 2d6+Conhecimento | Deduz a janela exata (entardecer + água mexida) | Deduz o entardecer | Acha que é aleatório |
-| Fazer o Barqueiro falar | 2d6+Espírito | Ele conta o que viu e vai junto | Conta, mas não vai | Muda de assunto e fica calado o dia todo |
-| Chegar perto de barco | 2d6+Reflexo | Chega e observa com calma | Chega, o barco começa a girar | É puxado; teste de Corpo pra não virar |
-| Medir a profundidade | 2d6+Técnica | A linha acaba antes do fundo — 40m e nada | Linha enrosca | Perde a linha e o peso |
-| Encher um frasco no olho do redemoinho | 2d6+Reflexo | Consegue: a água **sobe** dentro do frasco | Consegue meio frasco | Frasco quebra |
-| Cruzar com a maré do lago | 2d6+Conhecimento | Entende que são o mesmo sistema | Suspeita | Descarta a ideia |
+| Perceber o padrão de quando aparece | d20+Inteligência | Deduz a janela exata (entardecer + água mexida) | Deduz o entardecer | Acha que é aleatório |
+| Fazer o Barqueiro falar | d20+Sabedoria | Ele conta o que viu e vai junto | Conta, mas não vai | Muda de assunto e fica calado o dia todo |
+| Chegar perto de barco | d20+Destreza | Chega e observa com calma | Chega, o barco começa a girar | É puxado; teste de Corpo pra não virar |
+| Medir a profundidade | d20+Destreza | A linha acaba antes do fundo — 40m e nada | Linha enrosca | Perde a linha e o peso |
+| Encher um frasco no olho do redemoinho | d20+Destreza | Consegue: a água **sobe** dentro do frasco | Consegue meio frasco | Frasco quebra |
+| Cruzar com a maré do lago | d20+Inteligência | Entende que são o mesmo sistema | Suspeita | Descarta a ideia |
 
 ## O Barqueiro — o que ele responde e o que não
 
@@ -551,11 +551,11 @@ A oitava pedra, a caída, aponta pro chão.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber que o arranjo é intencional | 2d6+Conhecimento | Vê que as sete formam ângulos regulares | Vê que tem padrão | "Pedras largadas" |
-| Descobrir que apontam pra cima | 2d6+Conhecimento | Percebe a inclinação: são miras, não marcos | Percebe que estão inclinadas | Nada |
-| Observar de noite e comparar | 2d6+Conhecimento | **Nenhuma das sete tem estrela.** Todas as outras direções têm | Percebe que uma não tem | Céu é céu |
-| Levantar a oitava pedra | 2d6+Corpo (precisa de 2 pessoas) | Levanta: ela aponta pro chão, e tem uma marca embaixo | Levanta, marca borrada | Não sai do lugar |
-| Escavar sob a oitava | 2d6+Corpo/Técnica (Pá dá vantagem) | Acha uma bússola de bronze enterrada | Acha o buraco, vazio, com marca de algo retirado | Só terra |
+| Perceber que o arranjo é intencional | d20+Inteligência | Vê que as sete formam ângulos regulares | Vê que tem padrão | "Pedras largadas" |
+| Descobrir que apontam pra cima | d20+Inteligência | Percebe a inclinação: são miras, não marcos | Percebe que estão inclinadas | Nada |
+| Observar de noite e comparar | d20+Inteligência | **Nenhuma das sete tem estrela.** Todas as outras direções têm | Percebe que uma não tem | Céu é céu |
+| Levantar a oitava pedra | d20+Força (precisa de 2 pessoas) | Levanta: ela aponta pro chão, e tem uma marca embaixo | Levanta, marca borrada | Não sai do lugar |
+| Escavar sob a oitava | d20+Força/Técnica (Pá dá vantagem) | Acha uma bússola de bronze enterrada | Acha o buraco, vazio, com marca de algo retirado | Só terra |
 
 ## Recompensas
 
@@ -600,12 +600,12 @@ Quando um jogador finalmente conta e chega em **cem**, essa é a cena.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar as engrenagens do chão | 2d6+Técnica | Percebe que giram sem carga: o eixo mestre sumiu | Percebe que não acionam nada | Acha que estão quebradas |
-| Procurar o eixo removido | 2d6+Conhecimento | Acha o encaixe vazio e a marca de serra: foi cortado | Acha o encaixe | Nada |
-| Contar as marcas do mostrador | 2d6+Conhecimento (ou simplesmente contar) | **Cem** | Perde a conta e recomeça: cem | — |
-| Subir até o mostrador por dentro | 2d6+Corpo | Chega e vê o verso: há um ponteiro guardado, deitado | Chega, a escada cede na volta | Cai |
-| Montar o ponteiro | 2d6+Técnica | O ponteiro encaixa e para na **primeira** marca | Encaixa torto | Quebra o encaixe |
-| Perguntar ao Estudioso | 2d6+Espírito | Ele já suspeitava e chora um pouco quando você confirma | Ele discute e depois aceita | Ele te chama de amador |
+| Examinar as engrenagens do chão | d20+Destreza | Percebe que giram sem carga: o eixo mestre sumiu | Percebe que não acionam nada | Acha que estão quebradas |
+| Procurar o eixo removido | d20+Inteligência | Acha o encaixe vazio e a marca de serra: foi cortado | Acha o encaixe | Nada |
+| Contar as marcas do mostrador | d20+Inteligência (ou simplesmente contar) | **Cem** | Perde a conta e recomeça: cem | — |
+| Subir até o mostrador por dentro | d20+Força | Chega e vê o verso: há um ponteiro guardado, deitado | Chega, a escada cede na volta | Cai |
+| Montar o ponteiro | d20+Destreza | O ponteiro encaixa e para na **primeira** marca | Encaixa torto | Quebra o encaixe |
+| Perguntar ao Estudioso | d20+Sabedoria | Ele já suspeitava e chora um pouco quando você confirma | Ele discute e depois aceita | Ele te chama de amador |
 
 ## O Estudioso — o que ele responde e o que não
 
@@ -676,10 +676,10 @@ persistência burra, e a mesa vai lembrar dele por isso.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Perceber que os cogumelos mudam | 2d6+Conhecimento | Nota que um escureceu depois da primeira perda | Nota que estão diferentes | Nada |
+| Perceber que os cogumelos mudam | d20+Inteligência | Nota que um escureceu depois da primeira perda | Nota que estão diferentes | Nada |
 | Mapear a sequência (por tentativa) | — | Sem teste: cada tentativa custa 1 hora e revela 1 posição. Nove no total, menos as deduzidas |  |  |
-| Deduzir posições sem pisar | 2d6+Conhecimento | Pula duas tentativas | Pula uma | Nenhuma |
-| Ouvir a Voz Sem Corpo sobre o círculo | 2d6+Espírito | Ela dá **uma** posição, de graça | Ela dá uma posição errada, de propósito | Ela repete a sua pergunta e vai embora |
+| Deduzir posições sem pisar | d20+Inteligência | Pula duas tentativas | Pula uma | Nenhuma |
+| Ouvir a Voz Sem Corpo sobre o círculo | d20+Sabedoria | Ela dá **uma** posição, de graça | Ela dá uma posição errada, de propósito | Ela repete a sua pergunta e vai embora |
 | Completar a ordem | — | Cena. O círculo se abre: o chão dentro dele afunda meio metro e revela uma raiz oca |  |  |
 
 **Custo total se o grupo for burro:** nove horas de jogo. Isso significa cair a

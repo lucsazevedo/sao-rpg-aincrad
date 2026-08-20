@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Escudo e Espada
 guilda: ""
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 1
-  tecnica: -1
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [urbus, andar2, recepcao, orientacao]
 imagem: ../imagens/npc_guardia_de_urbus.png
 canonico: nao
@@ -85,3 +86,5 @@ social de qualquer grupo que chega no andar 2.
 
 Mercenário competente, nível comum — luta se necessário, mas prioriza
 proteger recém-chegados a engajar ofensivamente.
+
+<!-- convertido-dnd5e -->

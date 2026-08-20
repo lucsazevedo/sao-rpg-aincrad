@@ -32,8 +32,8 @@ andar dita em pedra: ninguém sobe sozinho.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler os símbolos kobold | 2d6+Conhecimento | São contagens, e a última linha está incompleta — alguém parou de contar recentemente | Reconhece que são contagens, sem conseguir ler o número | Parece pichação de monstro; o grupo passa direto |
-| Parar e ouvir antes de decidir | 2d6+Espírito | Respiração grande, lenta, paciente — ele sabe que tem gente aqui, e não tem pressa | Ouve a respiração, sem saber se é de um ou de vários | O silêncio parece seguro — leitura errada |
+| Ler os símbolos kobold | d20+Inteligência | São contagens, e a última linha está incompleta — alguém parou de contar recentemente | Reconhece que são contagens, sem conseguir ler o número | Parece pichação de monstro; o grupo passa direto |
+| Parar e ouvir antes de decidir | d20+Sabedoria | Respiração grande, lenta, paciente — ele sabe que tem gente aqui, e não tem pressa | Ouve a respiração, sem saber se é de um ou de vários | O silêncio parece seguro — leitura errada |
 | Empurrar a porta do chefe | — | Sem teste — abre com quatro pessoas empurrando ao mesmo tempo; com menos, não abre | | |
 
 **Só o mestre:** é a última chance de recuar com dignidade — trate o corredor
@@ -65,10 +65,10 @@ golpe, pelo tamanho.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Entrar com a formação combinada | 2d6+Espírito | O raid entra na ordem combinada e ninguém quebra a fileira no primeiro rugido | Entram organizados, mas alguém avança cedo demais e a formação leva uma rodada pra se refazer | A sala é maior do que qualquer plano feito do lado de fora — o plano morre na porta |
-| Atacar nas barras 1-3 (talwar e broquel) | 2d6 + arma | 1 golpe + você abre a guarda dele pro próximo | 1 golpe | Bloqueado pelo broquel; ele contra-ataca |
-| Reconhecer a troca pro nodachi | 2d6+Conhecimento | Avisa o raid a tempo: ninguém é pego na primeira investida | Avisa tarde: uma equipe é atingida | Ninguém percebe — é onde as pessoas morrem |
-| Tirar um aliado caído da linha | 2d6+Corpo | Salva a pessoa e volta pra linha | Salva, mas leva o golpe no lugar | Os dois ficam expostos |
+| Entrar com a formação combinada | d20+Sabedoria | O raid entra na ordem combinada e ninguém quebra a fileira no primeiro rugido | Entram organizados, mas alguém avança cedo demais e a formação leva uma rodada pra se refazer | A sala é maior do que qualquer plano feito do lado de fora — o plano morre na porta |
+| Atacar nas barras 1-3 (talwar e broquel) | d20+arma | 1 golpe + você abre a guarda dele pro próximo | 1 golpe | Bloqueado pelo broquel; ele contra-ataca |
+| Reconhecer a troca pro nodachi | d20+Inteligência | Avisa o raid a tempo: ninguém é pego na primeira investida | Avisa tarde: uma equipe é atingida | Ninguém percebe — é onde as pessoas morrem |
+| Tirar um aliado caído da linha | d20+Força | Salva a pessoa e volta pra linha | Salva, mas leva o golpe no lugar | Os dois ficam expostos |
 
 **Só o mestre:** não use este ponto como encontro avulso — ele existe pra ser
 marcado, planejado e discutido em mesa por sessões; é o pagamento de
@@ -101,8 +101,8 @@ aviso de que o grupo está perto do fim do Labirinto.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda já está no ar quando você chega |
-| Mirar a garganta | 2d6+Reflexo | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
+| Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda já está no ar quando você chega |
+| Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
 | Contornar e seguir | — | Sem teste — ele não sai da posição designada; o terreno fora dela é seguro | | |
 
 **Só o mestre:** ameaça comum aqui (3-4 golpes); drop de Col + Fragmento de
@@ -126,8 +126,8 @@ heráldica organizada dos estandartes do Trecho V.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Sentir o peso do símbolo | 2d6+Espírito | Sente que o símbolo foi feito recentemente — não é decoração antiga | Reconhece só que é um símbolo, nada além | Parece sujeira; o grupo ignora |
-| Estudar a heráldica | 2d6+Conhecimento | Lê o padrão: é organizado, é sucessão — os kobolds não são nativos deste andar | Vê que é organizado, não selvagem | "Rabisco de bicho" |
+| Sentir o peso do símbolo | d20+Sabedoria | Sente que o símbolo foi feito recentemente — não é decoração antiga | Reconhece só que é um símbolo, nada além | Parece sujeira; o grupo ignora |
+| Estudar a heráldica | d20+Inteligência | Lê o padrão: é organizado, é sucessão — os kobolds não são nativos deste andar | Vê que é organizado, não selvagem | "Rabisco de bicho" |
 
 **Só o mestre:** conecta com o Salão dos Estandartes (Trecho V-1) e com a
 contagem incompleta do `corredor_final`; levada ao Estudioso Obcecado,
@@ -150,8 +150,8 @@ mecânica do primeiro, com a diferença de que este escolta o grupo de longe.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | Ele já está esperando — ataca primeiro |
-| Mirar a garganta | 2d6+Reflexo | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
+| Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | Ele já está esperando — ataca primeiro |
+| Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
 | Contornar e seguir | — | Sem teste — ele mantém a posição e não persegue além do posto | | |
 
 **Só o mestre:** mesmo drop (Col + Fragmento de Armadura Kobold). Se o grupo
@@ -176,8 +176,8 @@ dão bônus aqui.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda controla o vão inteiro — ele acerta primeiro |
-| Mirar a garganta | 2d6+Reflexo | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
+| Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda controla o vão inteiro — ele acerta primeiro |
+| Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
 | Contornar e seguir | — | Sem teste — ele mantém a posição e não persegue além do posto | | |
 
 **Só o mestre:** mesmo drop (Col + Fragmento de Armadura Kobold). Se ainda
@@ -202,8 +202,8 @@ degrau final de escolta antes do trono.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda já está no ar quando você chega |
-| Mirar a garganta | 2d6+Reflexo | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
+| Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda já está no ar quando você chega |
+| Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
 | Contornar e seguir | — | Sem teste — ele mantém a posição e não persegue além do posto | | |
 
 **Só o mestre:** último aviso mecânico antes de `chefe_illfang`. Se o grupo

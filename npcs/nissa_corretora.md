@@ -7,11 +7,12 @@ profissao: Diplomata
 arma: nenhuma
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 0
-  tecnica: 1
+  forca: 8
+  destreza: 12
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [tolbana, rumor, mercado, clas]
 imagem: ../imagens/npc_nissa_corretora.png
 canonico: nao
@@ -78,3 +79,5 @@ pergunte qual delas o grupo quer tornar pública.
 
 Ela risca uma linha no caderno antes de responder — como se decidisse qual
 versão da pessoa está na frente dela.
+
+<!-- convertido-dnd5e -->

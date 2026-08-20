@@ -7,11 +7,12 @@ profissao: Alquimista
 arma: Adagas
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 1
-  espirito: 0
-  tecnica: 0
+  forca: 8
+  destreza: 10
+  constituicao: 8
+  inteligencia: 12
+  sabedoria: 10
+  carisma: 10
 tags: [puzzle, luto, quest_chave]
 imagem: ../imagens/npc_talia.png
 canonico: nao
@@ -85,3 +86,5 @@ Puzzle 3 (`docs/puzzles_andar1.md`) e cadeia F (`necropole_01` a
 ## Combate (se aplicável)
 
 Não luta. Sabe usar adaga e não usa.
+
+<!-- convertido-dnd5e -->

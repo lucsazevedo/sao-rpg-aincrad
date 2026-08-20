@@ -1,7 +1,7 @@
 ---
 nome: Chakrams do Deserto
 tipo: Chakrams
-atributo_principal: Tecnica
+atributo_principal: Destreza
 raridade: Incomum
 andar_recomendado: 1
 requisito_nivel: 
@@ -28,3 +28,5 @@ Estes chakrams foram forjados por um artífice desconhecido nas ruínas do deser
 ## Como obter
 
 Drop incomum de um Ruin Kobold Sentinel
+
+<!-- convertido-dnd5e -->

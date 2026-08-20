@@ -67,12 +67,12 @@ contar os toques em voz alta.
 
 | Ação                                | Teste            | 10+                                                                  | 7-9                                            | 6-                                                        |
 | ----------------------------------- | ---------------- | -------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------- |
-| Ler o quadro de missões             | 2d6+Conhecimento | Duas quests úteis e qual paga melhor                                 | Uma quest, mas o pedido está incompleto        | Só pedidos velhos, já resolvidos por outros               |
-| Ouvir boato na praça                | 2d6+Espírito     | Um boato verdadeiro e a fonte dele                                   | Um boato verdadeiro, fonte desconhecida        | Um boato falso que soa verdadeiro (o mestre escolhe qual) |
-| Pechinchar numa loja                | 2d6+Conhecimento | 15% de desconto e o vendedor gosta de você                           | 10%, mas ele lembra que você pechinchou        | Preço cheio e um comentário seco                          |
-| Procurar alguém específico          | 2d6+Conhecimento | Acha em uma hora                                                     | Acha, mas a pessoa já saiu — sabe pra onde foi | Ninguém viu, e agora perguntaram por quê                  |
-| Treinar no Centro de Treinamento    | 2d6+Técnica      | Entende sua arma: +1 no primeiro teste dela na próxima sessão        | Treina, mas cansa: nada mecânico               | Machuca o pulso; complicação no primeiro combate          |
-| Rezar / ficar em silêncio na igreja | 2d6+Espírito     | Recupera o rumo: limpa qualquer condição emocional narrada           | Alívio parcial                                 | Pior do que entrou. Você pensou demais                    |
+| Ler o quadro de missões             | d20+Inteligência | Duas quests úteis e qual paga melhor                                 | Uma quest, mas o pedido está incompleto        | Só pedidos velhos, já resolvidos por outros               |
+| Ouvir boato na praça                | d20+Sabedoria     | Um boato verdadeiro e a fonte dele                                   | Um boato verdadeiro, fonte desconhecida        | Um boato falso que soa verdadeiro (o mestre escolhe qual) |
+| Pechinchar numa loja                | d20+Inteligência | 15% de desconto e o vendedor gosta de você                           | 10%, mas ele lembra que você pechinchou        | Preço cheio e um comentário seco                          |
+| Procurar alguém específico          | d20+Inteligência | Acha em uma hora                                                     | Acha, mas a pessoa já saiu — sabe pra onde foi | Ninguém viu, e agora perguntaram por quê                  |
+| Treinar no Centro de Treinamento    | d20+Destreza      | Entende sua arma: +1 no primeiro teste dela na próxima sessão        | Treina, mas cansa: nada mecânico               | Machuca o pulso; complicação no primeiro combate          |
+| Rezar / ficar em silêncio na igreja | d20+Sabedoria     | Recupera o rumo: limpa qualquer condição emocional narrada           | Alívio parcial                                 | Pior do que entrou. Você pensou demais                    |
 | Perguntar sobre o Labirinto         | —                | Lynx manda o grupo pra Tolbana. Sem teste — ela sempre responde isso |                                                |                                                           |
 
 ### Só o mestre
@@ -188,10 +188,10 @@ grupo atento percebe.
 
 | Ação                            | Teste            | 10+                                                                                         | 7-9                                                  | 6-                              |
 | ------------------------------- | ---------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------- |
-| Examinar o mural dos 5 encaixes | 2d6+Conhecimento | Entende que a ordem importa e que existe uma pista fora daqui                               | Entende que faltam cristais, não que a ordem importa | Conclui que é decorativo        |
-| Procurar ponto fraco na muralha | 2d6+Reflexo      | Acha uma rachadura de verdade e ninguém viu                                                 | Acha, mas um guarda notou você olhando               | Nada. Parede velha              |
-| Conversar com o Guarda Insone   | 2d6+Espírito     | Ele conta o que viu na noite do dia 6                                                       | Ele quase conta e se interrompe                      | Ele fecha e passa a te observar |
-| Escutar o eco (bater na pedra)  | 2d6+Técnica      | Descobre que há vão atrás de um trecho específico                                           | Ouve diferença, não localiza                         | Chama atenção do guarda         |
+| Examinar o mural dos 5 encaixes | d20+Inteligência | Entende que a ordem importa e que existe uma pista fora daqui                               | Entende que faltam cristais, não que a ordem importa | Conclui que é decorativo        |
+| Procurar ponto fraco na muralha | d20+Destreza      | Acha uma rachadura de verdade e ninguém viu                                                 | Acha, mas um guarda notou você olhando               | Nada. Parede velha              |
+| Conversar com o Guarda Insone   | d20+Sabedoria     | Ele conta o que viu na noite do dia 6                                                       | Ele quase conta e se interrompe                      | Ele fecha e passa a te observar |
+| Escutar o eco (bater na pedra)  | d20+Destreza      | Descobre que há vão atrás de um trecho específico                                           | Ouve diferença, não localiza                         | Chama atenção do guarda         |
 | Encaixar cristais no mural      | —                | Só com a ordem correta (ver `docs/interacoes_e_segredos.md`). Errar a ordem gasta o cristal |                                                      |                                 |
 
 ### Só o mestre
@@ -277,12 +277,12 @@ bem antes de o grupo reparar nele.
 
 | Ação                                  | Teste            | 10+                                                    | 7-9                             | 6-                                |
 | ------------------------------------- | ---------------- | ------------------------------------------------------ | ------------------------------- | --------------------------------- |
-| Caçar Frenzy Boar (nuca)              | 2d6+Corpo        | Derruba com um golpe, presa intacta                    | Derruba, mas leva uma investida | Ele acerta primeiro e chama outro |
-| Colher Ervas Comuns                   | 2d6+Reflexo      | 2 unidades, sem se sujar                               | 1 unidade e um arranhão         | Nada aproveitável                 |
-| Extrair material de caça (só Caçador) | 2d6+Reflexo      | Presa completa, valor cheio                            | Sai imperfeita, metade do valor | Estraga o material                |
-| Ler o terreno / achar rota            | 2d6+Conhecimento | Sabe onde ficam os spawns e evita todos                | Evita metade                    | Anda em círculo, perde meio dia   |
-| Examinar a Ruína de Superfície        | 2d6+Conhecimento | Reconhece parte do símbolo — é mais antigo que o andar | Percebe só que é estranho       | Passa direto                      |
-| Puxar conversa com Erik               | 2d6+Espírito     | Ele vende informação e esboço de terreno barato        | Ele responde, mas cobra caro    | Ele encerra: "não é minha função" |
+| Caçar Frenzy Boar (nuca)              | d20+Força        | Derruba com um golpe, presa intacta                    | Derruba, mas leva uma investida | Ele acerta primeiro e chama outro |
+| Colher Ervas Comuns                   | d20+Destreza      | 2 unidades, sem se sujar                               | 1 unidade e um arranhão         | Nada aproveitável                 |
+| Extrair material de caça (só Caçador) | d20+Destreza      | Presa completa, valor cheio                            | Sai imperfeita, metade do valor | Estraga o material                |
+| Ler o terreno / achar rota            | d20+Inteligência | Sabe onde ficam os spawns e evita todos                | Evita metade                    | Anda em círculo, perde meio dia   |
+| Examinar a Ruína de Superfície        | d20+Inteligência | Reconhece parte do símbolo — é mais antigo que o andar | Percebe só que é estranho       | Passa direto                      |
+| Puxar conversa com Erik               | d20+Sabedoria     | Ele vende informação e esboço de terreno barato        | Ele responde, mas cobra caro    | Ele encerra: "não é minha função" |
 
 ### Só o mestre
 
@@ -357,11 +357,11 @@ mais rápido e mais machucado.
 
 | Ação                               | Teste            | 10+                                 | 7-9                                              | 6-                              |
 | ---------------------------------- | ---------------- | ----------------------------------- | ------------------------------------------------ | ------------------------------- |
-| Ouvir aproximação apesar do vento  | 2d6+Espírito     | Sabe o que vem e de onde            | Sabe que vem algo, não o quê                     | Emboscada; inimigo age primeiro |
-| Caçar Stabbing Wasp                | 2d6+Reflexo      | Abate em voo, glândula intacta      | Abate, mas leva um ferrão (veneno leve)          | Ela ferroa e chama o ninho      |
-| Estudar o Círculo de Pedras        | 2d6+Conhecimento | Reconhece um padrão real no arranjo | Vê que tem padrão, não decifra                   | "São só pedras largadas"        |
-| Domar um Lobo das Estepes          | 2d6+Técnica x4   | 1 sucesso limpo                     | 1 sucesso, o lobo recua rosnando                 | Sem sucesso; 2 falhas encerram  |
-| Correr pra Tolbana pela rota curta | 2d6+Corpo        | Chega em metade do tempo, inteiro   | Chega, exausto: complicação no primeiro teste lá | Se perde, e o vento não ajuda   |
+| Ouvir aproximação apesar do vento  | d20+Sabedoria     | Sabe o que vem e de onde            | Sabe que vem algo, não o quê                     | Emboscada; inimigo age primeiro |
+| Caçar Stabbing Wasp                | d20+Destreza      | Abate em voo, glândula intacta      | Abate, mas leva um ferrão (veneno leve)          | Ela ferroa e chama o ninho      |
+| Estudar o Círculo de Pedras        | d20+Inteligência | Reconhece um padrão real no arranjo | Vê que tem padrão, não decifra                   | "São só pedras largadas"        |
+| Domar um Lobo das Estepes          | d20+Destreza x4   | 1 sucesso limpo                     | 1 sucesso, o lobo recua rosnando                 | Sem sucesso; 2 falhas encerram  |
+| Correr pra Tolbana pela rota curta | d20+Força        | Chega em metade do tempo, inteiro   | Chega, exausto: complicação no primeiro teste lá | Se perde, e o vento não ajuda   |
 
 ### Só o mestre
 
@@ -420,9 +420,9 @@ Não é zona segura de sistema. Ninguém briga porque ninguém quer ser o primei
 
 | Ação                                   | Teste            | 10+                                                            | 7-9                                   | 6-                                        |
 | -------------------------------------- | ---------------- | -------------------------------------------------------------- | ------------------------------------- | ----------------------------------------- |
-| Sondar clima entre as guildas          | 2d6+Conhecimento | Sabe quem está de mal com quem e por quê                       | Sabe que há atrito, não a causa       | Pergunta pra pessoa errada e vira assunto |
-| Negociar entrada numa expedição        | 2d6+Conhecimento | Aceitos, com parte justa do espólio                            | Aceitos, mas na parte pior da divisão | Recusados, e a recusa circula             |
-| Vender serviço de escolta (Mercenário) | 2d6+Corpo        | Contrato bom, pagamento adiantado                              | Contrato, pagamento na volta          | Passam a perna: pagamento nunca vem       |
+| Sondar clima entre as guildas          | d20+Inteligência | Sabe quem está de mal com quem e por quê                       | Sabe que há atrito, não a causa       | Pergunta pra pessoa errada e vira assunto |
+| Negociar entrada numa expedição        | d20+Inteligência | Aceitos, com parte justa do espólio                            | Aceitos, mas na parte pior da divisão | Recusados, e a recusa circula             |
+| Vender serviço de escolta (Mercenário) | d20+Força        | Contrato bom, pagamento adiantado                              | Contrato, pagamento na volta          | Passam a perna: pagamento nunca vem       |
 | Ajudar o recruta com a barraca         | —                | Sem teste. Ele vira contato, e contato aqui vale mais que Col  |                                       |                                           |
 | Comprar provisões                      | —                | Tabela fixa (`docs/mercado_andar1.md` — Provisões de Campanha) |                                       |                                           |
 
@@ -485,11 +485,11 @@ ninguém explicou. Deixe assim.
 
 | Ação                           | Teste             | 10+                                                     | 7-9                                         | 6-                                          |
 | ------------------------------ | ----------------- | ------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
-| Pegar carona com caravana      | 2d6+Conhecimento  | Viagem grátis e informação de estrada                   | Viagem, mas espera-se ajuda se der problema | Recusam; a estrada vira longa               |
-| Comerciar com o condutor       | 2d6+Conhecimento  | Preço de atacado (20% abaixo)                           | Preço normal                                | Ele fecha a carroça                         |
-| Identificar ponto de emboscada | 2d6+Conhecimento  | Sabe exatamente onde e evita                            | Sabe que existe, não onde                   | Anda direto pra dentro                      |
-| Ler os números dos marcos      | 2d6+Conhecimento  | Percebe que a sequência não é distância — é outra coisa | Percebe que está errado                     | "Deve ser decoração"                        |
-| Defender uma caravana atacada  | 2d6+Corpo/Reflexo | Ninguém do comboio se fere; recompensa cheia            | Salvam a carga, perdem um cavalo            | Carga perdida; reputação abalada em Tolbana |
+| Pegar carona com caravana      | d20+Inteligência  | Viagem grátis e informação de estrada                   | Viagem, mas espera-se ajuda se der problema | Recusam; a estrada vira longa               |
+| Comerciar com o condutor       | d20+Inteligência  | Preço de atacado (20% abaixo)                           | Preço normal                                | Ele fecha a carroça                         |
+| Identificar ponto de emboscada | d20+Inteligência  | Sabe exatamente onde e evita                            | Sabe que existe, não onde                   | Anda direto pra dentro                      |
+| Ler os números dos marcos      | d20+Inteligência  | Percebe que a sequência não é distância — é outra coisa | Percebe que está errado                     | "Deve ser decoração"                        |
+| Defender uma caravana atacada  | d20+Força/Reflexo | Ninguém do comboio se fere; recompensa cheia            | Salvam a carga, perdem um cavalo            | Carga perdida; reputação abalada em Tolbana |
 
 ### Só o mestre
 
@@ -549,10 +549,10 @@ As engrenagens giram sem acionar nada. Esse é o ponto.
 
 | Ação                                 | Teste            | 10+                                                     | 7-9                                         | 6-                               |
 | ------------------------------------ | ---------------- | ------------------------------------------------------- | ------------------------------------------- | -------------------------------- |
-| Pesquisar um monstro (Bibliotecário) | 2d6+Conhecimento | Fraqueza, resistências e vulnerabilidades completas     | Só a fraqueza principal                     | Nada, e gasta o tempo de preparo |
-| Conversar com o Estudioso            | 2d6+Espírito     | Ele coopera de graça e empresta o Marcador de Página    | Coopera, mas fala demais e você perde tempo | Ele te trata como interrupção    |
-| Analisar o mecanismo quebrado        | 2d6+Técnica      | Entende o que a torre media — não era hora              | Entende que não media hora                  | Quebra uma engrenagem; ele vê    |
-| Subir até o topo                     | 2d6+Corpo        | Vista completa: vantagem no próximo teste de Cartógrafo | Sobe, mas a escada cede na volta            | Cai; complicação séria           |
+| Pesquisar um monstro (Bibliotecário) | d20+Inteligência | Fraqueza, resistências e vulnerabilidades completas     | Só a fraqueza principal                     | Nada, e gasta o tempo de preparo |
+| Conversar com o Estudioso            | d20+Sabedoria     | Ele coopera de graça e empresta o Marcador de Página    | Coopera, mas fala demais e você perde tempo | Ele te trata como interrupção    |
+| Analisar o mecanismo quebrado        | d20+Destreza      | Entende o que a torre media — não era hora              | Entende que não media hora                  | Quebra uma engrenagem; ele vê    |
+| Subir até o topo                     | d20+Força        | Vista completa: vantagem no próximo teste de Cartógrafo | Sobe, mas a escada cede na volta            | Cai; complicação séria           |
 | Levar uma pista escrita pra ele      | —                | Três pistas diferentes = ele dá o Capuz do Estudioso    |                                             |                                  |
 
 ### Só o mestre
@@ -616,10 +616,10 @@ perto.
 
 | Ação                                  | Teste            | 10+                                                                                              | 7-9                               | 6-                                 |
 | ------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------ | --------------------------------- | ---------------------------------- |
-| Colher Néctar de Flor Rara            | 2d6+Conhecimento | 2 doses, sem levantar pó                                                                         | 1 dose e a nuvem acorda           | Espirro; o mestre puxa um encontro |
-| Domar uma Fada da Poeira              | 2d6+Técnica x4   | 1 sucesso limpo                                                                                  | 1 sucesso, ela se afasta irritada | Sem sucesso; 2 falhas encerram     |
-| Abater uma Fada no pouso              | 2d6+Reflexo      | Abate sem levantar pó nenhum                                                                     | Abate, mas a nuvem desce          | Erra e a nuvem inteira reage       |
-| Identificar flores úteis (Alquimista) | 2d6+Conhecimento | Três ingredientes diferentes catalogados                                                         | Um ingrediente                    | Colhe algo inútil e perde a tarde  |
+| Colher Néctar de Flor Rara            | d20+Inteligência | 2 doses, sem levantar pó                                                                         | 1 dose e a nuvem acorda           | Espirro; o mestre puxa um encontro |
+| Domar uma Fada da Poeira              | d20+Destreza x4   | 1 sucesso limpo                                                                                  | 1 sucesso, ela se afasta irritada | Sem sucesso; 2 falhas encerram     |
+| Abater uma Fada no pouso              | d20+Destreza      | Abate sem levantar pó nenhum                                                                     | Abate, mas a nuvem desce          | Erra e a nuvem inteira reage       |
+| Identificar flores úteis (Alquimista) | d20+Inteligência | Três ingredientes diferentes catalogados                                                         | Um ingrediente                    | Colhe algo inútil e perde a tarde  |
 | Simplesmente ficar ali                | —                | Sem teste. Se o grupo quiser descansar aqui, deixe. É a única região do andar que não cobra nada |                                   |                                    |
 
 ### Só o mestre

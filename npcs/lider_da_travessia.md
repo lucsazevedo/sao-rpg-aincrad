@@ -7,11 +7,12 @@ profissao: Mercenário
 arma: Escudo e Espada
 guilda: "(sem guilda formal — lidera por convocação, igual Diavel no andar 1)"
 atributos:
-  corpo: 1
-  reflexo: 0
-  conhecimento: 1
-  espirito: 1
-  tecnica: -1
+  forca: 12
+  destreza: 10
+  constituicao: 12
+  inteligencia: 12
+  sabedoria: 12
+  carisma: 12
 tags: [urbus, andar2, raid, lideranca]
 imagem: ../imagens/npc_lider_da_travessia.png
 canonico: nao
@@ -91,3 +92,5 @@ idealista, igualmente decidido.
 
 Mercenário competente, nível comum/forte — luta bem, mas prioriza
 coordenar a força-tarefa a se destacar individualmente.
+
+<!-- convertido-dnd5e -->

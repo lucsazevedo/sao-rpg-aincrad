@@ -7,11 +7,12 @@ profissao: Músico
 arma: Bastão
 guilda: ""
 atributos:
-  corpo: -1
-  reflexo: -1
-  conhecimento: 0
-  espirito: 2
-  tecnica: -1
+  forca: 8
+  destreza: 8
+  constituicao: 8
+  inteligencia: 10
+  sabedoria: 14
+  carisma: 14
 tags: [puzzle, quest_giver, musica]
 imagem: ../imagens/npc_perim.png
 canonico: nao
@@ -78,3 +79,5 @@ Cristal "Outros" e não está documentado em lugar nenhum.
 ## Combate (se aplicável)
 
 Não luta. Se arrastado pra combate, corre — e faz isso sem vergonha nenhuma.
+
+<!-- convertido-dnd5e -->

@@ -10,7 +10,7 @@ Não duplica as poções do Alquimista
 (`pocoes/00_catalogo_pocoes_alquimista.md`) — o Médico trata **sem**
 gastar item, usando as próprias mãos e Espírito. O que ele prepara é kit e
 diagnóstico, não frasco. Formato em
-`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **2d6+Espírito**
+`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **d20+Sabedoria**
 (diagnóstico usa Conhecimento).
 
 ---
