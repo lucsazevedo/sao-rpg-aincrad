@@ -643,7 +643,7 @@ Repara equipamento de tecido/couro danificado até o estado original.
 Pode trabalhar materiais Raros; CD de testes envolvendo material Raro cai em -2.
 
 ## Nível 10 — Equipamento Aprimorado
-Ao criar uma peça, pode adicionar um bônus situacional +1 (item Incomum, Seção 73) sem gastar uma receita separada pra isso.
+Ao criar uma peça, pode adicionar um bônus situacional +1 (item Incomum, Seção 72) sem gastar uma receita separada pra isso.
 
 ## Nível 15 — Costura Perfeita
 Um reparo malsucedido normalmente reduz a raridade do item em 1 grau — a partir daqui, reparos em item Raro+ nunca degradam.
@@ -662,7 +662,7 @@ Pode produzir peças Épicas sob aprovação do Mestre.
 Prepara refeição que dá **1d4 + INT de PV temporário** por até 1 hora, se consumida em até 10 minutos após pronta.
 
 ## Nível 5 — Receita Especial
-Pode substituir o PV temporário por um bônus situacional +1 numa perícia específica, por 1 hora (Seção 73-style).
+Pode substituir o PV temporário por um bônus situacional +1 numa perícia específica, por 1 hora (Seção 72-style).
 
 ## Nível 10 — Banquete
 Prepara pra até 6 pessoas de uma vez, gastando o dobro de ingredientes.
@@ -684,7 +684,7 @@ O PV temporário/bônus sobe pra **2d4 + INT**.
 Repara arma/armadura não mágica até o estado original.
 
 ## Nível 5 — Forja Aprimorada
-Ao reparar, pode gastar material extra pra elevar o item de Comum pra Incomum (+1 situacional, Seção 73).
+Ao reparar, pode gastar material extra pra elevar o item de Comum pra Incomum (+1 situacional, Seção 72).
 
 ## Nível 10 — Reforço
 Pode reforçar um item já Incomum+ pra Raro (+2), consumindo material Raro equivalente.
@@ -838,7 +838,7 @@ Avalia e lapida gema; sucesso aumenta o valor de venda em 20%.
 O bônus de valor sobe pra 40%.
 
 ## Nível 10 — Joias Encantáveis
-Pode preparar um encaixe numa joia pra receber um Cristal (Seção 73) — o cristal fica reutilizável em vez de consumido de uma vez.
+Pode preparar um encaixe numa joia pra receber um Cristal (Seção 72) — o cristal fica reutilizável em vez de consumido de uma vez.
 
 ## Nível 15 — Lapidação Perfeita
 Lapidação malsucedida normalmente degrada o grau da gema — a partir daqui, sucesso com gema Rara+ nunca degrada.
@@ -1007,10 +1007,10 @@ Ao final desse trecho do desenvolvimento:
 ### Armas
 
 - [x] 19 armas
-- [x] categorias Tank/DPS/Suporte/CC
+- [x] categorias Tank/DPS/AoE/Scouts (Suporte eliminada, CC virou AoE — etapa de revisão)
 - [x] atributos de ataque
 - [x] remoção de Tonfa/Nunchaku/Glaive
-- [x] Corrente com Peso em CC
+- [x] Corrente com Peso em AoE
 
 ### Profissões
 
@@ -1125,9 +1125,9 @@ A regra de ouro é:
 
 ## 55.1 Espada + Escudo
 
-**Função:** Tank  
+**Função:** Tank de Guarda e Proteção  
 **Atributo:** Força  
-**Golpe Básico:** 1d8 + FOR
+**Dano:** cortante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1140,36 +1140,47 @@ A regra de ouro é:
 | 14 | Sacrifício do Guardião |
 | 18 | Último Bastião |
 
-### Guarda Férrea
+**Identidade:** Segura a linha de frente, protege aliados e pune quem erra o ataque.
+
+### Guarda Férrea (Nível 1)
+*Ação*
 Postura defensiva. Concede +2 CA, vantagem contra ser empurrado ou derrubado e permite contra-atacar com Reação quando uma criatura errar um ataque corpo a corpo. O deslocamento fica reduzido pela metade enquanto a postura estiver ativa.
 
-### Interceptação
+### Interceptação (Nível 1)
+*Reação*
 Reação para proteger um aliado a até 10 ft. O usuário move-se sem provocar Ataques de Oportunidade, torna-se o alvo do ataque e recebe resistência ao dano se for atingido.
 
-### Golpe de Escudo
+### Golpe de Escudo (Nível 2)
+*Ação* · dano cortante
 Ataque corpo a corpo usando Força. Causa **2d8 + FOR**. O alvo realiza resistência de Força; falha: empurrado 10 ft e Caído. Sucesso: empurrado 5 ft.
 
-### Muralha de Aincrad — Limit Break
+### Muralha de Aincrad — Limit Break (Nível 5)
+*Reação*
 Reação, 1/Descanso Longo, alcance 20 ft. Quando você ou um aliado seria reduzido a 0 PV por um ataque, você intercepta o golpe. O aliado não sofre o dano; você recebe o ataque com resistência. Se isso o reduzir a 0 PV, fica com 1 PV.
 
-### Muralha de Ferro
+### Muralha de Ferro (Nível 6)
+*Ação*
 Postura defensiva de grupo. Concede resistência contra ataques com armas, proteção contra empurrões/quedas e bônus de CA para aliados próximos.
 
-### Contra-Golpe
+### Contra-Golpe (Nível 10)
+*Reação*
 Reação quando uma criatura erra um ataque corpo a corpo contra você. Realiza um ataque de Força e pode derrubar o alvo.
 
-### Sacrifício do Guardião
+### Sacrifício do Guardião (Nível 14)
+*Reação*
 Reação para interceptar um ataque destinado a um aliado a até 20 ft, tornando-se o alvo do ataque e recebendo resistência ao dano.
 
-### Último Bastião
-Forma defensiva máxima por 1 minuto, 1/Descanso Longo. Concede resistência a ataques com armas, impede movimentação forçada comum e protege aliados próximos.
+### Último Bastião (Nível 18)
+*Ação*
+1/Descanso Longo. Forma defensiva máxima por 1 minuto. Concede resistência a ataques com armas, impede movimentação forçada comum e protege aliados próximos.
 
 ---
 
 ## 55.2 Martelo
 
 **Função:** Tank de Impacto  
-**Atributo:** Força
+**Atributo:** Força  
+**Dano:** contundente
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1182,36 +1193,47 @@ Forma defensiva máxima por 1 minuto, 1/Descanso Longo. Concede resistência a a
 | 14 | Contra-Impacto |
 | 18 | Colosso |
 
-**Identidade:** impacto, atordoamento, interrupção e resistência.
+**Identidade:** Impacto, atordoamento, interrupção e resistência.
 
-### Skills iniciais
-- **Golpe Demolidor:** golpe pesado que reduz temporariamente a CA de um alvo protegido por escudo ou efeito defensivo.
-- **Martelada Descendente:** ataque que pode deixar o alvo Caído.
+### Golpe Demolidor (Nível 1)
+*Ação* · dano contundente
+Ataque corpo a corpo usando Força. Causa **1d10 + FOR**. Se o alvo estiver usando escudo ou postura defensiva, esse bônus fica anulado até o fim do turno seguinte.
 
-### Abalo
-Golpe de área de 5 ft. Inimigos fazem resistência de Destreza; falha causa dano de concussão e deixa o alvo Caído.
+### Martelada Descendente (Nível 1)
+*Ação* · dano contundente
+Ataque corpo a corpo. Causa **1d8 + FOR**. O alvo faz teste de Força; falha: fica **Caído**.
 
-### Impacto de Aincrad — Limit Break
-Grande golpe de impacto, voltado para interromper e derrubar inimigos.
+### Abalo (Nível 2)
+*Ação*
+Golpe de área de 5 ft ao redor do usuário. Inimigos na área fazem resistência de Destreza; falha: **2d6 + FOR** de dano contundente e **Caído**. Sucesso: metade do dano.
 
-### Postura Inabalável
-Aumenta a estabilidade do Tank e dificulta empurrões, quedas e deslocamentos forçados.
+### Impacto de Aincrad — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+1/Descanso Longo. Golpe de área de 10 ft de raio (alcance corpo a corpo). Inimigos fazem resistência de Constituição; falha: **3d10 + FOR** de dano contundente e **Atordoado** até o fim do próximo turno deles. Sucesso: metade do dano, sem atordoar.
 
-### Quebra-Couraça
-Golpe avançado contra defesas e armaduras.
+### Postura Inabalável (Nível 6)
+*Ação*
+Vantagem em testes de resistência contra ser empurrado ou derrubado; resistência a movimentação forçada comum enquanto a postura estiver ativa.
 
-### Contra-Impacto
-Reação defensiva/ofensiva para absorver ou responder a um ataque.
+### Quebra-Couraça (Nível 10)
+*Ação* · dano contundente
+Ataque corpo a corpo. Causa **2d10 + FOR** e reduz a CA do alvo em 2 até o fim da cena (não acumula com usos repetidos).
 
-### Colosso
-Forma Suprema do Martelo, representando sua máxima capacidade de impacto.
+### Contra-Impacto (Nível 14)
+*Reação*
+Reação quando o usuário sofre dano corpo a corpo: reduz o dano em **2d8 + FOR** e, se isso zerar o dano, empurra o atacante 10 ft.
+
+### Colosso (Nível 18)
+*Ação*
+1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano contundente, +2 CA, e todo ataque corpo a corpo do usuário nesse período força teste de Constituição do alvo (falha: Caído).
 
 ---
 
 ## 55.3 Pá
 
 **Função:** Tank de Terreno  
-**Atributo:** Força
+**Atributo:** Força  
+**Dano:** contundente
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1224,36 +1246,47 @@ Forma Suprema do Martelo, representando sua máxima capacidade de impacto.
 | 14 | Contra-Escavação |
 | 18 | Fortaleza do Escavador |
 
-### Postura Inabalável
-+2 CA, vantagem contra empurrão/queda e resistência a movimentação forçada comum.
+**Identidade:** Controla o campo de batalha moldando o próprio terreno.
 
-### Golpe de Pá
-Ataque contundente que pode empurrar o alvo.
+### Postura Inabalável (Nível 1)
+*Ação*
+Postura defensiva: +2 CA, vantagem contra empurrão/queda e resistência a movimentação forçada comum enquanto ativa.
 
-### Cova Defensiva
-Cria uma área de terreno difícil que concede proteção e dificulta a passagem de inimigos.
+### Golpe de Pá (Nível 1)
+*Ação* · dano contundente
+Ataque corpo a corpo usando Força. Causa **1d8 + FOR**. O alvo faz teste de Força; falha: empurrado 5 ft.
 
-### Muralha de Terra — Limit Break
-Cria uma barreira de 10 ft de comprimento e 5 ft de altura. Aliados atrás recebem meia cobertura; ataques que atravessam a barreira têm desvantagem.
+### Cova Defensiva (Nível 2)
+*Ação*
+Cria uma área de 10 ft de terreno difícil ao redor de um ponto a até 10 ft, por 1 minuto. Concede meia cobertura a quem estiver dentro dela.
 
-### Quebra-Postura
-Ataque que pode derrubar ou reduzir significativamente o deslocamento do inimigo.
+### Muralha de Terra — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+1/Descanso Longo. Cria uma barreira de 10 ft de comprimento e 5 ft de altura, alcance 15 ft. Aliados atrás dela recebem meia cobertura; ataques que a atravessam têm desvantagem.
 
-### Parede Viva
-+2 CA e terreno difícil ao redor do usuário. Inimigos que tentam sair podem ter o deslocamento reduzido a 0.
+### Quebra-Postura (Nível 6)
+*Ação* · dano contundente
+Ataque corpo a corpo. Causa **2d8 + FOR** e o alvo faz teste de Força; falha: **Caído** e deslocamento reduzido pela metade até o fim do turno seguinte.
 
-### Contra-Escavação
-Reação defensiva que reduz dano e permite reposicionamento.
+### Parede Viva (Nível 10)
+*Ação*
++2 CA e cria terreno difícil num raio de 10 ft ao redor do usuário por 1 minuto. Inimigos que tentam sair da área têm o deslocamento reduzido a 0 nessa tentativa.
 
-### Fortaleza do Escavador
-Forma Suprema: resistência a dano físico, imunidade a movimentação forçada comum, terreno difícil ao redor e proteção de aliados próximos.
+### Contra-Escavação (Nível 14)
+*Reação*
+Reação quando o usuário sofre dano: reduz o dano em **2d6 + FOR** e pode se reposicionar 5 ft.
+
+### Fortaleza do Escavador (Nível 18)
+*Ação*
+1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano físico, imunidade a movimentação forçada comum, terreno difícil num raio de 15 ft e meia cobertura pra aliados dentro dele.
 
 ---
 
 ## 55.4 Lança
 
 **Função:** Tank de Alcance e Interceptação  
-**Atributo:** Força
+**Atributo:** Destreza  
+**Dano:** perfurante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1266,67 +1299,49 @@ Forma Suprema: resistência a dano físico, imunidade a movimentação forçada 
 | 14 | Interceptação Perfeita |
 | 18 | Senhor da Vanguarda |
 
-### Postura de Guarda
-+2 CA contra ataques corpo a corpo, aumento do alcance de Ataques de Oportunidade e controle de inimigos que entram no alcance.
+**Identidade:** Controla distância e nega avanço — a ameaça de reação é constante.
 
-### Estocada Defensiva
-Ataque de alcance 10 ft. Pode empurrar o alvo ou permitir recuo sem provocar Ataques de Oportunidade.
+### Postura de Guarda (Nível 1)
+*Ação*
+Postura defensiva: +2 CA contra ataques corpo a corpo, alcance de Ataques de Oportunidade +5 ft enquanto ativa.
 
-### Guarda do Sentinela
-Protege um aliado e permite interceptar ataques contra ele.
+### Estocada Defensiva (Nível 1)
+*Ação* · dano perfurante
+Ataque de alcance 10 ft usando Destreza. Causa **1d8 + DES**. O alvo faz teste de Força; falha: empurrado 10 ft.
 
-### Formação da Vanguarda — Limit Break
-Aumenta o alcance da Lança e concede proteção de CA aos aliados próximos.
+### Guarda do Sentinela (Nível 2)
+*Reação*
+Reação: protege um aliado a até 10 ft, tornando-se o alvo de um ataque direcionado a ele.
 
-### Impacto da Lança
-Golpe de alcance voltado para controle e interrupção.
+### Formação da Vanguarda — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+1/Descanso Longo. Por 1 minuto, o alcance dos ataques da Lança aumenta em 5 ft e aliados a até 10 ft do usuário ganham +1 de CA.
 
-### Círculo do Sentinela
-Área defensiva que reduz deslocamento dos inimigos e permite ataques de reação para proteger aliados.
+### Impacto da Lança (Nível 6)
+*Ação* · dano perfurante
+Ataque de alcance 10 ft. Causa **2d8 + DES** e empurra o alvo 5 ft (teste de Força pra resistir).
 
-### Interceptação Perfeita
-Reação para reduzir dano de um aliado e atacar o agressor.
+### Círculo do Sentinela (Nível 10)
+*Ação*
+Área defensiva de 10 ft de raio por 1 minuto: inimigos que entram têm o deslocamento reduzido pela metade; o usuário pode usar Reação pra atacar um inimigo que termine o turno na área.
 
-### Senhor da Vanguarda
-Forma Suprema que transforma o usuário em um verdadeiro ponto de defesa do grupo.
+### Interceptação Perfeita (Nível 14)
+*Reação*
+Reação: reduz em **2d10 + DES** o dano que um aliado a até 10 ft sofreria, e ataca automaticamente quem causou o dano.
+
+### Senhor da Vanguarda (Nível 18)
+*Ação*
+1/Descanso Longo. Forma suprema por 1 minuto: alcance de todos os ataques da Lança +10 ft, e todo Ataque de Oportunidade do usuário causa dano máximo.
 
 ---
 
 # 56. SWORD SKILLS — DPS
 
-## 56.1 Adagas
-
-**Função:** DPS de Mobilidade  
-**Atributo:** Destreza
-
-| Nível | Sword Skill |
-|---:|---|
-| 1 | Corte Veloz |
-| 1 | Dupla Estocada |
-| 2 | Passo da Sombra |
-| 5 | **Limit Break — Dança das Lâminas** |
-| 6 | Corte de Oportunidade |
-| 10 | Dança do Assassino |
-| 14 | Mil Cortes |
-| 18 | Passo Fantasma |
-
-**Identidade:** entrar, atacar e reposicionar.
-
-- **Corte Veloz:** ataque rápido que permite movimento de 5 ft após o golpe.
-- **Dupla Estocada:** dois ataques com dados menores; acertar os dois permite reposicionamento.
-- **Passo da Sombra:** movimento sem Ataque de Oportunidade e bônus no próximo ataque.
-- **Dança das Lâminas:** Limit Break que permite atacar múltiplos inimigos em sequência.
-- **Corte de Oportunidade:** Reação contra inimigo que se movimenta.
-- **Dança do Assassino:** aumenta deslocamento e recompensa aproximação e ataques bem-sucedidos.
-- **Mil Cortes:** três ataques contra um alvo.
-- **Passo Fantasma:** forma máxima de mobilidade, reduzindo a eficácia de Ataques de Oportunidade contra o usuário.
-
----
-
-## 56.2 Arco e Flecha
+## 56.1 Arco e Flecha
 
 **Função:** DPS de Alcance e Precisão  
-**Atributo:** Destreza
+**Atributo:** Destreza  
+**Dano:** perfurante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1339,21 +1354,47 @@ Forma Suprema que transforma o usuário em um verdadeiro ponto de defesa do grup
 | 14 | Disparo Mortal |
 | 18 | Arco do Fim |
 
-- **Tiro Preciso:** ataque à distância com bônus se o usuário permanecer parado antes da Skill.
-- **Disparo Rápido:** dois ataques de dano reduzido.
-- **Passo do Caçador:** movimento sem provocar e melhora a precisão/ignora cobertura.
-- **Chuva de Flechas:** área de dano.
-- **Flecha Perfurante:** atravessa o primeiro alvo e pode atingir outro.
-- **Olho do Caçador:** marca e aumenta a eficiência contra o alvo.
-- **Disparo Mortal:** ataque concentrado de alto dano.
-- **Arco do Fim:** forma suprema do arqueiro.
+**Identidade:** Dano concentrado à distância — recompensa ficar parado e mirar.
+
+### Tiro Preciso (Nível 1)
+*Ação* · dano perfurante
+Ataque à distância (alcance 150/600 ft) usando Destreza. Causa **1d8 + DES**; se o usuário não se moveu neste turno antes de atirar, causa +1d6 extra.
+
+### Disparo Rápido (Nível 1)
+*Ação* · dano perfurante
+Dois disparos no mesmo alvo ou em alvos diferentes a até 10 ft entre si, cada um causando **1d6 + DES**.
+
+### Passo do Caçador (Nível 2)
+*Ação*
+Move-se até 10 ft sem provocar Ataque de Oportunidade; o próximo disparo do turno ignora meia cobertura.
+
+### Chuva de Flechas — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano perfurante
+1/Descanso Longo. Área de 10 ft de raio a até 150 ft de distância; inimigos na área sofrem **2d6 + DES** de dano perfurante.
+
+### Flecha Perfurante (Nível 6)
+*Ação* · dano perfurante
+Ataque que atravessa o primeiro alvo em linha reta e atinge um segundo a até 30 ft dele, cada um sofrendo **1d8 + DES**.
+
+### Olho do Caçador (Nível 10)
+*Ação*
+Marca um alvo visível por 1 minuto (sem gastar ataque); enquanto marcado, os disparos do usuário contra ele têm vantagem.
+
+### Disparo Mortal (Nível 14)
+*Ação*
+Gasta o turno inteiro mirando sem se mover; no início do próximo turno, um disparo automático causa **4d8 + DES**.
+
+### Arco do Fim (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, um disparo por turno ignora resistência a dano perfurante e não pode errar contra um alvo Marcado por Olho do Caçador.
 
 ---
 
-## 56.3 Espada Longa
+## 56.2 Espada Longa
 
 **Função:** DPS de Impacto e Combos  
-**Atributo:** Força
+**Atributo:** Força  
+**Dano:** cortante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1366,38 +1407,47 @@ Forma Suprema que transforma o usuário em um verdadeiro ponto de defesa do grup
 | 14 | Corte Devastador |
 | 18 | Lâmina Suprema |
 
-A arma recompensa sequência de ataques e manutenção de combos.
+**Identidade:** Recompensa sequência de ataques e manutenção de combo.
 
-### Corte Ascendente
+### Corte Ascendente (Nível 1)
+*Ação* · dano cortante
 Ataque corpo a corpo usando Força. Causa **1d8 + FOR** e marca o início de um combo: o próximo ataque contra o mesmo alvo ganha +2 no dano.
 
-### Corte Duplo
+### Corte Duplo (Nível 1)
+*Ação* · dano cortante
 Dois ataques em sequência contra o mesmo alvo, cada um causando **1d6 + FOR**. Continua o combo se o Corte Ascendente foi usado antes.
 
-### Combo Ascendente
-Só pode ser usado depois de acertar 2 ataques seguidos no mesmo alvo (combo ativo). Causa **2d8 + FOR** e reinicia a contagem de combo em 1 (não zera, mantém o ritmo).
+### Combo Ascendente (Nível 2)
+*Ação* · dano cortante
+Só pode ser usado com combo ativo (2+ acertos seguidos no mesmo alvo). Causa **2d8 + FOR** e mantém o combo em vez de reiniciar.
 
-### Tempestade de Lâminas — Limit Break
-Reação ou ação, 1/Descanso Longo. Uma sequência de 4 golpes contra um único alvo, cada um causando **1d10 + FOR**; se todos acertarem, um 5º golpe automático causa dano máximo.
+### Tempestade de Lâminas — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano cortante
+Ação ou Reação, 1/Descanso Longo. Sequência de 4 golpes contra um único alvo, cada um causando **1d10 + FOR**; se todos acertarem, um 5º golpe automático causa dano máximo.
 
-### Quebra-Guarda
-Ataque que ignora bônus de CA de escudo/postura defensiva do alvo neste golpe.
+### Quebra-Guarda (Nível 6)
+*Ação* · dano cortante
+Ataque que ignora bônus de CA de escudo/postura defensiva do alvo neste golpe. Causa **1d10 + FOR**.
 
-### Lâmina Implacável
-Enquanto o combo estiver ativo (2+ acertos seguidos), os ataques da Espada Longa ganham +1d6 de dano extra.
+### Lâmina Implacável (Nível 10)
+*Ação*
+Enquanto o combo estiver ativo (2+ acertos seguidos), os ataques da Espada Longa causam +1d6 de dano extra.
 
-### Corte Devastador
+### Corte Devastador (Nível 14)
+*Ação*
 Golpe único de alto impacto: causa **3d8 + FOR**, mas encerra o combo ativo.
 
-### Lâmina Suprema
-Forma máxima de combo: cada acerto consecutivo nesta cena aumenta o dano do próximo em +1 (sem teto), até o combo ser quebrado por um erro.
+### Lâmina Suprema (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, cada acerto consecutivo aumenta o dano do próximo ataque em +1 (sem teto), até o combo ser quebrado por um erro.
 
 ---
 
-## 56.4 Rapieira
+## 56.3 Rapieira
 
 **Função:** DPS de Precisão e Contra-Ataque  
-**Atributo:** Destreza
+**Atributo:** Destreza  
+**Dano:** perfurante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1410,38 +1460,47 @@ Forma máxima de combo: cada acerto consecutivo nesta cena aumenta o dano do pr�
 | 14 | Estocada Perfeita |
 | 18 | Lâmina do Mestre |
 
-A Rapieira recompensa leitura do inimigo, criação de aberturas e contra-ataques.
+**Identidade:** Recompensa leitura do inimigo, criação de aberturas e contra-ataques.
 
-### Estocada Precisa
+### Estocada Precisa (Nível 1)
+*Ação* · dano perfurante
 Ataque corpo a corpo usando Destreza. Causa **1d8 + DES**; se o usuário não se moveu neste turno antes do ataque, causa +1d6.
 
-### Finta Rápida
+### Finta Rápida (Nível 1)
+*Ação*
 Ataque de baixo dano (**1d4 + DES**) que obriga o alvo a um teste de Sabedoria; falha: o próximo ataque do usuário contra ele tem vantagem.
 
-### Passo do Duelista
+### Passo do Duelista (Nível 2)
+*Ação*
 Move-se até a velocidade sem provocar Ataques de Oportunidade e faz um ataque ao final do movimento.
 
-### Dança do Duelista — Limit Break
-1/Descanso Longo. Uma sequência de 3 estocadas contra até 3 alvos diferentes a até 10 ft entre si, cada uma causando **2d6 + DES**.
+### Dança do Duelista — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano perfurante
+1/Descanso Longo. Sequência de 3 estocadas contra até 3 alvos diferentes a até 10 ft entre si, cada uma causando **2d6 + DES**.
 
-### Ripostar
+### Ripostar (Nível 6)
+*Reação*
 Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um ataque de Destreza completo em resposta.
 
-### Ponto Fraco
-Ataque que, em caso de acerto, marca o alvo por 1 minuto — próximos ataques do usuário contra ele têm +1d6.
+### Ponto Fraco (Nível 10)
+*Ação*
+Ataque que, em caso de acerto, marca o alvo por 1 minuto — próximos ataques do usuário contra ele causam +1d6.
 
-### Estocada Perfeita
-Contra um alvo com Sabedoria enganada por Finta Rápida neste combate, este ataque é automaticamente um acerto crítico.
+### Estocada Perfeita (Nível 14)
+*Ação*
+Contra um alvo enganado por Finta Rápida neste combate, este ataque é automaticamente um acerto crítico.
 
-### Lâmina do Mestre
-Forma suprema do duelista: uma vez por turno, um ataque que erraria vira automaticamente um acerto (rolagem tratada como 10).
+### Lâmina do Mestre (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, uma vez por turno um ataque que erraria vira automaticamente um acerto (rolagem tratada como natural 10).
 
 ---
 
-## 56.5 Katana
+## 56.4 Katana
 
 **Função:** DPS de Postura e Golpe Decisivo  
-**Atributo:** Sabedoria
+**Atributo:** Sabedoria  
+**Dano:** cortante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1454,38 +1513,47 @@ Forma suprema do duelista: uma vez por turno, um ataque que erraria vira automat
 | 14 | Corte Lunar |
 | 18 | Lâmina do Vazio |
 
-A Katana recompensa preparação, concentração e espera pela abertura correta.
+**Identidade:** Recompensa preparação, concentração e espera pela abertura correta.
 
-### Corte Concentrado
+### Corte Concentrado (Nível 1)
+*Ação*
 Ação de concentração (não ataca neste turno); no início do próximo turno, um ataque automático causa **2d8 + SAB**. Se o usuário for atingido enquanto concentra, o efeito é cancelado.
 
-### Saque Rápido
+### Saque Rápido (Nível 1)
+*Ação* · dano cortante
 Ataque imediato usando Sabedoria, sem preparação. Causa **1d8 + SAB**; só pode ser usado no primeiro turno de um combate ou depois de embainhar a katana (ação).
 
-### Postura do Lobo
+### Postura do Lobo (Nível 2)
+*Ação*
 Postura defensiva-ofensiva por 1 minuto: +1 CA, e o próximo ataque certeiro do usuário causa +1d6.
 
-### Iaijutsu Supremo — Limit Break
-1/Descanso Longo, funciona como Saque Rápido turbinado: ataque imediato que causa **4d8 + SAB**, crítico automático se o alvo ainda não agiu neste combate.
+### Iaijutsu Supremo — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+1/Descanso Longo. Funciona como Saque Rápido turbinado: ataque imediato que causa **4d8 + SAB**, crítico automático se o alvo ainda não agiu neste combate.
 
-### Corte de Retaliação
+### Corte de Retaliação (Nível 6)
+*Reação*
 Reação quando um inimigo erra um ataque contra o usuário em Postura do Lobo: um ataque de Sabedoria completo em resposta.
 
-### Foco Absoluto
+### Foco Absoluto (Nível 10)
+*Ação*
 Enquanto parado (sem se mover no turno), os ataques da Katana ganham +2 no teste de ataque.
 
-### Corte Lunar
-Ataque que ignora resistência a dano cortante do alvo.
+### Corte Lunar (Nível 14)
+*Ação*
+Ataque que causa **2d8 + SAB** e ignora resistência a dano cortante do alvo.
 
-### Lâmina do Vazio
-Forma suprema: Corte Concentrado deixa de exigir 1 turno de preparação — pode ser usado como ataque normal, mantendo o dano de 2d8+SAB.
+### Lâmina do Vazio (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, Corte Concentrado deixa de exigir 1 turno de preparação — pode ser usado como ataque normal, mantendo o dano de 2d8+SAB.
 
 ---
 
-## 56.6 Manopla
+## 56.5 Manopla
 
 **Função:** DPS de Pressão e Sequência  
-**Atributo:** Força
+**Atributo:** Força  
+**Dano:** contundente
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1498,128 +1566,102 @@ Forma suprema: Corte Concentrado deixa de exigir 1 turno de preparação — pod
 | 14 | Impacto Brutal |
 | 18 | Punho Supremo |
 
-A Manopla recompensa permanecer próxima e manter uma sequência ofensiva.
+**Identidade:** Recompensa permanecer próximo e manter uma sequência ofensiva.
 
-### Soco Demolidor
+### Soco Demolidor (Nível 1)
+*Ação* · dano contundente
 Ataque corpo a corpo usando Força. Causa **1d8 + FOR**.
 
-### Rajada de Golpes
-Três socos rápidos contra o mesmo alvo, cada um causando **1d4 + FOR**; acertar os três dá +1 de dano em todos os ataques da Manopla até o fim do turno seguinte (empilha, sem teto declarado).
+### Rajada de Golpes (Nível 1)
+*Ação* · dano contundente
+Três socos rápidos contra o mesmo alvo, cada um causando **1d4 + FOR**; acertar os três dá +1 de dano nos ataques da Manopla até o fim do turno seguinte.
 
-### Passo Agressivo
+### Passo Agressivo (Nível 2)
+*Ação*
 Move-se até 15 ft na direção de um inimigo sem provocar Ataques de Oportunidade e ataca ao chegar.
 
-### Punhos do Berserker — Limit Break
-1/Descanso Longo. Uma rajada de 5 golpes contra o mesmo alvo, cada um causando **1d8 + FOR**; cada acerto consecutivo adiciona +1 no próximo (1º normal, 2º +1, 3º +2...).
+### Punhos do Berserker — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano contundente
+1/Descanso Longo. Rajada de 5 golpes contra o mesmo alvo, cada um causando **1d8 + FOR**; cada acerto consecutivo adiciona +1 no próximo (1º normal, 2º +1, 3º +2...).
 
-### Contra-Golpe
+### Contra-Golpe (Nível 6)
+*Reação*
 Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um soco de Força completo em resposta.
 
-### Fúria Crescente
+### Fúria Crescente (Nível 10)
+*Ação*
 Cada acerto seguido nesta cena (sem errar) aumenta o dano dos ataques da Manopla em +1, até um máximo de +5; um erro zera o contador.
 
-### Impacto Brutal
-Ataque que, em caso de acerto, obriga o alvo a um teste de Constituição; falha: fica **Atordoado** até o fim do próximo turno dele.
+### Impacto Brutal (Nível 14)
+*Ação*
+Ataque que causa **2d8 + FOR** e obriga o alvo a um teste de Constituição; falha: fica **Atordoado** até o fim do próximo turno dele.
 
-### Punho Supremo
-Forma máxima de pressão: enquanto Fúria Crescente estiver no máximo (+5), os ataques da Manopla ignoram resistência a dano contundente.
-
----
-
-## 56.7 Leque
-
-**Função:** DPS de Ritmo e Mobilidade  
-**Atributo:** Destreza
-
-| Nível | Sword Skill |
-|---:|---|
-| 1 | Corte de Seda |
-| 1 | Dança do Leque |
-| 2 | Rajada Cortante |
-| 5 | **Limit Break — Mil Lâminas de Vento** |
-| 6 | Vento Reverso |
-| 10 | Dança das Correntes |
-| 14 | Lâmina Tempestuosa |
-| 18 | Festival das Cem Lâminas |
-
-A arma recompensa movimentação constante, posicionamento e ataques fluidos.
-
-### Corte de Seda
-Ataque corpo a corpo usando Destreza. Causa **1d6 + DES** e permite mover-se 5 ft (antes ou depois) sem provocar Ataque de Oportunidade.
-
-### Dança do Leque
-Ataque que combina movimento de até 10 ft com um golpe ao longo do trajeto, atingindo um inimigo em qualquer ponto do caminho.
-
-### Rajada Cortante
-Ataque em leque contra até 2 inimigos adjacentes entre si, cada um sofrendo **1d6 + DES**.
-
-### Mil Lâminas de Vento — Limit Break
-1/Descanso Longo. O usuário se move até a velocidade em linha reta atacando todos os inimigos no caminho, cada um sofrendo **2d6 + DES**.
-
-### Vento Reverso
-Reação: quando um inimigo se move pra perto do usuário, pode se reposicionar 10 ft mantendo distância e atacar de relance (metade do dano normal).
-
-### Dança das Correntes
-Cada movimento de pelo menos 10 ft antes de um ataque do Leque nesta cena concede +1 no teste de ataque (acumula até +3).
-
-### Lâmina Tempestuosa
-A Rajada Cortante passa a atingir até 4 inimigos em vez de 2.
-
-### Festival das Cem Lâminas
-Forma suprema de fluxo: o usuário pode se mover entre cada ataque de uma ação com múltiplos ataques, sem gastar deslocamento extra.
+### Punho Supremo (Nível 18)
+*Ação*
+1/Descanso Longo. Enquanto Fúria Crescente estiver no máximo (+5), os ataques da Manopla ignoram resistência a dano contundente, por 1 minuto.
 
 ---
 
-# 57. SWORD SKILLS — SUPORTE
+# 57. SWORD SKILLS — AoE
 
 ## 57.1 Bastão
 
-**Função:** Suporte de Proteção e Restauração  
-**Atributo:** Inteligência
+**Função:** AoE de Impacto e Controle de Terreno  
+**Atributo:** Sabedoria  
+**Dano:** contundente
 
 | Nível | Sword Skill |
 |---:|---|
-| 1 | Golpe Arcano |
-| 1 | Pulso Revigorante |
-| 2 | Barreira Mística |
-| 5 | **Limit Break — Grande Restauração** |
-| 6 | Bastão Protetor |
-| 10 | Campo de Energia |
-| 14 | Explosão Arcana |
-| 18 | Milagre do Guardião |
+| 1 | Giro Amplo |
+| 1 | Investida do Bastão |
+| 2 | Bastão Rodopiante |
+| 5 | **Limit Break — Terremoto do Bastão** |
+| 6 | Guarda Circular |
+| 10 | Campo de Impacto |
+| 14 | Onda de Choque |
+| 18 | Guardião Imóvel |
 
-O Bastão é o principal suporte de cura, proteção e recuperação.
+**Identidade:** Golpes largos e batidas de chão — sem cura, sem magia: um bastão pesado usado pra atingir e derrubar vários inimigos de uma vez.
 
-### Golpe Arcano
-Ataque corpo a corpo usando Inteligência. Causa **1d6 + INT**.
+### Giro Amplo (Nível 1)
+*Ação* · dano contundente
+Ataque corpo a corpo usando Sabedoria, gira o bastão atingindo todos os inimigos adjacentes ao usuário (5 ft). Causa **1d6 + SAB** de dano contundente a cada um.
 
-### Pulso Revigorante
-Ação, alcance 30 ft: um aliado recupera PV igual a **1d8 + INT**.
+### Investida do Bastão (Nível 1)
+*Ação* · dano contundente
+Ataque corpo a corpo. Causa **1d8 + SAB**. O alvo faz teste de Força; falha: empurrado 10 ft.
 
-### Barreira Mística
-Um aliado a até 30 ft ganha +2 de CA por 1 minuto ou até sofrer dano.
+### Bastão Rodopiante (Nível 2)
+*Ação* · dano contundente
+Gira o bastão duas vezes, atingindo até 4 inimigos num raio de 10 ft ao redor do usuário. Causa **1d4 + SAB** a cada um.
 
-### Grande Restauração — Limit Break
-1/Descanso Longo, alcance 30 ft. Até 3 aliados recuperam PV igual a **3d8 + INT** cada, e um deles tem uma condição (à escolha do usuário) removida.
+### Terremoto do Bastão — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+1/Descanso Longo. Bate o chão com força total: área de 15 ft de raio ao redor do usuário. Inimigos na área fazem teste de Força; falha: **2d8 + SAB** de dano contundente e **Caído**. Sucesso: metade do dano, sem cair.
 
-### Bastão Protetor
-Reação: quando um aliado a até 30 ft sofre dano, reduz esse dano em **1d6 + INT**.
+### Guarda Circular (Nível 6)
+*Reação* · dano contundente
+Reação: quando dois ou mais inimigos adjacentes atacam o usuário no mesmo turno, um giro de bastão contra-ataca todos eles, causando **1d6 + SAB** a cada um.
 
-### Campo de Energia
-Cria uma área de 15 ft de raio por 1 minuto; aliados que terminam o turno ali recuperam **1d4** de PV.
+### Campo de Impacto (Nível 10)
+*Ação* · dano contundente
+Cria uma área de 15 ft de raio por 1 minuto onde o chão treme. Inimigos que entram ou terminam o turno ali sofrem **1d6** de dano contundente e fazem teste de Força ou ficam **Caídos**.
 
-### Explosão Arcana
-Ataque de área de 10 ft de raio (alcance 30 ft) que causa **2d6 + INT** a inimigos na área.
+### Onda de Choque (Nível 14)
+*Ação* · dano contundente
+Ataque em linha de 15 ft de comprimento e 5 ft de largura. Todos na linha sofrem **2d6 + SAB** e são empurrados 10 ft na direção do golpe.
 
-### Milagre do Guardião
-Forma suprema de suporte: 1/Descanso Longo (recarrega junto com o Limit Break), quando um aliado a até 30 ft seria reduzido a 0 PV, o usuário pode gastar a reação pra estabilizá-lo com metade do PV máximo em vez de cair.
+### Guardião Imóvel (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, o usuário e aliados a até 10 ft ganham +2 de CA e resistência a dano de efeitos de área.
 
 ---
 
 ## 57.2 Chicote
 
-**Função:** Suporte de Controle e Posicionamento  
-**Atributo:** Inteligência
+**Função:** AoE de Controle e Posicionamento  
+**Atributo:** Inteligência  
+**Dano:** cortante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1632,84 +1674,47 @@ Forma suprema de suporte: 1/Descanso Longo (recarrega junto com o Limit Break), 
 | 14 | Domínio do Chicote |
 | 18 | Prisão Absoluta |
 
-O Chicote controla distância, puxa e empurra inimigos e pode reposicionar aliados.
+**Identidade:** Controla distância, puxa e empurra vários inimigos, reposiciona aliados.
 
-### Golpe Enlaçante
+### Golpe Enlaçante (Nível 1)
+*Ação* · dano cortante
 Ataque à distância (alcance 15 ft) usando Inteligência. Causa **1d6 + INT** e puxa o alvo 5 ft na direção do usuário.
 
-### Laço Protetor
-Ação: puxa um aliado a até 15 ft pra até 5 ft do usuário, tirando-o de uma área perigosa sem provocar Ataque de Oportunidade.
+### Laço Protetor (Nível 1)
+*Ação*
+Puxa um aliado a até 15 ft pra até 5 ft do usuário, tirando-o de uma área perigosa sem provocar Ataque de Oportunidade.
 
-### Puxão Violento
-Ataque que, em caso de acerto, obriga o alvo a um teste de Força; falha: é puxado 15 ft e fica **Caído**.
+### Puxão Violento (Nível 2)
+*Ação*
+Ataque que causa **1d8 + INT** e obriga o alvo a um teste de Força; falha: é puxado 15 ft e fica **Caído**.
 
-### Dança do Carrasco — Limit Break
+### Dança do Carrasco — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano cortante
 1/Descanso Longo. Prende até 2 inimigos a até 20 ft do usuário e os puxa 10 ft cada, causando **2d6 + INT** a cada um.
 
-### Chicote de Retaliação
-Reação quando um inimigo a até 15 ft se move: um ataque de Inteligência automático contra ele.
+### Chicote de Retaliação (Nível 6)
+*Reação* · dano cortante
+Reação quando um inimigo a até 15 ft se move: um ataque de Inteligência automático contra ele, causando **1d6 + INT**.
 
-### Corrente de Comando
-Um aliado a até 15 ft pode se reposicionar 10 ft como reação, guiado pelo chicote, sem provocar Ataque de Oportunidade.
+### Corrente de Comando (Nível 10)
+*Reação*
+Reação: um aliado a até 15 ft pode se reposicionar 10 ft guiado pelo chicote, sem provocar Ataque de Oportunidade.
 
-### Domínio do Chicote
+### Domínio do Chicote (Nível 14)
+*Ação*
 O alcance de todas as Sword Skills do Chicote aumenta em 10 ft.
 
-### Prisão Absoluta
-Forma suprema de controle: um inimigo puxado pelo Chicote nesta cena fica **Restringido** até se soltar (teste de Força/Acrobacia), em vez de só ser puxado.
+### Prisão Absoluta (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, um inimigo puxado pelo Chicote fica **Restringido** até se soltar (teste de Força/Acrobacia), em vez de só ser puxado.
 
 ---
 
-## 57.3 Besta
+## 57.3 Chakram
 
-**Função:** Suporte de Alcance e Assistência  
-**Atributo:** Destreza
-
-| Nível | Sword Skill |
-|---:|---|
-| 1 | Disparo Preciso |
-| 1 | Marcar Alvo |
-| 2 | Disparo de Cobertura |
-| 5 | **Limit Break — Chuva de Virolas** |
-| 6 | Tiro de Intervenção |
-| 10 | Marca do Caçador |
-| 14 | Virola Perfurante |
-| 18 | Execução Perfeita |
-
-A Besta marca alvos, auxilia aliados e mantém pressão à distância.
-
-### Disparo Preciso
-Ataque à distância (alcance 80/320 ft) usando Destreza. Causa **1d8 + DES**.
-
-### Marcar Alvo
-Ataque de dano reduzido (**1d4 + DES**) que marca o alvo por 1 minuto: aliados têm vantagem em ataques contra ele.
-
-### Disparo de Cobertura
-Reação: quando um aliado a até 30 ft é atacado, dispara contra o atacante, causando **1d6 + DES** e concedendo meia cobertura ao aliado contra esse ataque.
-
-### Chuva de Virolas — Limit Break
-1/Descanso Longo. Dispara contra todos os inimigos num raio de 20 ft (alcance 80 ft), cada um sofrendo **2d6 + DES**.
-
-### Tiro de Intervenção
-Reação: quando um inimigo marcado tenta fugir ou se aproximar de um aliado, um disparo automático o intercepta, causando **1d8 + DES**.
-
-### Marca do Caçador
-Contra um alvo marcado, os ataques da Besta ganham +1d6 de dano extra.
-
-### Virola Perfurante
-Ataque que atravessa o primeiro alvo e atinge um segundo em linha, cada um sofrendo dano completo.
-
-### Execução Perfeita
-Forma suprema de precisão: contra um alvo marcado com menos de metade do PV máximo, este ataque é automaticamente um acerto crítico.
-
----
-
-# 58. SWORD SKILLS — CC
-
-## 58.1 Chakram
-
-**Função:** Controle de Área e Posicionamento  
-**Atributo:** Destreza
+**Função:** AoE de Ricochete e Posicionamento  
+**Atributo:** Destreza  
+**Dano:** cortante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1722,38 +1727,47 @@ Forma suprema de precisão: contra um alvo marcado com menos de metade do PV má
 | 14 | Ricochete Devastador |
 | 18 | Tempestade dos Chakrams |
 
-**Identidade:** ricochete, área e movimento forçado.
+**Identidade:** Ricochete, área e movimento forçado — atinge vários alvos com um só arremesso.
 
-### Lâmina Ricochete
+### Lâmina Ricochete (Nível 1)
+*Ação* · dano cortante
 Ataque corpo a corpo ou à distância (alcance 20/60 ft) usando Destreza. Causa **1d6 + DES**. Se atingir, o chakram ricocheteia pra um segundo alvo a até 15 ft do primeiro, causando metade do dano.
 
-### Arco Cortante
+### Arco Cortante (Nível 1)
+*Ação* · dano cortante
 Ataque em arco de 90° a partir do usuário (alcance 10 ft), atingindo todos os inimigos na área. Causa **1d6 + DES** a cada um.
 
-### Chakram Enlaçante
-Ataque que, em caso de acerto, obriga o alvo a um teste de Força; falha: fica **Restringido** por uma corrente fina presa ao chakram até se soltar (ação, teste de Força/Acrobacia).
+### Chakram Enlaçante (Nível 2)
+*Ação*
+Ataque que causa **1d6 + DES** e obriga o alvo a um teste de Força; falha: fica **Restringido** por uma corrente fina presa ao chakram até se soltar (ação, teste de Força/Acrobacia).
 
-### Dança do Chakram — Limit Break
+### Dança do Chakram — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano cortante
 1/Descanso Longo. O usuário lança até 3 chakrams que ricocheteiam entre até 5 inimigos diferentes num raio de 30 ft, cada um causando **2d6 + DES**. Nenhum alvo é atingido mais de duas vezes.
 
-### Retorno Mortal
-Reação quando um inimigo se move pra dentro do alcance do chakram já lançado nesse turno: um ataque extra automático contra ele, sem gastar a ação.
+### Retorno Mortal (Nível 6)
+*Reação* · dano cortante
+Reação quando um inimigo se move pra dentro do alcance do chakram já lançado nesse turno: um ataque extra automático contra ele, causando **1d6 + DES**, sem gastar a ação.
 
-### Círculo de Lâminas
+### Círculo de Lâminas (Nível 10)
+*Ação*
 Cria uma área de 15 ft de raio onde chakrams giram no ar por 1 minuto; qualquer inimigo que entre ou termine o turno ali sofre **1d6** de dano cortante.
 
-### Ricochete Devastador
+### Ricochete Devastador (Nível 14)
+*Ação*
 O ricochete da Lâmina Ricochete deixa de perder dano — o segundo alvo (e um terceiro, se houver) recebe o dano cheio, não metade.
 
-### Tempestade dos Chakrams
-Forma suprema: por 1 rodada, todo ataque com chakram ricocheteia automaticamente pra um alvo adicional, sem limite de vezes por turno.
+### Tempestade dos Chakrams (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 rodada, todo ataque com chakram ricocheteia automaticamente pra um alvo adicional, sem limite de vezes por turno.
 
 ---
 
-## 58.2 Foice
+## 57.4 Foice
 
-**Função:** Debuff + Derrubar + Execução  
-**Atributo:** Sabedoria
+**Função:** AoE de Debuff, Derrubar e Execução  
+**Atributo:** Sabedoria  
+**Dano:** cortante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1766,82 +1780,47 @@ Forma suprema: por 1 rodada, todo ataque com chakram ricocheteia automaticamente
 | 14 | Grande Ceifa |
 | 18 | Última Colheita |
 
-A Foice enfraquece inimigos, derruba alvos e ganha eficiência contra inimigos feridos.
+**Identidade:** Enfraquece inimigos em área, derruba alvos e ganha eficiência contra feridos.
 
-### Corte Ceifador
+### Corte Ceifador (Nível 1)
+*Ação* · dano cortante
 Ataque corpo a corpo em arco (alcance 10 ft, área de 90°) usando Sabedoria. Causa **1d8 + SAB** a cada inimigo na área.
 
-### Gancho da Morte
-Ataque que, em caso de acerto, puxa o alvo 15 ft na direção do usuário e ele fica com o deslocamento reduzido pela metade até o fim do turno seguinte.
+### Gancho da Morte (Nível 1)
+*Ação*
+Ataque que causa **1d6 + SAB**, puxa o alvo 15 ft na direção do usuário e reduz o deslocamento dele pela metade até o fim do turno seguinte.
 
-### Ceifa das Pernas
-Ataque baixo contra as pernas do alvo: teste de Destreza; falha: fica **Caído**.
+### Ceifa das Pernas (Nível 2)
+*Ação*
+Ataque baixo contra as pernas do alvo, causa **1d6 + SAB**: teste de Destreza; falha: fica **Caído**.
 
-### Colheita da Morte — Limit Break
-1/Descanso Longo. Um corte amplo (alcance 15 ft, 120°) que causa **3d8 + SAB** e reduz a cura recebida pelos alvos atingidos pela metade até o fim da cena.
+### Colheita da Morte — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+1/Descanso Longo. Corte amplo (alcance 15 ft, 120°) que causa **3d8 + SAB** e reduz a cura recebida pelos alvos atingidos pela metade até o fim da cena.
 
-### Ceifador Reverso
-Ataque de retorno logo após um golpe: se o Corte Ceifador ou a Ceifa das Pernas acertou, pode encadear este ataque como parte da mesma ação, causando metade do dano a um alvo adicional na área.
+### Ceifador Reverso (Nível 6)
+*Ação*
+Ataque de retorno logo após um golpe: se o Corte Ceifador ou a Ceifa das Pernas acertou, encadeia este ataque como parte da mesma ação, causando metade do dano a um alvo adicional na área.
 
-### Marca do Ceifador
+### Marca do Ceifador (Nível 10)
+*Ação*
 Marca um alvo por 1 minuto; enquanto marcado, ataques com a Foice contra ele ganham vantagem e causam +1d6.
 
-### Grande Ceifa
+### Grande Ceifa (Nível 14)
+*Ação*
 Como Corte Ceifador, mas o alcance dobra (20 ft, 90°) e alvos já **Caídos** sofrem dano máximo em vez de rolado.
 
-### Última Colheita
+### Última Colheita (Nível 18)
+*Ação*
 Contra um inimigo com menos de um terço do PV máximo, este ataque causa dano dobrado e, se reduzir o alvo a 0 PV, o usuário recupera PV igual ao dado de dano da arma.
 
 ---
 
-## 58.3 Adagas de Arremesso
+## 57.5 Machado
 
-**Função:** Controle à Distância + Mobilidade + Precisão  
-**Atributo:** Destreza
-
-| Nível | Sword Skill |
-|---:|---|
-| 1 | Lâmina Marcadora |
-| 1 | Rajada de Adagas |
-| 2 | Adaga Imobilizante |
-| 5 | **Limit Break — Dança das Mil Lâminas** |
-| 6 | Adaga de Retorno |
-| 10 | Campo de Lâminas |
-| 14 | Chuva Perfurante |
-| 18 | Arsenal Fantasma |
-
-A arma marca inimigos, reduz deslocamento, cria zonas perigosas e mantém o usuário móvel.
-
-### Lâmina Marcadora
-Ataque à distância (alcance 30/90 ft) usando Destreza. Causa **1d4 + DES** e marca o alvo por 1 minuto (ver Marca do Ceifador-style: próximos ataques do usuário contra o alvo marcado têm vantagem).
-
-### Rajada de Adagas
-Três adagas lançadas contra um único alvo ou até três alvos diferentes num raio de 10 ft, cada uma causando **1d4 + DES**.
-
-### Adaga Imobilizante
-Ataque que, em caso de acerto, obriga o alvo a um teste de Destreza; falha: o deslocamento dele fica reduzido a 5 ft até o fim do turno seguinte (a adaga finca no chão/roupa).
-
-### Dança das Mil Lâminas — Limit Break
-1/Descanso Longo. Uma saraivada que atinge todos os inimigos num cone de 30 ft, cada um sofrendo **2d6 + DES** e um teste de Destreza; falha: **Restringido** por 1 rodada.
-
-### Adaga de Retorno
-Reação: quando um inimigo marcado se move, uma adaga extra o persegue automaticamente, causando **1d4 + DES**.
-
-### Campo de Lâminas
-Cria uma área de 15 ft de raio coberta de adagas fincadas por 1 minuto; inimigos que entram ou terminam o turno ali sofrem **1d6** de dano perfurante.
-
-### Chuva Perfurante
-A Rajada de Adagas passa de 3 pra 5 adagas, e cada uma que erra o primeiro alvo ricocheteia pra um segundo.
-
-### Arsenal Fantasma
-Forma suprema de mobilidade: o usuário pode se teleportar até 30 ft pra qualquer ponto onde tenha uma adaga fincada (de Campo de Lâminas ou Adaga Imobilizante) como parte de um ataque, sem gastar deslocamento.
-
----
-
-## 58.4 Machado
-
-**Função:** Controle Pesado + Derrubar + Quebra de Postura  
-**Atributo:** Força
+**Função:** AoE Pesado de Derrubar e Quebra de Postura  
+**Atributo:** Força  
+**Dano:** cortante
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1854,42 +1833,47 @@ Forma suprema de mobilidade: o usuário pode se teleportar até 30 ft pra qualqu
 | 14 | Grande Cleave |
 | 18 | Execução do Colosso |
 
-O Machado é o CC mais pesado: sacrifica mobilidade para interromper, derrubar e quebrar a postura dos inimigos.
+**Identidade:** O AoE mais pesado: sacrifica mobilidade pra interromper, derrubar e quebrar a postura de vários inimigos.
 
-### Golpe Quebra-Guarda
+### Golpe Quebra-Guarda (Nível 1)
+*Ação* · dano cortante
 Ataque corpo a corpo usando Força. Causa **1d10 + FOR**. Se o alvo estiver usando escudo ou postura defensiva, esse bônus é anulado até o fim do turno seguinte.
 
-### Machado Derrubador
-Ataque pesado; teste de Força do alvo; falha: fica **Caído**.
+### Machado Derrubador (Nível 1)
+*Ação*
+Ataque pesado, causa **1d8 + FOR**; teste de Força do alvo; falha: fica **Caído**.
 
-### Corte de Impacto
-Ataque que, além do dano, empurra o alvo 10 ft na direção do golpe (teste de Força pra resistir).
+### Corte de Impacto (Nível 2)
+*Ação*
+Ataque que causa **1d10 + FOR** e empurra o alvo 10 ft na direção do golpe (teste de Força pra resistir).
 
-### Devastação do Machado — Limit Break
-1/Descanso Longo. Um golpe massivo (alcance 10 ft, área de 5 ft à frente) que causa **3d10 + FOR** e deixa todos os alvos atingidos **Caídos**, sem direito a teste de resistência.
+### Devastação do Machado — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+1/Descanso Longo. Golpe massivo (alcance 10 ft, área de 5 ft à frente) que causa **3d10 + FOR** e deixa todos os alvos atingidos **Caídos**, sem direito a teste de resistência.
 
-### Contra-Golpe Brutal
+### Contra-Golpe Brutal (Nível 6)
+*Reação*
 Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um ataque de Força completo em resposta.
 
-### Quebra-Postura
-Ataque que reduz a CA do alvo em 2 até o fim da cena (não acumula com usos repetidos — só o mais recente vale).
+### Quebra-Postura (Nível 10)
+*Ação*
+Ataque que causa **2d10 + FOR** e reduz a CA do alvo em 2 até o fim da cena (não acumula com usos repetidos).
 
-### Grande Cleave
-Ataque que atinge todos os inimigos num arco de 10 ft à frente, cada um causando dano completo (não reduzido).
+### Grande Cleave (Nível 14)
+*Ação*
+Ataque que atinge todos os inimigos num arco de 10 ft à frente, cada um sofrendo dano completo (não reduzido) de **2d8 + FOR**.
 
-### Execução do Colosso
+### Execução do Colosso (Nível 18)
+*Ação*
 Contra um inimigo **Caído**, este ataque causa dano máximo automaticamente, sem rolar o dado.
 
 ---
 
-# 59. CORRENTE COM PESO
+## 57.6 Corrente com Peso
 
-**Função:** CC de Alcance e Controle de Posição  
-**Atributo:** Destreza
-
-A Corrente com Peso foi oficialmente transferida de **Tank para CC**.
-
-> **Atualização desta etapa (conversão pra D&D 5e):** as Sword Skills abaixo fecham a pendência registrada nas versões anteriores deste documento — a arma segue as mesmas 7 Skills + Limit Break de todas as outras 18 armas, mantendo a identidade original de prender/puxar/empurrar/impedir avanço/controlar distância/manipular posicionamento.
+**Função:** AoE de Alcance e Controle de Posição  
+**Atributo:** Destreza  
+**Dano:** contundente
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1902,61 +1886,283 @@ A Corrente com Peso foi oficialmente transferida de **Tank para CC**.
 | 14 | Corrente Sangrenta |
 | 18 | Senhor das Correntes |
 
-**Identidade:** alcance, arrastar, prender e negar espaço — a única arma cuja função inteira é ditar onde o inimigo (não) pode estar.
+**Identidade:** Alcance, arrastar, prender e negar espaço — a única arma cuja função inteira é ditar onde o inimigo (não) pode estar.
 
-### Lançar Corrente
+### Lançar Corrente (Nível 1)
+*Ação* · dano contundente
 Ataque à distância (alcance 15/30 ft) usando Destreza. Causa **1d6 + DES**. Em vez de recuar após o golpe, o usuário pode puxar o alvo 5 ft na sua direção.
 
-### Amarra de Ferro
-Ataque que, em caso de acerto, força o alvo a um teste de resistência de Força; falha: fica **Restringido** (Enredado pela corrente) até usar a ação para se soltar (teste de Força/Acrobacia contra a CD da Skill).
+### Amarra de Ferro (Nível 1)
+*Ação*
+Ataque que causa **1d6 + DES** e força o alvo a um teste de resistência de Força; falha: fica **Restringido** até usar a ação para se soltar (teste de Força/Acrobacia).
 
-### Puxão Brutal
+### Puxão Brutal (Nível 2)
+*Reação*
 Reação quando um inimigo a até 15 ft tenta se afastar do usuário. Puxa o alvo de volta 10 ft e reduz o deslocamento dele pela metade até o fim do turno seguinte.
 
-### Grilhões de Aincrad — Limit Break
-Reação ou ação, 1/Descanso Longo, alcance 30 ft. Prende um alvo com correntes que se materializam do chão: o alvo fica **Restringido** sem direito a teste de resistência inicial e sofre desvantagem no primeiro teste para se soltar. Enquanto restringido dessa forma, aliados do usuário têm vantagem em ataques corpo a corpo contra o alvo.
+### Grilhões de Aincrad — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo*
+Ação ou Reação, 1/Descanso Longo, alcance 30 ft. Prende um alvo com correntes que se materializam do chão: o alvo fica **Restringido** sem direito a teste de resistência inicial e sofre desvantagem no primeiro teste para se soltar. Enquanto restringido dessa forma, aliados do usuário têm vantagem em ataques corpo a corpo contra o alvo.
 
-### Corrente Serpenteante
-A corrente pode atingir e enredar dois alvos diferentes no mesmo ataque (um golpe principal + um golpe secundário de dano reduzido), cada um com seu próprio teste de resistência.
+### Corrente Serpenteante (Nível 6)
+*Ação*
+A corrente atinge e enreda dois alvos diferentes no mesmo ataque (golpe principal + golpe secundário de dano reduzido), cada um com seu próprio teste de resistência.
 
-### Prisão de Elos
+### Prisão de Elos (Nível 10)
+*Ação*
 Cria uma área de 10 ft de raio onde a corrente serpenteia pelo chão; inimigos que entram ou terminam o turno ali fazem teste de Destreza ou ficam com o deslocamento reduzido a 5 ft até saírem da área.
 
-### Corrente Sangrenta
-Golpe pesado contra um alvo já Restringido pelo usuário: dano adicional e o alvo sofre uma condição extra (Caído ou Amedrontado, à escolha do usuário) além do dano.
+### Corrente Sangrenta (Nível 14)
+*Ação*
+Golpe pesado contra um alvo já Restringido pelo usuário: causa **2d8 + DES** e o alvo sofre uma condição extra (Caído ou Amedrontado, à escolha do usuário).
 
-### Senhor das Correntes
-Forma suprema de controle: o usuário pode manter até três alvos Restringidos simultaneamente sem gastar ação extra por alvo, e pode arrastar qualquer um deles 5 ft por vez como parte de outra ação.
-
----
-
-# 60. RESUMO DAS SWORD SKILLS POR ARMA
-
-| Arma | Função | Identidade |
-|---|---|---|
-| Espada + Escudo | Tank | Guarda / Proteção |
-| Martelo | Tank | Impacto / Atordoamento |
-| Pá | Tank | Terreno |
-| Lança | Tank | Alcance / Interceptação |
-| Adagas | DPS | Mobilidade / Combo |
-| Arco e Flecha | DPS | Alcance / Precisão |
-| Espada Longa | DPS | Combo / Impacto |
-| Rapieira | DPS | Precisão / Contra-ataque |
-| Katana | DPS | Preparação / Golpe decisivo |
-| Manopla | DPS | Pressão / Sequência |
-| Leque | DPS | Ritmo / Mobilidade |
-| Bastão | Suporte | Cura / Proteção |
-| Chicote | Suporte | Controle / Posicionamento |
-| Besta | Suporte | Alcance / Assistência |
-| Chakram | CC | Área / Ricochete |
-| Foice | CC | Debuff / Execução |
-| Adagas de Arremesso | CC | Controle à distância |
-| Machado | CC | Quebra de postura |
-| Corrente com Peso | CC | Enredar / Puxar |
+### Senhor das Correntes (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, o usuário mantém até três alvos Restringidos simultaneamente sem gastar ação extra por alvo, e pode arrastar qualquer um deles 5 ft por vez como parte de outra ação.
 
 ---
 
-# 61. PROGRESSÃO FINAL DA ARMA
+# 58. SWORD SKILLS — SCOUTS
+
+## 58.1 Adagas
+
+**Função:** Scout de Mobilidade e Infiltração  
+**Atributo:** Destreza  
+**Dano:** perfurante
+
+| Nível | Sword Skill |
+|---:|---|
+| 1 | Corte Veloz |
+| 1 | Dupla Estocada |
+| 2 | Passo da Sombra |
+| 5 | **Limit Break — Dança das Lâminas** |
+| 6 | Corte de Oportunidade |
+| 10 | Dança do Assassino |
+| 14 | Mil Cortes |
+| 18 | Passo Fantasma |
+
+**Identidade:** Entra, ataca e reposiciona antes que o inimigo perceba de onde veio o golpe.
+
+### Corte Veloz (Nível 1)
+*Ação* · dano perfurante
+Ataque corpo a corpo usando Destreza. Causa **1d4 + DES** e permite mover-se 5 ft depois do golpe sem provocar Ataque de Oportunidade.
+
+### Dupla Estocada (Nível 1)
+*Ação* · dano perfurante
+Dois ataques, cada um causando **1d4 + DES**; acertar os dois permite mover-se 5 ft extra imediatamente.
+
+### Passo da Sombra (Nível 2)
+*Ação Bônus*
+Ação bônus: move-se até a velocidade sem provocar Ataque de Oportunidade; o próximo ataque do usuário neste turno tem vantagem.
+
+### Dança das Lâminas — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano perfurante
+1/Descanso Longo. Ataca até 3 inimigos diferentes a até 5 ft entre si, cada um sofrendo **1d8 + DES**.
+
+### Corte de Oportunidade (Nível 6)
+*Reação* · dano perfurante
+Reação quando um inimigo sai do alcance corpo a corpo do usuário: um ataque extra, causando **1d6 + DES**.
+
+### Dança do Assassino (Nível 10)
+*Ação*
+Deslocamento +10 ft. Cada ataque bem-sucedido nesta cena concede +5 ft extra de deslocamento até o fim do turno.
+
+### Mil Cortes (Nível 14)
+*Ação* · dano perfurante
+Três ataques contra o mesmo alvo, cada um causando **1d4 + DES**.
+
+### Passo Fantasma (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, Ataques de Oportunidade contra o usuário têm desvantagem.
+
+---
+
+## 58.2 Besta
+
+**Função:** Scout de Alcance e Marcação  
+**Atributo:** Destreza  
+**Dano:** perfurante
+
+| Nível | Sword Skill |
+|---:|---|
+| 1 | Disparo Preciso |
+| 1 | Marcar Alvo |
+| 2 | Disparo de Cobertura |
+| 5 | **Limit Break — Chuva de Virolas** |
+| 6 | Tiro de Intervenção |
+| 10 | Marca do Caçador |
+| 14 | Virola Perfurante |
+| 18 | Execução Perfeita |
+
+**Identidade:** Marca alvos, cobre aliados e mantém pressão à distância sem entrar em risco.
+
+### Disparo Preciso (Nível 1)
+*Ação* · dano perfurante
+Ataque à distância (alcance 80/320 ft) usando Destreza. Causa **1d8 + DES**.
+
+### Marcar Alvo (Nível 1)
+*Ação*
+Ataque de dano reduzido (**1d4 + DES**) que marca o alvo por 1 minuto: aliados têm vantagem em ataques contra ele.
+
+### Disparo de Cobertura (Nível 2)
+*Reação* · dano perfurante
+Reação: quando um aliado a até 30 ft é atacado, dispara contra o atacante, causando **1d6 + DES** e concedendo meia cobertura ao aliado contra esse ataque.
+
+### Chuva de Virolas — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano perfurante
+1/Descanso Longo. Dispara contra todos os inimigos num raio de 20 ft (alcance 80 ft), cada um sofrendo **2d6 + DES**.
+
+### Tiro de Intervenção (Nível 6)
+*Reação* · dano perfurante
+Reação: quando um inimigo marcado tenta fugir ou se aproximar de um aliado, um disparo automático o intercepta, causando **1d8 + DES**.
+
+### Marca do Caçador (Nível 10)
+*Ação*
+Contra um alvo marcado, os ataques da Besta causam +1d6 de dano extra.
+
+### Virola Perfurante (Nível 14)
+*Ação* · dano perfurante
+Ataque que atravessa o primeiro alvo e atinge um segundo em linha, cada um sofrendo **1d8 + DES**.
+
+### Execução Perfeita (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, contra um alvo marcado com menos da metade do PV máximo, os disparos do usuário são automaticamente acerto crítico.
+
+---
+
+## 58.3 Leque
+
+**Função:** Scout de Ritmo e Mobilidade  
+**Atributo:** Sabedoria  
+**Dano:** cortante
+
+| Nível | Sword Skill |
+|---:|---|
+| 1 | Corte de Seda |
+| 1 | Dança do Leque |
+| 2 | Rajada Cortante |
+| 5 | **Limit Break — Mil Lâminas de Vento** |
+| 6 | Vento Reverso |
+| 10 | Dança das Correntes |
+| 14 | Lâmina Tempestuosa |
+| 18 | Festival das Cem Lâminas |
+
+**Identidade:** Movimentação constante, posicionamento e ataques fluidos — difícil de fixar.
+
+### Corte de Seda (Nível 1)
+*Ação* · dano cortante
+Ataque corpo a corpo usando Sabedoria. Causa **1d6 + SAB** e permite mover-se 5 ft (antes ou depois) sem provocar Ataque de Oportunidade.
+
+### Dança do Leque (Nível 1)
+*Ação* · dano cortante
+Ataque que combina movimento de até 10 ft com um golpe ao longo do trajeto, causando **1d6 + SAB** a um inimigo em qualquer ponto do caminho.
+
+### Rajada Cortante (Nível 2)
+*Ação* · dano cortante
+Ataque em leque contra até 2 inimigos adjacentes entre si, cada um sofrendo **1d6 + SAB**.
+
+### Mil Lâminas de Vento — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano cortante
+1/Descanso Longo. O usuário se move até a velocidade em linha reta atacando todos os inimigos no caminho, cada um sofrendo **2d6 + SAB**.
+
+### Vento Reverso (Nível 6)
+*Reação*
+Reação: quando um inimigo se move pra perto do usuário, reposiciona-se 10 ft mantendo distância e ataca de relance, causando metade do dano normal.
+
+### Dança das Correntes (Nível 10)
+*Ação*
+Cada movimento de pelo menos 10 ft antes de um ataque do Leque nesta cena concede +1 no teste de ataque (acumula até +3).
+
+### Lâmina Tempestuosa (Nível 14)
+*Ação*
+A Rajada Cortante passa a atingir até 4 inimigos em vez de 2.
+
+### Festival das Cem Lâminas (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, o usuário pode se mover entre cada ataque de uma ação com múltiplos ataques, sem gastar deslocamento extra.
+
+---
+
+## 58.4 Adagas de Arremesso
+
+**Função:** Scout de Controle à Distância e Marcação  
+**Atributo:** Destreza  
+**Dano:** perfurante
+
+| Nível | Sword Skill |
+|---:|---|
+| 1 | Lâmina Marcadora |
+| 1 | Rajada de Adagas |
+| 2 | Adaga Imobilizante |
+| 5 | **Limit Break — Dança das Mil Lâminas** |
+| 6 | Adaga de Retorno |
+| 10 | Campo de Lâminas |
+| 14 | Chuva Perfurante |
+| 18 | Arsenal Fantasma |
+
+**Identidade:** Marca inimigos, reduz deslocamento, cria zonas perigosas e mantém o usuário sempre móvel.
+
+### Lâmina Marcadora (Nível 1)
+*Ação* · dano perfurante
+Ataque à distância (alcance 30/90 ft) usando Destreza. Causa **1d4 + DES** e marca o alvo por 1 minuto — os próximos ataques do usuário contra o alvo marcado têm vantagem.
+
+### Rajada de Adagas (Nível 1)
+*Ação* · dano perfurante
+Três adagas lançadas contra um único alvo ou até três alvos diferentes num raio de 10 ft, cada uma causando **1d4 + DES**.
+
+### Adaga Imobilizante (Nível 2)
+*Ação*
+Ataque que causa **1d4 + DES** e obriga o alvo a um teste de Destreza; falha: o deslocamento dele fica reduzido a 5 ft até o fim do turno seguinte.
+
+### Dança das Mil Lâminas — Limit Break (Nível 5)
+*Ação · 1/Descanso Longo* · dano perfurante
+1/Descanso Longo. Saraivada que atinge todos os inimigos num cone de 30 ft, cada um sofrendo **2d6 + DES** e um teste de Destreza; falha: **Restringido** por 1 rodada.
+
+### Adaga de Retorno (Nível 6)
+*Reação* · dano perfurante
+Reação: quando um inimigo marcado se move, uma adaga extra o persegue automaticamente, causando **1d4 + DES**.
+
+### Campo de Lâminas (Nível 10)
+*Ação* · dano perfurante
+Cria uma área de 15 ft de raio coberta de adagas fincadas por 1 minuto; inimigos que entram ou terminam o turno ali sofrem **1d6** de dano perfurante.
+
+### Chuva Perfurante (Nível 14)
+*Ação*
+A Rajada de Adagas passa de 3 pra 5 adagas, e cada uma que erra o primeiro alvo ricocheteia pra um segundo.
+
+### Arsenal Fantasma (Nível 18)
+*Ação*
+1/Descanso Longo. Por 1 minuto, o usuário pode se teleportar até 30 ft pra qualquer ponto onde tenha uma adaga fincada (de Campo de Lâminas ou Adaga Imobilizante) como parte de um ataque, sem gastar deslocamento.
+
+---
+
+# 59. RESUMO DAS SWORD SKILLS POR ARMA
+
+| Arma | Categoria | Atributo | Dano | Identidade |
+|---|---|---|---|---|
+| Espada + Escudo | 🛡️ Tank | FOR | cortante | Segura a linha de frente, protege aliados e pune quem erra o ataque |
+| Martelo | 🛡️ Tank | FOR | contundente | Impacto, atordoamento, interrupção e resistência |
+| Pá | 🛡️ Tank | FOR | contundente | Controla o campo de batalha moldando o próprio terreno |
+| Lança | 🛡️ Tank | DES | perfurante | Controla distância e nega avanço |
+| Arco e Flecha | ⚔️ DPS | DES | perfurante | Dano concentrado à distância |
+| Espada Longa | ⚔️ DPS | FOR | cortante | Recompensa sequência de ataques e manutenção de combo |
+| Rapieira | ⚔️ DPS | DES | perfurante | Recompensa leitura do inimigo, criação de aberturas e contra-ataques |
+| Katana | ⚔️ DPS | SAB | cortante | Recompensa preparação, concentração e espera pela abertura correta |
+| Manopla | ⚔️ DPS | FOR | contundente | Recompensa permanecer próximo e manter uma sequência ofensiva |
+| Bastão | 💥 AoE | SAB | contundente | Golpes largos e batidas de chão |
+| Chicote | 💥 AoE | INT | cortante | Controla distância, puxa e empurra vários inimigos, reposiciona |
+| Chakram | 💥 AoE | DES | cortante | Ricochete, área e movimento forçado |
+| Foice | 💥 AoE | SAB | cortante | Enfraquece inimigos em área, derruba alvos e ganha eficiência contra |
+| Machado | 💥 AoE | FOR | cortante | O AoE mais pesado: sacrifica mobilidade pra interromper, derrubar e |
+| Corrente com Peso | 💥 AoE | DES | contundente | Alcance, arrastar, prender e negar espaço |
+| Adagas | 🗡️ Scouts | DES | perfurante | Entra, ataca e reposiciona antes que o inimigo perceba de onde veio o |
+| Besta | 🗡️ Scouts | DES | perfurante | Marca alvos, cobre aliados e mantém pressão à distância sem entrar em |
+| Leque | 🗡️ Scouts | SAB | cortante | Movimentação constante, posicionamento e ataques fluidos |
+| Adagas de Arremesso | 🗡️ Scouts | DES | perfurante | Marca inimigos, reduz deslocamento, cria zonas perigosas e mantém o |
+
+---
+
+# 60. PROGRESSÃO FINAL DA ARMA
 
 A progressão consolidada fica:
 
@@ -1985,7 +2191,7 @@ A progressão consolidada fica:
 
 ---
 
-# 62. RELAÇÃO ENTRE ARMA, PROFISSÃO E PERSONAGEM
+# 61. RELAÇÃO ENTRE ARMA, PROFISSÃO E PERSONAGEM
 
 A progressão do personagem possui três pilares:
 
@@ -2010,7 +2216,7 @@ Isso mantém três formas diferentes de evolução sem fazer uma delas substitui
 
 ---
 
-# 63. STATUS DAS SWORD SKILLS
+# 62. STATUS DAS SWORD SKILLS
 
 ### Concluídas e documentadas
 
@@ -2032,7 +2238,7 @@ Isso mantém três formas diferentes de evolução sem fazer uma delas substitui
 - Foice
 - Adagas de Arremesso
 - Machado
-- Corrente com Peso (fechada na Seção 59, etapa de conversão pra D&D 5e)
+- Corrente com Peso
 
 ### Pendente
 
@@ -2040,7 +2246,7 @@ Nenhuma. As 19 armas estão com Sword Skills completas (7 + Limit Break cada).
 
 ---
 
-# 64. REGRA DE OURO DAS SWORD SKILLS
+# 63. REGRA DE OURO DAS SWORD SKILLS
 
 > **Cada arma deve parecer diferente quando jogada.**
 
@@ -2070,7 +2276,7 @@ A escolha da arma deve mudar a forma como o jogador pensa e atua no combate.
 
 **Leque:** mover-se e atacar em fluxo.
 
-**Bastão:** manter o grupo vivo.
+**Bastão:** golpes largos e abalar o chão.
 
 **Chicote:** controlar posições.
 
@@ -2088,7 +2294,7 @@ A escolha da arma deve mudar a forma como o jogador pensa e atua no combate.
 
 ---
 
-# 65. FONTE DE CONSOLIDAÇÃO
+# 64. FONTE DE CONSOLIDAÇÃO
 
 Esta seção foi reconstruída a partir dos materiais de Sword Skills já produzidos no projeto, incluindo os PDFs individuais de armas e o documento consolidado de Sword Skills.
 
@@ -2098,7 +2304,7 @@ Quando existir diferença entre uma versão antiga e a progressão mais recente,
 
 ---
 
-# 66. REGRA DE CONVERSÃO DE ATRIBUTOS LEGADOS (5 PBTA → 6 D&D)
+# 65. REGRA DE CONVERSÃO DE ATRIBUTOS LEGADOS (5 PBTA → 6 D&D)
 
 O sistema antigo (pré-conversão) usava **5 atributos**: Corpo, Reflexo, Conhecimento, Espírito, Técnica (escala -2 a +2). Todo o conteúdo já publicado antes desta etapa (monstros, NPCs, itens) usa esses nomes. Esta seção fixa a regra oficial de conversão, usada em todo o resto do documento e em qualquer conteúdo antigo revisado a partir de agora.
 
@@ -2117,7 +2323,7 @@ Consequência prática: **nenhuma arma das 19 usa Constituição ou Carisma como
 
 ---
 
-# 67. PERÍCIAS
+# 66. PERÍCIAS
 
 Aincrad não tem magia tradicional, então as 18 perícias de D&D viram **17**: Arcanismo e Religião (que não fazem sentido num MMORPG sem deuses nem feitiçaria) foram fundidas numa perícia nova, **Sistema**, que cobre o conhecimento sobre as regras do próprio jogo/Cardinal System (identificar itens, entender curvas de dano, ler o funcionamento de puzzles e mecanismos do castelo).
 
@@ -2133,33 +2339,69 @@ Teste de perícia: **d20 + modificador do atributo + bônus de proficiência** (
 
 Proficiência em perícia vem de: **Profissão** (cada uma concede 2 perícias ligadas ao seu tema — o Mestre escolhe entre as perícias do atributo da profissão e uma perícia temática relacionada, ex. Caçador → Sobrevivência + Percepção) e de **escolha livre na criação de personagem** (2 perícias adicionais, quaisquer).
 
+## As 17 perícias
+
+**Atletismo** (Força) — escalar, nadar, saltar, forçar uma porta, manter o equilíbrio em terreno instável, resistir a ser agarrado.
+
+**Acrobacia** (Destreza) — cair de pé, equilibrar-se em superfície estreita, escapar de um agarrão, executar uma manobra corporal arriscada.
+
+**Furtividade** (Destreza) — esconder-se, mover-se sem ser percebido, passar por um inimigo desatento — a perícia central do Scout.
+
+**Prestidigitação** (Destreza) — trabalho manual fino e rápido: soltar um cadeado sem chave, plantar ou tirar algo de um bolso, armar/desarmar um mecanismo pequeno.
+
+**Investigação** (Inteligência) — examinar uma cena em busca de pista, deduzir como um mecanismo funciona, encontrar uma passagem escondida a partir de detalhes concretos.
+
+**História** (Inteligência) — lembrar fatos sobre Aincrad, andares antigos, guildas, eventos passados do servidor.
+
+**Natureza** (Inteligência) — reconhecer flora/fauna, identificar terreno perigoso, prever comportamento de criatura selvagem.
+
+**Sistema** (Inteligência) — perícia própria de Aincrad (funde Arcanismo+Religião, que não existem aqui): entender a interface do jogo, identificar propriedade de item, ler puzzle/mecanismo do castelo, avaliar curva de dano/CA.
+
+**Adestrar Animais** (Sabedoria) — acalmar, comandar ou ler a intenção de uma criatura — perícia central do Domador e do Mestre de Montarias.
+
+**Intuição** (Sabedoria) — perceber se alguém está mentindo, ler intenção por trás de uma ação, notar que algo na cena não bate.
+
+**Medicina** (Sabedoria) — estabilizar, diagnosticar, tratar ferimento — perícia central do Médico.
+
+**Percepção** (Sabedoria) — notar algo por observação ativa: armadilha, emboscada, detalhe escondido — perícia central do Scout junto com Furtividade.
+
+**Sobrevivência** (Sabedoria) — rastrear, orientar-se, prever o tempo, encontrar comida/água em campo — perícia central do Caçador.
+
+**Atuação** (Carisma) — performance musical/teatral, capturar a atenção de uma plateia — perícia central do Músico.
+
+**Enganação** (Carisma) — mentir de forma convincente, blefar, se passar por outra pessoa.
+
+**Intimidação** (Carisma) — influenciar pelo medo ou pela ameaça, forçar uma concessão sem violência de verdade.
+
+**Persuasão** (Carisma) — convencer com argumento honesto, negociar de boa-fé — perícia central do Comerciante e do Informante.
+
 ---
 
-# 68. TESTES DE RESISTÊNCIA
+# 67. TESTES DE RESISTÊNCIA
 
 Cada categoria de combate (Seção 8) concede proficiência em 2 Testes de Resistência, refletindo o papel da categoria:
 
 | Categoria | Resistências |
 |---|---|
-| Tank | Força, Constituição |
-| DPS | Destreza, Força |
-| Suporte | Inteligência, Sabedoria |
-| CC | Destreza, Sabedoria |
+| 🛡️ Tank | Força, Constituição |
+| ⚔️ DPS | Destreza, Força |
+| 💥 AoE | Constituição, Sabedoria |
+| 🗡️ Scouts | Destreza, Sabedoria |
 
 Teste de Resistência: **d20 + modificador do atributo + bônus de proficiência** (se proficiente) **vs. CD do efeito**.
 
 ---
 
-# 69. PONTOS DE VIDA, CLASSE DE ARMADURA E INICIATIVA
+# 68. PONTOS DE VIDA, CLASSE DE ARMADURA E INICIATIVA
 
 ## Dado de Vida por categoria
 
 | Categoria | Dado de Vida |
 |---|---:|
-| Tank | d12 |
-| DPS | d10 |
-| CC | d10 |
-| Suporte | d8 |
+| 🛡️ Tank | d12 |
+| ⚔️ DPS | d10 |
+| 💥 AoE | d10 |
+| 🗡️ Scouts | d8 |
 
 **PV no nível 1** = valor máximo do dado + modificador de Constituição.
 **A cada nível seguinte:** rola o Dado de Vida (ou usa a média fixa, arredondada pra cima — recomendado pra manter consistência entre mesas) + modificador de Constituição.
@@ -2169,7 +2411,7 @@ Teste de Resistência: **d20 + modificador do atributo + bônus de proficiência
 **CA base = 10 + modificador de Destreza**, somando:
 
 - bônus de escudo/postura defensiva das próprias Sword Skills (ex. Guarda Férrea, Postura de Guarda);
-- bônus de equipamento (armaduras, acessórios — ver Seção 73).
+- bônus de equipamento (armaduras, acessórios — ver Seção 72).
 
 ## Iniciativa
 
@@ -2177,17 +2419,17 @@ Teste de Resistência: **d20 + modificador do atributo + bônus de proficiência
 
 ---
 
-# 70. CONDIÇÕES
+# 69. CONDIÇÕES
 
 Aincrad adota o conjunto padrão de condições de D&D 5e, sem petrificação (não existe magia de pedra no sistema) e com Enfeitiçado reaproveitado para efeitos sociais/hipnóticos (ex. Skills de Leque e Músico) em vez de encantamento mágico:
 
 Agarrado • Amedrontado • Atordoado • Caído • Cego • Enfeitiçado • Envenenado • Exausto (níveis 1-6) • Impossibilitado • Invisível • Paralisado • Restringido • Surdo • Inconsciente
 
-Essas são as condições usadas nas Sword Skills das Seções 55-59 (ex. "Restringido" = a antiga menção solta de "Enredado").
+Essas são as condições usadas nas Sword Skills das Seções 55-58 (ex. "Restringido" = a antiga menção solta de "Enredado").
 
 ---
 
-# 71. EXPERIÊNCIA E NÍVEL
+# 70. EXPERIÊNCIA E NÍVEL
 
 O personagem evolui pela tabela padrão de XP/Nível de D&D 5e — substitui o antigo sistema de "Marco" do PBTA:
 
@@ -2218,7 +2460,7 @@ XP é ganho por combate, missão, exploração e marcos de história — a crit�
 
 ---
 
-# 72. DESCANSO
+# 71. DESCANSO
 
 | Tipo | Duração | Efeito |
 |---|---|---|
@@ -2229,7 +2471,7 @@ Zona segura = qualquer área "cidade segura" do andar (mesmo conceito que já ex
 
 ---
 
-# 73. EQUIPAMENTOS E CRISTAIS
+# 72. EQUIPAMENTOS E CRISTAIS
 
 O sistema antigo usava bônus estreitos e situacionais (+1 numa situação específica, nunca um bônus geral). Na conversão pra D&D, os itens ganham **bônus numérico direto**, seguindo a escala de raridade já usada em todo o resto do sistema (a mesma dos níveis de receita de profissão — Seção 20/21):
 
@@ -2247,7 +2489,7 @@ O bônus se aplica a CA (armaduras/escudos/acessórios defensivos) ou a dano/tes
 
 ---
 
-# 74. MONSTROS E BOSSES — ESTRUTURA DE STAT BLOCK
+# 73. MONSTROS E BOSSES — ESTRUTURA DE STAT BLOCK
 
 O antigo sistema de "golpes para derrotar" (contagem de sucessos) e Condições-como-dano é substituído por **PV numérico + CA + ações**, no molde padrão de D&D.
 
@@ -2279,11 +2521,11 @@ Ações Lendárias / Fases (só Chefes)
 | Elite | 70 + 10×andar | 15 + andar/3 | +5 + andar/4 | 14 + andar/4 |
 | Chefe | 150 + 15×andar (ou 4 fases de ~1/4 desse total) | 16 + andar/3 | +6 + andar/4 | 15 + andar/4 |
 
-`atributo_fraqueza` continua existindo: um ataque que usa o atributo de fraqueza do monstro causa **+1d6 de dano extra** (substitui o antigo bônus fixo de teste). Só pode ser FOR/DES/INT/SAB (Seção 66).
+`atributo_fraqueza` continua existindo: um ataque que usa o atributo de fraqueza do monstro causa **+1d6 de dano extra** (substitui o antigo bônus fixo de teste). Só pode ser FOR/DES/INT/SAB (Seção 65).
 
 ---
 
-# 75. AÇÕES DE EQUIPE (OSS — OUTSIDE SYSTEM SKILLS)
+# 74. AÇÕES DE EQUIPE (OSS — OUTSIDE SYSTEM SKILLS)
 
 Termos canônicos do próprio anime, adaptados como ações de bônus disponíveis a qualquer personagem (não dependem de arma nem profissão):
 
@@ -2300,7 +2542,7 @@ Usar um Cristal de cura ou antídoto em si mesmo custa uma ação bônus; usar e
 
 ---
 
-# 76. CORES DE CURSOR E PLAYER KILLERS
+# 75. CORES DE CURSOR E PLAYER KILLERS
 
 Sistema canônico de Aincrad, usado tanto em cena quanto como mecânica de PvP:
 
@@ -2315,20 +2557,20 @@ Um jogador que vira **Laranja** (Player Killer) não pode entrar em zonas segura
 
 ---
 
-# 77. ECONOMIA DE USO DAS SWORD SKILLS
+# 76. ECONOMIA DE USO DAS SWORD SKILLS
 
-Fica registrado aqui, de forma explícita, como as Sword Skills descritas nas Seções 55-59 se encaixam na estrutura de ação de D&D:
+Fica registrado aqui, de forma explícita, como as Sword Skills descritas nas Seções 55-58 se encaixam na estrutura de ação de D&D:
 
 - A maioria das Sword Skills **substitui o Golpe Básico dentro da própria ação de Ataque** — não gasta recurso à parte, não tem limite diário. É a mesma ação, só que com a Skill em vez do dano padrão da arma.
 - Skills marcadas **"Reação"** seguem a regra padrão de D&D (1 por rodada, fora do seu turno).
-- Skills marcadas **"1/Descanso Curto"** ou **"1/Descanso Longo"** (todo Limit Break é 1/Descanso Longo) recarregam conforme a Seção 72.
+- Skills marcadas **"1/Descanso Curto"** ou **"1/Descanso Longo"** (todo Limit Break é 1/Descanso Longo) recarregam conforme a Seção 71.
 - Um personagem só pode usar **uma Sword Skill por turno** (a menos que uma Skill diga explicitamente o contrário) — não empilha duas Skills de ataque na mesma ação.
 
 Flavor de mesa (opcional, não obrigatório mecanicamente): o momento antes de uma Sword Skill é o **Pré-Movimento** (o corpo "trava" no gesto de abertura, reconhecível por quem já viu a Skill antes) e o momento logo depois é o **Pós-Movimento** (breve janela de vulnerabilidade — o Mestre pode narrar isso mesmo sem penalidade mecânica extra, já que Skills mais fortes já vêm com seu próprio custo/risco embutido na descrição).
 
 ---
 
-# 78. ANDARES CONHECIDOS DE AINCRAD (REFERÊNCIA CANÔNICA)
+# 77. ANDARES CONHECIDOS DE AINCRAD (REFERÊNCIA CANÔNICA)
 
 Lista de referência pra manter os andares futuros ancorados no anime/light novel (não inventar nome de cidade onde o cânone já definiu um). Cruzar sempre com `docs/fontes.md` (SAO Fandom Wiki) antes de nomear um andar novo.
 
@@ -2353,9 +2595,9 @@ A campanha atual está desenvolvendo os andares 1 e 2 (`docs/historia_campanha.m
 
 ---
 
-# 79. RESUMO — SAO RPG 5e COMO SISTEMA FECHADO
+# 78. RESUMO — SAO RPG 5e COMO SISTEMA FECHADO
 
-Com as Seções 66-78, o `SAO_RPG_5e.md` deixa de ser só "armas + profissões" e passa a cobrir o núcleo inteiro de regra necessário pra jogar: atributos, perícias, resistências, PV/CA/iniciativa, condições, XP/nível, descanso, equipamentos/cristais, stat block de monstro/boss, ações de equipe, cursor/Player Killer e economia de uso das Sword Skills — tudo compatível com d20 + modificador + proficiência.
+Com as Seções 65-77, o `SAO_RPG_5e.md` deixa de ser só "armas + profissões" e passa a cobrir o núcleo inteiro de regra necessário pra jogar: atributos, perícias, resistências, PV/CA/iniciativa, condições, XP/nível, descanso, equipamentos/cristais, stat block de monstro/boss, ações de equipe, cursor/Player Killer e economia de uso das Sword Skills — tudo compatível com d20 + modificador + proficiência.
 
 Este documento passa a ser a **fonte única de regra do sistema**, substituindo `docs/guia_sistema_aincrad.md` e `docs/regras_nucleares_campanha.md` (que ficam como redirect histórico — ver Seção 2 desses arquivos).
 
