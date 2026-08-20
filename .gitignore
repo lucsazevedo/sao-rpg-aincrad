@@ -17,3 +17,4 @@ Thumbs.db
 scripts/app/node_modules/
 scripts/app/dist/
 .mcp.json
+scripts/db/backups/*.sql
