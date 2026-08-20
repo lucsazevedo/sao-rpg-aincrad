@@ -2357,7 +2357,7 @@ Sword Skills nos níveis:
 ### PROFISSÃO
 Habilidades de profissão nos níveis:
 
-**3, 7, 11, 15 e 19.**
+**1, 5, 10, 15 e 20** (Seção 21 — mesmos níveis usados pelas 15 profissões, Seções 30-44).
 
 ### PERSONAGEM
 Aumentos de atributo nos níveis:
