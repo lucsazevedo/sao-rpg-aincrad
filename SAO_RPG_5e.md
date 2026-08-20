@@ -1500,6 +1500,30 @@ Forma Suprema que transforma o usuário em um verdadeiro ponto de defesa do grup
 
 A arma recompensa sequência de ataques e manutenção de combos.
 
+### Corte Ascendente
+Ataque corpo a corpo usando Força. Causa **1d8 + FOR** e marca o início de um combo: o próximo ataque contra o mesmo alvo ganha +2 no dano.
+
+### Corte Duplo
+Dois ataques em sequência contra o mesmo alvo, cada um causando **1d6 + FOR**. Continua o combo se o Corte Ascendente foi usado antes.
+
+### Combo Ascendente
+Só pode ser usado depois de acertar 2 ataques seguidos no mesmo alvo (combo ativo). Causa **2d8 + FOR** e reinicia a contagem de combo em 1 (não zera, mantém o ritmo).
+
+### Tempestade de Lâminas — Limit Break
+Reação ou ação, 1/Descanso Longo. Uma sequência de 4 golpes contra um único alvo, cada um causando **1d10 + FOR**; se todos acertarem, um 5º golpe automático causa dano máximo.
+
+### Quebra-Guarda
+Ataque que ignora bônus de CA de escudo/postura defensiva do alvo neste golpe.
+
+### Lâmina Implacável
+Enquanto o combo estiver ativo (2+ acertos seguidos), os ataques da Espada Longa ganham +1d6 de dano extra.
+
+### Corte Devastador
+Golpe único de alto impacto: causa **3d8 + FOR**, mas encerra o combo ativo.
+
+### Lâmina Suprema
+Forma máxima de combo: cada acerto consecutivo nesta cena aumenta o dano do próximo em +1 (sem teto), até o combo ser quebrado por um erro.
+
 ---
 
 ## 56.4 Rapieira
@@ -1519,6 +1543,30 @@ A arma recompensa sequência de ataques e manutenção de combos.
 | 18 | Lâmina do Mestre |
 
 A Rapieira recompensa leitura do inimigo, criação de aberturas e contra-ataques.
+
+### Estocada Precisa
+Ataque corpo a corpo usando Destreza. Causa **1d8 + DES**; se o usuário não se moveu neste turno antes do ataque, causa +1d6.
+
+### Finta Rápida
+Ataque de baixo dano (**1d4 + DES**) que obriga o alvo a um teste de Sabedoria; falha: o próximo ataque do usuário contra ele tem vantagem.
+
+### Passo do Duelista
+Move-se até a velocidade sem provocar Ataques de Oportunidade e faz um ataque ao final do movimento.
+
+### Dança do Duelista — Limit Break
+1/Descanso Longo. Uma sequência de 3 estocadas contra até 3 alvos diferentes a até 10 ft entre si, cada uma causando **2d6 + DES**.
+
+### Ripostar
+Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um ataque de Destreza completo em resposta.
+
+### Ponto Fraco
+Ataque que, em caso de acerto, marca o alvo por 1 minuto — próximos ataques do usuário contra ele têm +1d6.
+
+### Estocada Perfeita
+Contra um alvo com Sabedoria enganada por Finta Rápida neste combate, este ataque é automaticamente um acerto crítico.
+
+### Lâmina do Mestre
+Forma suprema do duelista: uma vez por turno, um ataque que erraria vira automaticamente um acerto (rolagem tratada como 10).
 
 ---
 
@@ -1540,6 +1588,30 @@ A Rapieira recompensa leitura do inimigo, criação de aberturas e contra-ataque
 
 A Katana recompensa preparação, concentração e espera pela abertura correta.
 
+### Corte Concentrado
+Ação de concentração (não ataca neste turno); no início do próximo turno, um ataque automático causa **2d8 + SAB**. Se o usuário for atingido enquanto concentra, o efeito é cancelado.
+
+### Saque Rápido
+Ataque imediato usando Sabedoria, sem preparação. Causa **1d8 + SAB**; só pode ser usado no primeiro turno de um combate ou depois de embainhar a katana (ação).
+
+### Postura do Lobo
+Postura defensiva-ofensiva por 1 minuto: +1 CA, e o próximo ataque certeiro do usuário causa +1d6.
+
+### Iaijutsu Supremo — Limit Break
+1/Descanso Longo, funciona como Saque Rápido turbinado: ataque imediato que causa **4d8 + SAB**, crítico automático se o alvo ainda não agiu neste combate.
+
+### Corte de Retaliação
+Reação quando um inimigo erra um ataque contra o usuário em Postura do Lobo: um ataque de Sabedoria completo em resposta.
+
+### Foco Absoluto
+Enquanto parado (sem se mover no turno), os ataques da Katana ganham +2 no teste de ataque.
+
+### Corte Lunar
+Ataque que ignora resistência a dano cortante do alvo.
+
+### Lâmina do Vazio
+Forma suprema: Corte Concentrado deixa de exigir 1 turno de preparação — pode ser usado como ataque normal, mantendo o dano de 2d8+SAB.
+
 ---
 
 ## 56.6 Manopla
@@ -1560,6 +1632,30 @@ A Katana recompensa preparação, concentração e espera pela abertura correta.
 
 A Manopla recompensa permanecer próxima e manter uma sequência ofensiva.
 
+### Soco Demolidor
+Ataque corpo a corpo usando Força. Causa **1d8 + FOR**.
+
+### Rajada de Golpes
+Três socos rápidos contra o mesmo alvo, cada um causando **1d4 + FOR**; acertar os três dá +1 de dano em todos os ataques da Manopla até o fim do turno seguinte (empilha, sem teto declarado).
+
+### Passo Agressivo
+Move-se até 15 ft na direção de um inimigo sem provocar Ataques de Oportunidade e ataca ao chegar.
+
+### Punhos do Berserker — Limit Break
+1/Descanso Longo. Uma rajada de 5 golpes contra o mesmo alvo, cada um causando **1d8 + FOR**; cada acerto consecutivo adiciona +1 no próximo (1º normal, 2º +1, 3º +2...).
+
+### Contra-Golpe
+Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um soco de Força completo em resposta.
+
+### Fúria Crescente
+Cada acerto seguido nesta cena (sem errar) aumenta o dano dos ataques da Manopla em +1, até um máximo de +5; um erro zera o contador.
+
+### Impacto Brutal
+Ataque que, em caso de acerto, obriga o alvo a um teste de Constituição; falha: fica **Atordoado** até o fim do próximo turno dele.
+
+### Punho Supremo
+Forma máxima de pressão: enquanto Fúria Crescente estiver no máximo (+5), os ataques da Manopla ignoram resistência a dano contundente.
+
 ---
 
 ## 56.7 Leque
@@ -1579,6 +1675,30 @@ A Manopla recompensa permanecer próxima e manter uma sequência ofensiva.
 | 18 | Festival das Cem Lâminas |
 
 A arma recompensa movimentação constante, posicionamento e ataques fluidos.
+
+### Corte de Seda
+Ataque corpo a corpo usando Destreza. Causa **1d6 + DES** e permite mover-se 5 ft (antes ou depois) sem provocar Ataque de Oportunidade.
+
+### Dança do Leque
+Ataque que combina movimento de até 10 ft com um golpe ao longo do trajeto, atingindo um inimigo em qualquer ponto do caminho.
+
+### Rajada Cortante
+Ataque em leque contra até 2 inimigos adjacentes entre si, cada um sofrendo **1d6 + DES**.
+
+### Mil Lâminas de Vento — Limit Break
+1/Descanso Longo. O usuário se move até a velocidade em linha reta atacando todos os inimigos no caminho, cada um sofrendo **2d6 + DES**.
+
+### Vento Reverso
+Reação: quando um inimigo se move pra perto do usuário, pode se reposicionar 10 ft mantendo distância e atacar de relance (metade do dano normal).
+
+### Dança das Correntes
+Cada movimento de pelo menos 10 ft antes de um ataque do Leque nesta cena concede +1 no teste de ataque (acumula até +3).
+
+### Lâmina Tempestuosa
+A Rajada Cortante passa a atingir até 4 inimigos em vez de 2.
+
+### Festival das Cem Lâminas
+Forma suprema de fluxo: o usuário pode se mover entre cada ataque de uma ação com múltiplos ataques, sem gastar deslocamento extra.
 
 ---
 
@@ -1602,6 +1722,30 @@ A arma recompensa movimentação constante, posicionamento e ataques fluidos.
 
 O Bastão é o principal suporte de cura, proteção e recuperação.
 
+### Golpe Arcano
+Ataque corpo a corpo usando Inteligência. Causa **1d6 + INT**.
+
+### Pulso Revigorante
+Ação, alcance 30 ft: um aliado recupera PV igual a **1d8 + INT**.
+
+### Barreira Mística
+Um aliado a até 30 ft ganha +2 de CA por 1 minuto ou até sofrer dano.
+
+### Grande Restauração — Limit Break
+1/Descanso Longo, alcance 30 ft. Até 3 aliados recuperam PV igual a **3d8 + INT** cada, e um deles tem uma condição (à escolha do usuário) removida.
+
+### Bastão Protetor
+Reação: quando um aliado a até 30 ft sofre dano, reduz esse dano em **1d6 + INT**.
+
+### Campo de Energia
+Cria uma área de 15 ft de raio por 1 minuto; aliados que terminam o turno ali recuperam **1d4** de PV.
+
+### Explosão Arcana
+Ataque de área de 10 ft de raio (alcance 30 ft) que causa **2d6 + INT** a inimigos na área.
+
+### Milagre do Guardião
+Forma suprema de suporte: 1/Descanso Longo (recarrega junto com o Limit Break), quando um aliado a até 30 ft seria reduzido a 0 PV, o usuário pode gastar a reação pra estabilizá-lo com metade do PV máximo em vez de cair.
+
 ---
 
 ## 57.2 Chicote
@@ -1622,6 +1766,30 @@ O Bastão é o principal suporte de cura, proteção e recuperação.
 
 O Chicote controla distância, puxa e empurra inimigos e pode reposicionar aliados.
 
+### Golpe Enlaçante
+Ataque à distância (alcance 15 ft) usando Inteligência. Causa **1d6 + INT** e puxa o alvo 5 ft na direção do usuário.
+
+### Laço Protetor
+Ação: puxa um aliado a até 15 ft pra até 5 ft do usuário, tirando-o de uma área perigosa sem provocar Ataque de Oportunidade.
+
+### Puxão Violento
+Ataque que, em caso de acerto, obriga o alvo a um teste de Força; falha: é puxado 15 ft e fica **Caído**.
+
+### Dança do Carrasco — Limit Break
+1/Descanso Longo. Prende até 2 inimigos a até 20 ft do usuário e os puxa 10 ft cada, causando **2d6 + INT** a cada um.
+
+### Chicote de Retaliação
+Reação quando um inimigo a até 15 ft se move: um ataque de Inteligência automático contra ele.
+
+### Corrente de Comando
+Um aliado a até 15 ft pode se reposicionar 10 ft como reação, guiado pelo chicote, sem provocar Ataque de Oportunidade.
+
+### Domínio do Chicote
+O alcance de todas as Sword Skills do Chicote aumenta em 10 ft.
+
+### Prisão Absoluta
+Forma suprema de controle: um inimigo puxado pelo Chicote nesta cena fica **Restringido** até se soltar (teste de Força/Acrobacia), em vez de só ser puxado.
+
 ---
 
 ## 57.3 Besta
@@ -1641,6 +1809,30 @@ O Chicote controla distância, puxa e empurra inimigos e pode reposicionar aliad
 | 18 | Execução Perfeita |
 
 A Besta marca alvos, auxilia aliados e mantém pressão à distância.
+
+### Disparo Preciso
+Ataque à distância (alcance 80/320 ft) usando Destreza. Causa **1d8 + DES**.
+
+### Marcar Alvo
+Ataque de dano reduzido (**1d4 + DES**) que marca o alvo por 1 minuto: aliados têm vantagem em ataques contra ele.
+
+### Disparo de Cobertura
+Reação: quando um aliado a até 30 ft é atacado, dispara contra o atacante, causando **1d6 + DES** e concedendo meia cobertura ao aliado contra esse ataque.
+
+### Chuva de Virolas — Limit Break
+1/Descanso Longo. Dispara contra todos os inimigos num raio de 20 ft (alcance 80 ft), cada um sofrendo **2d6 + DES**.
+
+### Tiro de Intervenção
+Reação: quando um inimigo marcado tenta fugir ou se aproximar de um aliado, um disparo automático o intercepta, causando **1d8 + DES**.
+
+### Marca do Caçador
+Contra um alvo marcado, os ataques da Besta ganham +1d6 de dano extra.
+
+### Virola Perfurante
+Ataque que atravessa o primeiro alvo e atinge um segundo em linha, cada um sofrendo dano completo.
+
+### Execução Perfeita
+Forma suprema de precisão: contra um alvo marcado com menos de metade do PV máximo, este ataque é automaticamente um acerto crítico.
 
 ---
 
