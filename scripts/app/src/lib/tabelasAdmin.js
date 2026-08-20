@@ -31,7 +31,8 @@
 
 // ===== vocabulários compartilhados (revisão 10/08 — usabilidade dos CRUDs) =====
 const ATRIBUTOS = ["Corpo", "Reflexo", "Técnica", "Conhecimento", "Espírito"];
-const ATRIBUTOS_ABREV = ["COR", "REF", "TEC", "CON", "ESP"];
+const ATRIBUTOS_ABREV = ["COR", "REF", "TEC", "CON", "ESP"]; // histórico PBTA — não usar em campo novo
+const ATRIBUTOS_DND = ["Força", "Destreza", "Constituição", "Inteligência", "Sabedoria", "Carisma"];
 const RARIDADE_5 = ["Comum", "Incomum", "Raro", "Épico", "Lendário"];
 const RARIDADE_4 = ["Comum", "Incomum", "Raro", "Épico"];
 const RARIDADE_5_MIN = ["comum", "incomum", "raro", "epico", "lendario"];
@@ -201,42 +202,43 @@ export const TABELAS_ADMIN = {
   },
   moves_arma: {
     pk: "nome",
-    rotulo: "Golpes de Arma",
+    rotulo: "Sword Skills de Arma",
     icone: "🗡️",
-    // 13 armas (Chakrams, Escudo e Espada, Espada Longa, Foice, Katana,
-    // Lança, Machado, Martelo, Rapieira, Bastão, Clava, Corrente com Peso,
-    // Leque) seguem hoje o SAO_PBTA_Armas_e_Moves_Atualizado.pdf: 3 golpes
-    // por arma, o 3º sempre Limit Break (+2 no acerto). Mapeamento pro
-    // schema (herdado de duas rodadas de design diferentes — ver
-    // dolist/02_ataques_limit_breaker.md): move_a = Move 1, golpe_2 =
-    // Move 2, limit_breaker = Move 3/LIMIT BREAK. move_b e golpe_3 ficam
-    // null nessas 13 (o PDF não usa 5 golpes, só 3) — só existem ainda
-    // preenchidos nas outras 10 armas (rascunho antigo, não revisado).
-    // Forma de cada JSON: {nome, atributo, gatilho, dez_mais:[...5],
-    // sete_nove:[...5], seis_menos:[...5], bonus_acerto?:"+2"}.
+    // Conversão pra D&D 5e: sword_skills (array de {nivel,nome,descricao},
+    // as 7 Sword Skills normais) + limit_break_novo ({nivel,nome,descricao})
+    // são as colunas vivas agora — conteúdo real das Seções 55-59 do
+    // SAO_RPG_5e.md, populado por scripts/db/_popular_moves_dnd5e.py.
+    // move_a/move_b/golpe_2/golpe_3/limit_breaker (formato PBTA antigo:
+    // gatilho + dez_mais/sete_nove/seis_menos) ficam só de histórico.
     campos: [
       { nome: "nome", tipo: "select", opcoes: ARMAS_TIPOS, rotulo: "Arma (precisa bater com armas.tipo)" },
-      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS_ABREV },
-      { nome: "marca", tipo: "textarea" },
-      { nome: "move_a", tipo: "json", rotulo: "Move 1" },
-      { nome: "golpe_2", tipo: "json", rotulo: "Move 2" },
-      { nome: "limit_breaker", tipo: "json", rotulo: "Move 3 · LIMIT BREAK (+2)" },
-      { nome: "move_b", tipo: "json", rotulo: "Move B (rascunho antigo, não usado nas 13 armas do PDF)" },
-      { nome: "golpe_3", tipo: "json", rotulo: "Golpe 3 (rascunho antigo, não usado nas 13 armas do PDF)" },
+      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS_DND },
+      { nome: "marca", tipo: "textarea", rotulo: "Identidade da arma" },
+      { nome: "sword_skills", tipo: "json", rotulo: "7 Sword Skills (array {nivel,nome,descricao})" },
+      { nome: "limit_break_novo", tipo: "json", rotulo: "Limit Break — nível 5 ({nivel,nome,descricao})" },
+      { nome: "move_a", tipo: "json", rotulo: "Move 1 (histórico PBTA)" },
+      { nome: "golpe_2", tipo: "json", rotulo: "Move 2 (histórico PBTA)" },
+      { nome: "limit_breaker", tipo: "json", rotulo: "Move 3 · LIMIT BREAK (histórico PBTA)" },
+      { nome: "move_b", tipo: "json", rotulo: "Move B (histórico PBTA)" },
+      { nome: "golpe_3", tipo: "json", rotulo: "Golpe 3 (histórico PBTA)" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
   moves_profissao: {
     pk: "nome",
-    rotulo: "Golpes de Profissão",
+    rotulo: "Habilidades de Profissão",
     icone: "🛠️",
+    // niveis: array de {nivel,nome,descricao} nos níveis 1/5/10/15/20
+    // (Seções 30-44 do SAO_RPG_5e.md) — coluna viva. move_a/move_b/move_c
+    // (PBTA) ficam de histórico.
     campos: [
       { nome: "nome", tipo: "select", opcoes: PROFISSOES },
-      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS_ABREV },
-      { nome: "marca", tipo: "textarea" },
-      { nome: "move_a", tipo: "json" },
-      { nome: "move_b", tipo: "json" },
-      { nome: "move_c", tipo: "json" },
+      { nome: "atributo", tipo: "select", opcoes: ATRIBUTOS_DND },
+      { nome: "marca", tipo: "textarea", rotulo: "Identidade da profissão" },
+      { nome: "niveis", tipo: "json", rotulo: "Habilidades por nível (array {nivel,nome,descricao})" },
+      { nome: "move_a", tipo: "json", rotulo: "Move A (histórico PBTA)" },
+      { nome: "move_b", tipo: "json", rotulo: "Move B (histórico PBTA)" },
+      { nome: "move_c", tipo: "json", rotulo: "Move C (histórico PBTA)" },
       { nome: "visivel", tipo: "bool" },
     ],
   },
