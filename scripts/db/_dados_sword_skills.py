@@ -1,9 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Dados estruturados das 19 armas / 152 Sword Skills (7+Limit Break cada),
-espelhando o conteudo de SAO_RPG_5e.md Secoes 55-58. Fonte unica usada tanto
-pela geracao do markdown quanto pela populacao do banco (moves_arma) --
-editar aqui e regenerar os dois em vez de editar cada um separado."""
+"""DEPRECIADO desde <data desta sessao>: _popular_moves_dnd5e.py agora le as
+armas direto do SAO_RPG_5e.md via extrair_armas() (em
+_extrair_sword_skills_e_profissoes.py), igual ja acontecia com profissoes.
+Isso elimina o problema de manter duas fontes sincronizadas manualmente --
+editar o .md passou a ser suficiente, sem precisar espelhar aqui.
+
+Este arquivo fica soterrado como referencia historica (snapshot das 19
+armas / 152 Sword Skills numa data anterior), mas NAO e mais lido por
+nenhum script. Nao editar pra tentar sincronizar -- editar o .md."""
 
 ARMAS = []
 
@@ -33,7 +38,7 @@ ARMAS.append(dict(nome="Martelo", cat="Tank", attr="Força", dano="contundente",
         dict(nivel=6, nome="Postura Inabalável", lb=False, corpo="Vantagem em testes de resistência contra ser empurrado ou derrubado; resistência a movimentação forçada comum enquanto a postura estiver ativa."),
         dict(nivel=10, nome="Quebra-Couraça", lb=False, corpo="Ataque corpo a corpo. Causa **2d10 + FOR** e reduz a CA do alvo em 2 até o fim da cena (não acumula com usos repetidos)."),
         dict(nivel=14, nome="Contra-Impacto", lb=False, corpo="Reação quando o usuário sofre dano corpo a corpo: reduz o dano em **2d8 + FOR** e, se isso zerar o dano, empurra o atacante 10 ft."),
-        dict(nivel=18, nome="Colosso", lb=False, corpo="1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano contundente, +2 CA, e todo ataque corpo a corpo do usuário nesse período força teste de Constituição do alvo (falha: Caído)."),
+        dict(nivel=18, nome="Colosso", lb=False, corpo="1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano contundente, +2 CA, e todo ataque corpo a corpo do usuário nesse período força teste de Constituição do alvo com desvantagem (falha: Caído)."),
     ]))
 
 ARMAS.append(dict(nome="Pá", cat="Tank", attr="Força", dano="contundente",
@@ -46,8 +51,8 @@ ARMAS.append(dict(nome="Pá", cat="Tank", attr="Força", dano="contundente",
         dict(nivel=5, nome="Muralha de Terra", lb=True, corpo="1/Descanso Longo. Cria uma barreira de 10 ft de comprimento e 5 ft de altura, alcance 15 ft. Aliados atrás dela recebem meia cobertura; ataques que a atravessam têm desvantagem."),
         dict(nivel=6, nome="Quebra-Postura", lb=False, corpo="Ataque corpo a corpo. Causa **2d8 + FOR** e o alvo faz teste de Força; falha: **Caído** e deslocamento reduzido pela metade até o fim do turno seguinte."),
         dict(nivel=10, nome="Parede Viva", lb=False, corpo="+2 CA e cria terreno difícil num raio de 10 ft ao redor do usuário por 1 minuto. Inimigos que tentam sair da área têm o deslocamento reduzido a 0 nessa tentativa."),
-        dict(nivel=14, nome="Contra-Escavação", lb=False, corpo="Reação quando o usuário sofre dano: reduz o dano em **2d6 + FOR** e pode se reposicionar 5 ft."),
-        dict(nivel=18, nome="Fortaleza do Escavador", lb=False, corpo="1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano físico, imunidade a movimentação forçada comum, terreno difícil num raio de 15 ft e meia cobertura pra aliados dentro dele."),
+        dict(nivel=14, nome="Contra-Escavação", lb=False, corpo="Reação quando o usuário sofre dano: reduz o dano em **2d8 + FOR** e pode se reposicionar 5 ft."),
+        dict(nivel=18, nome="Fortaleza do Escavador", lb=False, corpo="1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano físico, imunidade a movimentação forçada comum, terreno difícil num raio de 15 ft e meia cobertura pra aliados dentro dele. Inimigos que terminam o turno dentro da área sofrem 1d6 de dano contundente."),
     ]))
 
 ARMAS.append(dict(nome="Lança", cat="Tank", attr="Destreza", dano="perfurante",
@@ -104,7 +109,7 @@ ARMAS.append(dict(nome="Rapieira", cat="DPS", attr="Destreza", dano="perfurante"
         dict(nivel=6, nome="Ripostar", lb=False, corpo="Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um ataque de Destreza completo em resposta."),
         dict(nivel=10, nome="Ponto Fraco", lb=False, corpo="Ataque que, em caso de acerto, marca o alvo por 1 minuto — próximos ataques do usuário contra ele causam +1d6."),
         dict(nivel=14, nome="Estocada Perfeita", lb=False, corpo="Contra um alvo enganado por Finta Rápida neste combate, este ataque é automaticamente um acerto crítico."),
-        dict(nivel=18, nome="Lâmina do Mestre", lb=False, corpo="1/Descanso Longo. Por 1 minuto, uma vez por turno um ataque que erraria vira automaticamente um acerto (rolagem tratada como natural 10)."),
+        dict(nivel=18, nome="Lâmina do Mestre", lb=False, corpo="1/Descanso Longo. Por 1 minuto, uma vez por turno um ataque que erraria vira automaticamente um acerto (rolagem tratada como natural 10) e causa +1d6 de dano extra."),
     ]))
 
 ARMAS.append(dict(nome="Katana", cat="DPS", attr="Sabedoria", dano="cortante",
@@ -132,7 +137,7 @@ ARMAS.append(dict(nome="Manopla", cat="DPS", attr="Força", dano="contundente",
         dict(nivel=6, nome="Contra-Golpe", lb=False, corpo="Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um soco de Força completo em resposta."),
         dict(nivel=10, nome="Fúria Crescente", lb=False, corpo="Cada acerto seguido nesta cena (sem errar) aumenta o dano dos ataques da Manopla em +1, até um máximo de +5; um erro zera o contador."),
         dict(nivel=14, nome="Impacto Brutal", lb=False, corpo="Ataque que causa **2d8 + FOR** e obriga o alvo a um teste de Constituição; falha: fica **Atordoado** até o fim do próximo turno dele."),
-        dict(nivel=18, nome="Punho Supremo", lb=False, corpo="1/Descanso Longo. Enquanto Fúria Crescente estiver no máximo (+5), os ataques da Manopla ignoram resistência a dano contundente, por 1 minuto."),
+        dict(nivel=18, nome="Punho Supremo", lb=False, corpo="1/Descanso Longo. Enquanto Fúria Crescente estiver no máximo (+5), os ataques da Manopla ignoram resistência a dano contundente e causam +1d6 extra contra alvos Atordoados, por 1 minuto."),
     ]))
 
 # ============================== AoE ==============================
@@ -147,7 +152,7 @@ ARMAS.append(dict(nome="Bastão", cat="AoE", attr="Sabedoria", dano="contundente
         dict(nivel=6, nome="Guarda Circular", lb=False, corpo="Reação: quando dois ou mais inimigos adjacentes atacam o usuário no mesmo turno, um giro de bastão contra-ataca todos eles, causando **1d6 + SAB** a cada um."),
         dict(nivel=10, nome="Campo de Impacto", lb=False, corpo="Cria uma área de 15 ft de raio por 1 minuto onde o chão treme. Inimigos que entram ou terminam o turno ali sofrem **1d6** de dano contundente e fazem teste de Força ou ficam **Caídos**."),
         dict(nivel=14, nome="Onda de Choque", lb=False, corpo="Ataque em linha de 15 ft de comprimento e 5 ft de largura. Todos na linha sofrem **2d6 + SAB** e são empurrados 10 ft na direção do golpe."),
-        dict(nivel=18, nome="Guardião Imóvel", lb=False, corpo="1/Descanso Longo. Por 1 minuto, o usuário e aliados a até 10 ft ganham +2 de CA e resistência a dano de efeitos de área."),
+        dict(nivel=18, nome="Guardião Imóvel", lb=False, corpo="1/Descanso Longo. Por 1 minuto, o usuário e aliados a até 10 ft ganham +2 de CA e resistência a dano de efeitos de área. Inimigos que terminarem o turno a até 10 ft do usuário sofrem 1d6 de dano contundente."),
     ]))
 
 ARMAS.append(dict(nome="Chicote", cat="AoE", attr="Inteligência", dano="cortante",
@@ -157,11 +162,11 @@ ARMAS.append(dict(nome="Chicote", cat="AoE", attr="Inteligência", dano="cortant
         dict(nivel=1, nome="Golpe Enlaçante", lb=False, corpo="Ataque à distância (alcance 15 ft) usando Inteligência. Causa **1d6 + INT** e puxa o alvo 5 ft na direção do usuário."),
         dict(nivel=1, nome="Laço Protetor", lb=False, corpo="Puxa um aliado a até 15 ft pra até 5 ft do usuário, tirando-o de uma área perigosa sem provocar Ataque de Oportunidade."),
         dict(nivel=2, nome="Puxão Violento", lb=False, corpo="Ataque que causa **1d8 + INT** e obriga o alvo a um teste de Força; falha: é puxado 15 ft e fica **Caído**."),
-        dict(nivel=5, nome="Dança do Carrasco", lb=True, corpo="1/Descanso Longo. Prende até 2 inimigos a até 20 ft do usuário e os puxa 10 ft cada, causando **2d6 + INT** a cada um."),
+        dict(nivel=5, nome="Dança do Carrasco", lb=True, corpo="1/Descanso Longo. Prende até 3 inimigos a até 20 ft do usuário e os puxa 10 ft cada, causando **2d8 + INT** a cada um."),
         dict(nivel=6, nome="Chicote de Retaliação", lb=False, corpo="Reação quando um inimigo a até 15 ft se move: um ataque de Inteligência automático contra ele, causando **1d6 + INT**."),
         dict(nivel=10, nome="Corrente de Comando", lb=False, corpo="Reação: um aliado a até 15 ft pode se reposicionar 10 ft guiado pelo chicote, sem provocar Ataque de Oportunidade."),
         dict(nivel=14, nome="Domínio do Chicote", lb=False, corpo="O alcance de todas as Sword Skills do Chicote aumenta em 10 ft."),
-        dict(nivel=18, nome="Prisão Absoluta", lb=False, corpo="1/Descanso Longo. Por 1 minuto, um inimigo puxado pelo Chicote fica **Restringido** até se soltar (teste de Força/Acrobacia), em vez de só ser puxado."),
+        dict(nivel=18, nome="Prisão Absoluta", lb=False, corpo="1/Descanso Longo. Por 1 minuto, um inimigo puxado pelo Chicote fica **Restringido** até se soltar (teste de Força/Acrobacia), em vez de só ser puxado. Toda vez que ele falhar nesse teste, sofre 1d6 de dano cortante."),
     ]))
 
 ARMAS.append(dict(nome="Chakram", cat="AoE", attr="Destreza", dano="cortante",
@@ -213,7 +218,7 @@ ARMAS.append(dict(nome="Corrente com Peso", cat="AoE", attr="Destreza", dano="co
         dict(nivel=1, nome="Lançar Corrente", lb=False, corpo="Ataque à distância (alcance 15/30 ft) usando Destreza. Causa **1d6 + DES**. Em vez de recuar após o golpe, o usuário pode puxar o alvo 5 ft na sua direção."),
         dict(nivel=1, nome="Amarra de Ferro", lb=False, corpo="Ataque que causa **1d6 + DES** e força o alvo a um teste de resistência de Força; falha: fica **Restringido** até usar a ação para se soltar (teste de Força/Acrobacia)."),
         dict(nivel=2, nome="Puxão Brutal", lb=False, corpo="Reação quando um inimigo a até 15 ft tenta se afastar do usuário. Puxa o alvo de volta 10 ft e reduz o deslocamento dele pela metade até o fim do turno seguinte."),
-        dict(nivel=5, nome="Grilhões de Aincrad", lb=True, corpo="Ação ou Reação, 1/Descanso Longo, alcance 30 ft. Prende um alvo com correntes que se materializam do chão: o alvo fica **Restringido** sem direito a teste de resistência inicial e sofre desvantagem no primeiro teste para se soltar. Enquanto restringido dessa forma, aliados do usuário têm vantagem em ataques corpo a corpo contra o alvo."),
+        dict(nivel=5, nome="Grilhões de Aincrad", lb=True, corpo="Ação ou Reação, 1/Descanso Longo, alcance 30 ft. Prende um alvo com correntes que se materializam do chão, causando **1d8 + DES** de dano contundente no impacto: o alvo fica **Restringido** sem direito a teste de resistência inicial e sofre desvantagem no primeiro teste para se soltar. Enquanto restringido dessa forma, aliados do usuário têm vantagem em ataques corpo a corpo contra o alvo."),
         dict(nivel=6, nome="Corrente Serpenteante", lb=False, corpo="A corrente atinge e enreda dois alvos diferentes no mesmo ataque (golpe principal + golpe secundário de dano reduzido), cada um com seu próprio teste de resistência."),
         dict(nivel=10, nome="Prisão de Elos", lb=False, corpo="Cria uma área de 10 ft de raio onde a corrente serpenteia pelo chão; inimigos que entram ou terminam o turno ali fazem teste de Destreza ou ficam com o deslocamento reduzido a 5 ft até saírem da área."),
         dict(nivel=14, nome="Corrente Sangrenta", lb=False, corpo="Golpe pesado contra um alvo já Restringido pelo usuário: causa **2d8 + DES** e o alvo sofre uma condição extra (Caído ou Amedrontado, à escolha do usuário)."),
@@ -231,8 +236,8 @@ ARMAS.append(dict(nome="Adagas", cat="Scouts", attr="Destreza", dano="perfurante
         dict(nivel=5, nome="Dança das Lâminas", lb=True, corpo="1/Descanso Longo. Ataca até 3 inimigos diferentes a até 5 ft entre si, cada um sofrendo **1d8 + DES**."),
         dict(nivel=6, nome="Corte de Oportunidade", lb=False, corpo="Reação quando um inimigo sai do alcance corpo a corpo do usuário: um ataque extra, causando **1d6 + DES**."),
         dict(nivel=10, nome="Dança do Assassino", lb=False, corpo="Deslocamento +10 ft. Cada ataque bem-sucedido nesta cena concede +5 ft extra de deslocamento até o fim do turno."),
-        dict(nivel=14, nome="Mil Cortes", lb=False, corpo="Três ataques contra o mesmo alvo, cada um causando **1d4 + DES**."),
-        dict(nivel=18, nome="Passo Fantasma", lb=False, corpo="1/Descanso Longo. Por 1 minuto, Ataques de Oportunidade contra o usuário têm desvantagem."),
+        dict(nivel=14, nome="Mil Cortes", lb=False, corpo="Três ataques contra o mesmo alvo, cada um causando **1d6 + DES**."),
+        dict(nivel=18, nome="Passo Fantasma", lb=False, corpo="1/Descanso Longo. Por 1 minuto, Ataques de Oportunidade contra o usuário têm desvantagem, e o primeiro ataque do usuário contra um alvo que ainda não agiu neste combate causa +1d6 de dano."),
     ]))
 
 ARMAS.append(dict(nome="Besta", cat="Scouts", attr="Destreza", dano="perfurante",
@@ -277,6 +282,6 @@ ARMAS.append(dict(nome="Adagas de Arremesso", cat="Scouts", attr="Destreza", dan
         dict(nivel=6, nome="Adaga de Retorno", lb=False, corpo="Reação: quando um inimigo marcado se move, uma adaga extra o persegue automaticamente, causando **1d4 + DES**."),
         dict(nivel=10, nome="Campo de Lâminas", lb=False, corpo="Cria uma área de 15 ft de raio coberta de adagas fincadas por 1 minuto; inimigos que entram ou terminam o turno ali sofrem **1d6** de dano perfurante."),
         dict(nivel=14, nome="Chuva Perfurante", lb=False, corpo="A Rajada de Adagas passa de 3 pra 5 adagas, e cada uma que erra o primeiro alvo ricocheteia pra um segundo."),
-        dict(nivel=18, nome="Arsenal Fantasma", lb=False, corpo="1/Descanso Longo. Por 1 minuto, o usuário pode se teleportar até 30 ft pra qualquer ponto onde tenha uma adaga fincada (de Campo de Lâminas ou Adaga Imobilizante) como parte de um ataque, sem gastar deslocamento."),
+        dict(nivel=18, nome="Arsenal Fantasma", lb=False, corpo="1/Descanso Longo. Por 1 minuto, o usuário pode se teleportar até 30 ft pra qualquer ponto onde tenha uma adaga fincada (de Campo de Lâminas ou Adaga Imobilizante) como parte de um ataque, sem gastar deslocamento. Ao chegar, arranca a adaga do chão e a arremessa automaticamente contra um inimigo a até 10 ft, causando 1d6 + DES."),
     ]))
 

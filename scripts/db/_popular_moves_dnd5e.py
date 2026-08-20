@@ -17,10 +17,9 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from migrar_para_supabase import conectar  # noqa: E402
-from _extrair_sword_skills_e_profissoes import extrair_profissoes  # noqa: E402
-from _dados_sword_skills import ARMAS  # noqa: E402 -- fonte unica das 19 armas/152 skills
+from _extrair_sword_skills_e_profissoes import extrair_profissoes, extrair_armas  # noqa: E402
 
-# nome em _dados_sword_skills.py -> nome na coluna moves_arma.nome (banco)
+# nome no SAO_RPG_5e.md -> nome na coluna moves_arma.nome (banco)
 MAPA_NOME_ARMA = {
     "Espada + Escudo": "Escudo e Espada",
     "Chakram": "Chakrams",
@@ -40,28 +39,30 @@ def main():
     conn = conectar()
     cur = conn.cursor()
 
+    armas = extrair_armas()
     atualizados_armas = 0
-    for arma in ARMAS:
-        nome_md = arma["nome"]
+    for nome_md, arma in armas.items():
         nome_banco = MAPA_NOME_ARMA.get(nome_md, nome_md)
         skills_normais = [
-            {"nivel": s["nivel"], "nome": s["nome"], "descricao": s["corpo"]}
-            for s in arma["skills"] if not s["lb"]
+            {"nivel": s["nivel"], "nome": s["nome"], "descricao": s["descricao"]}
+            for s in arma["skills"]
         ]
-        lb = next((s for s in arma["skills"] if s["lb"]), None)
+        lb = arma["limit_break"]
         limit_break = json.dumps(
-            {"nivel": lb["nivel"], "nome": lb["nome"], "descricao": lb["corpo"]}, ensure_ascii=False
+            {"nivel": lb["nivel"], "nome": lb["nome"], "descricao": lb["descricao"]}, ensure_ascii=False
         ) if lb else None
         sword_skills = json.dumps(skills_normais, ensure_ascii=False)
         cur.execute(
             "update moves_arma set sword_skills = %s::jsonb, limit_break_novo = %s::jsonb, "
             "atributo = %s, marca = %s, updated_at = now() where nome = %s",
-            (sword_skills, limit_break, arma["attr"], arma["identidade"], nome_banco),
+            (sword_skills, limit_break, arma["atributo"], arma["identidade"], nome_banco),
         )
         if cur.rowcount == 0:
             print(f"AVISO: nenhuma linha em moves_arma pra '{nome_banco}' (de '{nome_md}')")
         else:
             atualizados_armas += cur.rowcount
+        if len(skills_normais) != 7 or not lb:
+            print(f"AVISO: '{nome_md}' tem {len(skills_normais)} skills normais (esperado 7) e LB={'ok' if lb else 'FALTANDO'}")
 
     profs = extrair_profissoes()
     atualizados_profs = 0

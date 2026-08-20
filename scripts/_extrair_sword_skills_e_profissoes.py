@@ -25,19 +25,16 @@ def ler_md():
 
 def extrair_armas():
     texto = ler_md()
-    # bloco geral: da Secao 55 ate a Secao 60 (RESUMO), que fecha a parte de armas
+    # bloco geral: da Secao 55 (Tank) ate a Secao 59 (RESUMO), que fecha a
+    # parte de armas. Desde a reestruturacao de categorias, a Corrente com
+    # Peso e' "## 57.6" normal dentro da Secao 57 (AoE) -- nao e' mais uma
+    # secao propria "# 59." como no modelo antigo.
     ini = texto.index("# 55. SWORD SKILLS")
-    fim = texto.index("# 60. RESUMO DAS SWORD SKILLS")
+    fim = texto.index("# 59. RESUMO DAS SWORD SKILLS")
     bloco = texto[ini:fim]
 
-    # cada arma comeca em "## NN.M Nome" (armas normais) ou em
-    # "# 59. CORRENTE COM PESO" (caso especial, virou secao propria)
+    # cada arma comeca em "## NN.M Nome"
     partes = re.split(r"\n(?=## \d+\.\d+ )", bloco)
-    # a Corrente com Peso (Secao 59) fica fora do split acima porque usa "#"
-    # nao "##" -- localizamos ela separadamente dentro do texto completo.
-    ini_corrente = texto.index("# 59. CORRENTE COM PESO")
-    fim_corrente = texto.index("# 60. RESUMO")
-    bloco_corrente = texto[ini_corrente:fim_corrente]
 
     armas = {}
     for parte in partes:
@@ -47,15 +44,15 @@ def extrair_armas():
         nome = m.group(1).strip()
         armas[nome] = _parsear_bloco_arma(nome, parte)
 
-    armas["Corrente com Peso"] = _parsear_bloco_arma("Corrente com Peso", bloco_corrente)
     return armas
 
 
 def _parsear_bloco_arma(nome, bloco):
-    # corta no proximo cabecalho de nivel 1 (# NN. ...), que marca ter saido
-    # da subsecao da arma -- sem isso o ultimo bloco de cada categoria
-    # (ex: Machado, ultima arma da Secao 58) engolia o resto do documento.
-    m_prox_secao = re.search(r"\n# \d+\. ", bloco)
+    # corta no proximo cabecalho de nivel 1 ou 2 (# NN. .../## NN.M ...), que
+    # marca ter saido da subsecao da arma -- sem isso o ultimo bloco de cada
+    # categoria (ex: Machado, ultima arma da Secao 57) engolia o resto do
+    # documento.
+    m_prox_secao = re.search(r"\n#{1,2} \d+[.\d]* ", bloco)
     if m_prox_secao:
         bloco = bloco[:m_prox_secao.start()]
 
@@ -63,6 +60,14 @@ def _parsear_bloco_arma(nome, bloco):
     atributo = m_attr.group(1).strip() if m_attr else None
     m_func = re.search(r"\*\*Função:\*\*\s*(.+)", bloco)
     funcao = m_func.group(1).strip() if m_func else None
+    m_dano = re.search(r"\*\*Dano:\*\*\s*(\S+)", bloco)
+    dano = m_dano.group(1).strip() if m_dano else None
+    # Identidade: pega o bloco inteiro entre "**Identidade:**" e a primeira
+    # Sword Skill ("### "), nao so' a primeira linha -- assim tambem cobre
+    # paragrafos soltos de passiva (ex.: "**Fluxo Cortante (passiva).**" do
+    # Leque) que nao viram cabecalho "### " proprio.
+    m_ident = re.search(r"\*\*Identidade:\*\*\s*(.+?)(?=\n### |\Z)", bloco, re.S)
+    identidade = re.sub(r"\n{3,}", "\n\n", m_ident.group(1).strip()) if m_ident else None
 
     # tabela de niveis: "| 1 | Nome da Skill |" ou "| 5 | **Limit Break — Nome** |"
     linhas_tabela = re.findall(r"^\|\s*(\d+)\s*\|\s*(.+?)\s*\|$", bloco, re.M)
@@ -75,19 +80,44 @@ def _parsear_bloco_arma(nome, bloco):
         else:
             niveis.append((nivel, texto_skill.strip(), False))
 
-    # descricoes, 3 formatos usados no documento (por arma):
-    #  (a) "### Nome da Skill\ntexto..." -- formato completo (Tank/CC/Corrente)
-    #  (b) "- **Nome:** texto" dentro de um bloco (bullet list solta ou sob um
-    #      "### Skills iniciais"/"### Skills exclusivas") -- Martelo/Adagas/Arco
-    #  (c) nada -- so' o nome na tabela + uma linha de identidade geral (DPS/
-    #      Suporte restantes); nesse caso a descricao fica vazia mesmo (nao
-    #      inventa texto que nao existe no documento).
+    # descricoes: "### Nome da Skill (Nível N)\ntexto..." (formato atual, com
+    # o nivel dentro do proprio titulo) ou variantes "adiciona-se a X" que
+    # nao sao Sword Skills novas, e sim complemento de uma ja existente --
+    # nesse caso o texto e' concatenado na skill referenciada em vez de virar
+    # uma entrada propria (senao ficaria orfao, sem nivel na tabela).
     descricoes = {}
-    for titulo, corpo in re.findall(r"^### (.+?)\n(.*?)(?=^### |\Z)", bloco, re.M | re.S):
-        titulo_limpo = re.sub(r"\s*—\s*Limit Break\s*$", "", titulo.strip())
-        descricoes[titulo_limpo] = corpo.strip()
+    complementos = {}
+    extras_soltos = []  # "adiciona-se ao kit" -- nao presos a nenhuma Skill da tabela
+    for titulo_bruto, corpo in re.findall(r"^### (.+?)\n(.*?)(?=^### |\Z)", bloco, re.M | re.S):
+        corpo = corpo.strip()
+        m_add = re.match(r"(.+?)\s*\(adiciona-se a(?:o)?\s+(.+?)(?:,\s*Nível\s*\d+)?\)\s*$", titulo_bruto.strip())
+        if m_add:
+            nome_extra = m_add.group(1).strip()
+            alvo = re.sub(r"^(efeito de\s+|todo ataque do\s+)", "", m_add.group(2).strip(), flags=re.I)
+            alvo = re.sub(r'^"|"$', "", alvo).strip()
+            if alvo.lower() in ("kit", "kit, disponível desde nível 1"):
+                extras_soltos.append(f"**{nome_extra}.** {corpo}")
+            else:
+                complementos.setdefault(alvo, []).append(corpo)
+            continue
+        titulo = re.sub(r"\s*\(Nível\s*\d+\)\s*$", "", titulo_bruto.strip())
+        titulo = re.sub(r"\s*—\s*Limit Break\s*$", "", titulo)
+        descricoes[titulo] = corpo
     for nome_bullet, texto_bullet in re.findall(r"^-\s*\*\*(.+?):\*\*\s*(.+)$", bloco, re.M):
         descricoes.setdefault(nome_bullet.strip(), texto_bullet.strip())
+
+    # aplica os complementos ("adiciona-se a X") na skill alvo, por
+    # correspondencia aproximada de nome (contains, pra tolerar variacao de
+    # fraseado entre o titulo do complemento e o nome oficial na tabela).
+    # Se nao achar alvo (nome mudou, digitado diferente etc.), tambem cai
+    # como extra solto em vez de ser descartado.
+    for alvo, textos in complementos.items():
+        alvo_norm = alvo.lower()
+        chave = next((k for k in descricoes if k.lower() in alvo_norm or alvo_norm in k.lower()), None)
+        if chave:
+            descricoes[chave] = (descricoes[chave] + "\n\n" + "\n\n".join(textos)).strip()
+        else:
+            extras_soltos.extend(textos)
 
     skills = []
     limit_break = None
@@ -98,7 +128,13 @@ def _parsear_bloco_arma(nome, bloco):
         else:
             skills.append({"nivel": nivel, "nome": skill_nome, "descricao": descricao})
 
-    return {"atributo": atributo, "funcao": funcao, "skills": skills, "limit_break": limit_break}
+    if extras_soltos and identidade:
+        identidade = (identidade + " " + " ".join(extras_soltos)).strip()
+
+    return {
+        "atributo": atributo, "funcao": funcao, "dano": dano, "identidade": identidade,
+        "skills": skills, "limit_break": limit_break,
+    }
 
 
 # --------------------------------------------------------------------------
