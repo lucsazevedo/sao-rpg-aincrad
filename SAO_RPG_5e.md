@@ -1649,7 +1649,7 @@ A Besta marca alvos, auxilia aliados e mantém pressão à distância.
 ## 58.1 Chakram
 
 **Função:** Controle de Área e Posicionamento  
-**Atributo:** Técnica
+**Atributo:** Destreza
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1669,7 +1669,7 @@ A Besta marca alvos, auxilia aliados e mantém pressão à distância.
 ## 58.2 Foice
 
 **Função:** Debuff + Derrubar + Execução  
-**Atributo:** Espírito
+**Atributo:** Sabedoria
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1689,7 +1689,7 @@ A Foice enfraquece inimigos, derruba alvos e ganha eficiência contra inimigos f
 ## 58.3 Adagas de Arremesso
 
 **Função:** Controle à Distância + Mobilidade + Precisão  
-**Atributo:** Reflexo
+**Atributo:** Destreza
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1709,7 +1709,7 @@ A arma marca inimigos, reduz deslocamento, cria zonas perigosas e mantém o usu�
 ## 58.4 Machado
 
 **Função:** Controle Pesado + Derrubar + Quebra de Postura  
-**Atributo:** Corpo
+**Atributo:** Força
 
 | Nível | Sword Skill |
 |---:|---|
@@ -1728,25 +1728,49 @@ O Machado é o CC mais pesado: sacrifica mobilidade para interromper, derrubar e
 
 # 59. CORRENTE COM PESO
 
-**Função atual:** CC  
-**Mecânica:** Enredar / Puxar
+**Função:** CC de Alcance e Controle de Posição  
+**Atributo:** Destreza
 
 A Corrente com Peso foi oficialmente transferida de **Tank para CC**.
 
-Ela faz parte das 19 armas oficiais, mas **as Sword Skills específicas da Corrente com Peso ainda não estavam fechadas no momento deste documento**.
+> **Atualização desta etapa (conversão pra D&D 5e):** as Sword Skills abaixo fecham a pendência registrada nas versões anteriores deste documento — a arma segue as mesmas 7 Skills + Limit Break de todas as outras 18 armas, mantendo a identidade original de prender/puxar/empurrar/impedir avanço/controlar distância/manipular posicionamento.
 
-Portanto:
+| Nível | Sword Skill |
+|---:|---|
+| 1 | Lançar Corrente |
+| 1 | Amarra de Ferro |
+| 2 | Puxão Brutal |
+| 5 | **Limit Break — Grilhões de Aincrad** |
+| 6 | Corrente Serpenteante |
+| 10 | Prisão de Elos |
+| 14 | Corrente Sangrenta |
+| 18 | Senhor das Correntes |
 
-> **Não inventar Skills da Corrente com Peso para preencher a lacuna.**
+**Identidade:** alcance, arrastar, prender e negar espaço — a única arma cuja função inteira é ditar onde o inimigo (não) pode estar.
 
-Ela deve ser desenvolvida posteriormente mantendo a identidade de:
+### Lançar Corrente
+Ataque à distância (alcance 15/30 ft) usando Destreza. Causa **1d6 + DES**. Em vez de recuar após o golpe, o usuário pode puxar o alvo 5 ft na sua direção.
 
-- prender;
-- puxar;
-- empurrar;
-- impedir avanço;
-- controlar distância;
-- manipular posicionamento.
+### Amarra de Ferro
+Ataque que, em caso de acerto, força o alvo a um teste de resistência de Força; falha: fica **Restringido** (Enredado pela corrente) até usar a ação para se soltar (teste de Força/Acrobacia contra a CD da Skill).
+
+### Puxão Brutal
+Reação quando um inimigo a até 15 ft tenta se afastar do usuário. Puxa o alvo de volta 10 ft e reduz o deslocamento dele pela metade até o fim do turno seguinte.
+
+### Grilhões de Aincrad — Limit Break
+Reação ou ação, 1/Descanso Longo, alcance 30 ft. Prende um alvo com correntes que se materializam do chão: o alvo fica **Restringido** sem direito a teste de resistência inicial e sofre desvantagem no primeiro teste para se soltar. Enquanto restringido dessa forma, aliados do usuário têm vantagem em ataques corpo a corpo contra o alvo.
+
+### Corrente Serpenteante
+A corrente pode atingir e enredar dois alvos diferentes no mesmo ataque (um golpe principal + um golpe secundário de dano reduzido), cada um com seu próprio teste de resistência.
+
+### Prisão de Elos
+Cria uma área de 10 ft de raio onde a corrente serpenteia pelo chão; inimigos que entram ou terminam o turno ali fazem teste de Destreza ou ficam com o deslocamento reduzido a 5 ft até saírem da área.
+
+### Corrente Sangrenta
+Golpe pesado contra um alvo já Restringido pelo usuário: dano adicional e o alvo sofre uma condição extra (Caído ou Amedrontado, à escolha do usuário) além do dano.
+
+### Senhor das Correntes
+Forma suprema de controle: o usuário pode manter até três alvos Restringidos simultaneamente sem gastar ação extra por alvo, e pode arrastar qualquer um deles 5 ft por vez como parte de outra ação.
 
 ---
 
@@ -1852,12 +1876,11 @@ Isso mantém três formas diferentes de evolução sem fazer uma delas substitui
 - Foice
 - Adagas de Arremesso
 - Machado
+- Corrente com Peso (fechada na Seção 59, etapa de conversão pra D&D 5e)
 
 ### Pendente
 
-- Corrente com Peso
-
-> A Corrente com Peso foi movida para CC antes de suas Skills serem fechadas. Ela permanece registrada como CC, mas sem Skills inventadas neste documento.
+Nenhuma. As 19 armas estão com Sword Skills completas (7 + Limit Break cada).
 
 ---
 
@@ -1916,4 +1939,197 @@ Esta seção foi reconstruída a partir dos materiais de Sword Skills já produz
 Quando existir diferença entre uma versão antiga e a progressão mais recente, deve prevalecer a progressão mais recente:
 
 > **2 Sword Skills no nível 1 → Skill no 2 → Limit Break no 5 → Skills nos níveis 6, 10, 14 e 18.**
+
+---
+
+# 66. REGRA DE CONVERSÃO DE ATRIBUTOS LEGADOS (5 PBTA → 6 D&D)
+
+O sistema antigo (pré-conversão) usava **5 atributos**: Corpo, Reflexo, Conhecimento, Espírito, Técnica (escala -2 a +2). Todo o conteúdo já publicado antes desta etapa (monstros, NPCs, itens) usa esses nomes. Esta seção fixa a regra oficial de conversão, usada em todo o resto do documento e em qualquer conteúdo antigo revisado a partir de agora.
+
+| Atributo antigo (PBTA) | Vira | Racional |
+|---|---|---|
+| Corpo | **Força** (também informa Constituição) | força física, carregar peso, resistir dano |
+| Reflexo | **Destreza** | agilidade, esquiva, precisão à distância |
+| Conhecimento | **Inteligência** | memória, identificar, decifrar, Sistema |
+| Espírito | **Sabedoria** (informa Carisma quando o personagem for socialmente marcante/líder) | vontade, percepção, calma, intuição |
+| Técnica | **Destreza ou Inteligência**, decidido pelo contexto (manobra ágil → DES; perícia/ofício → INT) | não existe 1:1; nenhuma arma nova ataca com CON ou CAR |
+
+Consequência prática: **nenhuma arma das 19 usa Constituição ou Carisma como atributo de ataque** (confirmar na tabela da Seção 7) — então `atributo_fraqueza` de monstro (o atributo que uma arma precisa usar pra explorar a fraqueza dele) só pode ser convertido para **FOR, DES, INT ou SAB**. Constituição e Carisma em criaturas/NPCs são sempre valores **derivados**, nunca convertidos diretamente de um atributo PBTA:
+
+- **Constituição** = mesmo patamar de Força (a criatura que é fisicamente forte também aguenta mais dano, por padrão).
+- **Carisma** = mesmo patamar de Sabedoria por padrão, ajustado pra cima na hora da conversão individual se a descrição do personagem/criatura for explicitamente social, carismática ou de liderança.
+
+---
+
+# 67. PERÍCIAS
+
+Aincrad não tem magia tradicional, então as 18 perícias de D&D viram **17**: Arcanismo e Religião (que não fazem sentido num MMORPG sem deuses nem feitiçaria) foram fundidas numa perícia nova, **Sistema**, que cobre o conhecimento sobre as regras do próprio jogo/Cardinal System (identificar itens, entender curvas de dano, ler o funcionamento de puzzles e mecanismos do castelo).
+
+| Atributo | Perícias |
+|---|---|
+| Força | Atletismo |
+| Destreza | Acrobacia, Furtividade, Prestidigitação |
+| Inteligência | Investigação, História, Natureza, **Sistema** |
+| Sabedoria | Adestrar Animais, Intuição, Medicina, Percepção, Sobrevivência |
+| Carisma | Atuação, Enganação, Intimidação, Persuasão |
+
+Teste de perícia: **d20 + modificador do atributo + bônus de proficiência** (se proficiente) **vs. CD** (Seção 29 dá a referência de CD por dificuldade).
+
+Proficiência em perícia vem de: **Profissão** (cada uma concede 2 perícias ligadas ao seu tema — o Mestre escolhe entre as perícias do atributo da profissão e uma perícia temática relacionada, ex. Caçador → Sobrevivência + Percepção) e de **escolha livre na criação de personagem** (2 perícias adicionais, quaisquer).
+
+---
+
+# 68. TESTES DE RESISTÊNCIA
+
+Cada categoria de combate (Seção 8) concede proficiência em 2 Testes de Resistência, refletindo o papel da categoria:
+
+| Categoria | Resistências |
+|---|---|
+| Tank | Força, Constituição |
+| DPS | Destreza, Força |
+| Suporte | Inteligência, Sabedoria |
+| CC | Destreza, Sabedoria |
+
+Teste de Resistência: **d20 + modificador do atributo + bônus de proficiência** (se proficiente) **vs. CD do efeito**.
+
+---
+
+# 69. PONTOS DE VIDA, CLASSE DE ARMADURA E INICIATIVA
+
+## Dado de Vida por categoria
+
+| Categoria | Dado de Vida |
+|---|---:|
+| Tank | d12 |
+| DPS | d10 |
+| CC | d10 |
+| Suporte | d8 |
+
+**PV no nível 1** = valor máximo do dado + modificador de Constituição.
+**A cada nível seguinte:** rola o Dado de Vida (ou usa a média fixa, arredondada pra cima — recomendado pra manter consistência entre mesas) + modificador de Constituição.
+
+## Classe de Armadura (CA)
+
+**CA base = 10 + modificador de Destreza**, somando:
+
+- bônus de escudo/postura defensiva das próprias Sword Skills (ex. Guarda Férrea, Postura de Guarda);
+- bônus de equipamento (armaduras, acessórios — ver Seção 73).
+
+## Iniciativa
+
+**d20 + modificador de Destreza.**
+
+---
+
+# 70. CONDIÇÕES
+
+Aincrad adota o conjunto padrão de condições de D&D 5e, sem petrificação (não existe magia de pedra no sistema) e com Enfeitiçado reaproveitado para efeitos sociais/hipnóticos (ex. Skills de Leque e Músico) em vez de encantamento mágico:
+
+Agarrado • Amedrontado • Atordoado • Caído • Cego • Enfeitiçado • Envenenado • Exausto (níveis 1-6) • Impossibilitado • Invisível • Paralisado • Restringido • Surdo • Inconsciente
+
+Essas são as condições usadas nas Sword Skills das Seções 55-59 (ex. "Restringido" = a antiga menção solta de "Enredado").
+
+---
+
+# 71. EXPERIÊNCIA E NÍVEL
+
+O personagem evolui pela tabela padrão de XP/Nível de D&D 5e — substitui o antigo sistema de "Marco" do PBTA:
+
+| Nível | XP necessário | Bônus de Proficiência |
+|---:|---:|---:|
+| 1 | 0 | +2 |
+| 2 | 300 | +2 |
+| 3 | 900 | +2 |
+| 4 | 2.700 | +2 |
+| 5 | 6.500 | +3 |
+| 6 | 14.000 | +3 |
+| 7 | 23.000 | +3 |
+| 8 | 34.000 | +3 |
+| 9 | 48.000 | +4 |
+| 10 | 64.000 | +4 |
+| 11 | 85.000 | +4 |
+| 12 | 100.000 | +4 |
+| 13 | 120.000 | +5 |
+| 14 | 140.000 | +5 |
+| 15 | 165.000 | +5 |
+| 16 | 195.000 | +5 |
+| 17 | 225.000 | +6 |
+| 18 | 265.000 | +6 |
+| 19 | 305.000 | +6 |
+| 20 | 355.000 | +6 |
+
+XP é ganho por combate, missão, exploração e marcos de história — a critério do Mestre, sem fórmula fixa (mesma liberdade que o sistema já tinha com Marcos).
+
+---
+
+# 72. DESCANSO
+
+| Tipo | Duração | Efeito |
+|---|---|---|
+| **Descanso Curto** | ≥ 1 hora, em local seguro (Estalagem, guarda-costas de guilda, zona seguro de cidade) | Gasta Dados de Vida pra recuperar PV; recarrega Sword Skills/habilidades marcadas "1/Descanso Curto" |
+| **Descanso Longo** | 8 horas (deslogar/dormir em zona segura) | Recupera todos os PV; recupera metade dos Dados de Vida gastos; recarrega Limit Break e qualquer habilidade "1/Descanso Longo" |
+
+Zona segura = qualquer área "cidade segura" do andar (mesmo conceito que já existia no sistema antigo). Descansar em campo aberto/dungeon é possível, mas o Mestre pode interromper com um encontro.
+
+---
+
+# 73. EQUIPAMENTOS E CRISTAIS
+
+O sistema antigo usava bônus estreitos e situacionais (+1 numa situação específica, nunca um bônus geral). Na conversão pra D&D, os itens ganham **bônus numérico direto**, seguindo a escala de raridade já usada em todo o resto do sistema (a mesma dos níveis de receita de profissão — Seção 20/21):
+
+| Raridade | Bônus típico | Nível de referência |
+|---|---:|---:|
+| Comum | +0 (efeito situacional único, sem número) | 1 |
+| Incomum | +1 | 2 |
+| Raro | +2 | 4-6 |
+| Épico | +3 | 8 |
+| Lendário | +3 + efeito único poderoso | 10 |
+
+O bônus se aplica a CA (armaduras/escudos/acessórios defensivos) ou a dano/teste de ataque (armas, luvas, joias ofensivas), conforme o slot do item (7 slots — Seção 12 do sistema antigo, mantidos).
+
+**Cristais**: os 6 cristais existentes continuam como consumíveis de uso único, mas o efeito passa a ser numérico e direto (ex. +1d6 de dano no próximo ataque, ou PV temporário) em vez de reflavorar uma vantagem narrativa estreita.
+
+---
+
+# 74. MONSTROS E BOSSES — ESTRUTURA DE STAT BLOCK
+
+O antigo sistema de "golpes para derrotar" (contagem de sucessos) e Condições-como-dano é substituído por **PV numérico + CA + ações**, no molde padrão de D&D.
+
+## Campos do stat block
+
+```
+Nome
+Andar / Zona
+Nível de Ameaça: Fraco | Comum | Forte | Elite | Chefe
+CA
+PV (dado × quantidade + CON)
+Velocidade
+FOR DES CON INT SAB CAR (com modificador)
+Resistências / Imunidades / Vulnerabilidades a dano
+Perícias e Sentidos
+Idiomas (se houver)
+Ações (nome + bônus de ataque + dano)
+Reações (se houver)
+Ações Lendárias / Fases (só Chefes)
+```
+
+## Conversão de Nível de Ameaça (referência de tuning)
+
+| Nível de Ameaça | PV aproximado | CA aproximada | Bônus de Ataque | CD de Resistência |
+|---|---:|---:|---:|---:|
+| Fraco | 10 + 4×andar | 10 + andar/3 | +2 + andar/4 | 10 + andar/4 |
+| Comum | 20 + 6×andar | 11 + andar/3 | +3 + andar/4 | 11 + andar/4 |
+| Forte | 40 + 8×andar | 13 + andar/3 | +4 + andar/4 | 13 + andar/4 |
+| Elite | 70 + 10×andar | 15 + andar/3 | +5 + andar/4 | 14 + andar/4 |
+| Chefe | 150 + 15×andar (ou 4 fases de ~1/4 desse total) | 16 + andar/3 | +6 + andar/4 | 15 + andar/4 |
+
+`atributo_fraqueza` continua existindo: um ataque que usa o atributo de fraqueza do monstro causa **+1d6 de dano extra** (substitui o antigo bônus fixo de teste). Só pode ser FOR/DES/INT/SAB (Seção 66).
+
+---
+
+# 75. RESUMO — SAO RPG 5e COMO SISTEMA FECHADO
+
+Com as Seções 66-74, o `SAO_RPG_5e.md` deixa de ser só "armas + profissões" e passa a cobrir o núcleo inteiro de regra necessário pra jogar: atributos, perícias, resistências, PV/CA/iniciativa, condições, XP/nível, descanso, equipamentos/cristais e stat block de monstro/boss — tudo compatível com d20 + modificador + proficiência.
+
+Este documento passa a ser a **fonte única de regra do sistema**, substituindo `docs/guia_sistema_aincrad.md` e `docs/regras_nucleares_campanha.md` (que ficam como redirect histórico — ver Seção 2 desses arquivos).
 
