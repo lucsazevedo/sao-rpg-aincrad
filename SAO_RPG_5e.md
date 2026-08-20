@@ -1664,6 +1664,30 @@ A Besta marca alvos, auxilia aliados e mantém pressão à distância.
 
 **Identidade:** ricochete, área e movimento forçado.
 
+### Lâmina Ricochete
+Ataque corpo a corpo ou à distância (alcance 20/60 ft) usando Destreza. Causa **1d6 + DES**. Se atingir, o chakram ricocheteia pra um segundo alvo a até 15 ft do primeiro, causando metade do dano.
+
+### Arco Cortante
+Ataque em arco de 90° a partir do usuário (alcance 10 ft), atingindo todos os inimigos na área. Causa **1d6 + DES** a cada um.
+
+### Chakram Enlaçante
+Ataque que, em caso de acerto, obriga o alvo a um teste de Força; falha: fica **Restringido** por uma corrente fina presa ao chakram até se soltar (ação, teste de Força/Acrobacia).
+
+### Dança do Chakram — Limit Break
+1/Descanso Longo. O usuário lança até 3 chakrams que ricocheteiam entre até 5 inimigos diferentes num raio de 30 ft, cada um causando **2d6 + DES**. Nenhum alvo é atingido mais de duas vezes.
+
+### Retorno Mortal
+Reação quando um inimigo se move pra dentro do alcance do chakram já lançado nesse turno: um ataque extra automático contra ele, sem gastar a ação.
+
+### Círculo de Lâminas
+Cria uma área de 15 ft de raio onde chakrams giram no ar por 1 minuto; qualquer inimigo que entre ou termine o turno ali sofre **1d6** de dano cortante.
+
+### Ricochete Devastador
+O ricochete da Lâmina Ricochete deixa de perder dano — o segundo alvo (e um terceiro, se houver) recebe o dano cheio, não metade.
+
+### Tempestade dos Chakrams
+Forma suprema: por 1 rodada, todo ataque com chakram ricocheteia automaticamente pra um alvo adicional, sem limite de vezes por turno.
+
 ---
 
 ## 58.2 Foice
@@ -1683,6 +1707,30 @@ A Besta marca alvos, auxilia aliados e mantém pressão à distância.
 | 18 | Última Colheita |
 
 A Foice enfraquece inimigos, derruba alvos e ganha eficiência contra inimigos feridos.
+
+### Corte Ceifador
+Ataque corpo a corpo em arco (alcance 10 ft, área de 90°) usando Sabedoria. Causa **1d8 + SAB** a cada inimigo na área.
+
+### Gancho da Morte
+Ataque que, em caso de acerto, puxa o alvo 15 ft na direção do usuário e ele fica com o deslocamento reduzido pela metade até o fim do turno seguinte.
+
+### Ceifa das Pernas
+Ataque baixo contra as pernas do alvo: teste de Destreza; falha: fica **Caído**.
+
+### Colheita da Morte — Limit Break
+1/Descanso Longo. Um corte amplo (alcance 15 ft, 120°) que causa **3d8 + SAB** e reduz a cura recebida pelos alvos atingidos pela metade até o fim da cena.
+
+### Ceifador Reverso
+Ataque de retorno logo após um golpe: se o Corte Ceifador ou a Ceifa das Pernas acertou, pode encadear este ataque como parte da mesma ação, causando metade do dano a um alvo adicional na área.
+
+### Marca do Ceifador
+Marca um alvo por 1 minuto; enquanto marcado, ataques com a Foice contra ele ganham vantagem e causam +1d6.
+
+### Grande Ceifa
+Como Corte Ceifador, mas o alcance dobra (20 ft, 90°) e alvos já **Caídos** sofrem dano máximo em vez de rolado.
+
+### Última Colheita
+Contra um inimigo com menos de um terço do PV máximo, este ataque causa dano dobrado e, se reduzir o alvo a 0 PV, o usuário recupera PV igual ao dado de dano da arma.
 
 ---
 
@@ -1704,6 +1752,30 @@ A Foice enfraquece inimigos, derruba alvos e ganha eficiência contra inimigos f
 
 A arma marca inimigos, reduz deslocamento, cria zonas perigosas e mantém o usuário móvel.
 
+### Lâmina Marcadora
+Ataque à distância (alcance 30/90 ft) usando Destreza. Causa **1d4 + DES** e marca o alvo por 1 minuto (ver Marca do Ceifador-style: próximos ataques do usuário contra o alvo marcado têm vantagem).
+
+### Rajada de Adagas
+Três adagas lançadas contra um único alvo ou até três alvos diferentes num raio de 10 ft, cada uma causando **1d4 + DES**.
+
+### Adaga Imobilizante
+Ataque que, em caso de acerto, obriga o alvo a um teste de Destreza; falha: o deslocamento dele fica reduzido a 5 ft até o fim do turno seguinte (a adaga finca no chão/roupa).
+
+### Dança das Mil Lâminas — Limit Break
+1/Descanso Longo. Uma saraivada que atinge todos os inimigos num cone de 30 ft, cada um sofrendo **2d6 + DES** e um teste de Destreza; falha: **Restringido** por 1 rodada.
+
+### Adaga de Retorno
+Reação: quando um inimigo marcado se move, uma adaga extra o persegue automaticamente, causando **1d4 + DES**.
+
+### Campo de Lâminas
+Cria uma área de 15 ft de raio coberta de adagas fincadas por 1 minuto; inimigos que entram ou terminam o turno ali sofrem **1d6** de dano perfurante.
+
+### Chuva Perfurante
+A Rajada de Adagas passa de 3 pra 5 adagas, e cada uma que erra o primeiro alvo ricocheteia pra um segundo.
+
+### Arsenal Fantasma
+Forma suprema de mobilidade: o usuário pode se teleportar até 30 ft pra qualquer ponto onde tenha uma adaga fincada (de Campo de Lâminas ou Adaga Imobilizante) como parte de um ataque, sem gastar deslocamento.
+
 ---
 
 ## 58.4 Machado
@@ -1723,6 +1795,30 @@ A arma marca inimigos, reduz deslocamento, cria zonas perigosas e mantém o usu�
 | 18 | Execução do Colosso |
 
 O Machado é o CC mais pesado: sacrifica mobilidade para interromper, derrubar e quebrar a postura dos inimigos.
+
+### Golpe Quebra-Guarda
+Ataque corpo a corpo usando Força. Causa **1d10 + FOR**. Se o alvo estiver usando escudo ou postura defensiva, esse bônus é anulado até o fim do turno seguinte.
+
+### Machado Derrubador
+Ataque pesado; teste de Força do alvo; falha: fica **Caído**.
+
+### Corte de Impacto
+Ataque que, além do dano, empurra o alvo 10 ft na direção do golpe (teste de Força pra resistir).
+
+### Devastação do Machado — Limit Break
+1/Descanso Longo. Um golpe massivo (alcance 10 ft, área de 5 ft à frente) que causa **3d10 + FOR** e deixa todos os alvos atingidos **Caídos**, sem direito a teste de resistência.
+
+### Contra-Golpe Brutal
+Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um ataque de Força completo em resposta.
+
+### Quebra-Postura
+Ataque que reduz a CA do alvo em 2 até o fim da cena (não acumula com usos repetidos — só o mais recente vale).
+
+### Grande Cleave
+Ataque que atinge todos os inimigos num arco de 10 ft à frente, cada um causando dano completo (não reduzido).
+
+### Execução do Colosso
+Contra um inimigo **Caído**, este ataque causa dano máximo automaticamente, sem rolar o dado.
 
 ---
 
