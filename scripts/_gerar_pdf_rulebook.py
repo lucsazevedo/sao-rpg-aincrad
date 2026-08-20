@@ -210,14 +210,16 @@ body {
 }
 .pagina {
   background: #f4ecd8;
-  background-image:
-    radial-gradient(ellipse at top left, rgba(255,255,255,.25), transparent 60%),
-    radial-gradient(ellipse at bottom right, rgba(0,0,0,.05), transparent 60%);
   padding: 0;
 }
 .pb { page-break-before: always; }
 
-/* ===== capa ===== */
+/* ===== capa =====
+   Gradiente decorativo só existe aqui -- é 1 página só, custa barato.
+   Antes ficava em .pagina (aplicado também no bloco de conteúdo, que
+   sozinho cobre as ~78 páginas do miolo) e isso fazia o Chrome
+   rasterizar o fundo em imagem página por página -- PDF gigante e lento
+   pra abrir. */
 .capa {
   min-height: 240mm;
   display: flex;
@@ -226,6 +228,9 @@ body {
   justify-content: center;
   text-align: center;
   padding: 40mm 20mm;
+  background-image:
+    radial-gradient(ellipse at top left, rgba(255,255,255,.25), transparent 60%),
+    radial-gradient(ellipse at bottom right, rgba(0,0,0,.05), transparent 60%);
 }
 .capa .emblema { font-size: 54pt; margin-bottom: 18pt; letter-spacing: 8pt; color: #8a1f11; }
 .capa h1 {
@@ -285,9 +290,28 @@ def montar_sumario_html(toc):
     return "\n".join(linhas)
 
 
+RE_EMOJI = re.compile(
+    "["
+    "\U0001F300-\U0001FAFF"  # símbolos/pictogramas diversos, emoji de objeto
+    "\U00002600-\U000027BF"  # símbolos diversos e dingbats (inclui ⚔️ 🛡️ etc.)
+    "\U00002B00-\U00002BFF"  # setas/estrelas diversas
+    "\U0000FE0F"             # variation selector (o que deixa o emoji colorido)
+    "]+"
+)
+
+
 def gerar_html():
     with open(CAMINHO_MD, encoding="utf-8") as f:
         md = f.read()
+
+    # emoji colorido vira imagem embutida por ocorrência no export do Chrome
+    # pra PDF (fonte bitmap, não vetor) -- deixava o arquivo pesado e lento
+    # pra abrir. Documento fonte (.md) e o site continuam com os emoji
+    # normalmente; só o PDF tira.
+    md = RE_EMOJI.sub("", md)
+    # (não colapsa espaço duplo aqui -- "  " no fim da linha é a quebra
+    # forçada de markdown que md_para_html() lê; HTML já ignora espaço
+    # simples duplicado no meio da linha sozinho, sem precisar mexer)
 
     conteudo_html, toc = md_para_html(md)
 
