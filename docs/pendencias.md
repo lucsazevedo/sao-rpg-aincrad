@@ -1,3 +1,66 @@
+## Novo nesta rodada — migração do sistema pra D&D 5e (rulebook + conteúdo + banco + app)
+
+Pedido do usuário: "quero migrar o sistema inteiro para o d&d 5e" — trabalho
+começado por ele em `SAO_RPG_5e.md` (armas com Sword Skills, profissões).
+Pediu pra ir até o fim numa tacada só, com backup antes de qualquer coisa
+destrutiva e substituição direta do schema antigo (não side-by-side).
+Também indicou dois materiais de referência (`Sword Art Online 5e
+Conversion v1.0.pdf` de Cableguy 5e Content, e um fórum giantitp
+inacessível) — aproveitados e documentados em `docs/fontes.md`.
+
+**Backup primeiro** (branch `backup/pre-dnd5e` com o estado completo antes
+de qualquer edição + dump completo do banco de produção via
+`scripts/db/_backup_completo.py`, 68 tabelas/4927 linhas incluindo os
+personagens de teste Shen e Umbra, salvo local em `scripts/db/backups/`,
+gitignored por ter dado real).
+
+**Rulebook fechado** — `SAO_RPG_5e.md` ganhou as Seções 66-79: regra de
+conversão de atributo (5 PBTA → 6 D&D, ver tabela na própria Seção 66),
+perícias, testes de resistência, PV/CA/iniciativa, condições, XP/nível,
+descanso, equipamentos/cristais (bônus numérico por raridade), stat block
+de monstro/boss, Sword Skills da Corrente com Peso (única arma que ainda
+não tinha), ações de equipe (Troca/Provocar/Ajudar, termos canônicos do
+anime), cores de cursor/Player Killer, e a lista de andares canônicos de
+Aincrad (cruzada com `cidades/cidade_do_inicio.md`/`cidades/urbus.md`, que
+já batiam). Também corrigida uma inconsistência que o próprio usuário
+apontou: as 4 armas CC (Chakram/Foice/Adagas de Arremesso/Machado) ainda
+citavam atributo no nome antigo (Técnica/Espírito/Reflexo/Corpo).
+
+**Conteúdo convertido** (script reutilizável/idempotente
+`scripts/_converter_conteudo_dnd5e.py`): 54 `monstros/*.md` (atributo de
+fraqueza convertido + stat block D&D calculado pela fórmula da Seção 74,
+inserido sem apagar a prosa PBTA original — só marcada como legado), 50
+`npcs/*.md` (5 atributos PBTA → 6 D&D via fórmula `10+2×mod`, CON=FOR e
+CAR=SAB por padrão), 19 `armas/*.md` (item-cards — `atributo_principal`
+sincronizado com a Seção 7). `equipamentos/00_indice.md` teve a regra de
+bônus reescrita (tabela por raridade em vez do teto de +1). Os dois
+arquivos de regra antigos (`docs/guia_sistema_aincrad.md`,
+`docs/regras_nucleares_campanha.md`) viram redirect histórico curto — texto
+PBTA completo preservado na branch `backup/pre-dnd5e`.
+`scripts/ollama_client.py:carregar_guia_sistema()` agora lê `SAO_RPG_5e.md`
+(era o arquivo antigo — os geradores de conteúdo por LLM continuam
+funcionando com a mecânica nova). `AGENTS.md`/`.github/copilot-instructions.md`
+não dizem mais "sistema PBTA próprio, não é D&D".
+
+**Não convertido nesta rodada, registrado como pendência real**: 72
+arquivos (`cenas/*.md`, `docs/receitas_*.md`, `docs/servicos_*.md`,
+`Comidas/00_catalogo_receitas_cozinheiro.md` etc.) ainda citam `2d6`/
+"7-9"/"6-" espalhados dentro de texto narrativo (missões, receitas,
+serviços de NPC). Diferente de monstro/NPC/arma (campo de frontmatter
+isolado, seguro pra converter por script), aqui a menção de dado está
+embutida na prosa — arriscar substituição automática quebraria frase.
+Precisa passada manual, arquivo por arquivo, revisando o contexto de cada
+menção antes de trocar — fica pra próxima rodada.
+
+**Ainda não feito** (próxima fase, GG de verdade): migração do schema do
+Supabase (tabela `personagens` usa `atributos jsonb` com
+corpo/reflexo/conhecimento/espirito/tecnica, sem coluna de nível de
+personagem de verdade, sem PV/CA — tudo isso precisa virar D&D) e reescrita
+do app Vue (`Ficha.vue`, `Cadastro.vue`, `Mestre.vue`, `Combate.vue`,
+`Profissoes.vue`) pra mostrar/editar os campos novos em vez de
+fôlego/atributos PBTA/2d6. Plano detalhado no arquivo de plano da sessão
+(não versionado no repo).
+
 ## Novo nesta rodada — 10 profissões rasas expandidas (equilíbrio de conteúdo)
 
 Pergunta do usuário: "todas as profissões estão equilibradas?". Medido em
