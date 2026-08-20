@@ -872,31 +872,43 @@ A montaria age na iniciativa do dono sem precisar de comando; comandos custam a�
 
 Pode domar/montar criaturas Raras+; tempo de treinamento cai pela metade.
 
+> **Regra de equilíbrio (vale também pro Domador, Seção 42):** a montaria/criatura nunca concede uma segunda economia de ações completa e independente pro jogador. Fora dos bônus explícitos acima (ação livre/bônus pra comandar), ela ataca ou age apenas quando comandada, usando a própria ficha da montaria/criatura — o personagem não ganha, na prática, dois turnos por rodada.
+
 ---
 
 # 42. DOMADOR
 
 **Atributo: Sabedoria**
 
+O Domador pode possuir várias criaturas domesticadas ao longo da campanha, mas mantém **apenas 1 companheiro ativo em combate** por vez (troca fora de combate). Ver também a regra de equilíbrio de ação da Seção 41 — o companheiro não tem uma segunda economia de ações independente.
+
 ## Nível 1 — Domar Criatura
 
 **Teste:** d20 + SAB + proficiência (Adestrar Animais) vs. CD por criatura (Fácil 10 a Excepcional 20, Seção 29). Criaturas hostis/muito inteligentes podem exigir uma condição narrativa (oferenda, prova de confiança) antes do teste valer. A partir da vinculação, a criatura soma o modificador de Sabedoria do Domador no dano de todos os ataques dela (além do próprio modificador dela).
 
-## Nível 5 — Vínculo Animal
+**Vínculo de Combate.** Quando o Domador e a criatura atacam o mesmo alvo no mesmo turno, o primeiro acerto do segundo dos dois a atacar causa **+1d4** de dano extra.
 
-A criatura vinculada ganha vantagem em testes de resistência contra medo e efeitos semelhantes.
+## Nível 5 — Comando Instintivo
 
-## Nível 10 — Comando Avançado
+Ação bônus: comandar a criatura passa a custar ação bônus (em vez de ação inteira) e o Domador escolhe entre **Atacar** (a criatura faz um ataque), **Proteger** (usuário ou criatura ganham +2 CA contra o próximo ataque que sofrerem) ou **Perseguir** (a criatura se move até o dobro do próprio deslocamento sem provocar Ataque de Oportunidade). A criatura vinculada também ganha vantagem em testes de resistência contra medo e efeitos semelhantes.
 
-Comandar a criatura em combate custa ação bônus em vez de ação inteira.
+## Nível 10 — Guarda Mútua
+
+Uma vez por rodada, quando o Domador ou a criatura vinculada sofrer dano (estando a até 10 ft um do outro), o outro pode usar Reação para reduzir esse dano em **1d8 + SAB**.
 
 ## Nível 15 — Vínculo Perfeito
 
-Personagem e criatura, enquanto a até 10 ft um do outro, ganham +2 de CA cada (era +1) e vantagem em testes de resistência contra serem separados ou controlados.
+Personagem e criatura, enquanto a até 10 ft um do outro, ganham +2 de CA cada e vantagem em testes de resistência contra serem separados ou controlados.
+
+**Troca Instintiva.** 1/rodada: se um dos dois for atingido por um ataque, e estiverem a até 15 ft um do outro, podem trocar de posição imediatamente (sem provocar Ataque de Oportunidade).
 
 ## Nível 20 — Mestre Domador
 
 Pode tentar domar criaturas Épicas/Lendárias, normalmente fora do alcance da profissão. A criatura vinculada ganha um ataque extra por turno.
+
+**Comando Duplo.** Uma vez por turno, ao usar uma Sword Skill ofensiva, o Domador pode comandar a criatura como parte da mesma ação; se os dois acertarem o mesmo alvo, esse alvo sofre **+2d6** de dano adicional (uma vez por turno).
+
+**Vínculo Inquebrável.** Enquanto os dois estiverem conscientes e a até 60 ft um do outro, nenhum dos dois pode ser surpreendido. Se um cair a 0 PV, o outro ganha vantagem em ataques até o fim do próximo turno dele.
 
 ---
 
@@ -915,7 +927,7 @@ O bônus de valor sobe pra 40%.
 
 ## Nível 10 — Joias Encantáveis
 
-Pode preparar um encaixe numa joia pra receber um Cristal (Seção 72) — o cristal fica reutilizável em vez de consumido de uma vez.
+Pode preparar um encaixe numa joia pra receber um Cristal (Seção 72) — o cristal fica reutilizável em vez de consumido de uma vez. Cada joia suporta **no máximo 1 Cristal ativo por vez** (evita empilhar vários efeitos de Cristal na mesma peça).
 
 ## Nível 15 — Lapidação Perfeita
 
@@ -2404,7 +2416,7 @@ _Ação_
 
 **Identidade:** Movimentação constante, posicionamento e ataques fluidos — difícil de fixar.
 
-**Fluxo Cortante (passiva).** Sempre que o usuário tiver se movido pelo menos 10 ft no turno antes de um ataque do Leque, esse ataque causa **+1d4** de dano extra. Como quase toda Sword Skill do Leque já envolve movimento, isso funciona como um bônus quase constante pra quem joga a arma do jeito que ela pede.
+**Fluxo Cortante (passiva).** Sempre que o usuário tiver se movido pelo menos 10 ft no turno antes de um ataque do Leque, esse ataque causa **+1d4** de dano extra.
 
 ### Corte de Seda (Nível 1)
 
@@ -2884,7 +2896,15 @@ O sistema antigo usava bônus estreitos e situacionais (+1 numa situação espec
 
 O bônus se aplica a CA (armaduras/escudos/acessórios defensivos) ou a dano/teste de ataque (armas, luvas, joias ofensivas), conforme o slot do item (7 slots — Seção 12 do sistema antigo, mantidos).
 
-**Cristais**: os 6 cristais existentes continuam como consumíveis de uso único, mas o efeito passa a ser numérico e direto (ex. +1d6 de dano no próximo ataque, ou PV temporário) em vez de reflavorar uma vantagem narrativa estreita.
+**Cristais**: os 6 cristais existentes continuam como consumíveis de uso único, mas o efeito passa a ser numérico e direto (ex. +1d6 de dano no próximo ataque, ou PV temporário) em vez de reflavorar uma vantagem narrativa estreita. Uma joia preparada pelo Joalheiro (nível 10, Seção 43) pode tornar um Cristal reutilizável, respeitando o limite de 1 Cristal ativo por joia.
+
+## Regra de acúmulo de bônus ofensivo
+
+**Somente um item ofensivo por personagem pode conceder bônus numérico de ataque/dano.** Arma +2, luva +2, anel +2 e cristal fixo de dano não se somam entre si — o jogador usa o maior bônus disponível, não a soma de todos. Isso existe pra evitar explosão matemática conforme o personagem acumula itens; bônus defensivos (CA), de mobilidade, de resistência e efeitos situacionais continuam empilhando normalmente, já que não inflam o dano direto.
+
+## Regra de crafting
+
+Todo item de raridade Incomum ou superior (Seção 51/72) exige, além do teste de perícia da profissão: **Projeto + Material da raridade equivalente + Núcleo/Cristal (quando o efeito pedir) + Tempo**. Um Projeto define o tipo de item, os materiais necessários, a raridade máxima alcançável, o efeito e a profissão exigida. O crafting nunca deve gerar sozinho um item de raridade acima da que os materiais/Projeto disponíveis permitem — mesmo com um resultado excelente no teste.
 
 ---
 
@@ -2921,6 +2941,10 @@ Ações Lendárias / Fases (só Chefes)
 | Chefe           | 150 + 15×andar (ou 4 fases de ~1/4 desse total) |  16 + andar/3 |    +6 + andar/4 |      15 + andar/4 |
 
 `atributo_fraqueza` continua existindo: um ataque que usa o atributo de fraqueza do monstro causa **+1d6 de dano extra** (substitui o antigo bônus fixo de teste). Só pode ser FOR/DES/INT/SAB (Seção 65).
+
+## Fraqueza é ferramenta de descoberta, não informação de graça
+
+A fraqueza de uma criatura relevante não deve ser dada automaticamente — ela é descoberta em jogo por observação direta (1+ rodada olhando a criatura lutar), teste de **Sistema** (Inteligência), ou pelas habilidades específicas de **Caçador** (Predador Experiente, nível 10), **Mercenário** (Veterano, nível 10) e **Informante** (Rede de Informações), pelo comportamento telegráfico do próprio Boss, ou por pista narrativa do Mestre. Ver Seção 79 pras fases de Boss, onde a fraqueza normalmente vira decisiva a partir da Fase 2.
 
 ---
 
@@ -3002,3 +3026,113 @@ A campanha atual está desenvolvendo os andares 1 e 2 (`docs/historia_campanha.m
 Com as Seções 65-77, o `SAO_RPG_5e.md` deixa de ser só "armas + profissões" e passa a cobrir o núcleo inteiro de regra necessário pra jogar: atributos, perícias, resistências, PV/CA/iniciativa, condições, XP/nível, descanso, equipamentos/cristais, stat block de monstro/boss, ações de equipe, cursor/Player Killer e economia de uso das Sword Skills — tudo compatível com d20 + modificador + proficiência.
 
 Este documento passa a ser a **fonte única de regra do sistema**, substituindo `docs/guia_sistema_aincrad.md` e `docs/regras_nucleares_campanha.md` (que ficam como redirect histórico — ver Seção 2 desses arquivos).
+
+---
+
+# SAO RPG 5e
+
+## INTEGRAÇÃO DO MASTER DOCUMENT v1.1
+
+> A partir daqui, o documento incorpora o conteúdo criado à parte em "SAO RPG 5e — Master Document v1.1": a camada de MMORPG persistente (guildas, contratos, propriedades, mercado, PK como estilo de jogo), fases de Boss, passivas próprias de cada categoria de combate e a constituição de design que qualquer conteúdo novo (arma, profissão, item, Boss) deve respeitar daqui pra frente. Onde havia sobreposição com o que já estava pronto (Domador, Mestre de Montarias, Cristais/Joalheiro, Fraquezas), o conteúdo foi mesclado nas seções originais (42, 41, 72, 73) em vez de duplicado aqui.
+
+---
+
+# 79. FASES DE BOSS
+
+Um Boss relevante (Seção 73, Nível de Ameaça "Chefe") nunca deve ser só um saco de PV. Estrutura recomendada:
+
+**Fase 1 — Padrão.** Comportamento normal: rotina de Ações/Reações do stat block, sem segredo nenhum.
+
+**Fase 2 — Mudança.** Ao cruzar um gatilho (normalmente 50-66% do PV, ou um evento de cena), o Boss muda de comportamento ou ganha uma Ação nova — e é o ponto em que a Fraqueza dele (Seção 73) costuma se tornar decisiva se o grupo já a descobriu.
+
+**Fase 3 — Pressão de arena.** O ambiente participa: área perigosa, minions, objetivo paralelo (ex. desarmar algo, proteger um NPC) ou uma janela de interrupção/quebra de postura que o grupo precisa forçar.
+
+**Fase final — Enrage.** Padrão definitivo, ataque especial ou aumento de agressividade quando o Boss está perto de cair — a última decisão de risco antes do fim da luta.
+
+Nem todo Boss precisa das 4 fases completas (um Chefe de andar baixo pode ter só 2), mas todo Boss deve ter pelo menos uma mudança de comportamento no meio da luta — nunca um combate 100% estático do primeiro ao último golpe.
+
+---
+
+# 80. PASSIVAS DE CATEGORIA (TANK / DPS / AoE / SCOUTS)
+
+Além das Sword Skills de cada arma (Seções 55-58), cada categoria de combate (Seção 8) concede uma passiva própria, disponível a qualquer arma daquela categoria — reforça a identidade de papel mesmo entre armas diferentes da mesma categoria.
+
+## 🛡️ Tank — Interposição
+
+Reação: quando um aliado a até 5 ft seria atingido por um ataque, o usuário reduz o dano desse ataque em **1d8 + Força ou Constituição** (o maior dos dois). Utilizável 1 vez por rodada.
+
+## ⚔️ DPS — Exploit
+
+Quando o alvo de um ataque está **Caído, Atordoado, Restringido**, ou sob outra abertura clara criada pelo grupo (a critério do Mestre), o primeiro ataque do usuário que acertar esse alvo no turno causa **+1d6** de dano extra.
+
+## 💥 AoE — nota de arbitragem contra Bosses
+
+Habilidades de área funcionam normalmente contra grupos de inimigos. Contra um único Boss, o Mestre só deve aplicar redução de dano quando a própria Sword Skill depender explicitamente de múltiplos alvos pra funcionar (ex. dano dividido por ricochete) — nunca uma redução automática genérica só por a habilidade "ser de área", o que inutilizaria a categoria inteira contra chefes.
+
+## 🗡️ Scouts — Primeira Abertura
+
+Se o usuário iniciar um combate sem ter sido detectado pelo alvo, o primeiro ataque que acertar causa **+1d6** de dano extra.
+
+---
+
+# 81. GUILDAS
+
+Guildas são a principal estrutura de poder social e econômico entre jogadores em Aincrad. Uma guilda possui: nome, nível, reputação, caixa (Col) coletivo, território, sede e ranking entre as guildas do servidor. Guildas podem disputar entre si recursos, contratos, territórios, direito de abate de Boss e eventos de andar. Fazer parte de uma guilda não é obrigatório pra jogar, mas abre contratos, propriedades e oportunidades de mercado que um jogador solo não acessa sozinho (ver Seções 82-84).
+
+---
+
+# 82. PROPRIEDADES
+
+Jogadores e guildas podem possuir propriedades em Aincrad: quarto, casa, loja, oficina, armazém ou sede de guilda. Cada propriedade fornece algum subconjunto de: armazenamento extra, estação de crafting (reduz tempo/CD da profissão correspondente quando usada nela), ponto de comércio, segurança (item guardado lá não pode ser roubado/perdido), produção passiva (ex. horta, forja automatizada de baixo grau) ou reputação na região. Adquirir/manter uma propriedade custa Col — é um dreno de economia legítimo, não um upgrade gratuito.
+
+---
+
+# 83. CONTRATOS
+
+Contratos são a forma padrão de trabalho remunerado dentro da economia de Aincrad: caça, escolta, coleta, entrega, captura, espionagem, proteção ou comércio, entre outros. Todo contrato deve definir: recompensa, prazo, risco envolvido, ganho/perda de reputação e penalidade em caso de falha — um contrato sem risco real ou sem penalidade não é interessante de jogar. O Informante (Seção 32) e o Comerciante (Seção 33) têm vantagem natural pra encontrar e negociar contratos, mas nenhuma profissão fica impedida de aceitar um.
+
+---
+
+# 84. MERCADO
+
+O mercado entre jogadores permite compra, venda, encomenda, leilão e contrato de fornecimento, com preços que variam por oferta/demanda da mesa (não uma tabela fixa e travada). O Comerciante (Seção 33) tem vantagens mecânicas claras nele (Negociação, Avaliação, Rede Comercial), mas qualquer jogador pode negociar diretamente — a profissão acelera e melhora o processo, não o monopoliza.
+
+---
+
+# 85. ECONOMIA PERSISTENTE E PLAYER KILLER COMO ESTILO DE JOGO
+
+A camada de jogo paralelo (ficha online, Seção 2 do sistema) roda sobre: **Col** (moeda), produção das profissões (Seção 30-44), mercado (Seção 84), propriedades (Seção 82), reputação e risco. Reputação afeta como NPCs, guardas e outras guildas tratam o personagem; quanto mais ilegal a atividade (roubo, PK, contrabando), maior o risco de perseguição, perda de item, bloqueio de acesso a região ou contrato de captura contra o próprio jogador.
+
+Isso transforma o cursor **Laranja** (Player Killer, Seção 75) numa escolha de estilo de jogo com consequência real, não só uma cor decorativa: perde acesso a zona segura, comerciantes e contratos legítimos, mas ganha acesso a mercado negro, contratos clandestinos, recompensas de caça a outros PKs e rotas alternativas fora do controle de guarda NPC. Nenhum desses dois lados (legítimo vs. PK) deve ser estritamente melhor que o outro — cada um abre portas que o outro fecha.
+
+---
+
+# 86. REGRA DE OURO DE DESIGN — BALANCEAMENTO AUTOMÁTICO
+
+Toda arma e toda profissão deve alcançar pelo menos o patamar de **A+ dentro do próprio nicho** — nenhuma escolha deve ser estritamente pior que outra em todo contexto. Isso não significa números iguais: significa que cada opção tem pelo menos uma situação em que é a melhor escolha possível da mesa.
+
+Ao criar, corrigir ou expandir qualquer conteúdo do sistema, evitar:
+
+- arma ou profissão claramente inferior às outras da mesma categoria;
+- habilidade sem aplicação prática ou que invalida uma categoria/arma inteira (ex. "área sempre reduzida" matando AoE contra Boss — ver Seção 80);
+- empilhamento infinito de bônus (ver regra de acúmulo, Seção 72) ou loop de ação/reação sem limite;
+- controle (Restringido, Atordoado, impedir ação) sem alguma possibilidade razoável de resposta do alvo;
+- aumento de número sem checar a matemática contra o resto do sistema (dano médio esperado por nível, CD já em uso na Seção 29, etc.).
+
+E sempre preservar: **d20 + atributo + proficiência** como teste padrão, a progressão de Sword Skill 1/2/5/6/10/14/18 (Seção 53), a progressão de profissão 1/5/10/15/20 (Seção 21), as CDs 10/12/15/18/20 (Seção 29), e a identidade de cada arma/profissão (o que ela faz de melhor não deve ser replicado 1:1 por outra).
+
+---
+
+# 87. CHECKLIST DE QUALIDADE PRA NOVO CONTEÚDO
+
+Antes de aprovar uma arma, Sword Skill ou profissão nova, vale a pena responder:
+
+**Arma:** ela é A+ ou melhor em pelo menos uma situação? Tem identidade própria (algo que só ela faz)? Tem fraqueza real, não só cosmética? O dano é compatível com o nível em que desbloqueia? Funciona em PvE, PvP e contra Boss sem quebrar nenhum dos três?
+
+**Profissão:** ela é A+ ou melhor no próprio nicho? Já tem impacto perceptível no nível 1, não só a partir do nível 10+? Continua relevante no nível 20? Tem valor econômico ou narrativo claro (Seção 45)? Alguém teria motivo real pra escolhê-la e não outra?
+
+---
+
+# 88. RESUMO ATUALIZADO — SAO RPG 5e v1.1
+
+Com a integração das Seções 79-87 e os reforços nas Seções 41, 42, 43, 72 e 73, o sistema passa a cobrir, além do núcleo de regra (Seções 1-78): identidade própria por categoria de combate (não só por arma), fases de Boss, economia MMORPG persistente completa (guilda, propriedade, contrato, mercado, PK como estilo de jogo) e uma constituição de design explícita pra qualquer conteúdo futuro. O `SAO_RPG_5e.md` continua sendo a fonte única de regra do sistema.
