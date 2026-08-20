@@ -1,12 +1,17 @@
 -- ============================================================================
--- HOTFIX DE COMPATIBILIDADE TEMPORÁRIA -- autocadastrar_personagem
+-- COMPATIBILIDADE -- autocadastrar_personagem aceita os dois formatos
 -- ============================================================================
--- O site publicado (GitHub Pages, deploy só a partir de `main`) ainda roda
--- o Cadastro.vue ANTIGO, que chama autocadastrar_personagem com o
--- parâmetro `p_atributos` (5 chaves PBTA). A branch `dnd5e-migration`
--- trocou a função pra `p_atributos_dnd` (6 chaves D&D) -- como o DROP+CREATE
--- exige nome de parâmetro igual, isso quebrou o cadastro no site ainda não
--- atualizado (deploy só acontece quando a branch for mergeada em `main`).
+-- Histórico: quando `dnd5e-migration` ainda não tinha sido mergeada em
+-- `main`, o site publicado (GitHub Pages) rodava o Cadastro.vue ANTIGO,
+-- que chama autocadastrar_personagem com `p_atributos` (5 chaves PBTA) --
+-- e a branch nova já tinha trocado a função pra `p_atributos_dnd` (6
+-- chaves D&D), quebrando o cadastro no site ainda não atualizado.
+--
+-- MERGE E DEPLOY JÁ CONFIRMADOS (main, 2026-08-20) -- o Cadastro.vue no ar
+-- manda `p_atributos_dnd`. Este parâmetro extra (`p_atributos`) NÃO
+-- precisa mais ser removido: é opcional, sem custo, e funciona como rede
+-- de segurança pra qualquer aba com o JS antigo ainda em cache do
+-- navegador. Mantido por decisão, não por pendência esquecida.
 --
 -- Postgres não permite dois overloads com a MESMA lista de tipos (9x text +
 -- 1x jsonb) só com nome de parâmetro diferente -- então em vez de overload,
@@ -16,8 +21,6 @@
 -- `p_atributos_dnd` que fica no default), caller novo manda só
 -- `p_atributos_dnd` (ignora este). CREATE OR REPLACE aceita adicionar
 -- parâmetro opcional no fim sem precisar DROP.
--- Remover esta função extra quando `dnd5e-migration` for mergeado em
--- `main` e o deploy do Cadastro.vue novo estiver no ar.
 -- ============================================================================
 
 CREATE OR REPLACE FUNCTION public.autocadastrar_personagem(
