@@ -58,13 +58,13 @@ Sons: nenhum pássaro sobre a água. Nas margens sim, sobre o lago não.
 
 | Ação                            | Teste            | 10+                                                        | 7-9                                                 | 6-                                                                    |
 | ------------------------------- | ---------------- | ---------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------- |
-| Pescar em água funda            | 2d6+Reflexo      | 3 peixes e um deles é de espécie que ninguém reconhece     | 2 peixes comuns                                     | A linha volta cortada em corte limpo                                  |
-| Mergulhar até a Ruína Submersa  | 2d6+Corpo        | Alcança a estrutura e volta com uma peça                   | Alcança, mas volta sem fôlego pra descrever direito | Perde a direção no escuro; teste de Espírito pra não entrar em pânico |
-| Rastrear o Lacustre Vagador     | 2d6+Reflexo      | Acha as garras no barro e sabe a rota dele                 | Acha rastro velho                                   | Ele acha você primeiro                                                |
-| Preparar Isca (Ferrão de Vespa) | 2d6+Técnica      | Isca perfeita: primeira tentativa de doma com vantagem     | Isca funciona uma vez só                            | A isca atrai a criatura errada                                        |
-| Domar o Lacustre Vagador        | 2d6+Técnica x8   | 1 sucesso limpo                                            | 1 sucesso, ele reage mal (dano leve ou recua)       | 2 falhas seguidas encerram a tentativa                                |
-| Examinar a Pedra Afundada       | 2d6+Conhecimento | Vê que tem gravação **na face de baixo**, virada pro fundo | Vê que é talhada, não natural                       | Pedra é pedra                                                         |
-| Navegar até a Ilha de Pemberton | 2d6+Reflexo      | Travessia tranquila                                        | Chega, mas o barco embarca água                     | Correnteza inexistente empurra vocês pro sul                          |
+| Pescar em água funda            | d20+Destreza      | 3 peixes e um deles é de espécie que ninguém reconhece     | 2 peixes comuns                                     | A linha volta cortada em corte limpo                                  |
+| Mergulhar até a Ruína Submersa  | d20+Força        | Alcança a estrutura e volta com uma peça                   | Alcança, mas volta sem fôlego pra descrever direito | Perde a direção no escuro; teste de Espírito pra não entrar em pânico |
+| Rastrear o Lacustre Vagador     | d20+Destreza      | Acha as garras no barro e sabe a rota dele                 | Acha rastro velho                                   | Ele acha você primeiro                                                |
+| Preparar Isca (Ferrão de Vespa) | d20+Destreza      | Isca perfeita: primeira tentativa de doma com vantagem     | Isca funciona uma vez só                            | A isca atrai a criatura errada                                        |
+| Domar o Lacustre Vagador        | d20+Destreza x8   | 1 sucesso limpo                                            | 1 sucesso, ele reage mal (dano leve ou recua)       | 2 falhas seguidas encerram a tentativa                                |
+| Examinar a Pedra Afundada       | d20+Inteligência | Vê que tem gravação **na face de baixo**, virada pro fundo | Vê que é talhada, não natural                       | Pedra é pedra                                                         |
+| Navegar até a Ilha de Pemberton | d20+Destreza      | Travessia tranquila                                        | Chega, mas o barco embarca água                     | Correnteza inexistente empurra vocês pro sul                          |
 
 ### Só o mestre
 
@@ -143,11 +143,11 @@ Inscrição, da Ruína de Superfície de Verrun e da Pedra Rúnica Solitária.
 
 | Ação                                | Teste            | 10+                                                                    | 7-9                                   | 6-                                                    |
 | ----------------------------------- | ---------------- | ---------------------------------------------------------------------- | ------------------------------------- | ----------------------------------------------------- |
-| Atravessar a água rasa a pé         | 2d6+Reflexo      | Passa sem agitar a água                                                | Passa, a serpente percebe e se enrola | Bote das rasas: conta como 2 golpes                   |
-| Copiar a Marca na Pedra Central     | 2d6+Conhecimento | Cópia fiel: serve como pista transportável pro Estudioso               | Cópia parcial                         | Copia errado e não sabe disso                         |
-| Comparar com outras marcas do andar | 2d6+Conhecimento | Confirma que é o mesmo alfabeto (4 ocorrências)                        | Suspeita da ligação                   | Conclui que são coisas diferentes                     |
+| Atravessar a água rasa a pé         | d20+Destreza      | Passa sem agitar a água                                                | Passa, a serpente percebe e se enrola | Bote das rasas: conta como 2 golpes                   |
+| Copiar a Marca na Pedra Central     | d20+Inteligência | Cópia fiel: serve como pista transportável pro Estudioso               | Cópia parcial                         | Copia errado e não sabe disso                         |
+| Comparar com outras marcas do andar | d20+Inteligência | Confirma que é o mesmo alfabeto (4 ocorrências)                        | Suspeita da ligação                   | Conclui que são coisas diferentes                     |
 | Deixar isca 3 dias no mesmo ponto   | —                | Sem teste: é compromisso de tempo. Destrava a doma da Serpente         |                                       |                                                       |
-| Domar a Serpente                    | 2d6+Técnica x6   | 1 sucesso limpo                                                        | 1 sucesso, ela recua pro fundo        | 2 falhas encerram, e ela evita o ponto por uma semana |
+| Domar a Serpente                    | d20+Destreza x6   | 1 sucesso limpo                                                        | 1 sucesso, ela recua pro fundo        | 2 falhas encerram, e ela evita o ponto por uma semana |
 | Acampar na ilha                     | —                | Sem teste. Descanso completo, e é um dos lugares mais bonitos do andar |                                       |                                                       |
 
 ### Só o mestre
@@ -214,11 +214,11 @@ o coro parar **sem** o grupo parar, tem outra coisa se movendo.
 
 | Ação                             | Teste            | 10+                                                | 7-9                                           | 6-                                                   |
 | -------------------------------- | ---------------- | -------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------- |
-| Atravessar sem afundar           | 2d6+Corpo        | Atravessa rápido, ninguém se molha acima do joelho | Atravessa, mas alguém perde uma bota no barro | Alguém atola: rodada inteira pra sair, e o coro para |
-| Notar o silêncio das rãs         | 2d6+Espírito     | Sabe exatamente de onde vem a ameaça               | Sabe que tem algo                             | Percebe quando já está em cima                       |
-| Colher Ferrão Venenoso (Rã)      | 2d6+Técnica      | Glândula intacta, sem se envenenar                 | Glândula rompida, valor pela metade           | Auto-envenenamento (sem Luvas de Seda)               |
-| Extrair de Sanguessuga Gigante   | 2d6+Reflexo      | Material limpo                                     | Material sujo                                 | Ela gruda em você                                    |
-| Achar caminho firme (Cartógrafo) | 2d6+Conhecimento | Marca uma rota que corta o brejo pela metade       | Marca uma rota que funciona uma vez           | A rota que você marcou some na próxima cheia         |
+| Atravessar sem afundar           | d20+Força        | Atravessa rápido, ninguém se molha acima do joelho | Atravessa, mas alguém perde uma bota no barro | Alguém atola: rodada inteira pra sair, e o coro para |
+| Notar o silêncio das rãs         | d20+Sabedoria     | Sabe exatamente de onde vem a ameaça               | Sabe que tem algo                             | Percebe quando já está em cima                       |
+| Colher Ferrão Venenoso (Rã)      | d20+Destreza      | Glândula intacta, sem se envenenar                 | Glândula rompida, valor pela metade           | Auto-envenenamento (sem Luvas de Seda)               |
+| Extrair de Sanguessuga Gigante   | d20+Destreza      | Material limpo                                     | Material sujo                                 | Ela gruda em você                                    |
+| Achar caminho firme (Cartógrafo) | d20+Inteligência | Marca uma rota que corta o brejo pela metade       | Marca uma rota que funciona uma vez           | A rota que você marcou some na próxima cheia         |
 
 ### Só o mestre
 
@@ -277,11 +277,11 @@ gafanhotos estão. É a deixa da quest sem você precisar anunciar nada.
 
 | Ação                             | Teste       | 10+                                                            | 7-9                                        | 6-                               |
 | -------------------------------- | ----------- | -------------------------------------------------------------- | ------------------------------------------ | -------------------------------- |
-| Trabalhar um dia na lavoura      | 2d6+Corpo   | Ganha a Calça de Trabalho e a confiança do fazendeiro          | Ganha comida e um "obrigado"               | Estraga uma leira; ele fica seco |
-| Coletar Mel (colmeia selvagem)   | 2d6+Reflexo | Mel x2, sem ferroada                                           | Mel x1 e ferroadas                         | Enxame; fuga obrigatória         |
+| Trabalhar um dia na lavoura      | d20+Força   | Ganha a Calça de Trabalho e a confiança do fazendeiro          | Ganha comida e um "obrigado"               | Estraga uma leira; ele fica seco |
+| Coletar Mel (colmeia selvagem)   | d20+Destreza | Mel x2, sem ferroada                                           | Mel x1 e ferroadas                         | Enxame; fuga obrigatória         |
 | Perguntar o que ele está olhando | —           | Sem teste. Ele conta dos gafanhotos. Gancho de `bounty_05`     |                                            |                                  |
 | Comprar comida preparada         | —           | 20-40 Col; bônus temporário se feito por Cozinheiro            |                                            |                                  |
-| Subir num moinho                 | 2d6+Reflexo | Vista do vale inteiro; vantagem no próximo teste de Cartógrafo | Sobe, mas o mecanismo range e o dono grita | Escada quebra                    |
+| Subir num moinho                 | d20+Destreza | Vista do vale inteiro; vantagem no próximo teste de Cartógrafo | Sobe, mas o mecanismo range e o dono grita | Escada quebra                    |
 
 ### Só o mestre
 
@@ -350,11 +350,11 @@ bem, volta na sessão seguinte e o terraço está pior. Aí a mesa entende.
 
 | Ação                            | Teste            | 10+                                       | 7-9                                   | 6-                                                  |
 | ------------------------------- | ---------------- | ----------------------------------------- | ------------------------------------- | --------------------------------------------------- |
-| Abater gafanhotos em área       | 2d6+Técnica      | 4 de uma vez (Foice)                      | 2, e a debandada começa               | Debandada: complicação em todos os testes da rodada |
-| Descobrir de onde eles vêm      | 2d6+Conhecimento | Acha as fendas de pedra e a ninhada       | Sabe que vêm de baixo                 | Conclui que "são migratórios"                       |
-| Queimar a ninhada               | 2d6+Técnica      | Ninhada destruída, praga encerrada de vez | Destruída, mas o fogo pega numa leira | Fogo se espalha; o vale inteiro te cobra            |
-| Colher Perna Serrilhada         | 2d6+Reflexo      | 3 unidades (Cozinheiro/Ferreiro)          | 2 unidades                            | Quebra as três                                      |
-| Salvar o que sobrou da colheita | 2d6+Corpo        | Metade da colheita salva; Solveig te deve | Um quarto                             | Nada; e eles viram vocês tentando                   |
+| Abater gafanhotos em área       | d20+Destreza      | 4 de uma vez (Foice)                      | 2, e a debandada começa               | Debandada: complicação em todos os testes da rodada |
+| Descobrir de onde eles vêm      | d20+Inteligência | Acha as fendas de pedra e a ninhada       | Sabe que vêm de baixo                 | Conclui que "são migratórios"                       |
+| Queimar a ninhada               | d20+Destreza      | Ninhada destruída, praga encerrada de vez | Destruída, mas o fogo pega numa leira | Fogo se espalha; o vale inteiro te cobra            |
+| Colher Perna Serrilhada         | d20+Destreza      | 3 unidades (Cozinheiro/Ferreiro)          | 2 unidades                            | Quebra as três                                      |
+| Salvar o que sobrou da colheita | d20+Força        | Metade da colheita salva; Solveig te deve | Um quarto                             | Nada; e eles viram vocês tentando                   |
 
 ### Só o mestre
 
@@ -411,11 +411,11 @@ hora de exploração pede teste de Corpo contra veneno/sanguessuga.
 
 | Ação                                 | Teste            | 10+                                            | 7-9                                  | 6-                                         |
 | ------------------------------------ | ---------------- | ---------------------------------------------- | ------------------------------------ | ------------------------------------------ |
-| Testar a profundidade antes de pisar | 2d6+Conhecimento | Rota segura pra todo o grupo                   | Rota segura pra você                 | Alguém afunda até o peito com equipamento  |
-| Investigar a Ruína Afundando         | 2d6+Conhecimento | Entra pela janela; há um cômodo seco lá dentro | Entra, mas a estrutura geme          | O piso cede e a ruína afunda mais um palmo |
-| Resistir a veneno de ambiente        | 2d6+Corpo        | Passa incólume                                 | Náusea: complicação no próximo teste | Envenenado; precisa de Antídoto ou Médico  |
-| Coletar material de Sanguessuga      | 2d6+Reflexo      | Material limpo x2                              | x1                                   | Ela gruda; teste de Corpo pra arrancar     |
-| Sair do pântano sem rota marcada     | 2d6+Conhecimento | Saem no ponto certo                            | Saem num ponto errado, longe         | Passam a noite lá dentro                   |
+| Testar a profundidade antes de pisar | d20+Inteligência | Rota segura pra todo o grupo                   | Rota segura pra você                 | Alguém afunda até o peito com equipamento  |
+| Investigar a Ruína Afundando         | d20+Inteligência | Entra pela janela; há um cômodo seco lá dentro | Entra, mas a estrutura geme          | O piso cede e a ruína afunda mais um palmo |
+| Resistir a veneno de ambiente        | d20+Força        | Passa incólume                                 | Náusea: complicação no próximo teste | Envenenado; precisa de Antídoto ou Médico  |
+| Coletar material de Sanguessuga      | d20+Destreza      | Material limpo x2                              | x1                                   | Ela gruda; teste de Corpo pra arrancar     |
+| Sair do pântano sem rota marcada     | d20+Inteligência | Saem no ponto certo                            | Saem num ponto errado, longe         | Passam a noite lá dentro                   |
 
 ### Só o mestre
 
@@ -478,11 +478,11 @@ qualquer descrição.
 
 | Ação                             | Teste            | 10+                                                    | 7-9                        | 6-                                      |
 | -------------------------------- | ---------------- | ------------------------------------------------------ | -------------------------- | --------------------------------------- |
-| Extrair Cristal Bruto            | 2d6+Técnica      | 2 unidades, +1 de vibração                             | 1 unidade, +1 de vibração  | Racha o veio, +2 de vibração            |
-| Atravessar a Câmara dos Reflexos | 2d6+Conhecimento | Passa direto                                           | Passa, mas perde meia hora | Anda em círculo e não percebe           |
-| Andar sem fazer vibração         | 2d6+Reflexo      | Nenhum acréscimo no contador                           | +1 mesmo assim             | +2                                      |
-| Enfrentar o Verme de Cristal     | 2d6+Corpo        | Cabeça mole: 2 golpes                                  | 1 golpe                    | Ele mergulha na rocha e reaparece atrás |
-| Investigar a Fenda Fria          | 2d6+Conhecimento | Sente ar gelado saindo, constante, de um lugar fechado | Percebe que é frio demais  | Não nota nada                           |
+| Extrair Cristal Bruto            | d20+Destreza      | 2 unidades, +1 de vibração                             | 1 unidade, +1 de vibração  | Racha o veio, +2 de vibração            |
+| Atravessar a Câmara dos Reflexos | d20+Inteligência | Passa direto                                           | Passa, mas perde meia hora | Anda em círculo e não percebe           |
+| Andar sem fazer vibração         | d20+Destreza      | Nenhum acréscimo no contador                           | +1 mesmo assim             | +2                                      |
+| Enfrentar o Verme de Cristal     | d20+Força        | Cabeça mole: 2 golpes                                  | 1 golpe                    | Ele mergulha na rocha e reaparece atrás |
+| Investigar a Fenda Fria          | d20+Inteligência | Sente ar gelado saindo, constante, de um lugar fechado | Percebe que é frio demais  | Não nota nada                           |
 
 ### Só o mestre
 
@@ -544,11 +544,11 @@ E o maquinário não corresponde a nada. As engrenagens são de outra escala.
 
 | Ação                             | Teste            | 10+                                                               | 7-9                                          | 6-                                 |
 | -------------------------------- | ---------------- | ----------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
-| Coletar Sucata Aproveitável      | 2d6+Técnica      | 3 unidades de qualidade decente                                   | 2 unidades ruins                             | Corta a mão numa lasca (sem Luvas) |
-| Analisar o Maquinário Sem Origem | 2d6+Conhecimento | Entende que ele foi feito pra mover algo do tamanho de um andar   | Entende que é grande demais pro contexto     | "Máquina velha de pedreira"        |
-| Descer até o fundo alagado       | 2d6+Reflexo      | Desce e volta com o que tiver lá                                  | Desce, mas a rampa cede atrás                | Queda: complicação séria           |
-| Achar ferramenta ainda boa       | 2d6+Conhecimento | Picareta/pé de cabra em estado de uso                             | Ferramenta torta                             | Só ferro podre                     |
-| Rastrear quem esteve aqui        | 2d6+Conhecimento | Descobre que ninguém esteve — o desgaste é anterior ao lançamento | Descobre que o desgaste não bate com o tempo | Conclui que teve gente             |
+| Coletar Sucata Aproveitável      | d20+Destreza      | 3 unidades de qualidade decente                                   | 2 unidades ruins                             | Corta a mão numa lasca (sem Luvas) |
+| Analisar o Maquinário Sem Origem | d20+Inteligência | Entende que ele foi feito pra mover algo do tamanho de um andar   | Entende que é grande demais pro contexto     | "Máquina velha de pedreira"        |
+| Descer até o fundo alagado       | d20+Destreza      | Desce e volta com o que tiver lá                                  | Desce, mas a rampa cede atrás                | Queda: complicação séria           |
+| Achar ferramenta ainda boa       | d20+Inteligência | Picareta/pé de cabra em estado de uso                             | Ferramenta torta                             | Só ferro podre                     |
+| Rastrear quem esteve aqui        | d20+Inteligência | Descobre que ninguém esteve — o desgaste é anterior ao lançamento | Descobre que o desgaste não bate com o tempo | Conclui que teve gente             |
 
 ### Só o mestre
 

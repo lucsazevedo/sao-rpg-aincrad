@@ -7,7 +7,7 @@ Complemento a `00_indice_primeira_aventura.md`. As quatro quests da primeira
 aventura (`01_javalis_na_pastagem.md` a `04_o_caminho_ate_o_labirinto.md`)
 já têm prosa completa e continuam sendo o ponto de entrada da campanha. As
 **56 quests abaixo** completam o andar 1 até um total de **60** — cada uma
-com gancho, estrutura em beats, múltiplos testes (2d6+atributo, 10+/7-9/6-),
+com gancho, estrutura em beats, múltiplos testes (d20+atributo, 10+/7-9/6-),
 encontro (quando aplicável), complicação, e recompensa proporcional à
 dificuldade real da tarefa.
 
@@ -135,9 +135,9 @@ que vive de se sentir segura.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — rastrear os sinais sem perder tempo
-- 2d6+Corpo ou Reflexo — o combate em si (ameaça fraca, golpes 1-2)
-- 2d6+Conhecimento — notar a marca no tronco ao voltar (só quem prestar atenção vê)
+- d20+Destreza — rastrear os sinais sem perder tempo
+- d20+Força ou Reflexo — o combate em si (ameaça fraca, golpes 1-2)
+- d20+Inteligência — notar a marca no tronco ao voltar (só quem prestar atenção vê)
 
 **NPCs na cena**
 
@@ -222,9 +222,9 @@ específico.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — examinar o entalhe e perceber que é intencional, não natural
-- 2d6+Reflexo — encontrar as marcas adicionais sem se perder na mata fechada
-- 2d6+Espírito — juntar as marcas num padrão de direção coerente
+- d20+Inteligência — examinar o entalhe e perceber que é intencional, não natural
+- d20+Destreza — encontrar as marcas adicionais sem se perder na mata fechada
+- d20+Sabedoria — juntar as marcas num padrão de direção coerente
 
 **Complicações úteis**
 
@@ -294,8 +294,8 @@ depende dele pra madeira do dia a dia.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — reconhecer Madeira Nodosa de verdade em vez de confundir com madeira comum
-- 2d6+Técnica — cortar sem rachar o veio (madeira rachada vale menos)
+- d20+Inteligência — reconhecer Madeira Nodosa de verdade em vez de confundir com madeira comum
+- d20+Destreza — cortar sem rachar o veio (madeira rachada vale menos)
 
 **NPCs na cena**
 
@@ -372,8 +372,8 @@ qualquer um que apareça pedindo respostas.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — convencer o Eremita de que o interesse é genuíno, não curiosidade vazia
-- 2d6+Conhecimento — absorver o código rápido o bastante pra aplicar nas marcas já vistas
+- d20+Sabedoria — convencer o Eremita de que o interesse é genuíno, não curiosidade vazia
+- d20+Inteligência — absorver o código rápido o bastante pra aplicar nas marcas já vistas
 
 **NPCs na cena**
 
@@ -449,9 +449,9 @@ Nepenthes comum sabe que essa versão é mais perigosa e mais valiosa.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — rastrear a variante sem alarmar outros monstros da área
-- 2d6+Reflexo — desviar do spray corrosivo (falha danifica equipamento)
-- 2d6+Técnica — extrair o Ovule sem esmagar (falha = item danificado, ainda vendável por menos)
+- d20+Inteligência — rastrear a variante sem alarmar outros monstros da área
+- d20+Destreza — desviar do spray corrosivo (falha danifica equipamento)
+- d20+Destreza — extrair o Ovule sem esmagar (falha = item danificado, ainda vendável por menos)
 
 **Complicações úteis**
 
@@ -517,9 +517,9 @@ morador de Horunka já catalogou.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — avaliar o tamanho real do ninho antes de decidir a abordagem
-- 2d6+Corpo — o combate propriamente dito (múltiplas vespas, ameaça comum cada)
-- 2d6+Reflexo — conter a dispersão do enxame se o combate demorar demais
+- d20+Inteligência — avaliar o tamanho real do ninho antes de decidir a abordagem
+- d20+Força — o combate propriamente dito (múltiplas vespas, ameaça comum cada)
+- d20+Destreza — conter a dispersão do enxame se o combate demorar demais
 
 **Complicações úteis**
 
@@ -592,9 +592,9 @@ perímetro enquanto ele trabalha de perto.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — manter distância segura sem perder o javali de vista
-- 2d6+Técnica — a aproximação final do Domador (o grupo pode ajudar com um teste de apoio)
-- 2d6+Espírito — manter a calma do grupo se o javali reagir mal (evita escalar pra combate desnecessário)
+- d20+Destreza — manter distância segura sem perder o javali de vista
+- d20+Destreza — a aproximação final do Domador (o grupo pode ajudar com um teste de apoio)
+- d20+Sabedoria — manter a calma do grupo se o javali reagir mal (evita escalar pra combate desnecessário)
 
 **NPCs na cena**
 
@@ -661,9 +661,9 @@ parou de caçar.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — decodificar as marcas restantes sem erro
-- 2d6+Corpo ou Técnica — abrir o esconderijo sem danificar o conteúdo
-- (Opcional) 2d6+Espírito — decidir como agir com o que foi encontrado, se o grupo quiser forçar uma cena de peso
+- d20+Inteligência — decodificar as marcas restantes sem erro
+- d20+Força ou Técnica — abrir o esconderijo sem danificar o conteúdo
+- (Opcional) d20+Sabedoria — decidir como agir com o que foi encontrado, se o grupo quiser forçar uma cena de peso
 
 **Complicações úteis**
 
@@ -743,8 +743,8 @@ acha que é sério. Ninguém foi verificar de perto.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — ter paciência suficiente pra observar sem se distrair
-- 2d6+Conhecimento — identificar que o padrão de nado aponta pra uma
+- d20+Sabedoria — ter paciência suficiente pra observar sem se distrair
+- d20+Inteligência — identificar que o padrão de nado aponta pra uma
   direção específica no lago (rumo ao redemoinho, sem nomear ainda)
 
 **NPCs na cena**
@@ -810,8 +810,8 @@ errada de um jeito difícil de descrever.
 
 **Testes sugeridos**
 
-- 2d6+Corpo — nadar contra a correnteza sem ser puxado pro centro
-- 2d6+Conhecimento — perceber que o comportamento da água é artificial, não natural
+- d20+Força — nadar contra a correnteza sem ser puxado pro centro
+- d20+Inteligência — perceber que o comportamento da água é artificial, não natural
 
 **Complicações úteis**
 
@@ -884,9 +884,9 @@ direção errada.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — reconhecer que enfrentar agora é má ideia (informa a decisão do grupo)
-- 2d6+Reflexo — organizar o recuo sem deixar ninguém pra trás
-- 2d6+Corpo — se alguém for pego durante a perseguição, resistir/escapar do primeiro golpe
+- d20+Inteligência — reconhecer que enfrentar agora é má ideia (informa a decisão do grupo)
+- d20+Destreza — organizar o recuo sem deixar ninguém pra trás
+- d20+Força — se alguém for pego durante a perseguição, resistir/escapar do primeiro golpe
 
 **Encontro**
 
@@ -960,8 +960,8 @@ motivo — ela transforma um encontro de sobrevivência num de controle.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — preparar a isca corretamente (proporção certa, tempo certo)
-- 2d6+Espírito — manter a paciência durante o tempo de observação exigido pela receita
+- d20+Inteligência — preparar a isca corretamente (proporção certa, tempo certo)
+- d20+Sabedoria — manter a paciência durante o tempo de observação exigido pela receita
 
 **NPCs na cena**
 
@@ -1027,9 +1027,9 @@ uma criatura que pode facilmente vencer um combate direto.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — posicionar a isca sem se expor
-- 2d6+Técnica — a aproximação de doma em si (bônus se a isca foi qualidade máxima em `lago_04`)
-- 2d6+Espírito — manter a calma do grupo durante a aproximação (uma reação de pânico assusta a criatura)
+- d20+Destreza — posicionar a isca sem se expor
+- d20+Destreza — a aproximação de doma em si (bônus se a isca foi qualidade máxima em `lago_04`)
+- d20+Sabedoria — manter a calma do grupo durante a aproximação (uma reação de pânico assusta a criatura)
 
 **Complicações úteis**
 
@@ -1096,8 +1096,8 @@ coisa primeiro.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — conduzir a conversa até o ponto sério sem soar apressado
-- 2d6+Conhecimento — perceber o valor real do que ele está dizendo, mesmo quando fala por metáfora
+- d20+Sabedoria — conduzir a conversa até o ponto sério sem soar apressado
+- d20+Inteligência — perceber o valor real do que ele está dizendo, mesmo quando fala por metáfora
 
 **NPCs na cena**
 
@@ -1133,8 +1133,8 @@ da água.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — puxar o assunto sério sem quebrar o clima social da conversa
-- 2d6+Conhecimento — reconhecer quando ele está sendo evasivo por educação vs. por realmente não saber
+- d20+Sabedoria — puxar o assunto sério sem quebrar o clima social da conversa
+- d20+Inteligência — reconhecer quando ele está sendo evasivo por educação vs. por realmente não saber
 
 **Recompensas**
 
@@ -1182,8 +1182,8 @@ comenta fica bem no meio de um trecho instável.
 
 **Testes sugeridos**
 
-- 2d6+Corpo — atravessar o trecho instável sem escorregar
-- 2d6+Reflexo — se o grupo escolher o caminho curto, reagir ao vento forte
+- d20+Força — atravessar o trecho instável sem escorregar
+- d20+Destreza — se o grupo escolher o caminho curto, reagir ao vento forte
 
 **Complicação**
 
@@ -1223,8 +1223,8 @@ ninguém quer conhecer de perto.
 
 **Testes sugeridos**
 
-- 2d6+Técnica — extrair o minério (quantidade e qualidade dependem do resultado)
-- 2d6+Conhecimento — perceber sinais de que algo se aproximou antes que seja tarde demais
+- d20+Destreza — extrair o minério (quantidade e qualidade dependem do resultado)
+- d20+Inteligência — perceber sinais de que algo se aproximou antes que seja tarde demais
 
 **Complicação**
 
@@ -1266,8 +1266,8 @@ pé pesa tanto quanto errar o golpe.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — manter o equilíbrio na saliência durante o combate
-- 2d6+Corpo ou Reflexo — o combate em si (ameaça comum, golpes 3-4, mas com vantagem de altura pra criatura)
+- d20+Destreza — manter o equilíbrio na saliência durante o combate
+- d20+Força ou Reflexo — o combate em si (ameaça comum, golpes 3-4, mas com vantagem de altura pra criatura)
 
 **Encontro**
 
@@ -1311,8 +1311,8 @@ região documentou o que tem do outro lado, só que existe.
 
 **Testes sugeridos**
 
-- 2d6+Corpo — atravessar o espaço apertado sem ficar preso
-- 2d6+Conhecimento — notar detalhes do espaço do outro lado que indicam visita anterior
+- d20+Força — atravessar o espaço apertado sem ficar preso
+- d20+Inteligência — notar detalhes do espaço do outro lado que indicam visita anterior
 
 **Complicação**
 
@@ -1350,8 +1350,8 @@ rocha. Raro mesmo pros padrões de Grauvenn.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — identificar o melhor cristal disponível
-- 2d6+Técnica — extrair sem rachar
+- d20+Inteligência — identificar o melhor cristal disponível
+- d20+Destreza — extrair sem rachar
 
 **Recompensas**
 
@@ -1388,8 +1388,8 @@ Grauvenn deveria esconder.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — entender o que foi encontrado
-- 2d6+Espírito — manter a calma se algo reagir à presença do grupo
+- d20+Inteligência — entender o que foi encontrado
+- d20+Sabedoria — manter a calma se algo reagir à presença do grupo
 
 **Complicação**
 
@@ -1440,8 +1440,8 @@ pode chacoalhar demais".
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — manter o ritmo de viagem sem perder tempo
-- 2d6+Corpo — atravessar sem danificar o pacote se o caminho tiver algum obstáculo
+- d20+Destreza — manter o ritmo de viagem sem perder tempo
+- d20+Força — atravessar sem danificar o pacote se o caminho tiver algum obstáculo
 
 **Recompensas**
 
@@ -1479,8 +1479,8 @@ que um dos dois acha que o outro está usando pra sufocar a concorrência.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — mediar sem escalar a tensão
-- 2d6+Conhecimento — entender a economia real por trás da briga (ajuda a propor uma solução que funcione de verdade)
+- d20+Sabedoria — mediar sem escalar a tensão
+- d20+Inteligência — entender a economia real por trás da briga (ajuda a propor uma solução que funcione de verdade)
 
 **Complicação**
 
@@ -1525,8 +1525,8 @@ guardam pra quem parece saber fazer a pergunta certa.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — fazer as perguntas certas, na ordem certa
-- 2d6+Espírito — manter a postura calma mesmo se a negociação esfriar
+- d20+Inteligência — fazer as perguntas certas, na ordem certa
+- d20+Sabedoria — manter a postura calma mesmo se a negociação esfriar
 
 **NPCs na cena**
 
@@ -1582,8 +1582,8 @@ fáceis de negociar.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — achar o vendedor certo sem perder tempo
-- 2d6+Espírito ou Conhecimento — negociar o preço
+- d20+Inteligência — achar o vendedor certo sem perder tempo
+- d20+Sabedoria ou Conhecimento — negociar o preço
 
 **Recompensas**
 
@@ -1619,8 +1619,8 @@ está subindo pra um nível que passa longe de resolução fácil.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — a conversa com cada representante de guilda
-- 2d6+Conhecimento — se tentar reconciliar, entender o que cada lado realmente quer por trás do orgulho
+- d20+Sabedoria — a conversa com cada representante de guilda
+- d20+Inteligência — se tentar reconciliar, entender o que cada lado realmente quer por trás do orgulho
 
 **Complicação**
 
@@ -1666,8 +1666,8 @@ um chefe de andar cair. O preço não é só Col.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — avaliar se o preço pedido é justo (evita ser enganado)
-- 2d6+Espírito — negociar o preço pra baixo sem ofender o corretor
+- d20+Inteligência — avaliar se o preço pedido é justo (evita ser enganado)
+- d20+Sabedoria — negociar o preço pra baixo sem ofender o corretor
 
 **Complicação**
 
@@ -1709,8 +1709,8 @@ Ombric — rota conhecida por ter sido palco de assaltos antes (ver ponto
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — perceber sinais de emboscada antes que aconteça
-- 2d6+Corpo — defender a carga se o ataque acontecer
+- d20+Destreza — perceber sinais de emboscada antes que aconteça
+- d20+Força — defender a carga se o ataque acontecer
 
 **Encontro (se aplicável)**
 
@@ -1810,8 +1810,8 @@ tempo — raspado, de propósito, com ferramenta.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — examinar com respeito suficiente pra não incomodar o Zelador
-- 2d6+Conhecimento — perceber que a raspagem foi feita por alguém específico, não é vandalismo aleatório
+- d20+Sabedoria — examinar com respeito suficiente pra não incomodar o Zelador
+- d20+Inteligência — perceber que a raspagem foi feita por alguém específico, não é vandalismo aleatório
 
 **NPCs na cena**
 
@@ -1877,7 +1877,7 @@ assim que perguntam sobre a lápide, e não vai facilitar pra qualquer um.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — convencer o Zelador de que o interesse é respeitoso, não curiosidade vazia
+- d20+Sabedoria — convencer o Zelador de que o interesse é respeitoso, não curiosidade vazia
 
 **NPCs na cena**
 
@@ -1942,8 +1942,8 @@ possíveis indícios reais sobre a lápide sem nome.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — separar material comum de indício real
-- 2d6+Reflexo — não danificar nada durante a busca
+- d20+Inteligência — separar material comum de indício real
+- d20+Destreza — não danificar nada durante a busca
 
 **NPCs na cena**
 
@@ -2018,8 +2018,8 @@ sempre em horários diferentes, sem nunca ser notado.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — entender a história completa sem tirar conclusões precipitadas
-- 2d6+Espírito — reagir à revelação sem julgar o Zelador ou o visitante anônimo abertamente diante dele
+- d20+Inteligência — entender a história completa sem tirar conclusões precipitadas
+- d20+Sabedoria — reagir à revelação sem julgar o Zelador ou o visitante anônimo abertamente diante dele
 
 **Complicação**
 
@@ -2082,7 +2082,7 @@ o grupo decide o que fazer com isso.
 
 **Sem teste fixo** — é decisão de roleplay puro. Se o mestre quiser um
 teste pra uma abordagem específica (ex: convencer o visitante a se
-perdoar), use 2d6+Espírito.
+perdoar), use d20+Sabedoria.
 
 **Complicações úteis**
 
@@ -2141,7 +2141,7 @@ vegetação que cresceu demais, reorganizar registros.
 
 **Testes sugeridos**
 
-- 2d6+Corpo — o trabalho braçal em si
+- d20+Força — o trabalho braçal em si
 
 **NPCs na cena**
 
@@ -2219,9 +2219,9 @@ como só mais uma música de ambiente.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — decifrar a cantiga inteira e associar cada cor ao
+- d20+Inteligência — decifrar a cantiga inteira e associar cada cor ao
   tipo de cristal certo (Teleporte/Cura/Antídoto/Luz/Barreira)
-- 2d6+Espírito — convencer o Músico a repetir a cantiga com calma o
+- d20+Sabedoria — convencer o Músico a repetir a cantiga com calma o
   suficiente pra anotar cada verso
 
 **NPCs na cena**
@@ -2290,8 +2290,8 @@ pouco menos, Luz e Barreira são raros de verdade.
 
 **Testes sugeridos**
 
-- 2d6+Técnica — o encaixe físico dos cristais (precisão manual)
-- 2d6+Conhecimento — confirmar a sequência antes de começar a encaixar (evita erro caro)
+- d20+Destreza — o encaixe físico dos cristais (precisão manual)
+- d20+Inteligência — confirmar a sequência antes de começar a encaixar (evita erro caro)
 
 **Complicação**
 
@@ -2362,7 +2362,7 @@ pode ser um ponto fraco real na defesa do castelo.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — investigar sem ser notado
+- d20+Destreza — investigar sem ser notado
 
 **Complicação**
 
@@ -2419,7 +2419,7 @@ pátio ou na muralha, foi ele.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — conduzir a conversa sem parecer ameaçador ou desesperado
+- d20+Sabedoria — conduzir a conversa sem parecer ameaçador ou desesperado
 
 **NPCs na cena**
 
@@ -2488,7 +2488,7 @@ se encontram.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — separar informação real de red herring ao cruzar as fontes
+- d20+Inteligência — separar informação real de red herring ao cruzar as fontes
 
 **Complicações úteis**
 
@@ -2627,8 +2627,8 @@ descanso seguro.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — mapear o layout com precisão
-- 2d6+Reflexo — evitar engajamento desnecessário com uma patrulha
+- d20+Inteligência — mapear o layout com precisão
+- d20+Destreza — evitar engajamento desnecessário com uma patrulha
 
 **NPCs na cena**
 
@@ -2713,8 +2713,8 @@ nenhuma.
 
 **Testes sugeridos**
 
-- 2d6+Corpo ou Reflexo — o combate em si (ameaça comum, golpes 3-4)
-- 2d6+Técnica — extrair o fragmento sem amassar (2d6+Técnica, ver
+- d20+Força ou Reflexo — o combate em si (ameaça comum, golpes 3-4)
+- d20+Destreza — extrair o fragmento sem amassar (d20+Destreza, ver
   `docs/economia_profissoes.md` — material de caça exclusivo do Caçador)
 
 **NPCs na cena**
@@ -2795,9 +2795,9 @@ sistema do jogo — mas não porque não sabe nada.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — reconhecer os sinais de que essa pessoa é mesmo
+- d20+Inteligência — reconhecer os sinais de que essa pessoa é mesmo
   quem o boato diz
-- 2d6+Espírito — conduzir a conversa sem parecer só mais um caçador de
+- d20+Sabedoria — conduzir a conversa sem parecer só mais um caçador de
   informação
 
 **NPCs na cena**
@@ -2878,8 +2878,8 @@ Ele não aceita qualquer um: quer saber se o grupo entende o risco real
 
 **Testes sugeridos**
 
-- 2d6+Espírito — convencer Diavel da disposição real do grupo
-- 2d6+Conhecimento — impressionar com informação concreta sobre o
+- d20+Sabedoria — convencer Diavel da disposição real do grupo
+- d20+Inteligência — impressionar com informação concreta sobre o
   Labirinto (bônus automático se `tolbana_05` foi 10+)
 
 **NPCs na cena**
@@ -2957,7 +2957,7 @@ o Col disponível permita. Não é hora de economizar.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — priorizar as compras certas com o Col disponível
+- d20+Inteligência — priorizar as compras certas com o Col disponível
 
 **NPCs na cena**
 
@@ -3036,7 +3036,7 @@ personagem, não de mecânica.
 
 **Teste opcional**
 
-2d6+Espírito, só se algum jogador quiser forçar um momento específico de
+d20+Sabedoria, só se algum jogador quiser forçar um momento específico de
 coragem ou confissão em cena — sucesso rende clareza emocional real;
 falha rende um momento de vulnerabilidade não resolvida (também
 interessante narrativamente, não é "punição").
@@ -3096,7 +3096,7 @@ definir seu papel antes do combate real.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — argumentar a própria posição com base em preparo real (bônus se `tolbana_05`/`tolbana_06`/`tolbana_09` foram bem-sucedidas)
+- d20+Inteligência — argumentar a própria posição com base em preparo real (bônus se `tolbana_05`/`tolbana_06`/`tolbana_09` foram bem-sucedidas)
 
 **NPCs na cena**
 
@@ -3193,7 +3193,7 @@ tarefa como um todo reagindo em conjunto.
 **Testes sugeridos**
 
 - Testes de combate padrão conforme a arma/skill de cada personagem
-- 2d6+Espírito — manter a coordenação e a calma durante a transição de
+- d20+Sabedoria — manter a coordenação e a calma durante a transição de
   fase (fase 2 pega muita gente de surpresa, inclusive NPCs)
 
 **Complicações úteis**
@@ -3264,8 +3264,8 @@ chegar perto.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — perceber que não é uma ruína antes de chegar perto demais
-- 2d6+Técnica ou Corpo — o combate em si (ameaça forte, golpes 5-7)
+- d20+Inteligência — perceber que não é uma ruína antes de chegar perto demais
+- d20+Destreza ou Corpo — o combate em si (ameaça forte, golpes 5-7)
 
 **Encontro**
 
@@ -3319,7 +3319,7 @@ longe o suficiente pra desaparecer de vez.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — manter o ritmo de perseguição sem se frustrar ou se perder
+- d20+Sabedoria — manter o ritmo de perseguição sem se frustrar ou se perder
 
 **Recompensas**
 
@@ -3371,7 +3371,7 @@ tivesse uma geometria que os olhos não veem.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — perceber que a geometria não bate matematicamente com o que os olhos veem
+- d20+Inteligência — perceber que a geometria não bate matematicamente com o que os olhos veem
 
 **Complicação**
 
@@ -3428,7 +3428,7 @@ visitados pelo grupo.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — a subida em si, especialmente o trecho final
+- d20+Destreza — a subida em si, especialmente o trecho final
 
 **Complicações úteis**
 
@@ -3488,7 +3488,7 @@ de novo" (nas palavras do próprio Fazendeiro Local).
 
 **Testes sugeridos**
 
-- 2d6+Corpo — defender a plantação diretamente
+- d20+Força — defender a plantação diretamente
 
 **NPCs na cena**
 
@@ -3567,7 +3567,7 @@ se ambas estiverem em jogo na mesma sessão, usando o mesmo encontro.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — reconhecer o padrão do assalto e antecipar se é ameaça ativa
+- d20+Inteligência — reconhecer o padrão do assalto e antecipar se é ameaça ativa
 
 **Complicações úteis**
 
@@ -3688,7 +3688,7 @@ tecnologia destoa do resto de Aincrad.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — reconhecer que a tecnologia destoa do resto do jogo
+- d20+Inteligência — reconhecer que a tecnologia destoa do resto do jogo
 
 **Complicações úteis**
 

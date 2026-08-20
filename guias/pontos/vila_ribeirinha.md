@@ -33,8 +33,8 @@ Início.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Descansar de verdade | — | Sem teste — zona segura: recupera tudo, e o mestre deve deixar | | |
-| Ouvir a vila sobre o lago | 2d6+Conhecimento | Três histórias, uma delas verdadeira e você sabe qual | Três histórias, sem saber qual presta | Uma história, e é a falsa |
-| Perguntar por trabalho braçal | 2d6+Espírito | Bico honesto (descarregar barco, remendar rede) por Col do dia e boa vontade da vila | Bico, mas paga pouco | "Forasteiro demais perguntando essa semana" |
+| Ouvir a vila sobre o lago | d20+Inteligência | Três histórias, uma delas verdadeira e você sabe qual | Três histórias, sem saber qual presta | Uma história, e é a falsa |
+| Perguntar por trabalho braçal | d20+Sabedoria | Bico honesto (descarregar barco, remendar rede) por Col do dia e boa vontade da vila | Bico, mas paga pouco | "Forasteiro demais perguntando essa semana" |
 
 **Só o mestre:** Brenmoor existe pra dar ao andar um segundo lugar seguro
 que **não** é a capital — a capital carrega o peso do dia 1 e às vezes a
@@ -124,8 +124,8 @@ respeito e espera o mesmo de quem chega.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ganhar a confiança dele | 2d6+Espírito | Ele te ensina onde o lago é fundo e por quê | Ele te vende a informação | Ele te manda pescar e descobrir sozinho |
-| Pedir pontos de pesca e atalho | 2d6+Espírito | Indica os melhores pontos de pesca e um atalho seguro entre as regiões vizinhas | Indica os pontos, mas não o atalho | "Compra um mapa da guilda, que é tão bom quanto" |
+| Ganhar a confiança dele | d20+Sabedoria | Ele te ensina onde o lago é fundo e por quê | Ele te vende a informação | Ele te manda pescar e descobrir sozinho |
+| Pedir pontos de pesca e atalho | d20+Sabedoria | Indica os melhores pontos de pesca e um atalho seguro entre as regiões vizinhas | Indica os pontos, mas não o atalho | "Compra um mapa da guilda, que é tão bom quanto" |
 
 **Só o mestre:** ele é o gancho de `lago_01_peixe_estranho` dentro da vila
 — confirma ou completa o que o Barqueiro deixar escapar ("Peixe estranho

@@ -54,7 +54,7 @@ na Praça da Bacia substituindo o silêncio da Cidade do Início.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — absorver a orientação da Guardiã sem se perder em
+- d20+Sabedoria — absorver a orientação da Guardiã sem se perder em
   informação demais de uma vez
 
 **NPCs na cena**
@@ -132,8 +132,8 @@ importante e está atrapalhando o fluxo de água pra metade da cidade.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — mover-se com segurança no espaço apertado e escorregadio
-- 2d6+Corpo — combate contra a Centopeia do Aqueduto
+- d20+Destreza — mover-se com segurança no espaço apertado e escorregadio
+- d20+Força — combate contra a Centopeia do Aqueduto
 
 **NPCs na cena**
 
@@ -201,8 +201,8 @@ gente sem preparo pra terreno aberto.
 
 **Testes sugeridos**
 
-- 2d6+Reflexo — desviar da investida no momento certo
-- 2d6+Corpo — o combate em si
+- d20+Destreza — desviar da investida no momento certo
+- d20+Força — o combate em si
 
 **Encontro**
 
@@ -266,8 +266,8 @@ Recém-Chegados.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — prever o padrão de mergulho
-- 2d6+Reflexo ou à distância — golpe na janela de vulnerabilidade
+- d20+Inteligência — prever o padrão de mergulho
+- d20+Destreza ou à distância — golpe na janela de vulnerabilidade
 
 **Encontro**
 
@@ -326,8 +326,8 @@ Ele paga bem e nunca ameaça, mas o pedido claramente favorece só ele.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — entender as implicações reais do pedido antes de decidir
-- 2d6+Espírito — negociar termos diferentes com o Comerciante
+- d20+Inteligência — entender as implicações reais do pedido antes de decidir
+- d20+Sabedoria — negociar termos diferentes com o Comerciante
 
 **NPCs na cena**
 
@@ -402,8 +402,8 @@ seca destruir a única agricultura real do andar 2.
 
 **Testes sugeridos**
 
-- 2d6+Espírito — negociar (com o Comerciante ou publicamente)
-- 2d6+Conhecimento — buscar solução técnica alternativa com a Engenheira
+- d20+Sabedoria — negociar (com o Comerciante ou publicamente)
+- d20+Inteligência — buscar solução técnica alternativa com a Engenheira
 
 **NPCs na cena**
 
@@ -473,8 +473,8 @@ pra quem não consegue pagar acesso privilegiado.
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — rastrear o esquema até a fonte
-- 2d6+Espírito — negociar com o Contrabandista sem ameaçá-lo
+- d20+Inteligência — rastrear o esquema até a fonte
+- d20+Sabedoria — negociar com o Contrabandista sem ameaçá-lo
 
 **NPCs na cena**
 
@@ -549,7 +549,7 @@ força-tarefa pra enfrentar Baran, o Rei Touro — mesmo modelo de
 
 **Testes sugeridos**
 
-- 2d6+Conhecimento — argumentar por um papel específico com base em
+- d20+Inteligência — argumentar por um papel específico com base em
   preparo real
 
 **NPCs na cena**
@@ -624,8 +624,8 @@ segundo grande teste coletivo depois de Illfang.
 
 **Testes sugeridos**
 
-- 2d6+Corpo/Reflexo — combate nas três fases
-- 2d6+Conhecimento — identificar a janela de abertura na Fase 2
+- d20+Força/Reflexo — combate nas três fases
+- d20+Inteligência — identificar a janela de abertura na Fase 2
 
 **Estrutura de combate**
 

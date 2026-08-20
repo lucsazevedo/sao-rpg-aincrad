@@ -8,7 +8,7 @@ receitas: 17
 
 Profissão de Conhecimento. O "material" é reputação e presença na sala.
 Formato geral em `docs/catalogo_receitas_por_oficio.md`. Teste padrão:
-**2d6+Conhecimento**.
+**d20+Inteligência**.
 
 ---
 

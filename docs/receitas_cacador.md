@@ -8,7 +8,7 @@ receitas: 17
 
 O que o Caçador prepara com o que ele mesmo abate — não é o abate em si
 (isso é combate), é o que vem depois. Formato em
-`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **2d6+Reflexo**.
+`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **d20+Destreza**.
 
 ---
 

@@ -52,13 +52,13 @@ Ver arma completa em `docs/guia_sistema_aincrad.md` (23ª arma) e itens em
 
 - **Marca:** o leque passa elegância, controle de espaço e comando à
   distância — ela dirige a cena com um gesto, nunca com força.
-- **Move de Combate — Aceno que Comanda (2d6+Técnica):** guia o golpe de um
+- **Move de Combate — Aceno que Comanda (d20+Destreza):** guia o golpe de um
   aliado sem precisar tocar em ninguém. 10+ escolha 1: o aliado acerta sem
   sofrer reação, você redireciona o ataque de outra pessoa pra um alvo
   diferente, ou nega a próxima reação do alvo. 7-9 o aliado acerta, mas
   escolha 1: você se expõe, o inimigo passa a ler seus gestos, ou o aliado
   sofre o troco.
-- **Move Utilitário — Vento Que Guia (2d6+Técnica):** usa o ar pra apagar
+- **Move Utilitário — Vento Que Guia (d20+Destreza):** usa o ar pra apagar
   rastro, espalhar fumaça, sinalizar à distância ou acalmar algo agitado.
   10+ funciona limpo. 7-9 funciona, mas chama atenção extra.
 - **Item inicial:** Leque de Guerra Simples (Comum, sem bônus).
@@ -70,9 +70,9 @@ Ver arma completa em `docs/guia_sistema_aincrad.md` (23ª arma) e itens em
 
 - **Marca:** você chega perto do que morde. A mesa inteira para de falar
   quando você se agacha na frente de um bicho.
-- **Move de Ofício — Doma (2d6+Técnica):** tenta amansar criando vínculo,
+- **Move de Ofício — Doma (d20+Destreza):** tenta amansar criando vínculo,
   não só controle. 10+ avança sem reação violenta e define o tom do vínculo.
-- **Move de Cena — Ordem Clara (2d6+Técnica):** dá ordem ao aliado domado
+- **Move de Cena — Ordem Clara (d20+Destreza):** dá ordem ao aliado domado
   pra resolver algo. 10+ escolha 1: proteger alguém, abrir caminho, ou
   evitar uma ameaça.
 

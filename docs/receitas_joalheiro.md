@@ -9,7 +9,7 @@ receitas: 17
 Não duplica `equipamentos/acessorios.md`. Cobre lapidação, engaste e peça
 pequena que não é "acessório de sistema" — é bugiganga com efeito real.
 Formato em `docs/catalogo_receitas_por_oficio.md`. Teste padrão:
-**2d6+Técnica**.
+**d20+Destreza**.
 
 ---
 

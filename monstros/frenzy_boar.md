@@ -96,7 +96,7 @@ Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Níve
 
 Encontrado nos campos logo fora da Cidade do Início — é literalmente o
 primeiro monstro que qualquer grupo novo vai encontrar. Bom pra ensinar a
-mesa como funciona o teste 2d6+atributo sem risco real: mesmo um 6- contra
+mesa como funciona o teste d20+atributo sem risco real: mesmo um 6- contra
 um Frenzy Boar raramente deveria significar morte, só complicação (perder
 um item, chamar atenção de outro monstro, etc.).
 

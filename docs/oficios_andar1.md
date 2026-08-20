@@ -58,9 +58,9 @@ material e de verdade sobre o que tem lá fora.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Extrair material bônus de um abatido | 2d6+Reflexo | Material íntegro e você nota um traço útil (rota, toca, ninho) | Material sai imperfeito: metade do valor | Estraga a peça e o cheiro atrai algo |
-| Ler o terreno por rastro | 2d6+Reflexo | O mestre te diz o perigo mais próximo **e** a rota mais segura | Diz uma das duas; você escolhe qual | Você segue um rastro velho por uma hora |
-| Armar espera silenciosa | 2d6+Reflexo | A presa vem até vocês; primeiro golpe sem reação dela | Vem, mas traz companhia | O bicho fareja e some da região por um dia |
+| Extrair material bônus de um abatido | d20+Destreza | Material íntegro e você nota um traço útil (rota, toca, ninho) | Material sai imperfeito: metade do valor | Estraga a peça e o cheiro atrai algo |
+| Ler o terreno por rastro | d20+Destreza | O mestre te diz o perigo mais próximo **e** a rota mais segura | Diz uma das duas; você escolhe qual | Você segue um rastro velho por uma hora |
+| Armar espera silenciosa | d20+Destreza | A presa vem até vocês; primeiro golpe sem reação dela | Vem, mas traz companhia | O bicho fareja e some da região por um dia |
 
 **Postos de trabalho**
 - `campos_acampamento` — Acampamento de Caçadores: Erik compra material a 60%,
@@ -87,9 +87,9 @@ você, e todo grupo que dormiu no frio sabe disso.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Derrubar madeira boa | 2d6+Reflexo | 2 unidades **e** chance de Madeira Nodosa | 1 unidade, e a queda faz barulho | Machado preso; o barulho chama algo |
-| Montar acampamento que aguenta | 2d6+Reflexo | Descanso seguro: o mestre remove uma pressão do caminho (frio, fome, medo) | Seguro, mas a noite cobra uma vigília | Fogo não pega; a noite inteira é desconfortável |
-| Abrir caminho no mato fechado | 2d6+Reflexo | Passagem aberta e ela continua aberta na volta | Abre, mas leva o dobro do tempo | Abre errado: saem num ponto pior |
+| Derrubar madeira boa | d20+Destreza | 2 unidades **e** chance de Madeira Nodosa | 1 unidade, e a queda faz barulho | Machado preso; o barulho chama algo |
+| Montar acampamento que aguenta | d20+Destreza | Descanso seguro: o mestre remove uma pressão do caminho (frio, fome, medo) | Seguro, mas a noite cobra uma vigília | Fogo não pega; a noite inteira é desconfortável |
+| Abrir caminho no mato fechado | d20+Destreza | Passagem aberta e ela continua aberta na volta | Abre, mas leva o dobro do tempo | Abre errado: saem num ponto pior |
 
 **Postos de trabalho**
 - `floresta_horunka_madeira` — Bosque de Coleta: a única fonte confiável de
@@ -119,9 +119,9 @@ paga mais depois de se perder uma vez.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Mapear região nova ao chegar | 2d6+Conhecimento | Revela todos os pontos óbvios da região **e** uma rota segura | Revela metade, ou tudo cobrando tempo | Nada, e a tarde foi embora |
-| Traçar rota por terreno perigoso | 2d6+Conhecimento | Evitam uma ameaça prevista | Evitam, mas saem num lugar pior | A rota que você marcou some na próxima cheia |
-| Vender mapa a outro grupo | 2d6+Conhecimento | 10 Col por ponto revelado, e viram seus clientes | Metade do preço | Copiam seu traçado e revendem |
+| Mapear região nova ao chegar | d20+Inteligência | Revela todos os pontos óbvios da região **e** uma rota segura | Revela metade, ou tudo cobrando tempo | Nada, e a tarde foi embora |
+| Traçar rota por terreno perigoso | d20+Inteligência | Evitam uma ameaça prevista | Evitam, mas saem num lugar pior | A rota que você marcou some na próxima cheia |
+| Vender mapa a outro grupo | d20+Inteligência | 10 Col por ponto revelado, e viram seus clientes | Metade do preço | Copiam seu traçado e revendem |
 
 **Postos de trabalho**
 - `colinas_mirante` — Mirante das Colinas: vantagem automática no mapeamento.
@@ -150,9 +150,9 @@ ninguém, saber o valor das coisas é quase saber o valor das pessoas.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Negociar preço | 2d6+Conhecimento | 15% de desconto **e** o vendedor passa a te reconhecer | 10%, mas ele lembra que você pechinchou | Preço cheio e um comentário seco |
-| Avaliar item ou farejar golpe | 2d6+Conhecimento | Raridade real e a procedência | A raridade, sem a história | Você acredita na versão do vendedor |
-| Importar o que não existe no andar | 2d6+Conhecimento | Chega na próxima sessão, preço justo | Chega, com 30% de acréscimo | Não chega, e você pagou adiantado |
+| Negociar preço | d20+Inteligência | 15% de desconto **e** o vendedor passa a te reconhecer | 10%, mas ele lembra que você pechinchou | Preço cheio e um comentário seco |
+| Avaliar item ou farejar golpe | d20+Inteligência | Raridade real e a procedência | A raridade, sem a história | Você acredita na versão do vendedor |
+| Importar o que não existe no andar | d20+Inteligência | Chega na próxima sessão, preço justo | Chega, com 30% de acréscimo | Não chega, e você pagou adiantado |
 
 **Postos de trabalho**
 - `tolbana_mercado` — Mercado de Tolbana: o giro mais alto do andar.
@@ -179,9 +179,9 @@ quase uma declaração política.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Preparar refeição com bônus | 2d6+Conhecimento | Bônus temporário pro grupo na próxima expedição | Bônus só pra metade do grupo | Passou do ponto; ninguém come com vontade |
-| Improvisar comida com o que tem | 2d6+Conhecimento | Rende, e ninguém percebe a improvisação | Rende, mas alguém percebe | Estraga o material |
-| Puxar conversa em volta da panela | 2d6+Espírito | Um NPC conta algo que não contaria em pé | Ele fala, mas cobra depois | O clima azeda |
+| Preparar refeição com bônus | d20+Inteligência | Bônus temporário pro grupo na próxima expedição | Bônus só pra metade do grupo | Passou do ponto; ninguém come com vontade |
+| Improvisar comida com o que tem | d20+Inteligência | Rende, e ninguém percebe a improvisação | Rende, mas alguém percebe | Estraga o material |
+| Puxar conversa em volta da panela | d20+Sabedoria | Um NPC conta algo que não contaria em pé | Ele fala, mas cobra depois | O clima azeda |
 
 **Postos de trabalho**
 - `cidade_lago` — Pequeno Lago Central: a cozinha informal do Bren.
@@ -208,9 +208,9 @@ alguém precisa fazer as pessoas se ouvirem.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Mediar conflito antes do primeiro golpe | 2d6+Conhecimento | Os dois lados baixam a arma e você define os termos | Baixam, mas alguém sai devendo | Escolhem um lado — e não é o seu |
-| Conseguir audiência com quem não te recebe | 2d6+Conhecimento | Entra hoje | Entra, mas com hora marcada e testemunha | A porta fecha por uma semana |
-| Negociar passagem ou trégua | 2d6+Conhecimento | Passagem livre e o acordo se sustenta | Passagem, mediante favor | Você vira o assunto da semana |
+| Mediar conflito antes do primeiro golpe | d20+Inteligência | Os dois lados baixam a arma e você define os termos | Baixam, mas alguém sai devendo | Escolhem um lado — e não é o seu |
+| Conseguir audiência com quem não te recebe | d20+Inteligência | Entra hoje | Entra, mas com hora marcada e testemunha | A porta fecha por uma semana |
+| Negociar passagem ou trégua | d20+Inteligência | Passagem livre e o acordo se sustenta | Passagem, mediante favor | Você vira o assunto da semana |
 
 **Postos de trabalho**
 - `posto_guilda_acampamento` — Acampamento de Kaldrin: onde as seis facções se
@@ -239,9 +239,9 @@ como a mesa inteira encara a coisa.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Pesquisar criatura antes do combate | 2d6+Conhecimento | Fraqueza, resistências e vulnerabilidades completas | Só a fraqueza principal | Nada, e o tempo de preparo foi gasto |
-| Reconhecer símbolo, escrita ou heráldica | 2d6+Conhecimento | Lê o suficiente pra mudar o rumo da cena | Sabe de onde vem, não o que diz | Confunde com outra coisa parecida |
-| Cruzar duas fontes | 2d6+Conhecimento | Descobre a contradição — e a contradição é a pista | Descobre que discordam | Acredita na fonte errada |
+| Pesquisar criatura antes do combate | d20+Inteligência | Fraqueza, resistências e vulnerabilidades completas | Só a fraqueza principal | Nada, e o tempo de preparo foi gasto |
+| Reconhecer símbolo, escrita ou heráldica | d20+Inteligência | Lê o suficiente pra mudar o rumo da cena | Sabe de onde vem, não o que diz | Confunde com outra coisa parecida |
+| Cruzar duas fontes | d20+Inteligência | Descobre a contradição — e a contradição é a pista | Descobre que discordam | Acredita na fonte errada |
 
 **Postos de trabalho**
 - `torre_relogio_xestudioso_obcecado` — Torre de Aldric: a fonte principal.
@@ -271,9 +271,9 @@ percebe a ironia sozinha.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Destilar poção ou antídoto | 2d6+Conhecimento | Fica pronto na mesma sessão | Pronto na próxima, e gasta um frasco a mais | Perde o material |
-| Identificar substância desconhecida | 2d6+Conhecimento | Sabe o que é, o que faz e o que neutraliza | Sabe o que faz | Testa em si mesmo |
-| Estabilizar material volátil pra viagem | 2d6+Técnica | Chega inteiro | Chega, com metade da potência | Vaza dentro da mochila |
+| Destilar poção ou antídoto | d20+Inteligência | Fica pronto na mesma sessão | Pronto na próxima, e gasta um frasco a mais | Perde o material |
+| Identificar substância desconhecida | d20+Inteligência | Sabe o que é, o que faz e o que neutraliza | Sabe o que faz | Testa em si mesmo |
+| Estabilizar material volátil pra viagem | d20+Destreza | Chega inteiro | Chega, com metade da potência | Vaza dentro da mochila |
 
 **Postos de trabalho**
 - `jardim_ervas_raras` — Jardim de Fenwyth: Néctar de Flor Rara.
@@ -300,9 +300,9 @@ você é quem sabe disso.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Confeccionar ou reforçar peça | 2d6+Técnica | Fica pronta e uma categoria acima do esperado | Pronta, no prazo dobrado | Estraga o material |
-| Consertar equipamento rachado | 2d6+Técnica | Conserta em campo, sem oficina | Conserta, mas fica visível | Piora |
-| Ler a roupa de alguém | 2d6+Conhecimento | Sabe de onde a pessoa veio e quanto pagou | Sabe a origem | Erra feio e diz em voz alta |
+| Confeccionar ou reforçar peça | d20+Destreza | Fica pronta e uma categoria acima do esperado | Pronta, no prazo dobrado | Estraga o material |
+| Consertar equipamento rachado | d20+Destreza | Conserta em campo, sem oficina | Conserta, mas fica visível | Piora |
+| Ler a roupa de alguém | d20+Inteligência | Sabe de onde a pessoa veio e quanto pagou | Sabe a origem | Erra feio e diz em voz alta |
 
 **Postos de trabalho**
 - `cidade_ateliê` — Ateliê de Mestra Sorrel: o Traje de Batedor sai daqui.
@@ -328,9 +328,9 @@ você se agacha na frente de um bicho.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Tentativa de doma | 2d6+Técnica | 1 sucesso limpo na barra | 1 sucesso, mas a criatura reage mal nesse turno | Sem sucesso; 2 falhas seguidas encerram |
-| Acalmar animal agitado | 2d6+Técnica | Ele para e escuta — inclusive em combate | Para, e volta a agitar na rodada seguinte | Ele se assusta e chama atenção |
-| Mandar o aliado domado fazer algo difícil | 2d6+Técnica | Faz, e volta | Faz, mas se machuca | Se recusa, e isso custa confiança |
+| Tentativa de doma | d20+Destreza | 1 sucesso limpo na barra | 1 sucesso, mas a criatura reage mal nesse turno | Sem sucesso; 2 falhas seguidas encerram |
+| Acalmar animal agitado | d20+Destreza | Ele para e escuta — inclusive em combate | Para, e volta a agitar na rodada seguinte | Ele se assusta e chama atenção |
+| Mandar o aliado domado fazer algo difícil | d20+Destreza | Faz, e volta | Faz, mas se machuca | Se recusa, e isso custa confiança |
 
 **Postos de trabalho**
 - `jardim_selvagem_xcampo_de_flores_raras` — Fenwyth: a Fada da Poeira, a doma
@@ -358,9 +358,9 @@ pela sua bigorna, e todo mundo sabe.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Processar minério em componente | 2d6+Técnica | 2 Placas em vez de 1 | 1 Placa | Perde o minério |
-| Forjar ou reforjar peça | 2d6+Técnica | Sai como encomendado, e cedo | Sai, com uma imperfeição visível | Racha na têmpera |
-| Ler metal desconhecido | 2d6+Conhecimento | Sabe a liga, a origem e o que dá pra fazer | Sabe se presta | Conclusão errada com convicção |
+| Processar minério em componente | d20+Destreza | 2 Placas em vez de 1 | 1 Placa | Perde o minério |
+| Forjar ou reforjar peça | d20+Destreza | Sai como encomendado, e cedo | Sai, com uma imperfeição visível | Racha na têmpera |
+| Ler metal desconhecido | d20+Inteligência | Sabe a liga, a origem e o que dá pra fazer | Sabe se presta | Conclusão errada com convicção |
 
 **Postos de trabalho**
 - `cidade_ferreiro` — Forja de Kazuo.
@@ -387,9 +387,9 @@ peça de dois centímetros é quem entende de detalhe.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Engastar acessório | 2d6+Técnica | Sai perfeito e você economiza material | Sai, gastando o dobro | Racha a pedra |
-| Avaliar cristal ou pedra | 2d6+Conhecimento | Distingue bruto de cristal de sistema à distância | Sabe que são diferentes | Confunde os dois |
-| Reparar peça delicada | 2d6+Técnica | Fica como nova | Funciona, com marca | Quebra de vez |
+| Engastar acessório | d20+Destreza | Sai perfeito e você economiza material | Sai, gastando o dobro | Racha a pedra |
+| Avaliar cristal ou pedra | d20+Inteligência | Distingue bruto de cristal de sistema à distância | Sabe que são diferentes | Confunde os dois |
+| Reparar peça delicada | d20+Destreza | Fica como nova | Funciona, com marca | Quebra de vez |
 
 **Postos de trabalho**
 - `gruta_veio_cristal` — Gruta de Lumis: Cristal Bruto na fonte, com o Contador
@@ -418,9 +418,9 @@ mora nele.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Cuidar de um morto e ler o que ficou | 2d6+Espírito | Descobre uma coisa que ninguém sabia sobre ele | Descobre algo vago | Só tristeza, e ela pesa |
-| Dispensar presença não-corpórea | 2d6+Espírito | Dissolve sem luta, e ela deixa a pista | Dissolve, sem pista | Ela fica, e agora sabe seu nome |
-| Coletar material de sepultura com respeito | 2d6+Espírito | 3 unidades e ninguém se ofende | 2 unidades, e o Zelador reparou | Profanação: perde acesso |
+| Cuidar de um morto e ler o que ficou | d20+Sabedoria | Descobre uma coisa que ninguém sabia sobre ele | Descobre algo vago | Só tristeza, e ela pesa |
+| Dispensar presença não-corpórea | d20+Sabedoria | Dissolve sem luta, e ela deixa a pista | Dissolve, sem pista | Ela fica, e agora sabe seu nome |
+| Coletar material de sepultura com respeito | d20+Sabedoria | 3 unidades e ninguém se ofende | 2 unidades, e o Zelador reparou | Profanação: perde acesso |
 
 **Postos de trabalho**
 - `necropole_portao` — Necrópole de Voss: a pergunta que ninguém responde —
@@ -447,9 +447,9 @@ não passa sozinho.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Tratar status negativo | 2d6+Espírito | Veneno, paralisia, sono ou confusão removidos sem gastar Cristal | Removido, mas leva a noite inteira | Precisa de material que você não tem |
-| Estabilizar quem está à beira | 2d6+Espírito | De pé, com marca, sem sequela | De pé, com uma Condição no lugar | Você compra tempo, e só |
-| Diagnosticar o que ninguém entendeu | 2d6+Conhecimento | Nomeia a causa — e nomear muda o que dá pra fazer | Sabe o que não é | Trata a coisa errada |
+| Tratar status negativo | d20+Sabedoria | Veneno, paralisia, sono ou confusão removidos sem gastar Cristal | Removido, mas leva a noite inteira | Precisa de material que você não tem |
+| Estabilizar quem está à beira | d20+Sabedoria | De pé, com marca, sem sequela | De pé, com uma Condição no lugar | Você compra tempo, e só |
+| Diagnosticar o que ninguém entendeu | d20+Inteligência | Nomeia a causa — e nomear muda o que dá pra fazer | Sabe o que não é | Trata a coisa errada |
 
 **Postos de trabalho**
 - `cidade_hospedaria` — Hospedaria da Porta Aberta: a porta escorada é decisão
@@ -478,9 +478,9 @@ conseguir a atenção de trinta pessoas é poder de verdade.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Tocar pra levantar o grupo | 2d6+Espírito | Todo aliado que falhou no teste anterior rola de novo | Um aliado rola de novo | Chama atenção de quem não devia ouvir |
-| Ler a sala pela reação à música | 2d6+Espírito | Sabe quem está mentindo, quem está com medo e quem está sozinho | Sabe uma das três | Toca a música errada pra plateia errada |
-| Aprender ou lembrar uma cantiga | 2d6+Espírito | Letra inteira, e você percebe o que ela carrega | A letra | O refrão e mais nada |
+| Tocar pra levantar o grupo | d20+Sabedoria | Todo aliado que falhou no teste anterior rola de novo | Um aliado rola de novo | Chama atenção de quem não devia ouvir |
+| Ler a sala pela reação à música | d20+Sabedoria | Sabe quem está mentindo, quem está com medo e quem está sozinho | Sabe uma das três | Toca a música errada pra plateia errada |
+| Aprender ou lembrar uma cantiga | d20+Sabedoria | Letra inteira, e você percebe o que ela carrega | A letra | O refrão e mais nada |
 
 **Postos de trabalho**
 - `cidade_taverna` — Taverna de Perim: a cantiga dos cinco cristais mora aqui.
@@ -509,9 +509,9 @@ deste arquivo depende de chegar vivo no lugar.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Escoltar alguém até uma zona perigosa | 2d6+Corpo | Chegam inteiros e você fica com parte do material | Chegam, mas o escoltado perde algo | Chegam machucados e a fama circula |
-| Segurar a linha enquanto o grupo faz outra coisa | 2d6+Corpo | Ninguém passa por você | Passa um | A linha quebra e vocês ficam cercados |
-| Avaliar se uma briga vale a pena | 2d6+Conhecimento | Sabe quantos são, o que querem e se dá pra evitar | Sabe quantos são | Subestima |
+| Escoltar alguém até uma zona perigosa | d20+Força | Chegam inteiros e você fica com parte do material | Chegam, mas o escoltado perde algo | Chegam machucados e a fama circula |
+| Segurar a linha enquanto o grupo faz outra coisa | d20+Força | Ninguém passa por você | Passa um | A linha quebra e vocês ficam cercados |
+| Avaliar se uma briga vale a pena | d20+Inteligência | Sabe quantos são, o que querem e se dá pra evitar | Sabe quantos são | Subestima |
 
 **Postos de trabalho**
 - `cidade_portao_oeste` — Portão Oeste: Daren pergunta por onde vocês voltam,

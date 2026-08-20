@@ -58,13 +58,13 @@ e formam um código.
 
 | Ação                                      | Teste            | 10+                                              | 7-9                               | 6-                                         |
 | ----------------------------------------- | ---------------- | ------------------------------------------------ | --------------------------------- | ------------------------------------------ |
-| Responder à desconfiança do estalajadeiro | 2d6+Espírito     | Ele relaxa: preços justos e uma dica da floresta | Preço normal, sem dica            | Cobra 30% a mais e avisa os outros         |
-| Rastrear uma criatura                     | 2d6+Reflexo      | Acha o ninho e chega por trás                    | Acha, mas ela percebe primeiro    | Perde o rastro e volta ao ponto de partida |
-| Ler as marcas nos troncos                 | 2d6+Conhecimento | Entende que é código e lê um trecho              | Entende que é intencional         | "Alguém riscou uma árvore"                 |
-| Colher madeira (Lenhador)                 | 2d6+Reflexo      | Madeira x2 e chance de Madeira Nodosa            | Madeira x1                        | Machado preso; barulho atrai algo          |
-| Colher Ovule de Nepenthes                 | 2d6+Conhecimento | 2 unidades sem contaminar                        | 1 unidade e quase pega o venenoso | Sai de mãos vazias                         |
-| Achar o Eremita                           | 2d6+Espírito     | Ele aparece por vontade própria                  | Você acha a cabana, ele não está  | Anda em círculo o dia inteiro              |
-| Entrar no Covil Escondido                 | 2d6+Corpo        | Pega o miniboss desprevenido                     | Combate justo                     | Ele estava esperando                       |
+| Responder à desconfiança do estalajadeiro | d20+Sabedoria     | Ele relaxa: preços justos e uma dica da floresta | Preço normal, sem dica            | Cobra 30% a mais e avisa os outros         |
+| Rastrear uma criatura                     | d20+Destreza      | Acha o ninho e chega por trás                    | Acha, mas ela percebe primeiro    | Perde o rastro e volta ao ponto de partida |
+| Ler as marcas nos troncos                 | d20+Inteligência | Entende que é código e lê um trecho              | Entende que é intencional         | "Alguém riscou uma árvore"                 |
+| Colher madeira (Lenhador)                 | d20+Destreza      | Madeira x2 e chance de Madeira Nodosa            | Madeira x1                        | Machado preso; barulho atrai algo          |
+| Colher Ovule de Nepenthes                 | d20+Inteligência | 2 unidades sem contaminar                        | 1 unidade e quase pega o venenoso | Sai de mãos vazias                         |
+| Achar o Eremita                           | d20+Sabedoria     | Ele aparece por vontade própria                  | Você acha a cabana, ele não está  | Anda em círculo o dia inteiro              |
+| Entrar no Covil Escondido                 | d20+Força        | Pega o miniboss desprevenido                     | Combate justo                     | Ele estava esperando                       |
 
 ### Só o mestre
 
@@ -150,11 +150,11 @@ que qualquer descrição.
 
 | Ação                             | Teste            | 10+                                     | 7-9                                        | 6-                                          |
 | -------------------------------- | ---------------- | --------------------------------------- | ------------------------------------------ | ------------------------------------------- |
-| Seguir a Luz Errante             | 2d6+Espírito     | Ela leva a um lugar real e útil         | Leva a algum lugar, e você não sabe voltar | Some; vocês estão perdidos                  |
-| Falar com a Voz Sem Corpo        | 2d6+Espírito     | Ela responde uma pergunta com a verdade | Responde com outra pergunta                | Ela usa a sua voz pra falar com seu grupo   |
-| Resolver o Círculo de Cogumelos  | 2d6+Conhecimento | Entende a ordem e o círculo se abre     | Entende que há ordem                       | Pisa errado; o bosque escurece por uma hora |
-| Marcar o caminho de volta        | 2d6+Técnica      | As marcas continuam onde você deixou    | Metade das marcas mudou de lugar           | Nenhuma marca está onde deveria             |
-| Enfrentar o Espectro Sussurrante | 2d6+Espírito     | Dispersa sem combate                    | Combate, mas você sabe o nome dele         | Ele sabe o **seu** nome                     |
+| Seguir a Luz Errante             | d20+Sabedoria     | Ela leva a um lugar real e útil         | Leva a algum lugar, e você não sabe voltar | Some; vocês estão perdidos                  |
+| Falar com a Voz Sem Corpo        | d20+Sabedoria     | Ela responde uma pergunta com a verdade | Responde com outra pergunta                | Ela usa a sua voz pra falar com seu grupo   |
+| Resolver o Círculo de Cogumelos  | d20+Inteligência | Entende a ordem e o círculo se abre     | Entende que há ordem                       | Pisa errado; o bosque escurece por uma hora |
+| Marcar o caminho de volta        | d20+Destreza      | As marcas continuam onde você deixou    | Metade das marcas mudou de lugar           | Nenhuma marca está onde deveria             |
+| Enfrentar o Espectro Sussurrante | d20+Sabedoria     | Dispersa sem combate                    | Combate, mas você sabe o nome dele         | Ele sabe o **seu** nome                     |
 
 ### Só o mestre
 
@@ -226,11 +226,11 @@ gosta de falar sobre.
 
 | Ação                                  | Teste            | 10+                                          | 7-9                                   | 6-                                                    |
 | ------------------------------------- | ---------------- | -------------------------------------------- | ------------------------------------- | ----------------------------------------------------- |
-| Atravessar a nado                     | 2d6+Corpo        | Atravessa inteiro                            | Atravessa, perde um item não equipado | A correnteza leva; sai 300m abaixo                    |
-| Pescar                                | 2d6+Reflexo      | 3 peixes, um deles grande                    | 1 peixe                               | Anzol preso; perde a linha                            |
-| Coletar Argila no barranco            | 2d6+Técnica      | 3 unidades limpas                            | 2 unidades com pedra misturada        | Barranco cede                                         |
-| Fazer o Barqueiro falar do redemoinho | 2d6+Espírito     | Ele conta o que viu e leva vocês lá          | Ele conta, mas não vai junto          | Muda de assunto e fica calado o resto do dia          |
-| Investigar o Redemoinho               | 2d6+Conhecimento | Percebe que ele gira **contra** a correnteza | Percebe que está errado               | Chega perto demais; teste de Corpo pra não ser puxado |
+| Atravessar a nado                     | d20+Força        | Atravessa inteiro                            | Atravessa, perde um item não equipado | A correnteza leva; sai 300m abaixo                    |
+| Pescar                                | d20+Destreza      | 3 peixes, um deles grande                    | 1 peixe                               | Anzol preso; perde a linha                            |
+| Coletar Argila no barranco            | d20+Destreza      | 3 unidades limpas                            | 2 unidades com pedra misturada        | Barranco cede                                         |
+| Fazer o Barqueiro falar do redemoinho | d20+Sabedoria     | Ele conta o que viu e leva vocês lá          | Ele conta, mas não vai junto          | Muda de assunto e fica calado o resto do dia          |
+| Investigar o Redemoinho               | d20+Inteligência | Percebe que ele gira **contra** a correnteza | Percebe que está errado               | Chega perto demais; teste de Corpo pra não ser puxado |
 | Atravessar com o barco                | —                | 40 Col pelo grupo, ou uma boa história       |                                       |                                                       |
 
 ### Só o mestre
@@ -301,11 +301,11 @@ explicar como.
 
 | Ação                           | Teste            | 10+                                                           | 7-9                       | 6-                                      |
 | ------------------------------ | ---------------- | ------------------------------------------------------------- | ------------------------- | --------------------------------------- |
-| Ganhar a confiança do Pescador | 2d6+Espírito     | Ele te ensina onde o lago é fundo e por quê                   | Ele te vende a informação | Ele te manda pescar e descobrir sozinho |
+| Ganhar a confiança do Pescador | d20+Sabedoria     | Ele te ensina onde o lago é fundo e por quê                   | Ele te vende a informação | Ele te manda pescar e descobrir sozinho |
 | Comprar/vender peixe e isca    | —                | Tabela fixa (`docs/mercado_andar1.md` — Peixaria Local)       |                           |                                         |
 | Alugar barco                   | —                | 30 Col por dia                                                |                           |                                         |
 | Descansar de verdade           | —                | Sem teste. Zona segura: recupera tudo, e o mestre deve deixar |                           |                                         |
-| Ouvir a vila sobre o lago      | 2d6+Conhecimento | Três histórias, uma delas verdadeira e você sabe qual         | Três histórias            | Uma história, e é a falsa               |
+| Ouvir a vila sobre o lago      | d20+Inteligência | Três histórias, uma delas verdadeira e você sabe qual         | Três histórias            | Uma história, e é a falsa               |
 
 ### Só o mestre
 
@@ -374,10 +374,10 @@ Layout completo sala a sala em `mapas/dungeons_andar1.md`.
 | Ação                                   | Teste            | 10+                                                          | 7-9                                     | 6-                                        |
 | -------------------------------------- | ---------------- | ------------------------------------------------------------ | --------------------------------------- | ----------------------------------------- |
 | Atravessar o Poço de Ecos em silêncio  | —                | Sem rolagem: é acordo de mesa. Quem falar alto derruba pedra |                                         |                                           |
-| Passar pela Fenda Estreita             | 2d6+Reflexo      | Passa com tudo                                               | Passa, mas deixa a peça pesada pra trás | Entala; o grupo perde tempo e faz barulho |
-| Colher Musgo Luminoso                  | 2d6+Conhecimento | 3 unidades e uma fonte de luz fraca imediata                 | 1 unidade                               | Arranca errado e o musgo apaga            |
-| Enfrentar a Sombra de Mournhall        | 2d6+Reflexo      | Com luz intensa: sucesso automático no primeiro golpe        | Combate normal                          | Ela apaga sua luz                         |
-| Enfrentar o Guardião (elite, 9 golpes) | 2d6+Corpo        | Ventre exposto: 2 golpes de uma vez                          | 1 golpe                                 | Ele te joga contra a parede               |
+| Passar pela Fenda Estreita             | d20+Destreza      | Passa com tudo                                               | Passa, mas deixa a peça pesada pra trás | Entala; o grupo perde tempo e faz barulho |
+| Colher Musgo Luminoso                  | d20+Inteligência | 3 unidades e uma fonte de luz fraca imediata                 | 1 unidade                               | Arranca errado e o musgo apaga            |
+| Enfrentar a Sombra de Mournhall        | d20+Destreza      | Com luz intensa: sucesso automático no primeiro golpe        | Combate normal                          | Ela apaga sua luz                         |
+| Enfrentar o Guardião (elite, 9 golpes) | d20+Força        | Ventre exposto: 2 golpes de uma vez                          | 1 golpe                                 | Ele te joga contra a parede               |
 
 ### Só o mestre
 
@@ -436,12 +436,12 @@ lápides teve o nome raspado — não gasto pelo tempo, raspado.
 
 | Ação                              | Teste            | 10+                                     | 7-9                                      | 6-                                           |
 | --------------------------------- | ---------------- | --------------------------------------- | ---------------------------------------- | -------------------------------------------- |
-| Ler os nomes das lápides          | 2d6+Conhecimento | Percebe que nenhum é nome de jogador    | Percebe que são estranhos                | Só nomes                                     |
-| Examinar a Lápide Sem Nome        | 2d6+Conhecimento | Vê que foi raspada, e recentemente      | Vê que está apagada                      | "O tempo comeu"                              |
-| Ganhar a confiança do Zelador     | 2d6+Espírito     | Ele te leva até a lápide e conta metade | Ele te deixa ficar                       | Ele te acompanha até a saída, educado        |
-| Coletar Ossos Antigos (Coveiro)   | 2d6+Espírito     | 3 unidades, com respeito devido         | 2 unidades, e o Zelador reparou          | Profanação: o Zelador para de falar com você |
-| Abrir a Cripta Selada             | 2d6+Técnica      | Abre e nada ataca                       | Abre, e algo sai antes de vocês entrarem | Não abre, e agora ela está trincada          |
-| Dispensar um Espectro (com Terço) | 2d6+Espírito     | Dissolve sem luta e deixa a pista       | Dissolve, sem pista                      | Ele fica, e agora sabe seu nome              |
+| Ler os nomes das lápides          | d20+Inteligência | Percebe que nenhum é nome de jogador    | Percebe que são estranhos                | Só nomes                                     |
+| Examinar a Lápide Sem Nome        | d20+Inteligência | Vê que foi raspada, e recentemente      | Vê que está apagada                      | "O tempo comeu"                              |
+| Ganhar a confiança do Zelador     | d20+Sabedoria     | Ele te leva até a lápide e conta metade | Ele te deixa ficar                       | Ele te acompanha até a saída, educado        |
+| Coletar Ossos Antigos (Coveiro)   | d20+Sabedoria     | 3 unidades, com respeito devido         | 2 unidades, e o Zelador reparou          | Profanação: o Zelador para de falar com você |
+| Abrir a Cripta Selada             | d20+Destreza      | Abre e nada ataca                       | Abre, e algo sai antes de vocês entrarem | Não abre, e agora ela está trincada          |
+| Dispensar um Espectro (com Terço) | d20+Sabedoria     | Dissolve sem luta e deixa a pista       | Dissolve, sem pista                      | Ele fica, e agora sabe seu nome              |
 
 ### Só o mestre
 
@@ -509,11 +509,11 @@ Os corvos observam. Eles seguem quem usa a Coroa de Penas do Corvo.
 
 | Ação                             | Teste            | 10+                                                  | 7-9                                 | 6-                                                 |
 | -------------------------------- | ---------------- | ---------------------------------------------------- | ----------------------------------- | -------------------------------------------------- |
-| Estudar um Estandarte Caído      | 2d6+Conhecimento | Reconhece a heráldica: não é de nenhuma guilda atual | Percebe que é antiga                | "Pano velho"                                       |
-| Explorar uma Trincheira Coberta  | 2d6+Reflexo      | Acha um esconderijo intacto e o que tem dentro       | Acha, mas o teto cede atrás de você | Cai; complicação e barulho                         |
-| Enfrentar Sentinela Esquecida    | 2d6+Corpo        | Junta do pescoço: 2 golpes                           | 1 golpe                             | Ela te trata como intruso de linha e não para mais |
-| Achar uma Pá de Trincheira       | 2d6+Conhecimento | Acha uma que ainda presta                            | Acha uma torta                      | Só ferro podre                                     |
-| Domar/atrair um Corvo das Ruínas | 2d6+Técnica x2   | 1 sucesso com uma bugiganga brilhante                | 1 sucesso, ele bica sua mão         | Todos levantam voo de uma vez                      |
+| Estudar um Estandarte Caído      | d20+Inteligência | Reconhece a heráldica: não é de nenhuma guilda atual | Percebe que é antiga                | "Pano velho"                                       |
+| Explorar uma Trincheira Coberta  | d20+Destreza      | Acha um esconderijo intacto e o que tem dentro       | Acha, mas o teto cede atrás de você | Cai; complicação e barulho                         |
+| Enfrentar Sentinela Esquecida    | d20+Força        | Junta do pescoço: 2 golpes                           | 1 golpe                             | Ela te trata como intruso de linha e não para mais |
+| Achar uma Pá de Trincheira       | d20+Inteligência | Acha uma que ainda presta                            | Acha uma torta                      | Só ferro podre                                     |
+| Domar/atrair um Corvo das Ruínas | d20+Destreza x2   | 1 sucesso com uma bugiganga brilhante                | 1 sucesso, ele bica sua mão         | Todos levantam voo de uma vez                      |
 
 ### Só o mestre
 
@@ -572,10 +572,10 @@ sociais do dia 10 são negociáveis.
 
 | Ação                            | Teste            | 10+                                                             | 7-9                                    | 6-                                         |
 | ------------------------------- | ---------------- | --------------------------------------------------------------- | -------------------------------------- | ------------------------------------------ |
-| Ler as Marcas de Passagem       | 2d6+Conhecimento | Entende o código e onde é o encontro                            | Sabe que é código, segue às cegas      | Segue uma marca falsa                      |
-| Ser aceito pelo Contato         | 2d6+Espírito     | Ele negocia de igual pra igual                                  | Negocia, mas cobra o "incômodo" (+25%) | Ele some, e a trilha esfria por uma semana |
-| Passar sem ser visto            | 2d6+Reflexo      | Atravessa e ninguém soube                                       | Atravessa, mas alguém anotou seu rosto | Você foi visto e agora te esperam          |
-| Esconder um item de revista     | 2d6+Reflexo      | Ninguém acha, nem procurando                                    | Acham, mas você tem desculpa           | Achado e registrado                        |
+| Ler as Marcas de Passagem       | d20+Inteligência | Entende o código e onde é o encontro                            | Sabe que é código, segue às cegas      | Segue uma marca falsa                      |
+| Ser aceito pelo Contato         | d20+Sabedoria     | Ele negocia de igual pra igual                                  | Negocia, mas cobra o "incômodo" (+25%) | Ele some, e a trilha esfria por uma semana |
+| Passar sem ser visto            | d20+Destreza      | Atravessa e ninguém soube                                       | Atravessa, mas alguém anotou seu rosto | Você foi visto e agora te esperam          |
+| Esconder um item de revista     | d20+Destreza      | Ninguém acha, nem procurando                                    | Acham, mas você tem desculpa           | Achado e registrado                        |
 | Denunciar a trilha a uma guilda | —                | Sem teste. Muda o mapa social do andar. Consequência permanente |                                        |                                            |
 
 ### Só o mestre

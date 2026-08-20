@@ -10,7 +10,7 @@ receitas: 17
 `equipamentos/` — aquilo é o item final. Isto aqui é o que o Ferreiro
 fabrica **entre** um item final e outro: componente, reforço, ferramenta.
 Formato e regra de raridade em `docs/catalogo_receitas_por_oficio.md`.
-Teste padrão: **2d6+Técnica**.
+Teste padrão: **d20+Destreza**.
 
 ---
 

@@ -7,7 +7,7 @@ receitas: 17
 # Catálogo de Receitas do Alquimista
 
 Cardápio concreto que as Ações de Ofício do Alquimista (`docs/oficios_andar1.md`
-— "Destilar poção ou antídoto", teste **2d6+Conhecimento**) produzem na
+— "Destilar poção ou antídoto", teste **d20+Inteligência**) produzem na
 prática. Formato e regra de raridade em
 `docs/catalogo_receitas_por_oficio.md`.
 

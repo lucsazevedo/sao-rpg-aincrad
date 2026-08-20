@@ -24,8 +24,8 @@ O grupo encontra Erik nos campos, ele desconfia dos estranhos mas pode ajudar se
 
 ## Testes sugeridos
 
-- 2d6 + Espirito — Conseguir convencer Erik da boa fé do grupo
-- 2d6 + Tecnica — Negociar com Erik para conseguir suprimentos sem perder muito
+- d20+Sabedoria — Conseguir convencer Erik da boa fé do grupo
+- d20+Destreza — Negociar com Erik para conseguir suprimentos sem perder muito
 
 ## Encontro (se aplicável)
 

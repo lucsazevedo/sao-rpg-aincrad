@@ -64,7 +64,7 @@ oposto exato do Vell, que vende tudo e não filtra.
 Sobre Illfang, Nissa vende: *"talwar e broquel confirmados. Há um relato não
 verificado de uma segunda arma. Não vendo relato não verificado."*
 
-**Se o grupo pagar pelo relato não verificado assim mesmo** (2d6+Espírito;
+**Se o grupo pagar pelo relato não verificado assim mesmo** (d20+Sabedoria;
 10+ ela cede, 7-9 cede e cobra o triplo, 6- recusa): é a fase 2 do Illfang.
 Levar isso ao Diavel salva vidas no raid. Essa é uma das melhores correntes de
 causa e efeito do andar inteiro.

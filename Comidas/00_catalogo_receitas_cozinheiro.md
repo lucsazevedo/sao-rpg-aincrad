@@ -7,7 +7,7 @@ receitas: 17
 # Catálogo de Receitas do Cozinheiro
 
 Cardápio concreto que a Ação de Ofício **"Preparar refeição com bônus"**
-(`docs/oficios_andar1.md`, teste **2d6+Conhecimento**) produz na prática.
+(`docs/oficios_andar1.md`, teste **d20+Inteligência**) produz na prática.
 Formato e regra de raridade em `docs/catalogo_receitas_por_oficio.md`.
 
 **Como usar na mesa:** o jogador declara a receita antes de rolar (precisa

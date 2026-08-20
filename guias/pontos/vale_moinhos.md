@@ -31,7 +31,7 @@ das pragas do leste.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Trabalhar um dia na lavoura | 2d6+Corpo | Ganha a Calça de Trabalho e a confiança do vale | Ganha comida e um "obrigado" seco | Estraga uma leira; ninguém grita, que é pior |
+| Trabalhar um dia na lavoura | d20+Força | Ganha a Calça de Trabalho e a confiança do vale | Ganha comida e um "obrigado" seco | Estraga uma leira; ninguém grita, que é pior |
 | Perguntar sobre as pragas | — | Sem teste — "Praga nova toda semana." Ele conta dos gafanhotos nos Terraços de Solveig: gancho de `bounty_05` | | |
 | Comprar comida preparada | — | 20-40 Col; se um Cozinheiro preparar junto, a refeição dá bônus temporário | | |
 
@@ -61,8 +61,8 @@ eixo torto, e é exatamente por isso que existe história aqui.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Subir no moinho | 2d6+Reflexo | Vista do vale inteiro; vantagem no próximo teste de Cartógrafo | Sobe, mas o mecanismo range alto e o dono grita lá de baixo | A escada quebra |
-| Examinar o eixo torto | 2d6+Conhecimento | Entende o defeito e sabe que madeira aguentaria a substituição (Nodosa) | Confirma que o problema é o eixo | "Moinho velho é assim mesmo" |
+| Subir no moinho | d20+Destreza | Vista do vale inteiro; vantagem no próximo teste de Cartógrafo | Sobe, mas o mecanismo range alto e o dono grita lá de baixo | A escada quebra |
+| Examinar o eixo torto | d20+Inteligência | Entende o defeito e sabe que madeira aguentaria a substituição (Nodosa) | Confirma que o problema é o eixo | "Moinho velho é assim mesmo" |
 
 **Só o mestre:** a quest `oficio_lenhador_eixo_do_moinho` mora aqui — a
 farinha irregular não vende no dia 10, e a Nodosa boa fica no lado leste
@@ -88,7 +88,7 @@ coleta entre sessões.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Selecionar sementes viáveis | 2d6+Conhecimento | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
+| Selecionar sementes viáveis | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
 
 **Só o mestre:** coletar aqui pressupõe boa relação com a fazenda — se o
 grupo já estragou uma leira, alguém comenta que "o trigo não é de quem
@@ -114,7 +114,7 @@ espiga. Respawn de 6h.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Escolher frutos e tirar sementes | 2d6+Conhecimento | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — derruba e pisa na fruta boa |
+| Escolher frutos e tirar sementes | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — derruba e pisa na fruta boa |
 
 **Só o mestre:** a fruta apodrecendo no chão é falta de braço, não
 descuido — se o grupo parar pra ajudar a recolher, o vale lembra disso. As
@@ -138,7 +138,7 @@ a mudas selecionadas. Respawn de 6h.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Separar mudas e sementes | 2d6+Conhecimento | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
+| Separar mudas e sementes | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
 
 **Só o mestre:** ponto mecânico simples — a descrição do cuidado
 "exagerado" reforça, sem custo de cena, que o vale leva plantio a sério de
@@ -163,7 +163,7 @@ do vale e a melhor fonte de informação sobre o leste do andar.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Oferecer ajuda contra as pragas | — | Sem teste — ele aceita na hora e paga em comida preparada, não Col (gancho de `bounty_05`) | | |
-| Perguntar sobre o leste | 2d6+Espírito | Conta dos gafanhotos nos Terraços e indica a subida certa | Responde curto, sem rota | "Leste é problema." E volta pra leira |
+| Perguntar sobre o leste | d20+Sabedoria | Conta dos gafanhotos nos Terraços e indica a subida certa | Responde curto, sem rota | "Leste é problema." E volta pra leira |
 
 **Só o mestre:** a fala dele — "Praga nova toda semana. Não sei se é o
 jogo ou se é só falta de sorte mesmo." — é o tom do vale inteiro. O
@@ -189,8 +189,8 @@ enxame reage a pressa e movimento brusco, não a cuidado.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher sementes nas flores ao redor | 2d6+Conhecimento | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — e o enxame não gosta |
-| Coletar mel | 2d6+Reflexo | Mel x2, sem ferroada | Mel x1 e ferroadas | Enxame; fuga obrigatória |
+| Colher sementes nas flores ao redor | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — e o enxame não gosta |
+| Coletar mel | d20+Destreza | Mel x2, sem ferroada | Mel x1 e ferroadas | Enxame; fuga obrigatória |
 
 **Só o mestre:** fumaça acalma o enxame (mesma lógica das abelhas douradas
 de Horunka) — quem pensar nisso merece a colheita fácil. Não vire combate:
@@ -213,7 +213,7 @@ o enxame defende a colmeia e não persegue além de alguns metros.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Separar mudas e sementes | 2d6+Conhecimento | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
+| Separar mudas e sementes | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
 
 **Só o mestre:** variação de sabor apenas — o contraste (estrutura ruim,
 plantio bom) reforça o tema do vale sem custo de cena.
@@ -236,8 +236,8 @@ reativo. Respawn de 6h.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher sementes nas flores ao redor | 2d6+Conhecimento | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — e provoca o enxame |
-| Coletar mel | 2d6+Reflexo | Mel x2, sem ferroada | Mel x1 e ferroadas | Enxame; fuga obrigatória |
+| Colher sementes nas flores ao redor | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — e provoca o enxame |
+| Coletar mel | d20+Destreza | Mel x2, sem ferroada | Mel x1 e ferroadas | Enxame; fuga obrigatória |
 
 **Só o mestre:** como a colmeia é baixa e acessível, jogue o enxame mais
 reativo — um 7-9 aqui pode custar ferroadas até na coleta de sementes.

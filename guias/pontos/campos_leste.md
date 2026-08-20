@@ -30,8 +30,8 @@ presságio de algo maior (ver `chefe_rei_planicies` em `campos_oeste`).
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Alcançar a garganta durante o uivo | 2d6+Reflexo | O encontro vira duelo direto, sem matilha | O uivo sai, mas só dois lobos chegam antes da janela fechar | O uivo sai inteiro — a partir daí chegam dois lobos por vez, sem limite |
-| Enfrentar (combate) | 2d6+Corpo | Ver `monstros/alfa_lupino.md` | | |
+| Alcançar a garganta durante o uivo | d20+Destreza | O encontro vira duelo direto, sem matilha | O uivo sai, mas só dois lobos chegam antes da janela fechar | O uivo sai inteiro — a partir daí chegam dois lobos por vez, sem limite |
+| Enfrentar (combate) | d20+Força | Ver `monstros/alfa_lupino.md` | | |
 
 **Só o mestre:** o uivo é literalmente o convite pra matilha — interromper
 ele é a única forma de lutar contra o Alfa sozinho, sem reforço constante.
@@ -58,9 +58,9 @@ das Planícies (`campos_oeste`).
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Observar de dia | 2d6+Conhecimento | Vê que as sete formam ângulos regulares e que a inclinação é intencional | Percebe que há padrão, sem fechar a conta | Parece monte de pedra largada |
-| Observar de noite (confirma as lacunas) | 2d6+Conhecimento | Confirma as sete lacunas no céu | Confirma que falta alguma coisa, sem contar quantas | Céu é céu |
-| Levantar a oitava pedra (2 pessoas) | 2d6+Corpo | Revela marca embaixo — leva à Bússola de Kaldan | Revela a marca, mas rachada | Pedra não sai do lugar |
+| Observar de dia | d20+Inteligência | Vê que as sete formam ângulos regulares e que a inclinação é intencional | Percebe que há padrão, sem fechar a conta | Parece monte de pedra largada |
+| Observar de noite (confirma as lacunas) | d20+Inteligência | Confirma as sete lacunas no céu | Confirma que falta alguma coisa, sem contar quantas | Céu é céu |
+| Levantar a oitava pedra (2 pessoas) | d20+Força | Revela marca embaixo — leva à Bússola de Kaldan | Revela a marca, mas rachada | Pedra não sai do lugar |
 
 **Só o mestre:** a Bússola de Kaldan (Acessório, Raro) sempre aponta pro
 Castelo de Ferro Negro — +1 Conhecimento pra se orientar, e uma vez por
@@ -84,7 +84,7 @@ distância curta.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
 **Só o mestre:** puramente tutorial — não precisa de contexto extra.
 
@@ -104,7 +104,7 @@ Círculo de Pedras. Derrotá-lo libera o field boss Alfa Lupino.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
 **Só o mestre:** este é o "gatilho" antes do Alfa Lupino — se quiser
 escalar tensão, descreva os lobos da matilha rondando mais perto enquanto o
@@ -126,7 +126,7 @@ grupo luta contra as vespas.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher | 2d6+Reflexo | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
+| Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
 
 **Só o mestre:** puramente mecânico — a inclinação das folhas é só
 atmosfera, sem gatilho de sistema.
@@ -146,7 +146,7 @@ atmosfera, sem gatilho de sistema.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
 **Só o mestre:** sem gancho adicional — reforça densidade de ameaça fraca
 da região.
@@ -167,7 +167,7 @@ de `campos_oeste_xpedra_runica_solitaria`.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar o símbolo | 2d6+Conhecimento | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho | Não nota nada de especial |
+| Examinar o símbolo | d20+Inteligência | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho | Não nota nada de especial |
 
 **Só o mestre:** se o grupo já viu a pedra de Verrun, deixe que percebam
 sozinhos a direção que as duas, juntas, sugerem — não entregue a conclusão.
@@ -209,7 +209,7 @@ mudam de lugar".
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher | 2d6+Reflexo | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
+| Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
 
 **Só o mestre:** puramente mecânico.
 
@@ -228,7 +228,7 @@ mudam de lugar".
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher | 2d6+Reflexo | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
+| Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
 
 **Só o mestre:** puramente mecânico — reforça densidade de coleta antes do
 último ponto da região.
@@ -248,7 +248,7 @@ mudam de lugar".
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
 **Só o mestre:** marco de "região totalmente explorada" — bom ponto pra
 avisar o grupo, fora de ficção, que não sobrou mais nada de nomeado por

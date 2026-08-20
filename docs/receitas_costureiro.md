@@ -9,7 +9,7 @@ receitas: 17
 Não duplica `equipamentos/` (as peças finais). Cobre o que o Costureiro
 faz **antes** de uma peça virar armadura de verdade: remendo, reforço,
 acabamento. Formato em `docs/catalogo_receitas_por_oficio.md`. Teste
-padrão: **2d6+Técnica**.
+padrão: **d20+Destreza**.
 
 ---
 

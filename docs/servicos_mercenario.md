@@ -8,7 +8,7 @@ receitas: 17
 
 Profissão de Corpo. O "material" é risco — quem contrata paga pra não
 correr ele mesmo. Formato geral em
-`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **2d6+Corpo**.
+`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **d20+Força**.
 
 ---
 

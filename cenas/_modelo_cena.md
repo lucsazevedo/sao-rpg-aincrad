@@ -33,7 +33,7 @@ humor_musical: # uma das 6 categorias em musicas/ ou nome livre
 
 ## Testes sugeridos
 
-- 2d6 + [atributo] — [contexto]
+- d20+[atributo] — [contexto]
 
 ## NPCs na cena
 

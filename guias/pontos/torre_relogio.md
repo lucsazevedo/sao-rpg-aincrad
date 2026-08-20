@@ -31,8 +31,8 @@ provar.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar as engrenagens | 2d6+Técnica | Percebe que giram sem carga e acha o encaixe vazio com marca de serra | Percebe que não acionam nada, sem descobrir o que sumiu | Conclui que está tudo quebrado e vira as costas |
-| Subir até o mostrador | 2d6+Corpo | Acha o ponteiro guardado; montado, ele para na primeira das cem marcas | Sobe, mas não encontra o ponteiro nesta visita | Desiste da subida |
+| Examinar as engrenagens | d20+Destreza | Percebe que giram sem carga e acha o encaixe vazio com marca de serra | Percebe que não acionam nada, sem descobrir o que sumiu | Conclui que está tudo quebrado e vira as costas |
+| Subir até o mostrador | d20+Força | Acha o ponteiro guardado; montado, ele para na primeira das cem marcas | Sobe, mas não encontra o ponteiro nesta visita | Desiste da subida |
 
 **Só o mestre:** cem marcas, não doze — é a pista mais concreta e menos
 explicada do andar sobre a escala real de Aincrad (100 andares). O Ponteiro
@@ -56,7 +56,7 @@ Mecanismo Quebrado.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar | 2d6+Técnica | Entende parte da função original do mecanismo | Reconhece só que é uma engrenagem, sem mais | Não entende nada, parece só entulho |
+| Examinar | d20+Destreza | Entende parte da função original do mecanismo | Reconhece só que é uma engrenagem, sem mais | Não entende nada, parece só entulho |
 
 **Só o mestre:** não precisa de resposta completa — reforce que a torre
 guarda mais mecanismo do que qualquer um já viu inteiro.
@@ -80,7 +80,7 @@ pra versão mais tensa deste NPC.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Pedir teoria sobre a região | — | Sem teste — compartilha teorias (nem todas corretas) — gancho pro Bibliotecário | | |
-| Perguntar sobre o mecanismo | 2d6+Conhecimento | Ele confirma a tese das cem marcas com entusiasmo genuíno | Ele repete a teoria sem conseguir prová-la | Ele desconversa, ainda inseguro da própria tese |
+| Perguntar sobre o mecanismo | d20+Inteligência | Ele confirma a tese das cem marcas com entusiasmo genuíno | Ele repete a teoria sem conseguir prová-la | Ele desconversa, ainda inseguro da própria tese |
 
 **Só o mestre:** em `EP.47`, ele já não dorme direito por causa de um
 arquivo que encontrou — se o grupo já viveu aquela cena, ele está

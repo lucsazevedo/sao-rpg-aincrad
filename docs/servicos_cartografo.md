@@ -9,7 +9,7 @@ receitas: 17
 Profissão de Conhecimento — não craft item, **produz informação**. Mesma
 proporção 8/5/4, mesma régua de preço, mas o "material" é tempo,
 observação e ponto de vista, não item físico. Formato geral em
-`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **2d6+Conhecimento**.
+`docs/catalogo_receitas_por_oficio.md`. Teste padrão: **d20+Inteligência**.
 
 ---
 

@@ -623,14 +623,14 @@ Essas perguntas não são proibidas. Elas só pedem mais do que memória comum.
 
 | Pergunta | Teste comum | O que um sucesso responde |
 |---|---|---|
-| "Qual rota é mais segura para chegar lá?" | `2d6+Conhecimento` | caminho melhor, tempo, risco e um alerta útil |
-| "Que tipo de monstro vive nessa região?" | `2d6+Conhecimento` | espécie provável, padrão e faixa de ameaça |
-| "Quem compra isso por preço melhor?" | `2d6+Conhecimento` | contato, praça ou cidade certa |
-| "Já ouvi falar desse símbolo?" | `2d6+Conhecimento` | onde apareceu antes ou quem pode reconhecer |
-| "Tem algo errado nesse lugar?" | `2d6+Espírito` ou `Conhecimento` | o detalhe que não bate com o resto da cena |
-| "Quem manda aqui de verdade?" | `2d6+Conhecimento` ou `Espírito` | figura central, tensão local ou facção dominante |
-| "Isso é rumor ou fato?" | `2d6+Conhecimento` | separa parte confiável do exagero |
-| "Alguém já tentou isso antes?" | `2d6+Conhecimento` | vestígio humano, fracasso anterior ou pista social |
+| "Qual rota é mais segura para chegar lá?" | `d20+Inteligência` | caminho melhor, tempo, risco e um alerta útil |
+| "Que tipo de monstro vive nessa região?" | `d20+Inteligência` | espécie provável, padrão e faixa de ameaça |
+| "Quem compra isso por preço melhor?" | `d20+Inteligência` | contato, praça ou cidade certa |
+| "Já ouvi falar desse símbolo?" | `d20+Inteligência` | onde apareceu antes ou quem pode reconhecer |
+| "Tem algo errado nesse lugar?" | `d20+Sabedoria` ou `Conhecimento` | o detalhe que não bate com o resto da cena |
+| "Quem manda aqui de verdade?" | `d20+Inteligência` ou `Espírito` | figura central, tensão local ou facção dominante |
+| "Isso é rumor ou fato?" | `d20+Inteligência` | separa parte confiável do exagero |
+| "Alguém já tentou isso antes?" | `d20+Inteligência` | vestígio humano, fracasso anterior ou pista social |
 
 ## O que se ouve falar no Andar 1
 

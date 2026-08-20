@@ -37,9 +37,9 @@ fazem sozinhos na primeira vez que testam.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler o clima da praça | 2d6+Espírito | Sabe quem está indo pro campo hoje, quem desistiu e quem está esperando alguém voltar | Percebe a tensão, não a causa | Só vê gente andando |
-| Ouvir boato | 2d6+Espírito | Um boato verdadeiro **e** a fonte dele | Um boato verdadeiro, fonte desconhecida | Um boato falso que soa verdadeiro |
-| Falar em voz alta pra praça | 2d6+Espírito | Vinte pessoas param e ouvem até o fim | Metade ouve, metade zomba | Ninguém para, e alguém repete o que você disse imitando você |
+| Ler o clima da praça | d20+Sabedoria | Sabe quem está indo pro campo hoje, quem desistiu e quem está esperando alguém voltar | Percebe a tensão, não a causa | Só vê gente andando |
+| Ouvir boato | d20+Sabedoria | Um boato verdadeiro **e** a fonte dele | Um boato verdadeiro, fonte desconhecida | Um boato falso que soa verdadeiro |
+| Falar em voz alta pra praça | d20+Sabedoria | Vinte pessoas param e ouvem até o fim | Metade ouve, metade zomba | Ninguém para, e alguém repete o que você disse imitando você |
 | Tocar o portão | — | Sem teste. Ele responde "destino não registrado" com voz de sistema. Sempre |  |  |
 
 **Só o mestre:** o círculo gasto no chão é o melhor detalhe da cidade. Descreva
@@ -64,8 +64,8 @@ não tem tempo (ver `docs/mercado_andar1.md`).
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Perguntar sobre o Labirinto | — | Sem teste. Ela manda o grupo procurar a amiga dela em **Tolbana**. Sempre a mesma resposta |  |  |
-| Pechinchar | 2d6+Conhecimento | 10% de desconto e ela passa a te reconhecer | Preço cheio, mas ela explica por que aquela peça vale | Ela devolve a peça pra prateleira |
-| Pedir conselho de equipamento | 2d6+Espírito | Ela olha o grupo inteiro e diz **quem** vai morrer primeiro e por quê | Ela aponta uma falha só | "Compra o que puder pagar" |
+| Pechinchar | d20+Inteligência | 10% de desconto e ela passa a te reconhecer | Preço cheio, mas ela explica por que aquela peça vale | Ela devolve a peça pra prateleira |
+| Pedir conselho de equipamento | d20+Sabedoria | Ela olha o grupo inteiro e diz **quem** vai morrer primeiro e por quê | Ela aponta uma falha só | "Compra o que puder pagar" |
 | Vender espólio | — | 40% do preço base, como qualquer NPC |  |  |
 
 **Só o mestre:** Lynx não é fria, é econômica. Ela quer que o grupo volte —
@@ -91,9 +91,9 @@ mais dos muros** desde o dia 5.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Vender material de coleta | — | Preço de tabela +10% se vier limpo (`docs/mercado_andar1.md`) |  |  |
-| Perguntar por que ela não sai | 2d6+Espírito | Ela conta do dia 5 sem detalhe, e isso já é muito | "Já saí o suficiente." Fim | Ela pede pra você comprar ou ir embora |
-| Encomendar antídoto | 2d6+Conhecimento | Fica pronto na mesma sessão | Pronto na próxima, e ela cobra o frasco | Falta frasco — e frasco só vem do Comerciante |
-| Mencionar a Necrópole de Voss | 2d6+Espírito | Ela para de mexer nas mãos. Isso é a informação | Ela muda de assunto rápido demais | Ela te dispensa educadamente |
+| Perguntar por que ela não sai | d20+Sabedoria | Ela conta do dia 5 sem detalhe, e isso já é muito | "Já saí o suficiente." Fim | Ela pede pra você comprar ou ir embora |
+| Encomendar antídoto | d20+Inteligência | Fica pronto na mesma sessão | Pronto na próxima, e ela cobra o frasco | Falta frasco — e frasco só vem do Comerciante |
+| Mencionar a Necrópole de Voss | d20+Sabedoria | Ela para de mexer nas mãos. Isso é a informação | Ela muda de assunto rápido demais | Ela te dispensa educadamente |
 
 **Só o mestre:** ela é **Talia** (`npcs/talia.md`), irmã do nome apagado da
 lápide de Voss. Não confirme cedo. A bolsa de coleta com poeira é a pista
@@ -115,9 +115,9 @@ novo. Ela topa expedição, mas não vai sozinha e diz isso sem vergonha.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Treinar tiro com ela | 2d6+Reflexo | Ela corrige seu erro: +1 no primeiro teste de arma à distância da próxima sessão | Você acerta o alvo e nada mais | Estraga uma flecha dela, e ela conta as flechas |
-| Convidar pra uma expedição | 2d6+Espírito | Ela vai, e vale por um personagem inteiro em campo aberto | Ela vai, mas só até onde der pra ver a muralha | Recusa: "não com esse plano" |
-| Perguntar por que não vai sozinha | 2d6+Espírito | Ela responde de verdade, e é uma resposta boa | Piada e desvio | Silêncio constrangido |
+| Treinar tiro com ela | d20+Destreza | Ela corrige seu erro: +1 no primeiro teste de arma à distância da próxima sessão | Você acerta o alvo e nada mais | Estraga uma flecha dela, e ela conta as flechas |
+| Convidar pra uma expedição | d20+Sabedoria | Ela vai, e vale por um personagem inteiro em campo aberto | Ela vai, mas só até onde der pra ver a muralha | Recusa: "não com esse plano" |
+| Perguntar por que não vai sozinha | d20+Sabedoria | Ela responde de verdade, e é uma resposta boa | Piada e desvio | Silêncio constrangido |
 | Comprar dedeiras / arco | — | Depois de duas expedições juntas, ela vende as `Dedeiras de Arqueiro` (250 Col) |  |  |
 
 **Só o mestre:** os dedos machucados são gancho — ela treina demais porque
@@ -142,8 +142,8 @@ depois do dia 15.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Comprar arma Comum | — | 80-200 Col conforme o tipo. Todos os 22 tipos sempre em estoque |  |  |
-| Experimentar uma arma que não é a sua | 2d6+Técnica | Você entende a Marca daquela arma — e o mestre te diz qual é | Você entende que não é pra você | Derruba, e o dono levanta os olhos |
-| Perguntar o que vende melhor | 2d6+Conhecimento | "Espada Longa. Sempre Espada Longa." E ele diz por quê, e é sobre medo | Ele responde só o nome | Ele dá de ombros |
+| Experimentar uma arma que não é a sua | d20+Destreza | Você entende a Marca daquela arma — e o mestre te diz qual é | Você entende que não é pra você | Derruba, e o dono levanta os olhos |
+| Perguntar o que vende melhor | d20+Inteligência | "Espada Longa. Sempre Espada Longa." E ele diz por quê, e é sobre medo | Ele responde só o nome | Ele dá de ombros |
 | Comprar flecha / virote | — | 15 Col o lote de 20 |  |  |
 
 **Só o mestre:** o dono já viu gente demais comprar a primeira espada. Ele não
@@ -168,9 +168,9 @@ não arma pronta — e explica o motivo sem que ninguém pergunte.
 |---|---|---|---|---|
 | Comprar Placas de Metal Refinado | — | 90 Col cada, 3 por semana. Com Minério Raro próprio: -15% |  |  |
 | Consertar peça rachada | — | 1/5 do preço base do item |  |  |
-| Pedir pra ele avaliar um material | 2d6+Conhecimento | Ele diz o que dá pra fazer com aquilo e quanto vale | Diz se presta ou não | Ele está no meio de uma têmpera e manda voltar |
+| Pedir pra ele avaliar um material | d20+Inteligência | Ele diz o que dá pra fazer com aquilo e quanto vale | Diz se presta ou não | Ele está no meio de uma têmpera e manda voltar |
 | Mostrar Fragmento de Armadura Kobold | — | Sem teste. Ele **para tudo**. Desconto de 20% e ele passa a pedir mais |  |  |
-| Encomendar arma Incomum | 2d6+Técnica (dele) | Fica pronta numa sessão | Pronta, mas ele usou material seu a mais | Ele recusa: falta componente |
+| Encomendar arma Incomum | d20+Destreza (dele) | Fica pronta numa sessão | Pronta, mas ele usou material seu a mais | Ele recusa: falta componente |
 
 **Só o mestre:** Kazuo tem uma lista mental de gente de clã com quem está de
 mal e não explica pra ninguém — só diz "hoje não". Use isso quando o grupo
@@ -195,8 +195,8 @@ pensa em consultar.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Comprar peça de tecido/couro | — | Tabela de `docs/mercado_andar1.md`. Com Pelagem Azulada própria: -20% |  |  |
-| Perguntar quem comprou o quê | 2d6+Espírito | Ela lembra da pessoa, da peça e do dia | Lembra da peça, não da pessoa | "Não falo de cliente" |
-| Pedir avaliação do seu equipamento | 2d6+Técnica | Ela aponta a falha exata e conserta na hora | Aponta a falha, cobra pra consertar | "Serve." (e é elogio) |
+| Perguntar quem comprou o quê | d20+Sabedoria | Ela lembra da pessoa, da peça e do dia | Lembra da peça, não da pessoa | "Não falo de cliente" |
+| Pedir avaliação do seu equipamento | d20+Destreza | Ela aponta a falha exata e conserta na hora | Aponta a falha, cobra pra consertar | "Serve." (e é elogio) |
 | Encomendar o Traje de Batedor | — | Ela monta as três peças se o grupo trouxer material; mais caro que em Horunka e melhor feito |  |  |
 
 **Só o mestre:** se o grupo aparecer com equipamento rachado três vezes
@@ -219,9 +219,9 @@ o risco escondido (`docs/mercado_andar1.md`).
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Comprar item sem procedência | 2d6+Conhecimento | Você identifica o risco antes de pagar | Compra sem saber qual é o risco | Compra o pior item da banca achando que é o melhor |
-| Perguntar de onde veio | 2d6+Espírito | Uma meia-verdade útil | "De alguém." | Encerram a conversa e somem por uma semana |
-| Vender algo que não é seu | 2d6+Conhecimento | Vendido, sem perguntas, 60% do valor | Vendido a 40%, e alguém viu | Alguém reconhece o item |
+| Comprar item sem procedência | d20+Inteligência | Você identifica o risco antes de pagar | Compra sem saber qual é o risco | Compra o pior item da banca achando que é o melhor |
+| Perguntar de onde veio | d20+Sabedoria | Uma meia-verdade útil | "De alguém." | Encerram a conversa e somem por uma semana |
+| Vender algo que não é seu | d20+Inteligência | Vendido, sem perguntas, 60% do valor | Vendido a 40%, e alguém viu | Alguém reconhece o item |
 | Comprar Cristal "recuperado" | — | 200 Col (de 350). 20% de chance de ser um Cristal de Luz repintado |  |  |
 
 **Só o mestre:** clãs evitam ser vistos aqui. Um Diplomata pego comprando
@@ -244,10 +244,10 @@ pra um personagem novo entrar na mesa sem justificativa nenhuma.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Treinar sua arma | 2d6+Técnica | Entende sua arma: +1 no primeiro teste dela na próxima sessão | Treina e cansa, sem efeito | Machuca o pulso: complicação no primeiro combate |
-| Ensinar alguém | 2d6+Espírito | O aluno ganha o +1 em vez de você, e te deve uma | Ele entende metade | Ele entende errado, e você vai ver isso em campo |
-| Observar quem treina | 2d6+Conhecimento | Você identifica dois jogadores competentes pra recrutar depois | Um só | Todo mundo parece igual |
-| Provocar um duelo de treino | 2d6+Reflexo | Vitória limpa, e a plateia reparou | Empate suado | Derrota, e a plateia reparou mais ainda |
+| Treinar sua arma | d20+Destreza | Entende sua arma: +1 no primeiro teste dela na próxima sessão | Treina e cansa, sem efeito | Machuca o pulso: complicação no primeiro combate |
+| Ensinar alguém | d20+Sabedoria | O aluno ganha o +1 em vez de você, e te deve uma | Ele entende metade | Ele entende errado, e você vai ver isso em campo |
+| Observar quem treina | d20+Inteligência | Você identifica dois jogadores competentes pra recrutar depois | Um só | Todo mundo parece igual |
+| Provocar um duelo de treino | d20+Destreza | Vitória limpa, e a plateia reparou | Empate suado | Derrota, e a plateia reparou mais ainda |
 
 **Só o mestre:** a frase repetida do instrutor deve ser sempre a mesma, toda
 vez que o grupo passar. Depois de três sessões, mude uma palavra e veja se
@@ -269,8 +269,8 @@ alguém nota.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ouvir a cantiga de verdade | 2d6+Espírito (Músico: automático) | Decora a letra inteira e sacou que são cores de cristal | Decora a letra | Lembra do refrão e mais nada |
-| Comprar boato | 2d6+Conhecimento | Dois boatos, um deles conferível hoje | Um boato | Um boato velho que todo mundo já sabe |
+| Ouvir a cantiga de verdade | d20+Sabedoria (Músico: automático) | Decora a letra inteira e sacou que são cores de cristal | Decora a letra | Lembra do refrão e mais nada |
+| Comprar boato | d20+Inteligência | Dois boatos, um deles conferível hoje | Um boato | Um boato velho que todo mundo já sabe |
 | Tocar junto com ele (Músico) | — | Sem teste. Ele solta o **sexto verso** que acha que inventou sozinho |  |  |
 | Pagar uma rodada pra mesa | — | 30 Col. Todo mundo fala com vocês pelo resto da tarde |  |  |
 
@@ -295,8 +295,8 @@ porta escorada é decisão dela, não descuido.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Dormir | — | 15 Col. Zona segura: recupera tudo |  |  |
-| Ser tratado de status negativo | 2d6+Espírito (Nadia) | Veneno, paralisia ou confusão removidos sem gastar Cristal | Removido, mas leva a noite inteira | Precisa de material que ela não tem |
-| Perguntar quem passou por aqui | 2d6+Espírito | Ela conta o que é público e nada além | Ela desconversa arrumando ervas | Silêncio absoluto — ela nunca fala de paciente |
+| Ser tratado de status negativo | d20+Sabedoria (Nadia) | Veneno, paralisia ou confusão removidos sem gastar Cristal | Removido, mas leva a noite inteira | Precisa de material que ela não tem |
+| Perguntar quem passou por aqui | d20+Sabedoria | Ela conta o que é público e nada além | Ela desconversa arrumando ervas | Silêncio absoluto — ela nunca fala de paciente |
 | Deixar alguém aos cuidados dela | — | Sem teste, sem cobrança. Ela aceita. Sempre |  |  |
 
 **Só o mestre:** Nadia é a mentora do Médico jogador e a única fonte que ensina
@@ -319,10 +319,10 @@ isso pra empurrar o grupo pra lá sem dar quest formal.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Procurar um nome | 2d6+Conhecimento | Acha, com data e quem registrou | Acha o nome, sem contexto | O nome está lá e você passa direto |
-| Ler as datas em sequência | 2d6+Conhecimento | Percebe que os quatro nomes do grupo do Marco foram registrados no mesmo dia | Percebe um agrupamento estranho | Só nomes |
+| Procurar um nome | d20+Inteligência | Acha, com data e quem registrou | Acha o nome, sem contexto | O nome está lá e você passa direto |
+| Ler as datas em sequência | d20+Inteligência | Percebe que os quatro nomes do grupo do Marco foram registrados no mesmo dia | Percebe um agrupamento estranho | Só nomes |
 | Registrar um nome novo | — | Sem teste. Irmão Anselm escreve — mas pede que **você** segure a mão dele ou escreva junto |  |  |
-| Ficar em silêncio ali | 2d6+Espírito | Limpa qualquer condição emocional narrada | Alívio parcial | Você sai pior do que entrou |
+| Ficar em silêncio ali | d20+Sabedoria | Limpa qualquer condição emocional narrada | Alívio parcial | Você sai pior do que entrou |
 
 **Só o mestre:** este é o ponto onde a campanha cobra. Toda morte de NPC
 recorrente (Gilda, um recruta de Kaldrin, alguém do raid) deve aparecer aqui na
@@ -345,9 +345,9 @@ teve; as pessoas vêm pelo silêncio.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Sentar em silêncio | — | Sem teste. Uma cena inteira ali remove qualquer condição emocional narrada |  |  |
-| Conversar com Anselm | 2d6+Espírito | Ele ouve, e devolve a pergunta certa | Ele ouve e não devolve nada | Ele te dá espaço, e isso dói mais |
-| Perguntar quem tem vindo | 2d6+Espírito | Ele conta com discrição — e é um raio-X emocional do andar | Conta parte | "Não falo do que me falam" |
-| Perguntar do sino | 2d6+Conhecimento | Alguém conta os toques em voz alta desde o dia 3, e Anselm sabe quem | Ele confirma que alguém conta | Ele muda de assunto |
+| Conversar com Anselm | d20+Sabedoria | Ele ouve, e devolve a pergunta certa | Ele ouve e não devolve nada | Ele te dá espaço, e isso dói mais |
+| Perguntar quem tem vindo | d20+Sabedoria | Ele conta com discrição — e é um raio-X emocional do andar | Conta parte | "Não falo do que me falam" |
+| Perguntar do sino | d20+Inteligência | Alguém conta os toques em voz alta desde o dia 3, e Anselm sabe quem | Ele confirma que alguém conta | Ele muda de assunto |
 
 **Só o mestre:** Anselm não é padre e corrige quem o chama assim. Ele era
 professor. Escreve os nomes no Memorial junto com o Zelador de Voss — os dois
@@ -370,10 +370,10 @@ manuscrito importa mais.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler o quadro | 2d6+Conhecimento | Duas quests úteis **e** qual paga melhor | Uma quest, com o pedido incompleto | Só pedidos velhos já resolvidos |
-| Procurar pedido manuscrito | 2d6+Espírito | Acha um pedido pessoal que ninguém quis pegar | Acha um, mas está rasgado no meio | Nada — alguém levou os bons |
-| Pregar um pedido seu | 2d6+Conhecimento | Alguém responde até a próxima sessão | Responde, mas cobra caro | Seu papel é coberto em uma hora |
-| Descobrir quem arrancou os três | 2d6+Conhecimento | Foi um clã, e você sabe qual | Foi alguém organizado | Ninguém viu |
+| Ler o quadro | d20+Inteligência | Duas quests úteis **e** qual paga melhor | Uma quest, com o pedido incompleto | Só pedidos velhos já resolvidos |
+| Procurar pedido manuscrito | d20+Sabedoria | Acha um pedido pessoal que ninguém quis pegar | Acha um, mas está rasgado no meio | Nada — alguém levou os bons |
+| Pregar um pedido seu | d20+Inteligência | Alguém responde até a próxima sessão | Responde, mas cobra caro | Seu papel é coberto em uma hora |
+| Descobrir quem arrancou os três | d20+Inteligência | Foi um clã, e você sabe qual | Foi alguém organizado | Ninguém viu |
 
 **Só o mestre:** use o quadro como o seu painel de controle. Se o grupo estiver
 sem rumo, um manuscrito novo aparece; se estiver sobrecarregado, os pedidos
@@ -396,9 +396,9 @@ Lago** (`npcs/bren_do_lago.md`). Zona segura, sem comércio formal.
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
 | Comer o que Bren está fazendo | — | 15 Col ou uma conversa. Bônus de refeição na próxima expedição |  |  |
-| Deixar Bren te ouvir | 2d6+Espírito | Ele deixa o silêncio durar até você dizer o que estava evitando — e isso limpa uma condição emocional | Você fala, e não resolve nada | Você enche o silêncio de piada e ele deixa |
-| Pescar | 2d6+Reflexo | 2 peixes pequenos e ninguém liga | 1 peixe | Um guarda avisa que não é pra pescar aqui |
-| Cozinhar junto (Cozinheiro) | 2d6+Conhecimento | Ele te ensina uma receita e passa a guardar ingrediente pra você | Prato sai bom | Vocês discutem sobre tempero, seriamente |
+| Deixar Bren te ouvir | d20+Sabedoria | Ele deixa o silêncio durar até você dizer o que estava evitando — e isso limpa uma condição emocional | Você fala, e não resolve nada | Você enche o silêncio de piada e ele deixa |
+| Pescar | d20+Destreza | 2 peixes pequenos e ninguém liga | 1 peixe | Um guarda avisa que não é pra pescar aqui |
+| Cozinhar junto (Cozinheiro) | d20+Inteligência | Ele te ensina uma receita e passa a guardar ingrediente pra você | Prato sai bom | Vocês discutem sobre tempero, seriamente |
 
 **Só o mestre:** Bren é a válvula emocional da capital. Ele não dá conselho —
 ele espera. Use quando um personagem estiver carregando algo que o jogador
@@ -420,9 +420,9 @@ ainda não colocou em cena.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Responder à pergunta de Daren | 2d6+Espírito | Ele aponta um perigo real da rota de hoje, de graça | Ele deixa passar sem dizer nada | Ele te olha por tempo demais e você sai desconfortável |
-| Perguntar quem saiu hoje | 2d6+Conhecimento | Números exatos, nomes de quem não voltou ontem | Só o número | "Muita gente" |
-| Pedir escolta | 2d6+Espírito | Ele arruma alguém confiável | Arruma alguém disponível | Ninguém, e ele diz por quê |
+| Responder à pergunta de Daren | d20+Sabedoria | Ele aponta um perigo real da rota de hoje, de graça | Ele deixa passar sem dizer nada | Ele te olha por tempo demais e você sai desconfortável |
+| Perguntar quem saiu hoje | d20+Inteligência | Números exatos, nomes de quem não voltou ontem | Só o número | "Muita gente" |
+| Pedir escolta | d20+Sabedoria | Ele arruma alguém confiável | Arruma alguém disponível | Ninguém, e ele diz por quê |
 | Sair sem plano de retirada | — | Sem teste. Ele deixa. E anota |  |  |
 
 **Só o mestre:** a pergunta padrão dele é *"e se der errado, vocês voltam por
@@ -445,10 +445,10 @@ primeira complicação do dia.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Comprar informação de rota | 2d6+Conhecimento | Rota exata, com o ponto onde o vento mascara som | Rota, sem o detalhe que importa | Ela cobra caro e entrega pouco |
+| Comprar informação de rota | d20+Inteligência | Rota exata, com o ponto onde o vento mascara som | Rota, sem o detalhe que importa | Ela cobra caro e entrega pouco |
 | Admitir que está com medo | — | Sem teste. Ela respeita, desce do batente e ajuda de verdade |  |  |
-| Vender bravata | 2d6+Espírito | Ela finge acreditar e você não ganha nada | Ela ri | Ela desmonta seu plano na frente do grupo, item por item |
-| Trocar mapa por mapa | 2d6+Conhecimento | Troca justa, e ela passa a te procurar | Troca desigual a seu favor hoje, contra você depois | Ela recusa: "seu desenho não vale tinta" |
+| Vender bravata | d20+Sabedoria | Ela finge acreditar e você não ganha nada | Ela ri | Ela desmonta seu plano na frente do grupo, item por item |
+| Trocar mapa por mapa | d20+Inteligência | Troca justa, e ela passa a te procurar | Troca desigual a seu favor hoje, contra você depois | Ela recusa: "seu desenho não vale tinta" |
 
 **Só o mestre:** Maelis respeita **medo declarado** e despreza bravata. Isso é
 uma alavanca de interpretação: o jogador que se expõe ganha mais que o que
@@ -471,10 +471,10 @@ adiante, para o Labirinto.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Consultar o arquivo | 2d6+Conhecimento | Ela separa o que ela **viu**, o que **ouviu** e o que **alguém jurou** — e as três coisas são úteis | Ela entrega tudo junto e você separa sozinho | Ela não empresta: "volta com algo pra trocar" |
+| Consultar o arquivo | d20+Inteligência | Ela separa o que ela **viu**, o que **ouviu** e o que **alguém jurou** — e as três coisas são úteis | Ela entrega tudo junto e você separa sozinho | Ela não empresta: "volta com algo pra trocar" |
 | Vender uma região mapeada | — | 10 Col por ponto revelado (`docs/economia_profissoes.md`) |  |  |
-| Pedir a rota até o Labirinto | 2d6+Conhecimento | Rota completa até o Limiar, com onde acampar | Rota até Tolbana e "pergunta lá" | Ela desenha o caminho errado de propósito, pra te proteger |
-| Copiar um mapa sem pedir | 2d6+Reflexo | Ninguém vê | Ela vê e não diz nada — hoje | Ela vê, diz, e o arquivo fecha pra você |
+| Pedir a rota até o Labirinto | d20+Inteligência | Rota completa até o Limiar, com onde acampar | Rota até Tolbana e "pergunta lá" | Ela desenha o caminho errado de propósito, pra te proteger |
+| Copiar um mapa sem pedir | d20+Destreza | Ninguém vê | Ela vê e não diz nada — hoje | Ela vê, diz, e o arquivo fecha pra você |
 
 **Só o mestre:** o sistema de cores da Suri é a melhor ferramenta de mestre da
 capital: use as três categorias dela pra entregar informação sobre o mistério

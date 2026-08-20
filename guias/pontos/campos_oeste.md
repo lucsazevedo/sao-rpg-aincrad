@@ -29,9 +29,9 @@ confortável antes do campo aberto de verdade.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Pedir esboço do terreno a Erik | 2d6+Espírito | Rota segura + aviso sobre o Alfa Lupino desperto (ver `campos_leste`) | Rota segura, sem aviso extra | Rota genérica, igual a qualquer mapa comprado |
+| Pedir esboço do terreno a Erik | d20+Sabedoria | Rota segura + aviso sobre o Alfa Lupino desperto (ver `campos_leste`) | Rota segura, sem aviso extra | Rota genérica, igual a qualquer mapa comprado |
 | Trocar material de caça | — | Sem teste — troca justa por item de caça comum | | |
-| Perguntar sobre os javalis da região | 2d6+Conhecimento | Sabe exatamente onde evitar filhotes de Frenzy Boar | Sabe que existem, não onde | Nenhuma informação nova |
+| Perguntar sobre os javalis da região | d20+Inteligência | Sabe exatamente onde evitar filhotes de Frenzy Boar | Sabe que existem, não onde | Nenhuma informação nova |
 
 **Só o mestre:** Erik desconfia mais do que aparenta — ele é a mesma fonte
 usada (ou não) em `EP.23 — O Falso Guia`. Se o grupo já viveu aquela cena,
@@ -56,7 +56,7 @@ Planícies).
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar o símbolo talhado | 2d6+Conhecimento | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho, sem mais detalhes | Não nota nada de especial |
+| Examinar o símbolo talhado | d20+Inteligência | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho, sem mais detalhes | Não nota nada de especial |
 
 **Só o mestre:** não force conexão com o mistério de Cardinal
 (`cenas/cronicas_de_aincrad_indice.md`) na primeira visita — deixe como
@@ -83,8 +83,8 @@ em outra região.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Ler a galhada antes da luta | 2d6+Conhecimento | Reconhece a mesma escrita das pedras de Verrun, Kaldan, Pemberton e Braxhold | Reconhece que é escrita e que já viu igual, sem lembrar onde | Parece marca de pelagem comum — perde a única chance de ler com ele parado |
-| Enfrentar (combate) | 2d6+Corpo | Ver `monstros/rei_das_planicies.md` | | |
+| Ler a galhada antes da luta | d20+Inteligência | Reconhece a mesma escrita das pedras de Verrun, Kaldan, Pemberton e Braxhold | Reconhece que é escrita e que já viu igual, sem lembrar onde | Parece marca de pelagem comum — perde a única chance de ler com ele parado |
+| Enfrentar (combate) | d20+Força | Ver `monstros/rei_das_planicies.md` | | |
 
 **Só o mestre:** respawn de 24h — trate como evento de região, não farm
 solo. O texto "escrito" na pelagem é o mesmo tipo de pista fragmentada usada
@@ -107,8 +107,8 @@ sai pela primeira vez da Cidade do Início (ver `01_javalis_na_pastagem.md`).
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo | Golpe limpo, sem reação | Acerta, mas o boar reage | Boar ataca primeiro |
-| Rastrear antes de engajar | 2d6+Reflexo | Percebe o boar antes dele perceber o grupo | Percebe no limite | Estumbra em cima dele |
+| Enfrentar | d20+Força | Golpe limpo, sem reação | Acerta, mas o boar reage | Boar ataca primeiro |
+| Rastrear antes de engajar | d20+Destreza | Percebe o boar antes dele perceber o grupo | Percebe no limite | Estumbra em cima dele |
 
 **Só o mestre:** ameaça fraca (1-2 golpes) — não escale sem motivo. Serve
 melhor como tutorial de combate do que como desafio real.
@@ -130,7 +130,7 @@ proximidade com a ruína.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo | Golpe limpo, sem reação | Acerta, mas o boar reage | Boar ataca primeiro |
+| Enfrentar | d20+Força | Golpe limpo, sem reação | Acerta, mas o boar reage | Boar ataca primeiro |
 
 **Só o mestre:** este spawn libera o Batedor Solitário e a Pedra Rúnica
 Solitária adiante na cadeia de descoberta — não é obrigatório derrotá-lo pra
@@ -153,7 +153,7 @@ acessível da região — bom pra Alquimista ou Cozinheiro de baixo nível.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher | 2d6+Reflexo | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
+| Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
 
 **Só o mestre:** respawn rápido (6h) — bom ponto pra downtime de coleta
 entre sessões (ver "Downtime entre sessões" em
@@ -176,7 +176,7 @@ depois de examinar `campos_ruinas`.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher | 2d6+Reflexo | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
+| Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
 
 **Só o mestre:** puramente mecânico — use a variação de cor (mais escura,
 perto da ruína) só se quiser plantar mais uma migalha ambiental do arco
@@ -198,7 +198,7 @@ curta, boa pra ensinar que nem toda ameaça do campo é corpo a corpo.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Enfrentar | 2d6+Corpo ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
+| Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
 **Só o mestre:** liberado só depois de `campos_ruinas` — use isso pra
 reforçar que a ruína "atraiu" atenção de mais bichos pra perto, não é
@@ -220,7 +220,7 @@ coincidência de mapa.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Examinar o símbolo | 2d6+Conhecimento | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho | Não nota nada de especial |
+| Examinar o símbolo | d20+Inteligência | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho | Não nota nada de especial |
 
 **Só o mestre:** duas pedras na mesma região começam a formar padrão — se o
 grupo comentar sobre isso, é o gancho perfeito pra `EP.07 — O Mapa
@@ -267,7 +267,7 @@ Verrun.
 
 | Ação | Teste | 10+ | 7-9 | 6- |
 |---|---|---|---|---|
-| Colher | 2d6+Reflexo | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
+| Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
 
 **Só o mestre:** último ponto da cadeia de descoberta da região — bom marco
 pra avisar o grupo (fora de ficção) que já viram tudo que a Planície de

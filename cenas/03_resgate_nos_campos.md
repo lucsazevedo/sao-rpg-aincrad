@@ -51,9 +51,9 @@ sozinha ela não entraria ali, mas com companhia sim.
 
 ## Testes sugeridos
 
-- 2d6 + Reflexo — abrir uma rota de fuga sem se expor demais
-- 2d6 + Corpo — carregar/apoiar o jogador ferido durante a corrida
-- 2d6 + Espirito — manter o jogador resgatado calmo o suficiente pra não travar de pânico
+- d20+Destreza — abrir uma rota de fuga sem se expor demais
+- d20+Força — carregar/apoiar o jogador ferido durante a corrida
+- d20+Sabedoria — manter o jogador resgatado calmo o suficiente pra não travar de pânico
 
 ## NPCs na cena
 
