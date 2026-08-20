@@ -1144,34 +1144,42 @@ A regra de ouro é:
 
 ### Guarda Férrea (Nível 1)
 *Ação*
+
 Postura defensiva. Concede +2 CA, vantagem contra ser empurrado ou derrubado e permite contra-atacar com Reação quando uma criatura errar um ataque corpo a corpo. O deslocamento fica reduzido pela metade enquanto a postura estiver ativa.
 
 ### Interceptação (Nível 1)
 *Reação*
+
 Reação para proteger um aliado a até 10 ft. O usuário move-se sem provocar Ataques de Oportunidade, torna-se o alvo do ataque e recebe resistência ao dano se for atingido.
 
 ### Golpe de Escudo (Nível 2)
 *Ação* · dano cortante
+
 Ataque corpo a corpo usando Força. Causa **2d8 + FOR**. O alvo realiza resistência de Força; falha: empurrado 10 ft e Caído. Sucesso: empurrado 5 ft.
 
 ### Muralha de Aincrad — Limit Break (Nível 5)
 *Reação*
+
 Reação, 1/Descanso Longo, alcance 20 ft. Quando você ou um aliado seria reduzido a 0 PV por um ataque, você intercepta o golpe. O aliado não sofre o dano; você recebe o ataque com resistência. Se isso o reduzir a 0 PV, fica com 1 PV.
 
 ### Muralha de Ferro (Nível 6)
 *Ação*
+
 Postura defensiva de grupo. Concede resistência contra ataques com armas, proteção contra empurrões/quedas e bônus de CA para aliados próximos.
 
 ### Contra-Golpe (Nível 10)
 *Reação*
+
 Reação quando uma criatura erra um ataque corpo a corpo contra você. Realiza um ataque de Força e pode derrubar o alvo.
 
 ### Sacrifício do Guardião (Nível 14)
 *Reação*
+
 Reação para interceptar um ataque destinado a um aliado a até 20 ft, tornando-se o alvo do ataque e recebendo resistência ao dano.
 
 ### Último Bastião (Nível 18)
 *Ação*
+
 1/Descanso Longo. Forma defensiva máxima por 1 minuto. Concede resistência a ataques com armas, impede movimentação forçada comum e protege aliados próximos.
 
 ---
@@ -1197,34 +1205,42 @@ Reação para interceptar um ataque destinado a um aliado a até 20 ft, tornando
 
 ### Golpe Demolidor (Nível 1)
 *Ação* · dano contundente
+
 Ataque corpo a corpo usando Força. Causa **1d10 + FOR**. Se o alvo estiver usando escudo ou postura defensiva, esse bônus fica anulado até o fim do turno seguinte.
 
 ### Martelada Descendente (Nível 1)
 *Ação* · dano contundente
+
 Ataque corpo a corpo. Causa **1d8 + FOR**. O alvo faz teste de Força; falha: fica **Caído**.
 
 ### Abalo (Nível 2)
 *Ação*
+
 Golpe de área de 5 ft ao redor do usuário. Inimigos na área fazem resistência de Destreza; falha: **2d6 + FOR** de dano contundente e **Caído**. Sucesso: metade do dano.
 
 ### Impacto de Aincrad — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 1/Descanso Longo. Golpe de área de 10 ft de raio (alcance corpo a corpo). Inimigos fazem resistência de Constituição; falha: **3d10 + FOR** de dano contundente e **Atordoado** até o fim do próximo turno deles. Sucesso: metade do dano, sem atordoar.
 
 ### Postura Inabalável (Nível 6)
 *Ação*
+
 Vantagem em testes de resistência contra ser empurrado ou derrubado; resistência a movimentação forçada comum enquanto a postura estiver ativa.
 
 ### Quebra-Couraça (Nível 10)
 *Ação* · dano contundente
+
 Ataque corpo a corpo. Causa **2d10 + FOR** e reduz a CA do alvo em 2 até o fim da cena (não acumula com usos repetidos).
 
 ### Contra-Impacto (Nível 14)
 *Reação*
+
 Reação quando o usuário sofre dano corpo a corpo: reduz o dano em **2d8 + FOR** e, se isso zerar o dano, empurra o atacante 10 ft.
 
 ### Colosso (Nível 18)
 *Ação*
+
 1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano contundente, +2 CA, e todo ataque corpo a corpo do usuário nesse período força teste de Constituição do alvo (falha: Caído).
 
 ---
@@ -1250,34 +1266,42 @@ Reação quando o usuário sofre dano corpo a corpo: reduz o dano em **2d8 + FOR
 
 ### Postura Inabalável (Nível 1)
 *Ação*
+
 Postura defensiva: +2 CA, vantagem contra empurrão/queda e resistência a movimentação forçada comum enquanto ativa.
 
 ### Golpe de Pá (Nível 1)
 *Ação* · dano contundente
+
 Ataque corpo a corpo usando Força. Causa **1d8 + FOR**. O alvo faz teste de Força; falha: empurrado 5 ft.
 
 ### Cova Defensiva (Nível 2)
 *Ação*
+
 Cria uma área de 10 ft de terreno difícil ao redor de um ponto a até 10 ft, por 1 minuto. Concede meia cobertura a quem estiver dentro dela.
 
 ### Muralha de Terra — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 1/Descanso Longo. Cria uma barreira de 10 ft de comprimento e 5 ft de altura, alcance 15 ft. Aliados atrás dela recebem meia cobertura; ataques que a atravessam têm desvantagem.
 
 ### Quebra-Postura (Nível 6)
 *Ação* · dano contundente
+
 Ataque corpo a corpo. Causa **2d8 + FOR** e o alvo faz teste de Força; falha: **Caído** e deslocamento reduzido pela metade até o fim do turno seguinte.
 
 ### Parede Viva (Nível 10)
 *Ação*
+
 +2 CA e cria terreno difícil num raio de 10 ft ao redor do usuário por 1 minuto. Inimigos que tentam sair da área têm o deslocamento reduzido a 0 nessa tentativa.
 
 ### Contra-Escavação (Nível 14)
 *Reação*
+
 Reação quando o usuário sofre dano: reduz o dano em **2d6 + FOR** e pode se reposicionar 5 ft.
 
 ### Fortaleza do Escavador (Nível 18)
 *Ação*
+
 1/Descanso Longo. Forma suprema por 1 minuto: resistência a dano físico, imunidade a movimentação forçada comum, terreno difícil num raio de 15 ft e meia cobertura pra aliados dentro dele.
 
 ---
@@ -1303,34 +1327,42 @@ Reação quando o usuário sofre dano: reduz o dano em **2d6 + FOR** e pode se r
 
 ### Postura de Guarda (Nível 1)
 *Ação*
+
 Postura defensiva: +2 CA contra ataques corpo a corpo, alcance de Ataques de Oportunidade +5 ft enquanto ativa.
 
 ### Estocada Defensiva (Nível 1)
 *Ação* · dano perfurante
+
 Ataque de alcance 10 ft usando Destreza. Causa **1d8 + DES**. O alvo faz teste de Força; falha: empurrado 10 ft.
 
 ### Guarda do Sentinela (Nível 2)
 *Reação*
+
 Reação: protege um aliado a até 10 ft, tornando-se o alvo de um ataque direcionado a ele.
 
 ### Formação da Vanguarda — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 1/Descanso Longo. Por 1 minuto, o alcance dos ataques da Lança aumenta em 5 ft e aliados a até 10 ft do usuário ganham +1 de CA.
 
 ### Impacto da Lança (Nível 6)
 *Ação* · dano perfurante
+
 Ataque de alcance 10 ft. Causa **2d8 + DES** e empurra o alvo 5 ft (teste de Força pra resistir).
 
 ### Círculo do Sentinela (Nível 10)
 *Ação*
+
 Área defensiva de 10 ft de raio por 1 minuto: inimigos que entram têm o deslocamento reduzido pela metade; o usuário pode usar Reação pra atacar um inimigo que termine o turno na área.
 
 ### Interceptação Perfeita (Nível 14)
 *Reação*
+
 Reação: reduz em **2d10 + DES** o dano que um aliado a até 10 ft sofreria, e ataca automaticamente quem causou o dano.
 
 ### Senhor da Vanguarda (Nível 18)
 *Ação*
+
 1/Descanso Longo. Forma suprema por 1 minuto: alcance de todos os ataques da Lança +10 ft, e todo Ataque de Oportunidade do usuário causa dano máximo.
 
 ---
@@ -1358,34 +1390,42 @@ Reação: reduz em **2d10 + DES** o dano que um aliado a até 10 ft sofreria, e 
 
 ### Tiro Preciso (Nível 1)
 *Ação* · dano perfurante
+
 Ataque à distância (alcance 150/600 ft) usando Destreza. Causa **1d8 + DES**; se o usuário não se moveu neste turno antes de atirar, causa +1d6 extra.
 
 ### Disparo Rápido (Nível 1)
 *Ação* · dano perfurante
+
 Dois disparos no mesmo alvo ou em alvos diferentes a até 10 ft entre si, cada um causando **1d6 + DES**.
 
 ### Passo do Caçador (Nível 2)
 *Ação*
+
 Move-se até 10 ft sem provocar Ataque de Oportunidade; o próximo disparo do turno ignora meia cobertura.
 
 ### Chuva de Flechas — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano perfurante
+
 1/Descanso Longo. Área de 10 ft de raio a até 150 ft de distância; inimigos na área sofrem **2d6 + DES** de dano perfurante.
 
 ### Flecha Perfurante (Nível 6)
 *Ação* · dano perfurante
+
 Ataque que atravessa o primeiro alvo em linha reta e atinge um segundo a até 30 ft dele, cada um sofrendo **1d8 + DES**.
 
 ### Olho do Caçador (Nível 10)
 *Ação*
+
 Marca um alvo visível por 1 minuto (sem gastar ataque); enquanto marcado, os disparos do usuário contra ele têm vantagem.
 
 ### Disparo Mortal (Nível 14)
 *Ação*
+
 Gasta o turno inteiro mirando sem se mover; no início do próximo turno, um disparo automático causa **4d8 + DES**.
 
 ### Arco do Fim (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, um disparo por turno ignora resistência a dano perfurante e não pode errar contra um alvo Marcado por Olho do Caçador.
 
 ---
@@ -1411,34 +1451,42 @@ Gasta o turno inteiro mirando sem se mover; no início do próximo turno, um dis
 
 ### Corte Ascendente (Nível 1)
 *Ação* · dano cortante
+
 Ataque corpo a corpo usando Força. Causa **1d8 + FOR** e marca o início de um combo: o próximo ataque contra o mesmo alvo ganha +2 no dano.
 
 ### Corte Duplo (Nível 1)
 *Ação* · dano cortante
+
 Dois ataques em sequência contra o mesmo alvo, cada um causando **1d6 + FOR**. Continua o combo se o Corte Ascendente foi usado antes.
 
 ### Combo Ascendente (Nível 2)
 *Ação* · dano cortante
+
 Só pode ser usado com combo ativo (2+ acertos seguidos no mesmo alvo). Causa **2d8 + FOR** e mantém o combo em vez de reiniciar.
 
 ### Tempestade de Lâminas — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano cortante
+
 Ação ou Reação, 1/Descanso Longo. Sequência de 4 golpes contra um único alvo, cada um causando **1d10 + FOR**; se todos acertarem, um 5º golpe automático causa dano máximo.
 
 ### Quebra-Guarda (Nível 6)
 *Ação* · dano cortante
+
 Ataque que ignora bônus de CA de escudo/postura defensiva do alvo neste golpe. Causa **1d10 + FOR**.
 
 ### Lâmina Implacável (Nível 10)
 *Ação*
+
 Enquanto o combo estiver ativo (2+ acertos seguidos), os ataques da Espada Longa causam +1d6 de dano extra.
 
 ### Corte Devastador (Nível 14)
 *Ação*
+
 Golpe único de alto impacto: causa **3d8 + FOR**, mas encerra o combo ativo.
 
 ### Lâmina Suprema (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, cada acerto consecutivo aumenta o dano do próximo ataque em +1 (sem teto), até o combo ser quebrado por um erro.
 
 ---
@@ -1464,34 +1512,42 @@ Golpe único de alto impacto: causa **3d8 + FOR**, mas encerra o combo ativo.
 
 ### Estocada Precisa (Nível 1)
 *Ação* · dano perfurante
+
 Ataque corpo a corpo usando Destreza. Causa **1d8 + DES**; se o usuário não se moveu neste turno antes do ataque, causa +1d6.
 
 ### Finta Rápida (Nível 1)
 *Ação*
+
 Ataque de baixo dano (**1d4 + DES**) que obriga o alvo a um teste de Sabedoria; falha: o próximo ataque do usuário contra ele tem vantagem.
 
 ### Passo do Duelista (Nível 2)
 *Ação*
+
 Move-se até a velocidade sem provocar Ataques de Oportunidade e faz um ataque ao final do movimento.
 
 ### Dança do Duelista — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano perfurante
+
 1/Descanso Longo. Sequência de 3 estocadas contra até 3 alvos diferentes a até 10 ft entre si, cada uma causando **2d6 + DES**.
 
 ### Ripostar (Nível 6)
 *Reação*
+
 Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um ataque de Destreza completo em resposta.
 
 ### Ponto Fraco (Nível 10)
 *Ação*
+
 Ataque que, em caso de acerto, marca o alvo por 1 minuto — próximos ataques do usuário contra ele causam +1d6.
 
 ### Estocada Perfeita (Nível 14)
 *Ação*
+
 Contra um alvo enganado por Finta Rápida neste combate, este ataque é automaticamente um acerto crítico.
 
 ### Lâmina do Mestre (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, uma vez por turno um ataque que erraria vira automaticamente um acerto (rolagem tratada como natural 10).
 
 ---
@@ -1517,34 +1573,42 @@ Contra um alvo enganado por Finta Rápida neste combate, este ataque é automati
 
 ### Corte Concentrado (Nível 1)
 *Ação*
+
 Ação de concentração (não ataca neste turno); no início do próximo turno, um ataque automático causa **2d8 + SAB**. Se o usuário for atingido enquanto concentra, o efeito é cancelado.
 
 ### Saque Rápido (Nível 1)
 *Ação* · dano cortante
+
 Ataque imediato usando Sabedoria, sem preparação. Causa **1d8 + SAB**; só pode ser usado no primeiro turno de um combate ou depois de embainhar a katana (ação).
 
 ### Postura do Lobo (Nível 2)
 *Ação*
+
 Postura defensiva-ofensiva por 1 minuto: +1 CA, e o próximo ataque certeiro do usuário causa +1d6.
 
 ### Iaijutsu Supremo — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 1/Descanso Longo. Funciona como Saque Rápido turbinado: ataque imediato que causa **4d8 + SAB**, crítico automático se o alvo ainda não agiu neste combate.
 
 ### Corte de Retaliação (Nível 6)
 *Reação*
+
 Reação quando um inimigo erra um ataque contra o usuário em Postura do Lobo: um ataque de Sabedoria completo em resposta.
 
 ### Foco Absoluto (Nível 10)
 *Ação*
+
 Enquanto parado (sem se mover no turno), os ataques da Katana ganham +2 no teste de ataque.
 
 ### Corte Lunar (Nível 14)
 *Ação*
+
 Ataque que causa **2d8 + SAB** e ignora resistência a dano cortante do alvo.
 
 ### Lâmina do Vazio (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, Corte Concentrado deixa de exigir 1 turno de preparação — pode ser usado como ataque normal, mantendo o dano de 2d8+SAB.
 
 ---
@@ -1570,34 +1634,42 @@ Ataque que causa **2d8 + SAB** e ignora resistência a dano cortante do alvo.
 
 ### Soco Demolidor (Nível 1)
 *Ação* · dano contundente
+
 Ataque corpo a corpo usando Força. Causa **1d8 + FOR**.
 
 ### Rajada de Golpes (Nível 1)
 *Ação* · dano contundente
+
 Três socos rápidos contra o mesmo alvo, cada um causando **1d4 + FOR**; acertar os três dá +1 de dano nos ataques da Manopla até o fim do turno seguinte.
 
 ### Passo Agressivo (Nível 2)
 *Ação*
+
 Move-se até 15 ft na direção de um inimigo sem provocar Ataques de Oportunidade e ataca ao chegar.
 
 ### Punhos do Berserker — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano contundente
+
 1/Descanso Longo. Rajada de 5 golpes contra o mesmo alvo, cada um causando **1d8 + FOR**; cada acerto consecutivo adiciona +1 no próximo (1º normal, 2º +1, 3º +2...).
 
 ### Contra-Golpe (Nível 6)
 *Reação*
+
 Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um soco de Força completo em resposta.
 
 ### Fúria Crescente (Nível 10)
 *Ação*
+
 Cada acerto seguido nesta cena (sem errar) aumenta o dano dos ataques da Manopla em +1, até um máximo de +5; um erro zera o contador.
 
 ### Impacto Brutal (Nível 14)
 *Ação*
+
 Ataque que causa **2d8 + FOR** e obriga o alvo a um teste de Constituição; falha: fica **Atordoado** até o fim do próximo turno dele.
 
 ### Punho Supremo (Nível 18)
 *Ação*
+
 1/Descanso Longo. Enquanto Fúria Crescente estiver no máximo (+5), os ataques da Manopla ignoram resistência a dano contundente, por 1 minuto.
 
 ---
@@ -1625,34 +1697,42 @@ Ataque que causa **2d8 + FOR** e obriga o alvo a um teste de Constituição; fal
 
 ### Giro Amplo (Nível 1)
 *Ação* · dano contundente
+
 Ataque corpo a corpo usando Sabedoria, gira o bastão atingindo todos os inimigos adjacentes ao usuário (5 ft). Causa **1d6 + SAB** de dano contundente a cada um.
 
 ### Investida do Bastão (Nível 1)
 *Ação* · dano contundente
+
 Ataque corpo a corpo. Causa **1d8 + SAB**. O alvo faz teste de Força; falha: empurrado 10 ft.
 
 ### Bastão Rodopiante (Nível 2)
 *Ação* · dano contundente
+
 Gira o bastão duas vezes, atingindo até 4 inimigos num raio de 10 ft ao redor do usuário. Causa **1d4 + SAB** a cada um.
 
 ### Terremoto do Bastão — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 1/Descanso Longo. Bate o chão com força total: área de 15 ft de raio ao redor do usuário. Inimigos na área fazem teste de Força; falha: **2d8 + SAB** de dano contundente e **Caído**. Sucesso: metade do dano, sem cair.
 
 ### Guarda Circular (Nível 6)
 *Reação* · dano contundente
+
 Reação: quando dois ou mais inimigos adjacentes atacam o usuário no mesmo turno, um giro de bastão contra-ataca todos eles, causando **1d6 + SAB** a cada um.
 
 ### Campo de Impacto (Nível 10)
 *Ação* · dano contundente
+
 Cria uma área de 15 ft de raio por 1 minuto onde o chão treme. Inimigos que entram ou terminam o turno ali sofrem **1d6** de dano contundente e fazem teste de Força ou ficam **Caídos**.
 
 ### Onda de Choque (Nível 14)
 *Ação* · dano contundente
+
 Ataque em linha de 15 ft de comprimento e 5 ft de largura. Todos na linha sofrem **2d6 + SAB** e são empurrados 10 ft na direção do golpe.
 
 ### Guardião Imóvel (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, o usuário e aliados a até 10 ft ganham +2 de CA e resistência a dano de efeitos de área.
 
 ---
@@ -1678,34 +1758,42 @@ Ataque em linha de 15 ft de comprimento e 5 ft de largura. Todos na linha sofrem
 
 ### Golpe Enlaçante (Nível 1)
 *Ação* · dano cortante
+
 Ataque à distância (alcance 15 ft) usando Inteligência. Causa **1d6 + INT** e puxa o alvo 5 ft na direção do usuário.
 
 ### Laço Protetor (Nível 1)
 *Ação*
+
 Puxa um aliado a até 15 ft pra até 5 ft do usuário, tirando-o de uma área perigosa sem provocar Ataque de Oportunidade.
 
 ### Puxão Violento (Nível 2)
 *Ação*
+
 Ataque que causa **1d8 + INT** e obriga o alvo a um teste de Força; falha: é puxado 15 ft e fica **Caído**.
 
 ### Dança do Carrasco — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano cortante
+
 1/Descanso Longo. Prende até 2 inimigos a até 20 ft do usuário e os puxa 10 ft cada, causando **2d6 + INT** a cada um.
 
 ### Chicote de Retaliação (Nível 6)
 *Reação* · dano cortante
+
 Reação quando um inimigo a até 15 ft se move: um ataque de Inteligência automático contra ele, causando **1d6 + INT**.
 
 ### Corrente de Comando (Nível 10)
 *Reação*
+
 Reação: um aliado a até 15 ft pode se reposicionar 10 ft guiado pelo chicote, sem provocar Ataque de Oportunidade.
 
 ### Domínio do Chicote (Nível 14)
 *Ação*
+
 O alcance de todas as Sword Skills do Chicote aumenta em 10 ft.
 
 ### Prisão Absoluta (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, um inimigo puxado pelo Chicote fica **Restringido** até se soltar (teste de Força/Acrobacia), em vez de só ser puxado.
 
 ---
@@ -1731,34 +1819,42 @@ O alcance de todas as Sword Skills do Chicote aumenta em 10 ft.
 
 ### Lâmina Ricochete (Nível 1)
 *Ação* · dano cortante
+
 Ataque corpo a corpo ou à distância (alcance 20/60 ft) usando Destreza. Causa **1d6 + DES**. Se atingir, o chakram ricocheteia pra um segundo alvo a até 15 ft do primeiro, causando metade do dano.
 
 ### Arco Cortante (Nível 1)
 *Ação* · dano cortante
+
 Ataque em arco de 90° a partir do usuário (alcance 10 ft), atingindo todos os inimigos na área. Causa **1d6 + DES** a cada um.
 
 ### Chakram Enlaçante (Nível 2)
 *Ação*
+
 Ataque que causa **1d6 + DES** e obriga o alvo a um teste de Força; falha: fica **Restringido** por uma corrente fina presa ao chakram até se soltar (ação, teste de Força/Acrobacia).
 
 ### Dança do Chakram — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano cortante
+
 1/Descanso Longo. O usuário lança até 3 chakrams que ricocheteiam entre até 5 inimigos diferentes num raio de 30 ft, cada um causando **2d6 + DES**. Nenhum alvo é atingido mais de duas vezes.
 
 ### Retorno Mortal (Nível 6)
 *Reação* · dano cortante
+
 Reação quando um inimigo se move pra dentro do alcance do chakram já lançado nesse turno: um ataque extra automático contra ele, causando **1d6 + DES**, sem gastar a ação.
 
 ### Círculo de Lâminas (Nível 10)
 *Ação*
+
 Cria uma área de 15 ft de raio onde chakrams giram no ar por 1 minuto; qualquer inimigo que entre ou termine o turno ali sofre **1d6** de dano cortante.
 
 ### Ricochete Devastador (Nível 14)
 *Ação*
+
 O ricochete da Lâmina Ricochete deixa de perder dano — o segundo alvo (e um terceiro, se houver) recebe o dano cheio, não metade.
 
 ### Tempestade dos Chakrams (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 rodada, todo ataque com chakram ricocheteia automaticamente pra um alvo adicional, sem limite de vezes por turno.
 
 ---
@@ -1784,34 +1880,42 @@ O ricochete da Lâmina Ricochete deixa de perder dano — o segundo alvo (e um t
 
 ### Corte Ceifador (Nível 1)
 *Ação* · dano cortante
+
 Ataque corpo a corpo em arco (alcance 10 ft, área de 90°) usando Sabedoria. Causa **1d8 + SAB** a cada inimigo na área.
 
 ### Gancho da Morte (Nível 1)
 *Ação*
+
 Ataque que causa **1d6 + SAB**, puxa o alvo 15 ft na direção do usuário e reduz o deslocamento dele pela metade até o fim do turno seguinte.
 
 ### Ceifa das Pernas (Nível 2)
 *Ação*
+
 Ataque baixo contra as pernas do alvo, causa **1d6 + SAB**: teste de Destreza; falha: fica **Caído**.
 
 ### Colheita da Morte — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 1/Descanso Longo. Corte amplo (alcance 15 ft, 120°) que causa **3d8 + SAB** e reduz a cura recebida pelos alvos atingidos pela metade até o fim da cena.
 
 ### Ceifador Reverso (Nível 6)
 *Ação*
+
 Ataque de retorno logo após um golpe: se o Corte Ceifador ou a Ceifa das Pernas acertou, encadeia este ataque como parte da mesma ação, causando metade do dano a um alvo adicional na área.
 
 ### Marca do Ceifador (Nível 10)
 *Ação*
+
 Marca um alvo por 1 minuto; enquanto marcado, ataques com a Foice contra ele ganham vantagem e causam +1d6.
 
 ### Grande Ceifa (Nível 14)
 *Ação*
+
 Como Corte Ceifador, mas o alcance dobra (20 ft, 90°) e alvos já **Caídos** sofrem dano máximo em vez de rolado.
 
 ### Última Colheita (Nível 18)
 *Ação*
+
 Contra um inimigo com menos de um terço do PV máximo, este ataque causa dano dobrado e, se reduzir o alvo a 0 PV, o usuário recupera PV igual ao dado de dano da arma.
 
 ---
@@ -1837,34 +1941,42 @@ Contra um inimigo com menos de um terço do PV máximo, este ataque causa dano d
 
 ### Golpe Quebra-Guarda (Nível 1)
 *Ação* · dano cortante
+
 Ataque corpo a corpo usando Força. Causa **1d10 + FOR**. Se o alvo estiver usando escudo ou postura defensiva, esse bônus é anulado até o fim do turno seguinte.
 
 ### Machado Derrubador (Nível 1)
 *Ação*
+
 Ataque pesado, causa **1d8 + FOR**; teste de Força do alvo; falha: fica **Caído**.
 
 ### Corte de Impacto (Nível 2)
 *Ação*
+
 Ataque que causa **1d10 + FOR** e empurra o alvo 10 ft na direção do golpe (teste de Força pra resistir).
 
 ### Devastação do Machado — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 1/Descanso Longo. Golpe massivo (alcance 10 ft, área de 5 ft à frente) que causa **3d10 + FOR** e deixa todos os alvos atingidos **Caídos**, sem direito a teste de resistência.
 
 ### Contra-Golpe Brutal (Nível 6)
 *Reação*
+
 Reação quando um inimigo erra um ataque corpo a corpo contra o usuário: um ataque de Força completo em resposta.
 
 ### Quebra-Postura (Nível 10)
 *Ação*
+
 Ataque que causa **2d10 + FOR** e reduz a CA do alvo em 2 até o fim da cena (não acumula com usos repetidos).
 
 ### Grande Cleave (Nível 14)
 *Ação*
+
 Ataque que atinge todos os inimigos num arco de 10 ft à frente, cada um sofrendo dano completo (não reduzido) de **2d8 + FOR**.
 
 ### Execução do Colosso (Nível 18)
 *Ação*
+
 Contra um inimigo **Caído**, este ataque causa dano máximo automaticamente, sem rolar o dado.
 
 ---
@@ -1890,34 +2002,42 @@ Contra um inimigo **Caído**, este ataque causa dano máximo automaticamente, se
 
 ### Lançar Corrente (Nível 1)
 *Ação* · dano contundente
+
 Ataque à distância (alcance 15/30 ft) usando Destreza. Causa **1d6 + DES**. Em vez de recuar após o golpe, o usuário pode puxar o alvo 5 ft na sua direção.
 
 ### Amarra de Ferro (Nível 1)
 *Ação*
+
 Ataque que causa **1d6 + DES** e força o alvo a um teste de resistência de Força; falha: fica **Restringido** até usar a ação para se soltar (teste de Força/Acrobacia).
 
 ### Puxão Brutal (Nível 2)
 *Reação*
+
 Reação quando um inimigo a até 15 ft tenta se afastar do usuário. Puxa o alvo de volta 10 ft e reduz o deslocamento dele pela metade até o fim do turno seguinte.
 
 ### Grilhões de Aincrad — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo*
+
 Ação ou Reação, 1/Descanso Longo, alcance 30 ft. Prende um alvo com correntes que se materializam do chão: o alvo fica **Restringido** sem direito a teste de resistência inicial e sofre desvantagem no primeiro teste para se soltar. Enquanto restringido dessa forma, aliados do usuário têm vantagem em ataques corpo a corpo contra o alvo.
 
 ### Corrente Serpenteante (Nível 6)
 *Ação*
+
 A corrente atinge e enreda dois alvos diferentes no mesmo ataque (golpe principal + golpe secundário de dano reduzido), cada um com seu próprio teste de resistência.
 
 ### Prisão de Elos (Nível 10)
 *Ação*
+
 Cria uma área de 10 ft de raio onde a corrente serpenteia pelo chão; inimigos que entram ou terminam o turno ali fazem teste de Destreza ou ficam com o deslocamento reduzido a 5 ft até saírem da área.
 
 ### Corrente Sangrenta (Nível 14)
 *Ação*
+
 Golpe pesado contra um alvo já Restringido pelo usuário: causa **2d8 + DES** e o alvo sofre uma condição extra (Caído ou Amedrontado, à escolha do usuário).
 
 ### Senhor das Correntes (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, o usuário mantém até três alvos Restringidos simultaneamente sem gastar ação extra por alvo, e pode arrastar qualquer um deles 5 ft por vez como parte de outra ação.
 
 ---
@@ -1945,34 +2065,42 @@ Golpe pesado contra um alvo já Restringido pelo usuário: causa **2d8 + DES** e
 
 ### Corte Veloz (Nível 1)
 *Ação* · dano perfurante
+
 Ataque corpo a corpo usando Destreza. Causa **1d4 + DES** e permite mover-se 5 ft depois do golpe sem provocar Ataque de Oportunidade.
 
 ### Dupla Estocada (Nível 1)
 *Ação* · dano perfurante
+
 Dois ataques, cada um causando **1d4 + DES**; acertar os dois permite mover-se 5 ft extra imediatamente.
 
 ### Passo da Sombra (Nível 2)
 *Ação Bônus*
+
 Ação bônus: move-se até a velocidade sem provocar Ataque de Oportunidade; o próximo ataque do usuário neste turno tem vantagem.
 
 ### Dança das Lâminas — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano perfurante
+
 1/Descanso Longo. Ataca até 3 inimigos diferentes a até 5 ft entre si, cada um sofrendo **1d8 + DES**.
 
 ### Corte de Oportunidade (Nível 6)
 *Reação* · dano perfurante
+
 Reação quando um inimigo sai do alcance corpo a corpo do usuário: um ataque extra, causando **1d6 + DES**.
 
 ### Dança do Assassino (Nível 10)
 *Ação*
+
 Deslocamento +10 ft. Cada ataque bem-sucedido nesta cena concede +5 ft extra de deslocamento até o fim do turno.
 
 ### Mil Cortes (Nível 14)
 *Ação* · dano perfurante
+
 Três ataques contra o mesmo alvo, cada um causando **1d4 + DES**.
 
 ### Passo Fantasma (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, Ataques de Oportunidade contra o usuário têm desvantagem.
 
 ---
@@ -1998,34 +2126,42 @@ Três ataques contra o mesmo alvo, cada um causando **1d4 + DES**.
 
 ### Disparo Preciso (Nível 1)
 *Ação* · dano perfurante
+
 Ataque à distância (alcance 80/320 ft) usando Destreza. Causa **1d8 + DES**.
 
 ### Marcar Alvo (Nível 1)
 *Ação*
+
 Ataque de dano reduzido (**1d4 + DES**) que marca o alvo por 1 minuto: aliados têm vantagem em ataques contra ele.
 
 ### Disparo de Cobertura (Nível 2)
 *Reação* · dano perfurante
+
 Reação: quando um aliado a até 30 ft é atacado, dispara contra o atacante, causando **1d6 + DES** e concedendo meia cobertura ao aliado contra esse ataque.
 
 ### Chuva de Virolas — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano perfurante
+
 1/Descanso Longo. Dispara contra todos os inimigos num raio de 20 ft (alcance 80 ft), cada um sofrendo **2d6 + DES**.
 
 ### Tiro de Intervenção (Nível 6)
 *Reação* · dano perfurante
+
 Reação: quando um inimigo marcado tenta fugir ou se aproximar de um aliado, um disparo automático o intercepta, causando **1d8 + DES**.
 
 ### Marca do Caçador (Nível 10)
 *Ação*
+
 Contra um alvo marcado, os ataques da Besta causam +1d6 de dano extra.
 
 ### Virola Perfurante (Nível 14)
 *Ação* · dano perfurante
+
 Ataque que atravessa o primeiro alvo e atinge um segundo em linha, cada um sofrendo **1d8 + DES**.
 
 ### Execução Perfeita (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, contra um alvo marcado com menos da metade do PV máximo, os disparos do usuário são automaticamente acerto crítico.
 
 ---
@@ -2051,34 +2187,42 @@ Ataque que atravessa o primeiro alvo e atinge um segundo em linha, cada um sofre
 
 ### Corte de Seda (Nível 1)
 *Ação* · dano cortante
+
 Ataque corpo a corpo usando Sabedoria. Causa **1d6 + SAB** e permite mover-se 5 ft (antes ou depois) sem provocar Ataque de Oportunidade.
 
 ### Dança do Leque (Nível 1)
 *Ação* · dano cortante
+
 Ataque que combina movimento de até 10 ft com um golpe ao longo do trajeto, causando **1d6 + SAB** a um inimigo em qualquer ponto do caminho.
 
 ### Rajada Cortante (Nível 2)
 *Ação* · dano cortante
+
 Ataque em leque contra até 2 inimigos adjacentes entre si, cada um sofrendo **1d6 + SAB**.
 
 ### Mil Lâminas de Vento — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano cortante
+
 1/Descanso Longo. O usuário se move até a velocidade em linha reta atacando todos os inimigos no caminho, cada um sofrendo **2d6 + SAB**.
 
 ### Vento Reverso (Nível 6)
 *Reação*
+
 Reação: quando um inimigo se move pra perto do usuário, reposiciona-se 10 ft mantendo distância e ataca de relance, causando metade do dano normal.
 
 ### Dança das Correntes (Nível 10)
 *Ação*
+
 Cada movimento de pelo menos 10 ft antes de um ataque do Leque nesta cena concede +1 no teste de ataque (acumula até +3).
 
 ### Lâmina Tempestuosa (Nível 14)
 *Ação*
+
 A Rajada Cortante passa a atingir até 4 inimigos em vez de 2.
 
 ### Festival das Cem Lâminas (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, o usuário pode se mover entre cada ataque de uma ação com múltiplos ataques, sem gastar deslocamento extra.
 
 ---
@@ -2104,34 +2248,42 @@ A Rajada Cortante passa a atingir até 4 inimigos em vez de 2.
 
 ### Lâmina Marcadora (Nível 1)
 *Ação* · dano perfurante
+
 Ataque à distância (alcance 30/90 ft) usando Destreza. Causa **1d4 + DES** e marca o alvo por 1 minuto — os próximos ataques do usuário contra o alvo marcado têm vantagem.
 
 ### Rajada de Adagas (Nível 1)
 *Ação* · dano perfurante
+
 Três adagas lançadas contra um único alvo ou até três alvos diferentes num raio de 10 ft, cada uma causando **1d4 + DES**.
 
 ### Adaga Imobilizante (Nível 2)
 *Ação*
+
 Ataque que causa **1d4 + DES** e obriga o alvo a um teste de Destreza; falha: o deslocamento dele fica reduzido a 5 ft até o fim do turno seguinte.
 
 ### Dança das Mil Lâminas — Limit Break (Nível 5)
 *Ação · 1/Descanso Longo* · dano perfurante
+
 1/Descanso Longo. Saraivada que atinge todos os inimigos num cone de 30 ft, cada um sofrendo **2d6 + DES** e um teste de Destreza; falha: **Restringido** por 1 rodada.
 
 ### Adaga de Retorno (Nível 6)
 *Reação* · dano perfurante
+
 Reação: quando um inimigo marcado se move, uma adaga extra o persegue automaticamente, causando **1d4 + DES**.
 
 ### Campo de Lâminas (Nível 10)
 *Ação* · dano perfurante
+
 Cria uma área de 15 ft de raio coberta de adagas fincadas por 1 minuto; inimigos que entram ou terminam o turno ali sofrem **1d6** de dano perfurante.
 
 ### Chuva Perfurante (Nível 14)
 *Ação*
+
 A Rajada de Adagas passa de 3 pra 5 adagas, e cada uma que erra o primeiro alvo ricocheteia pra um segundo.
 
 ### Arsenal Fantasma (Nível 18)
 *Ação*
+
 1/Descanso Longo. Por 1 minuto, o usuário pode se teleportar até 30 ft pra qualquer ponto onde tenha uma adaga fincada (de Campo de Lâminas ou Adaga Imobilizante) como parte de um ataque, sem gastar deslocamento.
 
 ---

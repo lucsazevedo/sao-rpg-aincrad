@@ -46,9 +46,10 @@ def slugify(txt):
 
 
 def inline_md(texto):
-    """negrito, código inline, links -- dentro de uma linha/parágrafo já
-    escapado de HTML."""
+    """negrito, itálico, código inline, links -- dentro de uma linha/
+    parágrafo já escapado de HTML."""
     texto = re.sub(r"\*\*(.+?)\*\*", r"<b>\1</b>", texto)
+    texto = re.sub(r"(?<!\*)\*([^*\n]+?)\*(?!\*)", r"<i>\1</i>", texto)
     texto = re.sub(r"`(.+?)`", r"<code>\1</code>", texto)
     texto = re.sub(r"\[(.+?)\]\((.+?)\)", r'<a href="\2">\1</a>', texto)
     return texto

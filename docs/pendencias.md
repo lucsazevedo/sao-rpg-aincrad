@@ -1,3 +1,62 @@
+## Revisão de design pós-migração: atributos de profissão, sem magia, categorias de arma
+
+Pedido do usuário depois de ver a migração completa no ar: "temos alguns
+problemas que temos que corrigir" — 3 itens + um pedido extra de detalhe
+geral.
+
+**1) Redistribuição de atributos de profissão.** A tabela tinha CON e SAB
+zeradas (0 profissões) e DES concentrando 5 das 15. Redistribuída pra
+cobrir os 6 atributos (2-3 cada), usando a lógica das próprias perícias de
+D&D como critério (Sobrevivência/Adestrar Animais/Medicina são Sabedoria,
+não Destreza/Inteligência): FOR=Ferreiro+Lenhador, DES=Costureiro+Mestre
+de Montarias+Joalheiro, CON=Mercenário+Minerador, INT=Alquimista+
+Informante+Cozinheiro, SAB=Caçador+Médico+Domador, CAR=Comerciante+
+Músico. Aplicado no documento (Seção 19, Seções 30-44) e no banco
+(`profissoes_atributo`, incluindo os 5 nomes pré-fusão).
+
+**2) Zero magia no jogo.** Bastão (a única arma com linguagem mágica —
+"Golpe Arcano", "Barreira Mística", "Explosão Arcana", "Milagre do
+Guardião", efetivamente um healer disfarçado de arma) foi reescrito do
+zero: virou arma de impacto contundente em área (Giro Amplo, Terremoto do
+Bastão, Campo de Impacto, Onda de Choque), sem cura, sem magia. Auditoria
+no resto do documento não achou outra menção real de magia fora do que já
+era intencional (Seção 3 já dizia "sem magia tradicional").
+
+**3) Categoria Suporte eliminada.** SAO não tem classe de cura dedicada no
+cânone (todo mundo usa Cristal/poção). Bastão e Chicote (que eram Suporte)
+e a antiga categoria CC foram redistribuídos em **4 categorias novas**:
+Tank(4, igual)/DPS(5)/AoE(6, herda o papel de controle de área do CC + as
+2 sobras de Suporte)/**Scouts** (4, categoria nova — furtividade/
+agilidade/detecção de armadilha e monstro escondido: Adagas, Besta,
+Leque, Adagas de Arremesso). Renumeração de Seções 60-79 → 59-78 (a
+antiga Seção 59, só da Corrente com Peso, deixou de existir como seção
+própria — a arma virou uma entrada normal dentro de AoE); referências
+cruzadas internas corrigidas.
+
+**4) "Mais detalhe em tudo, padrão D&D 5e."** As 152 Sword Skills (19
+armas × 7 + Limit Break) ganharam tag de economia de ação (Ação/Ação
+Bônus/Reação) e tipo de dano explícito. Adagas e Arco e Flecha, que só
+tinham bullet solto sem número, ganharam descrição mecânica completa
+igual as outras 17 armas. As 17 perícias (Seção 66) ganharam descrição
+completa no padrão do PHB (atributo + 2-3 exemplos de uso em Aincrad). As
+15 profissões (Seções 30-44) já tinham ganho essa passada na rodada
+anterior (teste explícito, custo de ação, números concretos).
+
+**Achado no caminho, corrigido:** Lança (Força) e Leque (Destreza) na
+prosa das Sword Skills contradiziam a tabela canônica da Seção 7
+(Lança=DES, Leque=SAB) — que já estava certa no banco e no
+`gerar_arma.py` desde a rodada anterior. Só a prosa estava desatualizada;
+corrigida pra bater com a fonte de verdade.
+
+**Execução:** conteúdo gerado por um script auxiliar em Python (dados
+estruturados, não versionado como script de uso único, exceto
+`scripts/db/_dados_sword_skills.py` que virou fonte permanente — o
+mesmo dado agora alimenta tanto o markdown quanto `moves_arma` no banco,
+sem precisar reparsear o `.md` de novo). Banco re-populado
+(`_popular_moves_dnd5e.py`, `profissoes_atributo`), PDF regenerado
+(`entregas/SAO_RPG_5e_Documento_Completo.pdf`, agora 80 páginas), build
+do app conferido limpo.
+
 ## Fechamento da rodada de migração pra D&D 5e — banco + app (continuação)
 
 Continuação direta do registro abaixo ("migração do sistema pra D&D 5e").

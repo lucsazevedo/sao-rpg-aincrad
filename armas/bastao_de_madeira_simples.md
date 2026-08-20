@@ -18,8 +18,8 @@ Este bastão foi encontrado por um dos primeiros jogadores na Cidade do Início 
 
 ## Skills exclusivas do tipo
 
-- Suporte: Estimular
-- Defesa: Cercar
+- Giro Amplo (Nível 1)
+- Investida do Bastão (Nível 1)
 
 ## Efeito especial
 
