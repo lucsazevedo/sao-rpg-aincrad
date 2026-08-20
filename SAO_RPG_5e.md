@@ -126,9 +126,19 @@ Continuam fora do sistema:
 
 # 8. CATEGORIAS DE COMBATE
 
-A organização atual ficou:
+> **Revisão desta etapa:** a categoria **Suporte** foi eliminada. SAO não
+> tem classe de cura/buff dedicada no cânone — todo mundo se cura com
+> Cristal e poção, não existe "healer". Bastão e Chicote (que eram
+> Suporte) foram redistribuídos entre as categorias reais abaixo, e a
+> antiga categoria **CC** (Controle de Grupo) virou **AoE**, absorvendo
+> também as duas armas remanescentes de Suporte. Entrou também
+> **Scouts**, categoria nova: especialistas em furtividade, agilidade e
+> detecção (armadilha, monstro escondido, emboscada).
+
+O sistema fica com **4 categorias**:
 
 ## 🛡️ TANK
+Segura a linha de frente, absorve dano, controla postura e protege o grupo.
 
 1. Espada + Escudo
 2. Martelo
@@ -136,32 +146,33 @@ A organização atual ficou:
 4. Lança
 
 ## ⚔️ DPS
+Dano concentrado num alvo — combos, precisão, golpe decisivo.
 
-5. Adagas
-6. Arco e Flecha
-7. Espada Longa
-8. Rapieira
-9. Katana
-10. Manopla
-11. Leque
+5. Arco e Flecha
+6. Espada Longa
+7. Rapieira
+8. Katana
+9. Manopla
 
-## ✨ SUPORTE
+## 💥 AoE
+Controle e dano em área — atinge, empurra, prende ou enfraquece vários
+inimigos ao mesmo tempo.
 
-12. Bastão
-13. Chicote
-14. Besta
+10. Bastão
+11. Chicote
+12. Chakram
+13. Foice
+14. Machado
+15. Corrente com Peso
 
-## 🔒 CC
+## 🗡️ SCOUTS
+Furtividade, agilidade e detecção — entram, marcam, desarmam armadilha,
+acham o monstro escondido, saem antes de virar alvo.
 
-15. Chakram
-16. Foice
-17. Adagas de Arremesso
-18. Machado
-19. Corrente com Peso
-
-### Alteração importante
-
-A **Corrente com Peso** deixou de ser Tank e passou para **CC**.
+16. Adagas
+17. Besta
+18. Leque
+19. Adagas de Arremesso
 
 ---
 
@@ -371,29 +382,34 @@ O conjunto trabalhado nesta etapa ficou com:
 
 # 19. PROFISSÕES E ATRIBUTOS
 
-As profissões passaram a ser pensadas dentro da estrutura de atributos de D&D.
+> **Redistribuição desta etapa.** A tabela original tinha 4 dos 6
+> atributos de D&D com profissão nenhuma (Constituição e Sabedoria
+> zeradas) e Destreza concentrando 5 das 15. Redistribuída pra cobrir os
+> **6 atributos** de forma uniforme (2-3 profissões cada) e usando a
+> mesma lógica que as perícias de D&D já usam pra cada atividade (Seção
+> 67) — sobrevivência/instinto animal/cura são Sabedoria por padrão em
+> D&D 5e, não Destreza ou Inteligência.
 
-A distribuição trabalhada foi:
+| Profissão | Atributo | Por quê |
+|---|---|---|
+| Ferreiro | **FOR** | força bruta na forja, martelar metal |
+| Lenhador | **FOR** | cortar e carregar madeira |
+| Costureiro | **DES** | trabalho manual fino com agulha/tecido |
+| Mestre de Montarias | **DES** | equilíbrio e controle físico ao montar |
+| Joalheiro | **DES** | lapidação de precisão |
+| Mercenário | **CON** | resistência de campo, sobreviver ao combate prolongado |
+| Minerador | **CON** | fôlego e resistência física no subsolo |
+| Alquimista | **INT** | química, medição precisa |
+| Informante | **INT** | pesquisa, investigação, memória |
+| Cozinheiro | **INT** | técnica e conhecimento de receita |
+| Caçador | **SAB** | rastreamento e sobrevivência (perícia Sobrevivência é Sabedoria) |
+| Médico | **SAB** | diagnóstico e tratamento (perícia Medicina é Sabedoria) |
+| Domador | **SAB** | paciência e intuição pra ler uma criatura (Adestrar Animais é Sabedoria) |
+| Comerciante | **CAR** | negociação e persuasão |
+| Músico | **CAR** | performance |
 
-| Profissão | Atributo |
-|---|---|
-| Alquimista | INT |
-| Caçador | DES |
-| Informante | INT |
-| Comerciante | CAR |
-| Costureiro | DES |
-| Cozinheiro | INT |
-| Ferreiro | FOR |
-| Lenhador | FOR |
-| Mercenário | FOR |
-| Médico | INT |
-| Minerador | FOR |
-| Mestre de Montarias | DES |
-| Domador | DES |
-| Joalheiro | DES |
-| Músico | CAR |
-
-Esses atributos servem como referência para os testes da profissão.
+Esses atributos servem como referência pros testes da profissão (Seção
+28) e pra rolagem de d20 no jogo online (`mod_atributo_personagem`).
 
 ---
 
@@ -528,477 +544,329 @@ Essas CDs servem como referência para o Mestre.
 
 # 30. ALQUIMISTA
 
-**Atributo: INT**
+**Atributo: Inteligência**
 
 ## Nível 1 — Preparação Alquímica
-
-O Alquimista pode produzir poções básicas utilizando ingredientes apropriados.
-
-Teste de Inteligência relacionado à Alquimia.
-
-CD padrão: 12.
-
-Em caso de falha, os ingredientes utilizados podem ser consumidos.
+**Teste:** d20 + INT + proficiência vs. CD 12 (Seção 29 — Moderada) · **Custo:** ação de craft, 10 minutos + ingredientes da receita.
+Produz uma poção/item alquímico da receita escolhida. **Sucesso:** item pronto. **Falha:** metade dos ingredientes é consumida mesmo assim.
 
 ## Nível 5 — Fórmula Aprimorada
-
-Ao fabricar uma poção, pode aprimorar uma característica:
-
-- aumentar a cura;
-- aumentar duração;
-- aumentar valor.
+Ao fabricar, pode gastar +50% de ingredientes para escolher **um**: +1 dado de cura, +50% de duração, ou item vendido como um grau de raridade acima.
 
 ## Nível 10 — Alquimia Avançada
-
-Pode produzir fórmulas mais avançadas.
-
-Uma falha significativa não precisa destruir automaticamente todos os ingredientes.
+Pode tentar receitas Raras/Épicas (CD 15/18). Numa falha, faz um segundo teste de INT CD 10 pra salvar metade dos ingredientes em vez de perdê-los todos.
 
 ## Nível 15 — Reação Perfeita
-
-Uma vez por descanso longo, pode maximizar parte de uma poção criada por ele.
+1/Descanso Longo: maximiza o efeito numérico de uma poção que acabou de criar (usa o valor máximo do dado em vez de rolar).
 
 ## Nível 20 — Mestre Alquimista
-
-Pode trabalhar com fórmulas raras e possui grande facilidade para desenvolver novas receitas.
+Bônus de proficiência dobrado em testes de Alquimia. Pode tentar receitas Lendárias (CD 20) e desenvolver receita nova com o Mestre.
 
 ---
 
 # 31. CAÇADOR
 
-**Atributo: DES**
+**Atributo: Sabedoria**
 
 ## Nível 1 — Rastreador
-
-Recebe competência para rastrear criaturas e encontrar recursos naturais.
-
-Pode descobrir informações como:
-
-- direção;
-- quantidade;
-- tamanho;
-- tempo;
-- sinais de ferimento;
-- velocidade aproximada.
-
-Também pode encontrar água e alimento.
+**Teste:** d20 + SAB + proficiência (Sobrevivência) vs. CD por Seção 29, conforme a idade/nitidez da trilha · **Custo:** ação, 10 minutos seguindo o rastro.
+**Sucesso:** revela direção, quantidade, tamanho, tempo decorrido, sinais de ferimento e velocidade aproximada da criatura. Também localiza água e comida num raio de 1 milha com 1 hora de busca (sem teste).
 
 ## Nível 5 — Coleta Eficiente
-
-A quantidade de materiais obtidos em atividades de coleta aumenta.
++50% na quantidade de materiais obtidos em coleta natural (arredondar pra cima).
 
 ## Nível 10 — Predador Experiente
-
-Fica mais eficiente em terrenos naturais e ao rastrear criaturas já conhecidas.
+Vantagem em testes de Sobrevivência em terreno natural (floresta, campo, água doce) e ao rastrear uma criatura de espécie já rastreada antes.
 
 ## Nível 15 — Sobrevivente
-
-Consegue sustentar mais pessoas com recursos naturais e montar acampamentos mais rapidamente.
+Sustenta até 6 pessoas forrageando (em vez de 1); monta acampamento seguro em metade do tempo padrão.
 
 ## Nível 20 — Mestre Caçador
-
-Pode obter informações extremamente precisas a partir de rastros de uma criatura.
+Um resultado natural 20 em Rastrear revela a localização atual da criatura, não só o rastro dela.
 
 ---
 
 # 32. INFORMANTE
 
-**Atributo: INT**
-
-Formado por:
-
-- Bibliotecário;
-- Cartógrafo;
-- Diplomata.
+**Atributo: Inteligência** · fusão de Bibliotecário + Cartógrafo + Diplomata (Seção 17)
 
 ## Nível 1 — Rede de Informações
-
-Pode pesquisar informações sobre:
-
-- pessoas;
-- locais;
-- guildas;
-- monstros;
-- rumores;
-- acontecimentos;
-- rotas.
+**Teste:** d20 + INT + proficiência (Investigação/Sistema) vs. CD por Seção 29 · **Custo:** 10 minutos a 1 hora, dependendo do porte do local.
+**Sucesso:** revela 1 informação verdadeira sobre pessoa, local, guilda, monstro, rumor, acontecimento ou rota.
 
 ## Nível 5 — Contatos
-
-Possui contatos dentro de cidades e comunidades.
+1/sessão, invoca um contato NPC numa cidade já visitada — ajuda, desconto ou informação extra, sem precisar rolar.
 
 ## Nível 10 — Mapa Vivo
-
-Pode produzir mapas detalhados e auxiliar significativamente na navegação.
+Reduz em 25% o tempo de viagem em terreno já mapeado; vantagem em testes pra não se perder.
 
 ## Nível 15 — Informação Privilegiada
-
-Pode conseguir uma informação verdadeira sobre:
-
-- pessoa;
-- organização;
-- local;
-- acontecimento.
+1/Descanso Longo, obtém automaticamente (sem teste) uma informação verdadeira sobre pessoa, organização, local ou acontecimento.
 
 ## Nível 20 — Mestre das Informações
-
-Ao entrar em uma região importante, pode possuir automaticamente alguma informação relevante que faça sentido para sua rede de conhecimento.
+Ao entrar pela primeira vez numa região relevante, o Mestre revela de graça uma informação relevante — não gasta a habilidade de nível 15.
 
 ---
 
 # 33. COMERCIANTE
 
-**Atributo: CAR**
+**Atributo: Carisma**
 
 ## Nível 1 — Negociação
-
-Pode negociar preços de compra e venda.
+**Teste:** d20 + CAR + proficiência (Persuasão) vs. CD por Seção 29 · **Custo:** ação social, poucos minutos.
+**Sucesso:** muda o preço de compra ou venda em até 20% pra mais ou pra menos.
 
 ## Nível 5 — Avaliação
-
-Consegue identificar:
-
-- valor;
-- qualidade;
-- autenticidade;
-- material;
-- falsificação.
+**Teste:** d20 + INT ou CAR (à escolha) vs. CD 12 · 1 minuto examinando o item.
+Identifica valor, qualidade, autenticidade, material e sinais de falsificação.
 
 ## Nível 10 — Rede Comercial
-
-Pode procurar compradores ou vendedores de itens incomuns.
+1/sessão, encontra um comprador ou vendedor específico pra item Incomum+ sem precisar de teste.
 
 ## Nível 15 — Barganha Perfeita
-
-Pode realizar uma negociação excepcional dentro dos limites estabelecidos pelo Mestre.
+1/Descanso Longo, uma negociação é automaticamente tratada como um resultado natural 20, dentro dos limites que o Mestre achar razoável.
 
 ## Nível 20 — Mestre Comerciante
-
-Possui uma rede comercial consolidada e consegue encomendar itens comuns disponíveis em uma região.
+Pode encomendar qualquer item Comum ou Incomum disponível na região — chega em 1d4 dias.
 
 ---
 
 # 34. COSTUREIRO
 
-**Atributo: DES**
+**Atributo: Destreza**
 
 ## Nível 1 — Costura
-
-Pode reparar roupas, tecidos e materiais semelhantes.
+**Teste:** d20 + DES + proficiência (ferramentas de costureiro) vs. CD 10 · **Custo:** 10 minutos.
+Repara equipamento de tecido/couro danificado até o estado original.
 
 ## Nível 5 — Materiais Especiais
-
-Pode trabalhar materiais mais raros.
+Pode trabalhar materiais Raros; CD de testes envolvendo material Raro cai em -2.
 
 ## Nível 10 — Equipamento Aprimorado
-
-Pode criar peças com pequenos benefícios específicos.
+Ao criar uma peça, pode adicionar um bônus situacional +1 (item Incomum, Seção 73) sem gastar uma receita separada pra isso.
 
 ## Nível 15 — Costura Perfeita
-
-Consegue reparar equipamentos complexos sem comprometer suas propriedades.
+Um reparo malsucedido normalmente reduz a raridade do item em 1 grau — a partir daqui, reparos em item Raro+ nunca degradam.
 
 ## Nível 20 — Mestre Costureiro
-
-Pode produzir equipamentos personalizados de alto nível.
+Pode produzir peças Épicas sob aprovação do Mestre.
 
 ---
 
 # 35. COZINHEIRO
 
-**Atributo: INT**
+**Atributo: Inteligência**
 
 ## Nível 1 — Culinária
-
-Pode produzir refeições que fornecem pequenos benefícios temporários.
+**Teste:** d20 + INT + proficiência (utensílios de cozinha) vs. CD 10 · **Custo:** 10 minutos.
+Prepara refeição que dá **1d4 + INT de PV temporário** por até 1 hora, se consumida em até 10 minutos após pronta.
 
 ## Nível 5 — Receita Especial
-
-Pode preparar receitas com bônus específicos.
+Pode substituir o PV temporário por um bônus situacional +1 numa perícia específica, por 1 hora (Seção 73-style).
 
 ## Nível 10 — Banquete
-
-Pode produzir comida para vários aliados simultaneamente.
+Prepara pra até 6 pessoas de uma vez, gastando o dobro de ingredientes.
 
 ## Nível 15 — Alta Gastronomia
-
-Os bônus de suas receitas ficam mais fortes.
+O PV temporário/bônus sobe pra **2d4 + INT**.
 
 ## Nível 20 — Mestre Culinário
-
-Pode produzir uma receita suprema com um benefício poderoso, dentro dos limites definidos pelo sistema.
+1/Descanso Longo, prepara um prato Lendário: **4d4 + INT de PV temporário E** um bônus situacional +1, juntos.
 
 ---
 
 # 36. FERREIRO
 
-**Atributo: FOR**
+**Atributo: Força**
 
 ## Nível 1 — Forja
-
-Pode reparar armas e armaduras não mágicas e trabalhar com ferramentas de ferreiro.
+**Teste:** d20 + FOR + proficiência (ferramentas de ferreiro) vs. CD 10 · **Custo:** 1 hora.
+Repara arma/armadura não mágica até o estado original.
 
 ## Nível 5 — Forja Aprimorada
-
-Pode produzir equipamentos mais resistentes.
+Ao reparar, pode gastar material extra pra elevar o item de Comum pra Incomum (+1 situacional, Seção 73).
 
 ## Nível 10 — Reforço
-
-Pode reforçar armas ou armaduras para conceder pequenos bônus.
+Pode reforçar um item já Incomum+ pra Raro (+2), consumindo material Raro equivalente.
 
 ## Nível 15 — Metalurgia Avançada
-
-Pode trabalhar materiais raros e realizar reparos complexos.
+Trabalha material Épico; reparos complexos (item quebrado, não só desgastado) ficam possíveis.
 
 ## Nível 20 — Mestre Ferreiro
-
-Pode criar equipamentos excepcionais com propriedades especiais aprovadas pelo Mestre.
+Pode criar itens Lendários sob aprovação do Mestre.
 
 ---
 
 # 37. LENHADOR
 
-**Atributo: FOR**
+**Atributo: Força**
 
 ## Nível 1 — Corte de Madeira
-
-Coleta madeira de maneira eficiente.
+**Teste:** d20 + FOR + proficiência (ferramenta de lenhador) vs. CD 10. **Sucesso total** (bate a CD por 5+): +50% de madeira coletada.
 
 ## Nível 5 — Coleta Pesada
-
-Aumenta a quantidade de madeira obtida.
++1 material fixo por coleta bem-sucedida, além do bônus do nível 1.
 
 ## Nível 10 — Madeira Especial
-
-Identifica madeiras raras e especiais.
+Identifica madeira Rara+ automaticamente ao encontrar, sem precisar testar.
 
 ## Nível 15 — Força do Lenhador
-
-Possui grande capacidade para transportar, empurrar, puxar e levantar materiais.
+Vantagem em testes de Força pra carregar, empurrar, puxar ou levantar.
 
 ## Nível 20 — Mestre Lenhador
-
-Consegue encontrar rapidamente os melhores recursos de uma área florestal.
+1/dia, localiza automaticamente o melhor depósito de madeira da região, sem precisar explorar.
 
 ---
 
 # 38. MERCENÁRIO
 
-**Atributo: FOR**
-
-Formado pela fusão:
-
-**Mercenário + Coveiro**
+**Atributo: Constituição** · fusão de Mercenário + Coveiro (Seção 17)
 
 ## Nível 1 — Profissional de Campo
-
-Pode examinar cadáveres e cenas de combate.
-
-Pode determinar:
-
-- causa provável da morte;
-- arma utilizada;
-- tipo de ferimento;
-- sinais de veneno;
-- tempo aproximado.
+**Teste:** d20 + SAB (Percepção) ou INT (Investigação), à escolha, vs. CD por Seção 29 · **Custo:** 10 minutos examinando a cena.
+Determina causa provável da morte, arma usada, tipo de ferimento, sinais de veneno e tempo aproximado.
 
 ## Nível 5 — Saque Seguro
-
-Consegue retirar materiais de criaturas sem danificar componentes importantes.
+Retira material de criatura sem chance de dano ao componente (saque malfeito normalmente perde 20% do material).
 
 ## Nível 10 — Veterano
-
-É mais eficiente em detectar:
-
-- emboscadas;
-- armadilhas;
-- sinais de combate.
+Vantagem em testes de Percepção pra detectar emboscada, armadilha ou sinal de combate recente.
 
 ## Nível 15 — Coletor de Troféus
-
-Identifica as partes mais valiosas de uma criatura.
+Identifica automaticamente qual parte de uma criatura é a mais valiosa, antes de saquear.
 
 ## Nível 20 — Mestre Mercenário
-
-Consegue identificar qual recurso de uma criatura é potencialmente mais valioso.
+Sabe, sem testar, o valor de mercado aproximado de qualquer troféu de criatura.
 
 ---
 
 # 39. MÉDICO
 
-**Atributo: INT**
+**Atributo: Sabedoria**
 
 ## Nível 1 — Primeiros Socorros
-
-Pode estabilizar aliados e realizar tratamento básico.
-
-Pode realizar cura pequena através de teste apropriado.
+**Teste:** d20 + SAB + proficiência (Medicina) vs. CD 10 · **Custo:** 1 ação.
+Alvo recupera **1d4 + SAB de PV**, ou é estabilizado a 0 PV sem precisar de teste de resistência contra a morte.
 
 ## Nível 5 — Tratamento Aprimorado
-
-Aumenta a capacidade de cura.
+A cura de Primeiros Socorros sobe pra **2d4 + SAB**.
 
 ## Nível 10 — Diagnóstico
-
-Pode identificar:
-
-- venenos;
-- doenças;
-- ferimentos;
-- condições;
-- causas aparentes.
+1 minuto de exame identifica automaticamente veneno, doença, condição ou causa aparente.
 
 ## Nível 15 — Cirurgia de Emergência
-
-Pode realizar tratamentos de emergência que normalmente exigiriam recursos mais avançados.
+Estabilizar e curar viram uma única ação (normalmente são duas ações separadas).
 
 ## Nível 20 — Mestre da Medicina
-
-Pode maximizar parte de suas capacidades de cura.
+1/Descanso Longo, maximiza a cura de um tratamento (usa o valor máximo do dado).
 
 ---
 
 # 40. MINERADOR
 
-**Atributo: FOR**
+**Atributo: Constituição**
 
 ## Nível 1 — Mineração
-
-Pode identificar depósitos minerais e extrair minério.
+**Teste:** d20 + CON + proficiência (ferramentas de mineração) vs. CD 10 · **Custo:** 10 minutos.
+Identifica depósito mineral visível e extrai minério.
 
 ## Nível 5 — Garimpo
-
-A quantidade de minério obtida aumenta.
++50% de minério coletado.
 
 ## Nível 10 — Minerais Raros
-
-Consegue identificar:
-
-- metais;
-- gemas;
-- cristais;
-- minerais especiais.
+Identifica metal, gema, cristal ou mineral especial automaticamente ao encontrar.
 
 ## Nível 15 — Extração Profunda
-
-Pode minerar mais rapidamente e localizar depósitos escondidos.
+Tempo de mineração cai pela metade; localiza depósito escondido com teste de Percepção (SAB) CD 15.
 
 ## Nível 20 — Mestre Minerador
-
-Consegue identificar rapidamente os principais depósitos de uma região subterrânea.
+1/dia, localiza automaticamente o principal depósito de uma região subterrânea.
 
 ---
 
 # 41. MESTRE DE MONTARIAS
 
-**Atributo: DES**
+**Atributo: Destreza**
 
 ## Nível 1 — Manejo de Montarias
-
-Pode cuidar, alimentar, selar e controlar montarias.
+Cuida, alimenta, sela e controla montaria sem teste em condição normal. Sob pressão (combate, pânico do animal): **Teste** d20 + DES + proficiência vs. CD 10.
 
 ## Nível 5 — Montaria Treinada
-
-A montaria recebe melhorias relacionadas ao treinamento.
+A montaria treinada ganha +2 num atributo físico definido no momento do vínculo.
 
 ## Nível 10 — Montaria Especializada
-
-Pode especializar uma montaria em uma função, como:
-
-- velocidade;
-- carga;
-- combate;
-- resistência.
+Escolhe uma especialização pra montaria: **Velocidade** (+10 ft de deslocamento), **Carga** (+50% de capacidade), **Combate** (+1 no dano dos ataques dela) ou **Resistência** (+1d6 de PV máximo por nível do personagem).
 
 ## Nível 15 — Companheiro de Jornada
-
-A relação com a montaria se torna muito mais eficiente.
+A montaria age na iniciativa do dono sem precisar de comando; comandos custam ação livre em vez de ação inteira.
 
 ## Nível 20 — Mestre das Montarias
-
-Pode trabalhar com montarias raras e reduzir significativamente o tempo necessário para treiná-las.
+Pode domar/montar criaturas Raras+; tempo de treinamento cai pela metade.
 
 ---
 
 # 42. DOMADOR
 
-**Atributo: DES**
+**Atributo: Sabedoria**
 
 ## Nível 1 — Domar Criatura
-
-Pode tentar domesticar criaturas apropriadas.
-
-O teste depende da criatura e da situação.
-
-Criaturas extremamente hostis ou inteligentes podem exigir condições especiais.
+**Teste:** d20 + SAB + proficiência (Adestrar Animais) vs. CD por criatura (Fácil 10 a Excepcional 20, Seção 29). Criaturas hostis/muito inteligentes podem exigir uma condição narrativa (oferenda, prova de confiança) antes do teste valer.
 
 ## Nível 5 — Vínculo Animal
-
-Criaturas vinculadas recebem benefícios contra medo e efeitos semelhantes.
+A criatura vinculada ganha vantagem em testes de resistência contra medo e efeitos semelhantes.
 
 ## Nível 10 — Comando Avançado
-
-Pode comandar sua criatura de maneira mais eficiente em combate.
+Comandar a criatura em combate custa ação bônus em vez de ação inteira.
 
 ## Nível 15 — Vínculo Perfeito
-
-O personagem e sua criatura recebem benefícios enquanto permanecem próximos.
+Personagem e criatura, enquanto a até 10 ft um do outro, ganham +1 de CA cada.
 
 ## Nível 20 — Mestre Domador
-
-Pode tentar estabelecer vínculos com criaturas muito mais difíceis de dominar.
+Pode tentar domar criaturas Épicas/Lendárias, normalmente fora do alcance da profissão.
 
 ---
 
 # 43. JOALHEIRO
 
-**Atributo: DES**
+**Atributo: Destreza**
 
 ## Nível 1 — Lapidação
-
-Pode avaliar e lapidar gemas.
+**Teste:** d20 + DES + proficiência (ferramentas de joalheiro) vs. CD 10 · **Custo:** 10 minutos.
+Avalia e lapida gema; sucesso aumenta o valor de venda em 20%.
 
 ## Nível 5 — Gemas Aprimoradas
-
-A qualidade e o valor das gemas produzidas aumentam.
+O bônus de valor sobe pra 40%.
 
 ## Nível 10 — Joias Encantáveis
-
-Pode preparar joias para receber propriedades especiais do sistema.
+Pode preparar um encaixe numa joia pra receber um Cristal (Seção 73) — o cristal fica reutilizável em vez de consumido de uma vez.
 
 ## Nível 15 — Lapidação Perfeita
-
-Consegue obter resultados superiores com gemas raras.
+Lapidação malsucedida normalmente degrada o grau da gema — a partir daqui, sucesso com gema Rara+ nunca degrada.
 
 ## Nível 20 — Mestre Joalheiro
-
-Pode produzir joias excepcionais com propriedades especiais aprovadas pelo Mestre.
+Pode lapidar gemas Lendárias sob aprovação do Mestre.
 
 ---
 
 # 44. MÚSICO
 
-**Atributo: CAR**
+**Atributo: Carisma**
 
 ## Nível 1 — Performance
-
-Pode utilizar música para auxiliar aliados durante descanso.
+**Teste:** d20 + CAR + proficiência (Atuação) vs. CD 10 · **Custo:** ação, até 1 minuto.
+Aliados que ouvem ganham vantagem no próximo teste de resistência contra medo.
 
 ## Nível 5 — Melodia Inspiradora
-
-A capacidade de inspiração melhora.
+1/Descanso Curto, concede a um aliado vantagem no próximo teste de ataque ou perícia.
 
 ## Nível 10 — Canção de Batalha
-
-Pode conceder um bônus temporário de combate a aliados através de uma ação apropriada.
+Ação bônus: até 3 aliados a 30 ft ganham um dado de inspiração **1d4** — pode ser somado a um teste de ataque, perícia ou resistência deles.
 
 ## Nível 15 — Harmonia
-
-Pode afetar um grupo maior e produzir bônus superiores.
+O efeito de Canção de Batalha passa a afetar até 6 aliados, e o dado de inspiração sobe pra **1d6**.
 
 ## Nível 20 — Mestre da Música
-
-Pode executar uma grande performance capaz de fornecer diversos benefícios temporários ao grupo.
+1/Descanso Longo, uma performance de 1 minuto dá ao grupo inteiro: vantagem no próximo teste de resistência, dado de inspiração **1d6** por 10 minutos, e remove 1 nível de Exaustão de cada um.
 
 ---
 
