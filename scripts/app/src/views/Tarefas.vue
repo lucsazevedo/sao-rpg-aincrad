@@ -429,7 +429,12 @@ const tituloPagina = computed(() => {
   return a.label.replace(/^\S+\s*/, "");
 });
 
-const ATTR = { tecnica: 0, espirito: 0, conhecimento: 0, reflexo: 0, corpo: 0 };
+// D&D 5e (Seção 4/66 do SAO_RPG_5e.md) — chaves trocadas de PBTA pras 6 de
+// D&D. Nota: esta tela inteira é só a PRÉVIA mostrada antes do clique (o
+// resultado real vem do servidor, aceitar_e_resolver_missao — já migrado
+// pra d20+mod+proficiência vs. CD); a curva 2d6 abaixo (countSomas2d6) é
+// aproximação visual antiga, não foi refeita pra d20 nesta rodada.
+const ATTR = { forca: 0, destreza: 0, constituicao: 0, inteligencia: 0, sabedoria: 0, carisma: 0 };
 // ===== Helpers de formatação HUMANA (esconde _ e - para o usuário) =====
 function limparId(s) {
   if (!s) return "";
@@ -570,7 +575,7 @@ function nomeMaterial(id) {
 }
 const atributosPers = computed(() => {
   const p = auth.personagem;
-  return Object.assign({}, ATTR, (p && p.atributos) || {});
+  return Object.assign({}, ATTR, (p && p.atributos_dnd) || {});
 });
 
 function raroMod(rar) {
@@ -591,24 +596,23 @@ function pegarModTarefa(t) {
   //   contrato_arriscado → MELHOR atributo do personagem (sorte/determinação)
   const a = atributosPers.value;
   const tipo = (t.tipo || "").toLowerCase();
-  const max2 = (x, y) => Math.max(Number(a[x] || 0), Number(a[y] || 0));
-  if (tipo === "caca" || tipo === "combate") return max2("reflexo", "corpo");
-  if (tipo === "coleta") return max2("conhecimento", "corpo");
-  if (tipo === "oficio") return max2("tecnica", "conhecimento");
-  if (tipo === "entrega") return max2("reflexo", "espirito");
-  if (tipo === "social") return max2("espirito", "conhecimento");
+  const mod = (v) => Math.floor((Number(v || 10) - 10) / 2);
+  const max2 = (x, y) => Math.max(mod(a[x]), mod(a[y]));
+  if (tipo === "caca" || tipo === "combate") return max2("destreza", "forca");
+  if (tipo === "coleta") return max2("inteligencia", "forca");
+  if (tipo === "oficio") return max2("destreza", "inteligencia");
+  if (tipo === "entrega") return max2("destreza", "sabedoria");
+  if (tipo === "social") return max2("sabedoria", "carisma");
   if (tipo === "contrato" || tipo === "contrato_arriscado") {
     return Math.max(
-      Number(a.tecnica || 0),
-      Number(a.espirito || 0),
-      Number(a.conhecimento || 0),
-      Number(a.reflexo || 0),
-      Number(a.corpo || 0),
+      mod(a.forca), mod(a.destreza), mod(a.constituicao),
+      mod(a.inteligencia), mod(a.sabedoria), mod(a.carisma),
     );
   }
-  // fallback: atributo_teste se existir, senão Nível de Profissão / 3 (bônus pequeno por experiência)
-  if (t.atributo_teste && a[t.atributo_teste] != null)
-    return Number(a[t.atributo_teste] || 0);
+  // fallback: atributo_teste se existir (já vem em português D&D — Força/
+  // Destreza/etc., convertido no banco), senão Nível de Profissão / 3.
+  const chaveAtributoTeste = { "Força":"forca", "Destreza":"destreza", "Constituição":"constituicao", "Inteligência":"inteligencia", "Sabedoria":"sabedoria", "Carisma":"carisma" }[t.atributo_teste];
+  if (chaveAtributoTeste) return mod(a[chaveAtributoTeste]);
   const nv = Math.max(1, nivelProfissaoAtual.value);
   return Math.floor(nv / 3);
 }
