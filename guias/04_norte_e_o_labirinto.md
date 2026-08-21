@@ -46,12 +46,12 @@ ninguém de subir. Minério Raro, Cristal Bruto, Urso de Pedra, Águia de Pedra
 e — no topo — o Arauto das Alturas, a doma mais difícil do andar (10 sucessos).
 
 **Regra de altitude:** acima do segundo terço da subida, sem Mitenes de Lã ou
-equivalente, todo teste de Técnica com as mãos ganha complicação (dedos
+equivalente, todo teste de Destreza com as mãos ganha complicação (dedos
 entorpecidos). É barato de lembrar e muda a preparação do grupo.
 
 ### O que dá pra fazer aqui
 
-| Ação                          | Teste            | 10+                                                 | 7-9                             | 6-                                             |
+| Ação                          | Teste            | Sucesso total (CD+5)                                                 | Sucesso parcial                             | Falha                                             |
 | ----------------------------- | ---------------- | --------------------------------------------------- | ------------------------------- | ---------------------------------------------- |
 | Escalar um trecho ruim        | d20+Força        | Sobe e ajuda o próximo                              | Sobe, mas larga algo pesado     | Escorrega; queda curta e material perdido      |
 | Minerar Minério Raro          | d20+Destreza      | 2 unidades e o veio continua                        | 1 unidade e o veio fecha        | Desabamento parcial; barulho atrai             |
@@ -77,13 +77,12 @@ antes de decidir, não depois.
 
 O **Vale Interditado** não tem nada dentro. Nenhum tesouro, nenhum monstro. É
 uma depressão de rocha onde nada cresce e nenhum animal entra, e o único
-efeito é que todo teste de Espírito feito lá dentro falha por 6-,
-automaticamente, sem rolar. Não explique nunca.
+efeito é que todo teste de Sabedoria feito lá dentro é falha automática,
+sem rolar. Não explique nunca.
 
 ### Se o grupo demorar
 
-Cai a temperatura e sobe névoa de altitude. Descer no escuro exige teste de
-Corpo por trecho. Acampar na montanha: o Arauto sobrevoa o acampamento duas
+Cai a temperatura e sobe névoa de altitude. Descer no escuro exige teste de Força por trecho. Acampar na montanha: o Arauto sobrevoa o acampamento duas
 vezes durante a noite, sem atacar, e na segunda vez ele **paira** — e o grupo
 entende que está sendo avaliado.
 
@@ -138,7 +137,7 @@ claramente escrita.
 
 ### O que dá pra fazer aqui
 
-| Ação                                    | Teste                         | 10+                                                       | 7-9                               | 6-                          |
+| Ação                                    | Teste                         | Sucesso total (CD+5)                                                       | Sucesso parcial                               | Falha                          |
 | --------------------------------------- | ----------------------------- | --------------------------------------------------------- | --------------------------------- | --------------------------- |
 | Mapear a partir do Mirante (Cartógrafo) | d20+Inteligência com vantagem | Revela todos os pontos `sempre` de uma região à escolha   | Revela metade                     | Nada, e você gastou a tarde |
 | Decifrar a Gravação Antiga              | d20+Inteligência              | Lê três palavras: são do mesmo alfabeto das outras marcas | Vê que é escrita, não decora      | "Erosão"                    |
@@ -199,14 +198,14 @@ norte. Ilegível e inegavelmente escrita.
 
 Vaelor é a região que mais lembra ao jogador **onde ele está**: numa torre
 flutuante de cem andares, na beira do primeiro. O vento é constante e
-mecânico: todo teste de Reflexo perto da borda sem equipamento apropriado
+mecânico: todo teste de Destreza perto da borda sem equipamento apropriado
 (`Manto do Arauto`, `Botas Cravejadas`, corda) ganha complicação.
 
 O Predador de Vaelor caça aqui e é agressivo demais pra doma.
 
 ### O que dá pra fazer aqui
 
-| Ação                               | Teste        | 10+                                             | 7-9                           | 6-                                           |
+| Ação                               | Teste        | Sucesso total (CD+5)                                             | Sucesso parcial                           | Falha                                           |
 | ---------------------------------- | ------------ | ----------------------------------------------- | ----------------------------- | -------------------------------------------- |
 | Chegar à Vista do Topo             | d20+Destreza  | Alcança a beirada com segurança                 | Alcança, mas alguém quase cai | Alguém cai (corda salva; sem corda, é sério) |
 | Olhar pra baixo, pra fora do andar | d20+Sabedoria | Vê a estrutura de sustentação do andar de baixo | Vê nuvem e vertigem           | Pânico: complicação até sair dali            |
@@ -274,7 +273,7 @@ fundo da cena por sessões antes de pagar.
 
 ### O que dá pra fazer aqui
 
-| Ação                           | Teste            | 10+                                                                    | 7-9                                              | 6-                                |
+| Ação                           | Teste            | Sucesso total (CD+5)                                                                    | Sucesso parcial                                              | Falha                                |
 | ------------------------------ | ---------------- | ---------------------------------------------------------------------- | ------------------------------------------------ | --------------------------------- |
 | Comprar informação de corretor | d20+Inteligência | Separa o verdadeiro do falso                                           | Compra tudo junto, verdadeiro e falso misturados | Compra só teoria falsa e acredita |
 | Negociar entre duas guildas    | d20+Inteligência | Acordo fechado; ganha um sulco no Selo de Trégua                       | Acordo frágil, dura uma sessão                   | As duas te culpam                 |
@@ -375,7 +374,7 @@ cânone pro andar 1 — o que faz dele um gancho seu.
 
 ### O que dá pra fazer aqui
 
-| Ação                                 | Teste            | 10+                                                   | 7-9                           | 6-                               |
+| Ação                                 | Teste            | Sucesso total (CD+5)                                                   | Sucesso parcial                           | Falha                               |
 | ------------------------------------ | ---------------- | ----------------------------------------------------- | ----------------------------- | -------------------------------- |
 | Puxar conversa com o Marco           | d20+Sabedoria     | Ele conta o nome dos quatro e o que combinaram        | Ele conta que estão atrasados | Ele não responde. Só olha o arco |
 | Comprar no acampamento               | —                | Preços de guerra: tudo 30% acima da tabela            |                               |                                  |
@@ -456,7 +455,7 @@ madeira e pedra.
 
 ### O que dá pra fazer aqui
 
-| Ação                             | Teste            | 10+                                                          | 7-9                                     | 6-                                                |
+| Ação                             | Teste            | Sucesso total (CD+5)                                                          | Sucesso parcial                                     | Falha                                                |
 | -------------------------------- | ---------------- | ------------------------------------------------------------ | --------------------------------------- | ------------------------------------------------- |
 | Organizar o raid antes de entrar | d20+Inteligência | Formação certa: o raid começa com vantagem na primeira barra | Formação ok, uma equipe fora de posição | Confusão: a primeira barra começa com complicação |
 | Atacar a barra 1-3 (com broquel) | d20+arma       | 1 golpe + você abre a guarda dele pro próximo                | 1 golpe                                 | Bloqueado pelo broquel; ele contra-ataca          |

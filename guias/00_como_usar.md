@@ -69,14 +69,14 @@ Perguntas boas para o mestre antes da cena:
 
 **1. Toda rolagem responde uma pergunta que já foi feita.** Não peça teste
 antes do jogador declarar o que quer. Se a ação não está na tabela, escolha o
-atributo pelo _como_, não pelo _o quê_: arrombar com o ombro é Corpo, com uma
-gazua é Técnica, convencendo o guarda a abrir é Conhecimento.
+atributo pelo _como_, não pelo _o quê_: arrombar com o ombro é Força, com uma
+gazua é Destreza, convencendo o guarda a abrir é Inteligência.
 
-**2. 7-9 sempre custa alguma coisa.** Se você não achar o custo, use um
+**2. sucesso parcial sempre custa alguma coisa.** Se você não achar o custo, use um
 destes: gasta tempo (o mundo avança), gasta recurso, chama atenção, o
 resultado vem incompleto, ou a informação vem certa mas atrasada.
 
-**3. 6- nunca é "nada acontece".** É complicação. Prefira mover a história a
+**3. falha nunca é "nada acontece".** É complicação. Prefira mover a história a
 tirar pontos — o inimigo chega, o item some, o NPC muda de ideia, o barulho
 atrai algo. Só quebre equipamento (ver `equipamentos/00_indice.md`) quando não
 tiver nada melhor a cobrar.
@@ -101,9 +101,9 @@ fazer a respeito:
 
 | Resultado | O que acontece                                                                                        |
 | --------- | ----------------------------------------------------------------------------------------------------- |
-| **10+**   | O golpe entra limpo. O monstro **não reage** — nenhum contra-ataque, nenhum custo                     |
-| **7-9**   | O golpe entra **e** o monstro reage: contra-ataque, mordida, você fica exposto, o barulho chama outro |
-| **6-**    | O golpe não entra e o monstro faz o que quiser. Aqui é onde o mestre narra o dano                     |
+| **Sucesso total**   | O golpe entra limpo. O monstro **não reage** — nenhum contra-ataque, nenhum custo                     |
+| **Sucesso parcial**   | O golpe entra **e** o monstro reage: contra-ataque, mordida, você fica exposto, o barulho chama outro |
+| **Falha**    | O golpe não entra e o monstro faz o que quiser. Aqui é onde o mestre narra o dano                     |
 
 Consequência prática: **bônus de "atacar primeiro" não existem neste sistema** —
 o grupo sempre age primeiro. O que tem valor é o oposto: **negar a reação**.

@@ -103,7 +103,7 @@ Se ninguém avisar, deixe acontecer.
 
 ## Combate (se aplicável)
 
-Corpo 1, Escudo e Espada, Skill Muro. No raid, ele fica na primeira linha e
+Força 12, Escudo e Espada, Skill Muro. No raid, ele fica na primeira linha e
 não sai de lá.
 
 <!-- convertido-dnd5e -->

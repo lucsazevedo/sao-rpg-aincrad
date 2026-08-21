@@ -8,7 +8,6 @@ local: campo
 regioes: [lago, ilha_lago, charco_ras]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
-golpes_para_derrotar: 4
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -52,7 +51,7 @@ Um ser aquático de cerca de 2 metros, com uma silhueta similar a um peixe-gato 
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** as investidas aquáticas são rápidas, mas vêm uma de cada vez — arma de Reflexo, lida no deslocamento errado da superfície, pega a janela. Em 10+ ele perde a capacidade de afundar e recomeçar pelo resto da cena.
+- **Atributo — Destreza:** as investidas aquáticas são rápidas, mas vêm uma de cada vez — um ataque que usa Destreza, lido no deslocamento errado da superfície, causa +1d6 de dano extra.
 - A cabeça é o alvo e ela quebra a superfície antes do resto do corpo.
 - Ele não sai da água. Um passo para o barranco encerra o encontro.
 
@@ -82,15 +81,13 @@ apenas lutando contra um bicho.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

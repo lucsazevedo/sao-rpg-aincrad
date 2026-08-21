@@ -53,7 +53,7 @@ pela primeira vez pelos muros.
 ## Testes sugeridos
 
 - d20+Destreza — perceber o Frenzy Boar antes dele perceber o grupo
-- d20+Força ou Reflexo — acertar o golpe na nuca (ponto fraco)
+- d20+Força ou Destreza — acertar o golpe na nuca (ponto fraco)
 - d20+Sabedoria — manter a calma no primeiro combate real da vida (fora do jogo)
 
 ## NPCs na cena
@@ -87,8 +87,8 @@ apostar a campanha logo de cara.
   maior e menos confiança no grupo.
 - **Assustar em vez de matar:** funciona, mas o boar retorna em 1-2 dias e a
   cidade não considera o problema resolvido.
-- **Armadilha / isca:** vale; em 10+ o grupo ganha vantagem na abertura, em
-  7-9 o plano funciona mas atrai outro bicho curioso.
+- **Armadilha / isca:** vale; em sucesso total o grupo ganha vantagem na abertura, em
+  sucesso parcial o plano funciona mas atrai outro bicho curioso.
 
 ## Recompensas
 

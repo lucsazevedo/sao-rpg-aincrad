@@ -8,7 +8,6 @@ local: dungeon
 regioes: []
 nivel_recomendado: "3-5 (andar 2)"
 nivel_ameaca: comum
-golpes_para_derrotar: 4
 ca: 11
 pv: 32
 bonus_ataque: +3
@@ -54,10 +53,9 @@ segundos antes dela sair da fenda.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** ela depende da emboscada no espaço apertado, e
-  arma de Reflexo bate no intervalo em que ela se ergue pra atacar. Em 10+
-  ela perde a emboscada pelo resto da cena e passa a lutar recuada, sem
-  sair da beira da fenda.
+- **Atributo — Destreza:** ela depende da emboscada no espaço apertado, e
+  um ataque que usa Destreza, batido no intervalo em que ela se ergue pra
+  atacar, causa +1d6 de dano extra.
 - O segmento central fica exposto quando ela se ergue pra atacar — ponto de
   golpe mais eficaz que a cabeça.
 - Fora da própria galeria (arrastada ou empurrada pra fora), fica
@@ -89,15 +87,13 @@ Secas não exige.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 32
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

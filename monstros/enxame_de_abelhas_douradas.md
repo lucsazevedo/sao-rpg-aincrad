@@ -8,7 +8,6 @@ local: campo
 regioes: [floresta_horunka]
 nivel_recomendado: "3-5"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -64,10 +63,8 @@ reage.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a nuvem cega-olhos pune ação precisa — arma de
-  Reflexo, golpeada em reação pura, dispersa a onda. Em 10+ o enxame
-  inteiro se dispersa pelo resto da cena (sem matar a colônia — ela volta
-  a se formar em dias).
+- **Atributo — Destreza:** a nuvem cega-olhos pune ação precisa — um ataque que usa
+  Destreza, golpeado em reação pura contra a onda, causa +1d6 de dano extra.
 - Golpes individuais dispersam abelhas isoladas, mas não afetam o enxame
   como um todo — é preciso tratar como grupo, não como inimigos únicos.
 - Longe da colmeia (mais de alguns metros), o enxame perde o ímpeto de
@@ -104,15 +101,13 @@ deveria terminar em morte do alvo.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

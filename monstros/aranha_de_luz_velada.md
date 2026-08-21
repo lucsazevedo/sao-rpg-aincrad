@@ -8,7 +8,6 @@ local: caverna
 regioes: []
 nivel_recomendado: "3-4"
 nivel_ameaca: forte
-golpes_para_derrotar: 4
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -48,7 +47,7 @@ O ar fica pesado e úmido; gotas de água na teia começam a cintilar e deslizar
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** arma de Conhecimento, usada por quem leu o padrão da teia antes de atacar. Em 10+ ela perde a rede e fica exposta pelo resto da cena.
+- **Atributo — Inteligência:** um ataque que usa Inteligência, de quem leu o padrão da teia antes de atacar e sabe onde ela vai reagir, causa +1d6 de dano extra.
 - Sua teia é frágil à **luz intensa**; lanternas e tochas de fôlego curto a deixam desorientada.
 - **Abertura de posição:** se alguém atacar a cabeça ou a parte superior do peito enquanto ela está presa na teia, ela não reage à primeira tentativa.
 - **Fraqueza de contexto:** em espaço aberto, longe do teto baixo, ela não consegue usar o salto surpresa.
@@ -75,15 +74,13 @@ A luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

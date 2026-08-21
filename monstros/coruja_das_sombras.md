@@ -8,7 +8,6 @@ local: floresta
 regioes: [floresta_horunka, bosque_sussurrante, jardim_selvagem]
 nivel_recomendado: "2-3"
 nivel_ameaca: fraco
-golpes_para_derrotar: 2
 ca: 10
 pv: 14
 bonus_ataque: +2
@@ -49,7 +48,7 @@ O silêncio do voo. Coruja não faz barulho ao decolar, e essa não faz mesmo �
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** ela depende de não ser entendida — arma de Conhecimento, na mão de quem percebeu o padrão de galho em galho, quebra o encanto. Em 10+ ela abandona o grupo pelo resto da cena e para de seguir.
+- **Atributo — Inteligência:** ela depende de não ser entendida — um ataque que usa Inteligência, na mão de quem percebeu o padrão de galho em galho, causa +1d6 de dano extra.
 - Frágil: um golpe que acerte resolve.
 - Ela ataca em pleno voo e só de cima; sob cobertura, não desce.
 - Não enfrenta quem está acompanhado. Fechar o grupo cancela o encontro.
@@ -66,15 +65,13 @@ O silêncio do voo. Coruja não faz barulho ao decolar, e essa não faz mesmo �
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
 - **PV:** 14
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

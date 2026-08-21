@@ -8,7 +8,6 @@ local: campo
 regioes: [floresta_horunka, bosque_sussurrante]
 nivel_recomendado: "2-3"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -56,7 +55,7 @@ A vegetação se mexendo na direção errada. Onde não há vento e o mato balan
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** o spray corrosivo prende o pé de quem é lento — arma de Reflexo bate e sai antes da vinha voltar. Em 10+ as vizinhas param de se aproximar pelo resto da cena.
+- **Atributo — Destreza:** o spray corrosivo prende o pé de quem é lento — um ataque que usa Destreza, batido e saindo antes da vinha voltar, causa +1d6 de dano extra.
 - Destruir a boca central expõe o núcleo e encerra em um golpe.
 - Elas são lentas. Andar resolve o que lutar não resolve.
 
@@ -84,15 +83,13 @@ A vegetação se mexendo na direção errada. Onde não há vento e o mato balan
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -104,5 +101,5 @@ O Ovule é o item de quest mais famoso do Andar 1 e a razão de metade dos grupo
 
 Bom pra uma quest de **coleta** (ex: um alquimista quer amostras da seiva/
 vinha pra uma receita) — o spray corrosivo dá um motivo mecânico real pra
-jogadores testarem Reflexo pra não estragar o equipamento, e não só Corpo
+jogadores testarem Destreza pra não estragar o equipamento, e não só Força
 pra bater mais forte.

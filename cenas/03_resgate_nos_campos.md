@@ -86,8 +86,8 @@ o cálculo). Ver `monstros/`.
 
 ## Se o grupo tentar outro caminho
 
-- **Atrair os monstros em vez de matar:** excelente; em 10+ limpa a rota, em
-  7-9 limpa a rota mas alguém vira o alvo da perseguição.
+- **Atrair os monstros em vez de matar:** excelente; em sucesso total limpa a rota, em
+  sucesso parcial limpa a rota mas alguém vira o alvo da perseguição.
 - **Negociar / acalmar o ferido primeiro:** pode evitar pânico, mas custa tempo.
 - **Mandar a Garota do Arco cobrir à distância enquanto o grupo entra:** dá
   vantagem ficcional clara, mas aumenta a chance de ela ficar isolada.

@@ -8,7 +8,6 @@ local: campo
 regioes: [campos_oeste, campos_leste, colinas_pedra, posto_guilda]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
-golpes_para_derrotar: 6
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -59,10 +58,9 @@ imobilidade completa antes da corrida. Quem estiver olhando o chão perde.
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** as marcas na pelagem são escrita, e quem as
-  lê entende o padrão da corrida — arma de Conhecimento bate onde o avanço
-  abre. Em 10+ ele perde a investida pelo resto da cena, e sem investida
-  ele é um alvo grande.
+- **Atributo — Inteligência:** as marcas na pelagem são escrita, e quem as
+  lê entende o padrão da corrida — um ataque que usa Inteligência, contra
+  onde o avanço abre, causa +1d6 de dano extra.
 - As pernas traseiras ficam descobertas durante a corrida.
 - Mudança brusca de direção quebra o avanço: ele não vira, ele contorna.
 
@@ -96,15 +94,13 @@ Planícies, e o andar inteiro fica sabendo.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

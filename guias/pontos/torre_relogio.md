@@ -29,7 +29,7 @@ provar.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar as engrenagens | d20+Destreza | Percebe que giram sem carga e acha o encaixe vazio com marca de serra | Percebe que não acionam nada, sem descobrir o que sumiu | Conclui que está tudo quebrado e vira as costas |
 | Subir até o mostrador | d20+Força | Acha o ponteiro guardado; montado, ele para na primeira das cem marcas | Sobe, mas não encontra o ponteiro nesta visita | Desiste da subida |
@@ -54,7 +54,7 @@ Mecanismo Quebrado.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar | d20+Destreza | Entende parte da função original do mecanismo | Reconhece só que é uma engrenagem, sem mais | Não entende nada, parece só entulho |
 
@@ -77,7 +77,7 @@ pra versão mais tensa deste NPC.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Pedir teoria sobre a região | — | Sem teste — compartilha teorias (nem todas corretas) — gancho pro Bibliotecário | | |
 | Perguntar sobre o mecanismo | d20+Inteligência | Ele confirma a tese das cem marcas com entusiasmo genuíno | Ele repete a teoria sem conseguir prová-la | Ele desconversa, ainda inseguro da própria tese |

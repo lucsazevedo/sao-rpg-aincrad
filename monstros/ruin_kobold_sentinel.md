@@ -8,7 +8,6 @@ local: dungeon/labirinto
 regioes: [sala_chefe, labirinto_entrada]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
-golpes_para_derrotar: 6
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -53,7 +52,7 @@ armadura de metal pesada.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a armadura pesa e a alabarda é lenta — arma de Reflexo entra na janela que a placa não cobre. Em 10+ ele perde a capacidade de segurar formação pelo resto da cena.
+- **Atributo — Destreza:** a armadura pesa e a alabarda é lenta — um ataque que usa Destreza, entrando na janela que a placa não cobre, causa +1d6 de dano extra.
 - A garganta é o único ponto sem placa, e ele a expõe ao erguer a alabarda.
 - Ele não sai da posição designada. O terreno fora dela é seguro, sempre.
 
@@ -83,15 +82,13 @@ coordenação.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

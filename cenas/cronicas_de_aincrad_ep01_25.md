@@ -145,7 +145,7 @@ o que já deveria ser um sinal.
 **Testes sugeridos**
 
 - d20+Inteligência — perceber que a emboscada foi bem posicionada demais
-- d20+Força/Reflexo — defender a caravana em combate
+- d20+Força/Destreza — defender a caravana em combate
 - d20+Sabedoria — pressionar Roan ou outro membro da caravana sobre o vazamento
 
 **NPCs na cena**
@@ -222,7 +222,7 @@ nem no de Suri Cartógrafa.
    jeito sutilmente errado se alguém prestar muita atenção.
 3. Tentar diferentes abordagens (força, comando de voz, item, ignorar a porta
    e rodear a casa) — nenhuma abre a porta normalmente.
-4. Em 10+ num teste-chave (ver abaixo), a porta cede sozinha por um instante —
+4. Em sucesso total num teste-chave (ver abaixo), a porta cede sozinha por um instante —
    o grupo vê um cômodo incompleto, sem texturas finais, e a "menina" não tem
    rosto renderizado.
 5. A porta fecha de novo antes de qualquer coisa ser levada ou resolvida —
@@ -394,7 +394,7 @@ clientes cresce.
 **Testes sugeridos**
 - d20+Inteligência — ler os sinais do arrombamento
 - d20+Sabedoria — convencer o vendedor oportunista a admitir o que fez
-- d20+Força/Reflexo — se o comprador resistir na mina
+- d20+Força/Destreza — se o comprador resistir na mina
 
 **NPCs na cena**
 
@@ -832,7 +832,7 @@ descobrir a origem do som.
 
 - d20+Inteligência — localizar a direção mais provável do som
 - d20+Sabedoria — manter o grupo calmo e coordenado durante a vigília
-- d20+Força/Reflexo — defender a vila se os monstros atacarem no pico
+- d20+Força/Destreza — defender a vila se os monstros atacarem no pico
 
 **NPCs na cena**
 
@@ -1268,7 +1268,7 @@ que uma estrutura "permanente" pôde ser destruída.
 **Testes sugeridos**
 
 - d20+Inteligência — examinar os destroços em busca de causa
-- d20+Força/Reflexo — defender os artesãos nas ondas de ataque
+- d20+Força/Destreza — defender os artesãos nas ondas de ataque
 - d20+Sabedoria — manter o ritmo de trabalho mesmo sob ameaça
 
 **NPCs na cena**
@@ -1711,7 +1711,7 @@ uma lembrança importante.
 
 **Testes sugeridos**
 
-- d20+Força/Reflexo — competições leves do festival (opcional, pra diversão)
+- d20+Força/Destreza — competições leves do festival (opcional, pra diversão)
 - d20+Sabedoria — o peso emocional de escolher o que entregar ao rio
 - d20+Inteligência — notar o padrão estranho no agrupamento das lanternas
 
@@ -2056,7 +2056,7 @@ antes do anoitecer.
 **Testes sugeridos**
 
 - d20+Sabedoria — ganhar a confiança da criança pra que ela guie o caminho
-- d20+Força/Reflexo — proteção contra os perigos normais da floresta no trajeto
+- d20+Força/Destreza — proteção contra os perigos normais da floresta no trajeto
 - d20+Inteligência — perceber, no fim, que ela nunca desconectou como um
   jogador ou NPC comum deveria
 

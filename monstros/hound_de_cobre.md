@@ -8,12 +8,11 @@ local: campo
 regioes: [campos_oeste, posto_guilda, estrada_velha]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
 cd_resistencia: 11
-abertura: Técnica — interromper a investida coordenada
+abertura: Destreza — interromper a investida coordenada
 atributo_fraqueza: Destreza
 resistencias: [investida frontal]
 vulnerabilidades: [flanco, som metálico irregular]
@@ -50,8 +49,8 @@ dois escolhem o flanco e a rota de fuga.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a força do trio é a sincronia — arma de Reflexo, no tempo da investida em revezamento, desencontra os três. Em 10+ os três perdem a investida coordenada pelo resto da cena e passam a atacar isolados.
-- Interromper a investida coordenada com **Técnica** desmonta o trio inteiro.
+- **Atributo — Destreza:** a força do trio é a sincronia — um ataque que usa Destreza, no tempo da investida em revezamento, causa +1d6 de dano extra.
+- Interromper a investida coordenada com **Destreza** desmonta o trio inteiro.
 - O terceiro só entra depois dos dois primeiros. Derrubar um cancela o terceiro.
 - Fora da estrada eles não seguem. O mato não é território deles.
 
@@ -73,15 +72,13 @@ pedem dano alto, pedem formação e escolha.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

@@ -8,7 +8,6 @@ local: dungeon_oculta
 regioes: []
 nivel_recomendado: "andar 2, conteúdo de raid"
 nivel_ameaca: chefe
-golpes_para_derrotar: "3 barras x 6-8 golpes cada (18-24 total)"
 ca: 16
 pv: 180
 bonus_ataque: +6
@@ -66,15 +65,14 @@ golpe grande.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** chefe pesado de investida — arma de Reflexo
-  explora as aberturas que ele deixa entre um golpe grande e outro. Em 10+
-  ele fica atordoado por um turno inteiro, com o ataque em andamento
-  interrompido — o melhor jeito de negar uma fase de dano.
+- **Atributo — Destreza:** chefe pesado de investida — um ataque que usa Destreza,
+  explorando as aberturas que ele deixa entre um golpe grande e outro, causa
+  +1d6 de dano extra.
 - O martelo cravado no chão após o golpe giratório (Fase 2+) é a abertura
   real: alguém precisa estar posicionado pra aproveitar antes dele erguer o
   martelo de novo.
 - Força bruta não abre a Fase 1 — o grupo precisa de pelo menos uma arma
-  de Reflexo pra aproveitar as aberturas entre os golpes grandes.
+  de Destreza pra aproveitar as aberturas entre os golpes grandes.
 - Na Fase 3, a imprevisibilidade da investida dupla é, paradoxalmente, uma
   fraqueza: ele para de "ler" o grupo e fica mais fácil prever onde NÃO
   estar.
@@ -108,15 +106,13 @@ carrega o mesmo peso dramático que o Last Attack Bonus teve em Illfang (ver
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 16
 - **PV:** 180
 - **Bônus de Ataque:** +6
 - **CD de Resistência:** 15
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -134,7 +130,7 @@ junto com a seca", guardião e causa do problema de água ao mesmo tempo.
 - **Como usar em transmissão:** a poeira caindo do teto a cada golpe
   grande — mesmo recurso visual de "o mundo reage à luta", já usado com
   Illfang.
-- **Erro comum do grupo:** entrar na Fase 1 sem ninguém de arma de Reflexo
+- **Erro comum do grupo:** entrar na Fase 1 sem ninguém de arma de Destreza
   no grupo — planeje isso na cadeia de preparação de raid do andar 2
   (equivalente a `tolbana_09_abastecendo_o_grupo`).
 - **Como a cena encerra sem HP:** não há saída sem combate — é chefe de

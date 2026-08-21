@@ -15,7 +15,7 @@ Itens consumíveis fabricados principalmente por **Alquimista** (poções) + com
 
 Frasco pequeno, líquido vermelho claro. Gosto de fruta doce.
 
-**Efeito:** Recupera 2 "golpes" de vida imediatamente ao beber.
+**Efeito:** Recupera **2d4+2 PV** imediatamente ao beber.
 **Como obter:** Craft de Alquimista (Erva Medicinal x2, Água Destilada x1, Açúcar x1. Ferramentas: Frasco, Alambique. Dificuldade: 6-.)
 
 ---
@@ -25,7 +25,7 @@ Frasco pequeno, líquido vermelho claro. Gosto de fruta doce.
 
 Líquido verde claro. Dorme melhor depois de beber.
 
-**Efeito:** Bebe antes de descansar 1 hora. Recupera 3 "golpes" durante o descanso, ao invés de 2.
+**Efeito:** Bebida antes de um Descanso Curto (Seção 71), o usuário recupera **2d4 PV adicionais** durante esse descanso, além do que os Dados de Vida gastos já dariam.
 **Como obter:** Craft de Alquimista (Ervas Verdes x3, Água x1, Mel x1. Dificuldade: 6-.)
 
 ---
@@ -35,7 +35,7 @@ Líquido verde claro. Dorme melhor depois de beber.
 
 Líquido amarelo claro. Gosto amargo forte, mas acorda mesmo.
 
-**Efeito:** Recupera 5 de Fôlego imediatamente. **Efeito colateral:** se usar mais de 1 por dia, a próxima dormida demora mais pra recuperar.
+**Efeito:** Remove **1 nível de Exaustão** (Seção 69) imediatamente. **Efeito colateral:** se usar mais de 1 por dia, o próximo Descanso Longo só recupera metade dos PV perdidos.
 **Como obter:** Craft de Alquimista (Erva Cafeína x2, Água x1. Dificuldade: 6-.)
 
 ---
@@ -45,7 +45,7 @@ Líquido amarelo claro. Gosto amargo forte, mas acorda mesmo.
 
 Cristal verde claro. (Também listado em `cristais_uso.md` — mesmo item.)
 
-**Efeito:** Esfarela na palma, recupera 2 "golpes" de vida. (Alternativa sem beber.)
+**Efeito:** Esfarela na palma, recupera **2d4+2 PV**. (Alternativa sem beber.)
 **Como obter:** Craft de Cristalista (Cristal Verde x1, Erva Medicinal x1. Dificuldade: 6-.)
 
 ---
@@ -55,7 +55,7 @@ Cristal verde claro. (Também listado em `cristais_uso.md` — mesmo item.)
 
 Cristal azul-esbranquiçado. (Também em `cristais_uso.md`.)
 
-**Efeito:** Remove veneno/doença leve; purifica água.
+**Efeito:** Remove a condição Envenenado por veneno leve, ou cura uma doença comum; purifica água.
 **Como obter:** Craft de Cristalista + Alquimista (Cristal Azul x1, Água Benta x1. Dificuldade: 6-.)
 
 ---
@@ -65,13 +65,13 @@ Cristal azul-esbranquiçado. (Também em `cristais_uso.md`.)
 
 Cristal branco. (Também em `cristais_uso.md`.)
 
-**Efeito:** Lanterna de bolso, 1 hora de luz fraca.
+**Efeito:** Lanterna de bolso, 1 hora de luz fraca (3 metros de raio).
 **Como obter:** Craft de Cristalista (Cristal Quartzo x1, Luz Solar x1. Dificuldade: 6-.)
 
 ---
 
 ## Cristal de Localização — Comum
-**Requisito:** Conhecimento -1+ · **Preço base:** 100 Col
+**Requisito:** Inteligência 8+ · **Preço base:** 100 Col
 
 Cristal cinza com mapa em miniatura.
 
@@ -95,7 +95,7 @@ Cristal laranja. (Também em `cristais_uso.md`.)
 
 (Também em `comidas_cozinheiro.md` — mesma refeição, aqui como alquimia/consumível rápido.)
 
-**Efeito:** +1 Corpo cena seguinte, cansaço/fome.
+**Efeito:** **+1 em Testes de Resistência de Constituição contra cansaço ou fome** durante a cena seguinte.
 **Como obter:** Cozinheiro. Dificuldade 6-.
 
 ---
@@ -115,7 +115,7 @@ Cristal laranja. (Também em `cristais_uso.md`.)
 
 Frasco médio, vermelho escuro. Gosto forte.
 
-**Efeito:** Recupera 5 "golpes" de vida imediatamente.
+**Efeito:** Recupera **4d4+4 PV** imediatamente.
 **Como obter:** Craft de Alquimista nível 3 (Erva Medicinal Forte x3, Água Destilada x1, Essência Vida x1. Dificuldade: 7.)
 
 ---
@@ -125,7 +125,7 @@ Frasco médio, vermelho escuro. Gosto forte.
 
 Líquido azul claro. Dá agulha na pele depois.
 
-**Efeito:** 2 rodadas de +1 em Reflexo para movimento e iniciativa.
+**Efeito:** **+1 em testes de Destreza (incluindo iniciativa) por 2 rodadas.**
 **Como obter:** Craft de Alquimista nível 3 (Folha Leve x2, Água x1, Essência Vento x1. Dificuldade: 7.)
 
 ---
@@ -135,7 +135,7 @@ Líquido azul claro. Dá agulha na pele depois.
 
 Líquido vermelho escuro. Dormência muscular temporária.
 
-**Efeito:** 2 rodadas de +1 em Corpo para dano físico.
+**Efeito:** **+1 no dano de ataques corpo a corpo por 2 rodadas.**
 **Como obter:** Craft de Alquimista nível 3 (Raiz Força x2, Extrato Carne x1. Dificuldade: 7.)
 
 ---
@@ -145,7 +145,7 @@ Líquido vermelho escuro. Dormência muscular temporária.
 
 Líquido marrom. Gosto de terra.
 
-**Efeito:** Cena inteira de +1 em Corpo para resistir a dano (qualquer tipo).
+**Efeito:** Durante a cena inteira, **reduz em 1 o dano de cada golpe recebido** (qualquer tipo).
 **Como obter:** Craft de Alquimista nível 3 (Casca Árvore x3, Argila Medicinal x1. Dificuldade: 7.)
 
 ---
@@ -171,7 +171,7 @@ Líquido marrom. Gosto de terra.
 ---
 
 ## Cristal de Visão — Incomum
-**Requisito:** Conhecimento -1+ · **Preço base:** 80 Col
+**Requisito:** Inteligência 8+ · **Preço base:** 80 Col
 
 (Também em `cristais_uso.md`.)
 
@@ -185,7 +185,7 @@ Líquido marrom. Gosto de terra.
 
 (Também em `comidas_cozinheiro.md` como "Bife do Guerreiro" — mesma ideia.)
 
-**Efeito:** Cena inteira +1 Corpo dano físico; colateral de impaciência.
+**Efeito:** Durante a cena inteira, **+1 no dano de ataques corpo a corpo.** **Efeito colateral:** impaciência — numa falha de negociação ou furtividade, o mestre pode cobrar que o usuário aja precipitadamente.
 **Como obter:** Cozinheiro. Dificuldade 7.
 
 ---
@@ -195,7 +195,7 @@ Líquido marrom. Gosto de terra.
 
 Frasco transparente. Contém uma nuvem de luz, não líquido. O item mais raro do alquimista.
 
-**Efeito:** **Última Esperança —** Mesmo efeito do Cristal de Ressurreição: aliado morto a menos de 1 minuto volta com 1 golpe; ou auto-ativa em você 1 vez na vida. **Vantagem sobre o cristal:** pode curar MÚLTIPLOS ferimentos (drenos, doenças, maldições leves) junto com a ressurreição.
+**Efeito:** **Última Esperança —** Mesmo efeito do Cristal de Ressurreição: aliado morto a menos de 1 minuto volta com **1 PV**; ou auto-ativa em você 1 vez na vida. **Vantagem sobre o cristal:** pode curar MÚLTIPLOS ferimentos (drenos, doenças, maldições leves) junto com a ressurreição.
 **Como obter:** Craft de Alquimista nível 5 (Essência Vida x3, Cinzas Fênix x1, Água Benta x1, Frasco Lendário x1. Dificuldade: 10+.)
 
 ---
@@ -215,7 +215,7 @@ Cristal roxo brilhante. (Também em `cristais_uso.md`.)
 
 Líquido dourado. Vai colocando gota por gota, e parece não acabar no frasco.
 
-**Efeito:** Cura COMPLETAMENTE (100%) todos os ferimentos, doenças, venenos, fadigas de 1 pessoa. Bebe de uma vez, recupera tudo. **Efeito único:** retarda o envelhecimento em 1 ano se bebido devagar, 1 gota por dia, durante 1 mês.
+**Efeito:** Cura completamente (100%) todos os PV perdidos e remove doenças, venenos e todos os níveis de Exaustão de 1 pessoa. Bebe de uma vez, recupera tudo. **Efeito único:** retarda o envelhecimento em 1 ano se bebido devagar, 1 gota por dia, durante 1 mês.
 **Como obter:** Craft de Alquimista nível 5 (Essência Pura Vida x5, Orvalho Lunar x1, Cristal Dourado x1. Dificuldade: 10+.)
 
 ---
@@ -225,7 +225,7 @@ Líquido dourado. Vai colocando gota por gota, e parece não acabar no frasco.
 
 Cristal arco-íris claro. (Também em `cristais_uso.md` como "Cristal do Herói de Aincrad" — mesmo item, versão em pó.)
 
-**Efeito:** **Limite Quebrado —** Uma vez por dia, escolhe 1 teste, rola 3d6 e fica com os 2 MELHORES resultados. (É o "advantage" de SAO.)
+**Efeito:** **Limite Quebrado —** Uma vez por dia, escolhe 1 teste e rola **com vantagem** (2d20, fica com o maior resultado).
 **Como obter:** Drop 0.1% de chefes de andar 70+.
 
 ---
@@ -235,5 +235,5 @@ Cristal arco-íris claro. (Também em `cristais_uso.md` como "Cristal do Herói 
 
 Elixir de cor variável. Escolhe o elemento quando bebe. 5 opções: Fogo, Gelo, Trovão, Natureza, Sombra.
 
-**Efeito:** Cena inteira. +2 em testes de ataque com o elemento escolhido. Imunidade a dano desse elemento. **Efeito colateral:** fraco contra o elemento oposto por 1 dia depois.
+**Efeito:** Cena inteira: **+3 em testes de ataque com o elemento escolhido.** Imunidade a dano desse elemento. **Efeito colateral:** fraco contra o elemento oposto por 1 dia depois.
 **Como obter:** Craft duplo nível 5 (Essência de 5 Elementos x1 cada, Cristal Poder x5, Frasco Lendário x1. Dificuldade: 10+.)

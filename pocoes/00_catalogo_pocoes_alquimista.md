@@ -22,35 +22,35 @@ não tem recarga").
 
 ---
 
-# Básicas — Dificuldade 6- (8 receitas)
+# Básicas — Dificuldade: Falha (8 receitas)
 
 Ingrediente de coleta comum, sem monstro nem quest por trás. **Vale:** 20-30
 Col. Utilidade estreita, nunca cura status formal — isso fica pras
 Especiais.
 
-## Extrato Calmante — Dificuldade 6-
+## Extrato Calmante — Dificuldade: Falha
 
 **Materiais:** 1x Néctar de Flor Rara + 1x Água Pura
-**Efeito:** vantagem em teste de Espírito pra manter a calma numa cena de
+**Efeito:** vantagem em teste de Sabedoria pra manter a calma numa cena de
 alta tensão (negociação, sala cheia, primeiro contato com algo hostil).
 **Como conseguir:** Néctar de Flor Rara no Jardim de Fenwyth (50 Col no
 mercado, ou coleta própria).
 
-## Unguento Refrescante — Dificuldade 6-
+## Unguento Refrescante — Dificuldade: Falha
 
 **Materiais:** 1x Musgo Luminoso + 1x Água Limpa
 **Efeito:** vantagem contra cansaço/calor numa travessia longa — mesma
 ideia do Leite Fortificado do Cozinheiro, versão do Alquimista.
 **Como conseguir:** Musgo Luminoso no Pântano Sombrio (35 Col no mercado).
 
-## Óleo de Afiar — Dificuldade 6-
+## Óleo de Afiar — Dificuldade: Falha
 
 **Materiais:** 1x Resina + 1x Erva Aromática
 **Efeito:** a próxima arma untada com ele ignora a primeira chance de
 travar, entupir ou embotar na cena.
 **Como conseguir:** Resina é coleta comum (12 Col no mercado).
 
-## Repelente de Insetos — Dificuldade 6-
+## Repelente de Insetos — Dificuldade: Falha
 
 **Materiais:** 1x Ferrão de Vespa (triturado) + 1x Ervas Comuns
 **Efeito:** o grupo evita um encontro aleatório com enxame ou inseto por
@@ -58,14 +58,14 @@ uma cena inteira de exploração.
 **Como conseguir:** Ferrão de Vespa, 20 Col no mercado ou extraído de
 Stabbing Wasp por um Caçador.
 
-## Fumaça de Aviso — Dificuldade 6-
+## Fumaça de Aviso — Dificuldade: Falha
 
 **Materiais:** 1x Pó Dourado + 1x Carvão
 **Efeito:** sinal visível a distância — combina ponto de encontro sem
 precisar de Cartógrafo nem de sorte.
 **Como conseguir:** Pó Dourado, 40 Col no mercado; carvão é mercearia.
 
-## Bálsamo de Contato — Dificuldade 6-
+## Bálsamo de Contato — Dificuldade: Falha
 
 **Materiais:** 1x Seiva de Nepenthes (não purificada) + 1x Água Limpa
 **Efeito:** alivia irritação/veneno leve de contato (não é cura de
@@ -73,7 +73,7 @@ Condição formal — é conforto, evita que a cena piore por causa disso).
 **Como conseguir:** Seiva de Nepenthes, 22 Col no mercado, ou extraída de
 um Little Nepenthes por um Caçador.
 
-## Pó Estabilizante — Dificuldade 6-
+## Pó Estabilizante — Dificuldade: Falha
 
 **Materiais:** 1x material volátil qualquer + 1x Frasco Vazio
 **Efeito:** qualquer material perecível guardado com ele não perde potência
@@ -81,7 +81,7 @@ em viagem — resolve o problema que o `Cristal Bruto` tem de degradar.
 **Como conseguir:** Frasco Vazio, 25 Col avulso ou 60 Col o lote de 3
 (Comerciante da Praça).
 
-## Tintura Reveladora — Dificuldade 6-
+## Tintura Reveladora — Dificuldade: Falha
 
 **Materiais:** 1x Cristal Bruto (moído) + 1x Água Pura
 **Efeito:** revela se um item ou superfície tem "sistema" (é mágico/tem
@@ -92,22 +92,22 @@ Lumis.
 
 ---
 
-# Especiais — Dificuldade 7-9 (5 receitas)
+# Especiais — Dificuldade: Sucesso parcial (5 receitas)
 
 Material de monstro/miniboss ou combinação mais cara. **Vale:** 150-300
 Col — a mesma faixa de "Quest Importante". Aqui sim curam Condição sem
 gastar Cristal, e é onde o Alquimista bate de frente com a loja de sistema
 e ganha.
 
-## Frasco de Antídoto — Dificuldade 7-9
+## Frasco de Antídoto — Dificuldade: Sucesso parcial
 
 **Materiais:** 1x Seiva de Nepenthes (limpa) + 1x Frasco Vazio
 **Efeito:** remove veneno sem gastar Cristal de Antídoto.
 **Como conseguir:** mesma fonte da versão básica, só que purificada — pede
-um teste de Conhecimento a mais no preparo (já coberto pelo teste da
+um teste de Inteligência a mais no preparo (já coberto pelo teste da
 receita).
 
-## Pomada de Recuperação — Dificuldade 7-9
+## Pomada de Recuperação — Dificuldade: Sucesso parcial
 
 **Materiais:** Ervas Medicinais + 1x componente comprado do Comerciante
 **Efeito:** remove uma Condição leve sem gastar item — igual ao "Chá de
@@ -116,21 +116,21 @@ com nome e ficha.
 **Como conseguir:** ervas em qualquer região; componente, Comerciante da
 Praça.
 
-## Elixir de Fôlego — Dificuldade 7-9
+## Elixir de Fôlego — Dificuldade: Sucesso parcial
 
 **Materiais:** 1x Musgo Luminoso + 1x Pó Dourado
 **Efeito:** cura status "exausto" sem gastar Cristal do Vigor.
 **Como conseguir:** as duas fontes já listadas nas Básicas, em quantidade
 maior — é a mesma matéria-prima, receita mais exigente.
 
-## Extrato Paralisante Reverso — Dificuldade 7-9
+## Extrato Paralisante Reverso — Dificuldade: Sucesso parcial
 
 **Materiais:** 1x Ferrão de Vespa + 1x Cristal Bruto
 **Efeito:** cura status "paralisado" sem gastar Cristal do Movimento.
 **Como conseguir:** Ferrão de Vespa do mercado ou de Stabbing Wasp; Cristal
 Bruto do mercado ou da Gruta de Lumis.
 
-## Estabilizante de Combate — Dificuldade 7-9
+## Estabilizante de Combate — Dificuldade: Sucesso parcial
 
 **Materiais:** 1x Ossos Antigos (moído) + 1x Erva Vital
 **Efeito:** cura status "amedrontado" sem gastar Cristal da Coragem.
@@ -139,13 +139,13 @@ Necrópole de Voss (com respeito — ver Coveiro em `oficios_andar1.md`).
 
 ---
 
-# Lendárias — Dificuldade 10+ (4 receitas)
+# Lendárias — Dificuldade: Sucesso total (4 receitas)
 
 Material de chefe de andar ou cadeia de quest inteira. **Não é vendida.**
 Efeito de grupo ou escolha de atributo — quebra a curva porque o material
 já é a conquista.
 
-## Elixir Universal — Dificuldade 10+
+## Elixir Universal — Dificuldade: Sucesso total
 
 **Materiais:** 1x veneno de chefe neutralizado + 1x Seiva de Nepenthes
 purificada + 1x Gema Lapidada
@@ -155,7 +155,7 @@ confusão, amedrontado) de uma vez, sem gastar Cristal nenhum.
 de andar que use veneno/status como arma (Sombra de Mournhall, Rã
 Venenosa Gigante em escala de ninhada) — o mestre define caso a caso.
 
-## Essência de Aincrad — Dificuldade 10+
+## Essência de Aincrad — Dificuldade: Sucesso total
 
 **Materiais:** 1x Gema Prismática + 1x Néctar de Flor Rara (floração
 rara) + 1x Pó Dourado purificado
@@ -166,7 +166,7 @@ empilham na mesma cena — é escolha de qual profissão brilha.
 **Como conseguir:** Gema Prismática é lapidação de Joalheiro sobre
 Cristal Bruto raro; a floração de Fenwyth é semanal.
 
-## Elixir da Segunda Chance — Dificuldade 10+
+## Elixir da Segunda Chance — Dificuldade: Sucesso total
 
 **Materiais:** 1x Essência Vital (ritual do Coveiro) + 1x Gema Lapidada +
 1x material de chefe já derrotado
@@ -178,7 +178,7 @@ cena começar** — não dá pra reagir na hora.
 **Custo:** só existe 1 por sessão possível de craftar (o material de chefe
 não reaparece), então o grupo decide **antes** quem carrega o risco.
 
-## Néctar do Guardião — Dificuldade 10+
+## Néctar do Guardião — Dificuldade: Sucesso total
 
 **Materiais:** 1x Olho Leitoso do Guardião de Mournhall + 2x Cristais
 Puros + 1x Erva Ancestral

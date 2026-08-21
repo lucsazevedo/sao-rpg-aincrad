@@ -30,7 +30,7 @@ preço da descida.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Subir e colher no degrau mais alto | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 | Observar a encosta de cima | d20+Inteligência | Vista clara dos degraus todos — sabe quais já foram comidos e de onde vem o barulho de mastigação | Vê o estrago, sem localizar a origem | Só vê plantação bonita |
@@ -57,7 +57,7 @@ golpes; recompensa em Col com chance de Perna Serrilhada.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força | Golpe limpo, sem reação | Acerta, mas a ninhada se agita | Salto de impacto antes de você |
 | Cronometrar o ponto fraco | d20+Destreza | Acerta as patas traseiras dobradas antes do salto — ele perde o impulso | Acerta, mas fora do timing | Ele salta primeiro |
@@ -85,7 +85,7 @@ respawn de 6h, colheita de qualidade superior pra Cozinheiro.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
@@ -114,7 +114,7 @@ colheita dos ataques de monstro de campo.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perguntar sobre a praga | — | Sem teste — ele aponta as fendas de pedra abaixo do degrau mais baixo, de onde jura que os gafanhotos vêm | | |
 | Ficar de guarda na próxima debandada | d20+Força | Repele o ataque sem perder leira nenhuma — Solveig te deve | Repele, mas uma leira é comida na confusão | A debandada passa por cima de vocês |
@@ -141,7 +141,7 @@ dos Terraços e o jantar do vale, não Col.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
@@ -165,7 +165,7 @@ encosta — respawn de 6h, colheita de qualidade superior pra Cozinheiro.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
@@ -189,7 +189,7 @@ mesma safra superior, mesma escada que cobra na descida.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
@@ -213,11 +213,11 @@ degraus.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Subir e colher | d20+Força | Colheita com qualidade melhor que a média (material superior pra Cozinheiro) | Colhe, mas escorrega na descida (dano leve) | Desiste da subida |
 
-**Só o mestre:** enfatize o custo do 7-9 aqui — a marca da queda anterior
+**Só o mestre:** enfatize o custo do sucesso parcial aqui — a marca da queda anterior
 está desenhada pra isso. Quem vê a cicatriz na terra e sobe mesmo assim
 está aceitando o risco de olhos abertos, e o dano leve da descida deixa de
 parecer arbitrário.

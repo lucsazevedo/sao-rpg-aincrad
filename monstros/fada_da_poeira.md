@@ -8,7 +8,6 @@ local: campo florido
 regioes: [jardim_selvagem, bosque_sussurrante, campos_oeste]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -58,7 +57,7 @@ O pó dourado no ar parado. Se ele está ali, elas passaram há pouco — e volt
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** o truque delas é distrair — arma de Conhecimento, de quem acompanhou o rastro de pó em vez do brilho, não se deixa enganar. Em 10+ elas fogem do canteiro pelo resto da cena e devolvem o que roubaram.
+- **Atributo — Inteligência:** o truque delas é distrair — um ataque que usa Inteligência, de quem acompanhou o rastro de pó em vez do brilho, causa +1d6 de dano extra.
 - As asas param no pouso, e no pouso dá para agarrar.
 - Não sabem recusar coisa brilhante oferecida de propósito.
 - Sozinha, uma fada não rouba nada. Elas precisam de três.
@@ -76,15 +75,13 @@ O pó dourado no ar parado. Se ele está ali, elas passaram há pouco — e volt
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

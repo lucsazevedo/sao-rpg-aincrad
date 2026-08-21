@@ -29,14 +29,14 @@ vale.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 | Identificar espécies úteis (Alquimista) | d20+Inteligência | Três ingredientes diferentes catalogados | Um ingrediente | Colhe algo inútil e perde a tarde |
 
 **Só o mestre:** o Néctar de Flor Rara em si não sai da colheita comum — vem
 das Fadas da Poeira (drop ou doma, ver `monstros/fada_da_poeira.md`) ou da
-ação regional da tabela do guia. Um 6- aqui não só estraga a colheita:
+ação regional da tabela do guia. Uma falha aqui não só estraga a colheita:
 "amassar tudo" conta como saquear a área com falha, e é o gatilho que acorda
 o Guardião mais próximo. Respawn de 6h — ponto natural de downtime de coleta
 entre sessões.
@@ -57,7 +57,7 @@ não agressivas. Ver ficha completa em `monstros/fada_da_poeira.md`.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Domar uma fada (4 sucessos, exige Néctar de Flor Rara) | d20+Destreza | 1 sucesso limpo | 1 sucesso, mas ela se afasta irritada | Sem sucesso; a segunda falha encerra a tentativa |
 | Abater uma no pouso | d20+Destreza | Abate sem levantar pó nenhum | Abate, mas a nuvem desce | Erra — e a nuvem inteira reage |
@@ -86,11 +86,11 @@ dono.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
-**Só o mestre:** um 6- aqui ("amassa tudo") é exatamente o que acorda o
+**Só o mestre:** uma falha aqui ("amassa tudo") é exatamente o que acorda o
 Guardião ao lado. Se o grupo colher limpo, deixe colher limpo: Fenwyth não
 cobra de quem respeita o lugar.
 
@@ -111,7 +111,7 @@ saqueada com falha.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
 | Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
@@ -137,7 +137,7 @@ outro cenário.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
@@ -160,7 +160,7 @@ sentinela — fraca (1-2 golpes), imóvel, reage só a saque com falha.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
 | Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
@@ -184,7 +184,7 @@ outro cenário.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
@@ -208,7 +208,7 @@ mesmo gatilho de sempre: só reage a saque com falha.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
 | Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
@@ -233,7 +233,7 @@ entrada, costuma ser achado por último.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 
@@ -256,7 +256,7 @@ golpes), mesmo gatilho: só reage a saque com falha.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber que não é vegetação comum | d20+Sabedoria | Nota o caule vivo e passa sem provocar | Nota tarde demais — recua no limite | Trata como planta comum; o enlace vem de graça |
 | Arrancar pela base do caule | d20+Força | Golpe limpo, a vinha solta | Mata, mas o aperto fecha antes | Fica preso no enlace |
@@ -281,7 +281,7 @@ rota natural da região.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher flores raras | d20+Inteligência | Colhe 2 flores intactas | Colhe 1 | Amassa tudo sem querer — nada aproveitável |
 

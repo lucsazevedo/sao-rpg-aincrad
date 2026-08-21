@@ -8,7 +8,6 @@ local: rio
 regioes: [rio_serpente, charco_ras, lago]
 nivel_recomendado: "2-3"
 nivel_ameaca: fraco
-golpes_para_derrotar: 2
 ca: 10
 pv: 14
 bonus_ataque: +2
@@ -48,7 +47,7 @@ O junco cortado. Se há um talho diagonal limpo no mato à frente, ela usa aquel
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** o voo é rápido e reto — arma de Reflexo, lida no corredor previsível, encontra ela no meio do caminho. Em 10+ ela perde o voo reto pelo resto da cena.
+- **Atributo — Destreza:** o voo é rápido e reto — um ataque que usa Destreza, lido no corredor previsível, causa +1d6 de dano extra.
 - Frágil: um golpe qualquer resolve, se acertar.
 - Ela só voa reto. O corredor de voo é previsível e dá para sair dele.
 - Agachar já basta. Ela não desce.
@@ -65,15 +64,13 @@ O junco cortado. Se há um talho diagonal limpo no mato à frente, ela usa aquel
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
 - **PV:** 14
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

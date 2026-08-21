@@ -8,7 +8,6 @@ local: campo
 regioes: [campos_oeste, pradaria_das_flores, bosque_sussurrante]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -42,12 +41,12 @@ O zumbido muda de frequência — fica mais agudo, mais rápido. Se uma abelha p
 
 ## Ataques
 
-- **Ferrão** — ferroada dói e incha. A primeira ferroada em cena tem 20% de chance de deixar a vítima com dor de cabeça por 1 rodada (-1 em Conhecimento).
+- **Ferrão** — ferroada dói e incha. A primeira ferroada em cena tem 20% de chance de deixar a vítima com dor de cabeça por 1 rodada (-1 em testes de Inteligência).
 - **Voo rasante** — passa a 1 palmo da sua cabeça. Não acerta, mas desvia a atenção: o próximo ataque de outra abelha ganha +1 de bônus.
 
 ## Fraquezas
 
-- **Atributo — Técnica:** o ferrão tem uma junta no meio. Saber onde quebrar ou torcer (teste de Técnica com arma de precisão) faz ela perder o ferrão e morrer em 1 rodada. 10+ nesse ataque = morre instantaneamente.
+- **Atributo — Destreza:** o ferrão tem uma junta no meio, visível pra quem observa de perto. Um ataque que usa Destreza para acertar essa junta com precisão causa +1d6 de dano extra.
 - Fogo: qualquer tocha ou chave de fogo faz ela recuar. Nunca ataca em direção ao fogo.
 - Fumaça: um frasco de fumaça explode e toda a colmeia dispersa por 3 minutos.
 - Vento: arma de vento ou ventania forte faz ela não conseguir voar direito.
@@ -76,15 +75,13 @@ Mel da colmeia é um dos melhores ingredientes de Cozinheiro do andar 1. Todo gr
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

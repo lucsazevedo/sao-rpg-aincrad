@@ -8,7 +8,6 @@ local: campo
 regioes: [campos_leste, campos_oeste, floresta_horunka]
 nivel_recomendado: "2-3"
 nivel_ameaca: comum
-golpes_para_derrotar: 2
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -47,7 +46,7 @@ Ela circula antes de picar. Uma vespa que orbita já decidiu, e o círculo apert
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** o ferrão é rápido e em sequência — arma de Reflexo acompanha a órbita e bate na passagem. Em 10+ o ninho inteiro se dispersa pelo resto da cena.
+- **Atributo — Destreza:** o ferrão é rápido e em sequência — um ataque que usa Destreza, acompanhando a órbita e batendo na passagem, causa +1d6 de dano extra.
 - Frágil: qualquer golpe que acerte resolve, e ela é grande o bastante para acertar.
 - Fora do raio do ninho ela não persegue. Vinte passos bastam.
 
@@ -64,15 +63,13 @@ Ela circula antes de picar. Uma vespa que orbita já decidiu, e o círculo apert
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

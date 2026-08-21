@@ -8,7 +8,6 @@ local: campo
 regioes: [campos_leste, campos_oeste, floresta_horunka, bosque_sussurrante]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
-golpes_para_derrotar: 4
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -60,9 +59,8 @@ coordenação, e chega tarde demais para servir de aviso.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a investida reta é onde eles se expõem — arma de
-  Reflexo, no fim da corrida, desfaz a formação. Em 10+ a matilha perde a
-  coordenação pelo resto da cena: eles atacam, mas cada um por si.
+- **Atributo — Destreza:** a investida reta é onde eles se expõem — um ataque que usa
+  Destreza, no fim da corrida, causa +1d6 de dano extra.
 - Sozinho, um lobo recua. Quebrar o cerco vale mais que matar qualquer um.
 - Ataque perfurante nas costelas, no fim da investida, encerra rápido.
 - Depois de duas investidas seguidas ele perde precisão e erra o bote.
@@ -95,15 +93,13 @@ que encosta as costas numa pedra transforma a luta inteira.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

@@ -67,6 +67,6 @@ insuportável em conversa e excelente em serviço.
 
 ## Combate (se aplicável)
 
-Técnica 2. Não sai da forja nem pro raid — e sente falta de não ter ido.
+Destreza 14. Não sai da forja nem pro raid — e sente falta de não ter ido.
 
 <!-- convertido-dnd5e -->

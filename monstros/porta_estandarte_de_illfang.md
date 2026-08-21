@@ -8,7 +8,6 @@ local: campo
 regioes: [labirinto_entrada]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
-golpes_para_derrotar: 7
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -59,8 +58,8 @@ estandarte em vez do machado ganha o aviso.
 
 ## Fraquezas
 
-- **Atributo — Espírito:** a ligação dele com o estandarte é devoção, não tática — arma de Espírito bate na determinação que sustenta o chamado. Em 10+ o chamado morre pelo resto da cena e os reforços param de chegar.
-- O mastro está fincado, não segurado: é alvo parado, e derrubá-lo é teste de **Técnica**.
+- **Atributo — Sabedoria:** a ligação dele com o estandarte é devoção, não tática — um ataque que usa Sabedoria bate na determinação que sustenta o chamado e causa +1d6 de dano extra.
+- O mastro está fincado, não segurado: é alvo parado, e derrubá-lo é teste de **Força**.
 - O flanco esquerdo fica descoberto o tempo todo, porque a mão esquerda nunca solta o mastro.
 
 ## O que torna este encontro memorável
@@ -95,15 +94,13 @@ têm hierarquia, ordens e alguém no topo dando as ordens.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

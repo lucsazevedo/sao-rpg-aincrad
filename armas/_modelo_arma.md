@@ -5,7 +5,7 @@ atributo_principal:
 raridade: # Comum | Incomum | Raro | Épico | Lendário
 andar_recomendado:
 requisito_nivel:
-requisito_atributo: # opcional, ex: "Corpo 2+"
+requisito_atributo: # opcional, ex: "Força 14+"
 ---
 
 ## Aparência

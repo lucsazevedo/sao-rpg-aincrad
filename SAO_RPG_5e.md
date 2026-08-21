@@ -2884,6 +2884,18 @@ Aincrad não tem magia tradicional, então as 18 perícias de D&D viram **17**: 
 
 Teste de perícia: **d20 + modificador do atributo + bônus de proficiência** (se proficiente) **vs. CD** (Seção 29 dá a referência de CD por dificuldade).
 
+## Graus de sucesso (conversão do antigo 10+/7-9/6-)
+
+Muito conteúdo de cena/exploração já publicado (guias de andar, contratos, quests) foi escrito no formato de 3 graus do sistema antigo — o resultado do teste variava em três faixas. Isso não existe nativamente em D&D 5e (que é binário: passou ou não passou), mas a estrutura de 3 graus é boa demais pra jogo de exploração pra simplesmente jogar fora — então ela continua existindo, só que remapeada pra margem sobre a CD, sem precisar reescrever o conteúdo de cada mesa:
+
+| Grau (antigo) | Grau (D&D 5e) | Quando vale |
+| -------------- | ------------- | ----------- |
+| **10+** (sucesso total) | **Sucesso total** | o resultado do d20+atributo+proficiência bate a CD **por 5 ou mais** |
+| **7-9** (sucesso parcial) | **Sucesso parcial** | o resultado bate a CD, mas por **menos de 5** |
+| **6-** (falha) | **Falha** | o resultado não bate a CD |
+
+Todo conteúdo de cena/exploração que já usa esse formato de 3 colunas continua válido tal como está escrito — só a régua de comparação muda (de 2d6 fixo pra d20+modificador vs. CD variável). "Sucesso parcial" continua significando "consegue, mas com um custo" (o mesmo espírito de sempre); "Falha" continua sendo pior que isso.
+
 Proficiência em perícia vem de: **Profissão** (cada uma concede 2 perícias ligadas ao seu tema — o Mestre escolhe entre as perícias do atributo da profissão e uma perícia temática relacionada, ex. Caçador → Sobrevivência + Percepção) e de **escolha livre na criação de personagem** (2 perícias adicionais, quaisquer).
 
 ## As 17 perícias
@@ -3070,15 +3082,39 @@ Ações Lendárias / Fases (só Chefes)
 
 ## Conversão de Nível de Ameaça (referência de tuning)
 
-| Nível de Ameaça |                                   PV aproximado | CA aproximada | Bônus de Ataque | CD de Resistência |
-| --------------- | ----------------------------------------------: | ------------: | --------------: | ----------------: |
-| Fraco           |                                    10 + 4×andar |  10 + andar/3 |    +2 + andar/4 |      10 + andar/4 |
-| Comum           |                                    20 + 6×andar |  11 + andar/3 |    +3 + andar/4 |      11 + andar/4 |
-| Forte           |                                    40 + 8×andar |  13 + andar/3 |    +4 + andar/4 |      13 + andar/4 |
-| Elite           |                                   70 + 10×andar |  15 + andar/3 |    +5 + andar/4 |      14 + andar/4 |
-| Chefe           | 150 + 15×andar (ou 4 fases de ~1/4 desse total) |  16 + andar/3 |    +6 + andar/4 |      15 + andar/4 |
+| Nível de Ameaça |                                   PV aproximado | CA aproximada | Bônus de Ataque | Dano por ataque (referência) | CD de Resistência |
+| --------------- | ----------------------------------------------: | ------------: | --------------: | ----------------------------: | ----------------: |
+| Fraco           |                                    10 + 4×andar |  10 + andar/3 |    +2 + andar/4 |              1d6 + andar/6    |      10 + andar/4 |
+| Comum           |                                    20 + 6×andar |  11 + andar/3 |    +3 + andar/4 |              1d8 + andar/5    |      11 + andar/4 |
+| Forte           |                                    40 + 8×andar |  13 + andar/3 |    +4 + andar/4 |              2d6 + andar/4    |      13 + andar/4 |
+| Elite           |                                   70 + 10×andar |  15 + andar/3 |    +5 + andar/4 |              2d8 + andar/4    |      14 + andar/4 |
+| Chefe           | 150 + 15×andar (ou 4 fases de ~1/4 desse total) |  16 + andar/3 |    +6 + andar/4 |              3d8 + andar/3    |      15 + andar/4 |
+
+Essa coluna de dano é o alvo de **um** ataque padrão do monstro (arredondar frações pra baixo). Um monstro com 2+ ataques por turno deve dividir esse total entre eles, não somar em cima — o objetivo é manter o DPR (dano por rodada) coerente com o Nível de Ameaça, não empilhar.
 
 `atributo_fraqueza` continua existindo: um ataque que usa o atributo de fraqueza do monstro causa **+1d6 de dano extra** (substitui o antigo bônus fixo de teste). Só pode ser FOR/DES/INT/SAB (Seção 65).
+
+## Molde de armadilha / desafio complexo
+
+Pra armadilhas e enigmas de dungeon que envolvem mais que um teste único:
+
+```
+Nome
+Gatilho: o que a aciona
+Detecção: teste + CD (Investigação/Percepção/Sistema — Seção 66), referência de CD na Seção 29
+Resolução: teste + CD pra desarmar/superar (Prestidigitação, Sistema, Força, o que fizer sentido)
+Consequência de falha: dano (usar a tabela abaixo) e/ou condição
+Consequência de sucesso: o que acontece ao superar
+```
+
+| Nível do grupo | Dano de armadilha moderada | Perigosa | Mortal |
+| -------------- | --------------------------: | -------: | -----: |
+| 1º ao 4º       |                        1d10 |     2d10 |   4d10 |
+| 5º ao 10º      |                        2d10 |     4d10 |  10d10 |
+| 11º ao 16º     |                        4d10 |    10d10 |  18d10 |
+| 17º ao 20º     |                       10d10 |    18d10 |  24d10 |
+
+Nada de "requer sintonização", "teste de Arcanismo" ou dano mágico aqui — armadilhas em Aincrad são mecanismo do próprio castelo (Cardinal System), não feitiço. Teste técnico usa **Sistema** (Inteligência) em vez de Arcanismo.
 
 ## Fraqueza é ferramenta de descoberta, não informação de graça
 

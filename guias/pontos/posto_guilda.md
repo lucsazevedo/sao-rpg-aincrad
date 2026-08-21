@@ -31,7 +31,7 @@ do andar.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Sondar o clima entre as guildas | d20+Inteligência | Sabe quem está de mal com quem, e por quê | Sabe que há atrito, não a causa | Pergunta pra pessoa errada e vira assunto |
 | Negociar entrada numa expedição | d20+Inteligência | Aceitos, com parte justa do espólio | Aceitos, mas na parte pior da divisão | Recusados, e a recusa circula |
@@ -64,7 +64,7 @@ ajuda — precisa, e essa diferença é a cena.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ajudar com a barraca | — | Sem teste — ele vira contato, e contato aqui vale mais que Col | | |
 | Ajudar a armar a prova de competência | d20+Sabedoria | Ele confia no grupo e a prova sai limpa | A prova sai, mas um veterano aparece cedo demais pra avaliar | Ele quer impressionar e quase estraga algo simples |
@@ -93,7 +93,7 @@ Comuns, Frasco Vazio, bandagem.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar suprimento básico de expedição | — | Sem teste — tabela fixa, Col 20–50 conforme o item | | |
 | Perguntar o que está em falta | d20+Inteligência | Descobre o que acabou e por quê — pista sobre movimento recente no posto | Só descobre o que acabou | "Tá na placa o que tem" |

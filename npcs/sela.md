@@ -71,6 +71,6 @@ criaturas do andar formam vínculo e quais não — a tabela que hoje está em
 
 ## Combate (se aplicável)
 
-Técnica 2. Não luta — os aliados dela lutam, e nunca são muitos.
+Destreza 14. Não luta — os aliados dela lutam, e nunca são muitos.
 
 <!-- convertido-dnd5e -->

@@ -8,7 +8,6 @@ local: labirinto
 regioes: [labirinto_entrada, sala_chefe]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -49,7 +48,7 @@ O rangido da corda no vão. Chega meio segundo antes da flecha e só é audível
 
 ## Fraquezas
 
-- **Atributo — Técnica:** a perícia dele é o arco, e é uma perícia só — arma de Técnica, de quem atira melhor que ele, vence o duelo de precisão. Em 10+ ele perde o ataque à distância pelo resto da cena.
+- **Atributo — Destreza:** a perícia dele é o arco, e é uma perícia só — um ataque que usa Destreza, de quem atira melhor que ele, vence o duelo de precisão e causa +1d6 de dano extra.
 - Ele fica exposto ao recarregar, e recarrega devagar.
 - De perto ele não luta: recua ou se rende. Fechar a distância encerra.
 
@@ -66,15 +65,13 @@ O rangido da corda no vão. Chega meio segundo antes da flecha e só é audível
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

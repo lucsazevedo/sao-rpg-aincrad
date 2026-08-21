@@ -77,6 +77,6 @@ de um eixo novo e ninguém no vale sabe escolher a madeira certa.
 
 ## Combate (se aplicável)
 
-Corpo 1, Reflexo 1, Machado. Não procura briga e resolve rápido a que aparece.
+Força 12, Destreza 12, Machado. Não procura briga e resolve rápido a que aparece.
 
 <!-- convertido-dnd5e -->

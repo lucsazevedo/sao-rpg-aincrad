@@ -38,7 +38,7 @@ banca.
 Aro de fio de prata com uma única Escama Prateada engastada, que muda de tom
 conforme a luz. A receita mais copiada do andar.
 
-**Efeito:** **+1 em testes de Reflexo dentro d'água ou em superfície
+**Efeito:** **+1 em testes de Destreza dentro d'água ou em superfície
 escorregadia.**
 
 **Como obter:** crafting de Joalheiro (Escama Prateada + fio de prata
@@ -48,12 +48,12 @@ comprado em Tolbana) — receita já documentada em
 ---
 
 ## Bússola de Latão Emperrada — Incomum
-**Requisito:** Conhecimento -1+ · **Preço base:** 280 Col
+**Requisito:** Inteligência 8+ · **Preço base:** 280 Col
 
 A agulha gira meio segundo a mais do que deveria antes de parar. Ninguém
 sabe se é defeito ou se o andar é assim mesmo.
 
-**Efeito:** **+1 em testes de Conhecimento para mapear, orientar-se ou achar
+**Efeito:** **+1 em testes de Inteligência para mapear, orientar-se ou achar
 rota** — é a peça do **Cartógrafo** (`docs/economia_profissoes.md`, mecânica
 de revelar região).
 **Utilidade:** com ela equipada, o grupo nunca "se perde" como complicação de
@@ -65,12 +65,12 @@ falha; o mestre precisa achar outro preço a cobrar.
 ---
 
 ## Balança de Bolso do Comerciante — Incomum
-**Requisito:** Conhecimento -1+ · **Preço base:** 320 Col
+**Requisito:** Inteligência 8+ · **Preço base:** 320 Col
 
 Pratinhos de latão e pesos numa bolsa de couro. Serve pra pesar material —
 e, mais importante, pra ser vista sendo usada durante uma negociação.
 
-**Efeito:** **+1 em testes de Conhecimento para negociar preço, avaliar item
+**Efeito:** **+1 em testes de Inteligência para negociar preço, avaliar item
 ou farejar golpe** — é a peça do **Comerciante**.
 **Utilidade:** revela a raridade real de qualquer material ou equipamento sem
 teste, inclusive itens do Mercado Negro cuja procedência ninguém explica.
@@ -82,14 +82,15 @@ uma vez em cada três — e não avisa qual vez.
 ---
 
 ## Selo de Trégua — Incomum
-**Requisito:** Conhecimento -1+ ou Espírito -1+ · **Preço base:** não é vendido
+**Requisito:** Inteligência 8+ ou Sabedoria 8+ · **Preço base:** não é vendido
 
 Broche de bronze com seis sulcos, um para cada guilda que assinou a trégua
 informal de Tolbana (Sindicato, LHUB, Dndalcin, iBarr's, Terraço Geek,
 Guilda de Nerds). Quatro sulcos estão preenchidos com esmalte. Dois não.
 
-**Efeito:** **+1 em testes de Conhecimento para mediar conflito, negociar
-entre facções ou pedir passagem** — é a peça do **Diplomata**.
+**Efeito:** **+1 em testes de Inteligência ou Sabedoria (conforme a
+abordagem) para mediar conflito, negociar entre facções ou pedir passagem**
+— é a peça do **Diplomata**.
 **Efeito único:** uma vez por sessão, o portador pode **interromper um
 combate entre jogadores ou entre jogador e NPC de guilda** antes do primeiro
 golpe. Todos param pra ouvir. O que ele fala depois é problema dele.
@@ -101,16 +102,17 @@ são conteúdo em aberto de propósito.
 ---
 
 ## Terço de Ossos Antigos — Incomum
-**Requisito:** Espírito -1+ · **Preço base:** 240 Col
+**Requisito:** Sabedoria 8+ · **Preço base:** 240 Col
 
 Falanges pequenas de Ossos Antigos da Necrópole de Voss, furadas e enfiadas
 num fio. Frias mesmo ao sol.
 
-**Efeito:** **+1 em testes de Espírito para lidar com mortos, memoriais ou
+**Efeito:** **+1 em testes de Sabedoria para lidar com mortos, memoriais ou
 presenças não-corpóreas** — é a peça do **Coveiro**.
 **Utilidade:** um Espectro Sussurrante atacado por quem usa o terço pode ser
-**dispensado** em vez de combatido: teste de Espírito 10+ o dissolve sem
-luta, e o mestre deve entregar a pista que ele carregava mesmo assim.
+**dispensado** em vez de combatido: um teste de Sabedoria bem-sucedido o
+dissolve sem luta, e o mestre deve entregar a pista que ele carregava mesmo
+assim.
 
 **Como obter:** crafting de Coveiro (Ossos Antigos x3, ritual no Memorial dos
 Caídos). Comprar de terceiros anula o efeito — precisa ser montado pelo
@@ -119,15 +121,15 @@ próprio usuário, e isso é regra, não sabor.
 ---
 
 ## Diapasão de Prata Rachado — Incomum
-**Requisito:** Espírito -1+ · **Preço base:** 290 Col
+**Requisito:** Sabedoria 8+ · **Preço base:** 290 Col
 
 Diapasão de afinação com uma rachadura fina no braço. A nota sai um quarto de
 tom abaixo — errada o suficiente pra ficar na cabeça de quem ouve.
 
-**Efeito:** **+1 em testes de Espírito para inspirar aliados, acalmar uma
+**Efeito:** **+1 em testes de Sabedoria para inspirar aliados, acalmar uma
 multidão ou influenciar emoção com música** — é a peça do **Músico**.
 **Efeito único:** uma vez por combate, ao tocar a nota, **todo aliado que
-falhou (6-) no teste anterior pode rolar de novo**. Monstros de audição
+falhou no teste anterior pode rolar de novo**. Monstros de audição
 sensível (Morcego Ecoante, Sombra de Mournhall) reagem — pode chamar atenção
 indesejada, e o mestre deve usar isso.
 
@@ -138,7 +140,7 @@ diz que já não afina mais.
 ---
 
 ## Marcador de Página do Bibliotecário — Comum
-**Requisito:** Conhecimento -1+ · **Preço base:** 150 Col
+**Requisito:** Inteligência 8+ · **Preço base:** 150 Col
 
 Tira de couro fino com uma escala de medida gravada na borda e três clipes
 de metal. Não faz nada de mágico; faz o trabalho.
@@ -191,7 +193,7 @@ Lasca de Cristal Bruto da Gruta de Lumis presa numa gaiola de arame. Não é um
 Cristal de sistema (Teleporte/Cura/etc.) — é matéria-prima, e ele nunca deixa
 o usuário esquecer disso.
 
-**Efeito:** **+1 em testes de Conhecimento para identificar armadilha,
+**Efeito:** **+1 em testes de Inteligência para identificar armadilha,
 mecanismo ou encantamento.**
 **Utilidade:** aquece perceptivelmente perto de um Cristal de verdade ainda
 não encontrado — é o único detector de tesouro do andar, e o mestre deve
@@ -203,13 +205,13 @@ Gruta de Lumis é a única fonte confiável do cristal.
 ---
 
 ## Anel dos Cinco Encaixes — Raro
-**Requisito:** Conhecimento 0+ · **Preço base:** não tem preço
+**Requisito:** Inteligência 10+ · **Preço base:** não tem preço
 
 Anel de ferro escuro com cinco depressões minúsculas na face, do tamanho
 exato de fragmentos de cristal. Quatro estão vazias. A quinta tem uma lasca
 que não pertence a nenhum dos seis tipos de Cristal conhecidos.
 
-**Efeito:** **+1 em testes de Conhecimento para decifrar qualquer coisa** —
+**Efeito:** **+2 em testes de Inteligência para decifrar qualquer coisa** —
 inscrição, enigma, mecanismo, cantiga, mapa antigo.
 **Efeito único — Ecos do Mural:** ao segurar o anel encostado numa superfície
 de pedra gravada em qualquer lugar do andar, o usuário ouve, por um segundo,

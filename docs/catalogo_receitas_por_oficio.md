@@ -29,16 +29,16 @@ na mesma proporção do Cozinheiro:
 
 | Faixa | Quantidade | Nome da faixa | Equivale à raridade de item (`armas/00_catalogo_expandido.md`) |
 |---|---|---|---|
-| **Dificuldade 6-** | 8 receitas | Básicas | Comum |
-| **Dificuldade 7-9** | 5 receitas | Especiais | Incomum |
-| **Dificuldade 10+** | 4 receitas | Lendárias | Raro / Único |
+| **Dificuldade: Falha** | 8 receitas | Básicas | Comum |
+| **Dificuldade: Sucesso parcial** | 5 receitas | Especiais | Incomum |
+| **Dificuldade: Sucesso total (CD+5)** | 4 receitas | Lendárias | Raro / Único |
 
 O nome da faixa **não é o resultado do dado** — é o **piso de teste** que a
 receita pede pra sair boa. Isso encaixa direto na faixa de resultado que já
 existe na Ação de Ofício de cada profissão (`oficios_andar1.md`): quem tira
-**10+** na ação "produzir com bônus" pode escolher qualquer receita das três
-faixas (se tiver o material); quem tira **7-9** só destrava até Especial;
-quem tira **6-** ainda sai com uma Básica — porque "produção nunca é 'não
+**sucesso total** na ação "produzir com bônus" pode escolher qualquer receita das três
+faixas (se tiver o material); quem tira **sucesso parcial** só destrava até Especial;
+quem tira **falha** ainda sai com uma Básica — porque "produção nunca é 'não
 saiu'", regra que já vale pro sistema inteiro.
 
 Cada receita segue este formato:
@@ -58,12 +58,12 @@ um posto de trabalho que já existe em `oficios_andar1.md`
 A regra de `armas/00_catalogo_expandido.md` ("facilidade de obter define o
 teto") vale igual aqui:
 
-- **Básicas (6-):** zero bônus numérico. Só utilidade estreita — vantagem
+- **Básicas (falha):** zero bônus numérico. Só utilidade estreita — vantagem
   narrativa numa situação específica, nunca em teste de combate direto.
-- **Especiais (7-9):** um efeito situacional mais forte, ainda sem número
+- **Especiais (sucesso parcial):** um efeito situacional mais forte, ainda sem número
   fixo — pode tocar teste de combate (ex: "vantagem no primeiro ataque"),
   mas nunca +1 permanente, e nunca dois efeitos ao mesmo tempo.
-- **Lendárias (10+):** aqui sim pode quebrar a curva — efeito de grupo,
+- **Lendárias (sucesso total):** aqui sim pode quebrar a curva — efeito de grupo,
   escolha de atributo, remoção de Condição sem gastar Cristal — porque o
   material exige quest de cadeia, drop de chefe ou coisa que só existe uma
   vez. **Não é vendida.** Se sua mesa quiser vender mesmo assim, use o preço

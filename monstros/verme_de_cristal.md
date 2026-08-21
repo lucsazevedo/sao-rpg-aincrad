@@ -8,7 +8,6 @@ local: caverna
 regioes: [gruta_cristal, pedreira, caverna_ecos]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
-golpes_para_derrotar: 4
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -49,7 +48,7 @@ As lascas caindo do veio. O cristal racha antes de ele romper a parede.
 
 ## Fraquezas
 
-- **Atributo — Espírito:** ele é estático e quase geológico — não há foco nenhum sustentando a caçada, e arma de Espírito bate nessa ausência. Em 10+ ele perde a capacidade de escavar pelo resto da cena e fica preso na galeria.
+- **Atributo — Sabedoria:** ele é estático e quase geológico — não há foco nenhum sustentando a caçada, e um ataque que usa Sabedoria bate nessa ausência, causando +1d6 de dano extra.
 - A cabeça é mole e sem placa; o resto do corpo não é.
 - Ele rastreia vibração. Ficar imóvel o faz passar direto.
 
@@ -66,15 +65,13 @@ As lascas caindo do veio. O cristal racha antes de ele romper a parede.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -86,5 +83,5 @@ Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Níve
 
 Não é domável — reage só a vibração, não reconhece presença. Funciona
 como guardião natural dos veios de Cristal Bruto da Gruta de Lumis — boa
-razão pra mineração ali exigir cuidado (teste de Reflexo pra não fazer
-barulho), não só o teste de Técnica de extração.
+razão pra mineração ali exigir cuidado (teste de Destreza pra não fazer
+barulho), não só o teste de Inteligência de extração.

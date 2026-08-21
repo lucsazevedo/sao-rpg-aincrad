@@ -8,11 +8,14 @@ local: # campo | caverna | dungeon/labirinto | dungeon_oculta | água | cidade
 regioes: [] # ids de dados_mapa.js onde ele aparece de verdade
 nivel_recomendado: # faixa, ex "4-5" -- o andar 1 vai até 10
 nivel_ameaca: # fraco | comum | forte | elite | chefe
-golpes_para_derrotar: # numero (ou "4x6-8" pra chefes com barras)
+ca: # CA numérica -- ver Seção 73 do SAO_RPG_5e.md pra referência por Nível de Ameaça/andar
+pv: # PV numérico (dado x quantidade + CON) -- mesma referência
+bonus_ataque: # ex "+3"
+cd_resistencia: # ex "11"
 abertura: # a abertura concreta, ex "garganta exposta no fim da investida"
-atributo_fraqueza: # Corpo | Reflexo | Conhecimento | Espírito | Técnica — ver docs/elementos_andar1.md
-resistencias: []
-vulnerabilidades: []
+atributo_fraqueza: # Força | Destreza | Inteligência | Sabedoria -- só esses 4 (Seção 65 do SAO_RPG_5e.md); um ataque que usa esse atributo causa +1d6 de dano extra (Seção 73)
+resistencias: [] # tipos de dano, não atributo
+vulnerabilidades: [] # tipos de dano, não atributo
 imagem: # ../imagens/monstro_<slug>.png
 canonico: # sim (wiki/anime) | nao (homebrew)
 fonte: # link da fandom wiki, se canonico
@@ -48,10 +51,13 @@ eco, luz, animal sumindo. Toda criatura entra em cena antes de aparecer.
 Quatro, sempre. A primeira é a de atributo; as outras três são posicionais
 ou táticas — coisas que a mesa descobre olhando, não rolando.
 
-- **Atributo — <Corpo/Reflexo/Conhecimento/Espírito/Técnica>:** por que uma
-  arma cujo atributo principal é esse morde nele. Acertar a fraqueza faz
-  7-9 virar 10+ funcional (a criatura não reage), e 10+ tira dele uma
-  capacidade pelo resto da cena — diga qual (ver `docs/elementos_andar1.md`).
+- **Atributo — <Força/Destreza/Inteligência/Sabedoria>:** por que uma arma
+  cujo atributo principal é esse morde nele (deve bater com o
+  `atributo_fraqueza` do frontmatter). Um ataque que usa esse atributo
+  contra o ponto certo causa **+1d6** de dano extra (Seção 73 do
+  `SAO_RPG_5e.md`). A fraqueza é descoberta em jogo (observação, teste de
+  Sistema, Caçador/Mercenário/Informante, comportamento do próprio
+  monstro) — nunca informação de graça.
 - Abertura de posição.
 - Abertura de ritmo (depois de que ação ele fica exposto).
 - Fraqueza de contexto (sozinho, no escuro, na água, longe do grupo).
@@ -78,6 +84,14 @@ Não confundir com a raridade de **equipamento**, que vai até Único.
 | | Comum | 1-2 | 60% | Costureiro |
 | | Incomum | 1 | 30% | Alquimista |
 | Col | — | 90-140 | 100% | — |
+
+## Stat Block D&D 5e
+
+- **CA:** [bate com `ca` do frontmatter]
+- **PV:** [bate com `pv`]
+- **Bônus de Ataque:** [bate com `bonus_ataque`]
+- **CD de Resistência:** [bate com `cd_resistencia`]
+- **Atributo de fraqueza:** [bate com `atributo_fraqueza`] — um ataque que usa esse atributo contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

@@ -8,7 +8,6 @@ local: rio
 regioes: [rio_serpente, lago, vila_ribeirinha]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -49,7 +48,7 @@ A água para de refletir. O cardume subindo à superfície tira o brilho antes d
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** o cerco e a mordida em massa punem quem é lento — arma de Reflexo, reagindo no instante em que a mancha vira, quebra o ritmo do cardume. Em 10+ ele se dispersa pelo resto da cena e a travessia fica livre.
+- **Atributo — Destreza:** o cerco e a mordida em massa punem quem é lento — um ataque que usa Destreza, reagindo no instante em que a mancha vira, causa +1d6 de dano extra.
 - Ataque em área vale mais que precisão; golpe único não resolve nada.
 - Fora da água ele não existe. Um passo para a margem encerra o encontro.
 
@@ -65,15 +64,13 @@ A água para de refletir. O cardume subindo à superfície tira o brilho antes d
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -85,5 +82,5 @@ Os pescadores de Brenmoor convivem com o enxame há tanto tempo que desenvolvera
 
 Não é domável — é um cardume, não um indivíduo. Bom obstáculo pra
 travessia do Rio Coluber sem precisar virar combate longo; o mestre pode
-resolver como um único teste de Reflexo/Corpo pra atravessar em vez de
+resolver como um único teste de Destreza/Força pra atravessar em vez de
 combate completo.

@@ -82,7 +82,7 @@ opções são legítimas e todas custam.
 
 ## Combate (se aplicável)
 
-Se entrar no Labirinto, luta bem — Corpo 1, Espada Longa, e nenhuma vontade
+Se entrar no Labirinto, luta bem — Força 12, Espada Longa, e nenhuma vontade
 de recuar. É exatamente por isso que é perigoso.
 
 <!-- convertido-dnd5e -->

@@ -1,7 +1,7 @@
 ---
 slot: Cristais de Uso
 andar: 1-50
-itens: 21
+itens: 19
 ---
 
 # Cristais de Uso (Consumíveis)
@@ -15,7 +15,7 @@ Cristais fabricados por **Cristalista** ou **Alquimista** para **uso único e im
 
 Cristal verde claro. Esfarela na mão e libera energia de cura.
 
-**Efeito:** Recupera 2 "golpes" de vida de quem aperta na mão.
+**Efeito:** Recupera **2d4+2 PV** de quem aperta na mão.
 **Como obter:** Craft de Cristalista (Cristal Verde x1, Erva Medicinal x1. Ferramentas: Amolador, Energia Suave. Dificuldade: 6-.)
 
 ---
@@ -25,7 +25,7 @@ Cristal verde claro. Esfarela na mão e libera energia de cura.
 
 Cristal azul esbranquiçado. Limpa veneno, maldição leve, doença comum.
 
-**Efeito:** Usa no corpo ou em líquido. Remove 1 efeito de veneno/doença leve; purifica 1 litro de água suja.
+**Efeito:** Usa no corpo ou em líquido. Remove a condição Envenenado por veneno leve, ou cura uma doença comum; purifica 1 litro de água suja.
 **Como obter:** Craft de Cristalista + Alquimista (Cristal Azul x1, Água Benta x1. Dificuldade: 6-.)
 
 ---
@@ -51,7 +51,7 @@ Par de cristais idênticos, sincronizados. Fala em um, sai som no outro.
 ---
 
 ## Cristal de Visão — Comum
-**Requisito:** Conhecimento -1+ · **Preço base:** 80 Col
+**Requisito:** Inteligência 8+ · **Preço base:** 80 Col
 
 Cristal transparente. Olha através dele e enxerga no escuro por pouco tempo.
 
@@ -91,7 +91,7 @@ Cristal azul pálido. Mergulha em poça de água suja, ela fica bebível.
 ---
 
 ## Cristal de Armazenamento — Comum
-**Requisito:** Técnica -1+ · **Preço base:** 120 Col
+**Requisito:** Destreza 8+ · **Preço base:** 120 Col
 
 Cristal grande, plano como prato. Coloca objeto em cima some, some do mundo físico.
 
@@ -121,7 +121,7 @@ Cristal roxo escuro. Pode ir a qualquer lugar que o usuário já visitou e marco
 ---
 
 ## Cristal de Teleporte de Grupo — Incomum
-**Requisito:** Conhecimento 0+ · **Preço base:** 800 Col
+**Requisito:** Inteligência 10+ · **Preço base:** 800 Col
 
 Cristal gigante roxo. 5 ranhuras em volta, encaixa dedo de 5 pessoas.
 
@@ -131,7 +131,7 @@ Cristal gigante roxo. 5 ranhuras em volta, encaixa dedo de 5 pessoas.
 ---
 
 ## Cristal de Detecção — Incomum
-**Requisito:** Conhecimento 0+ · **Preço base:** 350 Col
+**Requisito:** Inteligência 10+ · **Preço base:** 350 Col
 
 Cristal branco leitoso. Flutua a 1 palmo da palma, aponta pro tipo de coisa que procura.
 
@@ -141,17 +141,17 @@ Cristal branco leitoso. Flutua a 1 palmo da palma, aponta pro tipo de coisa que 
 ---
 
 ## Cristal de Barreira — Incomum
-**Requisito:** Espírito 0+ · **Preço base:** 400 Col
+**Requisito:** Sabedoria 10+ · **Preço base:** 400 Col
 
 Cristal ciano. Bate no chão, cria barreira de luz dura como parede.
 
-**Efeito:** Parede de 2x2 metros, dura 1 minuto. Aguenta até 5 "golpes" de dano total. Impede passagem e projéteis.
+**Efeito:** Parede de 2x2 metros, dura 1 minuto. Aguenta até **15 PV** de dano total antes de quebrar. Impede passagem e projéteis.
 **Como obter:** Craft de Cristalista nível 3 (Cristal Ciano x2, Energia Estrutura x1. Dificuldade: 8.)
 
 ---
 
 ## Cristal de Camuflagem — Incomum
-**Requisito:** Reflexo 0+ · **Preço base:** 380 Col
+**Requisito:** Destreza 10+ · **Preço base:** 380 Col
 
 Cristal cinza-esverdeado. Segura na mão, você e suas roupas ficam da cor do ambiente.
 
@@ -165,13 +165,13 @@ Cristal cinza-esverdeado. Segura na mão, você e suas roupas ficam da cor do am
 
 Cristal dourado, brilhante. Última esperança de quem caiu.
 
-**Efeito:** **Última Esperança —** Pode ser usado de 2 formas: (1) Esfrega em aliado morto a menos de 1 minuto, ele volta com 1 golpe de vida. (2) Você morre, o cristal auto-ativa se estiver no bolso, mas só funciona 1 vez na vida do usuário.
+**Efeito:** **Última Esperança —** Pode ser usado de 2 formas: (1) Esfrega em aliado morto a menos de 1 minuto, ele volta com **1 PV**. (2) Você morre, o cristal auto-ativa se estiver no bolso, mas só funciona 1 vez na vida do usuário.
 **Como obter:** Craft duplo de Alquimista + Cristalista nível 5 (Cristal Dourado x1, Cinzas Fênix x1, Essência Vida x1. Dificuldade: 10+.)
 
 ---
 
 ## Cristal do Administrador — Lendário
-**Requisito:** Conhecimento 2+ · **Preço base:** não tem preço
+**Requisito:** Inteligência 14+ · **Preço base:** não tem preço
 
 Cristal vermelho-escuro com linhas de código aparecendo e sumindo. Parece uma tela do sistema.
 
@@ -181,11 +181,11 @@ Cristal vermelho-escuro com linhas de código aparecendo e sumindo. Parece uma t
 ---
 
 ## Cristal da Alma — Lendário
-**Requisito:** Espírito 2+ · **Preço base:** não tem preço
+**Requisito:** Sabedoria 14+ · **Preço base:** não tem preço
 
 Cristal branco-rosado, quente como pele. Pulsando como coração.
 
-**Efeito:** **Espírito Inquebrável —** Enquanto estiver na mochila, uma vez por sessão, o usuário pode ignorar 1 efeito de medo, paralisia, possessão, dreno de espírito. Ativa sozinho. **Efeito extra:** pode falar 1 vez com espírito de alguém morto a menos de 1 dia, 1 pergunta e 1 resposta.
+**Efeito:** **Espírito Inquebrável —** Enquanto estiver na mochila, uma vez por sessão, o usuário pode ignorar 1 efeito de medo, paralisia, possessão ou dreno de espírito (nega a condição imposta). Ativa sozinho. **Efeito extra:** pode falar 1 vez com espírito de alguém morto a menos de 1 dia, 1 pergunta e 1 resposta.
 **Como obter:** Craft de Cristalista nível 5 (Cristal de Coração x1, Alma Gentil x1. Dificuldade: 10+.)
 
 ---
@@ -195,5 +195,5 @@ Cristal branco-rosado, quente como pele. Pulsando como coração.
 
 Cristal arco-íris, com todos os tons da torre de Aincrad. O cristal da recompensa final.
 
-**Efeito:** **Legado do Jogador —** +3 em TESTE ÚNICO. Uma vez por sessão, você escolhe 1 dado que acabou de rolar e declara "Herói de Aincrad". O resultado é 12 automaticamente, não importa o que rolou. **Limite:** 1 por sessão.
+**Efeito:** **Legado do Jogador —** Uma vez por sessão, antes de rolar, o usuário declara "Herói de Aincrad" num teste: rola esse teste **com vantagem** (2d20, fica com o maior resultado). **Limite:** 1 por sessão.
 **Como obter:** Concedido pelo sistema a quem completa a campanha.

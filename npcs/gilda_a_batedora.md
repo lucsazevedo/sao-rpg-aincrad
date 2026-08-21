@@ -71,6 +71,6 @@ tese da campanha inteira dita em uma NPC.
 
 ## Combate (se aplicável)
 
-Reflexo 1, Adagas. Sobrevive por fuga, não por luta.
+Destreza 12, Adagas. Sobrevive por fuga, não por luta.
 
 <!-- convertido-dnd5e -->

@@ -29,7 +29,7 @@ campo.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Vasculhar os restos | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade de lore, não material de crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
 | Procurar uma pá de trincheira | d20+Inteligência | Acha uma que ainda presta | Acha uma torta | Só ferro podre |
@@ -59,7 +59,7 @@ aqui.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler o terreno ao redor | d20+Sabedoria | Reconhece que aqui houve um confronto grande — não um evento de jogo comum | Percebe só que o terreno é estranho ali | Passa direto |
 | Estudar a heráldica do pano | d20+Inteligência | Reconhece que não é de nenhuma guilda atual — nem de facção conhecida | Percebe que é antiga | "Pano velho" |
@@ -86,7 +86,7 @@ jogo, sem uso de crafting comum. Respawn de 6h.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar a lâmina | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
 
@@ -109,12 +109,12 @@ esconderijo natural com chance de achado e de teto ceder.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler o terreno antes de descer | d20+Sabedoria | Reconhece que foi um confronto grande, não um evento de jogo comum | Percebe só que o terreno é estranho ali | Passa direto |
 | Explorar o interior | d20+Destreza | Acha um esconderijo intacto — e o que tem dentro | Acha, mas o teto cede atrás de você | Cai; complicação e barulho |
 
-**Só o mestre:** o barulho do 6- é gancho legítimo pra atrair a Sentinela
+**Só o mestre:** o barulho da falha é gancho legítimo pra atrair a Sentinela
 mais próxima — `campo_batalha_xsentinela_esquecida` fica a poucos metros.
 O "que tem dentro" fica a seu critério: provisões apodrecidas, uma Ordem
 Gravada solta (ver drop da Sentinela), ou nada.
@@ -137,7 +137,7 @@ do "pescoço") e Trovão.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber o que ela é antes de chegar perto | d20+Inteligência | Nota a postura de vigia a distância segura — o grupo escolhe o engajamento | Nota em cima da hora; ela já escolheu alguém | Confunde com cenário até ela se mover |
 | Enfrentar (combate) | d20+Força ou Técnica | Golpe na junta do pescoço conta 2 | Troca de golpes equilibrada | Ela te marca como intruso de linha — e não para mais |
@@ -163,7 +163,7 @@ de fragmento, outro canto do campo. Respawn de 6h.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar a lâmina | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
 
@@ -187,7 +187,7 @@ ameaça forte (5-7 golpes). Guarda o trecho norte do campo. Respawn de 3h.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar (combate) | d20+Força ou Técnica | Golpe na junta do pescoço conta 2 | Troca de golpes equilibrada | Ela marca o grupo como intruso de linha — e não para mais |
 
@@ -211,7 +211,7 @@ varredura do campo. Respawn de 6h.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar a empunhadura | d20+Inteligência | Identifica que é anterior ao próprio jogo — curiosidade, não crafting comum | Recolhe sem entender o que é | Parece só sucata; deixa pra lá |
 

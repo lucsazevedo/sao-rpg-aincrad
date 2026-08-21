@@ -65,6 +65,6 @@ Sinceridade relaxa ele; hostilidade custa caro por sessões.
 
 ## Combate (se aplicável)
 
-Corpo 1, martelo atrás do balcão. Nunca precisou. Um dia vai precisar.
+Força 12, martelo atrás do balcão. Nunca precisou. Um dia vai precisar.
 
 <!-- convertido-dnd5e -->

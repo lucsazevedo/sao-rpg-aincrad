@@ -8,7 +8,6 @@ local: campo
 regioes: []
 nivel_recomendado: "2-4 (andar 2)"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 32
 bonus_ataque: +3
@@ -57,9 +56,8 @@ mergulho.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** arma de Reflexo, lida no instante em que ela
-  mergulha. Em 10+ as asas falham na recuperação e ela não decola de novo
-  pelo resto da cena.
+- **Atributo — Destreza:** o instante do mergulho é a abertura — um ataque que usa Destreza,
+  lido nesse momento exato em que ela não pode corrigir a rota, causa +1d6 de dano extra.
 - O único momento em que ela está ao alcance de golpe corpo a corpo é
   durante o mergulho, antes de recuperar altitude.
 - Ataques à distância (arco, adaga de arremesso) funcionam a qualquer
@@ -92,15 +90,13 @@ bruta constante.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 32
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

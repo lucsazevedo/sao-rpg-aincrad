@@ -25,7 +25,7 @@ de reabastecer antes de atravessar o portão.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Reabastecer / trocar suprimento | — | Sem teste — comércio informal entre grupos | | |
 | Perguntar sobre grupos que não voltaram | d20+Sabedoria | Alguém confirma o caso de Marco (ver `labirinto_marco`) | Boato vago, sem nome | Ninguém quer falar sobre isso |
@@ -49,7 +49,7 @@ teve coragem de entrar de novo.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Conversar com cuidado | d20+Sabedoria | Ele conta o que aconteceu com o grupo dele — pista real sobre um trecho perigoso | Conta parte, embaralhado pela dor | Ele se fecha, não quer reviver |
 
@@ -74,7 +74,7 @@ região.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Atravessar | d20+Sabedoria | O grupo entra junto, no mesmo passo — ninguém marca Condição | Entram, mas alguém hesita na soleira, e a hesitação é vista (marca 1 Condição social) | Alguém não consegue atravessar nesta cena — precisa de motivo melhor que coragem |
 
@@ -99,7 +99,7 @@ experiência.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Derrubar o mastro primeiro | d20+Destreza | Derruba antes do primeiro reforço chegar — sem estandarte ele recua lutando e a cena acaba | O mastro cai, mas os Troopers que já chegaram ficam | A mesa trata o kobold como alvo principal e a luta vira atrito sem fim |
 
@@ -121,7 +121,7 @@ dentro da lógica do Labirinto.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
 | Observar sem engajar | d20+Destreza | Mapeia a rota de ronda sem ser visto | Mapeia parcialmente | É notado |
@@ -143,7 +143,7 @@ acampamento.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
 
@@ -164,7 +164,7 @@ extração de Fragmento de Armadura Kobold logo após a vitória.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
 
@@ -186,7 +186,7 @@ suprimento de um grupo que não voltou.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Vasculhar | d20+Destreza | Recupera tudo que ainda presta | Recupera metade, resto estragou | Nada aproveitável |
 
@@ -209,7 +209,7 @@ andar 1 — fragmento do padrão maior (ver
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar as marcas | d20+Inteligência | Reconhece que não bate com nenhum monstro catalogado do andar | Percebe que é estranho, sem identificar | Passa direto |
 
@@ -231,7 +231,7 @@ partir do segundo grupo de guarda.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas o Trooper reage | Trooper acerta primeiro |
 

@@ -27,7 +27,7 @@ confortável antes do campo aberto de verdade.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Pedir esboço do terreno a Erik | d20+Sabedoria | Rota segura + aviso sobre o Alfa Lupino desperto (ver `campos_leste`) | Rota segura, sem aviso extra | Rota genérica, igual a qualquer mapa comprado |
 | Trocar material de caça | — | Sem teste — troca justa por item de caça comum | | |
@@ -54,7 +54,7 @@ Planícies).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar o símbolo talhado | d20+Inteligência | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho, sem mais detalhes | Não nota nada de especial |
 
@@ -81,7 +81,7 @@ em outra região.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler a galhada antes da luta | d20+Inteligência | Reconhece a mesma escrita das pedras de Verrun, Kaldan, Pemberton e Braxhold | Reconhece que é escrita e que já viu igual, sem lembrar onde | Parece marca de pelagem comum — perde a única chance de ler com ele parado |
 | Enfrentar (combate) | d20+Força | Ver `monstros/rei_das_planicies.md` | | |
@@ -105,7 +105,7 @@ sai pela primeira vez da Cidade do Início (ver `01_javalis_na_pastagem.md`).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força | Golpe limpo, sem reação | Acerta, mas o boar reage | Boar ataca primeiro |
 | Rastrear antes de engajar | d20+Destreza | Percebe o boar antes dele perceber o grupo | Percebe no limite | Estumbra em cima dele |
@@ -128,7 +128,7 @@ proximidade com a ruína.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força | Golpe limpo, sem reação | Acerta, mas o boar reage | Boar ataca primeiro |
 
@@ -151,7 +151,7 @@ acessível da região — bom pra Alquimista ou Cozinheiro de baixo nível.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
 
@@ -174,7 +174,7 @@ depois de examinar `campos_ruinas`.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
 
@@ -196,7 +196,7 @@ curta, boa pra ensinar que nem toda ameaça do campo é corpo a corpo.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
@@ -218,7 +218,7 @@ coincidência de mapa.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar o símbolo | d20+Inteligência | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho | Não nota nada de especial |
 
@@ -242,7 +242,7 @@ Cartógrafo.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Pedir esboço do terreno | — | Sem teste — vende de memória um esboço equivalente a uma dica de Cartógrafo | | |
 
@@ -265,7 +265,7 @@ Verrun.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos (marca leve) | Nada aproveitável |
 

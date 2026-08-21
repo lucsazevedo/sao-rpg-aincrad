@@ -8,7 +8,6 @@ local: campo
 regioes: []
 nivel_recomendado: "1-3 (andar 2)"
 nivel_ameaca: fraco
-golpes_para_derrotar: 2
 ca: 10
 pv: 18
 bonus_ataque: +2
@@ -55,9 +54,8 @@ investida.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a investida é direta e comprometida — arma de
-  Reflexo, no último instante, vira a força dele contra ele. Em 10+ ele
-  fica atordoado por um turno, com a investida em andamento interrompida.
+- **Atributo — Destreza:** a investida é direta e comprometida — um ataque que usa
+  Destreza, no último instante, vira a força dele contra ele e causa +1d6 de dano extra.
 - Desviar da investida no último instante deixa o flanco totalmente exposto
   ao contra-ataque.
 - Terreno com obstáculo (pedra, cerca) quebra a investida sozinho.
@@ -87,15 +85,13 @@ investida é sempre uma ameaça real, não só cosmética.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
 - **PV:** 18
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

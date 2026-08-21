@@ -8,7 +8,6 @@ local: campo
 regioes: [campos_oeste, campos_leste, floresta_horunka]
 nivel_recomendado: "1-2"
 nivel_ameaca: fraco
-golpes_para_derrotar: 1 (2 se errar a nuca)
 ca: 10
 pv: 14
 bonus_ataque: +2
@@ -52,7 +51,7 @@ dois lados da boca.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a investida é rápida e reta — arma de Reflexo, lida no último instante, aproveita a abertura que ele mesmo cria. Em 10+ ele desvia da investida pelo resto da cena e passa a circular em vez de avançar.
+- **Atributo — Destreza:** a investida é rápida e reta — um ataque que usa Destreza, lido no último instante, aproveitando a abertura que ele mesmo cria, causa +1d6 de dano extra.
 - Golpe preciso na nuca resolve em um. Errar a nuca custa o dobro de trabalho.
 - A investida é reta e comprometida: sair da linha basta.
 - Sozinho e sem alvo em linha, ele volta a pastar e esquece o grupo.
@@ -76,15 +75,13 @@ ler a cena.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
 - **PV:** 14
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -96,7 +93,7 @@ Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Níve
 
 Encontrado nos campos logo fora da Cidade do Início — é literalmente o
 primeiro monstro que qualquer grupo novo vai encontrar. Bom pra ensinar a
-mesa como funciona o teste d20+atributo sem risco real: mesmo um 6- contra
+mesa como funciona o teste d20+atributo sem risco real: mesmo uma falha contra
 um Frenzy Boar raramente deveria significar morte, só complicação (perder
 um item, chamar atenção de outro monstro, etc.).
 

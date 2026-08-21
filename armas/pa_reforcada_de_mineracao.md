@@ -18,8 +18,16 @@ Forjada por um minerador experiente na Cidade do Início, esta pá foi projetada
 
 ## Skills exclusivas do tipo
 
-- Escavar Rápido
-- Defesa Improvisada
+Progressão oficial de Pá — Tank de Terreno (Força, dano contundente; SAO_RPG_5e.md, Seção 55.3):
+
+- **Postura Inabalável** (Nível 1) — postura defensiva: +2 CA, vantagem contra empurrão/queda e resistência a movimentação forçada.
+- **Golpe de Pá** (Nível 1) — ataque de Força que pode empurrar o alvo.
+- **Cova Defensiva** (Nível 2) — cria terreno difícil que concede meia cobertura a quem estiver dentro.
+- **Muralha de Terra — Limit Break** (Nível 5, 1/Descanso Longo) — cria uma barreira que dá meia cobertura e vira terreno difícil ao redor.
+- **Quebra-Postura** (Nível 6) — ataque que derruba o alvo e reduz o deslocamento dele.
+- **Parede Viva** (Nível 10) — +2 CA e cria terreno difícil ao redor do usuário, travando a fuga de inimigos.
+- **Contra-Escavação** (Nível 14, Reação) — reduz o dano sofrido e permite se reposicionar 5 ft.
+- **Fortaleza do Escavador** (Nível 18, 1/Descanso Longo) — forma suprema por 1 minuto: resistência a dano físico, imunidade a movimentação forçada e terreno difícil ao redor.
 
 ## Efeito especial
 

@@ -29,7 +29,7 @@ das pragas do leste.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Trabalhar um dia na lavoura | d20+Força | Ganha a Calça de Trabalho e a confiança do vale | Ganha comida e um "obrigado" seco | Estraga uma leira; ninguém grita, que é pior |
 | Perguntar sobre as pragas | — | Sem teste — "Praga nova toda semana." Ele conta dos gafanhotos nos Terraços de Solveig: gancho de `bounty_05` | | |
@@ -59,7 +59,7 @@ eixo torto, e é exatamente por isso que existe história aqui.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Subir no moinho | d20+Destreza | Vista do vale inteiro; vantagem no próximo teste de Cartógrafo | Sobe, mas o mecanismo range alto e o dono grita lá de baixo | A escada quebra |
 | Examinar o eixo torto | d20+Inteligência | Entende o defeito e sabe que madeira aguentaria a substituição (Nodosa) | Confirma que o problema é o eixo | "Moinho velho é assim mesmo" |
@@ -86,7 +86,7 @@ coleta entre sessões.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Selecionar sementes viáveis | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
 
@@ -112,7 +112,7 @@ espiga. Respawn de 6h.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Escolher frutos e tirar sementes | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — derruba e pisa na fruta boa |
 
@@ -136,7 +136,7 @@ a mudas selecionadas. Respawn de 6h.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Separar mudas e sementes | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
 
@@ -160,7 +160,7 @@ do vale e a melhor fonte de informação sobre o leste do andar.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Oferecer ajuda contra as pragas | — | Sem teste — ele aceita na hora e paga em comida preparada, não Col (gancho de `bounty_05`) | | |
 | Perguntar sobre o leste | d20+Sabedoria | Conta dos gafanhotos nos Terraços e indica a subida certa | Responde curto, sem rota | "Leste é problema." E volta pra leira |
@@ -187,7 +187,7 @@ enxame reage a pressa e movimento brusco, não a cuidado.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher sementes nas flores ao redor | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — e o enxame não gosta |
 | Coletar mel | d20+Destreza | Mel x2, sem ferroada | Mel x1 e ferroadas | Enxame; fuga obrigatória |
@@ -211,7 +211,7 @@ o enxame defende a colmeia e não persegue além de alguns metros.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Separar mudas e sementes | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer |
 
@@ -234,13 +234,13 @@ reativo. Respawn de 6h.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher sementes nas flores ao redor | d20+Inteligência | Colhe 2 sementes viáveis | Colhe 1 | Estraga o canteiro sem querer — e provoca o enxame |
 | Coletar mel | d20+Destreza | Mel x2, sem ferroada | Mel x1 e ferroadas | Enxame; fuga obrigatória |
 
 **Só o mestre:** como a colmeia é baixa e acessível, jogue o enxame mais
-reativo — um 7-9 aqui pode custar ferroadas até na coleta de sementes.
+reativo — um sucesso parcial aqui pode custar ferroadas até na coleta de sementes.
 Continua sem ser combate: susto e dispersão, não vida ou morte.
 
 **Atalhos:** regiao:vale_moinhos

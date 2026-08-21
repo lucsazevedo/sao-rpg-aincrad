@@ -43,14 +43,14 @@ Costureiro com Pelagem Azulada x2.
 ---
 
 ## Armadura de Couro Reforçada — Incomum
-**Requisito:** Corpo -1+ · **Preço base:** 260 Col
+**Requisito:** Força 8+ · **Preço base:** 260 Col
 
 A receita clássica do andar (`docs/economia_profissoes.md`): couro tratado
 com placas de metal rebitadas no peito e nas costelas. Pesa o suficiente pra
 lembrar que está ali.
 
-**Efeito:** **+1 em testes de Corpo para aguentar dano físico direto** (levar
-uma investida, ser jogado contra pedra, segurar um golpe que já acertou).
+**Efeito:** **+1 CA.** A placa reforçada absorve o impacto de levar uma
+investida, ser jogado contra pedra ou segurar um golpe que já acertou.
 
 **Como obter:** crafting de Costureiro (Pelagem Azulada + Placas de Metal
 Refinado compradas de um Ferreiro). Também vendida pronta por Lynx, mais
@@ -59,28 +59,29 @@ cara: 340 Col.
 ---
 
 ## Cota de Malha Curta — Incomum
-**Requisito:** Corpo 0+ · **Preço base:** 380 Col
+**Requisito:** Força 10+ · **Preço base:** 380 Col
 
 Malha de anéis pequenos até a cintura, sobre um acolchoado fino. Faz barulho
 — quem usa aprende a andar devagar ou a não se importar.
 
-**Efeito:** **+1 em testes de Corpo para aguentar dano perfurante** (flecha de
-Ruin Kobold Arqueiro, ferrão de Stabbing Wasp, ponta de lança).
-**Custo embutido:** **-1 em testes de Reflexo para se mover em silêncio** —
-esse é o único caso do catálogo onde um item penaliza, e é o preço da malha.
+**Efeito:** **+1 CA** (a malha detém flecha de Ruin Kobold Arqueiro, ferrão de
+Stabbing Wasp, ponta de lança).
+**Custo embutido:** **-1 em testes de Destreza (Furtividade) para se mover em
+silêncio** — esse é o único caso do catálogo onde um item penaliza, e é o
+preço da malha.
 
 **Como obter:** Ferreiro de Tolbana (crafting: Placas de Metal Refinado x3).
 
 ---
 
 ## Coleto do Batedor de Horunka — Incomum · *conjunto*
-**Requisito:** Reflexo -1+ · **Preço base:** 240 Col
+**Requisito:** Destreza 8+ · **Preço base:** 240 Col
 
 Couro leve tingido de verde-musgo, sem nada que brilhe ou tinja. Feito na
 vila pra caçar longe de casa por dias.
 
-**Efeito:** **+1 em testes de Reflexo para se aproximar de uma criatura sem
-ser notado.**
+**Efeito:** **+1 em testes de Destreza (Furtividade) para se aproximar de uma
+criatura sem ser notado.**
 **Conjunto — Traje de Batedor de Horunka** (com `Capuz de Musgo` e `Botas de
 Sola Macia`): o grupo inteiro pode atravessar a Floresta de Horunka sem
 rolar teste de encontro aleatório enquanto o batedor for o primeiro da fila.
@@ -91,17 +92,18 @@ reputação na vila (concluir `horunka_01_primeira_cacada`).
 ---
 
 ## Peitoral de Placas Kobold — Incomum
-**Requisito:** Corpo 0+ · **Preço base:** 420 Col
+**Requisito:** Força 10+ · **Preço base:** 420 Col
 
 Fragmentos de armadura de Ruin Kobold reaproveitados e remontados num
 peitoral humano — as placas não combinam entre si e ficou óbvio. Quem usa
 está anunciando que já entrou no Labirinto.
 
-**Efeito:** **+1 em testes de Corpo para resistir a golpe de arma pesada**
-(machado, martelo, o nodachi de Illfang).
+**Efeito:** **+1 CA** (as placas kobold reaproveitadas aguentam golpe de arma
+pesada — machado, martelo, o nodachi de Illfang).
 **Efeito social:** Ruin Kobolds hesitam meio segundo ao ver as próprias
-placas — na primeira rodada de qualquer combate contra eles, uma falha
-(**6-**) do usuário vira 7-9. Uma vez por combate.
+placas — na primeira rodada de qualquer combate contra eles, o usuário tem
+vantagem no primeiro teste ou ataque contra um Ruin Kobold. Uma vez por
+combate.
 
 **Como obter:** crafting de Ferreiro (Fragmento de Armadura Kobold x4 —
 material de caça exclusivo do Caçador).
@@ -113,8 +115,8 @@ material de caça exclusivo do Caçador).
 
 Lona pesada tratada com resina e gordura, cor de barro. Fede. Funciona.
 
-**Efeito:** **+1 em testes de Corpo para resistir a veneno, sanguessuga ou
-efeito de brejo** (Pântano de Kavir, Charco de Grenna, Rio Coluber).
+**Efeito:** **+1 CA.** A lona encerada resiste a veneno, sanguessuga ou
+efeito de brejo (Pântano de Kavir, Charco de Grenna, Rio Coluber).
 Sanguessuga Gigante **não consegue grudar** enquanto o casaco estiver
 inteiro — precisa de outro plano de ataque.
 
@@ -124,13 +126,13 @@ Costureiro com Carapaça de Areia + resina de Seiva de Nepenthes.
 ---
 
 ## Peitoral de Pedra-Viva — Incomum
-**Requisito:** Corpo 0+ · **Preço base:** 450 Col
+**Requisito:** Força 10+ · **Preço base:** 450 Col
 
 Placas finas de rocha das Montanhas de Grauvenn presas num arreio de couro.
 Absurdamente pesado, absurdamente resistente a impacto.
 
-**Efeito:** **+1 em testes de Corpo para resistir a impacto/esmagamento**
-(Urso de Pedra, queda, desabamento na Pedreira de Dunhelm).
+**Efeito:** **+1 CA** (a placa de rocha aguenta impacto/esmagamento — Urso de
+Pedra, queda, desabamento na Pedreira de Dunhelm).
 **Custo embutido:** não pode ser usado por quem for nadar — quem entrar no
 Lago Sylvaine com ele afunda, e essa é uma complicação que o mestre deve
 cobrar de verdade.
@@ -141,13 +143,13 @@ próprio cliente (quest `grauvenn_03` desbloqueia a receita).
 ---
 
 ## Cota do Guardião — Raro
-**Requisito:** Corpo 0+ · **Preço base:** 1100 Col (raramente à venda)
+**Requisito:** Força 10+ · **Preço base:** 1100 Col (raramente à venda)
 
 Pelagem grisalha do Guardião de Mournhall montada sobre placas escuras. No
 escuro, o pelo reflete luz fraca de um jeito que parece respiração.
 
-**Efeito:** **+1 em testes de Corpo para aguentar qualquer dano físico** (é o
-único item do andar cujo bônus não é situacional dentro da categoria).
+**Efeito:** **+2 CA** — é o único item do andar cujo bônus não é condicionado
+a um tipo específico de golpe dentro da categoria.
 **Efeito único — Fôlego do Guardião:** uma vez por sessão, ao ser reduzido a
 um golpe da derrota, o usuário fica de pé com 1 golpe restante em vez de
 cair. O grupo inteiro vê o pelo eriçar.

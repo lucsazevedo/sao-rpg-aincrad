@@ -8,7 +8,6 @@ local: dungeon/labirinto
 regioes: [esgoto_cidade_inicio, ruinas_kobold, porao_taverna, necrópole_voss]
 nivel_recomendado: "1-2"
 nivel_ameaca: fraco
-golpes_para_derrotar: 2
 ca: 10
 pv: 14
 bonus_ataque: +2
@@ -47,7 +46,7 @@ Cheiro forte de urina e velhice no ar. Antes de ver, você ouve: barulho pequeno
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** ele corre em linha reta quando vai morder. Um golpe no tempo do pulo (Reflexo + arma de área) quebra a coluna. Acerto de fraqueza em 10+ = mata um e assusta os outros por 1 rodada.
+- **Atributo — Destreza:** ele corre em linha reta quando vai morder. Um ataque que usa Destreza, no tempo do pulo, contra a coluna, causa +1d6 de dano extra.
 - Luz forte: tocha na cara ou gritos fortes assustam rato sozinho.
 - Comida: um pedaço de carne jogado longe distrai toda a matilha por tempo suficiente pra passar.
 - Sozinho: nunca ataca grupo de 3 pessoas se for menos de 3 ratos.
@@ -76,15 +75,13 @@ Rato Gigante é o primeiro monstro que NINGUÉM tem medo. É também o primeiro 
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
 - **PV:** 14
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

@@ -56,10 +56,10 @@ Sons: nenhum pássaro sobre a água. Nas margens sim, sobre o lago não.
 
 ### O que dá pra fazer aqui
 
-| Ação                            | Teste            | 10+                                                        | 7-9                                                 | 6-                                                                    |
+| Ação                            | Teste            | Sucesso total (CD+5)                                                        | Sucesso parcial                                                 | Falha                                                                    |
 | ------------------------------- | ---------------- | ---------------------------------------------------------- | --------------------------------------------------- | --------------------------------------------------------------------- |
 | Pescar em água funda            | d20+Destreza      | 3 peixes e um deles é de espécie que ninguém reconhece     | 2 peixes comuns                                     | A linha volta cortada em corte limpo                                  |
-| Mergulhar até a Ruína Submersa  | d20+Força        | Alcança a estrutura e volta com uma peça                   | Alcança, mas volta sem fôlego pra descrever direito | Perde a direção no escuro; teste de Espírito pra não entrar em pânico |
+| Mergulhar até a Ruína Submersa  | d20+Força        | Alcança a estrutura e volta com uma peça                   | Alcança, mas volta sem fôlego pra descrever direito | Perde a direção no escuro; teste de Sabedoria pra não entrar em pânico |
 | Rastrear o Lacustre Vagador     | d20+Destreza      | Acha as garras no barro e sabe a rota dele                 | Acha rastro velho                                   | Ele acha você primeiro                                                |
 | Preparar Isca (Ferrão de Vespa) | d20+Destreza      | Isca perfeita: primeira tentativa de doma com vantagem     | Isca funciona uma vez só                            | A isca atrai a criatura errada                                        |
 | Domar o Lacustre Vagador        | d20+Destreza x8   | 1 sucesso limpo                                            | 1 sucesso, ele reage mal (dano leve ou recua)       | 2 falhas seguidas encerram a tentativa                                |
@@ -141,7 +141,7 @@ Inscrição, da Ruína de Superfície de Verrun e da Pedra Rúnica Solitária.
 
 ### O que dá pra fazer aqui
 
-| Ação                                | Teste            | 10+                                                                    | 7-9                                   | 6-                                                    |
+| Ação                                | Teste            | Sucesso total (CD+5)                                                                    | Sucesso parcial                                   | Falha                                                    |
 | ----------------------------------- | ---------------- | ---------------------------------------------------------------------- | ------------------------------------- | ----------------------------------------------------- |
 | Atravessar a água rasa a pé         | d20+Destreza      | Passa sem agitar a água                                                | Passa, a serpente percebe e se enrola | Bote das rasas: conta como 2 golpes                   |
 | Copiar a Marca na Pedra Central     | d20+Inteligência | Cópia fiel: serve como pista transportável pro Estudioso               | Cópia parcial                         | Copia errado e não sabe disso                         |
@@ -212,7 +212,7 @@ o coro parar **sem** o grupo parar, tem outra coisa se movendo.
 
 ### O que dá pra fazer aqui
 
-| Ação                             | Teste            | 10+                                                | 7-9                                           | 6-                                                   |
+| Ação                             | Teste            | Sucesso total (CD+5)                                                | Sucesso parcial                                           | Falha                                                   |
 | -------------------------------- | ---------------- | -------------------------------------------------- | --------------------------------------------- | ---------------------------------------------------- |
 | Atravessar sem afundar           | d20+Força        | Atravessa rápido, ninguém se molha acima do joelho | Atravessa, mas alguém perde uma bota no barro | Alguém atola: rodada inteira pra sair, e o coro para |
 | Notar o silêncio das rãs         | d20+Sabedoria     | Sabe exatamente de onde vem a ameaça               | Sabe que tem algo                             | Percebe quando já está em cima                       |
@@ -275,7 +275,7 @@ gafanhotos estão. É a deixa da quest sem você precisar anunciar nada.
 
 ### O que dá pra fazer aqui
 
-| Ação                             | Teste       | 10+                                                            | 7-9                                        | 6-                               |
+| Ação                             | Teste       | Sucesso total (CD+5)                                                            | Sucesso parcial                                        | Falha                               |
 | -------------------------------- | ----------- | -------------------------------------------------------------- | ------------------------------------------ | -------------------------------- |
 | Trabalhar um dia na lavoura      | d20+Força   | Ganha a Calça de Trabalho e a confiança do fazendeiro          | Ganha comida e um "obrigado"               | Estraga uma leira; ele fica seco |
 | Coletar Mel (colmeia selvagem)   | d20+Destreza | Mel x2, sem ferroada                                           | Mel x1 e ferroadas                         | Enxame; fuga obrigatória         |
@@ -348,7 +348,7 @@ bem, volta na sessão seguinte e o terraço está pior. Aí a mesa entende.
 
 ### O que dá pra fazer aqui
 
-| Ação                            | Teste            | 10+                                       | 7-9                                   | 6-                                                  |
+| Ação                            | Teste            | Sucesso total (CD+5)                                       | Sucesso parcial                                   | Falha                                                  |
 | ------------------------------- | ---------------- | ----------------------------------------- | ------------------------------------- | --------------------------------------------------- |
 | Abater gafanhotos em área       | d20+Destreza      | 4 de uma vez (Foice)                      | 2, e a debandada começa               | Debandada: complicação em todos os testes da rodada |
 | Descobrir de onde eles vêm      | d20+Inteligência | Acha as fendas de pedra e a ninhada       | Sabe que vêm de baixo                 | Conclui que "são migratórios"                       |
@@ -405,16 +405,16 @@ Grauvenn no oeste. Nada aqui é acolhedor, o terreno cobra a cada passo, e há
 uma ruína afundando que ninguém sabe o que era.
 
 Regra de ambiente: sem `Casaco Encerado do Pântano` ou equivalente, cada meia
-hora de exploração pede teste de Corpo contra veneno/sanguessuga.
+hora de exploração pede teste de Força contra veneno/sanguessuga.
 
 ### O que dá pra fazer aqui
 
-| Ação                                 | Teste            | 10+                                            | 7-9                                  | 6-                                         |
+| Ação                                 | Teste            | Sucesso total (CD+5)                                            | Sucesso parcial                                  | Falha                                         |
 | ------------------------------------ | ---------------- | ---------------------------------------------- | ------------------------------------ | ------------------------------------------ |
 | Testar a profundidade antes de pisar | d20+Inteligência | Rota segura pra todo o grupo                   | Rota segura pra você                 | Alguém afunda até o peito com equipamento  |
 | Investigar a Ruína Afundando         | d20+Inteligência | Entra pela janela; há um cômodo seco lá dentro | Entra, mas a estrutura geme          | O piso cede e a ruína afunda mais um palmo |
 | Resistir a veneno de ambiente        | d20+Força        | Passa incólume                                 | Náusea: complicação no próximo teste | Envenenado; precisa de Antídoto ou Médico  |
-| Coletar material de Sanguessuga      | d20+Destreza      | Material limpo x2                              | x1                                   | Ela gruda; teste de Corpo pra arrancar     |
+| Coletar material de Sanguessuga      | d20+Destreza      | Material limpo x2                              | x1                                   | Ela gruda; teste de Força pra arrancar     |
 | Sair do pântano sem rota marcada     | d20+Inteligência | Saem no ponto certo                            | Saem num ponto errado, longe         | Passam a noite lá dentro                   |
 
 ### Só o mestre
@@ -476,7 +476,7 @@ qualquer descrição.
 
 ### O que dá pra fazer aqui
 
-| Ação                             | Teste            | 10+                                                    | 7-9                        | 6-                                      |
+| Ação                             | Teste            | Sucesso total (CD+5)                                                    | Sucesso parcial                        | Falha                                      |
 | -------------------------------- | ---------------- | ------------------------------------------------------ | -------------------------- | --------------------------------------- |
 | Extrair Cristal Bruto            | d20+Destreza      | 2 unidades, +1 de vibração                             | 1 unidade, +1 de vibração  | Racha o veio, +2 de vibração            |
 | Atravessar a Câmara dos Reflexos | d20+Inteligência | Passa direto                                           | Passa, mas perde meia hora | Anda em círculo e não percebe           |
@@ -542,7 +542,7 @@ E o maquinário não corresponde a nada. As engrenagens são de outra escala.
 
 ### O que dá pra fazer aqui
 
-| Ação                             | Teste            | 10+                                                               | 7-9                                          | 6-                                 |
+| Ação                             | Teste            | Sucesso total (CD+5)                                                               | Sucesso parcial                                          | Falha                                 |
 | -------------------------------- | ---------------- | ----------------------------------------------------------------- | -------------------------------------------- | ---------------------------------- |
 | Coletar Sucata Aproveitável      | d20+Destreza      | 3 unidades de qualidade decente                                   | 2 unidades ruins                             | Corta a mão numa lasca (sem Luvas) |
 | Analisar o Maquinário Sem Origem | d20+Inteligência | Entende que ele foi feito pra mover algo do tamanho de um andar   | Entende que é grande demais pro contexto     | "Máquina velha de pedreira"        |

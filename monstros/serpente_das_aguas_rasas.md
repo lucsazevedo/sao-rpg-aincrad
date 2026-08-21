@@ -8,7 +8,6 @@ local: ilhota / margem de lago
 regioes: [lago, ilha_lago, rio_serpente]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
-golpes_para_derrotar: 4
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -51,7 +50,7 @@ O corpo se comprime. A espiral aperta meio palmo antes do bote, e é o único av
 
 - **Bote das rasas** — surge de baixo, dano moderado; contra alvo que não
   sabia que ela estava lá, conta como 2 golpes
-- **Enrolar** — imobiliza uma perna; o alvo precisa de teste de Corpo pra se
+- **Enrolar** — imobiliza uma perna; o alvo precisa de teste de Força pra se
   soltar antes do próximo bote
 - **Puxar para o fundo** — só contra alvo já imobilizado e em água acima da
   cintura. É a complicação séria: o mestre deve deixar claro que ela está
@@ -59,7 +58,7 @@ O corpo se comprime. A espiral aperta meio palmo antes do bote, e é o único av
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** o bote é explosivo e único — arma de Reflexo, lida na compressão da espiral, chega antes. Em 10+ ela perde o ataque explosivo pelo resto da cena.
+- **Atributo — Destreza:** o bote é explosivo e único — um ataque que usa Destreza, lido na compressão da espiral, chega antes e causa +1d6 de dano extra.
 - Enrolada, antes do bote, a nuca fica descoberta e imóvel.
 - Ela dá um bote por aproximação. Depois dele, recuar é seguro.
 
@@ -87,15 +86,13 @@ O corpo se comprime. A espiral aperta meio palmo antes do bote, e é o único av
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -118,7 +115,7 @@ Existe por duas razões de design:
 
 A doma dela é a mais **lenta** do andar de propósito: a isca precisa ser
 deixada por três dias no mesmo ponto, o que significa três sessões (ou três
-retornos) antes do primeiro teste de Técnica. Domador que se compromete com
+retornos) antes do primeiro teste de Destreza. Domador que se compromete com
 ela está fazendo um investimento visível pro resto da mesa.
 
 Ligada a: Ilha de Pemberton e Lago Sylvaine (`dados_mapa.js`), Pescador

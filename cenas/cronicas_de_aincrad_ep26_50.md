@@ -58,7 +58,7 @@ atributo de quem consumir o prato.
 **Testes sugeridos**
 
 - d20+Sabedoria — negociar com cada um dos três donos (um teste por NPC)
-- d20+Força/Reflexo — cumprir o favor perigoso pedido por Halden
+- d20+Força/Destreza — cumprir o favor perigoso pedido por Halden
 - d20+Ofício (Cozinheiro) — preparar o prato final com os três fragmentos reunidos
 
 **NPCs na cena**
@@ -250,7 +250,7 @@ hostilidade automática.
 
 - O esconderijo tem mais de uma câmara, e nem todas fazem sentido lido
   junto — pistas contraditórias de propósito.
-- Um teste 6- faz o grupo ativar algo (som, luz, movimento) que atrai
+- Uma falha em teste faz o grupo ativar algo (som, luz, movimento) que atrai
   atenção indesejada de fora.
 - As anotações estão parcialmente corrompidas/ilegíveis, exigindo mais de
   uma fonte pra reconstruir o sentido.
@@ -316,7 +316,7 @@ descobrir o que está provocando o fenômeno.
 **Testes sugeridos**
 
 - d20+Inteligência — entender o padrão de fusão antes que piore
-- d20+Força/Reflexo — combate contendo os slimes fundidos
+- d20+Força/Destreza — combate contendo os slimes fundidos
 - d20+Destreza — chegar ao núcleo catalisador no meio do caos
 
 **NPCs na cena**
@@ -400,7 +400,7 @@ caravanas chegue ao destino.
 
 **Testes sugeridos**
 
-- d20+Força/Reflexo — defesa da caravana contratada
+- d20+Força/Destreza — defesa da caravana contratada
 - d20+Inteligência — perceber o padrão de sabotagem coordenada entre as duas rotas
 - d20+Sabedoria — decidir e agir sobre ajudar (ou não) a caravana rival
 
@@ -781,7 +781,7 @@ Nenhum — cena investigativa e atmosférica pura.
   se abalar.
 - Outros jogadores também notam o ícone misterioso e começam a especular
   publicamente.
-- Gravar a melodia com sucesso (teste 10+) permite ao mestre revelar, mais
+- Gravar a melodia com sucesso (sucesso total no teste) permite ao mestre revelar, mais
   tarde, que ela é idêntica a um som ouvido em outro andar — gancho pro
   futuro Andar 2.
 
@@ -867,7 +867,7 @@ comportamento.
 
 - O grupo se divide em corredores diferentes, cada metade enfrentando um
   layout que reflete o padrão de decisão daquela metade especificamente.
-- Um teste 6- faz o labirinto "resetar" o progresso, obrigando reiniciar a
+- Uma falha em teste faz o labirinto "resetar" o progresso, obrigando reiniciar a
   leitura do padrão.
 - A câmara central, se alcançada, mostra algo que ninguém esperava —
   fragmento de estrutura muito mais antiga que a dungeon em si.
@@ -1138,7 +1138,7 @@ Nenhum — cena investigativa e emocionalmente carregada, sem combate.
 **Complicações úteis**
 
 - Um jogador do grupo reconhece uma memória genuinamente pessoal e
-  precisa de teste de Espírito pra não reagir mal na frente do NPC.
+  precisa de teste de Sabedoria pra não reagir mal na frente do NPC.
 - O Estudioso Obcecado quer levar o caso adiante sozinho, sem o grupo,
   gerando tensão sobre quem "possui" a descoberta.
 - Cortar contato com o Mercador não impede que ele continue coletando
@@ -1210,7 +1210,7 @@ um drop exclusivo.
 
 - d20+Inteligência — prever o próximo local de aparição com base no padrão
 - d20+Sabedoria — negociar trégua ou cooperação com grupo rival
-- d20+Força/Reflexo — combate rápido dentro da janela de tempo curta
+- d20+Força/Destreza — combate rápido dentro da janela de tempo curta
 
 **NPCs na cena**
 
@@ -1296,7 +1296,7 @@ monstros à distância.
 **Testes sugeridos**
 
 - d20+Sabedoria — organizar a defesa e manter moral da vila sob ataque
-- d20+Força/Reflexo — combate contra as ondas coordenadas
+- d20+Força/Destreza — combate contra as ondas coordenadas
 - d20+Inteligência — perceber o padrão de comando por trás do ataque
 
 **NPCs na cena**
@@ -1485,7 +1485,7 @@ concreta.
 
 1 "Sem-Cor" — trate mecanicamente como um NPC/entidade evasiva, não um
 monstro de combate: foge ativamente, não ataca, e só é "vencido" ao ser
-efetivamente cercado (teste de Reflexo em grupo bem-sucedido), soltando o
+efetivamente cercado (teste de Destreza em grupo bem-sucedido), soltando o
 item ao desaparecer.
 
 **Complicações úteis**

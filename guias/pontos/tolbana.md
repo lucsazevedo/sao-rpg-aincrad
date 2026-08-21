@@ -26,7 +26,7 @@ pra quem já decidiu encarar o Labirinto.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler o clima da praça | d20+Sabedoria | Sabe qual força-tarefa está se formando e quem lidera | Percebe agitação, não a causa | Só vê gente andando depressa |
 
@@ -48,7 +48,7 @@ material.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar kit básico | — | Sem teste — Col 50-120 conforme o kit | | |
 
@@ -70,7 +70,7 @@ precisa de Aveline ou dos Corretores.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Assistir a um briefing em andamento | — | Sem teste — informação pública sobre a força-tarefa do momento | | |
 
@@ -92,7 +92,7 @@ misturado.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar informação | d20+Inteligência | Separa o fragmento real do red herring | Compra os dois misturados, sem saber qual é qual | Compra só o red herring, convencido de que é real |
 
@@ -113,7 +113,7 @@ mesma fonte.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Hospedar-se / descansar | — | Sem teste — ver "Recuperar Fôlego" em `docs/regras_nucleares_campanha.md` | | |
 
@@ -134,7 +134,7 @@ justamente numa hospedaria — esta é a candidata natural.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perguntar sobre expedições ativas | — | Sem teste — indica expedição organizada acontecendo na região | | |
 
@@ -154,7 +154,7 @@ próprio — sempre tenha 1-2 expedições prontas na manga.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar kit básico | — | Sem teste — Col 50-120 conforme o kit | | |
 
@@ -175,7 +175,7 @@ submundo de informação da cidade.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perguntar sobre expedições ativas | — | Sem teste — indica expedição organizada acontecendo na região | | |
 
@@ -196,12 +196,12 @@ pode notar).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher sem ser notado | d20+Inteligência | Colhe 2 ervas incomuns sem ser notado | Colhe 1, dono aparece e cobra satisfação | Sai sem nada, quase é flagrado |
 
 **Só o mestre:** trate o "dono" como NPC genérico simpático, não guarda —
-a consequência de 7-9 é social (constrangimento), não combate.
+a consequência de sucesso parcial é social (constrangimento), não combate.
 
 **Atalhos:** regiao:tolbana
 
@@ -218,7 +218,7 @@ fonte de lore ambiental e rumor de baixo risco.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ouvir uma história | — | Sem teste — sempre rende um fragmento de lore ou rumor ambiental | | |
 
@@ -242,7 +242,7 @@ transforma rumor em acordo ou em conflito público entre clãs. Ver
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Contratar mediação entre clãs/jogadores | d20+Sabedoria | Resolve a favor do grupo, sem custo extra | Resolve, mas cobra favor futuro | Ela decide não se envolver — ou o conflito piora publicamente |
 | Comprar informação | — | Sem teste — preço em Col, sem julgamento moral sobre o uso | | |

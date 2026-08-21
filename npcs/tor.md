@@ -69,7 +69,7 @@ copiada por todo mundo, o que ele menciona sempre.
 
 ## Combate (se aplicável)
 
-Técnica 2, Manopla. Já quebrou o nariz de um batedor de carteira e conta isso
+Destreza 14, Manopla. Já quebrou o nariz de um batedor de carteira e conta isso
 com frequência.
 
 <!-- convertido-dnd5e -->

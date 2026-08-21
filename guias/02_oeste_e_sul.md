@@ -56,7 +56,7 @@ e formam um código.
 
 ### O que dá pra fazer aqui
 
-| Ação                                      | Teste            | 10+                                              | 7-9                               | 6-                                         |
+| Ação                                      | Teste            | Sucesso total (CD+5)                                              | Sucesso parcial                               | Falha                                         |
 | ----------------------------------------- | ---------------- | ------------------------------------------------ | --------------------------------- | ------------------------------------------ |
 | Responder à desconfiança do estalajadeiro | d20+Sabedoria     | Ele relaxa: preços justos e uma dica da floresta | Preço normal, sem dica            | Cobra 30% a mais e avisa os outros         |
 | Rastrear uma criatura                     | d20+Destreza      | Acha o ninho e chega por trás                    | Acha, mas ela percebe primeiro    | Perde o rastro e volta ao ponto de partida |
@@ -82,8 +82,7 @@ achar que é pista.
 
 ### Se o grupo demorar
 
-Anoitece na floresta e a temperatura cai. Sem fogo, complicação em todo teste
-de Espírito (a floresta à noite é opressiva de verdade). Com fogo, algo se
+Anoitece na floresta e a temperatura cai. Sem fogo, complicação em todo teste de Sabedoria (a floresta à noite é opressiva de verdade). Com fogo, algo se
 aproxima do limite da luz e fica lá, sem atacar, até o amanhecer.
 
 ### Evento vivo
@@ -148,7 +147,7 @@ que qualquer descrição.
 
 ### O que dá pra fazer aqui
 
-| Ação                             | Teste            | 10+                                     | 7-9                                        | 6-                                          |
+| Ação                             | Teste            | Sucesso total (CD+5)                                     | Sucesso parcial                                        | Falha                                          |
 | -------------------------------- | ---------------- | --------------------------------------- | ------------------------------------------ | ------------------------------------------- |
 | Seguir a Luz Errante             | d20+Sabedoria     | Ela leva a um lugar real e útil         | Leva a algum lugar, e você não sabe voltar | Some; vocês estão perdidos                  |
 | Falar com a Voz Sem Corpo        | d20+Sabedoria     | Ela responde uma pergunta com a verdade | Responde com outra pergunta                | Ela usa a sua voz pra falar com seu grupo   |
@@ -224,13 +223,13 @@ gosta de falar sobre.
 
 ### O que dá pra fazer aqui
 
-| Ação                                  | Teste            | 10+                                          | 7-9                                   | 6-                                                    |
+| Ação                                  | Teste            | Sucesso total (CD+5)                                          | Sucesso parcial                                   | Falha                                                    |
 | ------------------------------------- | ---------------- | -------------------------------------------- | ------------------------------------- | ----------------------------------------------------- |
 | Atravessar a nado                     | d20+Força        | Atravessa inteiro                            | Atravessa, perde um item não equipado | A correnteza leva; sai 300m abaixo                    |
 | Pescar                                | d20+Destreza      | 3 peixes, um deles grande                    | 1 peixe                               | Anzol preso; perde a linha                            |
 | Coletar Argila no barranco            | d20+Destreza      | 3 unidades limpas                            | 2 unidades com pedra misturada        | Barranco cede                                         |
 | Fazer o Barqueiro falar do redemoinho | d20+Sabedoria     | Ele conta o que viu e leva vocês lá          | Ele conta, mas não vai junto          | Muda de assunto e fica calado o resto do dia          |
-| Investigar o Redemoinho               | d20+Inteligência | Percebe que ele gira **contra** a correnteza | Percebe que está errado               | Chega perto demais; teste de Corpo pra não ser puxado |
+| Investigar o Redemoinho               | d20+Inteligência | Percebe que ele gira **contra** a correnteza | Percebe que está errado               | Chega perto demais; teste de Força pra não ser puxado |
 | Atravessar com o barco                | —                | 40 Col pelo grupo, ou uma boa história       |                                       |                                                       |
 
 ### Só o mestre
@@ -299,7 +298,7 @@ explicar como.
 
 ### O que dá pra fazer aqui
 
-| Ação                           | Teste            | 10+                                                           | 7-9                       | 6-                                      |
+| Ação                           | Teste            | Sucesso total (CD+5)                                                           | Sucesso parcial                       | Falha                                      |
 | ------------------------------ | ---------------- | ------------------------------------------------------------- | ------------------------- | --------------------------------------- |
 | Ganhar a confiança do Pescador | d20+Sabedoria     | Ele te ensina onde o lago é fundo e por quê                   | Ele te vende a informação | Ele te manda pescar e descobrir sozinho |
 | Comprar/vender peixe e isca    | —                | Tabela fixa (`docs/mercado_andar1.md` — Peixaria Local)       |                           |                                         |
@@ -371,7 +370,7 @@ Layout completo sala a sala em `mapas/dungeons_andar1.md`.
 
 ### O que dá pra fazer aqui
 
-| Ação                                   | Teste            | 10+                                                          | 7-9                                     | 6-                                        |
+| Ação                                   | Teste            | Sucesso total (CD+5)                                                          | Sucesso parcial                                     | Falha                                        |
 | -------------------------------------- | ---------------- | ------------------------------------------------------------ | --------------------------------------- | ----------------------------------------- |
 | Atravessar o Poço de Ecos em silêncio  | —                | Sem rolagem: é acordo de mesa. Quem falar alto derruba pedra |                                         |                                           |
 | Passar pela Fenda Estreita             | d20+Destreza      | Passa com tudo                                               | Passa, mas deixa a peça pesada pra trás | Entala; o grupo perde tempo e faz barulho |
@@ -393,7 +392,7 @@ perto da última sala.
 ### Se o grupo demorar
 
 Perder a luz dentro de Mournhall é a pior coisa que pode acontecer no andar 1
-fora do Labirinto. Se acontecer, o caminho de volta exige teste de Espírito, e
+fora do Labirinto. Se acontecer, o caminho de volta exige teste de Sabedoria, e
 a Sombra os segue sem atacar.
 
 ### Locais
@@ -434,7 +433,7 @@ lápides teve o nome raspado — não gasto pelo tempo, raspado.
 
 ### O que dá pra fazer aqui
 
-| Ação                              | Teste            | 10+                                     | 7-9                                      | 6-                                           |
+| Ação                              | Teste            | Sucesso total (CD+5)                                     | Sucesso parcial                                      | Falha                                           |
 | --------------------------------- | ---------------- | --------------------------------------- | ---------------------------------------- | -------------------------------------------- |
 | Ler os nomes das lápides          | d20+Inteligência | Percebe que nenhum é nome de jogador    | Percebe que são estranhos                | Só nomes                                     |
 | Examinar a Lápide Sem Nome        | d20+Inteligência | Vê que foi raspada, e recentemente      | Vê que está apagada                      | "O tempo comeu"                              |
@@ -507,7 +506,7 @@ Os corvos observam. Eles seguem quem usa a Coroa de Penas do Corvo.
 
 ### O que dá pra fazer aqui
 
-| Ação                             | Teste            | 10+                                                  | 7-9                                 | 6-                                                 |
+| Ação                             | Teste            | Sucesso total (CD+5)                                                  | Sucesso parcial                                 | Falha                                                 |
 | -------------------------------- | ---------------- | ---------------------------------------------------- | ----------------------------------- | -------------------------------------------------- |
 | Estudar um Estandarte Caído      | d20+Inteligência | Reconhece a heráldica: não é de nenhuma guilda atual | Percebe que é antiga                | "Pano velho"                                       |
 | Explorar uma Trincheira Coberta  | d20+Destreza      | Acha um esconderijo intacto e o que tem dentro       | Acha, mas o teto cede atrás de você | Cai; complicação e barulho                         |
@@ -570,7 +569,7 @@ sociais do dia 10 são negociáveis.
 
 ### O que dá pra fazer aqui
 
-| Ação                            | Teste            | 10+                                                             | 7-9                                    | 6-                                         |
+| Ação                            | Teste            | Sucesso total (CD+5)                                                             | Sucesso parcial                                    | Falha                                         |
 | ------------------------------- | ---------------- | --------------------------------------------------------------- | -------------------------------------- | ------------------------------------------ |
 | Ler as Marcas de Passagem       | d20+Inteligência | Entende o código e onde é o encontro                            | Sabe que é código, segue às cegas      | Segue uma marca falsa                      |
 | Ser aceito pelo Contato         | d20+Sabedoria     | Ele negocia de igual pra igual                                  | Negocia, mas cobra o "incômodo" (+25%) | Ele some, e a trilha esfria por uma semana |

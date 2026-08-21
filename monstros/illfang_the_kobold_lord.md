@@ -8,7 +8,6 @@ local: dungeon/labirinto
 regioes: [sala_chefe, labirinto_entrada]
 nivel_recomendado: "8-10"
 nivel_ameaca: chefe
-golpes_para_derrotar: "4x6-8"
 ca: 16
 pv: 165
 bonus_ataque: +6
@@ -68,10 +67,9 @@ aparecer.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** os golpes de machado têm tempo de leitura, e arma
-  de Reflexo vive nesse tempo — mesmo o nodachi abre janela entre um corte
-  e outro. Em 10+ ele perde a convocação de Sentinels pelo resto da luta,
-  e é a diferença entre raid e massacre.
+- **Atributo — Destreza:** os golpes de machado têm tempo de leitura, e um ataque
+  que usa Destreza vive nesse tempo — mesmo o nodachi abre janela entre um
+  corte e outro. Esse golpe causa +1d6 de dano extra.
 - Magia e ataque de área causam dano dobrado nos lacaios, nunca nele.
 - Depende dos kobolds: isolá-lo enfraquece a defesa dele de verdade, e os
   golpes físicos dele são previsíveis o bastante para serem aparados.
@@ -114,15 +112,13 @@ em mecânica real, e faz o último golpe parecer decisão, não matemática.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 16
 - **PV:** 165
 - **Bônus de Ataque:** +6
 - **CD de Resistência:** 15
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

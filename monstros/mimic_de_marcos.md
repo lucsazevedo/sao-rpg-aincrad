@@ -8,12 +8,11 @@ local: dungeon/labirinto
 regioes: [labirinto_entrada, campo_batalha, castelo_ferro_negro]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
-golpes_para_derrotar: 5
 ca: 13
 pv: 48
 bonus_ataque: +4
 cd_resistencia: 13
-abertura: Conhecimento — identificar a inscrição falsa
+abertura: Inteligência — identificar a inscrição falsa
 atributo_fraqueza: Inteligência
 resistencias: [golpes apressados, ilusões de rota]
 vulnerabilidades: [luz direta, leitura cuidadosa de símbolos]
@@ -51,8 +50,8 @@ corre, óbvia para quem para e compara com um mapa.
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** o disfarce dele é informação falsa — arma de Conhecimento, de quem leu a inscrição e viu o erro, não se deixa enganar. Em 10+ ele perde a forma de pedra pelo resto da cena e não consegue mais se disfarçar.
-- **Conhecimento** identifica a inscrição falsa: a letra é regular demais e não tem desgaste.
+- **Atributo — Inteligência:** o disfarce dele é informação falsa — um ataque que usa Inteligência, de quem leu a inscrição e viu o erro, causa +1d6 de dano extra.
+- **Inteligência** (Investigação/Sistema) identifica a inscrição falsa: a letra é regular demais e não tem desgaste.
 - Sem alguém a menos de um braço, ele não abre. Ler de longe é seguro.
 
 ## O que torna este encontro memorável
@@ -73,15 +72,13 @@ mesa antes da primeira rolagem de ataque.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

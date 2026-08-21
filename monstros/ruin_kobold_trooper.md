@@ -8,7 +8,6 @@ local: dungeon/labirinto
 regioes: [labirinto_entrada, sala_chefe]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -47,7 +46,7 @@ Os passos casados. Dois pares de pés no mesmo ritmo, e o ritmo não muda nem qu
 
 ## Fraquezas
 
-- **Atributo — Técnica:** o equipamento é rudimentar e a técnica deles é nula — arma de Técnica, de quem luta com ofício, desmonta a dupla. Em 10+ eles quebram a dupla pelo resto da cena e passam a atacar isolados.
+- **Atributo — Destreza:** o equipamento é rudimentar e a técnica deles é nula — um ataque que usa Destreza, de quem luta com ofício superior, causa +1d6 de dano extra.
 - Sozinho, um Trooper não avança: espera o par.
 - A ronda é cronometrada. Um grupo que conte o intervalo escolhe a hora da luta.
 - Eles não saem do corredor designado. Uma sala lateral é território neutro.
@@ -65,15 +64,13 @@ Os passos casados. Dois pares de pés no mesmo ritmo, e o ritmo não muda nem qu
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

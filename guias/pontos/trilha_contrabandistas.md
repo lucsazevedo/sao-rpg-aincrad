@@ -30,7 +30,7 @@ demais pontos da trilha.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Seguir o padrão da grama amassada | d20+Destreza | Segue a marca sem ser notado e acha o próximo ponto da trilha | Segue, mas faz barulho demais — alguém vai saber que vocês passaram | Perde a trilha; o padrão some na vegetação |
 | Ler as marcas como código | d20+Inteligência | Entende o código e onde fica o encontro com o contato | Sabe que é código, mas segue às cegas | Segue uma marca falsa — meia hora perdida e um observador avisado |
@@ -59,7 +59,7 @@ riscos rasos descrito no guia da região.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Seguir a marca até a próxima | d20+Destreza | Segue sem ser notado, no ritmo certo da trilha | Segue, mas faz barulho demais — a trilha registra sua passagem | Perde a trilha; a próxima marca simplesmente não aparece |
 
@@ -87,7 +87,7 @@ esperando outra pessoa.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ser aceito pelo Contato | d20+Sabedoria | Ele negocia de igual pra igual | Negocia, mas cobra o "incômodo" (+25% em Col) | Ele some — e a trilha esfria por uma semana |
 | Comprar / trocar com ele | — | Sobretudo do Contrabandista: 370 Col ou uma peça Incomum em troca · passagem por rota não vigiada: 100 Col · item sem procedência: 30% abaixo do preço, sempre com história | | |

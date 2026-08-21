@@ -29,7 +29,7 @@ segura pra expedições mais fundas na floresta.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perguntar sobre a vila | d20+Sabedoria | Moradores contam sobre as marcas entalhadas na floresta (ver `floresta_trilha`) | Contam que a vila é tranquila, sem detalhe extra | Respostas curtas, forasteiro ainda não é bem-vindo |
 
@@ -54,7 +54,7 @@ completa.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Negociar hospedagem/comida | d20+Sabedoria | Preço justo e Halden relaxa — resposta sincera facilita | Preço normal | Preço sobe, resposta evasiva encareceu |
 | Perguntar sobre o mel dourado | — | Sem teste — puxa direto `EP.08 — A Colheita de Mel` | | |
@@ -76,7 +76,7 @@ formalidade — sinceridade literalmente barateia a estadia.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar ferramenta básica | — | Sem teste — Col 20-60, preço melhora conforme reputação na vila | | |
 
@@ -100,7 +100,7 @@ educação.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar a marca | d20+Sabedoria | Sente que a marca aponta pra algum lugar específico | Percebe só que é intencional | Passa direto sem notar nada |
 
@@ -127,7 +127,7 @@ Fonte da Seiva-Mãe que a Mulher Aflita pede (ver
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher a Seiva-Mãe com cuidado | d20+Destreza | Colhe com a cavidade fechada e sai sem acordar nada | Consegue a seiva, mas um cordão-âncora prende alguém | As mudas se viram todas ao mesmo tempo, líquido fica opaco |
 | Enfrentar (combate) | d20+Sabedoria | Ver `monstros/mae_raiz_de_horunka.md` | | |
@@ -150,7 +150,7 @@ combate típico da floresta.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Destreza | Golpe limpo | Acerta, mas a criatura reage | Criatura acerta primeiro |
 
@@ -170,7 +170,7 @@ pousada.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Destreza | Golpe limpo | Acerta, mas a criatura reage | Criatura acerta primeiro |
 
@@ -192,7 +192,7 @@ caça completa.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher | d20+Inteligência | Identifica e colhe 2 comestíveis | Colhe 1, mas quase pega um venenoso | Não arrisca, sai de mãos vazias |
 
@@ -214,7 +214,7 @@ caça completa.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher cogumelos | d20+Inteligência | Identifica e colhe 2 comestíveis | Colhe 1, mas quase pega um venenoso | Não arrisca, sai de mãos vazias |
 | Colher mel (se o enxame estiver presente) | d20+Destreza | Ver `monstros/enxame_de_abelhas_douradas.md` | | |
@@ -236,7 +236,7 @@ em `cenas/quests_andar1.md`.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Reconhecer e cortar | d20+Inteligência depois d20+Destreza | Corta sem rachar o veio | Corta, mas racha parcialmente | Confunde com madeira comum |
 
@@ -259,7 +259,7 @@ não-oficial do "Código da Floresta" — ver `horunka_04_o_eremita_sabe`.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Convencer de que o interesse é genuíno | d20+Sabedoria | Ele explica o código e a origem das marcas | Ele conta parte, mas encerra cedo | Ele fecha a conversa e sugere "voltem com motivo melhor" |
 | Trocar suprimento por conhecimento de trilha | — | Sem teste — troca direta | | |

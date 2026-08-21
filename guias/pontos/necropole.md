@@ -26,7 +26,7 @@ que de perigo mecânico.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Entrar e observar | — | Sem teste — estabelece o tom da região | | |
 
@@ -47,7 +47,7 @@ Mortos`.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar a lápide | d20+Sabedoria | Sente que alguém quis esconder quem está ali | Percebe só que foi apagado de propósito | Não nota nada fora do comum |
 
@@ -67,7 +67,7 @@ exploram de ângulos diferentes — não precisa resolver aqui, só plantar.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar a lápide | d20+Sabedoria | Sente que alguém quis esconder quem está ali | Percebe só que foi apagado de propósito | Não nota nada fora do comum |
 
@@ -90,7 +90,7 @@ de histórias específicas de jogadores mortos ali.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perguntar sobre uma lápide específica | d20+Sabedoria | Ele conta a história completa, com detalhe que ninguém mais sabe | Conta o básico, sem detalhe extra | Ele prefere não falar dessa em particular |
 
@@ -111,7 +111,7 @@ com mais confiança.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Coletar | d20+Inteligência | Recolhe material intacto | Recolhe, mas quebradiço (qualidade menor) | Desiste, parece errado mexer ali |
 
@@ -134,7 +134,7 @@ segunda lápide sem nome.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Coletar | d20+Inteligência | Recolhe material intacto | Recolhe, mas quebradiço (qualidade menor) | Desiste, parece errado mexer ali |
 

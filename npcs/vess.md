@@ -71,6 +71,6 @@ Sentinel e ela não tem grupo.
 
 ## Combate (se aplicável)
 
-Reflexo 1, Rapieira. Boa em corredor, ruim em sala aberta, e sabe disso.
+Destreza 12, Rapieira. Boa em corredor, ruim em sala aberta, e sabe disso.
 
 <!-- convertido-dnd5e -->

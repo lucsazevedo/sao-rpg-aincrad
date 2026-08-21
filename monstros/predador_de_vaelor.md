@@ -8,7 +8,6 @@ local: penhasco
 regioes: [penhascos_vento, colinas_pedra]
 nivel_recomendado: "4-5"
 nivel_ameaca: comum
-golpes_para_derrotar: 4
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -49,7 +48,7 @@ Cascalho caindo. Sempre cai um pouco de pedrisco antes de ele se soltar, e sempr
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** ele é rápido, mas o ciclo é previsível — arma de Reflexo pega o instante em que ele se solta da parede. Em 10+ perde a emboscada vertical pelo resto da cena e não consegue mais subir.
+- **Atributo — Destreza:** ele é rápido, mas o ciclo é previsível — um ataque que usa Destreza, pego no instante em que ele se solta da parede, causa +1d6 de dano extra.
 - No instante do pouso ele está totalmente descoberto.
 - Longe da parede ele é lento e desconfortável. Puxar a luta para o descampado o anula.
 
@@ -66,15 +65,13 @@ Cascalho caindo. Sempre cai um pouco de pedrisco antes de ele se soltar, e sempr
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

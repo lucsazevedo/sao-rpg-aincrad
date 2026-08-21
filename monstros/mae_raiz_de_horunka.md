@@ -8,7 +8,6 @@ local: campo
 regioes: [floresta_horunka]
 nivel_recomendado: "5-6"
 nivel_ameaca: forte
-golpes_para_derrotar: 6
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -16,7 +15,7 @@ cd_resistencia: 13
 abertura: cortar os cordões-âncora enquanto ela recolhe as mudas
 atributo_fraqueza: Destreza
 resistencias: [corte superficial, veneno]
-vulnerabilidades: [fogo, Espírito]
+vulnerabilidades: [fogo]
 imagem: ../imagens/monstro_mae_raiz_de_horunka.png
 canonico: nao
 fonte: 
@@ -60,9 +59,9 @@ dura o tempo de uma frase — ela está recolhendo as mudas para dentro.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** os cordões desorientam e prendem o pé de quem é lento — arma de Reflexo corta no tempo em que eles esticam. Em 10+ ela perde o agarrão pelo resto da cena e vira uma boca imóvel.
+- **Atributo — Destreza:** os cordões desorientam e prendem o pé de quem é lento — um ataque que usa Destreza, cortando no tempo em que eles esticam, causa +1d6 de dano extra.
 - Os cordões-âncora ficam esticados e expostos enquanto ela recolhe as mudas; nesses segundos são cordas, não músculos.
-- O sopro de seiva é teste de **Espírito**, não de Corpo — a luta inteira é uma discussão sobre querer ir embora.
+- O sopro de seiva é teste de **Sabedoria**, não de Força — a luta inteira é uma discussão sobre querer ir embora.
 
 ## O que torna este encontro memorável
 
@@ -97,15 +96,13 @@ reta na floresta de Horunka.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -128,7 +125,7 @@ e ainda gasta golpes em alvos que não importam.
 
 **Como a cena encerra sem HP:** a Seiva-Mãe é o que a Mulher Aflita (Alambique,
 Cidade do Início) precisa. Um grupo esperto colhe do reservatório com a
-cavidade fechada e vai embora sem lutar — teste de Técnica, e vale a mesma
+cavidade fechada e vai embora sem lutar — teste de Destreza, e vale a mesma
 recompensa. Deixe isso funcionar. A luta é a opção cara.
 
 **Ligações:** a Árvore Marcada (`floresta_horunka_madeira_rara`) só é revelada

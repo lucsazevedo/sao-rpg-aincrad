@@ -76,6 +76,6 @@ apagar ele não sabe o que faz do dia.
 
 ## Combate (se aplicável)
 
-Corpo 1, Técnica 2, Martelo. Não sai da forja. Se a forja for ameaçada, sai.
+Força 12, Destreza 14, Martelo. Não sai da forja. Se a forja for ameaçada, sai.
 
 <!-- convertido-dnd5e -->

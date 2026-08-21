@@ -8,7 +8,6 @@ local: planicie de ruinas
 regioes: [campo_batalha, necropole, castelo_ferro_negro]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
-golpes_para_derrotar: 6
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -55,7 +54,7 @@ chegar perto.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** ela é lenta e estática — arma de Reflexo entra e sai antes do braço pesado voltar. Em 10+ o núcleo falha e ela perde a capacidade de andar pelo resto da cena.
+- **Atributo — Destreza:** ela é lenta e estática — um ataque que usa Destreza, entrando e saindo antes do braço pesado voltar, causa +1d6 de dano extra.
 - A junta do pescoço é o ponto solto: dá para ver o vão de longe.
 - Ela é lenta e anuncia o destino. Sair da rota dela sempre funciona.
 
@@ -84,15 +83,13 @@ campo já parecia pós-batalha antes de uma nova batalha começar.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

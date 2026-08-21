@@ -53,18 +53,18 @@ sarar. Já sarou. Ninguém contou pra ela.
 ## Gancho de aventura
 
 Se o grupo mantiver o segredo do pulso e depois **convidar ela pra uma
-caçada**, Yara vai — e é a melhor aliada temporária do andar (Reflexo 2, Besta).
+caçada**, Yara vai — e é a melhor aliada temporária do andar (Destreza 14, Besta).
 Se contarem pra vila, ela perde a loja e a liberdade ao mesmo tempo, e não
 perdoa.
 
 ## Diálogo de exemplo
 
 - "Você quer o coleto sozinho ou o traje inteiro? Porque sozinho é bonito e inteiro é útil."
-- "Reflexo. Sempre Reflexo. Corpo é pra quem já errou o tiro."
+- "Destreza. Sempre Destreza. Força é pra quem já errou o tiro."
 - "Não conta pro Halden. Sério. Não conta."
 
 ## Combate (se aplicável)
 
-Reflexo 2 com Besta. Em campo aberto, vale por dois personagens.
+Destreza 14 com Besta. Em campo aberto, vale por dois personagens.
 
 <!-- convertido-dnd5e -->

@@ -28,7 +28,7 @@ presságio de algo maior (ver `chefe_rei_planicies` em `campos_oeste`).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Alcançar a garganta durante o uivo | d20+Destreza | O encontro vira duelo direto, sem matilha | O uivo sai, mas só dois lobos chegam antes da janela fechar | O uivo sai inteiro — a partir daí chegam dois lobos por vez, sem limite |
 | Enfrentar (combate) | d20+Força | Ver `monstros/alfa_lupino.md` | | |
@@ -56,7 +56,7 @@ das Planícies (`campos_oeste`).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Observar de dia | d20+Inteligência | Vê que as sete formam ângulos regulares e que a inclinação é intencional | Percebe que há padrão, sem fechar a conta | Parece monte de pedra largada |
 | Observar de noite (confirma as lacunas) | d20+Inteligência | Confirma as sete lacunas no céu | Confirma que falta alguma coisa, sem contar quantas | Céu é céu |
@@ -82,7 +82,7 @@ distância curta.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
@@ -102,7 +102,7 @@ Círculo de Pedras. Derrotá-lo libera o field boss Alfa Lupino.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
@@ -124,7 +124,7 @@ grupo luta contra as vespas.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
 
@@ -144,7 +144,7 @@ atmosfera, sem gatilho de sistema.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 
@@ -165,7 +165,7 @@ de `campos_oeste_xpedra_runica_solitaria`.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar o símbolo | d20+Inteligência | Reconhece parte do símbolo — é mais antigo que o andar em si | Reconhece só que é estranho | Não nota nada de especial |
 
@@ -186,7 +186,7 @@ vende esboço de terreno.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Pedir esboço do terreno | — | Sem teste — vende de memória um esboço equivalente a uma dica de Cartógrafo | | |
 
@@ -207,7 +207,7 @@ mudam de lugar".
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
 
@@ -226,7 +226,7 @@ mudam de lugar".
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Colher | d20+Destreza | Colhe 2 unidades sem se sujar | Colhe 1 unidade e se arranha em espinhos | Nada aproveitável |
 
@@ -246,7 +246,7 @@ mudam de lugar".
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força ou Reflexo | Golpe limpo | Acerta, mas a vespa pica de volta | Vespa acerta primeiro |
 

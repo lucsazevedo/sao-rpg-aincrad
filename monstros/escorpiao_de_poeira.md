@@ -8,7 +8,6 @@ local: planicie
 regioes: [campos_leste, campos_oeste, pedreira]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -49,7 +48,7 @@ A cauda sai primeiro, e sai devagar. Quem estiver olhando o chão a vinte passos
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** a camuflagem dele é um truque só, e quem desvenda o relevo errado na poeira não é pego — arma de Conhecimento bate onde ele se escondeu. Em 10+ ele perde a capacidade de se enterrar pelo resto da cena e passa a lutar exposto.
+- **Atributo — Inteligência:** a camuflagem dele é um truque só, e quem desvenda o relevo errado na poeira não é pego — um ataque que usa Inteligência contra onde ele se escondeu causa +1d6 de dano extra.
 - A cauda é o alvo, e ela se ergue antes da picada.
 - Em terreno duro ele não se enterra. Puxar a luta para a pedra nua o anula.
 
@@ -66,15 +65,13 @@ A cauda sai primeiro, e sai devagar. Quem estiver olhando o chão a vinte passos
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

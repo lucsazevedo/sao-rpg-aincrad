@@ -8,7 +8,6 @@ local: montanha
 regioes: [montanhas, colinas_pedra, caverna_ecos]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
-golpes_para_derrotar: 6
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -49,7 +48,7 @@ A pelagem range. É cascalho preso no pelo há tanto tempo que virou parte dele,
 
 ## Fraquezas
 
-- **Atributo — Corpo:** ele é grande demais para cair rápido, e é exatamente por isso que força bruta bem posta morde — arma de Corpo bate de igual pra igual. Em 10+ ele perde a investida pelo resto da cena.
+- **Atributo — Força:** ele é grande demais para cair rápido, e é exatamente por isso que força bruta bem posta morde — um ataque que usa Força, batendo de igual pra igual, causa +1d6 de dano extra.
 - O focinho é o ponto sensível, e ele o expõe quando fica de pé.
 - Ele dá um aviso completo. Recuar durante o aviso encerra o encontro sem uma rolagem.
 
@@ -66,15 +65,13 @@ A pelagem range. É cascalho preso no pelo há tanto tempo que virou parte dele,
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Força — um ataque que usa Força contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Força — um ataque que usa Força contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

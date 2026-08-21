@@ -35,7 +35,7 @@ fazem sozinhos na primeira vez que testam.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler o clima da praça | d20+Sabedoria | Sabe quem está indo pro campo hoje, quem desistiu e quem está esperando alguém voltar | Percebe a tensão, não a causa | Só vê gente andando |
 | Ouvir boato | d20+Sabedoria | Um boato verdadeiro **e** a fonte dele | Um boato verdadeiro, fonte desconhecida | Um boato falso que soa verdadeiro |
@@ -61,7 +61,7 @@ não tem tempo (ver `docs/mercado_andar1.md`).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perguntar sobre o Labirinto | — | Sem teste. Ela manda o grupo procurar a amiga dela em **Tolbana**. Sempre a mesma resposta |  |  |
 | Pechinchar | d20+Inteligência | 10% de desconto e ela passa a te reconhecer | Preço cheio, mas ela explica por que aquela peça vale | Ela devolve a peça pra prateleira |
@@ -88,7 +88,7 @@ mais dos muros** desde o dia 5.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Vender material de coleta | — | Preço de tabela +10% se vier limpo (`docs/mercado_andar1.md`) |  |  |
 | Perguntar por que ela não sai | d20+Sabedoria | Ela conta do dia 5 sem detalhe, e isso já é muito | "Já saí o suficiente." Fim | Ela pede pra você comprar ou ir embora |
@@ -113,7 +113,7 @@ novo. Ela topa expedição, mas não vai sozinha e diz isso sem vergonha.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Treinar tiro com ela | d20+Destreza | Ela corrige seu erro: +1 no primeiro teste de arma à distância da próxima sessão | Você acerta o alvo e nada mais | Estraga uma flecha dela, e ela conta as flechas |
 | Convidar pra uma expedição | d20+Sabedoria | Ela vai, e vale por um personagem inteiro em campo aberto | Ela vai, mas só até onde der pra ver a muralha | Recusa: "não com esse plano" |
@@ -139,7 +139,7 @@ depois do dia 15.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar arma Comum | — | 80-200 Col conforme o tipo. Todos os 22 tipos sempre em estoque |  |  |
 | Experimentar uma arma que não é a sua | d20+Destreza | Você entende a Marca daquela arma — e o mestre te diz qual é | Você entende que não é pra você | Derruba, e o dono levanta os olhos |
@@ -164,7 +164,7 @@ não arma pronta — e explica o motivo sem que ninguém pergunte.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar Placas de Metal Refinado | — | 90 Col cada, 3 por semana. Com Minério Raro próprio: -15% |  |  |
 | Consertar peça rachada | — | 1/5 do preço base do item |  |  |
@@ -192,7 +192,7 @@ pensa em consultar.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar peça de tecido/couro | — | Tabela de `docs/mercado_andar1.md`. Com Pelagem Azulada própria: -20% |  |  |
 | Perguntar quem comprou o quê | d20+Sabedoria | Ela lembra da pessoa, da peça e do dia | Lembra da peça, não da pessoa | "Não falo de cliente" |
@@ -217,7 +217,7 @@ o risco escondido (`docs/mercado_andar1.md`).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar item sem procedência | d20+Inteligência | Você identifica o risco antes de pagar | Compra sem saber qual é o risco | Compra o pior item da banca achando que é o melhor |
 | Perguntar de onde veio | d20+Sabedoria | Uma meia-verdade útil | "De alguém." | Encerram a conversa e somem por uma semana |
@@ -242,7 +242,7 @@ pra um personagem novo entrar na mesa sem justificativa nenhuma.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Treinar sua arma | d20+Destreza | Entende sua arma: +1 no primeiro teste dela na próxima sessão | Treina e cansa, sem efeito | Machuca o pulso: complicação no primeiro combate |
 | Ensinar alguém | d20+Sabedoria | O aluno ganha o +1 em vez de você, e te deve uma | Ele entende metade | Ele entende errado, e você vai ver isso em campo |
@@ -267,7 +267,7 @@ alguém nota.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ouvir a cantiga de verdade | d20+Sabedoria (Músico: automático) | Decora a letra inteira e sacou que são cores de cristal | Decora a letra | Lembra do refrão e mais nada |
 | Comprar boato | d20+Inteligência | Dois boatos, um deles conferível hoje | Um boato | Um boato velho que todo mundo já sabe |
@@ -292,7 +292,7 @@ porta escorada é decisão dela, não descuido.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Dormir | — | 15 Col. Zona segura: recupera tudo |  |  |
 | Ser tratado de status negativo | d20+Sabedoria (Nadia) | Veneno, paralisia ou confusão removidos sem gastar Cristal | Removido, mas leva a noite inteira | Precisa de material que ela não tem |
@@ -317,7 +317,7 @@ isso pra empurrar o grupo pra lá sem dar quest formal.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Procurar um nome | d20+Inteligência | Acha, com data e quem registrou | Acha o nome, sem contexto | O nome está lá e você passa direto |
 | Ler as datas em sequência | d20+Inteligência | Percebe que os quatro nomes do grupo do Marco foram registrados no mesmo dia | Percebe um agrupamento estranho | Só nomes |
@@ -342,7 +342,7 @@ teve; as pessoas vêm pelo silêncio.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Sentar em silêncio | — | Sem teste. Uma cena inteira ali remove qualquer condição emocional narrada |  |  |
 | Conversar com Anselm | d20+Sabedoria | Ele ouve, e devolve a pergunta certa | Ele ouve e não devolve nada | Ele te dá espaço, e isso dói mais |
@@ -368,7 +368,7 @@ manuscrito importa mais.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler o quadro | d20+Inteligência | Duas quests úteis **e** qual paga melhor | Uma quest, com o pedido incompleto | Só pedidos velhos já resolvidos |
 | Procurar pedido manuscrito | d20+Sabedoria | Acha um pedido pessoal que ninguém quis pegar | Acha um, mas está rasgado no meio | Nada — alguém levou os bons |
@@ -393,7 +393,7 @@ Lago** (`npcs/bren_do_lago.md`). Zona segura, sem comércio formal.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comer o que Bren está fazendo | — | 15 Col ou uma conversa. Bônus de refeição na próxima expedição |  |  |
 | Deixar Bren te ouvir | d20+Sabedoria | Ele deixa o silêncio durar até você dizer o que estava evitando — e isso limpa uma condição emocional | Você fala, e não resolve nada | Você enche o silêncio de piada e ele deixa |
@@ -418,7 +418,7 @@ ainda não colocou em cena.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Responder à pergunta de Daren | d20+Sabedoria | Ele aponta um perigo real da rota de hoje, de graça | Ele deixa passar sem dizer nada | Ele te olha por tempo demais e você sai desconfortável |
 | Perguntar quem saiu hoje | d20+Inteligência | Números exatos, nomes de quem não voltou ontem | Só o número | "Muita gente" |
@@ -443,7 +443,7 @@ primeira complicação do dia.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar informação de rota | d20+Inteligência | Rota exata, com o ponto onde o vento mascara som | Rota, sem o detalhe que importa | Ela cobra caro e entrega pouco |
 | Admitir que está com medo | — | Sem teste. Ela respeita, desce do batente e ajuda de verdade |  |  |
@@ -469,7 +469,7 @@ adiante, para o Labirinto.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Consultar o arquivo | d20+Inteligência | Ela separa o que ela **viu**, o que **ouviu** e o que **alguém jurou** — e as três coisas são úteis | Ela entrega tudo junto e você separa sozinho | Ela não empresta: "volta com algo pra trocar" |
 | Vender uma região mapeada | — | 10 Col por ponto revelado (`docs/economia_profissoes.md`) |  |  |

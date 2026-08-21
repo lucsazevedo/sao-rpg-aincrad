@@ -7,7 +7,7 @@ Complemento a `00_indice_primeira_aventura.md`. As quatro quests da primeira
 aventura (`01_javalis_na_pastagem.md` a `04_o_caminho_ate_o_labirinto.md`)
 já têm prosa completa e continuam sendo o ponto de entrada da campanha. As
 **56 quests abaixo** completam o andar 1 até um total de **60** — cada uma
-com gancho, estrutura em beats, múltiplos testes (d20+atributo, 10+/7-9/6-),
+com gancho, estrutura em beats, múltiplos testes (d20+atributo, sucesso total/sucesso parcial/falha),
 encontro (quando aplicável), complicação, e recompensa proporcional à
 dificuldade real da tarefa.
 
@@ -26,7 +26,7 @@ Prioridade do mestre, nesta ordem:
 
 1. **Imagem forte** — o que o grupo vê/ouve/cheira quando a quest começa.
 2. **Escolha visível** — o que divide a mesa em pelo menos duas abordagens.
-3. **Complicação com avanço** — 6- piora a situação, mas não mata o ritmo.
+3. **Complicação com avanço** — falha piora a situação, mas não mata o ritmo.
 4. **Conexão humana** — quem é afetado por isso, além do objetivo imediato.
 
 Quando faltar detalhe numa quest, improvise sempre nestes quatro eixos:
@@ -56,7 +56,7 @@ Mesma lógica de ameaça já usada pro bestiário (`docs/guia_sistema_aincrad.md
 — golpes-para-derrotar fraco/comum/forte/elite) aplicada a quest inteira, não
 só a um combate. Toda quest abaixo declara sua dificuldade; a recompensa em
 Col e a raridade do material seguem esta tabela como piso — o mestre pode
-ajustar pra cima em caso de sucesso excepcional (10+ em todos os testes) ou
+ajustar pra cima em caso de sucesso excepcional (sucesso total em todos os testes) ou
 pra baixo em fracasso feio, mas não deveria inverter a ordem entre tiers.
 
 | Dificuldade       | Perfil                                                                                                              | Col     | Material                            |
@@ -136,7 +136,7 @@ que vive de se sentir segura.
 **Testes sugeridos**
 
 - d20+Destreza — rastrear os sinais sem perder tempo
-- d20+Força ou Reflexo — o combate em si (ameaça fraca, golpes 1-2)
+- d20+Força ou Destreza — o combate em si (ameaça fraca, golpes 1-2)
 - d20+Inteligência — notar a marca no tronco ao voltar (só quem prestar atenção vê)
 
 **NPCs na cena**
@@ -163,8 +163,8 @@ Se o teste de rastreamento falhar, um grupo extra aparece por barulho.
 
 **Recompensas**
 
-Col 30 + Pelagem Comum (garantido). Se o teste de Conhecimento no beat 5
-for 10+, o grupo já sai com a localização exata da marca — pula direto
+Col 30 + Pelagem Comum (garantido). Se o teste de Inteligência no beat 5
+for sucesso total, o grupo já sai com a localização exata da marca — pula direto
 pro meio de `horunka_02` na próxima sessão.
 
 Em sucesso total, o primeiro comentário sobre o grupo em Horunka deixa de ser
@@ -235,7 +235,7 @@ específico.
 
 **Complicação**
 
-Se qualquer teste sair 6-, a trilha se perde e o grupo precisa voltar
+Se qualquer teste for falha, a trilha se perde e o grupo precisa voltar
 outro dia (sem penalidade além do tempo) — ou pedir ajuda de quem já
 morou na floresta a vida toda.
 
@@ -384,7 +384,7 @@ qualquer um que apareça pedindo respostas.
 
 **Complicação**
 
-Numa falha (6-) no primeiro teste, ele não expulsa o grupo — só fecha a
+Numa falha no primeiro teste, ele não expulsa o grupo — só fecha a
 conversa e sugere "voltem quando tiverem motivo melhor". Isso não bloqueia
 a quest pra sempre; é um convite a fazer algo por ele ou pela vila antes
 de voltar (o mestre pode usar `horunka_06`/`horunka_07` como essa prova).
@@ -662,7 +662,7 @@ parou de caçar.
 **Testes sugeridos**
 
 - d20+Inteligência — decodificar as marcas restantes sem erro
-- d20+Força ou Técnica — abrir o esconderijo sem danificar o conteúdo
+- d20+Força ou Destreza — abrir o esconderijo sem danificar o conteúdo
 - (Opcional) d20+Sabedoria — decidir como agir com o que foi encontrado, se o grupo quiser forçar uma cena de peso
 
 **Complicações úteis**
@@ -756,7 +756,7 @@ acha que é sério. Ninguém foi verificar de perto.
 
 **Recompensas**
 
-Col 25 + Peixe (2 un.). Sucesso total no teste de Conhecimento já aponta
+Col 25 + Peixe (2 un.). Sucesso total no teste de Inteligência já aponta
 a direção certa, economizando um beat inteiro em `lago_02`.
 
 **Gancho visual / de transmissão**
@@ -822,7 +822,7 @@ errada de um jeito difícil de descrever.
 
 **Complicação**
 
-Numa falha no teste de Corpo, o grupo é puxado e precisa nadar de volta —
+Numa falha no teste de Força, o grupo é puxado e precisa nadar de volta —
 sem dano grave, mas perde equipamento solto (item pequeno, à escolha do
 jogador) se o mestre quiser aumentar a tensão.
 
@@ -897,7 +897,7 @@ sobrevivência e informação, preparando a abordagem mais inteligente de
 
 **Complicação**
 
-Numa falha no teste de Reflexo, alguém fica isolado por um momento — não
+Numa falha no teste de Destreza, alguém fica isolado por um momento — não
 é morte automática, é uma cena de tensão real (o grupo precisa decidir
 voltar por essa pessoa ou confiar que ela vai se safar sozinha).
 
@@ -1236,7 +1236,7 @@ mestre quiser escalar.
 **Recompensas**
 
 Col 0 (o valor está no material, não em pagamento) + Minério Raro: 2
-unidades (10+), 1 unidade (7-9), 0 (6-). Minério Raro é peça-chave da
+unidades (sucesso total), 1 unidade (sucesso parcial), 0 (falha). Minério Raro é peça-chave da
 cadeia de Ferreiro em `docs/economia_profissoes.md` — vale a viagem
 mesmo em resultado parcial.
 
@@ -1267,7 +1267,7 @@ pé pesa tanto quanto errar o golpe.
 **Testes sugeridos**
 
 - d20+Destreza — manter o equilíbrio na saliência durante o combate
-- d20+Força ou Reflexo — o combate em si (ameaça comum, golpes 3-4, mas com vantagem de altura pra criatura)
+- d20+Força ou Destreza — o combate em si (ameaça comum, golpes 3-4, mas com vantagem de altura pra criatura)
 
 **Encontro**
 
@@ -1316,7 +1316,7 @@ região documentou o que tem do outro lado, só que existe.
 
 **Complicação**
 
-Numa falha no teste de Corpo, quem tentou passar fica preso e precisa de
+Numa falha no teste de Força, quem tentou passar fica preso e precisa de
 ajuda do resto do grupo (teste de apoio, sem risco real, só tempo
 perdido) — ou desiste e cede a vez a outro personagem mais magro/ágil.
 
@@ -1355,8 +1355,8 @@ rocha. Raro mesmo pros padrões de Grauvenn.
 
 **Recompensas**
 
-Col 0 + Cristal de Gelo: intacto (10+), rachado/qualidade menor (7-9),
-perdido (6-). Raro, usado por Joalheiro/Alquimista — um dos poucos
+Col 0 + Cristal de Gelo: intacto (sucesso total), rachado/qualidade menor (sucesso parcial),
+perdido (falha). Raro, usado por Joalheiro/Alquimista — um dos poucos
 materiais Raros do andar 1 obtido puramente por coleta, sem combate.
 
 ---
@@ -1393,7 +1393,7 @@ Grauvenn deveria esconder.
 
 **Complicação**
 
-Numa falha no teste de Conhecimento, o achado vem com uma ameaça atrelada
+Numa falha no teste de Inteligência, o achado vem com uma ameaça atrelada
 — algo desperta e o grupo precisa decidir entre investigar mais fundo
 (mais risco, mais recompensa) ou recuar com o que já tem.
 
@@ -1445,8 +1445,8 @@ pode chacoalhar demais".
 
 **Recompensas**
 
-Col 50 (10+, entrega rápida e intacta), Col 30 (7-9, entrega atrasada),
-Col 15 + reputação levemente abalada (6-, pacote danificado).
+Col 50 (sucesso total, entrega rápida e intacta), Col 30 (sucesso parcial, entrega atrasada),
+Col 15 + reputação levemente abalada (falha, pacote danificado).
 
 **Gancho pra próxima quest**
 
@@ -1588,7 +1588,7 @@ fáceis de negociar.
 **Recompensas**
 
 Fio de Prata (quantidade suficiente pra receita do Joalheiro) + Col 30 de
-lucro se a negociação sair muito bem (10+). Reputação com o Joalheiro
+lucro se a negociação sair muito bem (sucesso total). Reputação com o Joalheiro
 sobe — desconto permanente em itens de Joalheiro no futuro.
 
 ---
@@ -1624,7 +1624,7 @@ está subindo pra um nível que passa longe de resolução fácil.
 
 **Complicação**
 
-Escolher um lado sem querer (10+ na conversa com só uma guilda, sem
+Escolher um lado sem querer (sucesso total na conversa com só uma guilda, sem
 Espírito investido na outra) resolve rápido mas cria ressentimento
 permanente do lado não escolhido — não é errado, é uma escolha real com
 peso real.
@@ -1634,8 +1634,7 @@ peso real.
 Col 150 + mudança registrada de reputação com as guildas envolvidas
 (documentar pro mestre usar em `tolbana_e08` e em cenas futuras — acesso
 a recompensas de guilda, tratamento em lojas, convites pra eventos).
-Reconciliar bem-sucedida (resultado raro, exige 10+ no teste de
-Conhecimento) rende reputação positiva com as duas ao mesmo tempo.
+Reconciliar bem-sucedida (resultado raro, exige sucesso total no teste de Inteligência) rende reputação positiva com as duas ao mesmo tempo.
 
 **Gancho pra próxima quest**
 
@@ -1671,15 +1670,15 @@ um chefe de andar cair. O preço não é só Col.
 
 **Complicação**
 
-Numa falha no teste de Conhecimento, o grupo paga um preço injusto sem
+Numa falha no teste de Inteligência, o grupo paga um preço injusto sem
 perceber — só descobre depois, o que pode alimentar desconfiança futura
 com os corretores.
 
 **Recompensas**
 
 Custo: item Incomum ou favor equivalente a Col 150+ (à escolha do grupo/
-mestre). Recompensa: pista real e completa (10+), real mas incompleta
-(7-9), ou falsa vendida como verdadeira (6- — o grupo só descobre a
+mestre). Recompensa: pista real e completa (sucesso total), real mas incompleta
+(sucesso parcial), ou falsa vendida como verdadeira (falha — o grupo só descobre a
 mentira mais tarde, quando a pista não bater com outra fonte).
 
 ---
@@ -2023,7 +2022,7 @@ sempre em horários diferentes, sem nunca ser notado.
 
 **Complicação**
 
-Numa falha no teste de Conhecimento, o grupo entende a história errada —
+Numa falha no teste de Inteligência, o grupo entende a história errada —
 aponta o dedo pra pessoa errada, o que pode gerar uma cena de
 constrangimento real (e uma correção necessária mais tarde).
 
@@ -2153,7 +2152,7 @@ vegetação que cresceu demais, reorganizar registros.
 **Recompensas**
 
 Col 25 (simbólico) + reputação com o Zelador. Se feita antes de
-`necropole_02`, concede vantagem no teste de Espírito daquela quest —
+`necropole_02`, concede vantagem no teste de Sabedoria daquela quest —
 o Zelador já viu o grupo agir com respeito antes de qualquer pergunta.
 
 **Gancho visual / de transmissão**
@@ -2233,14 +2232,14 @@ como só mais uma música de ambiente.
 
 **Complicação**
 
-Numa falha no teste de Conhecimento, o grupo decifra a sequência errada
+Numa falha no teste de Inteligência, o grupo decifra a sequência errada
 (troca a ordem de dois versos) — se tentarem o mural sem confirmar antes,
 `castelo_02` começa com uma combinação errada já testada.
 
 **Recompensas**
 
-Col 0 + a sequência completa e correta (10+), ou incompleta/com um erro
-(7-9 — falta um verso ou a ordem de dois está trocada). Essa informação é
+Col 0 + a sequência completa e correta (sucesso total), ou incompleta/com um erro
+(sucesso parcial — falta um verso ou a ordem de dois está trocada). Essa informação é
 o que abre `castelo_02` de verdade.
 
 **Gancho visual / de transmissão**
@@ -2295,7 +2294,7 @@ pouco menos, Luz e Barreira são raros de verdade.
 
 **Complicação**
 
-Numa falha (6-), o grupo erra a combinação e precisa esperar antes de
+Numa falha, o grupo erra a combinação e precisa esperar antes de
 tentar de novo (o mural "reseta" depois de um tempo) — e o alarme sonoro
 de um erro anterior já pode ter chamado atenção de guardas, tornando
 tentativas futuras mais arriscadas.
@@ -2372,8 +2371,8 @@ Insone comenta sobre isso em `castelo_04`).
 
 **Recompensas**
 
-Col 0 + informação estratégica real (10+: ponto fraco confirmado e
-guardado em segredo; 7-9: confirmado mas visto; 6-: nada encontrado,
+Col 0 + informação estratégica real (sucesso total: ponto fraco confirmado e
+guardado em segredo; sucesso parcial: confirmado mas visto; falha: nada encontrado,
 parede só velha mesmo) — uso puramente narrativo/tático do mestre.
 
 **Gancho visual / de transmissão**
@@ -2434,14 +2433,14 @@ pátio ou na muralha, foi ele.
 
 **Complicação**
 
-Se `castelo_03` teve falha no teste de Reflexo (foi visto), este teste
+Se `castelo_03` teve falha no teste de Destreza (foi visto), este teste
 começa com desvantagem — o mestre pode narrar que ele já está de
 guarda alta antes mesmo da conversa começar.
 
 **Recompensas**
 
-Col 0 + confirmação com detalhes (10+), confirmação parcial e desconfiada
-(7-9), ou negação total mesmo sabendo (6- — o grupo percebe que ele está
+Col 0 + confirmação com detalhes (sucesso total), confirmação parcial e desconfiada
+(sucesso parcial), ou negação total mesmo sabendo (falha — o grupo percebe que ele está
 mentindo, o que também é informação útil).
 
 **Gancho visual / de transmissão**
@@ -2646,7 +2645,7 @@ grupo escolher (ou for forçado a) engajar.
 
 **Complicação**
 
-Numa falha no teste de Conhecimento, o mapa sai errado — não trava a
+Numa falha no teste de Inteligência, o mapa sai errado — não trava a
 quest, mas o mestre pode usar isso mais tarde: uma "patrulha extra"
 inesperada durante uma cena futura, porque a informação registrada estava
 incompleta.
@@ -2713,7 +2712,7 @@ nenhuma.
 
 **Testes sugeridos**
 
-- d20+Força ou Reflexo — o combate em si (ameaça comum, golpes 3-4)
+- d20+Força ou Destreza — o combate em si (ameaça comum, golpes 3-4)
 - d20+Destreza — extrair o fragmento sem amassar (d20+Destreza, ver
   `docs/economia_profissoes.md` — material de caça exclusivo do Caçador)
 
@@ -2810,7 +2809,7 @@ sistema do jogo — mas não porque não sabe nada.
 
 **Complicação**
 
-Numa falha no teste de Espírito, ele se fecha — acha que o grupo está
+Numa falha no teste de Sabedoria, ele se fecha — acha que o grupo está
 "puxando informação demais, rápido demais", igual todo mundo que já
 tentou. Não é hostil, só encerra a conversa; reabrir exige uma abordagem
 bem diferente depois (talvez via `tolbana_e03`/`tolbana_e06`, se essas
@@ -2826,7 +2825,7 @@ quests já tiverem sido feitas).
 **Recompensas**
 
 Col 0 + pista real (mas parcial) sobre o andar 2 — uma das fontes
-legítimas listadas em `docs/misterio_andar2.md`. Sucesso total (10+)
+legítimas listadas em `docs/misterio_andar2.md`. Sucesso total
 rende também um comentário passageiro sobre Diavel estar organizando algo
 grande — gancho direto pra `tolbana_08`.
 
@@ -2880,7 +2879,7 @@ Ele não aceita qualquer um: quer saber se o grupo entende o risco real
 
 - d20+Sabedoria — convencer Diavel da disposição real do grupo
 - d20+Inteligência — impressionar com informação concreta sobre o
-  Labirinto (bônus automático se `tolbana_05` foi 10+)
+  Labirinto (bônus automático se `tolbana_05` foi sucesso total)
 
 **NPCs na cena**
 
@@ -2909,7 +2908,7 @@ ainda não feita) como essa prova, ou inventar uma tarefa equivalente.
 
 **Recompensas**
 
-Vaga confirmada no raid — plena (10+) ou condicional/vigiada (7-9). Falha
+Vaga confirmada no raid — plena (sucesso total) ou condicional/vigiada (sucesso parcial). Falha
 não fecha a porta, só atrasa: Col 0, mas a reunião planta o grupo
 firmemente dentro da narrativa do raid que vem.
 
@@ -2970,8 +2969,8 @@ o Col disponível permita. Não é hora de economizar.
 **Recompensas**
 
 Sem Col de recompensa aqui — é quest de gasto, não ganho. Sucesso total
-(10+): inventário completo com sobra de Col. Parcial (7-9): essencial
-coberto. Falha (6-): falta algo específico que o mestre anota e usa como
+(sucesso total): inventário completo com sobra de Col. Parcial (sucesso parcial): essencial
+coberto. Falha (falha): falta algo específico que o mestre anota e usa como
 complicação real durante `tolbana_12`.
 
 **Complicações úteis**
@@ -3127,8 +3126,8 @@ momento inesperado por causa de coordenação falha).
 
 **Recompensas**
 
-Vantagem tática real registrada pro confronto final (10+: papel ideal,
-bônus mecânico claro; 7-9: papel definido, sem bônus extra; 6-:
+Vantagem tática real registrada pro confronto final (sucesso total: papel ideal,
+bônus mecânico claro; sucesso parcial: papel definido, sem bônus extra; falha:
 desvantagem registrada, usada pelo mestre como complicação em
 `tolbana_12`).
 
@@ -3323,9 +3322,9 @@ longe o suficiente pra desaparecer de vez.
 
 **Recompensas**
 
-Revela outro ponto da região ainda não descoberto (10+: revela e chega
-com segurança; 7-9: chega perto, mas a luz some antes do fim — revela
-parcialmente, o mestre pode dar uma pista em vez do ponto completo; 6-:
+Revela outro ponto da região ainda não descoberto (sucesso total: revela e chega
+com segurança; sucesso parcial: chega perto, mas a luz some antes do fim — revela
+parcialmente, o mestre pode dar uma pista em vez do ponto completo; falha:
 perde a luz de vista, sem revelação).
 
 **Gancho visual / de transmissão**
@@ -3381,9 +3380,9 @@ num ramo morto antes de voltar.
 
 **Recompensas**
 
-Revela outro ponto da região (10+: percebe e localiza algo oculto por
-completo; 7-9: percebe o suficiente para marcar a área e voltar depois;
-6-: entende o fenômeno, mas não acha a abertura certa naquela visita).
+Revela outro ponto da região (sucesso total: percebe e localiza algo oculto por
+completo; sucesso parcial: percebe o suficiente para marcar a área e voltar depois;
+falha: entende o fenômeno, mas não acha a abertura certa naquela visita).
 
 **Gancho visual / de transmissão**
 
@@ -3439,9 +3438,9 @@ visitados pelo grupo.
 
 **Recompensas**
 
-Revela pontos próximos ainda não descobertos no mapa (10+: chega com
-segurança, revelação completa; 7-9: chega com um susto, revelação
-parcial; 6-: desiste na subida, sem revelação — mas sem dano real).
+Revela pontos próximos ainda não descobertos no mapa (sucesso total: chega com
+segurança, revelação completa; sucesso parcial: chega com um susto, revelação
+parcial; falha: desiste na subida, sem revelação — mas sem dano real).
 
 **Gancho visual / de transmissão**
 
@@ -3515,7 +3514,7 @@ bestiário disponível).
 **Recompensas**
 
 Colheita de qualidade superior (ingrediente pro Cozinheiro) + reputação
-local (10+: defende sem perda; 7-9: defende com perda parcial; 6-:
+local (sucesso total: defende sem perda; sucesso parcial: defende com perda parcial; falha:
 colheita destruída, o Guardião da Colheita fica abalado — reputação
 neutra, não negativa, já que o grupo tentou).
 
@@ -3700,9 +3699,9 @@ tecnologia destoa do resto de Aincrad.
 **Recompensas**
 
 Col 20 (recurso de sucata comum ao redor, sem valor central) + pista
-atmosférica não-mecânica (10+: reconhecimento claro, mistério real pro
-mestre usar quando quiser; 7-9: percebe só que é estranho, sem
-conclusão; 6-: ignora, parece só entulho — quest permanece disponível
+atmosférica não-mecânica (sucesso total: reconhecimento claro, mistério real pro
+mestre usar quando quiser; sucesso parcial: percebe só que é estranho, sem
+conclusão; falha: ignora, parece só entulho — quest permanece disponível
 pra tentar de novo depois). Boa pra tempero de mundo — não precisa levar
 a lugar nenhum se o mestre não quiser expandir.
 

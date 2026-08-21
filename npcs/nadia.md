@@ -67,7 +67,7 @@ paralisia, sono — não some sozinho, e que ninguém mais sabia tratar.
 
 ## Combate (se aplicável)
 
-Não luta. Espírito 2 — se o grupo levar ela a campo, ela é o melhor suporte
+Não luta. Sabedoria 14 — se o grupo levar ela a campo, ela é o melhor suporte
 não-combatente do andar e a pior ideia tática possível.
 
 <!-- convertido-dnd5e -->

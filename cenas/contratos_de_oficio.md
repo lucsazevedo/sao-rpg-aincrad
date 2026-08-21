@@ -38,9 +38,9 @@ contrato. O item importa mais que o Col.
 **Gancho:** um Cozinheiro de Tolbana encomendou carne de Frenzy Boar com a
 presa **intacta** — e presa intacta não sai de bicho morto às pressas.
 
-**O teste que decide:** d20+Destreza para extrair sem estragar. **10+** presa
-íntegra e você nota uma toca nova ali perto. **7-9** sai lascada: metade do
-preço, e Erik comenta. **6-** estragou, e o cheiro atrai um Lobo das Estepes.
+**O teste que decide:** d20+Destreza para extrair sem estragar. **Sucesso total:** presa
+íntegra e você nota uma toca nova ali perto. **Sucesso parcial:** sai lascada: metade do
+preço, e Erik comenta. **Falha:** estragou, e o cheiro atrai um Lobo das Estepes.
 
 **Complicação:** outro caçador chegou primeiro e já está com a mão no bicho.
 Dividir, disputar ou procurar outro é decisão do grupo, não teste.
@@ -58,8 +58,8 @@ torto. O dono acha graça. A filha dele não, porque a farinha sai irregular e
 ninguém compra farinha irregular no dia 10.
 
 **O teste que decide:** d20+Destreza para escolher e derrubar a madeira certa.
-**10+** Nodosa boa, na medida, e sobra pra um segundo eixo. **7-9** serve, mas
-você volta com metade do que precisava. **6-** a árvore cai errado e leva duas
+**Sucesso total:** Nodosa boa, na medida, e sobra pra um segundo eixo. **Sucesso parcial:** serve, mas
+você volta com metade do que precisava. **Falha:** a árvore cai errado e leva duas
 horas de trabalho junto.
 
 **Complicação:** Nodosa boa cresce no lado leste da floresta, e o Torv não vai
@@ -77,9 +77,9 @@ Cozinheiro), e o `Machado de Lenhador de Horunka` se você entregar sem lascar.
 Braxhold e a Gruta de Lumis que três pessoas mapearam e nenhuma concorda com a
 outra.
 
-**O teste que decide:** d20+Inteligência do Mirante das Colinas. **10+** você
+**O teste que decide:** d20+Inteligência do Mirante das Colinas. **Sucesso total:** você
 resolve a contradição: os três estavam certos, em dias diferentes — o caminho
-**muda com a chuva**. **7-9** você mapeia um dos três e não sabe qual. **6-**
+**muda com a chuva**. **Sucesso parcial:** você mapeia um dos três e não sabe qual. **Falha:**
 vira o quarto desenho discordante.
 
 **Complicação:** a resposta certa é desconfortável. Se o caminho muda, os
@@ -96,10 +96,10 @@ vermelha** — o que ela viu com os próprios olhos e não vende pra ninguém.
 **Gancho:** Lynx está com doze Casacos Encerados do Pântano parados. Ninguém
 compra: o andar está seco há duas semanas e o casaco fede.
 
-**O teste que decide:** d20+Inteligência para achar quem precisa. **10+** você
+**O teste que decide:** d20+Inteligência para achar quem precisa. **Sucesso total:** você
 descobre que o Pântano de Kavir tem trabalho pago sobrando e ninguém consegue
-ficar lá: vende os doze de uma vez, com margem. **7-9** vende metade, no preço
-de custo. **6-** você compra o lote achando que revende, e não revende.
+ficar lá: vende os doze de uma vez, com margem. **Sucesso parcial:** vende metade, no preço
+de custo. **Falha:** você compra o lote achando que revende, e não revende.
 
 **Complicação:** o preço que faz o negócio fechar é o preço que deixa Lynx no
 prejuízo. Convencer ela a aceitar é cena, não rolagem.
@@ -115,9 +115,9 @@ tudo que encalha — a melhor fonte de item barato do andar.
 **Gancho:** vai ter incursão amanhã. Orin não dá conta sozinho de alimentar
 quarenta pessoas nervosas, e comida ruim na véspera estraga a manhã seguinte.
 
-**O teste que decide:** d20+Inteligência para render o que tem. **10+** todo
+**O teste que decide:** d20+Inteligência para render o que tem. **Sucesso total:** todo
 mundo come, e o bônus de refeição vale pro grupo inteiro no dia seguinte.
-**7-9** metade come bem, metade come. **6-** falta pra uns cinco, e eles vão
+**Sucesso parcial:** metade come bem, metade come. **Falha:** falta pra uns cinco, e eles vão
 lembrar de quem cozinhou.
 
 **Complicação:** um dos ingredientes é Perna Serrilhada de Gafanhoto. Se alguém
@@ -135,9 +135,9 @@ ingrediente** separado pra você.
 dois que faltam são o Sindicato e o Terraço Geek, e a briga entre eles começou
 por algo pequeno demais pra qualquer um dos lados admitir em voz alta.
 
-**O teste que decide:** d20+Inteligência para mediar. **10+** os dois cedem, e
-você define os termos. **7-9** cedem, mas um deles sai devendo — e cobra
-depois. **6-** os dois te culpam, e a trégua atrasa um mês de jogo.
+**O teste que decide:** d20+Inteligência para mediar. **Sucesso total:** os dois cedem, e
+você define os termos. **Sucesso parcial:** cedem, mas um deles sai devendo — e cobra
+depois. **Falha:** os dois te culpam, e a trégua atrasa um mês de jogo.
 
 **Complicação:** o Kolt tem culpa no começo da briga e desconversa quando
 perguntam. Descobrir isso é o que destrava a mediação — e usar isso na frente
@@ -155,10 +155,10 @@ dele custa a relação.
 símbolo aparece nas paredes do Salão dos Estandartes, no Labirinto. Ninguém
 juntou as duas coisas porque ninguém foi aos dois lugares.
 
-**O teste que decide:** d20+Inteligência para cruzar as fontes. **10+** você
+**O teste que decide:** d20+Inteligência para cruzar as fontes. **Sucesso total:** você
 confirma: é sucessão, não guerra — e os kobolds **chegaram** neste andar, não
-nasceram nele. **7-9** confirma que é o mesmo símbolo, sem entender o que
-significa. **6-** você conclui que é coincidência, com convicção.
+nasceram nele. **Sucesso parcial:** confirma que é o mesmo símbolo, sem entender o que
+significa. **Falha:** você conclui que é coincidência, com convicção.
 
 **Complicação:** Wilbrand vai querer ir junto ao Campo de Ruyn. Ele não
 sobrevive ao Campo de Ruyn.
@@ -175,9 +175,9 @@ andar 2.
 **Gancho:** Talia precisa de glândula de Rã Venenosa **inteira**, e inteira
 significa não matar a rã com pressa. Ela paga bem e não explica pra quê.
 
-**O teste que decide:** d20+Destreza para extrair sem romper. **10+** duas
-glândulas íntegras e você não se envenena. **7-9** uma, e você passa mal por
-uma cena. **6-** rompeu: veneno ativo na sua mão, e sem Luvas de Seda isso
+**O teste que decide:** d20+Destreza para extrair sem romper. **Sucesso total:** duas
+glândulas íntegras e você não se envenena. **Sucesso parcial:** uma, e você passa mal por
+uma cena. **Falha:** rompeu: veneno ativo na sua mão, e sem Luvas de Seda isso
 custa caro.
 
 **Complicação:** o coro de rãs para quando vocês param. Se parar sem vocês
@@ -195,9 +195,9 @@ ofício), e Talia começa a falar — devagar — sobre por que não sai dos mur
 Sorrel se recusa a fazer sem autorização dele — que ele já deu, por bilhete,
 mas o bilhete não chegou.
 
-**O teste que decide:** d20+Destreza para costurar a peça. **10+** fica melhor
-do que o Zelador esperava, e ele reconhece cada retalho. **7-9** fica boa, mas
-você usou um retalho que não devia. **6-** a peça sai certa e errada ao mesmo
+**O teste que decide:** d20+Destreza para costurar a peça. **Sucesso total:** fica melhor
+do que o Zelador esperava, e ele reconhece cada retalho. **Sucesso parcial:** fica boa, mas
+você usou um retalho que não devia. **Falha:** a peça sai certa e errada ao mesmo
 tempo: serve, e ofende.
 
 **Complicação:** cada retalho pertenceu a alguém. Perguntar de quem é a parte
@@ -216,7 +216,7 @@ seguidos no mesmo ponto**. Sela avisa que isso significa três viagens, e que
 quase ninguém termina.
 
 **O teste que decide:** três visitas, e no fim d20+Destreza x6 na barra de doma.
-**10+** um sucesso limpo. **7-9** um sucesso, e ela recua pro fundo. **6-**
+**Sucesso total:** um sucesso limpo. **Sucesso parcial:** um sucesso, e ela recua pro fundo. **Falha:**
 duas falhas seguidas encerram, e ela abandona o ponto por uma semana.
 
 **Complicação:** no segundo dia a isca some. Alguém — ou alguma coisa — está
@@ -234,9 +234,9 @@ com o grupo.
 **Gancho:** Kazuo está obcecado com o Fragmento de Armadura Kobold. A liga tem
 uma proporção que ele não consegue reproduzir com nada que existe no andar 1.
 
-**O teste que decide:** d20+Inteligência para ler o metal. **10+** você
-identifica: falta um componente que **não existe neste andar**. **7-9** você
-sabe que falta algo. **6-** conclui que é impureza e Kazuo aceita a resposta.
+**O teste que decide:** d20+Inteligência para ler o metal. **Sucesso total:** você
+identifica: falta um componente que **não existe neste andar**. **Sucesso parcial:** você
+sabe que falta algo. **Falha:** conclui que é impureza e Kazuo aceita a resposta.
 
 **Complicação:** a conclusão certa é ruim pro negócio dele. Se a liga não é
 reproduzível, todo item de Kobold é finito — e Kazuo vai ter que decidir se
@@ -253,9 +253,9 @@ conta isso aos clientes.
 **Gancho:** um grupo voltou de Lumis com onze pedras e a certeza de que ficou
 rico. Tor olhou de longe e riu. Eles querem uma segunda opinião.
 
-**O teste que decide:** d20+Inteligência para avaliar. **10+** você separa as
-três que prestam e explica a diferença de um jeito que eles entendem. **7-9**
-separa as três, e eles não acreditam. **6-** você erra uma, e a errada é a
+**O teste que decide:** d20+Inteligência para avaliar. **Sucesso total:** você separa as
+três que prestam e explica a diferença de um jeito que eles entendem. **Sucesso parcial:**
+separa as três, e eles não acreditam. **Falha:** você erra uma, e a errada é a
 única boa.
 
 **Complicação:** uma das onze **é** cristal de sistema, e vale mais que as
@@ -273,9 +273,9 @@ chamar quando aparece coisa que ele não reconhece.
 direito. Não é analfabetismo: ninguém confirmou a morte, e escrever antes da
 hora é uma crueldade que ele não comete.
 
-**O teste que decide:** d20+Sabedoria para descobrir o que aconteceu. **10+**
-você confirma, com testemunha, e a família sabe primeiro. **7-9** confirma, sem
-testemunha — e alguém vai duvidar. **6-** você traz a versão errada e ela vira
+**O teste que decide:** d20+Sabedoria para descobrir o que aconteceu. **Sucesso total:**
+você confirma, com testemunha, e a família sabe primeiro. **Sucesso parcial:** confirma, sem
+testemunha — e alguém vai duvidar. **Falha:** você traz a versão errada e ela vira
 oficial.
 
 **Complicação:** o nome é de alguém que o grupo conhece. Se estiverem jogando
@@ -292,9 +292,9 @@ Memorial — que na prática significa que o Zelador de Voss passa a te responde
 **Gancho:** três pessoas voltaram do Trecho III do Labirinto e nenhuma está
 ferida. Todas param de falar no meio da frase, e nenhuma sabe explicar por quê.
 
-**O teste que decide:** d20+Inteligência para diagnosticar. **10+** você nomeia:
+**O teste que decide:** d20+Inteligência para diagnosticar. **Sucesso total:** você nomeia:
 não é veneno nem medo — é a Galeria Longa, que devolve a própria voz até a
-pessoa parar de confiar nela. **7-9** você sabe o que **não** é. **6-** você
+pessoa parar de confiar nela. **Sucesso parcial:** você sabe o que **não** é. **Falha:** você
 trata como pânico, e piora.
 
 **Complicação:** o tratamento é fazer as três falarem ao mesmo tempo, em voz
@@ -312,15 +312,15 @@ Cristal** — o único jeito no andar. Vale mais que qualquer item.
 nervosas, seis clãs que não se falam, e ninguém consegue começar porque ninguém
 consegue calar a sala.
 
-**O teste que decide:** d20+Sabedoria para tocar. **10+** a sala cala, e quem
+**O teste que decide:** d20+Sabedoria para tocar. **Sucesso total:** a sala cala, e quem
 falar depois de você começa com todo mundo ouvindo — inclusive você, se quiser.
-**7-9** cala metade, e a metade barulhenta é a pior. **6-** você toca a música
+**Sucesso parcial:** cala metade, e a metade barulhenta é a pior. **Falha:** você toca a música
 errada pra plateia errada, e alguém ri.
 
 **Complicação:** Perim se recusa a tocar na frente de tanta gente. Ele empresta
 o alaúde e não sobe no tablado, e não explica.
 
-**Recompensa:** 60 Col, o `Diapasão de Prata Rachado`, e — se der 10+ — você
+**Recompensa:** 60 Col, o `Diapasão de Prata Rachado`, e — se der sucesso total — você
 escolhe **quem fala primeiro** na reunião que decide o raid.
 
 ---
@@ -332,9 +332,9 @@ escolhe **quem fala primeiro** na reunião que decide o raid.
 Assalto Conhecido. Todo mundo sabe onde é. Ninguém resolveu. Ele paga bem
 porque já perdeu duas cargas.
 
-**O teste que decide:** d20+Força para segurar a linha na curva. **10+** a
-caravana passa inteira e ninguém do comboio se machuca. **7-9** a carga passa,
-o cavalo não. **6-** carga perdida, e a fama circula em Tolbana antes de você
+**O teste que decide:** d20+Força para segurar a linha na curva. **Sucesso total:** a
+caravana passa inteira e ninguém do comboio se machuca. **Sucesso parcial:** a carga passa,
+o cavalo não. **Falha:** carga perdida, e a fama circula em Tolbana antes de você
 chegar.
 
 **Complicação:** quem espera na curva não são monstros. São jogadores, e eles

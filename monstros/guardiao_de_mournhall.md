@@ -8,7 +8,6 @@ local: caverna
 regioes: [caverna_ecos]
 nivel_recomendado: "8-9"
 nivel_ameaca: elite
-golpes_para_derrotar: 9
 ca: 15
 pv: 80
 bonus_ataque: +5
@@ -50,7 +49,7 @@ Ele para de respirar. O ruído grave que enchia a câmara some, e o silêncio é
 
 ## Fraquezas
 
-- **Atributo — Espírito:** décadas de teimosia pura são o que o mantém de pé, e arma de Espírito bate exatamente aí. Nove golpes é muito para qualquer grupo, e essa é a única coisa no andar que encurta essa conta. Em 10+ ele perde o rugido pelo resto da cena.
+- **Atributo — Sabedoria:** décadas de teimosia pura são o que o mantém de pé, e um ataque que usa Sabedoria bate exatamente aí, causando +1d6 de dano extra — a única coisa no andar que encurta a conta de golpes necessários pra derrubá-lo.
 - Ele se ergue e expõe o ventre sem pelagem grossa um instante antes de rugir.
 - Luz intensa o desorienta: viveu a vida inteira no escuro e nunca se adaptou.
 
@@ -85,15 +84,13 @@ morre uma vez, e o grupo decide junto, na hora, se aquele núcleo vira
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 15
 - **PV:** 80
 - **Bônus de Ataque:** +5
 - **CD de Resistência:** 14
-- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

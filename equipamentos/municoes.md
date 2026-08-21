@@ -65,17 +65,17 @@ Frágil esfera de vidro, pólvora + açúcar + colorante. Quebra no impacto, lib
 
 Esfera de vidro com magnésio em pó + oxidante. Brilho cegante no impacto.
 
-**Efeito:** Todo mundo em 2m de raio (exceto quem jogou, se fechou os olhos) fica cego por 1 rodada. Teste de Reflexo 10+ evita.
+**Efeito:** Todo mundo em 2m de raio (exceto quem jogou, se fechou os olhos) fica com a condição Cego por 1 rodada. **Teste de Resistência de Destreza (CD 12)** evita.
 **Como obter:** Craft de Alquimista (Vidro x1, Magnésio x2, Oxidante x1. Dificuldade: 6-.)
 
 ---
 
 ## Armadilha de Urso Simples — Comum
-**Requisito:** Técnica -1+ · **Preço base:** 100 Col (unidade)
+**Requisito:** Destreza 8+ · **Preço base:** 100 Col (unidade)
 
 Mola de ferro + dentes afiados. Pressionar placa, morde o pé.
 
-**Efeito:** Armadilha de solo. Alvo pisa e leva 2 dano direto + fica imobilizado. Teste de Corpo 7-9 solta com 1 dano extra; 10+ solta sem dano.
+**Efeito:** Armadilha de solo. Alvo pisa e leva 2 de dano perfurante + fica com a condição Restringido. **Teste de Resistência de Força (CD 12):** Sucesso parcial solta com 1 dano extra; Sucesso total solta sem dano extra.
 **Como obter:** Craft de Caçador (Mola Ferro x1, Dentes Aço x4, Corrente x1. Ferramentas: Alicate, Bigorna. Dificuldade: 6-.)
 
 ---
@@ -95,7 +95,7 @@ Frasco de vidro com ácido diluído. Queima metal e carne.
 
 Frasco de óleo refinado, super escorregadio.
 
-**Efeito:** Joga no chão de 2x2m. Todo mundo que passa tem que passar em Reflexo ou cai. Também serve pra lubrificar fechadura, mecanismo, arma.
+**Efeito:** Joga no chão de 2x2m. Quem passa por cima precisa de um **Teste de Resistência de Destreza (CD 12)** ou cai (condição Caído). Também serve pra lubrificar fechadura, mecanismo, arma.
 **Como obter:** Craft de Alquimista + Ferreiro (Frasco x1, Óleo x2. Dificuldade: 6-.)
 
 ---
@@ -105,7 +105,7 @@ Frasco de óleo refinado, super escorregadio.
 
 Pequeno cristal de quartzo, carregado com leve descarga. Impacto = pequena explosão.
 
-**Efeito:** Arremesso curto. Acerto causa 1 dano de impacto + 1 de estruendo (surdez temporária). Bom pra quebrar porta ou caixa.
+**Efeito:** Arremesso curto. Acerto causa 1 dano de impacto + condição Surdo por 1 rodada. Bom pra quebrar porta ou caixa.
 **Como obter:** Craft de Cristalista (Cristal Quartzo x1, Fio Cobre x1. Ferramentas: Amolador, Bateria. Dificuldade: 6-.)
 
 ---
@@ -115,13 +115,13 @@ Pequeno cristal de quartzo, carregado com leve descarga. Impacto = pequena explo
 
 Ponta de flecha com cristal elemental embutido. Vem em 5 opções: Fogo, Gelo, Trovão, Natureza, Sombra.
 
-**Efeito:** Escolhe 1 elemento ao craftar. Acerto +1 dano do tipo + chance de efeito colateral (queimar, congelar, chocar, prender, atordoar). **Produz:** 10 por lote.
+**Efeito:** Escolhe 1 elemento ao craftar. Acerto: **+1 dano do tipo escolhido** + chance de efeito colateral (queimar, congelar, chocar, prender, atordoar). **Produz:** 10 por lote.
 **Como obter:** Craft de Flecheiro + Cristalista (Flecha Perfurante x10, Cristal Elemental x1. Ferramentas: Amolador, Fio Prata. Dificuldade: 7.)
 
 ---
 
 ## Flechas Rastreadoras — Incomum
-**Requisito:** Conhecimento -1+ · **Preço base:** 120 Col (lote de 5)
+**Requisito:** Inteligência 8+ · **Preço base:** 120 Col (lote de 5)
 
 Ponta com pena mágica + farelo luminoso. Deixa rastro invisível pra maioria dos olhos.
 
@@ -135,7 +135,7 @@ Ponta com pena mágica + farelo luminoso. Deixa rastro invisível pra maioria do
 
 Esfera com composto super-frio. Libera temperatura negativa extrema.
 
-**Efeito:** 2m raio. Alvos congelam levemente — -1 em Reflexo por 2 rodadas. Super eficaz contra criaturas de fogo ou planta.
+**Efeito:** 2m de raio. Alvos congelam levemente: **-1 em testes e Testes de Resistência de Destreza por 2 rodadas.** Super eficaz contra criaturas de fogo ou planta.
 **Como obter:** Craft de Alquimista (Vidro x1, Gelo Seco x1, Composto Estável x2. Dificuldade: 7.)
 
 ---
@@ -145,37 +145,37 @@ Esfera com composto super-frio. Libera temperatura negativa extrema.
 
 Mistura explosiva instável de 5 compostos diferentes. Nunca dá a mesma coisa duas vezes.
 
-**Efeito:** Rola d10 no impacto. 1-2 nada acontece. 3-4 fogo. 5-6 fumaça colorida. 7-8 gás do sono leve. 9 confusão. 10 pequena explosão dano 2.
+**Efeito:** Rola d10 no impacto. 1-2 nada acontece. 3-4 fogo (1 dano). 5-6 fumaça colorida (como Bomba de Fumaça). 7-8 gás do sono leve (Teste de Resistência de Constituição CD 12 ou Inconsciente por 1 rodada). 9 confusão (Enfeitiçado por 1 rodada). 10 pequena explosão, 2 de dano.
 **Como obter:** Craft de Alquimista Maluco (Vidro x1, 5 ingredientes aleatórios. Dificuldade: 8.)
 
 ---
 
 ## Armadilha de Rede Elástica — Incomum
-**Requisito:** Técnica -1+ · **Preço base:** 180 Col (unidade)
+**Requisito:** Destreza 8+ · **Preço base:** 180 Col (unidade)
 
 Rede de fibra elástica, disparada por mola quando pisa na placa. Prende o alvo inteiro.
 
-**Efeito:** Alvo fica completamente preso (não se move, não usa armas). Reflexo 10+ evita; Corpo 10+ rompe a rede em 2 rodadas.
+**Efeito:** Alvo fica com a condição Restringido. **Teste de Resistência de Destreza (CD 13)** evita ficar preso; **Teste de Resistência de Força (CD 13)**, gastando a ação, rompe a rede em até 2 rodadas de tentativa.
 **Como obter:** Craft de Caçador (Fibra Elástica x5, Mola x3, Placa Pressão x1. Dificuldade: 8.)
 
 ---
 
 ## Flechas do Dragão — Lendário
-**Requisito:** Reflexo 1+ · **Preço base:** não tem preço (lote de 3)
+**Requisito:** Destreza 12+ · **Preço base:** não tem preço (lote de 3)
 
 Escamas de dragão esmagadas + vara de árvore milenar + pena de fênix. A flecha brilha antes de sair da corda.
 
-**Efeito:** **+3 dano perfurante + 2 de fogo.** Ignora 1 nível de armadura. **Produz:** 3 por lote. **Único:** lote só pode ser feito 1 vez por mês.
+**Efeito:** **+3 de dano perfurante + 2 de dano de fogo.** Ignora 1 nível de armadura do alvo (reduz a CA efetiva do alvo em 1 contra esse ataque). **Produz:** 3 por lote. **Único:** lote só pode ser feito 1 vez por mês.
 **Como obter:** Craft de Flecheiro nível 5 (Vara Milenar x1, Escama Dragão x1, Pena Fênix x1. Ferramentas: Arco Forjado, Fio Lendário. Dificuldade: 10+.)
 
 ---
 
 ## Flechas Fantasma — Lendário
-**Requisito:** Reflexo 1+ · **Preço base:** não tem preço (lote de 3)
+**Requisito:** Destreza 12+ · **Preço base:** não tem preço (lote de 3)
 
 Tecido de sombra + ponta de obsidiana. A flecha some no meio do ar e reaparece no alvo.
 
-**Efeito:** **Não pode ser bloqueado, nem desviado por escudo ou parada.** Atinge sempre. Dano base 2 + 1 sombra (atordoamento leve). **Produz:** 3 por lote.
+**Efeito:** **Não pode ser bloqueada nem desviada por escudo ou parada — acerta automaticamente.** Dano base 2 perfurante + 1 sombrio, e deixa o alvo com a condição Atordoado até o fim do próximo turno dele. **Produz:** 3 por lote.
 **Como obter:** Craft de Flecheiro nível 5 + Sombra (Tecido Sombra x2, Obsidiana x1, Cristal Sombra x1. Dificuldade: 10+.)
 
 ---
@@ -185,7 +185,7 @@ Tecido de sombra + ponta de obsidiana. A flecha some no meio do ar e reaparece n
 
 Papelote grosso envolvendo 10 camadas de composto explosivo. Pesado, instável, proibido em cidades.
 
-**Efeito:** Raio de 6 metros. Todo mundo na área (exceto quem lançou e está atrás de cobertura) leva 3 dano de explosão + 2 de estilhaço. **Aviso:** se cair no chão sem querer, explode em 3 segundos.
+**Efeito:** Raio de 6 metros. Todo mundo na área (exceto quem lançou e está atrás de cobertura) leva **3 de dano de explosão + 2 de dano de estilhaço**. **Aviso:** se cair no chão sem querer, explode em 3 segundos.
 **Como obter:** Craft de Alquimista nível 5 (Composto Alto Explosivo x5, Estilhaço Aço x10, Mecha lenta x1. Dificuldade: 10+.)
 
 ---
@@ -195,7 +195,7 @@ Papelote grosso envolvendo 10 camadas de composto explosivo. Pesado, instável, 
 
 Cristal de quartzo gigante, carregado até o limite com energia cinética. Brilha muito.
 
-**Efeito:** Arremessado ou colocado. Ativação por comando. Explosão de 4 metros. 4 dano + 2 concussão. **Serve pra destruir parede de pedra inteira.**
+**Efeito:** Arremessado ou colocado. Ativação por comando. Explosão de 4 metros: **4 de dano de impacto + 2 de dano de concussão**, e quem estiver no centro fica com a condição Atordoado até o fim do turno seguinte. Serve pra destruir uma parede de pedra inteira.
 **Como obter:** Craft de Cristalista nível 5 (Cristal Gigante x1, Energia Cinética x5, Fio Liga x2. Dificuldade: 10+.)
 
 ---
@@ -205,5 +205,5 @@ Cristal de quartzo gigante, carregado até o limite com energia cinética. Brilh
 
 Glyph desenhado no chão com sangue de criatura espiritual. Não pode ser visto com olhos comuns.
 
-**Efeito:** Quem pisa tem alma temporariamente puxada pra fora — fica paralisado por 3 rodadas. Mesmo criaturas mortas-vivas ou espirituais são afetadas.
+**Efeito:** Quem pisa tem a alma temporariamente puxada pra fora — fica com a condição Paralisado por 3 rodadas. Mesmo criaturas mortas-vivas ou espirituais são afetadas.
 **Como obter:** Craft de Caçador nível 5 (Sangue Espiritual x2, Giz de Obsidiana x1, Ritual de Invocação x1. Dificuldade: 10+.)

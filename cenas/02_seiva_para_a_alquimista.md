@@ -87,8 +87,8 @@ maior ao equipamento do que à vida.
 
 - **Recuar e voltar depois:** funciona, mas a Mulher Aflita fica visivelmente
   mais desesperada e a quest ganha urgência.
-- **Capturar em vez de abater:** possível; em 10+ rende seiva limpa e uma
-  muda útil, em 7-9 a planta reage tarde demais e estraga parte do resultado.
+- **Capturar em vez de abater:** possível; em sucesso total rende seiva limpa e uma
+  muda útil, em sucesso parcial a planta reage tarde demais e estraga parte do resultado.
 - **Usar fogo ou explosão:** mata fácil, mas provavelmente arruina a seiva.
 
 ## Recompensas

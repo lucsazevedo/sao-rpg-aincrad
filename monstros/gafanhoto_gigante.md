@@ -8,7 +8,6 @@ local: agricultura em socalco
 regioes: [terracos, vale_moinhos, campos_leste]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -59,7 +58,7 @@ O ruído de serra vindo do mato. Uma perna esfregando é curiosidade; dez esfreg
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a força deles é o salto em massa — arma de Reflexo, reagindo no tempo do salto, quebra a coordenação. Em 10+ a ninhada perde o salto coordenado pelo resto da cena.
+- **Atributo — Destreza:** a força deles é o salto em massa — um ataque que usa Destreza, reagindo no tempo do salto, causa +1d6 de dano extra.
 - As patas traseiras se dobram antes do salto, e nesse instante ele está preso ao chão.
 - Movimento devagar não dispara nada. O grupo controla quando a luta começa.
 - Na ninhada, destruir as ovas encerra tudo sem lutar contra nenhum adulto.
@@ -77,15 +76,13 @@ O ruído de serra vindo do mato. Uma perna esfregando é curiosidade; dez esfreg
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -98,8 +95,8 @@ Os Terraços de Solveig perdem uma colheita inteira a cada poucas semanas, e a f
 É o monstro que **não deve ser resolvido por combate** — se o grupo só matar
 gafanhotos, eles voltam na sessão seguinte, e essa deve ser uma consequência
 visível. A solução está em `bounty_05_colheita_ameacada`: achar e queimar a
-ninhada nas fendas, o que exige um teste de Conhecimento (Cartógrafo/
-Bibliotecário brilham) antes de qualquer teste de Corpo.
+ninhada nas fendas, o que exige um teste de Inteligência (Cartógrafo/
+Bibliotecário brilham) antes de qualquer teste de Força.
 
 Também é a fonte prática do **Cozinheiro** no leste do mapa: Perna
 Serrilhada é proteína barata e abundante, o que dá ao Cozinheiro uma fonte

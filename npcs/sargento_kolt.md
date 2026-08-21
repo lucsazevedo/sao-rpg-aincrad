@@ -68,6 +68,6 @@ organizar uma fila. O apelido pegou. Ele finge não gostar.
 
 ## Combate (se aplicável)
 
-Corpo 2, Machado, Skill Quebrar Guarda. Segura uma linha sozinho.
+Força 14, Machado, Skill Quebrar Guarda. Segura uma linha sozinho.
 
 <!-- convertido-dnd5e -->

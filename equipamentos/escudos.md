@@ -31,7 +31,7 @@ item some do inventário.
 ---
 
 ## Escudo Redondo de Ferro — Comum
-**Requisito:** Corpo -1+ · **Preço base:** 140 Col
+**Requisito:** Força 8+ · **Preço base:** 140 Col
 
 Redondo, sem brasão, com marcas de martelo ainda visíveis. O padrão de
 guarda que todo NPC de portão carrega.
@@ -45,13 +45,13 @@ ele. Não reduz nada, só transfere.
 ---
 
 ## Rodela do Vigia — Incomum
-**Requisito:** Reflexo -1+ · **Preço base:** 250 Col
+**Requisito:** Destreza 8+ · **Preço base:** 250 Col
 
 Pequena, quase um prato de metal preso ao antebraço. Não protege muito —
 serve pra desviar a linha do golpe, não pra pará-lo.
 
-**Efeito:** **+1 em testes de Reflexo para esquivar de projétil** (flecha de
-Ruin Kobold Arqueiro, ferrão em mergulho, pedra de armadilha).
+**Efeito:** **+1 CA contra ataques à distância** (flecha de Ruin Kobold
+Arqueiro, ferrão em mergulho, pedra de armadilha).
 
 **Como obter:** recompensa de `labirinto_h03`; ou Ferreiro de Tolbana
 (Placas de Metal Refinado x2).
@@ -59,14 +59,14 @@ Ruin Kobold Arqueiro, ferrão em mergulho, pedra de armadilha).
 ---
 
 ## Escudo de Casco de Verme — Incomum
-**Requisito:** Corpo -1+ · **Preço base:** 400 Col
+**Requisito:** Força 8+ · **Preço base:** 400 Col
 
 Segmento curvo da carapaça do Verme de Cristal, polido por dentro e opaco por
 fora. Sob luz de tocha, o interior acende num azul fraco que ilumina o rosto
 de quem se agacha atrás.
 
-**Efeito:** **+1 em testes de Corpo para segurar posição contra investida**
-(Frenzy Boar, Urso de Pedra, carga de tropa Kobold).
+**Efeito:** **+1 CA para segurar posição contra investida** (Frenzy Boar,
+Urso de Pedra, carga de tropa Kobold).
 **Utilidade:** acende sozinho em escuridão total — luz fraca, alcance de dois
 passos, não substitui um Cristal de Luz mas evita ficar às cegas.
 
@@ -76,13 +76,13 @@ a um Ferreiro.
 ---
 
 ## Pavês de Portão — Incomum
-**Requisito:** Corpo 0+ · **Preço base:** 430 Col
+**Requisito:** Força 10+ · **Preço base:** 430 Col
 
 Escudo alto, quase da altura do peito, com pé de apoio dobrável. Feito pra
 brigar num corredor, não em campo aberto.
 
-**Efeito:** **+1 em testes de Corpo para bloquear em corredor, porta ou
-passagem estreita** — inclui todo o Labirinto do Andar 1.
+**Efeito:** **+1 CA em corredor, porta ou passagem estreita** — inclui todo o
+Labirinto do Andar 1.
 **Custo embutido:** em campo aberto não dá bônus nenhum, e o mestre pode
 cobrar uma complicação de mobilidade em perseguições.
 
@@ -97,8 +97,8 @@ cobrar uma complicação de mobilidade em perseguições.
 Escamas Prateadas sobrepostas num aro de madeira leve. Escorrega água como se
 a repelisse.
 
-**Efeito:** **+1 em testes de Reflexo em terreno molhado, chuva ou dentro
-d'água** (Lago Sylvaine, Rio Coluber, Charco de Grenna).
+**Efeito:** **+1 CA em terreno molhado, chuva ou dentro d'água** (Lago
+Sylvaine, Rio Coluber, Charco de Grenna).
 **Utilidade:** flutua — pode ser usado como boia improvisada por uma pessoa,
 o que já salvou personagem na cadeia C.
 
@@ -108,15 +108,14 @@ aro de Madeira Nodosa); ou recompensa de `sylvaine_05`.
 ---
 
 ## Tampa de Sepultura — Incomum
-**Requisito:** Corpo 0+ · **Preço base:** não é vendido
+**Requisito:** Força 10+ · **Preço base:** não é vendido
 
 Uma laje retangular de pedra da Necrópole de Voss, com uma alça de couro
 grosseiramente pregada atrás. É literalmente uma tampa de túmulo. Todo NPC
 que vê comenta.
 
-**Efeito:** **+1 em testes de Espírito para resistir a medo, sussurro ou
-influência mental** — a pedra é fria e presente demais pra deixar alguém se
-perder.
+**Efeito:** **+1 CA.** A pedra fria e presente demais ajuda tanto contra um
+golpe quanto contra medo, sussurro ou influência mental.
 **Custo social:** enquanto carregado, o Zelador do Memorial se recusa a
 conversar, e a cadeia F trava até a laje ser devolvida.
 
@@ -126,18 +125,17 @@ escolha, não um acidente — e o jogo cobra.
 ---
 
 ## Broquel de Illfang (réplica de campo) — Raro
-**Requisito:** Corpo 0+ · **Preço base:** 1200 Col (quase nunca vendido)
+**Requisito:** Força 10+ · **Preço base:** 1200 Col (quase nunca vendido)
 
 Reconstruído a partir do broquel estilhaçado que Illfang carrega na primeira
 fase, remontado sobre um aro novo. As garras de kobold gravadas na face
 continuam lá; o Ferreiro que remonta sempre deixa uma rachadura visível de
 propósito.
 
-**Efeito:** **+1 em testes de Corpo para bloquear qualquer golpe corpo a
-corpo.**
+**Efeito:** **+2 CA para bloquear qualquer golpe corpo a corpo.**
 **Efeito único — Postura de Chefe:** uma vez por combate, ao bloquear com
-sucesso (10+), o usuário pode **contra-atacar imediatamente sem gastar sua
-ação**, com o mesmo teste já rolado.
+sucesso, o usuário pode **contra-atacar imediatamente sem gastar sua ação**,
+com o mesmo teste já rolado.
 **Peso da história:** quem carrega isso é reconhecido em Tolbana como alguém
 que estava no raid. Abre portas com guildas e fecha portas com quem perdeu
 gente lá.

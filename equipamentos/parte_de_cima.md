@@ -59,13 +59,13 @@ que desbotam em uma semana de jogo.
 ---
 
 ## Casaco de Retalhos do Coveiro — Incomum
-**Requisito:** Espírito -1+ · **Preço base:** 230 Col
+**Requisito:** Sabedoria 8+ · **Preço base:** 230 Col
 
 Costurado com pedaços de roupa que pertenceram a gente que não está mais
 aqui. Cada retalho tem uma cor diferente e o Zelador do Memorial sabe de quem
 era cada um.
 
-**Efeito:** **+1 em testes de Espírito para não se abalar diante de morte,
+**Efeito:** **+1 em testes de Sabedoria para não se abalar diante de morte,
 perda ou memorial** — a peça do **Coveiro**.
 **Utilidade:** quem usa consegue nomear, olhando, o retalho de qualquer
 jogador morto cuja história o grupo já tenha cruzado. O mestre deve usar isso
@@ -78,12 +78,13 @@ campo.
 ---
 
 ## Manto Verde de Horunka — Incomum
-**Requisito:** Reflexo -1+ · **Preço base:** 210 Col
+**Requisito:** Destreza 8+ · **Preço base:** 210 Col
 
 Capa curta de lã verde-escura com forro de couro nos ombros. A vila inteira
 usa; um forasteiro com um chama menos atenção lá dentro.
 
-**Efeito:** **+1 em testes de Reflexo para se mover em silêncio na floresta.**
+**Efeito:** **+1 em testes de Destreza (Furtividade) para se mover em
+silêncio na floresta.**
 **Utilidade social:** dentro de Horunka, o usuário deixa de ser tratado como
 forasteiro depois da primeira conversa em vez da terceira.
 
@@ -98,8 +99,9 @@ com Madeira (para o tingimento) + tecido.
 Comprido, escuro, com forro cheio de bolsos costurados por dentro. Vendido
 sem explicação na Trilha de Corvain.
 
-**Efeito:** **+1 em testes de Reflexo ou Conhecimento para esconder um item
-de uma revista** (guarda de portão, NPC de guilda, outro jogador).
+**Efeito:** **+1 em testes de Destreza ou Inteligência (conforme a
+abordagem) para esconder um item de uma revista** (guarda de portão, NPC de
+guilda, outro jogador).
 **Utilidade:** carrega até seis itens pequenos "fora do inventário visível".
 Numa mesa que use inspeção de guilda, isso importa.
 
@@ -109,13 +111,14 @@ Corvain, que prefere troca a Col.
 ---
 
 ## Blusão Acolchoado do Ferreiro — Incomum
-**Requisito:** Corpo -1+ · **Preço base:** 260 Col
+**Requisito:** Força 8+ · **Preço base:** 260 Col
 
 Algodão prensado entre duas camadas de couro fino, com manchas de queimadura
 distribuídas de forma quase decorativa.
 
-**Efeito:** **+1 em testes de Corpo para resistir a calor, fogo ou brasa** —
-inclui a forja, a Gruta de Lumis e qualquer armadilha de fogo do Labirinto.
+**Efeito:** **+1 em testes de Constituição para resistir a calor, fogo ou
+brasa** — inclui a forja, a Gruta de Lumis e qualquer armadilha de fogo do
+Labirinto.
 **Utilidade:** permite trabalhar na forja por turnos longos sem teste de
 resistência.
 
@@ -124,12 +127,12 @@ resistência.
 ---
 
 ## Túnica Bordada do Diplomata — Incomum
-**Requisito:** Conhecimento -1+ · **Preço base:** 390 Col
+**Requisito:** Inteligência 8+ · **Preço base:** 390 Col
 
 Bordado discreto no punho e na gola, no padrão neutro que nenhuma das seis
 guildas reivindica — e foi negociado justamente pra que nenhuma reivindique.
 
-**Efeito:** **+1 em testes de Conhecimento para ser levado a sério numa
+**Efeito:** **+1 em testes de Inteligência para ser levado a sério numa
 conversa formal** (audiência de guilda, negociação de preço grande, pedir
 passagem em território disputado).
 **Utilidade:** o usuário pode entrar em qualquer reunião de guilda em Tolbana
@@ -141,13 +144,13 @@ duas guildas — o que é, ele mesmo, um pedaço de quest da cadeia E.
 ---
 
 ## Manto do Arauto — Raro
-**Requisito:** Espírito 0+ · **Preço base:** não é vendido
+**Requisito:** Sabedoria 10+ · **Preço base:** não é vendido
 
 Manto feito das penas do Arauto das Alturas, sobrepostas como escamas. Pesa
 quase nada. Em corrente de ar, as penas se levantam sozinhas na direção do
 vento antes do vento chegar.
 
-**Efeito:** **+1 em testes de Reflexo para qualquer coisa envolvendo queda,
+**Efeito:** **+2 em testes de Destreza para qualquer coisa envolvendo queda,
 salto, escalada ou vento** (Penhascos de Vaelor, Montanhas de Grauvenn,
 telhados de Tolbana).
 **Efeito único — Descida do Arauto:** o usuário **não sofre consequência de

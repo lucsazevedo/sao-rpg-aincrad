@@ -8,7 +8,6 @@ local: campo
 regioes: [campos_oeste, colinas_pedra, campos_leste]
 nivel_recomendado: "9-10"
 nivel_ameaca: chefe
-golpes_para_derrotar: "3x5"
 ca: 16
 pv: 165
 bonus_ataque: +6
@@ -67,10 +66,9 @@ que não parece calculado, e é o único que precede violência.
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** a escrita que cobre ele inteiro é o segredo
-  e a brecha — arma de Conhecimento, na mão de quem leu o padrão, é a
-  resposta desenhada para esta luta. Em 10+ ele perde a investida coroada
-  pelo resto da cena, e sem ela a arena inteira muda de dono.
+- **Atributo — Inteligência:** a escrita que cobre ele inteiro é o segredo
+  e a brecha — um ataque que usa Inteligência, na mão de quem leu o padrão,
+  é a resposta desenhada para esta luta e causa +1d6 de dano extra.
 - A galhada fica aberta depois do giro, e é a única parte dele que importa.
 - Terreno fechado o anula: entre pedras, ele não corre, e sem corrida ele é
   grande e lento.
@@ -114,15 +112,13 @@ carregada por um animal que não devia saber escrever.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 16
 - **PV:** 165
 - **Bônus de Ataque:** +6
 - **CD de Resistência:** 15
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 
@@ -147,7 +143,7 @@ para alguém que ainda espera entregá-lo.
   entregar, e não traduza tudo de uma vez.
 - **Como usar em transmissão:** a pausa da terceira barra. Segure o silêncio
   mais tempo do que é confortável — inclusive para você.
-- **Erro comum do grupo:** chegar sem ninguém de arma de Conhecimento. O
+- **Erro comum do grupo:** chegar sem ninguém de arma de Inteligência. O
   caminho estava dado: as marcas na pelagem do Guardião, a escrita na
   galhada, os Corretores de Tolbana vendem a informação. Se chegarem sem,
   deixe a luta ser dura e honesta.

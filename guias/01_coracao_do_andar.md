@@ -65,7 +65,7 @@ contar os toques em voz alta.
 
 ### O que dá pra fazer aqui
 
-| Ação                                | Teste            | 10+                                                                  | 7-9                                            | 6-                                                        |
+| Ação                                | Teste            | Sucesso total (CD+5)                                                                  | Sucesso parcial                                            | Falha                                                        |
 | ----------------------------------- | ---------------- | -------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------- |
 | Ler o quadro de missões             | d20+Inteligência | Duas quests úteis e qual paga melhor                                 | Uma quest, mas o pedido está incompleto        | Só pedidos velhos, já resolvidos por outros               |
 | Ouvir boato na praça                | d20+Sabedoria     | Um boato verdadeiro e a fonte dele                                   | Um boato verdadeiro, fonte desconhecida        | Um boato falso que soa verdadeiro (o mestre escolhe qual) |
@@ -186,7 +186,7 @@ grupo atento percebe.
 
 ### O que dá pra fazer aqui
 
-| Ação                            | Teste            | 10+                                                                                         | 7-9                                                  | 6-                              |
+| Ação                            | Teste            | Sucesso total (CD+5)                                                                                         | Sucesso parcial                                                  | Falha                              |
 | ------------------------------- | ---------------- | ------------------------------------------------------------------------------------------- | ---------------------------------------------------- | ------------------------------- |
 | Examinar o mural dos 5 encaixes | d20+Inteligência | Entende que a ordem importa e que existe uma pista fora daqui                               | Entende que faltam cristais, não que a ordem importa | Conclui que é decorativo        |
 | Procurar ponto fraco na muralha | d20+Destreza      | Acha uma rachadura de verdade e ninguém viu                                                 | Acha, mas um guarda notou você olhando               | Nada. Parede velha              |
@@ -275,7 +275,7 @@ bem antes de o grupo reparar nele.
 
 ### O que dá pra fazer aqui
 
-| Ação                                  | Teste            | 10+                                                    | 7-9                             | 6-                                |
+| Ação                                  | Teste            | Sucesso total (CD+5)                                                    | Sucesso parcial                             | Falha                                |
 | ------------------------------------- | ---------------- | ------------------------------------------------------ | ------------------------------- | --------------------------------- |
 | Caçar Frenzy Boar (nuca)              | d20+Força        | Derruba com um golpe, presa intacta                    | Derruba, mas leva uma investida | Ele acerta primeiro e chama outro |
 | Colher Ervas Comuns                   | d20+Destreza      | 2 unidades, sem se sujar                               | 1 unidade e um arranhão         | Nada aproveitável                 |
@@ -286,7 +286,7 @@ bem antes de o grupo reparar nele.
 
 ### Só o mestre
 
-Verrun é a região de tutorial e deve ser generosa. Um 6- aqui nunca mata — ele
+Verrun é a região de tutorial e deve ser generosa. Uma falha aqui nunca mata — ele
 ensina. Frenzy Boar é o melhor professor do jogo: mesmo errando, o grupo
 sobrevive e entende o sistema.
 
@@ -355,7 +355,7 @@ mais rápido e mais machucado.
 
 ### O que dá pra fazer aqui
 
-| Ação                               | Teste            | 10+                                 | 7-9                                              | 6-                              |
+| Ação                               | Teste            | Sucesso total (CD+5)                                 | Sucesso parcial                                              | Falha                              |
 | ---------------------------------- | ---------------- | ----------------------------------- | ------------------------------------------------ | ------------------------------- |
 | Ouvir aproximação apesar do vento  | d20+Sabedoria     | Sabe o que vem e de onde            | Sabe que vem algo, não o quê                     | Emboscada; inimigo age primeiro |
 | Caçar Stabbing Wasp                | d20+Destreza      | Abate em voo, glândula intacta      | Abate, mas leva um ferrão (veneno leve)          | Ela ferroa e chama o ninho      |
@@ -418,7 +418,7 @@ Não é zona segura de sistema. Ninguém briga porque ninguém quer ser o primei
 
 ### O que dá pra fazer aqui
 
-| Ação                                   | Teste            | 10+                                                            | 7-9                                   | 6-                                        |
+| Ação                                   | Teste            | Sucesso total (CD+5)                                                            | Sucesso parcial                                   | Falha                                        |
 | -------------------------------------- | ---------------- | -------------------------------------------------------------- | ------------------------------------- | ----------------------------------------- |
 | Sondar clima entre as guildas          | d20+Inteligência | Sabe quem está de mal com quem e por quê                       | Sabe que há atrito, não a causa       | Pergunta pra pessoa errada e vira assunto |
 | Negociar entrada numa expedição        | d20+Inteligência | Aceitos, com parte justa do espólio                            | Aceitos, mas na parte pior da divisão | Recusados, e a recusa circula             |
@@ -483,7 +483,7 @@ ninguém explicou. Deixe assim.
 
 ### O que dá pra fazer aqui
 
-| Ação                           | Teste             | 10+                                                     | 7-9                                         | 6-                                          |
+| Ação                           | Teste             | Sucesso total (CD+5)                                                     | Sucesso parcial                                         | Falha                                          |
 | ------------------------------ | ----------------- | ------------------------------------------------------- | ------------------------------------------- | ------------------------------------------- |
 | Pegar carona com caravana      | d20+Inteligência  | Viagem grátis e informação de estrada                   | Viagem, mas espera-se ajuda se der problema | Recusam; a estrada vira longa               |
 | Comerciar com o condutor       | d20+Inteligência  | Preço de atacado (20% abaixo)                           | Preço normal                                | Ele fecha a carroça                         |
@@ -547,7 +547,7 @@ As engrenagens giram sem acionar nada. Esse é o ponto.
 
 ### O que dá pra fazer aqui
 
-| Ação                                 | Teste            | 10+                                                     | 7-9                                         | 6-                               |
+| Ação                                 | Teste            | Sucesso total (CD+5)                                                     | Sucesso parcial                                         | Falha                               |
 | ------------------------------------ | ---------------- | ------------------------------------------------------- | ------------------------------------------- | -------------------------------- |
 | Pesquisar um monstro (Bibliotecário) | d20+Inteligência | Fraqueza, resistências e vulnerabilidades completas     | Só a fraqueza principal                     | Nada, e gasta o tempo de preparo |
 | Conversar com o Estudioso            | d20+Sabedoria     | Ele coopera de graça e empresta o Marcador de Página    | Coopera, mas fala demais e você perde tempo | Ele te trata como interrupção    |
@@ -614,7 +614,7 @@ perto.
 
 ### O que dá pra fazer aqui
 
-| Ação                                  | Teste            | 10+                                                                                              | 7-9                               | 6-                                 |
+| Ação                                  | Teste            | Sucesso total (CD+5)                                                                                              | Sucesso parcial                               | Falha                                 |
 | ------------------------------------- | ---------------- | ------------------------------------------------------------------------------------------------ | --------------------------------- | ---------------------------------- |
 | Colher Néctar de Flor Rara            | d20+Inteligência | 2 doses, sem levantar pó                                                                         | 1 dose e a nuvem acorda           | Espirro; o mestre puxa um encontro |
 | Domar uma Fada da Poeira              | d20+Destreza x4   | 1 sucesso limpo                                                                                  | 1 sucesso, ela se afasta irritada | Sem sucesso; 2 falhas encerram     |

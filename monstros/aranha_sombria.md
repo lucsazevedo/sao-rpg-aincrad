@@ -8,7 +8,6 @@ local: caverna
 regioes: [caverna_lumis, gruta_escura, ruinas_kobold_subterraneo]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -42,12 +41,12 @@ A teia no chão não está lá por acaso. Quando você vê fios finos cruzando o
 
 ## Ataques
 
-- **Teia-cola** — jato de teia fina, até 3 metros. Acerto no braço ou perna = membro preso. Para soltar: Corpo 7-9 demora 1 rodada; 10+ solta imediatamente.
+- **Teia-cola** — jato de teia fina, até 3 metros. Acerto no braço ou perna = membro preso. Para se soltar: teste de Força (Atletismo) CD 11 — sucesso liberta o membro na hora, falha custa a ação inteira do turno tentando.
 - **Mordida venenosa** — só morde quem está preso ou distraído. Veneno leve: dor e dormência no membro por 1 cena.
 
 ## Fraquezas
 
-- **Atributo — Corpo:** o abdômen dela é mole. Um golpe certeiro (ataque de Corpo, desferido com força) estoura o abdômen. Acerto de fraqueza em 10+ = morte instantânea, e ela explode um pouco de teia cola no grupo.
+- **Atributo — Força:** o abdômen dela é mole. Um ataque que usa Força, desferido com peso total contra esse ponto, causa +1d6 de dano extra — e ela espirra um pouco de teia cola no grupo quando é atingida ali.
 - Luz forte: tocha na cara, luz de Cristal de Luz — ela recua e tenta fugir para o escuro.
 - Fogo na teia: queima rápido. Sem a teia, ela não prende ninguém, e luta muito pior.
 - Isolada: uma aranha sozinha não ataca grupo de mais de 3. Ela foge.
@@ -76,15 +75,13 @@ Aranha Sombria é o primeiro "susto de caverna" do grupo — o monstro que apare
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Força — um ataque que usa Força contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Força — um ataque que usa Força contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

@@ -30,7 +30,7 @@ andar dita em pedra: ninguém sobe sozinho.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler os símbolos kobold | d20+Inteligência | São contagens, e a última linha está incompleta — alguém parou de contar recentemente | Reconhece que são contagens, sem conseguir ler o número | Parece pichação de monstro; o grupo passa direto |
 | Parar e ouvir antes de decidir | d20+Sabedoria | Respiração grande, lenta, paciente — ele sabe que tem gente aqui, e não tem pressa | Ouve a respiração, sem saber se é de um ou de vários | O silêncio parece seguro — leitura errada |
@@ -63,7 +63,7 @@ golpe, pelo tamanho.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Entrar com a formação combinada | d20+Sabedoria | O raid entra na ordem combinada e ninguém quebra a fileira no primeiro rugido | Entram organizados, mas alguém avança cedo demais e a formação leva uma rodada pra se refazer | A sala é maior do que qualquer plano feito do lado de fora — o plano morre na porta |
 | Atacar nas barras 1-3 (talwar e broquel) | d20+arma | 1 golpe + você abre a guarda dele pro próximo | 1 golpe | Bloqueado pelo broquel; ele contra-ataca |
@@ -99,7 +99,7 @@ aviso de que o grupo está perto do fim do Labirinto.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda já está no ar quando você chega |
 | Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
@@ -124,7 +124,7 @@ heráldica organizada dos estandartes do Trecho V.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Sentir o peso do símbolo | d20+Sabedoria | Sente que o símbolo foi feito recentemente — não é decoração antiga | Reconhece só que é um símbolo, nada além | Parece sujeira; o grupo ignora |
 | Estudar a heráldica | d20+Inteligência | Lê o padrão: é organizado, é sucessão — os kobolds não são nativos deste andar | Vê que é organizado, não selvagem | "Rabisco de bicho" |
@@ -148,7 +148,7 @@ mecânica do primeiro, com a diferença de que este escolta o grupo de longe.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | Ele já está esperando — ataca primeiro |
 | Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
@@ -174,7 +174,7 @@ dão bônus aqui.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda controla o vão inteiro — ele acerta primeiro |
 | Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |
@@ -200,7 +200,7 @@ degrau final de escolta antes do trono.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Enfrentar | d20+Força | Golpe limpo antes dele fechar a guarda | Acerta, mas a armadura absorve quase tudo | A alabarda já está no ar quando você chega |
 | Mirar a garganta | d20+Destreza | Acerta o único ponto sem placa — o golpe conta dobrado | Acerta, mas ele cobre a garganta em seguida | O colar de couro desvia a lâmina |

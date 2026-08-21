@@ -8,7 +8,6 @@ local: labirinto
 regioes: [labirinto_entrada, castelo_ferro_negro, sala_chefe]
 nivel_recomendado: "6-7"
 nivel_ameaca: forte
-golpes_para_derrotar: 5
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -49,7 +48,7 @@ Um chiado curto de metal contra metal, meio segundo antes — é o peso mudando 
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** ela segue um padrão mecânico e previsível — arma de Conhecimento, na mão de quem leu o padrão, bate onde a placa não cobre. Em 10+ as juntas travam e ela perde a capacidade de bloquear pelo resto da cena.
+- **Atributo — Inteligência:** ela segue um padrão mecânico e previsível — um ataque que usa Inteligência, na mão de quem leu o padrão, bate onde a placa não cobre e causa +1d6 de dano extra.
 - As juntas internas não têm placa: joelho, cotovelo, a dobra do braço.
 - Ela não sai da linha que guarda. Recuar três passos encerra a luta, sempre.
 
@@ -66,15 +65,13 @@ Um chiado curto de metal contra metal, meio segundo antes — é o peso mudando 
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

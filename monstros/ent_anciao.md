@@ -8,7 +8,6 @@ local: campo
 regioes: [bosque_sussurrante, floresta_horunka, jardim_selvagem]
 nivel_recomendado: "7-8"
 nivel_ameaca: elite
-golpes_para_derrotar: 8
 ca: 15
 pv: 80
 bonus_ataque: +5
@@ -62,8 +61,8 @@ de pé.
 
 ## Fraquezas
 
-- **Atributo — Conhecimento:** ele é velho demais pra improvisar — arma de Conhecimento, de quem leu o ritmo lento dos golpes, encontra a fenda. Em 10+ ele solta as raízes
-  para se proteger e perde a capacidade de imobilizar pelo resto da cena.
+- **Atributo — Inteligência:** ele é velho demais pra improvisar — um ataque que usa Inteligência,
+  de quem leu o ritmo lento dos golpes e encontra a fenda de casca no tronco, causa +1d6 de dano extra.
 - A fenda de casca no tronco abre quando ele se inclina para golpear.
 - Lento: quem se move de verdade nunca é acertado duas vezes seguidas.
 
@@ -97,15 +96,13 @@ pontos de coleta de madeira de Horunka rendem menos por várias sessões.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 15
 - **PV:** 80
 - **Bônus de Ataque:** +5
 - **CD de Resistência:** 14
-- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

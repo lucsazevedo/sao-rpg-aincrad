@@ -8,7 +8,6 @@ local: campo
 regioes: [floresta_horunka, bosque_sussurrante, margens_rio_coluber]
 nivel_recomendado: "2-3"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -42,12 +41,12 @@ A cauda bate leve na pedra, duas vezes. É o aviso. Terceira batida ele corre.
 
 ## Ataques
 
-- **Mordida rápida** — dente pequeno mas afiado, agarra e não larga. Teste de Reflexo para tirar a mão a tempo.
+- **Mordida rápida** — dente pequeno mas afiado, agarra e não larga. Teste de Destreza para tirar a mão a tempo.
 - **Investida de cauda** — balança a cauda dura como pau na altura do joelho. Derruba quem não pula.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** ele depende de rajada curta. Desviar do primeiro pulo quebra o ritmo dele. Acertar a fraqueza de atributo em 10+ faz ele se enrolar e parar de atacar por 1 rodada.
+- **Atributo — Destreza:** ele depende de rajada curta, e desviar do primeiro pulo quebra o ritmo dele. Um ataque que usa Destreza nesse instante causa +1d6 de dano extra.
 - Pé quente: se o chão estiver frio ou molhado, ele não corre.
 - Sem cobertura: fora da floresta, ele exposto e foge.
 - Sozinho: não luta se houver mais de 3 pessoas no grupo.
@@ -76,15 +75,13 @@ Ele não é perigoso, mas o primeiro monstro que a maioria dos grupos consegue a
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

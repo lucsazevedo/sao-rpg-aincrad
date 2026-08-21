@@ -569,8 +569,8 @@ força-tarefa pra enfrentar Baran, o Rei Touro — mesmo modelo de
 
 **Recompensas**
 
-Vantagem tática registrada pro confronto final (10+: papel ideal; 7-9:
-papel definido, sem bônus extra; 6-: desvantagem usada como complicação em
+Vantagem tática registrada pro confronto final (sucesso total: papel ideal; sucesso parcial:
+papel definido, sem bônus extra; falha: desvantagem usada como complicação em
 `andar2_09`).
 
 **Gancho visual / de transmissão**
@@ -624,7 +624,7 @@ segundo grande teste coletivo depois de Illfang.
 
 **Testes sugeridos**
 
-- d20+Força/Reflexo — combate nas três fases
+- d20+Força/Destreza — combate nas três fases
 - d20+Inteligência — identificar a janela de abertura na Fase 2
 
 **Estrutura de combate**

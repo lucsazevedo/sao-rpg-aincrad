@@ -8,7 +8,6 @@ local: pantano
 regioes: [pantano_sombrio, charco_ras, rio_serpente]
 nivel_recomendado: "3-4"
 nivel_ameaca: comum
-golpes_para_derrotar: 3
 ca: 11
 pv: 26
 bonus_ataque: +3
@@ -48,7 +47,7 @@ Bolhas subindo em fila. Se a lama solta bolha na sua direção, alguma coisa se 
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** ela depende da surpresa pra grudar — arma de Reflexo, no instante em que ela emerge, impede o grude. Em 10+ perde a capacidade de grudar pelo resto da cena.
+- **Atributo — Destreza:** ela depende da surpresa pra grudar — um ataque que usa Destreza, no instante em que ela emerge, causa +1d6 de dano extra.
 - Antes de grudar ela precisa emergir, e emergindo é lenta.
 - Fora da lama ela não se locomove. Terreno firme é imunidade.
 
@@ -65,15 +64,13 @@ Bolhas subindo em fila. Se a lama solta bolha na sua direção, alguma coisa se 
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
 - **PV:** 26
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

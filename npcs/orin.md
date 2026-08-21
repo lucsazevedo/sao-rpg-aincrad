@@ -68,7 +68,7 @@ moral. É a operação mais lucrativa de Tolbana e ninguém percebeu ainda.
 
 ## Combate (se aplicável)
 
-Foice de cozinha, Corpo 0. Se a taverna for ameaçada, ele briga muito pior do
+Foice de cozinha, Força 10. Se a taverna for ameaçada, ele briga muito pior do
 que qualquer um espera.
 
 <!-- convertido-dnd5e -->

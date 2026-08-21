@@ -18,8 +18,16 @@ Forjado nas primeiras horas após o início de Sword Art Online, este martelo fo
 
 ## Skills exclusivas do tipo
 
-- Estocada Forte
-- Chocar
+Progressão oficial de Martelo — Tank de Impacto (Força, dano contundente; SAO_RPG_5e.md, Seção 55.2):
+
+- **Golpe Demolidor** (Nível 1) — ataque de Força que anula o bônus de escudo/postura defensiva do alvo até o fim do turno seguinte.
+- **Martelada Descendente** (Nível 1) — ataque que pode derrubar o alvo (teste de Força).
+- **Abalo** (Nível 2) — golpe de área de 5 ft: dano, Caído e redução de CA em quem falhar no teste de Destreza.
+- **Impacto de Aincrad — Limit Break** (Nível 5, 1/Descanso Longo) — golpe de área de 10 ft: dano pesado e Atordoado em quem falhar no teste de Constituição.
+- **Postura Inabalável** (Nível 6) — vantagem contra ser empurrado/derrubado e resistência a movimentação forçada.
+- **Quebra-Couraça** (Nível 10) — ataque que reduz a CA do alvo em 2 até o fim da cena.
+- **Contra-Impacto** (Nível 14, Reação) — reduz o dano corpo a corpo sofrido e pode empurrar o atacante.
+- **Colosso** (Nível 18, 1/Descanso Longo) — forma suprema por 1 minuto: resistência a dano contundente, +2 CA e ataques que forçam teste de Constituição com desvantagem.
 
 ## Efeito especial
 

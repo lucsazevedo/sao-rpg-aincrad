@@ -28,7 +28,7 @@ de entrada da região: quem chega em Dunhelm quase sempre para aqui primeiro.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável — e uma lasca corta a mão de quem insistiu sem Luvas |
 | Rastrear quem trabalhou aqui | d20+Inteligência | Descobre que ninguém esteve — as marcas de ferramenta e o desgaste são anteriores ao lançamento | Descobre que o desgaste não bate com dez dias de uso | Conclui que teve gente trabalhando aqui até pouco tempo |
@@ -57,7 +57,7 @@ corresponde a nada que a pedreira faria, ponto único. É o local central de
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Analisar o maquinário | d20+Inteligência | Reconhece que a tecnologia destoa do resto de Aincrad — e que as engrenagens têm o tamanho certo pra mover uma estrutura da escala de um andar inteiro | Percebe só que é estranho, grande demais pro contexto | Ignora, parece só entulho — "máquina velha de pedreira" |
 
@@ -83,7 +83,7 @@ esperar.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
 
@@ -109,7 +109,7 @@ Enferrujado e ainda duvida da própria conclusão.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Analisar as peças soltas | d20+Inteligência | Reconhece que a tecnologia destoa do resto de Aincrad — mesmo conjunto, mesma escala errada | Percebe só que é estranho | Ignora, parece só entulho |
 
@@ -134,7 +134,7 @@ teste, mais fundo na cratera, com o fundo alagado visível daqui.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
 
@@ -157,7 +157,7 @@ variação mais quieta da região, boa pra ritmo de exploração lenta.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
 
@@ -180,7 +180,7 @@ exposto, na borda superior da cratera.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Separar sucata aproveitável | d20+Destreza | Separa 2 peças ainda úteis (Sucata, Ferreiro, qualidade inferior) | Separa 1 peça | Tudo enferrujado demais, nada aproveitável |
 | Revirar os montículos de poeira | d20+Destreza | Percebe a poeira mais fina se mexendo antes de pisar | Percebe no limite — recua sem coletar nada | Pisa no arco errado: Escorpião de Poeira, primeiro golpe dele |

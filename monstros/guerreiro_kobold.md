@@ -8,7 +8,6 @@ local: dungeon/labirinto
 regioes: [labirinto_entrada, sala_chefe, castelo_ferro_negro]
 nivel_recomendado: "7-8"
 nivel_ameaca: forte
-golpes_para_derrotar: 6
 ca: 13
 pv: 48
 bonus_ataque: +4
@@ -62,10 +61,9 @@ são antes de ver o primeiro.
 
 ## Fraquezas
 
-- **Atributo — Reflexo:** a machadada é lenta e a guarda abre no tempo
-  morto depois dela — arma de Reflexo vive nesse intervalo. Em 10+ a
-  armadura remendada se solta e a muralha de escudos deixa de funcionar
-  pelo resto da cena.
+- **Atributo — Destreza:** a machadada é lenta e a guarda abre no tempo
+  morto depois dela — um ataque que usa Destreza, vivendo nesse intervalo,
+  causa +1d6 de dano extra.
 - Separado do grupo, a defesa cai: ele foi treinado para formação, não para
   duelo.
 - Ataques rápidos pelas laterais rompem a guarda; ele só cobre a frente.
@@ -99,15 +97,13 @@ torre não é um covil — é uma guarnição.
 
 ## Stat Block D&D 5e
 
-Convertido automaticamente pela fórmula da Seção 74 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
+Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
 - **PV:** 48
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
-- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 74).
-
-> Texto legado: menções a "7-9"/"10+" nas seções acima são do sistema PBTA anterior e não valem mais como mecânica — só como referência de intensidade narrativa.
+- **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).
 
 ## Lore
 

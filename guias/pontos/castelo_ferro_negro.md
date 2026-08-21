@@ -27,7 +27,7 @@ Antídoto → Luz → Barreira).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar o mural | d20+Inteligência | Confirma a sequência antes de tentar encaixar | Suspeita da ordem, sem certeza | Nenhuma pista nova |
 | Encaixar os cristais | d20+Destreza | Encaixe físico preciso | Encaixe funciona, mas com hesitação visível | Erro ativa alarme sonoro leve |
@@ -54,7 +54,7 @@ importa sem precisar ser vencida.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Descer alguns degraus com cautela | d20+Destreza | Entende a escala pelo eco e volta antes de ser notado | Volta, mas algo lá embaixo mudou de posição enquanto o grupo estava na escada | O grupo desce um lance a mais do que devia — a subida deixa de ser tranquila |
 
@@ -81,7 +81,7 @@ de nível andar 1. O valor é sentir a escala e recuar — igual ao design de
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler a inscrição | d20+Inteligência | Lê a linha interrompida inteira — entende que fala do golpe final e de verificar algo antes do próximo andar | Lê o suficiente pra saber do que se trata, sem reproduzir de memória | A letra é regular e pequena demais — leva tempo, e alguém vai notar a demora |
 
@@ -104,11 +104,11 @@ esta cena como a mais importante da cadeia G.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Investigar sem ser notado | d20+Destreza | Encontra um ponto fraco real na defesa — guarda em segredo | Encontra, mas é visto por um guarda de longe | Não acha nada, parede só velha mesmo |
 
-**Só o mestre:** se o grupo for visto (7-9), planta desconfiança que
+**Só o mestre:** se o grupo for visto (sucesso parcial), planta desconfiança que
 `castelo_04_guarda_insone` cobra depois — não revele a consequência na hora.
 
 **Atalhos:** regiao:castelo_ferro_negro · quest:castelo_03_rachadura_na_muralha
@@ -125,7 +125,7 @@ suspeita e confirmação sobre a muralha. Ver `castelo_04_guarda_insone`.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Conversar à noite | d20+Sabedoria | Confirmação com detalhes | Confirmação parcial e desconfiada | Negação total, mesmo sabendo — mas o grupo percebe a mentira |
 

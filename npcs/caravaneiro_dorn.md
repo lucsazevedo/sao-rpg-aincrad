@@ -66,6 +66,6 @@ Desde então faz o percurso quatro vezes por semana e já perdeu duas cargas.
 
 ## Combate (se aplicável)
 
-Conhecimento 2 com Besta. Atira mal e negocia muito bem.
+Inteligência 14 com Besta. Atira mal e negocia muito bem.
 
 <!-- convertido-dnd5e -->

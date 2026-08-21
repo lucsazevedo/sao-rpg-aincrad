@@ -48,7 +48,7 @@ terceiros a ser a fonte original de uma informação.
 
 Central em `castelo_04_guarda_insone` (`cenas/quests_andar1.md`) — confirma
 ou nega teorias do grupo sobre o mural e a rachadura na muralha, conforme
-o resultado do teste de Espírito.
+o resultado do teste de Sabedoria.
 
 ## Diálogo de exemplo
 

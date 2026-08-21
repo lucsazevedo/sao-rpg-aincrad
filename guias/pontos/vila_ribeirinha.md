@@ -30,7 +30,7 @@ Início.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Descansar de verdade | — | Sem teste — zona segura: recupera tudo, e o mestre deve deixar | | |
 | Ouvir a vila sobre o lago | d20+Inteligência | Três histórias, uma delas verdadeira e você sabe qual | Três histórias, sem saber qual presta | Uma história, e é a falsa |
@@ -62,7 +62,7 @@ Barqueiro atraca quando não está na ponte (`rio_serpente`).
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar peixe fresco | — | Sem teste — Col 15-30 a unidade | | |
 | Vender peixe pro cais | — | Sem teste — compram por preço razoável, sem fazer perguntas | | |
@@ -91,7 +91,7 @@ traz uma, a Escama Prateada.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar peixe, isca e apetrechos | — | Sem teste — Peixe fresco (Col 15-30/un.); tabela fixa em `docs/mercado_andar1.md` (Peixaria Local) | | |
 | Vender peixe de pesca própria | — | Sem teste — preço razoável, sem perguntas | | |
@@ -122,7 +122,7 @@ respeito e espera o mesmo de quem chega.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ganhar a confiança dele | d20+Sabedoria | Ele te ensina onde o lago é fundo e por quê | Ele te vende a informação | Ele te manda pescar e descobrir sozinho |
 | Pedir pontos de pesca e atalho | d20+Sabedoria | Indica os melhores pontos de pesca e um atalho seguro entre as regiões vizinhas | Indica os pontos, mas não o atalho | "Compra um mapa da guilda, que é tão bom quanto" |

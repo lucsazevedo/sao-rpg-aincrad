@@ -102,8 +102,8 @@ numa sessão futura.
 
 - **Só investigar Tolbana e não entrar no Labirinto:** vale; eles voltam com
   boato forte, mas sem confirmação concreta.
-- **Entrar furtivo e evitar combate:** excelente; em 10+ ouvem e mapeiam mais,
-  em 7-9 evitam o combate mas deixam sinal de presença.
+- **Entrar furtivo e evitar combate:** excelente; em sucesso total ouvem e mapeiam mais,
+  em sucesso parcial evitam o combate mas deixam sinal de presença.
 - **Querer forçar mais fundo:** deixe claro em ficção que dá, mas é uma má
   ideia; o som do chefe e o tamanho do lugar têm que falar antes do mestre.
 

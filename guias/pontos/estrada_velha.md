@@ -27,7 +27,7 @@ lugar onde a estrada mostra que guarda algo inexplicado.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler os números gravados | d20+Inteligência | Percebe que a sequência não é distância — é outra coisa | Percebe que está errado, sem saber o porquê | "Deve ser decoração" |
 | Usar o marco pra se orientar | — | Sem teste — a partir daqui o grupo sabe em que trecho da rota está e o que vem adiante | | |
@@ -55,7 +55,7 @@ daqui (respawn de 3h), e é neste ponto que
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber o sinal antes do ataque | d20+Destreza | Vê o hound isca e entende o padrão antes dos outros dois fecharem | Vê tarde demais pra escolher posição — o combate começa emparelhado | A matilha escolhe o flanco e o primeiro alvo |
 | Enfrentar a matilha | d20+Força | Derruba um hound e cancela a entrada do terceiro | Troca golpes no ritmo deles | Mordida de arrasto puxa alvo ou carga pra fora da formação |
@@ -84,7 +84,7 @@ descanso mais movimentada da rota.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Comprar importados | — | Sem teste — estoque variado, preço de Comerciante da praça +10% | | |
 | Pechinchar com o condutor | d20+Inteligência | Preço de atacado (20% abaixo) | Preço normal | Ele fecha a carroça |
@@ -112,12 +112,12 @@ com atenção.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar as marcas de luta | d20+Inteligência | Reconhece o padrão de um assalto recente, não um evento aleatório | Percebe só que teve briga ali | Passa direto |
 
 **Só o mestre:** é o beat de investigação de
-`bounty_06_caravana_emboscada` — quem tira 10+ aqui chega ao Ponto de
+`bounty_06_caravana_emboscada` — quem tira sucesso total aqui chega ao Ponto de
 Assalto sabendo que a ameaça é ativa e organizada, não bicho de passagem.
 Se o grupo demorar na estrada e anoitecer, este ponto deixa de ser
 "conhecido" e passa a ser experimentado (ver "Se o grupo demorar" no
@@ -141,7 +141,7 @@ real: proteger carga, pessoas ou reputação — nunca os três.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Negociar o contrato de escolta | d20+Sabedoria | Termos bons, e a prioridade (carga, pessoas ou reputação) é definida junto com o grupo | Contrato fechado, mas a prioridade fica na mão dele | Ele desconfia — o preço sobe ou a vaga fecha |
 | Perguntar sobre a rota | d20+Inteligência | Rotas, custo real de uma escolta e quem costuma mexer em carga | Só o custo e a rota | "Pergunta de graça é a que mais custa" |
@@ -170,7 +170,7 @@ no deles.
 
 **O que dá pra fazer:**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total (CD+5) | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ler a trilha e prever a emboscada | d20+Inteligência | Prevê a emboscada e escolhe o terreno | Prevê, mas a carga ou alguém fica exposto | A matilha escolhe o primeiro alvo |
 | Enfrentar a matilha | d20+Força | Ver `monstros/hound_de_cobre.md` — Técnica desmonta o trio inteiro | | |
