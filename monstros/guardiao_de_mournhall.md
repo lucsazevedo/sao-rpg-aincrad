@@ -10,6 +10,7 @@ nivel_recomendado: "8-9"
 nivel_ameaca: elite
 ca: 15
 pv: 80
+dado_vida: 12d8+26  # 12d8 médio 54 + 26 = 80
 bonus_ataque: +5
 cd_resistencia: 14
 abertura: golpe no ventre exposto quando se ergue
@@ -87,7 +88,7 @@ morre uma vez, e o grupo decide junto, na hora, se aquele núcleo vira
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 15
-- **PV:** 80
+- **PV:** 80 (12d8+26)
 - **Bônus de Ataque:** +5
 - **CD de Resistência:** 14
 - **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 73).

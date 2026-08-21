@@ -10,6 +10,7 @@ nivel_recomendado: "3-4"
 nivel_ameaca: comum
 ca: 11
 pv: 26
+dado_vida: 3d10+10  # 3d10 médio 16 + 10 = 26
 bonus_ataque: +3
 cd_resistencia: 11
 abertura: golpe na base do caule
@@ -68,7 +69,7 @@ Folha caindo sem vento, na sua frente. É a vinha ajustando o peso lá em cima.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
-- **PV:** 26
+- **PV:** 26 (3d10+10)
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
 - **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).

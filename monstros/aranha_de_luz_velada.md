@@ -10,6 +10,7 @@ nivel_recomendado: "3-4"
 nivel_ameaca: forte
 ca: 13
 pv: 48
+dado_vida: 9d6+16  # 9d6 médio 32 + 16 = 48
 bonus_ataque: +4
 cd_resistencia: 13
 abertura: cabeça exposta e teia incendiada
@@ -77,7 +78,7 @@ A luta começa com o grupo preso em uma sala de teias que iluminam o ambiente. A
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
-- **PV:** 48
+- **PV:** 48 (9d6+16)
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
 - **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).

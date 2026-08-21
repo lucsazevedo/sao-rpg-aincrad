@@ -3069,7 +3069,8 @@ Nome
 Andar / Zona
 Nível de Ameaça: Fraco | Comum | Forte | Elite | Chefe
 CA
-PV (dado × quantidade + CON)
+Dado de Vida (ex. 4d8+8 — dado por tipo de criatura: d6 inseto pequeno, d8 besta/humanoide/morto-vivo, d10 planta/construto, d12 chefe de andar)
+PV (total do Dado de Vida — dado × quantidade + modificador fixo)
 Velocidade
 FOR DES CON INT SAB CAR (com modificador)
 Resistências / Imunidades / Vulnerabilidades a dano

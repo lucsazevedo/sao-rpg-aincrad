@@ -10,6 +10,7 @@ nivel_recomendado: "3-5 (andar 2)"
 nivel_ameaca: comum
 ca: 11
 pv: 32
+dado_vida: 6d6+11  # 6d6 médio 21 + 11 = 32
 bonus_ataque: +3
 cd_resistencia: 11
 abertura: segmento central, exposto quando ela se ergue pra atacar
@@ -90,7 +91,7 @@ Secas não exige.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
-- **PV:** 32
+- **PV:** 32 (6d6+11)
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
 - **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).

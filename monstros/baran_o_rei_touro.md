@@ -10,6 +10,7 @@ nivel_recomendado: "andar 2, conteúdo de raid"
 nivel_ameaca: chefe
 ca: 16
 pv: 180
+dado_vida: 21d12+44  # 21d12 médio 136 + 44 = 180
 bonus_ataque: +6
 cd_resistencia: 15
 abertura: martelo cravado no chão após o golpe giratório — abertura curta e real
@@ -109,7 +110,7 @@ carrega o mesmo peso dramático que o Last Attack Bonus teve em Illfang (ver
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 16
-- **PV:** 180
+- **PV:** 180 (21d12+44)
 - **Bônus de Ataque:** +6
 - **CD de Resistência:** 15
 - **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).

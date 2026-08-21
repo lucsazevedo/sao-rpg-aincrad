@@ -10,6 +10,7 @@ nivel_recomendado: "2-3"
 nivel_ameaca: fraco
 ca: 10
 pv: 14
+dado_vida: 3d6+4  # 3d6 médio 10 + 4 = 14
 bonus_ataque: +2
 cd_resistencia: 10
 abertura: o enxame ainda não formado — cada mosca isolada morre de um golpe
@@ -99,7 +100,7 @@ envenenado. A mesa aprende aqui que **agir cedo vale mais que agir bem**.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
-- **PV:** 14
+- **PV:** 14 (3d6+4)
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
 - **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).

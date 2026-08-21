@@ -10,6 +10,7 @@ nivel_recomendado: "2-3"
 nivel_ameaca: fraco
 ca: 10
 pv: 14
+dado_vida: 2d8+5  # 2d8 médio 9 + 5 = 14
 bonus_ataque: +2
 cd_resistencia: 10
 abertura: golpe em pleno voo, antes do ataque
@@ -68,7 +69,7 @@ O silêncio do voo. Coruja não faz barulho ao decolar, e essa não faz mesmo �
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
-- **PV:** 14
+- **PV:** 14 (2d8+5)
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
 - **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).

@@ -10,6 +10,7 @@ nivel_recomendado: "8-10"
 nivel_ameaca: chefe
 ca: 16
 pv: 165
+dado_vida: 19d12+41  # 19d12 médio 124 + 41 = 165
 bonus_ataque: +6
 cd_resistencia: 15
 abertura: previsibilidade — os golpes de machado têm tempo de leitura, e o nodachi não
@@ -115,7 +116,7 @@ em mecânica real, e faz o último golpe parecer decisão, não matemática.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 16
-- **PV:** 165
+- **PV:** 165 (19d12+41)
 - **Bônus de Ataque:** +6
 - **CD de Resistência:** 15
 - **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).

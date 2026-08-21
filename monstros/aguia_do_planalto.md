@@ -10,6 +10,7 @@ nivel_recomendado: "2-4 (andar 2)"
 nivel_ameaca: comum
 ca: 11
 pv: 32
+dado_vida: 5d8+10  # 5d8 médio 22 + 10 = 32
 bonus_ataque: +3
 cd_resistencia: 11
 abertura: golpe durante o mergulho, antes de recuperar altitude
@@ -93,7 +94,7 @@ bruta constante.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
-- **PV:** 32
+- **PV:** 32 (5d8+10)
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
 - **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).

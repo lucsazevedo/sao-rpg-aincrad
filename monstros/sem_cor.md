@@ -10,6 +10,7 @@ nivel_recomendado: "—"
 nivel_ameaca: comum
 ca: 11
 pv: 26
+dado_vida: 4d8+8  # 4d8 médio 18 + 8 = 26
 bonus_ataque: +3
 cd_resistencia: 11
 abertura: velocidade cai bruscamente se cercado por mais de um lado ao mesmo tempo
@@ -99,7 +100,7 @@ carrega.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **comum**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 11
-- **PV:** 26
+- **PV:** 26 (4d8+8)
 - **Bônus de Ataque:** +3
 - **CD de Resistência:** 11
 - **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).

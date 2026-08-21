@@ -10,6 +10,7 @@ nivel_recomendado: "7-8"
 nivel_ameaca: elite
 ca: 15
 pv: 80
+dado_vida: 11d10+20  # 11d10 médio 60 + 20 = 80
 bonus_ataque: +5
 cd_resistencia: 14
 abertura: a fenda de casca no tronco, aberta quando ele se inclina para golpear
@@ -99,7 +100,7 @@ pontos de coleta de madeira de Horunka rendem menos por várias sessões.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **elite**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 15
-- **PV:** 80
+- **PV:** 80 (11d10+20)
 - **Bônus de Ataque:** +5
 - **CD de Resistência:** 14
 - **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).

@@ -10,6 +10,7 @@ nivel_recomendado: "5-6"
 nivel_ameaca: forte
 ca: 13
 pv: 48
+dado_vida: 7d8+16  # 7d8 médio 32 + 16 = 48
 bonus_ataque: +4
 cd_resistencia: 13
 abertura: golpe nas asas em voo baixo
@@ -68,7 +69,7 @@ O vento muda. Ela dobra as asas e o ar para de assobiar entre as penas — o sil
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
-- **PV:** 48
+- **PV:** 48 (7d8+16)
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
 - **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).

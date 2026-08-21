@@ -10,6 +10,7 @@ nivel_recomendado: "1-3 (andar 2)"
 nivel_ameaca: fraco
 ca: 10
 pv: 18
+dado_vida: 3d8+4  # 3d8 médio 14 + 4 = 18
 bonus_ataque: +2
 cd_resistencia: 10
 abertura: investida cega — desviar no último instante deixa o flanco exposto
@@ -88,7 +89,7 @@ investida é sempre uma ameaça real, não só cosmética.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **fraco**, Andar 2). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 10
-- **PV:** 18
+- **PV:** 18 (3d8+4)
 - **Bônus de Ataque:** +2
 - **CD de Resistência:** 10
 - **Atributo de fraqueza:** Destreza — um ataque que usa Destreza contra esta criatura causa +1d6 de dano extra (Seção 73).

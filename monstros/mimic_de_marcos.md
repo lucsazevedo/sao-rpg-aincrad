@@ -10,6 +10,7 @@ nivel_recomendado: "5-6"
 nivel_ameaca: forte
 ca: 13
 pv: 48
+dado_vida: 6d10+15  # 6d10 médio 33 + 15 = 48
 bonus_ataque: +4
 cd_resistencia: 13
 abertura: Inteligência — identificar a inscrição falsa
@@ -75,7 +76,7 @@ mesa antes da primeira rolagem de ataque.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **forte**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 13
-- **PV:** 48
+- **PV:** 48 (6d10+15)
 - **Bônus de Ataque:** +4
 - **CD de Resistência:** 13
 - **Atributo de fraqueza:** Inteligência — um ataque que usa Inteligência contra esta criatura causa +1d6 de dano extra (Seção 73).

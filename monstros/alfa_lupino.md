@@ -10,6 +10,7 @@ nivel_recomendado: "8-9"
 nivel_ameaca: chefe
 ca: 16
 pv: 165
+dado_vida: 25d8+53  # 25d8 médio 112 + 53 = 165
 bonus_ataque: +6
 cd_resistencia: 15
 abertura: a garganta, exposta só no uivo — e o uivo é o que convoca a matilha
@@ -102,7 +103,7 @@ perceber que o inimigo é a decisão, não a criatura.
 Convertido automaticamente pela fórmula da Seção 73 do `SAO_RPG_5e.md` (Nível de Ameaça **chefe**, Andar 1). Os textos de "Ataques"/"Fraquezas" acima são flavor histórico (PBTA) — a mecânica real de jogo é esta:
 
 - **CA:** 16
-- **PV:** 165
+- **PV:** 165 (25d8+53)
 - **Bônus de Ataque:** +6
 - **CD de Resistência:** 15
 - **Atributo de fraqueza:** Sabedoria — um ataque que usa Sabedoria contra esta criatura causa +1d6 de dano extra (Seção 73).

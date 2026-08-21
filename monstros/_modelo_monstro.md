@@ -9,7 +9,8 @@ regioes: [] # ids de dados_mapa.js onde ele aparece de verdade
 nivel_recomendado: # faixa, ex "4-5" -- o andar 1 vai até 10
 nivel_ameaca: # fraco | comum | forte | elite | chefe
 ca: # CA numérica -- ver Seção 73 do SAO_RPG_5e.md pra referência por Nível de Ameaça/andar
-pv: # PV numérico (dado x quantidade + CON) -- mesma referência
+dado_vida: # ex "4d8+8" -- dado pelo tipo (d6 inseto pequeno, d8 besta/humanoide/morto-vivo, d10 planta/construto, d12 chefe de andar); o total tem que bater com o campo pv abaixo
+pv: # PV numérico, igual ao total do dado_vida acima -- mesma referência de Seção 73
 bonus_ataque: # ex "+3"
 cd_resistencia: # ex "11"
 abertura: # a abertura concreta, ex "garganta exposta no fim da investida"
@@ -88,7 +89,7 @@ Não confundir com a raridade de **equipamento**, que vai até Único.
 ## Stat Block D&D 5e
 
 - **CA:** [bate com `ca` do frontmatter]
-- **PV:** [bate com `pv`]
+- **PV:** [bate com `pv`] ([bate com `dado_vida`, ex. 4d8+8])
 - **Bônus de Ataque:** [bate com `bonus_ataque`]
 - **CD de Resistência:** [bate com `cd_resistencia`]
 - **Atributo de fraqueza:** [bate com `atributo_fraqueza`] — um ataque que usa esse atributo contra esta criatura causa +1d6 de dano extra (Seção 73).
