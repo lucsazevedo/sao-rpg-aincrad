@@ -19,3 +19,5 @@ scripts/app/dist/
 .mcp.json
 scripts/db/backups/*.sql
 entregas/_sao_rpg_5e_gerado.html
+entregas/_sao_rpg_5e_sistema_completo.html
+entregas/_cache_imagens_pdf/
