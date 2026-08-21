@@ -74,7 +74,7 @@ luta inteira).
 Fonte (Integral Factor, adaptado): [Stabbing Wasp](https://saointegralfactor.fandom.com/wiki/Stabbing_Wasp).
 Vespa de porte médio com ferrão perfurante, encontrada nos campos abertos
 junto de outros monstros de campo. Voa de forma errática (testes de
-Reflexo pra acertar fazem mais sentido que testes de Corpo). Ataque rápido
+Destreza pra acertar fazem mais sentido que testes de Força). Ataque rápido
 de perfuração, pode acertar vários golpes em sequência. Dificuldade
 parecida com o Frenzy Boar, mas com padrão de ataque à distância curta em
 vez de investida única — boa variedade pro combate de campo.

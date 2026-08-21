@@ -34,7 +34,7 @@ travar de verdade, o mundo oferece a próxima pista sozinho depois de uma
 sessão — via NPC, via boato, via consequência.
 
 **Errar custa, mas não fecha.** Falha gasta recurso, tempo ou reputação. Nunca
-apague um puzzle por causa de um 6-.
+apague um puzzle por causa de uma Falha.
 
 **Nenhum puzzle entrega a resposta do andar 2.** Todos alimentam
 `docs/misterio_andar2.md` e todos param um passo antes.
@@ -115,7 +115,7 @@ um tem o formato exato de um tipo de cristal (Teleporte, Cura, Antídoto, Luz,
 Barreira). Encaixe errado **não** entra — o formato impede. O que a ordem
 decide é a **sequência de encaixe**, não a posição.
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar os encaixes | d20+Inteligência | Entende que os cinco entram, mas há desgaste desigual: alguns foram usados mais vezes, em ordem | Entende que os cinco cabem | Conclui que é decorativo |
 | Encaixar um cristal na tentativa | — | O cristal **entra e não sai**. Ordem errada = cristal perdido. Diga isso ANTES de deixar rolar |  |  |
@@ -138,7 +138,7 @@ A cantiga do busker é a chave. Ele canta assim (letra completa):
 **Ordem: Teleporte (azul) → Cura (verde) → Antídoto (roxo) → Luz (dourado) →
 Barreira (prata).**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Ouvir a cantiga com atenção | d20+Sabedoria (Músico: automático) | Decora a letra inteira e sacou que são cores de cristal | Decora a letra | Lembra do refrão e mais nada |
 | Perguntar ao busker de onde vem | d20+Sabedoria | Ele lembra do nome do busker que ensinou | Ele diz que veio de outro busker | Ele se irrita: "é só uma música" |
@@ -179,8 +179,8 @@ Somando: **1680 Col** comprando tudo. Um grupo de quatro no dia 10 tem entre
 
 Saídas: pedir emprestado a outra guilda (Diplomata brilha), fazer contrato de
 escolta pra bancar, caçar os baús específicos, ou convencer o Comerciante da
-praça a fiar (d20+Inteligência; 10+ ele fia metade, 7-9 fia um só e cobra
-juros em serviço, 6- ele ri).
+praça a fiar (d20+Inteligência; Sucesso total ele fia metade, Sucesso
+parcial fia um só e cobra juros em serviço, Falha ele ri).
 
 ## Etapa 4 — O encaixe
 
@@ -210,12 +210,12 @@ as mesmas cinco depressões na face.
 
 ## Recompensas
 
-**`Anel dos Cinco Encaixes`** (Acessório, Raro) — +1 em Conhecimento para
+**`Anel dos Cinco Encaixes`** (Acessório, Raro) — +1 em Inteligência para
 decifrar qualquer coisa. Encostado em pedra gravada de qualquer lugar do
 andar, toca um segundo da cantiga do busker — sempre o mesmo trecho, sempre
 parando antes do último verso.
 
-**`Martelo do Mural`** (Martelo, Raro) — +1 em Corpo pra quebrar estrutura ou
+**`Martelo do Mural`** (Martelo, Raro) — +1 em Força pra quebrar estrutura ou
 construto. Golpear pedra gravada revela se há vazio atrás. É o detector de
 passagem secreta do andar.
 
@@ -282,7 +282,7 @@ acontecer pelo menos uma vez, e deve ser divertido, não punitivo.
 
 ## Etapas
 
-| Etapa | Ação | Teste | 10+ | 7-9 | 6- |
+| Etapa | Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|---|
 | 1 | Achar uma marca | d20+Destreza | Acha e nota a cicatrização | Acha a marca | Passa direto |
 | 2 | Deduzir distância/direção | d20+Inteligência | Deduz as duas | Deduz uma | Anota errado |
@@ -323,8 +323,8 @@ significam.
 
 **`Kit de Caça de Antes`** (Incomum, conta como Luvas) — um dos primeiros kits
 feitos na vila, de antes de todo mundo entender que o jogo era real.
-**Efeito:** +1 em Reflexo para extrair material de caça, e o material nunca sai
-imperfeito num 7-9. **Não pode ser vendido** — a vila reconhece o kit e
+**Efeito:** +1 em Destreza para extrair material de caça, e o material nunca sai
+imperfeito num Sucesso parcial. **Não pode ser vendido** — a vila reconhece o kit e
 qualquer comerciante de Horunka se recusa a comprar.
 
 **Reputação em Horunka: máxima.** Desconto de 40% em vez de 25%, a pousada
@@ -376,12 +376,12 @@ dos muros no dia 5, e agora o grupo sabe por quê.
 
 ## Etapas
 
-| Etapa | Ação | Teste | 10+ | 7-9 | 6- |
+| Etapa | Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|---|
 | 1 | Notar que foi raspado, não gasto | d20+Inteligência | Vê marca de ferramenta e que é recente | Vê que está apagado | "Erosão" |
 | 2 | Cruzar as datas com o Memorial | d20+Inteligência | Descobre que a data bate com uma morte dupla no dia 5 | Descobre a data | Registro incompleto |
 | 3 | Ganhar a confiança do Zelador | d20+Sabedoria | Ele conta que alguém pediu, e que ele aceitou | Ele confirma que foi de propósito | Ele te acompanha até a saída, educado |
-| 4 | Descobrir quem visita | d20+Destreza (vigília) ou +Conhecimento (dedução) | Identifica Talia | Sabe que é uma mulher, sempre em horário diferente | Você é visto vigiando e a visitante para de vir |
+| 4 | Descobrir quem visita | d20+Destreza (vigília) ou +Inteligência (dedução) | Identifica Talia | Sabe que é uma mulher, sempre em horário diferente | Você é visto vigiando e a visitante para de vir |
 | 5 | Falar com Talia | d20+Sabedoria | Ela conta tudo, e chora, e agradece | Ela conta metade e pede pra parar | Ela nega e corta relação com o grupo |
 
 ## O Zelador — o que ele responde e o que não
@@ -477,11 +477,11 @@ lago). Fora disso é correnteza comum.
 Isso é intencionalmente chato de acertar: o grupo precisa voltar. Voltar é o
 puzzle.
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber o padrão de quando aparece | d20+Inteligência | Deduz a janela exata (entardecer + água mexida) | Deduz o entardecer | Acha que é aleatório |
 | Fazer o Barqueiro falar | d20+Sabedoria | Ele conta o que viu e vai junto | Conta, mas não vai | Muda de assunto e fica calado o dia todo |
-| Chegar perto de barco | d20+Destreza | Chega e observa com calma | Chega, o barco começa a girar | É puxado; teste de Corpo pra não virar |
+| Chegar perto de barco | d20+Destreza | Chega e observa com calma | Chega, o barco começa a girar | É puxado; teste de Força pra não virar |
 | Medir a profundidade | d20+Destreza | A linha acaba antes do fundo — 40m e nada | Linha enrosca | Perde a linha e o peso |
 | Encher um frasco no olho do redemoinho | d20+Destreza | Consegue: a água **sobe** dentro do frasco | Consegue meio frasco | Frasco quebra |
 | Cruzar com a maré do lago | d20+Inteligência | Entende que são o mesmo sistema | Suspeita | Descarta a ideia |
@@ -549,7 +549,7 @@ A oitava pedra, a caída, aponta pro chão.
 
 ## Etapas
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber que o arranjo é intencional | d20+Inteligência | Vê que as sete formam ângulos regulares | Vê que tem padrão | "Pedras largadas" |
 | Descobrir que apontam pra cima | d20+Inteligência | Percebe a inclinação: são miras, não marcos | Percebe que estão inclinadas | Nada |
@@ -562,7 +562,7 @@ A oitava pedra, a caída, aponta pro chão.
 **`Bússola de Kaldan`** (Acessório, Raro — o oitavo Raro do andar) — bronze,
 sem norte marcado. A agulha não aponta pro norte: aponta sempre pro **Castelo
 de Ferro Negro**, de qualquer lugar do andar 1.
-**Efeito:** +1 em Conhecimento para se orientar ou achar rota, e o portador
+**Efeito:** +1 em Inteligência para se orientar ou achar rota, e o portador
 nunca se perde em nenhuma região.
 **Efeito único — Aponta pro Outro:** uma vez por sessão, o portador pode
 perguntar "onde está X?" sobre uma pessoa ou coisa que ele já viu com os
@@ -570,7 +570,7 @@ próprios olhos. A agulha gira e aponta a direção. Não a distância.
 **O detalhe que ninguém explica:** quando não perguntam nada, ela volta a
 apontar pro Castelo.
 
-**Se acharem o buraco vazio (7-9):** alguém já esteve ali e levou a bússola.
+**Se acharem o buraco vazio (Sucesso parcial):** alguém já esteve ali e levou a bússola.
 Isso é pior e melhor: agora existe **outra pessoa** no andar que sabe. Você
 pode plantar essa pessoa como NPC recorrente e nunca revelá-la.
 
@@ -598,7 +598,7 @@ Quando um jogador finalmente conta e chega em **cem**, essa é a cena.
 
 ## Etapas
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Examinar as engrenagens do chão | d20+Destreza | Percebe que giram sem carga: o eixo mestre sumiu | Percebe que não acionam nada | Acha que estão quebradas |
 | Procurar o eixo removido | d20+Inteligência | Acha o encaixe vazio e a marca de serra: foi cortado | Acha o encaixe | Nada |
@@ -633,7 +633,7 @@ Quando um jogador finalmente conta e chega em **cem**, essa é a cena.
 ## Recompensas
 
 **`Ponteiro de Aldric`** (Acessório, Incomum) — a haste de bronze do
-mostrador, meio metro, pesada. **Efeito:** +1 em Conhecimento para estimar
+mostrador, meio metro, pesada. **Efeito:** +1 em Inteligência para estimar
 tempo, distância ou escala de qualquer estrutura. **Utilidade:** encostado em
 qualquer construção do andar, o portador sabe se ela foi feita antes ou depois
 da Cidade do Início. Isso é uma ferramenta de investigação, e você deve deixar
@@ -674,7 +674,7 @@ persistência burra, e a mesa vai lembrar dele por isso.
 
 ## Etapas
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Perceber que os cogumelos mudam | d20+Inteligência | Nota que um escureceu depois da primeira perda | Nota que estão diferentes | Nada |
 | Mapear a sequência (por tentativa) | — | Sem teste: cada tentativa custa 1 hora e revela 1 posição. Nove no total, menos as deduzidas |  |  |
@@ -691,7 +691,7 @@ noite em Ashwen, e a noite em Ashwen não passa (ver o guia da região).
 raiz oca há uma lanterna de metal fosco sem combustível, sem vela, sem
 cristal. Ela acende quando alguém a segura e **não** ilumina o ambiente:
 ilumina só o que a pessoa está procurando.
-**Efeito:** +1 em Conhecimento ou Reflexo para procurar qualquer coisa
+**Efeito:** +1 em Inteligência ou Destreza para procurar qualquer coisa
 específica que o portador possa nomear em voz alta.
 **Efeito único — O Que Você Perdeu:** uma vez por sessão, o portador declara
 uma coisa perdida (um item, uma pessoa, um caminho) e a lanterna aponta.

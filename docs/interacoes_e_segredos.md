@@ -75,7 +75,7 @@ mistério do andar 2.
 
 **O puzzle**: no pátio do Castelo de Ferro Negro existe um mural de pedra
 com 5 encaixes vazios, cada um com o contorno de um tipo de cristal
-(Teleporte, Cura, Antídoto, Luz, Barreira — ver `docs/guia_sistema_aincrad.md`).
+(Teleporte, Cura, Antídoto, Luz, Barreira — ver `SAO_RPG_5e.md`, Seção 72).
 Colocar os 5 cristais nos encaixes na ordem certa abre uma passagem parcial.
 
 **A pista da ordem certa** não fica no mural — fica espalhada:
@@ -123,7 +123,7 @@ porque ele mesmo era caçador antes de se isolar.
 
 **Como se resolve**: cada marca encontrada (há pelo menos 3 espalhadas pela
 região) registra um símbolo. Sozinhas não dizem nada; só fazem sentido
-depois que o Eremita ensina a "gramática" do código (teste de Espírito em
+depois que o Eremita ensina a "gramática" do código (teste de Sabedoria em
 `horunka_04` — sucesso total ensina o código completo). Com o código em
 mãos, as marcas já vistas apontam pra **um** esconderijo específico: o
 próprio, abandonado quando ele parou de caçar.
@@ -180,9 +180,9 @@ da região em outra quest — critério do mestre) — fora dessa janela, parece
 só uma correnteza comum.
 
 **Como se resolve**: não tem "quebra-cabeça" de peças — é um puzzle de
-observação e timing. Quem presta atenção (teste de Conhecimento) percebe o
+observação e timing. Quem presta atenção (teste de Inteligência) percebe o
 padrão de quando ele aparece; o Barqueiro (`lago_06`) confirma isso se
-convencido a falar. Investigar de perto na janela certa (teste de Corpo
+convencido a falar. Investigar de perto na janela certa (teste de Força
 pra não ser puxado) revela o efeito de perto.
 
 **Recompensa**: não é um item de poder — é uma peça real, mas incompleta,

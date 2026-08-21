@@ -14,7 +14,9 @@ foram reconferidos programaticamente, não estimados.
 ## O que é este projeto
 
 RPG de mesa homebrew ambientado no universo de _Sword Art Online_ (anime),
-usando um sistema próprio inspirado em PBTA (Powered by the Apocalypse).
+usando D&D 5e adaptado ao cenário (`SAO_RPG_5e.md`) — o projeto começou
+com um sistema próprio inspirado em PBTA (Powered by the Apocalypse), mas
+foi inteiramente convertido pra D&D 5e; ver "O sistema de jogo" abaixo.
 Campanha: **"The Perfect Chaos"**, dia 10 depois do anúncio de Kayaba
 Akihiko, Andar 1 de Aincrad, antes do primeiro chefe de andar ser
 enfrentado — mais um esqueleto inicial do **Andar 2** (pós-Illfang), pronto
@@ -39,10 +41,13 @@ pra crescer quando a mesa chegar lá.
   mapa, itens comuns) pode ser mais simples; conteúdo nomeado/especial
   (NPCs, marcos, quests principais, puzzles) recebe profundidade real —
   modelo de duas camadas usado em todo o projeto.
-- Balanceamento entre as 16 profissões e as 22 armas: auditado numa
-  varredura final (`docs/balanceamento_armas_oficios.md`) — nenhuma
-  profissão fica sem renda própria, e o único desequilíbrio estrutural
-  real (Conhecimento sem item Raro em arma) foi corrigido.
+- Balanceamento entre as 16 profissões e as 22 armas do sistema PBTA:
+  auditado numa varredura final (`docs/balanceamento_armas_oficios.md`,
+  hoje redirect histórico — os números mudaram pra 15 profissões e 19
+  armas na conversão pra D&D 5e, Seções 6-19 e 30-44 de `SAO_RPG_5e.md`) —
+  nenhuma profissão fica sem renda própria, e o único desequilíbrio
+  estrutural real (Conhecimento/Inteligência sem item Raro em arma) foi
+  corrigido.
 - **VTT (Foundry ou qualquer outro) está fora de escopo, por decisão do
   usuário.** `base/foundry_sistema/` continua vazia de propósito — não é
   pendência, é escopo explicitamente descartado.
@@ -67,36 +72,52 @@ pra crescer quando a mesa chegar lá.
 
 ## O sistema de jogo
 
-Fonte completa: `docs/guia_sistema_aincrad.md` +
-`docs/regras_nucleares_campanha.md` (Moves Núcleo, Condições, Progresso por
-Marcos, Downtime, Favor/Suspeita, Preparação de Raid — cobre o que os
-capítulos 12/13 do manual físico cobririam, antes deles serem
-fotografados).
+> **O sistema mudou de PBTA pra D&D 5e adaptado.** O que estava aqui até a
+> rodada de varredura final descrevia o sistema PBTA original (2d6+atributo,
+> faixas 10+/7-9/6-, 5 atributos, "golpes para derrotar"). Esse sistema foi
+> inteiramente convertido; a fonte completa e única de regra agora é
+> **`SAO_RPG_5e.md`** (raiz do projeto). `docs/guia_sistema_aincrad.md` e
+> `docs/regras_nucleares_campanha.md` viraram redirects históricos curtos —
+> não são mais lidos pelos scripts nem valem como regra.
 
-- **Resolução:** d20+atributo. **10+** sucesso limpo. **7-9** sucesso
-  com complicação/custo. **6-** fracasso ou complicação séria.
-- **5 atributos:** Corpo, Reflexo, Conhecimento, Espírito, Técnica. Criação
-  de personagem distribui **-2, -1, -1, -1, 0** — ninguém começa forte.
-- **22 tipos de arma**, cada um com atributo principal fixo, Marca, Move de
-  Combate e Move Utilitário (tabela completa em `guia_sistema_aincrad.md`).
-  Arma e profissão são escolhas **independentes** — não precisam
-  compartilhar atributo.
-- **7 slots de equipamento:** Armaduras, Escudos, Capuz, Acessórios,
-  Luvas, Parte de Cima, Parte de Baixo.
-- **16 profissões**, cada uma com atributo, Marca, Move de Ofício e Move de
-  Cena — tabela completa e cadeia de produção em
-  `docs/economia_profissoes.md`.
-- **Combate:** monstros têm "golpes para derrotar" por tier — fraco 1-2,
-  comum 3-4, forte 5-7, elite 8-10, chefe = várias barras de 6-8 golpes.
-- **PvP/Duelos/Player Killing** (cap. 5 do manual, ainda homebrew — ver
-  `guia_sistema_aincrad.md`): zona segura bloqueia todo PvP por sistema;
-  fora dela, Duelo Selado (sem risco de morte) ou Duelo de Sangue
-  (consensual, risco real); PK confirmado derruba Suspeita pra -3 na hora.
-- **Domador → Criador:** Doma REMOVIDA. Pet = craft via Ovo de Fera + Incubadora (desbloqueada por nível de profissão). Ovo choca em tempo real, pet escala com raridade + espécie de origem. Ver `docs/economia_profissoes.md`.
-- **Raridade (material):** Comum → Incomum → Raro → Épico (só chefe).
-  **Raridade (equipamento):** Comum → Incomum → Raro → Único.
-- **Cristais (6 tipos):** Teleporte, Cura, Antídoto, Luz, Barreira, Outros.
-- **Fraqueza por atributo** (Corpo, Reflexo, Conhecimento, Espírito, Técnica) — acerta a fraqueza: 7-9 vira 10+, 10+ tira capacidade do monstro pelo resto da cena. Não soma bônus numérico externo. Ver `docs/elementos_andar1.md`.
+Resumo rápido do sistema atual (detalhe completo em `SAO_RPG_5e.md`):
+
+- **Resolução:** d20 + modificador de atributo + bônus de proficiência vs.
+  CD (Seção 66). Graus de sucesso equivalentes ao antigo 10+/7-9/6-:
+  **Sucesso total** (bate a CD por 5+), **Sucesso parcial** (bate a CD por
+  menos de 5), **Falha** (não bate) — Seção 66, "Graus de sucesso".
+- **6 atributos padrão de D&D** (FOR/DES/CON/INT/SAB/CAR). Os 5 atributos
+  antigos (Corpo/Reflexo/Conhecimento/Espírito/Técnica) convertem conforme
+  a Seção 65.
+- **19 armas** (não mais 22 — algumas foram removidas na conversão, Seção
+  6), cada uma com atributo de ataque fixo e 7 Sword Skills + Limit Break
+  (Seções 55-59). Arma e profissão continuam escolhas **independentes**.
+- **7 slots de equipamento**, inalterado: Armaduras, Escudos, Capuz,
+  Acessórios, Luvas, Parte de Cima, Parte de Baixo.
+- **15 profissões** (não mais 16 — algumas se fundiram na conversão,
+  Seções 13-19), cada uma com atributo, progressão por nível (1/5/10/15/20,
+  Seções 21-26) e habilidades concretas (Seções 30-44) — cadeia de
+  produção completa em `docs/economia_profissoes.md`.
+- **Combate:** PV numérico + CA + iniciativa (Seção 68), Dado de Vida por
+  categoria de combate (Tank d12, DPS/AoE d10, Scouts d8) — substitui o
+  antigo "golpes para derrotar".
+- **PvP/Duelos/Player Killing:** cursor Laranja/Verde/Amarelo/Vermelho
+  (Seção 75) segue a mesma lógica canônica de sempre — zona segura bloqueia
+  PK por sistema; ver também Economia Persistente (Seção 85) e a regra de
+  Duelo (Seção 89, "Duelo x combate letal").
+- **Domador/Criador:** ver `docs/economia_profissoes.md` — mecânica de
+  pet segue existindo, agora referenciando Seção 42 (Domador) do rulebook.
+- **Raridade de equipamento (5 degraus):** Comum → Incomum → Raro → Épico →
+  Lendário, com bônus numérico direto (Seção 51/72) — substitui a antiga
+  escala de 4 degraus terminando em "Único".
+- **Cristais (6 tipos):** Teleporte, Cura, Antídoto, Luz, Barreira, Outros —
+  agora com efeito numérico direto (Seção 72).
+- **Fraqueza por atributo:** convertida pra FOR/DES/INT/SAB (Seção 65);
+  acertar a fraqueza soma **+1d6** de dano extra (Seção 73) — substitui o
+  antigo "nega a reação do monstro". `docs/elementos_andar1.md` virou
+  redirect histórico com o detalhe dessa mudança.
+- **Morte:** regra nova e central, permanente como no cânone, só em cena
+  supervisionada pelo mestre — Seção 89.
 
 ## Estrutura de pastas
 
@@ -192,11 +213,16 @@ tabela de drop e status de doma explícito.
 `npcs/` — personagens com ficha de conversa, limite, mudança após a
 primeira cena e gancho.
 
-### Armas — 51 itens nos 22 tipos canônicos
+### Armas — 51 itens nos 22 tipos canônicos (contagem da era PBTA)
 
 `armas/` — 22 fichas individuais + `armas/00_catalogo_expandido.md` com 29
 itens (22 Incomum, um por tipo + 7 Raro, um por atributo — corrigido numa
-auditoria de balanceamento, ver `docs/balanceamento_armas_oficios.md`).
+auditoria de balanceamento, ver `docs/balanceamento_armas_oficios.md`,
+hoje redirect histórico). **Atenção:** a conversão pra D&D 5e reduziu a
+lista canônica pra **19 armas** (`SAO_RPG_5e.md`, Seção 7) — se `armas/`
+ainda não foi conferido item a item contra essa lista de 19, trate as
+contagens desta seção como referência de inventário antigo, não como
+número de armas válidas hoje.
 
 ### Equipamentos — 66 itens nos 7 slots
 
@@ -207,7 +233,9 @@ mudança necessária.
 ### Mercado — 18 vendedores com preço e estoque
 
 `docs/mercado_andar1.md` — inventário e preço por NPC vendedor + tabela de
-renda por profissão (as 16, reconfirmada balanceada).
+renda por profissão (as 16 da era PBTA, reconfirmada balanceada — a
+conversão pra D&D 5e consolidou pra 15 profissões, `SAO_RPG_5e.md` Seções
+30-44).
 
 ### Dungeons — layout interno das 4 (Andar 1)
 
@@ -232,9 +260,11 @@ Ainda não tem Compêndio próprio nem regiões além de Urbus — ver
 
 ### Economia e mecânicas de profissão
 
-`docs/economia_profissoes.md` — as 16 profissões com mecânica própria,
-cadeia de produção, tabela de doma completa, mecânicas de mapa pra
-Cartógrafo e Bibliotecário, tabela de material por monstro/zona.
+`docs/economia_profissoes.md` — as profissões com mecânica própria, cadeia
+de produção, tabela de doma completa, mecânicas de mapa pra Cartógrafo e
+Bibliotecário, tabela de material por monstro/zona (contagem de 16 é da
+era PBTA; a conversão pra D&D 5e consolidou pra 15 — `SAO_RPG_5e.md`
+Seções 30-44).
 
 ### Segredos, puzzles e mistérios
 

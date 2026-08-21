@@ -39,8 +39,9 @@ Comerciante ganha a vida.
 
 **2. Reputação move o preço, não o dado.** Cada vendedor tem uma condição de
 desconto declarada abaixo (concluir uma quest, ser da vila, usar a roupa
-certa). Um teste de Conhecimento 10+ do Comerciante move **mais 10%**, e só
-uma vez por vendedor por sessão — pra negociação não virar farm de rolagem.
+certa). Um teste de Carisma do Comerciante com **Sucesso total**
+(`SAO_RPG_5e.md` Seção 19 e 66) move **mais 10%**, e só uma vez por
+vendedor por sessão — pra negociação não virar farm de rolagem.
 
 **3. Estoque é finito e visível.** Cada vendedor lista quantas unidades tem
 por semana de jogo. Comprou as três Placas de Metal Refinado da Forja? Não

@@ -5,7 +5,26 @@ uso: mestre
 data: rodada de varredura final
 ---
 
-# Balanceamento — Armas x Ofícios
+> **Este arquivo foi superado.** É uma auditoria de números do sistema
+> PBTA antigo — as contagens abaixo (22 armas, 16 profissões, fraqueza
+> elemental Fogo/Trovão/Gelo/Veneno) não batem mais com a estrutura atual
+> depois da conversão pra D&D 5e:
+>
+> | Este arquivo (PBTA, histórico) | D&D 5e (`SAO_RPG_5e.md`) |
+> |---|---|
+> | 22 armas | **19 armas** (Seção 7) — algumas armas antigas foram removidas na conversão (Seção 6, "Armas removidas") |
+> | 16 profissões | **15 profissões** (Seções 30-44) — algumas se fundiram na conversão (Seções 13-19, ex. Informante) |
+> | Fraqueza = `elemento_fraqueza` (Fogo/Trovão/Gelo/Veneno) | Fraqueza = `atributo_fraqueza` (FOR/DES/INT/SAB), **+1d6** de dano ao acertar (Seção 73) |
+> | Raridade de equipamento em 4 degraus (Comum/Incomum/Raro/Único) | Raridade em 5 degraus (Comum/Incomum/Raro/Épico/Lendário) com bônus numérico direto (Seção 51/72) |
+> | Distribuição arma×atributo/profissão×atributo (tabela do Achado 1) | Precisaria ser refeita do zero contra a lista atual de 19 armas/15 profissões — os números abaixo **não valem mais como auditoria** |
+>
+> Uma nova auditoria de balanceamento (se necessária) deve ser feita contra
+> o estado atual de `armas/`, `equipamentos/` e as Seções 30-44 do
+> `SAO_RPG_5e.md`, não contra os números deste arquivo. O texto abaixo é
+> mantido só como registro histórico da rodada de varredura feita ainda no
+> sistema PBTA — **não é mais regra vinculante nem dado confiável**.
+
+# Balanceamento — Armas x Ofícios (histórico, pré-D&D 5e)
 
 Auditoria pedida numa rodada de "varredura geral" antes de fechar o
 projeto: comparar as 22 armas e as 16 profissões, achar desequilíbrio real

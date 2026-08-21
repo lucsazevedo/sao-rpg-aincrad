@@ -5,6 +5,14 @@ uso: jogador_e_mestre
 producoes: 48
 ---
 
+> **Atualizado pra D&D 5e.** Atributo de teste de cada profissão corrigido
+> conforme `SAO_RPG_5e.md` Seção 19 ("Redistribuição desta etapa"); colunas
+> de resultado convertidas de 10+/7-9 pra Sucesso total/Sucesso parcial
+> (Seção 66). Cartógrafo, Diplomata e Bibliotecário se fundiram em
+> **Informante**; Coveiro se fundiu em **Mercenário** (Seções 13-17) — as
+> seções abaixo continuam separadas por foco de produção, mas mecanicamente
+> já não são profissões distintas.
+
 # Produção por Ofício
 
 ## O problema que este arquivo resolve
@@ -39,10 +47,11 @@ Estrutura idêntica para as 48: **precisa de** algo, **rola** um teste, e o
 resultado tem três faixas. Nenhuma exige oficina, nenhuma exige que outro
 jogador esteja presente — só que o material exista no mercado.
 
-**7-9 sempre entrega.** Produção não é combate: o preço do parcial é
-quantidade, qualidade, tempo ou exclusividade — nunca "não saiu".
+**Sucesso parcial sempre entrega.** Produção não é combate: o preço do
+parcial é quantidade, qualidade, tempo ou exclusividade — nunca "não saiu".
 
-**Qualidade.** Um 10+ em produção de Matéria pode sair **uma raridade acima**
+**Qualidade.** Um Sucesso total em produção de Matéria pode sair **uma
+raridade acima**
 se o material permitir (ver o teto por raridade em
 `armas/00_catalogo_expandido.md`). Comum vira Incomum; Incomum **não** vira
 Raro — Raro é conquista, não fabricação.
@@ -51,7 +60,7 @@ Raro — Raro é conquista, não fabricação.
 
 ## Caçador — Matéria
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Material de caça bônus** | corpo recém-abatido | d20+Destreza | Peça íntegra, valor cheio | Imperfeita, metade do valor |
 | **Carne curada de viagem** | carne fresca + sal ou fumaça | d20+Destreza | 3 rações que não estragam | 2 rações, e uma azeda em dois dias |
@@ -65,11 +74,11 @@ Raro — Raro é conquista, não fabricação.
 
 ## Lenhador — Matéria
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
-| **Madeira boa / Nodosa** | árvore certa e tempo | d20+Destreza | 2 unidades, com chance de Nodosa | 1 unidade, e a queda faz barulho |
-| **Cabo e haste** | madeira + faca | d20+Destreza | Cabo de reposição pra qualquer arma de haste; conserta a peça sem Ferreiro | Serve, mas racha na próxima chuva |
-| **Acampamento montado** | madeira, meia hora, um lugar | d20+Destreza | Descanso seguro **e** o mestre remove uma pressão do caminho | Seguro, mas custa uma vigília |
+| **Madeira boa / Nodosa** | árvore certa e tempo | d20+Força | 2 unidades, com chance de Nodosa | 1 unidade, e a queda faz barulho |
+| **Cabo e haste** | madeira + faca | d20+Força | Cabo de reposição pra qualquer arma de haste; conserta a peça sem Ferreiro | Serve, mas racha na próxima chuva |
+| **Acampamento montado** | madeira, meia hora, um lugar | d20+Força | Descanso seguro **e** o mestre remove uma pressão do caminho | Seguro, mas custa uma vigília |
 
 **Vale:** Madeira 6 Col · Nodosa 22 Col · cabo 25 Col · acampamento vendido a
 outro grupo 40 Col a noite.
@@ -78,9 +87,9 @@ outro grupo 40 Col a noite.
 
 ---
 
-## Cartógrafo — Conhecimento
+## Cartógrafo — Conhecimento (hoje parte de Informante, `SAO_RPG_5e.md` Seção 13/32)
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Mapa de região** | ter percorrido a região | d20+Inteligência | Mapa completo, vendável, com os pontos ocultos | Mapa dos pontos óbvios |
 | **Rota segura** | o destino e um ponto de vista alto | d20+Inteligência | O grupo evita uma ameaça prevista na travessia | Evita, mas chega num lugar pior |
@@ -95,11 +104,16 @@ marco não se vende, se troca.
 
 ## Comerciante — Conhecimento
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+> Atributo de teste do Comerciante hoje é **Carisma** (`SAO_RPG_5e.md`
+> Seção 19) — negociação e persuasão, não conhecimento puro. Avaliação
+> continua Inteligência (é a exceção de identificar/avaliar, mesmo padrão
+> que Ferreiro/Joalheiro/Médico usam pra suas próprias leituras técnicas).
+
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Avaliação** | o item na mão | d20+Inteligência | Raridade real, procedência e preço justo | A raridade, sem a história |
-| **Lote importado** | capital adiantado | d20+Inteligência | Chega na próxima sessão, com margem | Chega com 30% de acréscimo |
-| **Carta de crédito** | reputação com um vendedor | d20+Inteligência | O grupo compra fiado em três lojas | Numa loja, e ela cobra juro em serviço |
+| **Lote importado** | capital adiantado | d20+Carisma | Chega na próxima sessão, com margem | Chega com 30% de acréscimo |
+| **Carta de crédito** | reputação com um vendedor | d20+Carisma | O grupo compra fiado em três lojas | Numa loja, e ela cobra juro em serviço |
 
 **Vale:** avaliação 20 Col ou favor · lote é a margem que você fizer · crédito
 não tem preço, tem consequência.
@@ -110,7 +124,7 @@ não tem preço, tem consequência.
 
 ## Cozinheiro — Matéria
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Prato com bônus** | proteína + erva + fogo | d20+Inteligência | Bônus de refeição pro grupo inteiro na próxima expedição | Pra metade do grupo |
 | **Conserva de viagem** | qualquer material perecível + sal | d20+Destreza | O material dura a campanha inteira | Dura três sessões |
@@ -125,9 +139,9 @@ zero toda vez.
 
 ---
 
-## Diplomata — Conhecimento
+## Diplomata — Conhecimento (hoje parte de Informante, `SAO_RPG_5e.md` Seção 13/32)
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Acordo escrito** | as duas partes na mesma sala | d20+Inteligência | O acordo se sustenta sozinho e vira precedente | Se sustenta enquanto você estiver por perto |
 | **Salvo-conduto** | reputação com um clã | d20+Inteligência | Passagem livre pro grupo em território daquele clã | Passagem pra você, mediante favor |
@@ -140,9 +154,9 @@ zero toda vez.
 
 ---
 
-## Bibliotecário — Conhecimento
+## Bibliotecário — Conhecimento (hoje parte de Informante, `SAO_RPG_5e.md` Seção 13/32)
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Dossiê de criatura** | acesso a uma fonte real | d20+Inteligência | Fraqueza, resistências e vulnerabilidades — vendável a outro grupo | Só a fraqueza principal |
 | **Transcrição** | tempo, papel e a inscrição na frente | d20+Destreza | Cópia fiel, transportável, que outro estudioso aceita | Cópia parcial |
@@ -157,7 +171,7 @@ se vende: é o que muda a campanha.
 
 ## Alquimista — Matéria
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Frasco de Antídoto** | Seiva limpa + frasco vazio | d20+Inteligência | 2 frascos | 1 frasco |
 | **Pomada e reagente** | Ervas + componente comprado | d20+Inteligência | Lote de 3, e um extra pro Médico | Lote de 2 |
@@ -173,7 +187,7 @@ receitas nomeadas em 3 dificuldades.
 
 ## Costureiro — Matéria
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Peça de tecido ou couro** | Pelagem/tecido + molde | d20+Destreza | Sai uma raridade acima se o material permitir | Sai no prazo dobrado |
 | **Reforço com placa** | a peça + Placas de Metal Refinado | d20+Destreza | Vira Armadura de Couro Reforçada, sem perder mobilidade | Vira, mas pesa: complicação em furtividade |
@@ -187,11 +201,16 @@ receitas nomeadas em 3 dificuldades.
 
 ## Domador — Serviço
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+> Atributo do Domador hoje é **Sabedoria** (`SAO_RPG_5e.md` Seção 19), e a
+> doma usa teste único vs. CD por criatura, não mais barra de sucessos
+> (Seção 42, Nível 1 — ver nota em `docs/oficios_andar1.md`, seção
+> Domador, e a tabela de CD em `docs/economia_profissoes.md`).
+
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
-| **Vínculo com criatura** | o petisco certo e paciência | d20+Destreza na barra | 1 sucesso limpo | 1 sucesso, e ela reage mal no turno |
-| **Adestramento de tarefa** | criatura já domada | d20+Destreza | Ela executa uma tarefa específica sozinha, longe de você | Executa, mas volta machucada |
-| **Serviço de batedor** | criatura domada + um contratante | d20+Destreza | O contratante atravessa a região sem encontro | Atravessa com um encontro evitável |
+| **Vínculo com criatura** | o petisco certo e paciência | d20+Sabedoria vs. CD da criatura | Doma bem-sucedida | A criatura reage mal e a aproximação precisa recomeçar |
+| **Adestramento de tarefa** | criatura já domada | d20+Sabedoria | Ela executa uma tarefa específica sozinha, longe de você | Executa, mas volta machucada |
+| **Serviço de batedor** | criatura domada + um contratante | d20+Sabedoria | O contratante atravessa a região sem encontro | Atravessa com um encontro evitável |
 
 **Vale:** serviço de batedor 80 Col a travessia · criatura domada **não se
 vende** — e quem tentar vender descobre por quê.
@@ -202,11 +221,11 @@ vende** — e quem tentar vender descobre por quê.
 
 ## Ferreiro — Matéria
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
-| **Placas de Metal Refinado** | Minério Raro + Madeira | d20+Destreza | 2 Placas | 1 Placa |
-| **Lâmina Reforçada** | Placas + Fragmento Kobold | d20+Destreza | Insumo de qualidade pra arma Incomum, e sobra aparo | Sai, com uma imperfeição visível |
-| **Conserto e têmpera** | forja acesa | d20+Destreza | Conserta e melhora a durabilidade permanentemente | Conserta |
+| **Placas de Metal Refinado** | Minério Raro + Madeira | d20+Força | 2 Placas | 1 Placa |
+| **Lâmina Reforçada** | Placas + Fragmento Kobold | d20+Força | Insumo de qualidade pra arma Incomum, e sobra aparo | Sai, com uma imperfeição visível |
+| **Conserto e têmpera** | forja acesa | d20+Força | Conserta e melhora a durabilidade permanentemente | Conserta |
 
 **Vale:** Placa 90-100 Col · Lâmina 180 Col · conserto 1/5 do preço base.
 
@@ -216,7 +235,7 @@ vende** — e quem tentar vender descobre por quê.
 
 ## Joalheiro — Matéria
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Acessório engastado** | pedra + fio de prata | d20+Destreza | Sai perfeito e sobra material | Sai, gastando o dobro |
 | **Lapidação** | Cristal Bruto | d20+Destreza | Bruto vira reagente puro: vale o dobro | Vale o mesmo, com perda de 30% |
@@ -229,9 +248,9 @@ selo 120 Col, e o uso dele é problema de quem comprou.
 
 ---
 
-## Coveiro — Matéria
+## Coveiro — Matéria (hoje parte de Mercenário, `SAO_RPG_5e.md` Seção 15)
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Terço e talismã de osso** | Ossos Antigos + ritual próprio | d20+Sabedoria | A peça funciona (só vale se você mesmo montar) | Funciona pela metade |
 | **Registro de morte** | o nome e a confirmação | d20+Sabedoria | Entra no Memorial, e a família sabe primeiro | Entra, e alguém vai duvidar |
@@ -246,7 +265,7 @@ o Zelador passa a te responder.
 
 ## Médico — Serviço
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
 | **Tratamento de status** | Ervas + componente do Alquimista | d20+Sabedoria | Remove veneno, paralisia, sono ou confusão sem gastar Cristal | Remove, e leva a noite |
 | **Kit de primeiros socorros** | bandagem, ervas, frasco | d20+Destreza | 3 usos, e qualquer um do grupo consegue usar | 2 usos, e só você sabe usar |
@@ -261,11 +280,11 @@ laudo 50 Col, e vale mais quando é ruim.
 
 ## Músico — Serviço
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
-| **Toque de ânimo** | instrumento e ser ouvido | d20+Sabedoria | Todo aliado que falhou no teste anterior rola de novo | Um aliado rola de novo |
-| **Canção de trabalho** | um grupo fazendo tarefa longa | d20+Sabedoria | A tarefa rende o dobro e ninguém desiste no meio | Rende, mas cansa igual |
-| **Cantiga com recado** | a mensagem e uma melodia | d20+Sabedoria | A mensagem viaja pelo andar sem você levar, e só quem deve entende | Viaja, e mais alguém entende |
+| **Toque de ânimo** | instrumento e ser ouvido | d20+Carisma | Todo aliado que falhou no teste anterior rola de novo | Um aliado rola de novo |
+| **Canção de trabalho** | um grupo fazendo tarefa longa | d20+Carisma | A tarefa rende o dobro e ninguém desiste no meio | Rende, mas cansa igual |
+| **Cantiga com recado** | a mensagem e uma melodia | d20+Carisma | A mensagem viaja pelo andar sem você levar, e só quem deve entende | Viaja, e mais alguém entende |
 
 **Vale:** toque na praça = 10% de desconto pro grupo enquanto durar · canção de
 trabalho 50 Col por jornada · cantiga com recado 70 Col, e é o correio mais
@@ -277,10 +296,13 @@ seguro do andar.
 
 ## Mercenário — Serviço
 
-| Produz | Precisa de | Teste | 10+ | 7-9 |
+> Absorveu o Coveiro (ver acima). Atributo hoje é **Constituição**
+> (`SAO_RPG_5e.md` Seção 19) — resistência de campo, não força bruta.
+
+| Produz | Precisa de | Teste | Sucesso total | Sucesso parcial |
 |---|---|---|---|---|
-| **Escolta** | um contratante e uma rota | d20+Força | Chegam inteiros, e você fica com parte do material | Chegam, e o escoltado perde algo |
-| **Perímetro** | um lugar pra defender | d20+Força | Ninguém passa enquanto o grupo faz outra coisa | Passa um |
+| **Escolta** | um contratante e uma rota | d20+Constituição | Chegam inteiros, e você fica com parte do material | Chegam, e o escoltado perde algo |
+| **Perímetro** | um lugar pra defender | d20+Constituição | Ninguém passa enquanto o grupo faz outra coisa | Passa um |
 | **Avaliação de ameaça** | ver o inimigo antes | d20+Inteligência | Quantos são, o que querem, e se dá pra evitar | Quantos são |
 
 **Vale:** escolta 100-200 Col por expedição, mais parte do material ·
@@ -291,6 +313,10 @@ perímetro 60 Col a cena · avaliação 40 Col, e evita a briga que custaria mai
 ---
 
 # Conferência
+
+Contagem original de 16 profissões (era PBTA); a conversão pra D&D 5e
+fundiu 4 delas em 2 (Informante, Mercenário — Seções 13-17 de
+`SAO_RPG_5e.md`), mas as 16 seções de produção seguem separadas por foco.
 
 | | Quantidade |
 |---|---|

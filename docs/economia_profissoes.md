@@ -1,5 +1,16 @@
 # Economia de profissões — Andar 1 (v2)
 
+> **Atualizado pra D&D 5e.** A tabela de profissões e atributos abaixo foi
+> corrigida pra bater com `SAO_RPG_5e.md`, Seção 19 ("Redistribuição desta
+> etapa") — que é uma reatribuição posterior à conversão simples de
+> atributo por atributo (Seção 65) e é o valor realmente usado por
+> `mod_atributo_personagem` no jogo online. Além disso, a conversão pra
+> D&D **fundiu 4 das 16 profissões originais em 2**: Bibliotecário +
+> Cartógrafo + Diplomata → **Informante**; Coveiro → **Mercenário** (Seção
+> 13/15). O sistema atual tem **15 profissões**, não 16 — a tabela abaixo
+> mantém as linhas separadas (o conteúdo econômico de cada uma continua
+> distinto e útil), mas marca quem se fundiu em quem.
+
 ## Princípio de design (corrigido)
 
 **Não é cooperação simultânea — é cadeia de compra.** Uma profissão não
@@ -12,34 +23,39 @@ fazer a armadura. Ninguém precisa estar "presente" pra receita funcionar.
 
 Isso é economia de MMO de verdade: produção primária (caça/coleta) →
 processamento (profissão intermediária) → produto final (profissão que
-monta o item) → venda. As 16 profissões estão em
-`docs/guia_sistema_aincrad.md`.
+monta o item) → venda. As profissões estão em `SAO_RPG_5e.md`, Seções
+30-44.
 
-Os **Moves de Profissão** (protagonismo/ações de cena) vivem no manual do
-jogador (`docs/guia_sistema_aincrad.md`). Este documento existe para detalhar
-economia, cadeia de produção, tabelas e mecânicas de mapa. Em caso de conflito,
-use o manual como regra de mesa.
+As habilidades de profissão (progressão por nível 1/5/10/15/20) vivem no
+`SAO_RPG_5e.md` (Seções 20-26 e 30-44). Este documento existe para detalhar
+economia, cadeia de produção, tabelas e mecânicas de mapa. Em caso de
+conflito, use o rulebook como regra de mesa.
 
-## As 16 profissões — o que cada uma realmente faz
+## As profissões — o que cada uma realmente faz
+
+Atributo já corrigido conforme a redistribuição de `SAO_RPG_5e.md` Seção
+19. Bibliotecário/Cartógrafo/Diplomata e Coveiro seguem listados abaixo
+pelo valor econômico distinto que cada um cobre, mas mecanicamente já não
+são profissões separadas — ver nota de fusão em cada linha.
 
 | Profissão | Atributo | Produz/faz | Precisa comprar/obter de |
 |---|---|---|---|
-| **Caçador** | Reflexo | Abate monstros e extrai **material de caça bônus** (só ele consegue, teste de Técnica/Reflexo no corpo do monstro) — ver tabela por monstro abaixo | Nada — é fonte primária |
-| **Lenhador** | Reflexo | Coleta Madeira e **Madeira Rara** (variante ocasional) na Floresta | Nada — fonte primária |
-| **Domador** | Técnica | Amansa criaturas vivas (viram aliados/montarias) — precisa de petisco/item específico por criatura | Petiscos específicos, às vezes do Cozinheiro/Alquimista |
-| **Ferreiro** | Técnica | Processa Minério Raro + Madeira em **Placas de Metal Refinado**, **Lâminas** — vende esses componentes; também forja armas/armaduras direto | Minério Raro (Caçador/mineração), Madeira (Lenhador) |
-| **Costureiro** | Técnica | Faz roupas/armaduras leves — precisa de Pelagem/Couro (caça) + Placas de Metal Refinado (Ferreiro) pras partes reforçadas | Ferreiro |
-| **Joalheiro** | Técnica | Acessórios com Escama Prateada/Ovule + fio de prata | Comerciante (fio, importado) |
-| **Alquimista** | Conhecimento | Poções/antídotos com Seiva/Ervas + frascos | Comerciante (frascos) |
-| **Cozinheiro** | Conhecimento | Pratos com bônus temporário, usa carne de caça + ervas | Caçador (carne), coleta própria (ervas) |
-| **Médico** | Espírito | Trata status negativos com Ervas + um componente do Alquimista | Alquimista |
-| **Comerciante** | Conhecimento | Importa frascos, fio de prata, tecido — capital pra financiar outros | Nada — importa de fora do andar |
-| **Cartógrafo** | Conhecimento | Mapeia áreas — revela pontos ocultos no mapa mais rápido, indica rotas seguras | Nada — trabalha com exploração própria |
-| **Bibliotecário** | Conhecimento | Pesquisa monstros/lore com antecedência — revela resistência/fraqueza antes do combate | Acesso a livros/pistas (às vezes do Coveiro) |
-| **Diplomata** | Conhecimento | Negocia entre as guildas (Sindicato, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds) — reduz tensão, abre acesso a recompensas de guilda | Nada — usa reputação/roleplay |
-| **Coveiro** | Espírito | Cuida do memorial dos jogadores que morreram — pode aprender segredos/pistas ligadas aos mortos | Nada — acesso ao memorial |
-| **Mercenário** | Corpo | Escolta outras profissões até zonas perigosas (Montanhas, Labirinto) por uma parte do material coletado | Nada — vende força |
-| **Músico** | Espírito | Toca na praça — afeta preços/moral, carrega pistas escondidas em cantigas (ver puzzle do mural) | Nada |
+| **Caçador** | Sabedoria | Abate monstros e extrai **material de caça bônus** (só ele consegue, teste de Destreza no corpo do monstro) — ver tabela por monstro abaixo | Nada — é fonte primária |
+| **Lenhador** | Força | Coleta Madeira e **Madeira Rara** (variante ocasional) na Floresta | Nada — fonte primária |
+| **Domador** | Sabedoria | Amansa criaturas vivas (viram aliados/montarias) — precisa de petisco/item específico por criatura | Petiscos específicos, às vezes do Cozinheiro/Alquimista |
+| **Ferreiro** | Força | Processa Minério Raro + Madeira em **Placas de Metal Refinado**, **Lâminas** — vende esses componentes; também forja armas/armaduras direto | Minério Raro (Caçador/mineração), Madeira (Lenhador) |
+| **Costureiro** | Destreza | Faz roupas/armaduras leves — precisa de Pelagem/Couro (caça) + Placas de Metal Refinado (Ferreiro) pras partes reforçadas | Ferreiro |
+| **Joalheiro** | Destreza | Acessórios com Escama Prateada/Ovule + fio de prata | Comerciante (fio, importado) |
+| **Alquimista** | Inteligência | Poções/antídotos com Seiva/Ervas + frascos | Comerciante (frascos) |
+| **Cozinheiro** | Inteligência | Pratos com bônus temporário, usa carne de caça + ervas | Caçador (carne), coleta própria (ervas) |
+| **Médico** | Sabedoria | Trata status negativos com Ervas + um componente do Alquimista | Alquimista |
+| **Comerciante** | Carisma | Importa frascos, fio de prata, tecido — capital pra financiar outros | Nada — importa de fora do andar |
+| **Cartógrafo** *(fundido em Informante)* | Inteligência | Mapeia áreas — revela pontos ocultos no mapa mais rápido, indica rotas seguras | Nada — trabalha com exploração própria |
+| **Bibliotecário** *(fundido em Informante)* | Inteligência | Pesquisa monstros/lore com antecedência — revela resistência/fraqueza antes do combate | Acesso a livros/pistas (às vezes do Coveiro) |
+| **Diplomata** *(fundido em Informante)* | Inteligência | Negocia entre as guildas (Sindicato, LHUB, Dndalcin, iBarr's, Terraço Geek, Guilda de Nerds) — reduz tensão, abre acesso a recompensas de guilda | Nada — usa reputação/roleplay |
+| **Coveiro** *(fundido em Mercenário)* | Sabedoria | Cuida do memorial dos jogadores que morreram — pode aprender segredos/pistas ligadas aos mortos | Nada — acesso ao memorial |
+| **Mercenário** | Constituição | Escolta outras profissões até zonas perigosas (Montanhas, Labirinto) por uma parte do material coletado | Nada — vende força |
+| **Músico** | Carisma | Toca na praça — afeta preços/moral, carrega pistas escondidas em cantigas (ver puzzle do mural) | Nada |
 
 ## Mecânicas concretas de mapa por profissão
 
@@ -47,20 +63,21 @@ Toda profissão precisa de algo jogável no mapa, não só uma frase de
 descrição — mesmo padrão de "criaturas domáveis" acima, aplicado às
 profissões de Conhecimento que ainda estavam só em prosa.
 
-### Cartógrafo
+### Cartógrafo (hoje Informante — ver `SAO_RPG_5e.md` Seção 32)
 
-Move de Ofício no manual: **Mapa Vivo**.
+Corresponde à habilidade de Nível 10 do Informante, **Mapa Vivo**.
 
 **Ao entrar numa região do mapa** (`scripts/web/dados_mapa.js`) **ainda sem
-nenhum ponto descoberto**, o Cartógrafo pode parar, observar e testar
-**d20+Inteligência** antes de explorar normalmente:
-- **10+**: revela de uma vez todos os pontos tipo `sempre` da região (os que
-  não exigem `requer`) e o mestre deve indicar uma rota segura entre dois
-  marcos óbvios da região.
-- **7-9**: revela metade desses pontos (arredondado pra cima, escolhidos pelo
-  mestre ou por ordem de proximidade), mas isso cobra tempo ou exposição
-  (o mestre escolhe).
-- **6-**: nenhum bônus — a região se explora do jeito normal.
+nenhum ponto descoberto**, o Informante com esse foco pode parar, observar e
+testar **d20+Inteligência** antes de explorar normalmente (graus de
+sucesso, `SAO_RPG_5e.md` Seção 66):
+- **Sucesso total** (bate a CD por 5+): revela de uma vez todos os pontos
+  tipo `sempre` da região (os que não exigem `requer`) e o mestre deve
+  indicar uma rota segura entre dois marcos óbvios da região.
+- **Sucesso parcial** (bate a CD por menos de 5): revela metade desses
+  pontos (arredondado pra cima, escolhidos pelo mestre ou por ordem de
+  proximidade), mas isso cobra tempo ou exposição (o mestre escolhe).
+- **Falha**: nenhum bônus — a região se explora do jeito normal.
 
 Pontos de "vista alta" já existentes no mapa (Mirante das Colinas,
 `bounty_04_vista_do_topo` nos Penhascos de Vaelor, o topo das Montanhas de
@@ -72,25 +89,28 @@ Cartógrafo trabalha melhor.
 ser vendida como mapa físico a outro grupo por Col (sugestão: 10 Col por
 ponto revelado da região).
 
-### Bibliotecário
+### Bibliotecário (hoje Informante — ver `SAO_RPG_5e.md` Seção 32)
 
-Move de Ofício no manual: **Pesquisa com Fonte**.
+Corresponde à habilidade de Nível 1 do Informante, **Rede de Informações**
+(d20+Inteligência+proficiência vs. CD, Seção 29).
 
 **Antes de um combate contra qualquer monstro do bestiário** (mesmo um já
-enfrentado antes), o Bibliotecário pode pesquisar com antecedência — só
-funciona com acesso a uma fonte real, não em qualquer lugar:
+enfrentado antes), o Informante com esse foco pode pesquisar com
+antecedência — só funciona com acesso a uma fonte real, não em qualquer
+lugar:
 - **Torre de Aldric** (NPC Estudioso Obcecado, `npcs/estudioso_obcecado.md`)
   é a fonte principal — ele coopera de graça se o grupo já tiver
   construído alguma relação com ele.
 - **Memorial de Voss** (NPC Zelador do Memorial) é fonte secundária pra
   monstros ligados a mortes de jogadores especificamente.
 
-Teste **d20+Inteligência**:
-- **10+**: revela a fraqueza principal e mais 1 detalhe útil (hábito,
-  prioridade de alvo, medo, padrão de patrulha ou “o que ele nunca faz”).
-- **7-9**: revela só a fraqueza principal, mas a fonte cobra algo (tempo,
-  favor, exposição, Col).
-- **6-**: nada, e consome o tempo de preparo mesmo assim.
+Teste **d20+Inteligência** (graus de sucesso, Seção 66):
+- **Sucesso total**: revela a fraqueza principal e mais 1 detalhe útil
+  (hábito, prioridade de alvo, medo, padrão de patrulha ou “o que ele
+  nunca faz”).
+- **Sucesso parcial**: revela só a fraqueza principal, mas a fonte cobra
+  algo (tempo, favor, exposição, Col).
+- **Falha**: nada, e consome o tempo de preparo mesmo assim.
 
 ### Mercenário
 
@@ -125,39 +145,43 @@ comprar/vender.
 
 ## Criaturas domáveis (Domador)
 
+> **Mecânica de doma atualizada.** `SAO_RPG_5e.md` Seção 42 (Domador,
+> Nível 1) substitui a antiga "barra de sucessos" por um **teste único**:
+> **d20 + Sabedoria + proficiência (Adestrar Animais) vs. CD por
+> criatura** (CDs padrão na Seção 29: Fácil 10, Moderada 12, Difícil 15,
+> Muito difícil 18, Excepcional 20). A coluna "Sucessos p/ domar" abaixo
+> foi convertida pra CD equivalente, preservando a régua relativa de
+> dificuldade entre as criaturas; o petisco/item continua sendo pré-
+> requisito narrativo pro teste valer, não algo que se gasta em várias
+> tentativas.
+
 Cobertura completa do bestiário do andar 1 — toda criatura tem status
-explícito de doma, não só as que viraram quest. Doma funciona como uma
-**barra de sucessos**, na mesma lógica de golpes-para-derrotar do combate
-(`docs/guia_sistema_aincrad.md`): cada tentativa é um teste de
-**d20+Destreza** (10+: 1 sucesso limpo; 7-9: 1 sucesso, mas a criatura reage
-mal nesse turno — ela pode fugir ou o Domador leva um dano leve; 6-: sem
-sucesso, e 2 falhas seguidas fazem a criatura fugir/atacar de vez,
-encerrando a tentativa). **Sucessos necessários** escala com a mesma faixa
-de ameaça usada no combate:
+explícito de doma, não só as que viraram quest.
 
-| Nível de ameaça | Sucessos p/ domar |
+| Nível de ameaça | CD de doma |
 |---|---|
-| Fraco | 2 |
-| Comum | 3-4 |
-| Forte | 5-7 |
-| Elite/raro | 8-10 |
+| Fraco | 10 (Fácil) |
+| Comum | 12 (Moderada) |
+| Forte | 15 (Difícil) |
+| Elite/raro | 18 (Muito difícil) |
+| Excepcional (Arauto) | 20 (Excepcional) |
 
-| Criatura | Domável? | Sucessos p/ domar | Petisco/item necessário | Resultado |
+| Criatura | Domável? | CD de doma | Petisco/item necessário | Resultado |
 |---|---|---|---|---|
-| Frenzy Boar | Sim | 2 | Ervas comuns oferecidas repetidamente (paciência, não item raro) | Montaria pequena/aliado de combate fraco |
-| Toca na Raiz | Sim | 2 | Ervas comuns | Aliado de combate fraco, bom "primeiro bicho" |
-| Libélula Cortante | Sim | 2 | Nenhum item — só paciência e um teste de Reflexo pra acompanhar o voo antes do de Técnica | Batedor rápido, bônus em testes de percepção em área aberta |
-| Morcego Ecoante | Sim | 2 | Nenhum item — silêncio total durante a aproximação | Batedor de caverna, ajuda a evitar emboscada em dungeon |
-| Corvo das Ruínas | Sim | 2 | Item pequeno e brilhante como oferenda (qualquer bugiganga Comum) | Mensageiro/batedor aéreo de curto alcance |
-| Lobo das Estepes | Sim | 4 | Carne crua de qualquer caça (Frenzy Boar serve) | Aliado de combate leal, ataca em conjunto com o dono |
-| Fada da Poeira | Sim | 4 | Néctar de Flor Rara (Jardim de Fenwyth) | Aliado utilitário — ilumina áreas escuras, sem combate |
-| Sombra de Mournhall | Sim | 5 | Isca com Musgo Luminoso (Alquimista) — ela é avessa à luz forte, a isca precisa ser fraca e constante | Aliado que enxerga no escuro, útil em dungeon |
-| Stabbing Wasp | Sim | 5 | Feromônio calmante feito pelo Alquimista | Aliado de reconhecimento/vigilância, não de combate direto |
-| Urso de Pedra | Sim | 6 | Grande quantidade de comida de uma vez (não repetida) | Aliado tanque, absorve dano por quem o domou |
-| Águia de Pedra | Sim | 6 | Mesma lógica do Arauto, em escala menor | Montaria terrestre/curtos voos, alternativa mais rápida de conseguir que o Arauto |
-| Serpente das Águas Rasas | Sim | 6 | Isca de peixe fresco deixada por 3 dias seguidos no mesmo ponto | Aliado aquático mais ágil (porém mais frágil) que o Lacustre Vagador |
-| Lacustre Vagador | Sim | 8 | Isca feita com Ferrão de Vespa (ver receita) | Aliado que ajuda em terreno aquático |
-| Arauto das Alturas | Sim | 10 | Ritual de oferenda de penas próprias (coletadas de outro Arauto) no topo das Montanhas de Grauvenn | Montaria voadora — a doma mais rara e valiosa do andar 1 |
+| Frenzy Boar | Sim | 10 | Ervas comuns oferecidas repetidamente (paciência, não item raro) | Montaria pequena/aliado de combate fraco |
+| Toca na Raiz | Sim | 10 | Ervas comuns | Aliado de combate fraco, bom "primeiro bicho" |
+| Libélula Cortante | Sim | 10 | Nenhum item — só paciência e um teste de Destreza pra acompanhar o voo | Batedor rápido, bônus em testes de percepção em área aberta |
+| Morcego Ecoante | Sim | 10 | Nenhum item — silêncio total durante a aproximação | Batedor de caverna, ajuda a evitar emboscada em dungeon |
+| Corvo das Ruínas | Sim | 10 | Item pequeno e brilhante como oferenda (qualquer bugiganga Comum) | Mensageiro/batedor aéreo de curto alcance |
+| Lobo das Estepes | Sim | 12 | Carne crua de qualquer caça (Frenzy Boar serve) | Aliado de combate leal, ataca em conjunto com o dono |
+| Fada da Poeira | Sim | 12 | Néctar de Flor Rara (Jardim de Fenwyth) | Aliado utilitário — ilumina áreas escuras, sem combate |
+| Sombra de Mournhall | Sim | 15 | Isca com Musgo Luminoso (Alquimista) — ela é avessa à luz forte, a isca precisa ser fraca e constante | Aliado que enxerga no escuro, útil em dungeon |
+| Stabbing Wasp | Sim | 15 | Feromônio calmante feito pelo Alquimista | Aliado de reconhecimento/vigilância, não de combate direto |
+| Urso de Pedra | Sim | 15 | Grande quantidade de comida de uma vez (não repetida) | Aliado tanque, absorve dano por quem o domou |
+| Águia de Pedra | Sim | 15 | Mesma lógica do Arauto, em escala menor | Montaria terrestre/curtos voos, alternativa mais rápida de conseguir que o Arauto |
+| Serpente das Águas Rasas | Sim | 15 | Isca de peixe fresco deixada por 3 dias seguidos no mesmo ponto | Aliado aquático mais ágil (porém mais frágil) que o Lacustre Vagador |
+| Lacustre Vagador | Sim | 18 | Isca feita com Ferrão de Vespa (ver receita) | Aliado que ajuda em terreno aquático |
+| Arauto das Alturas | Sim | 20 | Ritual de oferenda de penas próprias (coletadas de outro Arauto) no topo das Montanhas de Grauvenn | Montaria voadora — a doma mais rara e valiosa do andar 1 |
 | Little Nepenthes | Não — é planta, não forma vínculo | — | — | Alquimista pode replantar uma muda como armadilha estática, mas não é aliado |
 | Trepadeira Estranguladora | Não — planta | — | — | — |
 | Coruja das Sombras | Não — solitária e evasiva demais | — | — | Caçador ainda extrai material dela |

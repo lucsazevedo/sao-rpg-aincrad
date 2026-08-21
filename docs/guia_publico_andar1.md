@@ -627,8 +627,8 @@ Essas perguntas não são proibidas. Elas só pedem mais do que memória comum.
 | "Que tipo de monstro vive nessa região?" | `d20+Inteligência` | espécie provável, padrão e faixa de ameaça |
 | "Quem compra isso por preço melhor?" | `d20+Inteligência` | contato, praça ou cidade certa |
 | "Já ouvi falar desse símbolo?" | `d20+Inteligência` | onde apareceu antes ou quem pode reconhecer |
-| "Tem algo errado nesse lugar?" | `d20+Sabedoria` ou `Conhecimento` | o detalhe que não bate com o resto da cena |
-| "Quem manda aqui de verdade?" | `d20+Inteligência` ou `Espírito` | figura central, tensão local ou facção dominante |
+| "Tem algo errado nesse lugar?" | `d20+Sabedoria` ou `d20+Inteligência` | o detalhe que não bate com o resto da cena |
+| "Quem manda aqui de verdade?" | `d20+Inteligência` ou `d20+Sabedoria` | figura central, tensão local ou facção dominante |
 | "Isso é rumor ou fato?" | `d20+Inteligência` | separa parte confiável do exagero |
 | "Alguém já tentou isso antes?" | `d20+Inteligência` | vestígio humano, fracasso anterior ou pista social |
 
@@ -665,10 +665,10 @@ Quando um jogador perguntar algo geral sobre o Andar 1, prefira este fluxo:
 Exemplo:
 
 - Jogador: "Meu personagem saberia alguma coisa sobre Voss?"
-- Mestre, ruim: "rola Conhecimento."
+- Mestre, ruim: "rola Inteligência."
 - Mestre, bom: "Sim. Você sabe que é uma necrópole antiga e que o lugar tem
   fama de silêncio e respeito. Se quiser lembrar algo mais específico sobre o
-  Zelador ou sobre a lápide raspada, aí rola Conhecimento."
+  Zelador ou sobre a lápide raspada, aí rola Inteligência."
 
 ## Respostas prontas para perguntas muito comuns
 

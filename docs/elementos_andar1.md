@@ -4,7 +4,26 @@ andar: 1
 uso: regra de sistema
 ---
 
-# Fraquezas de Atributo
+> **Este arquivo foi superado.** A partir da conversão do sistema pra D&D
+> 5e, a fonte única de verdade da mecânica é **`SAO_RPG_5e.md`** (raiz do
+> projeto). A mecânica de fraqueza mudou de natureza, não só de nome — o
+> texto abaixo descreve um mecanismo **narrativo** ("acertar a fraqueza
+> nega a reação do monstro"), que não existe mais assim:
+>
+> | Este arquivo (PBTA, histórico) | D&D 5e (`SAO_RPG_5e.md`) |
+> |---|---|
+> | Fraqueza = nega a reação do monstro (7-9 vira 10+ funcional) | Fraqueza = **+1d6 de dano extra** no ataque que usa o atributo certo (Seção 73) |
+> | `atributo_fraqueza`: Corpo/Reflexo/Conhecimento/Espírito/Técnica | `atributo_fraqueza` convertido pra **FOR/DES/INT/SAB** (Seção 65 — Técnica e Espírito não têm conversão 1:1, então nunca sobra CON/CAR num monstro) |
+> | Raridade de equipamento em 4 degraus: Comum/Incomum/Raro/**Único** | Raridade de equipamento em 5 degraus: Comum/Incomum/Raro/Épico/**Lendário** (Seção 51/72) |
+> | Raridade de material (drop) em 4 degraus: Comum/Incomum/Raro/**Épico** | Segue existindo como conceito, mas a escala de equipamento já não é mais a mesma (ver acima) |
+> | "O mestre deve dizer a fraqueza. Não esconda." | Fraqueza continua sendo **descoberta em jogo**, não informação de graça — mas agora com regra explícita de como descobrir (observação, teste de Sistema, habilidades de Caçador/Mercenário/Informante) — ver Seção 73, "Fraqueza é ferramenta de descoberta" |
+>
+> O texto abaixo é mantido só como registro histórico de como a fraqueza
+> funcionava no sistema PBTA (2d6, escada 10+/7-9/6-) — **não é mais regra
+> vinculante**. Não use pra gerar conteúdo novo nem pra tirar dúvida de
+> regra; use `SAO_RPG_5e.md`, Seção 73.
+
+# Fraquezas de Atributo (histórico, pré-D&D 5e)
 
 O sistema elemental (Fogo/Trovão/Gelo/Veneno) foi descontinuado — esta
 regra o substitui.

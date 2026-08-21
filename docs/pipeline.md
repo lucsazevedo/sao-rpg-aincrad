@@ -44,8 +44,10 @@ sempre foi), mas o passo final mudou:
   torch/transformers na GPU.
 - `base/` guarda o material de referência que você for mandando (manual do
   jogador, imagens etc.) — solte arquivos novos lá. Quando enviar mais
-  páginas do manual, atualize `docs/guia_sistema_aincrad.md` com o
-  conteúdo novo — todos os geradores leem esse arquivo automaticamente.
+  páginas do manual, atualize `SAO_RPG_5e.md` (raiz do projeto) com o
+  conteúdo novo — é dele que `scripts/ollama_client.py:carregar_guia_sistema()`
+  lê, e é o que todos os geradores usam automaticamente. `docs/guia_sistema_aincrad.md`
+  virou um redirect histórico curto — não é mais lido pelos scripts.
 
 ---
 
@@ -140,7 +142,8 @@ de mundo pra ancorar a pista.
 ### 8. Armas/equipamentos/mercado (se o andar precisar de itens novos)
 
 Só vale a pena se o andar introduzir um tipo de recurso genuinamente novo
-(o Andar 1 não precisou de arma nova — as 22 já cobrem tudo). Preço e
+(o Andar 1 não precisou de arma nova — as 19 armas da conversão pra D&D 5e,
+`SAO_RPG_5e.md` Seção 7, já cobrem tudo). Preço e
 venda seguem `docs/mercado_andar1.md` como molde de formato; balanceamento
 segue a régua de `armas/00_catalogo_expandido.md` ("A regra de
 balanceamento: facilidade de obter define o teto").
@@ -182,12 +185,15 @@ Rode `python scripts/gerar_dados_web.py` depois de qualquer ficha nova —
   Antes de escrever um NPC novo, `grep` rápido em `npcs/*.md` pelo papel
   que você precisa — geralmente já existe alguém que serve.
 - **Balanceamento por atributo vale conferir cedo, não só no fim.** A
-  auditoria final achou que Conhecimento (Chicote/Pá) era o único
-  atributo sem item Raro em 51 armas — um desequilíbrio que existia desde
-  o catálogo original e só foi pego numa varredura dedicada. Ao criar
-  itens novos por chefe/quest, checar rapidamente "quantos Raros esse
-  atributo já tem" evita acumular a mesma lacuna no Andar 2.
-  `docs/balanceamento_armas_oficios.md` documenta o método.
+  auditoria final (feita ainda no sistema PBTA, antes da conversão pra
+  D&D 5e — números de então, hoje históricos) achou que Conhecimento
+  (Chicote/Pá) era o único atributo sem item Raro em 51 armas — um
+  desequilíbrio que existia desde o catálogo original e só foi pego numa
+  varredura dedicada. Ao criar itens novos por chefe/quest, checar
+  rapidamente "quantos Raros esse atributo já tem" evita acumular a mesma
+  lacuna no Andar 2 — hoje conferindo contra as 19 armas de `SAO_RPG_5e.md`
+  Seção 7, não contra a lista antiga. `docs/balanceamento_armas_oficios.md`
+  documenta o método usado (o arquivo em si virou redirect histórico).
 - **`requer`/`revela` de ponto de mapa viraram campo morto** depois que o
   fog-of-war foi removido do Compêndio (virou "escudo do mestre" — tudo
   visível desde o início). Pro Andar 2, não vale a pena replicar esses
@@ -221,8 +227,9 @@ Gera a ficha em `npcs/<nome>.md`. Opções: `--andar`, `--profissao`, `--arma`,
 ```
 python scripts/gerar_arma.py "rapieira de um mestre de esgrima do andar 1"
 ```
-Gera a ficha em `armas/<nome>.md`. Opções: `--tipo` (uma das 22 armas),
-`--raridade` (Comum/Incomum/Raro/Épico/Lendário), `--andar`.
+Gera a ficha em `armas/<nome>.md`. Opções: `--tipo` (uma das 19 armas,
+`SAO_RPG_5e.md` Seção 7), `--raridade` (Comum/Incomum/Raro/Épico/Lendário,
+Seção 51/72), `--andar`.
 
 ## Monstros
 

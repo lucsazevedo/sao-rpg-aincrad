@@ -94,12 +94,17 @@ chance = 70%  quando Nível de Profissão == nivel_recomendado do alvo
 ## Fraqueza de atributo (item 13 — resumo; a migração do conteúdo é outra)
 
 Fogo/Trovão/Gelo/Veneno **saíram do jogo inteiro**. Cada monstro tem agora
-`atributo_fraqueza` (Corpo/Reflexo/Conhecimento/Espírito/Técnica).
+`atributo_fraqueza` (convertido pra **FOR/DES/INT/SAB** na conversão pra
+D&D 5e — `SAO_RPG_5e.md` Seção 65; nunca CON/CAR).
 
-- **Na mesa**: acertar a fraqueza de atributo faz o que o elemento fazia —
-  o 7-9 vira 10+ funcional (a criatura não reage). Detalhe em
-  `docs/elementos_andar1.md` (arquivo reescrito).
-- **No online**: +20% de chance, como acima.
+- **Na mesa**: a mecânica de fraqueza mudou de natureza na conversão pra
+  D&D — acertar a fraqueza não "anula a reação do monstro" mais, e sim
+  soma **+1d6 de dano extra** no ataque (`SAO_RPG_5e.md` Seção 73). Ver
+  `docs/elementos_andar1.md` (hoje redirect histórico com o detalhe da
+  mudança).
+- **No online**: +20% de chance, como acima — este bônus percentual
+  continua sendo a tradução assíncrona da fraqueza, mesmo com a mecânica
+  de mesa tendo mudado de "nega reação" pra "+1d6".
 
 ## O que dá pra fazer por dia (item 11)
 
@@ -168,9 +173,9 @@ Fogo/Trovão/Gelo/Veneno **saíram do jogo inteiro**. Cada monstro tem agora
   faixa de resultado; no online: +5% por nível).
 - Rastreio na tabela `criaturas_domadas` (incubando → ativo), com
   cronômetro de chocagem igual craft Raro (6-12h).
-- A Move "Domador — Ovo de Fera" (desenhada em `dolist/Domador.png`) está
-  registrada em `docs/guia_sistema_aincrad.md` e na `moves_profissao`
-  (campo `move_c` da linha "Domador").
+- A habilidade "Domador — Ovo de Fera" (desenhada em `dolist/Domador.png`)
+  está registrada em `SAO_RPG_5e.md` (Seção 42, Domador) e na
+  `moves_profissao` (campo `move_c` da linha "Domador").
 
 ## Ferramentas de ofício (item 14 — decisões fechadas)
 
@@ -185,7 +190,8 @@ Fogo/Trovão/Gelo/Veneno **saíram do jogo inteiro**. Cada monstro tem agora
 - Bônus: multiplicador **local**, só na ação que ela cobre — separado do
   Nível de Profissão geral. No online: **+3% de chance por nível** naquela
   ação (até +15% no nível 5). Na mesa: sobe uma faixa de resultado
-  (ex: 6- vira 7-9, 7-9 vira 10+) a cada 2 níveis.
+  (ex: Falha vira Sucesso parcial, Sucesso parcial vira Sucesso total,
+  `SAO_RPG_5e.md` Seção 66) a cada 2 níveis.
 
 ## Dinheiro e mercado (item 9 — decisões fechadas)
 

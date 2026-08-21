@@ -70,10 +70,10 @@ usá-las, mas elas impedem que o personagem de combate monopolize a câmera.
 
 | Eixo | Oportunidade de cena |
 | --- | --- |
-| Corpo / Reflexo | risco físico que protege alguém, não só dano |
-| Conhecimento | informação que muda a escolha, não apenas revela lore |
-| Espírito | medo, luto, acordo ou liderança real |
-| Técnica | solução concreta que altera terreno, ferramenta ou plano |
+| Força / Destreza | risco físico que protege alguém, não só dano |
+| Inteligência | informação que muda a escolha, não apenas revela lore |
+| Sabedoria | medo, luto, acordo ou liderança real |
+| Destreza ou Inteligência | solução concreta que altera terreno, ferramenta ou plano |
 | Profissão | recurso, contato ou procedimento que ninguém mais tem |
 
 ## Final de episódio: três enquadramentos

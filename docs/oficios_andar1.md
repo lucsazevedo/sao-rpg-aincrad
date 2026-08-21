@@ -5,11 +5,20 @@ uso: jogador_e_mestre
 oficios: 16
 ---
 
+> **Atualizado pra D&D 5e.** Atributo de cada profissão corrigido conforme
+> `SAO_RPG_5e.md` Seção 19 ("Redistribuição desta etapa" — mais recente
+> que a conversão simples de atributo por atributo da Seção 65); colunas
+> de resultado convertidas de 10+/7-9/6- pra Sucesso total/Sucesso
+> parcial/Falha (Seção 66). Bibliotecário, Cartógrafo e Diplomata se
+> fundiram em **Informante**; Coveiro se fundiu em **Mercenário** (Seções
+> 13-17) — as seções deles aqui continuam como registro do que cada foco
+> faz na prática, mas mecanicamente já não são profissões separadas.
+
 # Ofícios do Andar 1
 
-O manual (`docs/guia_sistema_aincrad.md`) diz o que cada profissão **é** e dá
-os Moves dela. Este arquivo diz o que ela **faz**, em lugares com nome, com
-teste e com resultado.
+O rulebook (`SAO_RPG_5e.md`, Seções 30-44) diz o que cada profissão **é** e
+dá as habilidades dela por nível. Este arquivo diz o que ela **faz**, em
+lugares com nome, com teste e com resultado.
 
 ## Por que este arquivo existe
 
@@ -43,24 +52,24 @@ tempo de tela. Se a sessão acabar e alguém não teve a vez, ela abre a próxim
 não precisa ter preparado nada; as três ações de cada ofício foram escritas pra
 funcionar em qualquer região.
 
-**7-9 sempre entrega alguma coisa.** Ofício não é combate: o preço de um
-resultado parcial é tempo, quantidade, qualidade ou atenção — nunca "não
-conseguiu".
+**Sucesso parcial sempre entrega alguma coisa.** Ofício não é combate: o
+preço de um resultado parcial é tempo, quantidade, qualidade ou atenção —
+nunca "não conseguiu".
 
 ---
 
-## Caçador · Reflexo
+## Caçador · Sabedoria
 
 **Marca:** você é quem volta com prova. Gente te procura quando precisa de
 material e de verdade sobre o que tem lá fora.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Extrair material bônus de um abatido | d20+Destreza | Material íntegro e você nota um traço útil (rota, toca, ninho) | Material sai imperfeito: metade do valor | Estraga a peça e o cheiro atrai algo |
-| Ler o terreno por rastro | d20+Destreza | O mestre te diz o perigo mais próximo **e** a rota mais segura | Diz uma das duas; você escolhe qual | Você segue um rastro velho por uma hora |
-| Armar espera silenciosa | d20+Destreza | A presa vem até vocês; primeiro golpe sem reação dela | Vem, mas traz companhia | O bicho fareja e some da região por um dia |
+| Ler o terreno por rastro | d20+Sabedoria | O mestre te diz o perigo mais próximo **e** a rota mais segura | Diz uma das duas; você escolhe qual | Você segue um rastro velho por uma hora |
+| Armar espera silenciosa | d20+Sabedoria | A presa vem até vocês; primeiro golpe sem reação dela | Vem, mas traz companhia | O bicho fareja e some da região por um dia |
 
 **Postos de trabalho**
 - `campos_acampamento` — Acampamento de Caçadores: Erik compra material a 60%,
@@ -78,18 +87,18 @@ criatura certa só aparece de madrugada.
 
 ---
 
-## Lenhador · Reflexo
+## Lenhador · Força
 
 **Marca:** você é a mão de obra do andar. Fogo, abrigo e madeira boa vêm de
 você, e todo grupo que dormiu no frio sabe disso.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
-| Derrubar madeira boa | d20+Destreza | 2 unidades **e** chance de Madeira Nodosa | 1 unidade, e a queda faz barulho | Machado preso; o barulho chama algo |
-| Montar acampamento que aguenta | d20+Destreza | Descanso seguro: o mestre remove uma pressão do caminho (frio, fome, medo) | Seguro, mas a noite cobra uma vigília | Fogo não pega; a noite inteira é desconfortável |
-| Abrir caminho no mato fechado | d20+Destreza | Passagem aberta e ela continua aberta na volta | Abre, mas leva o dobro do tempo | Abre errado: saem num ponto pior |
+| Derrubar madeira boa | d20+Força | 2 unidades **e** chance de Madeira Nodosa | 1 unidade, e a queda faz barulho | Machado preso; o barulho chama algo |
+| Montar acampamento que aguenta | d20+Força | Descanso seguro: o mestre remove uma pressão do caminho (frio, fome, medo) | Seguro, mas a noite cobra uma vigília | Fogo não pega; a noite inteira é desconfortável |
+| Abrir caminho no mato fechado | d20+Força | Passagem aberta e ela continua aberta na volta | Abre, mas leva o dobro do tempo | Abre errado: saem num ponto pior |
 
 **Postos de trabalho**
 - `floresta_horunka_madeira` — Bosque de Coleta: a única fonte confiável de
@@ -110,14 +119,17 @@ andar. Vender acampamento montado a outro grupo: 40 Col a noite.
 
 ---
 
-## Cartógrafo · Conhecimento
+## Cartógrafo · Inteligência (hoje parte de Informante)
+
+> Fundido com Bibliotecário e Diplomata em **Informante**
+> (`SAO_RPG_5e.md` Seção 13/32) — atributo não mudou na fusão.
 
 **Marca:** você conhece o andar. Gente paga por caminho e por segurança, e
 paga mais depois de se perder uma vez.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Mapear região nova ao chegar | d20+Inteligência | Revela todos os pontos óbvios da região **e** uma rota segura | Revela metade, ou tudo cobrando tempo | Nada, e a tarde foi embora |
 | Traçar rota por terreno perigoso | d20+Inteligência | Evitam uma ameaça prevista | Evitam, mas saem num lugar pior | A rota que você marcou some na próxima cheia |
@@ -141,18 +153,18 @@ aquilo foi você.
 
 ---
 
-## Comerciante · Conhecimento
+## Comerciante · Carisma
 
 **Marca:** você é quem sabe o preço. Numa cidade onde ninguém confia em
 ninguém, saber o valor das coisas é quase saber o valor das pessoas.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
-| Negociar preço | d20+Inteligência | 15% de desconto **e** o vendedor passa a te reconhecer | 10%, mas ele lembra que você pechinchou | Preço cheio e um comentário seco |
+| Negociar preço | d20+Carisma | 15% de desconto **e** o vendedor passa a te reconhecer | 10%, mas ele lembra que você pechinchou | Preço cheio e um comentário seco |
 | Avaliar item ou farejar golpe | d20+Inteligência | Raridade real e a procedência | A raridade, sem a história | Você acredita na versão do vendedor |
-| Importar o que não existe no andar | d20+Inteligência | Chega na próxima sessão, preço justo | Chega, com 30% de acréscimo | Não chega, e você pagou adiantado |
+| Importar o que não existe no andar | d20+Carisma | Chega na próxima sessão, preço justo | Chega, com 30% de acréscimo | Não chega, e você pagou adiantado |
 
 **Postos de trabalho**
 - `tolbana_mercado` — Mercado de Tolbana: o giro mais alto do andar.
@@ -170,14 +182,14 @@ véspera do raid — e só você percebeu.
 
 ---
 
-## Cozinheiro · Conhecimento
+## Cozinheiro · Inteligência
 
 **Marca:** você é quem faz o grupo parar e sentar. Comida quente no dia 10 é
 quase uma declaração política.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Preparar refeição com bônus | d20+Inteligência | Bônus temporário pro grupo na próxima expedição | Bônus só pra metade do grupo | Passou do ponto; ninguém come com vontade |
 | Improvisar comida com o que tem | d20+Inteligência | Rende, e ninguém percebe a improvisação | Rende, mas alguém percebe | Estraga o material |
@@ -199,14 +211,17 @@ cena é sua.
 
 ---
 
-## Diplomata · Conhecimento
+## Diplomata · Inteligência (hoje parte de Informante)
+
+> Fundido com Bibliotecário e Cartógrafo em **Informante**
+> (`SAO_RPG_5e.md` Seção 13/32) — atributo não mudou na fusão.
 
 **Marca:** você é quem entra na sala. Seis clãs, nenhuma autoridade central, e
 alguém precisa fazer as pessoas se ouvirem.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Mediar conflito antes do primeiro golpe | d20+Inteligência | Os dois lados baixam a arma e você define os termos | Baixam, mas alguém sai devendo | Escolhem um lado — e não é o seu |
 | Conseguir audiência com quem não te recebe | d20+Inteligência | Entra hoje | Entra, mas com hora marcada e testemunha | A porta fecha por uma semana |
@@ -230,14 +245,17 @@ carreira.
 
 ---
 
-## Bibliotecário · Conhecimento
+## Bibliotecário · Inteligência (hoje parte de Informante)
+
+> Fundido com Cartógrafo e Diplomata em **Informante**
+> (`SAO_RPG_5e.md` Seção 13/32) — atributo não mudou na fusão.
 
 **Marca:** você é quem já leu sobre isso. Chegar sabendo o nome da coisa muda
 como a mesa inteira encara a coisa.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Pesquisar criatura antes do combate | d20+Inteligência | Fraqueza, resistências e vulnerabilidades completas | Só a fraqueza principal | Nada, e o tempo de preparo foi gasto |
 | Reconhecer símbolo, escrita ou heráldica | d20+Inteligência | Lê o suficiente pra mudar o rumo da cena | Sabe de onde vem, não o que diz | Confunde com outra coisa parecida |
@@ -262,14 +280,14 @@ abertas ao mesmo tempo.
 
 ---
 
-## Alquimista · Conhecimento
+## Alquimista · Inteligência
 
 **Marca:** você transforma. É a profissão que faz remédio de veneno, e a mesa
 percebe a ironia sozinha.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Destilar poção ou antídoto | d20+Inteligência | Fica pronto na mesma sessão | Pronto na próxima, e gasta um frasco a mais | Perde o material |
 | Identificar substância desconhecida | d20+Inteligência | Sabe o que é, o que faz e o que neutraliza | Sabe o que faz | Testa em si mesmo |
@@ -291,14 +309,14 @@ que só existe num lugar ruim.
 
 ---
 
-## Costureiro · Técnica
+## Costureiro · Destreza
 
 **Marca:** você veste o grupo. Roupa ruim mata mais gente que monstro forte, e
 você é quem sabe disso.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Confeccionar ou reforçar peça | d20+Destreza | Fica pronta e uma categoria acima do esperado | Pronta, no prazo dobrado | Estraga o material |
 | Consertar equipamento rachado | d20+Destreza | Conserta em campo, sem oficina | Conserta, mas fica visível | Piora |
@@ -319,24 +337,30 @@ terceira vez e alguém precisa dar a bronca.
 
 ---
 
-## Domador · Técnica
+## Domador · Sabedoria
 
 **Marca:** você chega perto do que morde. A mesa inteira para de falar quando
 você se agacha na frente de um bicho.
 
+> **Mecânica de doma atualizada** (`SAO_RPG_5e.md` Seção 42, Nível 1 —
+> Domar Criatura): teste único de **d20+Sabedoria+proficiência (Adestrar
+> Animais) vs. CD por criatura** (Seção 29), não mais barra de sucessos
+> acumulados. Ver `docs/economia_profissoes.md`, seção "Criaturas
+> domáveis", pra tabela de CD por criatura já convertida.
+
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
-| Tentativa de doma | d20+Destreza | 1 sucesso limpo na barra | 1 sucesso, mas a criatura reage mal nesse turno | Sem sucesso; 2 falhas seguidas encerram |
-| Acalmar animal agitado | d20+Destreza | Ele para e escuta — inclusive em combate | Para, e volta a agitar na rodada seguinte | Ele se assusta e chama atenção |
-| Mandar o aliado domado fazer algo difícil | d20+Destreza | Faz, e volta | Faz, mas se machuca | Se recusa, e isso custa confiança |
+| Tentativa de doma | d20+Sabedoria | Doma bem-sucedida (bate a CD da criatura) | — (teste único; ver nota acima) | A criatura reage mal — foge ou ataca; nova tentativa exige recomeçar a aproximação |
+| Acalmar animal agitado | d20+Sabedoria | Ele para e escuta — inclusive em combate | Para, e volta a agitar na rodada seguinte | Ele se assusta e chama atenção |
+| Mandar o aliado domado fazer algo difícil | d20+Sabedoria | Faz, e volta | Faz, mas se machuca | Se recusa, e isso custa confiança |
 
 **Postos de trabalho**
 - `jardim_selvagem_xcampo_de_flores_raras` — Fenwyth: a Fada da Poeira, a doma
   utilitária que resolve escuridão sem gastar Cristal.
-- `lago_margem` — Sylvaine: Lacustre Vagador (8 sucessos) e Serpente das Águas
-  Rasas (6).
+- `lago_margem` — Sylvaine: Lacustre Vagador (CD 18) e Serpente das Águas
+  Rasas (CD 15).
 - `montanhas_fronteira` — Grauvenn: o Arauto das Alturas, a doma mais difícil
   do andar, e a escolha irreversível entre domar e abater.
 
@@ -349,17 +373,17 @@ domado resolve e nenhuma arma resolve.
 
 ---
 
-## Ferreiro · Técnica
+## Ferreiro · Força
 
 **Marca:** você é o gargalo da economia. Metade das receitas do andar passa
 pela sua bigorna, e todo mundo sabe.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
-| Processar minério em componente | d20+Destreza | 2 Placas em vez de 1 | 1 Placa | Perde o minério |
-| Forjar ou reforjar peça | d20+Destreza | Sai como encomendado, e cedo | Sai, com uma imperfeição visível | Racha na têmpera |
+| Processar minério em componente | d20+Força | 2 Placas em vez de 1 | 1 Placa | Perde o minério |
+| Forjar ou reforjar peça | d20+Força | Sai como encomendado, e cedo | Sai, com uma imperfeição visível | Racha na têmpera |
 | Ler metal desconhecido | d20+Inteligência | Sabe a liga, a origem e o que dá pra fazer | Sabe se presta | Conclusão errada com convicção |
 
 **Postos de trabalho**
@@ -378,14 +402,14 @@ bate com nada que este andar deveria ter.
 
 ---
 
-## Joalheiro · Técnica
+## Joalheiro · Destreza
 
 **Marca:** você trabalha o pequeno. Num mundo de espada grande, quem faz a
 peça de dois centímetros é quem entende de detalhe.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Engastar acessório | d20+Destreza | Sai perfeito e você economiza material | Sai, gastando o dobro | Racha a pedra |
 | Avaliar cristal ou pedra | d20+Inteligência | Distingue bruto de cristal de sistema à distância | Sabe que são diferentes | Confunde os dois |
@@ -409,14 +433,19 @@ do andar.
 
 ---
 
-## Coveiro · Espírito
+## Coveiro · Sabedoria (hoje parte de Mercenário)
+
+> Fundido em **Mercenário** (`SAO_RPG_5e.md` Seção 15) — atributo padrão
+> do Mercenário hoje é Constituição, mas os rituais específicos do
+> Coveiro seguem testando Sabedoria (mesmo padrão de carve-out que
+> Médico usa pra diagnóstico com Inteligência).
 
 **Marca:** você é quem fica depois. A cidade inteira evita o assunto e você
 mora nele.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Cuidar de um morto e ler o que ficou | d20+Sabedoria | Descobre uma coisa que ninguém sabia sobre ele | Descobre algo vago | Só tristeza, e ela pesa |
 | Dispensar presença não-corpórea | d20+Sabedoria | Dissolve sem luta, e ela deixa a pista | Dissolve, sem pista | Ela fica, e agora sabe seu nome |
@@ -438,14 +467,14 @@ pra quem ficou.
 
 ---
 
-## Médico · Espírito
+## Médico · Sabedoria
 
 **Marca:** você é pra quem correm. Não pelo dano — o jogo cura dano. Pelo que
 não passa sozinho.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
 | Tratar status negativo | d20+Sabedoria | Veneno, paralisia, sono ou confusão removidos sem gastar Cristal | Removido, mas leva a noite inteira | Precisa de material que você não tem |
 | Estabilizar quem está à beira | d20+Sabedoria | De pé, com marca, sem sequela | De pé, com uma Condição no lugar | Você compra tempo, e só |
@@ -469,18 +498,18 @@ Comerciante.
 
 ---
 
-## Músico · Espírito
+## Músico · Carisma
 
 **Marca:** você faz o salão calar. Num andar onde ninguém confia em ninguém,
 conseguir a atenção de trinta pessoas é poder de verdade.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
-| Tocar pra levantar o grupo | d20+Sabedoria | Todo aliado que falhou no teste anterior rola de novo | Um aliado rola de novo | Chama atenção de quem não devia ouvir |
+| Tocar pra levantar o grupo | d20+Carisma | Todo aliado que falhou no teste anterior rola de novo | Um aliado rola de novo | Chama atenção de quem não devia ouvir |
 | Ler a sala pela reação à música | d20+Sabedoria | Sabe quem está mentindo, quem está com medo e quem está sozinho | Sabe uma das três | Toca a música errada pra plateia errada |
-| Aprender ou lembrar uma cantiga | d20+Sabedoria | Letra inteira, e você percebe o que ela carrega | A letra | O refrão e mais nada |
+| Aprender ou lembrar uma cantiga | d20+Carisma | Letra inteira, e você percebe o que ela carrega | A letra | O refrão e mais nada |
 
 **Postos de trabalho**
 - `cidade_taverna` — Taverna de Perim: a cantiga dos cinco cristais mora aqui.
@@ -500,17 +529,22 @@ toca.
 
 ---
 
-## Mercenário · Corpo
+## Mercenário · Constituição
+
+> Absorveu o **Coveiro** na conversão pra D&D 5e (`SAO_RPG_5e.md` Seção
+> 15) — investigação de mortes, cadáveres e troféus viraram parte do
+> domínio do Mercenário. Ver seção Coveiro acima e
+> `docs/receitas_coveiro.md`.
 
 **Marca:** você é a razão pela qual os outros conseguem trabalhar. Todo ofício
 deste arquivo depende de chegar vivo no lugar.
 
 **Ações de Ofício**
 
-| Ação | Teste | 10+ | 7-9 | 6- |
+| Ação | Teste | Sucesso total | Sucesso parcial | Falha |
 |---|---|---|---|---|
-| Escoltar alguém até uma zona perigosa | d20+Força | Chegam inteiros e você fica com parte do material | Chegam, mas o escoltado perde algo | Chegam machucados e a fama circula |
-| Segurar a linha enquanto o grupo faz outra coisa | d20+Força | Ninguém passa por você | Passa um | A linha quebra e vocês ficam cercados |
+| Escoltar alguém até uma zona perigosa | d20+Constituição | Chegam inteiros e você fica com parte do material | Chegam, mas o escoltado perde algo | Chegam machucados e a fama circula |
+| Segurar a linha enquanto o grupo faz outra coisa | d20+Constituição | Ninguém passa por você | Passa um | A linha quebra e vocês ficam cercados |
 | Avaliar se uma briga vale a pena | d20+Inteligência | Sabe quantos são, o que querem e se dá pra evitar | Sabe quantos são | Subestima |
 
 **Postos de trabalho**
@@ -533,7 +567,10 @@ sobrevive sozinho — e a conta é sua.
 
 # Conferência de equilíbrio
 
-Cada uma das 16 tem, por construção:
+Cada uma das 16 seções acima tem, por construção (a conversão pra D&D 5e
+fundiu 4 delas em 2 profissões mecânicas — Informante e Mercenário — mas as
+16 seções continuam escritas separadamente porque cobrem focos distintos
+dentro da profissão fundida; ver `SAO_RPG_5e.md` Seções 13-19):
 
 | Item | Quantidade |
 |---|---|
